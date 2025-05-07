@@ -83,20 +83,12 @@ export default function Hero({ onGetStarted }: HeroProps) {
           </div>
           
           {/* Image & notification section */}
-          <div className="relative hidden lg:block">
-            {/* Main image */}
-            <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-neutral-800">
-              <img 
-                src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80" 
-                alt="Luxury sports car in showroom" 
-                className="w-full h-auto object-cover rounded-lg" 
-                loading="lazy"
-              />
-              
-              {/* Notification card previews */}
-              <div className="absolute -bottom-6 -left-6 bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
+          <div className="relative mt-8 lg:mt-0">
+            {/* Mobile notification cards - visible only on small screens */}
+            <div className="lg:hidden space-y-4 mb-8">
+              <div className="bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl">
                 <div className="flex items-start gap-3">
-                  <div className="bg-accent/20 text-accent p-2 rounded-full">
+                  <div className="bg-accent/20 text-accent p-2 rounded-full shrink-0">
                     <Bell size={18} />
                   </div>
                   <div>
@@ -106,9 +98,9 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 </div>
               </div>
               
-              <div className="absolute -top-5 -right-5 bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
+              <div className="bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl">
                 <div className="flex items-start gap-3">
-                  <div className="bg-primary-600/20 text-primary-400 p-2 rounded-full">
+                  <div className="bg-primary-600/20 text-primary-400 p-2 rounded-full shrink-0">
                     <MessageSquare size={18} />
                   </div>
                   <div>
@@ -118,10 +110,48 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 </div>
               </div>
             </div>
-            
-            {/* Background decorative elements */}
-            <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-accent/30 to-accent/5 blur-3xl rounded-full"></div>
-            <div className="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-primary-600/20 to-primary-800/5 blur-3xl rounded-full"></div>
+          
+            {/* Desktop image and notification cards - hidden on small screens */}
+            <div className="relative hidden lg:block">
+              {/* Main image */}
+              <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-neutral-800">
+                <img 
+                  src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80" 
+                  alt="Luxury sports car in showroom" 
+                  className="w-full h-auto object-cover rounded-lg" 
+                  loading="lazy"
+                />
+                
+                {/* Notification card previews */}
+                <div className="absolute -bottom-6 -left-6 bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-accent/20 text-accent p-2 rounded-full">
+                      <Bell size={18} />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-white">New Match!</h4>
+                      <p className="text-sm text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="absolute -top-5 -right-5 bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-primary-600/20 text-primary-400 p-2 rounded-full">
+                      <MessageSquare size={18} />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-white">Telegram Alert</h4>
+                      <p className="text-sm text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Background decorative elements */}
+              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-accent/30 to-accent/5 blur-3xl rounded-full"></div>
+              <div className="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-primary-600/20 to-primary-800/5 blur-3xl rounded-full"></div>
+            </div>
           </div>
         </div>
       </div>
