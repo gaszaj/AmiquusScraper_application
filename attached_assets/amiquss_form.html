@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrapping Service Form</title>
+  <style>
+    /* Basic CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="url"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .price-display {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    /* Styling for instructions area */
+    .instructions {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #e9f5ff;
+      border: 1px solid #b3d7ff;
+      border-radius: 4px;
+    }
+    .instructions p {
+      margin: 0 0 10px 0;
+    }
+    .instructions iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form id="scrapingForm">
+      <!-- Website selection -->
+      <div class="form-group">
+        <label>Select Websites</label>
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" name="websites" value="avto.net">
+            avto.net
+          </label>
+          <label>
+            <input type="checkbox" name="websites" value="facebook marketplace" id="facebookCheckbox">
+            facebook marketplace
+          </label>
+          <label>
+            <input type="checkbox" name="websites" value="mobiel.de">
+            mobiel.de
+          </label>
+        </div>
+      </div>
+
+      <!-- Facebook Marketplace search link (hidden by default) -->
+      <div class="form-group" id="facebookLinkGroup" style="display: none;">
+        <label for="facebookLink">Facebook Marketplace Search Link</label>
+        <input type="url" id="facebookLink" name="facebookLink" placeholder="Enter Facebook Marketplace search link">
+      </div>
+
+      <!-- Facebook instructions and video (hidden by default) -->
+      <div class="instructions" id="facebookInstructions" style="display: none;">
+        <p><strong>How to get your Facebook Marketplace Search Link:</strong></p>
+        <p>To obtain your search link, navigate to Facebook Marketplace, perform your search, and then copy the URL from your browser's address bar. Paste the URL into the field above.</p>
+        <p>Watch the video below for step-by-step instructions:</p>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Facebook Marketplace Link Instructions" allowfullscreen></iframe>
+      </div>
+
+      <!-- Scrapping frequency selection -->
+      <div class="form-group">
+        <label>Scrapping Frequency</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="frequency" value="1h" checked>
+            1h (base price)
+          </label>
+          <label>
+            <input type="radio" name="frequency" value="30min">
+            30min (+$5)
+          </label>
+          <label>
+            <input type="radio" name="frequency" value="15min">
+            15min (+$10)
+          </label>
+          <label>
+            <input type="radio" name="frequency" value="10min">
+            10min (+$12)
+          </label>
+          <label>
+            <input type="radio" name="frequency" value="5min">
+            5min (+$15)
+          </label>
+          <label>
+            <input type="radio" name="frequency" value="1min">
+            1min (+$20)
+          </label>
+        </div>
+      </div>
+
+      <!-- Price display -->
+      <div class="price-display">
+        Total Price: $<span id="totalPrice">70</span>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Pricing configuration
+    const basePriceForOne = 70;
+    const additionalWebsiteCost = 20;
+    const frequencyCosts = {
+      "1h": 0,
+      "30min": 5,
+      "15min": 10,
+      "10min": 12,
+      "5min": 15,
+      "1min": 20
+    };
+
+    const form = document.getElementById('scrapingForm');
+    const totalPriceEl = document.getElementById('totalPrice');
+    const facebookCheckbox = document.getElementById('facebookCheckbox');
+    const facebookLinkGroup = document.getElementById('facebookLinkGroup');
+    const facebookInstructions = document.getElementById('facebookInstructions');
+
+    // Update total price based on selections
+    function updatePrice() {
+      const selectedWebsites = document.querySelectorAll('input[name="websites"]:checked');
+      const websitesCount = selectedWebsites.length;
+      let websitePrice = 0;
+      if (websitesCount > 0) {
+        websitePrice = basePriceForOne + additionalWebsiteCost * (websitesCount - 1);
+      }
+      
+      const selectedFrequency = document.querySelector('input[name="frequency"]:checked').value;
+      const frequencyCost = frequencyCosts[selectedFrequency] || 0;
+      
+      const totalPrice = websitePrice + frequencyCost;
+      totalPriceEl.textContent = totalPrice;
+    }
+
+    // Function to show/hide Facebook Marketplace related elements
+    function toggleFacebookElements() {
+      if (facebookCheckbox.checked) {
+        facebookLinkGroup.style.display = 'block';
+        facebookInstructions.style.display = 'block';
+      } else {
+        facebookLinkGroup.style.display = 'none';
+        facebookInstructions.style.display = 'none';
+      }
+    }
+
+    // Event listener for website checkboxes
+    const websiteCheckboxes = document.querySelectorAll('input[name="websites"]');
+    websiteCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        toggleFacebookElements();
+        updatePrice();
+      });
+    });
+
+    // Event listener for frequency radio buttons
+    const frequencyRadios = document.querySelectorAll('input[name="frequency"]');
+    frequencyRadios.forEach(radio => {
+      radio.addEventListener('change', updatePrice);
+    });
+
+    // Initialize on page load
+    toggleFacebookElements();
+    updatePrice();
+  </script>
+</body>
+</html>
