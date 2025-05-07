@@ -2,8 +2,7 @@ import { Link } from "wouter";
 import { 
   Facebook, 
   Twitter, 
-  Instagram, 
-  Linkedin, 
+  Linkedin,
   Mail, 
   Phone, 
   MapPin
@@ -11,100 +10,106 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-800 text-white pt-16 pb-8">
+    <footer className="bg-neutral-900 text-white pt-24 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h4 className="text-xl font-title font-bold mb-4">Amiquus</h4>
-            <p className="text-neutral-400 mb-4">
-              Your personal assistant for finding the perfect used car deal at the perfect time.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <svg className="size-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+              </svg>
+              <span className="text-2xl font-bold">
+                Ami<span className="text-accent">quus</span>
+              </span>
+            </Link>
+            <p className="text-neutral-400 mb-6">
+              Automated car listing monitoring service for dealerships across South-Eastern Europe. Get instant notifications for new listings matching your criteria.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <div className="flex gap-4">
+              <a href="#" className="text-neutral-400 hover:text-accent transition">
                 <Facebook size={20} />
+                <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">
+              <a href="#" className="text-neutral-400 hover:text-accent transition">
                 <Twitter size={20} />
+                <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">
+              <a href="#" className="text-neutral-400 hover:text-accent transition">
                 <Linkedin size={20} />
+                <span className="sr-only">LinkedIn</span>
               </a>
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h5 className="text-lg font-medium mb-4">Quick Links</h5>
-            <ul className="space-y-2">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h3>
+            <ul className="mt-4 space-y-2">
               <li>
-                <a href="/#features" className="text-neutral-400 hover:text-white transition-colors">Features</a>
+                <a href="/#features" className="text-neutral-400 hover:text-accent transition">Features</a>
               </li>
               <li>
-                <a href="/#pricing" className="text-neutral-400 hover:text-white transition-colors">Pricing</a>
+                <a href="/#pricing" className="text-neutral-400 hover:text-accent transition">Pricing</a>
               </li>
               <li>
-                <a href="/#faq" className="text-neutral-400 hover:text-white transition-colors">FAQ</a>
+                <a href="/#testimonials" className="text-neutral-400 hover:text-accent transition">Testimonials</a>
               </li>
               <li>
-                <a href="/signup" className="text-neutral-400 hover:text-white transition-colors">Get Started</a>
+                <a href="/#faq" className="text-neutral-400 hover:text-accent transition">FAQ</a>
               </li>
             </ul>
           </div>
 
+          {/* Legal */}
           <div>
-            <h5 className="text-lg font-medium mb-4">Legal</h5>
-            <ul className="space-y-2">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Legal</h3>
+            <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/terms" className="text-neutral-400 hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-neutral-400 hover:text-white transition-colors">
+                <Link href="/privacy" className="text-neutral-400 hover:text-accent transition">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-neutral-400 hover:text-white transition-colors">Cookie Policy</a>
+                <Link href="/terms" className="text-neutral-400 hover:text-accent transition">
+                  Terms of Service
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-neutral-400 hover:text-white transition-colors">GDPR Compliance</a>
+                <a href="#" className="text-neutral-400 hover:text-accent transition">Cookie Policy</a>
               </li>
             </ul>
           </div>
 
+          {/* Support */}
           <div>
-            <h5 className="text-lg font-medium mb-4">Contact</h5>
-            <ul className="space-y-2 text-neutral-400">
-              <li className="flex items-start">
-                <Mail className="mt-1 mr-3 w-5" />
-                <span>support@amiquus.com</span>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Support</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <a href="/#contact" className="text-neutral-400 hover:text-accent transition">Contact</a>
               </li>
-              <li className="flex items-start">
-                <Phone className="mt-1 mr-3 w-5" />
-                <span>+1 (555) 123-4567</span>
+              <li>
+                <a href="#" className="text-neutral-400 hover:text-accent transition">Knowledge Base</a>
               </li>
-              <li className="flex items-start">
-                <MapPin className="mt-1 mr-3 w-5" />
-                <span>
-                  123 Main Street<br />New York, NY 10001
-                </span>
+              <li>
+                <a href="#" className="text-neutral-400 hover:text-accent transition">System Status</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-neutral-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Amiquus. All rights reserved.</p>
-          <div className="flex space-x-4">
-            <Link href="/about" className="text-neutral-400 hover:text-white transition-colors text-sm">
-              About Us
-            </Link>
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors text-sm">Blog</a>
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors text-sm">Careers</a>
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors text-sm">Support</a>
+        {/* Bottom Bar */}
+        <div className="pt-8 mt-8 border-t border-neutral-800">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-neutral-400 text-sm mb-4 md:mb-0">
+              © {new Date().getFullYear()} Amiquus. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-4">
+              <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal" className="h-6 opacity-75 hover:opacity-100 transition" />
+              <img src="https://www.mastercard.com/content/dam/public/mastercardcom/na/us/en/homepage/Home/mc-logo-52.svg" alt="Mastercard" className="h-6 opacity-75 hover:opacity-100 transition" />
+              <img src="https://www.visa.com/images/merchantoffers/card-image.png" alt="Visa" className="h-6 opacity-75 hover:opacity-100 transition" />
+            </div>
           </div>
         </div>
       </div>
