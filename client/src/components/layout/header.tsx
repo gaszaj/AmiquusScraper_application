@@ -7,12 +7,19 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Bell, ChevronDown, Menu, Search, User } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Bell, ChevronDown, Globe, Menu, Search, User } from "lucide-react";
 
 export default function Header() {
   const [location] = useLocation();
   const { user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("English");
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
@@ -22,6 +29,19 @@ export default function Header() {
     { href: "/#pricing", label: "Pricing" },
     { href: "/#faq", label: "FAQ" },
   ];
+
+  const languages = [
+    { code: "en", name: "English" },
+    { code: "de", name: "Deutsch" },
+    { code: "fr", name: "Français" },
+    { code: "it", name: "Italiano" },
+    { code: "es", name: "Español" },
+  ];
+
+  const changeLanguage = (language: string) => {
+    setCurrentLanguage(language);
+    // In a real application, you would update the language context/state here
+  };
 
   return (
     <header className="bg-neutral-900 border-b border-neutral-800 fixed w-full z-50">
@@ -72,6 +92,21 @@ export default function Header() {
                       {link.label}
                     </Link>
                   ))}
+                  
+                  {/* Language selector in mobile menu */}
+                  <div className="px-3 py-2 border-t border-neutral-800 mt-4 pt-4">
+                    <span className="text-sm font-medium text-neutral-400 mb-2 block">Language</span>
+                    {languages.map((language) => (
+                      <button
+                        key={language.code}
+                        className={`block w-full text-left px-2 py-1.5 rounded-md ${currentLanguage === language.name ? 'bg-accent/10 text-accent' : 'text-neutral-300 hover:text-accent'} transition`}
+                        onClick={() => changeLanguage(language.name)}
+                      >
+                        {language.name}
+                      </button>
+                    ))}
+                  </div>
+                  
                   {!user && (
                     <>
                       <Link 
@@ -118,6 +153,34 @@ export default function Header() {
 
           {/* User menu */}
           <div className="hidden md:flex items-center gap-4">
+            {/* Language selector dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-neutral-300 hover:text-accent transition flex items-center gap-1.5 h-9"
+                >
+                  <Globe className="size-4" />
+                  <span>{currentLanguage}</span>
+                  <ChevronDown className="size-4 opacity-60" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-neutral-900 border-neutral-800 text-neutral-300">
+                {languages.map((language) => (
+                  <DropdownMenuItem 
+                    key={language.code}
+                    className={`${currentLanguage === language.name ? 'bg-accent/10 text-accent' : 'hover:text-accent hover:bg-neutral-800'}`}
+                    onClick={() => changeLanguage(language.name)}
+                  >
+                    {language.name}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
+            <div className="h-6 w-px bg-neutral-700 mx-1"></div>
+            
             {user ? (
               <>
                 <Button variant="ghost" size="icon" className="text-neutral-300 hover:text-accent transition">
