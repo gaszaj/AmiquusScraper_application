@@ -1,18 +1,29 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { SubscriptionFormData } from "@shared/schema";
-import { useForm, Controller } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SubscriptionFormData } from "@shared/schema";
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { HelpCircle } from "lucide-react";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  FormDescription,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { LANGUAGE_OPTIONS } from "@/lib/constants";
 
 interface TelegramSetupProps {
   formData: Partial<SubscriptionFormData>;
@@ -35,10 +46,9 @@ export default function TelegramSetup({
   nextStep,
   prevStep,
 }: TelegramSetupProps) {
-  const [tokenInstructionsOpen, setTokenInstructionsOpen] = useState(false);
-  const [chatIdInstructionsOpen, setChatIdInstructionsOpen] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const { register, handleSubmit, control, formState: { errors } } = useForm<TelegramSetupFormData>({
+  const form = useForm<TelegramSetupFormData>({
     resolver: zodResolver(telegramSetupSchema),
     defaultValues: {
       telegramBotToken: formData.telegramBotToken || "",
@@ -48,141 +58,133 @@ export default function TelegramSetup({
   });
 
   const onSubmit = (data: TelegramSetupFormData) => {
-    updateFormData(data);
-    nextStep();
+    try {
+      updateFormData(data);
+      nextStep();
+    } catch (error: any) {
+      setError(error.message);
+    }
   };
 
   return (
-    <div className="form-step">
-      <h3 className="text-xl font-title font-semibold mb-6">Telegram Notification Setup</h3>
-      <p className="text-neutral-600 mb-6">
-        Connect your Telegram account to receive instant notifications about new listings.
-      </p>
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold tracking-tight">Telegram Setup</h2>
+        <p className="text-sm text-neutral-500">
+          Set up Telegram notifications by providing your bot token and chat ID.
+        </p>
+      </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-6">
-          <Label htmlFor="telegram-token" className="block text-sm font-medium text-neutral-700 mb-1">
-            Telegram Bot Token
-          </Label>
-          <Input
-            id="telegram-token"
-            {...register("telegramBotToken")}
-            className={`w-full px-4 py-2 border ${
-              errors.telegramBotToken ? "border-red-500" : "border-neutral-300"
-            } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors`}
-            placeholder="Enter your Telegram bot token"
-          />
-          {errors.telegramBotToken && (
-            <p className="mt-1 text-sm text-red-500">{errors.telegramBotToken.message}</p>
-          )}
-          <div className="mt-2">
-            <Collapsible open={tokenInstructionsOpen} onOpenChange={setTokenInstructionsOpen}>
-              <CollapsibleTrigger asChild>
-                <Button variant="link" className="text-primary-600 text-sm flex items-center p-0 h-auto">
-                  <HelpCircle className="mr-1 h-4 w-4" /> How to get a bot token
-                </Button>
-              </CollapsibleTrigger>
-              <CollapsibleContent className="mt-3 text-sm text-neutral-600 p-3 bg-neutral-100 rounded-md">
-                <p className="font-medium">To get your Telegram bot token:</p>
-                <ol className="list-decimal pl-5 mt-2 space-y-1">
-                  <li>Open Telegram and search for @BotFather</li>
-                  <li>Start a chat and send the command /newbot</li>
-                  <li>Follow the instructions to create a new bot</li>
-                  <li>Copy the API token provided by BotFather</li>
-                </ol>
-                <p className="mt-2">
-                  <a href="#" className="text-primary-600 underline">
-                    Watch video tutorial
-                  </a>
-                </p>
-              </CollapsibleContent>
-            </Collapsible>
-          </div>
-        </div>
+      {error && (
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
 
-        <div className="mb-8">
-          <Label htmlFor="telegram-chat-id" className="block text-sm font-medium text-neutral-700 mb-1">
-            Telegram Chat ID
-          </Label>
-          <Input
-            id="telegram-chat-id"
-            {...register("telegramChatId")}
-            className={`w-full px-4 py-2 border ${
-              errors.telegramChatId ? "border-red-500" : "border-neutral-300"
-            } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors`}
-            placeholder="Enter your Telegram chat ID"
-          />
-          {errors.telegramChatId && (
-            <p className="mt-1 text-sm text-red-500">{errors.telegramChatId.message}</p>
-          )}
-          <div className="mt-2">
-            <Collapsible open={chatIdInstructionsOpen} onOpenChange={setChatIdInstructionsOpen}>
-              <CollapsibleTrigger asChild>
-                <Button variant="link" className="text-primary-600 text-sm flex items-center p-0 h-auto">
-                  <HelpCircle className="mr-1 h-4 w-4" /> How to get your chat ID
-                </Button>
-              </CollapsibleTrigger>
-              <CollapsibleContent className="mt-3 text-sm text-neutral-600 p-3 bg-neutral-100 rounded-md">
-                <p className="font-medium">To get your Telegram chat ID:</p>
-                <ol className="list-decimal pl-5 mt-2 space-y-1">
-                  <li>Search for @userinfobot in Telegram</li>
-                  <li>Start a chat and send any message</li>
-                  <li>The bot will reply with your chat ID</li>
-                  <li>Copy the ID number (it starts with a dash if it's a group)</li>
-                </ol>
-                <p className="mt-2">
-                  <a href="#" className="text-primary-600 underline">
-                    Watch video tutorial
-                  </a>
-                </p>
-              </CollapsibleContent>
-            </Collapsible>
-          </div>
-        </div>
-
-        <div className="mb-8">
-          <Label htmlFor="notification-language" className="block text-sm font-medium text-neutral-700 mb-3">
-            Notification Language
-          </Label>
-          <Controller
-            name="notificationLanguage"
-            control={control}
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="telegramBotToken"
             render={({ field }) => (
-              <Select
-                onValueChange={field.onChange}
-                value={field.value}
-              >
-                <SelectTrigger id="notification-language">
-                  <SelectValue placeholder="Select a language" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="en">English</SelectItem>
-                  <SelectItem value="es">Spanish</SelectItem>
-                  <SelectItem value="fr">French</SelectItem>
-                  <SelectItem value="de">German</SelectItem>
-                  <SelectItem value="it">Italian</SelectItem>
-                  <SelectItem value="pt">Portuguese</SelectItem>
-                  <SelectItem value="ru">Russian</SelectItem>
-                </SelectContent>
-              </Select>
+              <FormItem>
+                <FormLabel>Telegram Bot Token</FormLabel>
+                <FormDescription>
+                  Create a Telegram bot with BotFather and paste the token here
+                </FormDescription>
+                <FormControl>
+                  <Input placeholder="123456789:ABCdefGhIJKlmnOPQRstUVwxYZ" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
             )}
           />
-        </div>
 
-        <div className="flex justify-between">
-          <Button
-            type="button"
-            onClick={prevStep}
-            variant="outline"
-            className="bg-neutral-200 text-neutral-700 hover:bg-neutral-300 border-0"
-          >
-            Previous
-          </Button>
-          <Button type="submit" className="bg-primary-600 hover:bg-primary-700">
-            Next Step
-          </Button>
-        </div>
-      </form>
+          <FormField
+            control={form.control}
+            name="telegramChatId"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Telegram Chat ID</FormLabel>
+                <FormDescription>
+                  Send a message to @userinfobot on Telegram to get your Chat ID
+                </FormDescription>
+                <FormControl>
+                  <Input placeholder="12345678" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="notificationLanguage"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Notification Language</FormLabel>
+                <FormDescription>
+                  Select the language for your notifications
+                </FormDescription>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select language" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {LANGUAGE_OPTIONS.map((option) => (
+                      <SelectItem key={option.id} value={option.id}>
+                        {option.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <Alert className="mt-6">
+            <AlertCircle className="h-4 w-4" />
+            <AlertDescription>
+              <p className="text-sm">
+                <strong>How to get a Telegram Bot Token:</strong>
+                <ol className="list-decimal ml-5 mt-2 space-y-1">
+                  <li>Open Telegram and search for @BotFather</li>
+                  <li>Send the command /newbot</li>
+                  <li>Follow the instructions to create a bot</li>
+                  <li>Copy the token provided by BotFather</li>
+                </ol>
+              </p>
+              <p className="text-sm mt-3">
+                <strong>How to get your Telegram Chat ID:</strong>
+                <ol className="list-decimal ml-5 mt-2 space-y-1">
+                  <li>Open Telegram and search for @userinfobot</li>
+                  <li>Send any message to the bot</li>
+                  <li>The bot will reply with your information including your Chat ID</li>
+                  <li>Copy the Chat ID (it's a number)</li>
+                </ol>
+              </p>
+            </AlertDescription>
+          </Alert>
+
+          <div className="flex justify-between">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={prevStep}
+            >
+              Previous
+            </Button>
+            <Button type="submit">Continue</Button>
+          </div>
+        </form>
+      </Form>
     </div>
   );
 }

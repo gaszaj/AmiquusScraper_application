@@ -1,10 +1,20 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { SubscriptionFormData } from "@shared/schema";
+import { useState } from "react";
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { SubscriptionFormData } from "@shared/schema";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface PersonalInfoProps {
   formData: Partial<SubscriptionFormData>;
@@ -21,7 +31,9 @@ const personalInfoSchema = z.object({
 type PersonalInfoFormData = z.infer<typeof personalInfoSchema>;
 
 export default function PersonalInfo({ formData, updateFormData, nextStep }: PersonalInfoProps) {
-  const { register, handleSubmit, formState: { errors } } = useForm<PersonalInfoFormData>({
+  const [error, setError] = useState<string | null>(null);
+
+  const form = useForm<PersonalInfoFormData>({
     resolver: zodResolver(personalInfoSchema),
     defaultValues: {
       firstName: formData.firstName || "",
@@ -31,71 +43,80 @@ export default function PersonalInfo({ formData, updateFormData, nextStep }: Per
   });
 
   const onSubmit = (data: PersonalInfoFormData) => {
-    updateFormData(data);
-    nextStep();
+    try {
+      updateFormData(data);
+      nextStep();
+    } catch (error: any) {
+      setError(error.message);
+    }
   };
 
   return (
-    <div className="form-step">
-      <h3 className="text-xl font-title font-semibold mb-6">Your Information</h3>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <Label htmlFor="firstName" className="block text-sm font-medium text-neutral-700 mb-1">
-              First Name
-            </Label>
-            <Input
-              id="firstName"
-              {...register("firstName")}
-              className={`w-full px-4 py-2 border ${
-                errors.firstName ? "border-red-500" : "border-neutral-300"
-              } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors`}
-              placeholder="Enter your first name"
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold tracking-tight">Personal Information</h2>
+        <p className="text-sm text-neutral-500">
+          Please provide your personal details so we can set up your notifications correctly.
+        </p>
+      </div>
+
+      {error && (
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
+
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="firstName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>First Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="John" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-            {errors.firstName && (
-              <p className="mt-1 text-sm text-red-500">{errors.firstName.message}</p>
-            )}
-          </div>
-          <div>
-            <Label htmlFor="lastName" className="block text-sm font-medium text-neutral-700 mb-1">
-              Last Name
-            </Label>
-            <Input
-              id="lastName"
-              {...register("lastName")}
-              className={`w-full px-4 py-2 border ${
-                errors.lastName ? "border-red-500" : "border-neutral-300"
-              } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors`}
-              placeholder="Enter your last name"
+            <FormField
+              control={form.control}
+              name="lastName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Last Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Doe" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-            {errors.lastName && (
-              <p className="mt-1 text-sm text-red-500">{errors.lastName.message}</p>
-            )}
           </div>
-        </div>
-        <div className="mb-6">
-          <Label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">
-            Email Address
-          </Label>
-          <Input
-            id="email"
-            type="email"
-            {...register("email")}
-            className={`w-full px-4 py-2 border ${
-              errors.email ? "border-red-500" : "border-neutral-300"
-            } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors`}
-            placeholder="Enter your email address"
+
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email Address</FormLabel>
+                <FormControl>
+                  <Input type="email" placeholder="john.doe@example.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
-          )}
-        </div>
-        <div className="flex justify-end">
-          <Button type="submit" className="bg-primary-600 hover:bg-primary-700">
-            Next Step
-          </Button>
-        </div>
-      </form>
+
+          <div className="flex justify-end">
+            <Button type="submit" size="lg">Continue</Button>
+          </div>
+        </form>
+      </Form>
     </div>
   );
 }

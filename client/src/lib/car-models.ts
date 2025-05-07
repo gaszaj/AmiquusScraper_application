@@ -1,43 +1,53 @@
 export const CAR_BRANDS = [
-  { value: 'audi', label: 'Audi' },
-  { value: 'bmw', label: 'BMW' },
-  { value: 'ford', label: 'Ford' },
-  { value: 'honda', label: 'Honda' },
-  { value: 'mercedes', label: 'Mercedes-Benz' },
-  { value: 'tesla', label: 'Tesla' },
-  { value: 'toyota', label: 'Toyota' },
-  { value: 'volkswagen', label: 'Volkswagen' },
-  { value: 'chevrolet', label: 'Chevrolet' },
-  { value: 'hyundai', label: 'Hyundai' },
-  { value: 'kia', label: 'Kia' },
-  { value: 'lexus', label: 'Lexus' },
-  { value: 'mazda', label: 'Mazda' },
-  { value: 'nissan', label: 'Nissan' },
-  { value: 'subaru', label: 'Subaru' },
-  { value: 'volvo', label: 'Volvo' }
+  "Audi",
+  "BMW",
+  "Citroen",
+  "Dacia",
+  "Fiat",
+  "Ford",
+  "Honda",
+  "Hyundai",
+  "Kia",
+  "Mazda",
+  "Mercedes-Benz",
+  "Mitsubishi",
+  "Nissan",
+  "Opel",
+  "Peugeot",
+  "Renault",
+  "Seat",
+  "Skoda",
+  "Suzuki",
+  "Toyota",
+  "Volkswagen",
+  "Volvo"
 ];
 
-const CAR_MODELS: Record<string, string[]> = {
-  audi: ['A1', 'A3', 'A4', 'A5', 'A6', 'Q3', 'Q5', 'Q7', 'Q8', 'e-tron'],
-  bmw: ['1 Series', '2 Series', '3 Series', '4 Series', '5 Series', '7 Series', 'X1', 'X3', 'X5', 'i3', 'i4', 'i8'],
-  ford: ['Fiesta', 'Focus', 'Mustang', 'Explorer', 'F-150', 'Escape', 'Edge', 'Bronco', 'Ranger', 'Transit'],
-  honda: ['Civic', 'Accord', 'CR-V', 'HR-V', 'Pilot', 'Fit', 'Odyssey', 'Ridgeline', 'Insight', 'Passport'],
-  mercedes: ['A-Class', 'C-Class', 'E-Class', 'S-Class', 'GLA', 'GLC', 'GLE', 'GLS', 'CLA', 'EQC'],
-  tesla: ['Model 3', 'Model S', 'Model X', 'Model Y', 'Cybertruck', 'Roadster'],
-  toyota: ['Corolla', 'Camry', 'RAV4', 'Prius', 'Highlander', 'Tacoma', 'Tundra', '4Runner', 'Land Cruiser', 'Sienna'],
-  volkswagen: ['Golf', 'Polo', 'Passat', 'Tiguan', 'T-Roc', 'ID.3', 'ID.4', 'Arteon', 'Atlas', 'Touareg'],
-  chevrolet: ['Silverado', 'Equinox', 'Malibu', 'Tahoe', 'Suburban', 'Traverse', 'Blazer', 'Corvette', 'Camaro', 'Spark'],
-  hyundai: ['Elantra', 'Sonata', 'Tucson', 'Santa Fe', 'Kona', 'Palisade', 'Venue', 'Ioniq', 'Accent', 'Nexo'],
-  kia: ['Sportage', 'Sorento', 'Forte', 'Optima', 'Soul', 'Telluride', 'Seltos', 'Niro', 'Carnival', 'K5'],
-  lexus: ['RX', 'NX', 'ES', 'IS', 'GX', 'UX', 'LS', 'LC', 'LX', 'RC'],
-  mazda: ['Mazda3', 'Mazda6', 'CX-5', 'CX-9', 'CX-30', 'MX-5 Miata', 'CX-3', 'CX-8', 'MX-30'],
-  nissan: ['Altima', 'Sentra', 'Rogue', 'Pathfinder', 'Murano', 'Maxima', 'Kicks', 'Frontier', 'Titan', 'Leaf'],
-  subaru: ['Outback', 'Forester', 'Impreza', 'Crosstrek', 'Legacy', 'Ascent', 'WRX', 'BRZ'],
-  volvo: ['XC40', 'XC60', 'XC90', 'S60', 'S90', 'V60', 'V90', 'C40']
-};
-
 export function getCarModels(brand: string): string[] {
-  return CAR_MODELS[brand] || [];
-}
+  const models: Record<string, string[]> = {
+    "Audi": ["A1", "A3", "A4", "A5", "A6", "A7", "A8", "Q2", "Q3", "Q5", "Q7", "Q8", "e-tron"],
+    "BMW": ["1 Series", "2 Series", "3 Series", "4 Series", "5 Series", "6 Series", "7 Series", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "i3", "i4", "i8"],
+    "Citroen": ["C1", "C3", "C4", "C5", "Berlingo", "Jumpy", "Spacetourer"],
+    "Dacia": ["Duster", "Logan", "Sandero", "Spring"],
+    "Fiat": ["500", "Panda", "Tipo", "Doblo", "Ducato"],
+    "Ford": ["Fiesta", "Focus", "Kuga", "Mondeo", "Mustang", "Puma", "Ranger", "Transit"],
+    "Honda": ["Civic", "CR-V", "HR-V", "Jazz", "e"],
+    "Hyundai": ["i10", "i20", "i30", "Tucson", "Kona", "IONIQ", "Santa Fe"],
+    "Kia": ["Picanto", "Rio", "Ceed", "Sportage", "Sorento", "Niro", "e-Niro", "e-Soul"],
+    "Mazda": ["2", "3", "6", "CX-3", "CX-30", "CX-5", "MX-5", "MX-30"],
+    "Mercedes-Benz": ["A-Class", "B-Class", "C-Class", "E-Class", "S-Class", "GLA", "GLB", "GLC", "GLE", "GLS", "EQA", "EQB", "EQC", "EQE", "EQS"],
+    "Mitsubishi": ["ASX", "Eclipse Cross", "Outlander", "Space Star"],
+    "Nissan": ["Juke", "Leaf", "Micra", "Qashqai", "X-Trail"],
+    "Opel": ["Astra", "Corsa", "Crossland", "Grandland X", "Insignia", "Mokka"],
+    "Peugeot": ["108", "208", "308", "508", "2008", "3008", "5008", "Rifter", "Traveller"],
+    "Renault": ["Clio", "Captur", "Kadjar", "Megane", "Talisman", "Twingo", "Zoe"],
+    "Seat": ["Ibiza", "Leon", "Arona", "Ateca", "Tarraco", "Alhambra"],
+    "Skoda": ["Citigo", "Fabia", "Kamiq", "Karoq", "Kodiaq", "Octavia", "Scala", "Superb"],
+    "Suzuki": ["Ignis", "Swift", "Vitara", "S-Cross", "Jimny"],
+    "Toyota": ["Aygo", "Corolla", "Yaris", "RAV4", "C-HR", "Camry", "Prius", "Land Cruiser", "Hilux"],
+    "Volkswagen": ["Golf", "Polo", "Passat", "Tiguan", "T-Cross", "T-Roc", "Touran", "Touareg", "ID.3", "ID.4"],
+    "Volvo": ["S60", "S90", "V60", "V90", "XC40", "XC60", "XC90", "C40"]
+  };
 
-export default CAR_MODELS;
+  return models[brand] || [];
+}

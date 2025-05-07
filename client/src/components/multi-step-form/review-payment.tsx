@@ -1,19 +1,25 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+import { useState, useEffect } from "react";
 import { SubscriptionFormData } from "@shared/schema";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Link } from "wouter";
-import { useStripe, Elements, PaymentElement, useElements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-import { useEffect } from 'react';
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
-import { FREQUENCY_LABELS } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
+import { AlertCircle, Check } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { 
+  Card, 
+  CardContent, 
+  CardDescription, 
+  CardHeader, 
+  CardTitle,
+  CardFooter
+} from "@/components/ui/card";
+import { useSubscription } from "@/hooks/use-subscription";
+import { 
+  WEBSITE_OPTIONS, 
+  FREQUENCY_OPTIONS, 
+  FREQUENCY_LABELS,
+  LANGUAGE_OPTIONS,
+  FUEL_TYPE_OPTIONS
+} from "@/lib/constants";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface ReviewPaymentProps {
   formData: Partial<SubscriptionFormData>;
@@ -22,183 +28,38 @@ interface ReviewPaymentProps {
   onSubmit: () => void;
 }
 
-// Make sure to call `loadStripe` outside of a component's render to avoid
-// recreating the `Stripe` object on every render.
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY || "pk_test_placeholder");
-
 function calculateBasePrice(formData: Partial<SubscriptionFormData>): number {
-  const basePrice = 9.99;
-  
-  // Add additional websites cost (first one is included in base price)
-  const additionalWebsites = Math.max(0, (formData.websitesSelected?.length || 0) - 1);
-  const websitesPrice = additionalWebsites * 4.99;
-  
-  // Add frequency cost
-  let frequencyPrice = 0;
-  switch (formData.updateFrequency) {
-    case '30min':
-      frequencyPrice = 2.99;
-      break;
-    case '15min':
-      frequencyPrice = 5.99;
-      break;
-    case '5min':
-      frequencyPrice = 9.99;
-      break;
-    case '1min':
-      frequencyPrice = 14.99;
-      break;
-    default:
-      frequencyPrice = 0;
+  if (!formData.websitesSelected || formData.websitesSelected.length === 0) {
+    return 0;
   }
+
+  // Get websites count
+  const websitesCount = formData.websitesSelected.length;
   
-  return basePrice + websitesPrice + frequencyPrice;
+  // Get frequency option
+  const frequency = formData.updateFrequency || 'hourly';
+  
+  // Calculate price using useSubscription hook's calculatePrice function
+  const calculatePrice = (count: number, freq: string) => {
+    // Base price for one website
+    let price = 9.99;
+    
+    // Add price for additional websites
+    if (count > 1) {
+      price += 4.99 * (count - 1);
+    }
+    
+    // Add price for frequency
+    const frequencyOption = FREQUENCY_OPTIONS.find(option => option.id === freq);
+    if (frequencyOption && frequencyOption.additionalPrice) {
+      price += frequencyOption.additionalPrice;
+    }
+    
+    return price;
+  };
+
+  return calculatePrice(websitesCount, frequency);
 }
-
-const CheckoutForm = ({ onSubmitComplete, formData }: { onSubmitComplete: () => void, formData: Partial<SubscriptionFormData> }) => {
-  const stripe = useStripe();
-  const elements = useElements();
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!stripe || !elements) {
-      return;
-    }
-
-    if (!agreedToTerms) {
-      toast({
-        title: "Agreement Required",
-        description: "Please agree to the terms of service before proceeding.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    const { error } = await stripe.confirmPayment({
-      elements,
-      confirmParams: {
-        return_url: window.location.origin + '/dashboard',
-      },
-    });
-
-    setIsSubmitting(false);
-
-    if (error) {
-      toast({
-        title: "Payment Failed",
-        description: error.message,
-        variant: "destructive",
-      });
-    } else {
-      toast({
-        title: "Payment Successful",
-        description: "Your subscription has been set up!",
-      });
-      onSubmitComplete();
-    }
-  }
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div className="bg-neutral-50 p-6 rounded-lg mb-8">
-        <h4 className="text-lg font-medium mb-4">Subscription Summary</h4>
-        
-        <div className="space-y-3 mb-6">
-          <div className="flex justify-between">
-            <span className="text-neutral-600">Base package (1 website)</span>
-            <span className="font-medium">$9.99/month</span>
-          </div>
-          
-          {(formData.websitesSelected?.length || 0) > 1 && (
-            <div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600">
-                  Additional websites ({(formData.websitesSelected?.length || 0) - 1})
-                </span>
-                <span className="font-medium">
-                  ${(((formData.websitesSelected?.length || 0) - 1) * 4.99).toFixed(2)}/month
-                </span>
-              </div>
-            </div>
-          )}
-          
-          {formData.updateFrequency && formData.updateFrequency !== 'hourly' && (
-            <div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600">
-                  Update frequency ({FREQUENCY_LABELS[formData.updateFrequency]})
-                </span>
-                <span className="font-medium">
-                  ${formData.updateFrequency === '30min' ? '2.99' : 
-                     formData.updateFrequency === '15min' ? '5.99' :
-                     formData.updateFrequency === '5min' ? '9.99' :
-                     formData.updateFrequency === '1min' ? '14.99' : '0.00'}/month
-                </span>
-              </div>
-            </div>
-          )}
-          
-          <div className="border-t border-neutral-300 pt-3 flex justify-between">
-            <span className="font-medium">Total</span>
-            <span className="font-bold text-lg">${calculateBasePrice(formData).toFixed(2)}/month</span>
-          </div>
-        </div>
-        
-        <div className="text-sm text-neutral-500">
-          <p>Your subscription will begin immediately after payment is processed. You can cancel or modify it at any time from your account dashboard.</p>
-        </div>
-      </div>
-      
-      <div className="mb-8">
-        <h4 className="text-lg font-medium mb-4">Payment Information</h4>
-        <PaymentElement />
-      </div>
-      
-      <div className="mb-8">
-        <div className="flex items-start">
-          <Checkbox
-            id="terms-agree"
-            checked={agreedToTerms}
-            onCheckedChange={(checked) => setAgreedToTerms(checked as boolean)}
-            className="mt-1 w-4 h-4 text-primary-600 rounded focus:ring-primary-500"
-          />
-          <Label htmlFor="terms-agree" className="ml-3 text-sm text-neutral-600">
-            I agree to the <Link href="/terms" className="text-primary-600 underline">Terms of Service</Link> and <Link href="/privacy" className="text-primary-600 underline">Privacy Policy</Link>, and authorize Amiquus to charge my card monthly for this subscription.
-          </Label>
-        </div>
-      </div>
-      
-      <div className="flex justify-between">
-        <Button
-          type="button"
-          onClick={() => {
-            if (!isSubmitting) {
-              onSubmitComplete(); // Just for demo purposes
-            }
-          }}
-          variant="outline"
-          className="bg-neutral-200 text-neutral-700 hover:bg-neutral-300 border-0"
-          disabled={isSubmitting}
-        >
-          Previous
-        </Button>
-        <Button 
-          type="submit" 
-          className="bg-primary-600 hover:bg-primary-700"
-          disabled={!stripe || !elements || isSubmitting}
-        >
-          {isSubmitting ? "Processing..." : "Complete Subscription"}
-        </Button>
-      </div>
-    </form>
-  );
-};
 
 export default function ReviewPayment({
   formData,
@@ -206,55 +67,235 @@ export default function ReviewPayment({
   prevStep,
   onSubmit,
 }: ReviewPaymentProps) {
-  const [clientSecret, setClientSecret] = useState("");
-  const { toast } = useToast();
+  const [error, setError] = useState<string | null>(null);
+  const [termsAgreed, setTermsAgreed] = useState(false);
+  const [calculatedPrice, setCalculatedPrice] = useState(0);
 
   useEffect(() => {
-    // Calculate the total price
-    const totalPrice = calculateBasePrice(formData);
+    // Calculate price based on selections
+    const price = calculateBasePrice(formData);
+    setCalculatedPrice(price);
     
-    // Create PaymentIntent as soon as the component mounts
-    apiRequest("POST", "/api/create-payment-intent", { amount: totalPrice })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.clientSecret) {
-          setClientSecret(data.clientSecret);
-        } else {
-          toast({
-            title: "Error",
-            description: data.message || "Could not initialize payment. Please try again.",
-            variant: "destructive",
-          });
-        }
-      })
-      .catch(error => {
-        toast({
-          title: "Error",
-          description: "Could not initialize payment. Please try again.",
-          variant: "destructive",
-        });
-        console.error("Payment intent error:", error);
-      });
-  }, []);
+    // Update the price in the form data
+    updateFormData({ price });
+  }, [formData, updateFormData]);
 
-  if (!clientSecret) {
-    return (
-      <div className="h-64 flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full" aria-label="Loading"/>
-      </div>
-    );
-  }
+  const handleSubmit = () => {
+    if (!termsAgreed) {
+      setError("You must agree to the terms and conditions");
+      return;
+    }
+    
+    try {
+      onSubmit();
+    } catch (error: any) {
+      setError(error.message);
+    }
+  };
+
+  const getLanguageName = (code: string) => {
+    const language = LANGUAGE_OPTIONS.find(lang => lang.id === code);
+    return language ? language.name : code;
+  };
+
+  const getFuelTypeName = (code: string | undefined) => {
+    if (!code) return "Any";
+    const fuelType = FUEL_TYPE_OPTIONS.find(fuel => fuel.id === code);
+    return fuelType ? fuelType.name : code;
+  };
 
   return (
-    <div className="form-step">
-      <h3 className="text-xl font-title font-semibold mb-6">Review & Complete Setup</h3>
-      <p className="text-neutral-600 mb-6">
-        Review your selections and complete your subscription setup.
-      </p>
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold tracking-tight">Review Your Subscription</h2>
+        <p className="text-sm text-neutral-500">
+          Please review your subscription details before proceeding to payment.
+        </p>
+      </div>
 
-      <Elements stripe={stripePromise} options={{ clientSecret }}>
-        <CheckoutForm onSubmitComplete={onSubmit} formData={formData} />
-      </Elements>
+      {error && (
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl">Personal Information</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <div>
+              <span className="font-medium">Name:</span>{" "}
+              {formData.firstName} {formData.lastName}
+            </div>
+            <div>
+              <span className="font-medium">Email:</span> {formData.email}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl">Monitoring Settings</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <div>
+              <span className="font-medium">Websites:</span>{" "}
+              <ul className="list-disc ml-5 mt-1">
+                {formData.websitesSelected?.map(websiteId => {
+                  const website = WEBSITE_OPTIONS.find(w => w.id === websiteId);
+                  return (
+                    <li key={websiteId}>{website?.name || websiteId}</li>
+                  );
+                })}
+              </ul>
+            </div>
+            {formData.facebookMarketplaceUrl && (
+              <div>
+                <span className="font-medium">Facebook URL:</span>{" "}
+                <span className="break-all text-sm">{formData.facebookMarketplaceUrl}</span>
+              </div>
+            )}
+            <div>
+              <span className="font-medium">Update Frequency:</span>{" "}
+              {FREQUENCY_LABELS[formData.updateFrequency || 'hourly']}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl">Car Specifications</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            {formData.brand && (
+              <div>
+                <span className="font-medium">Brand:</span> {formData.brand}
+              </div>
+            )}
+            {formData.model && (
+              <div>
+                <span className="font-medium">Model:</span> {formData.model}
+              </div>
+            )}
+            {formData.fuelType && (
+              <div>
+                <span className="font-medium">Fuel Type:</span> {getFuelTypeName(formData.fuelType)}
+              </div>
+            )}
+            {(formData.yearMin || formData.yearMax) && (
+              <div>
+                <span className="font-medium">Year Range:</span>{" "}
+                {formData.yearMin || "Any"} - {formData.yearMax || "Any"}
+              </div>
+            )}
+            {(formData.mileageMin || formData.mileageMax) && (
+              <div>
+                <span className="font-medium">Mileage Range (km):</span>{" "}
+                {formData.mileageMin || "Any"} - {formData.mileageMax || "Any"}
+              </div>
+            )}
+            {(formData.priceMin || formData.priceMax) && (
+              <div>
+                <span className="font-medium">Price Range (€):</span>{" "}
+                {formData.priceMin || "Any"} - {formData.priceMax || "Any"}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl">Notification Settings</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <div>
+              <span className="font-medium">Telegram Bot:</span> Connected
+            </div>
+            <div>
+              <span className="font-medium">Notification Language:</span>{" "}
+              {getLanguageName(formData.notificationLanguage || 'en')}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <Card className="bg-primary-50 border-primary-200">
+        <CardHeader>
+          <CardTitle className="text-xl">Subscription Summary</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="flex justify-between">
+            <span>Base Subscription:</span>
+            <span>${(9.99).toFixed(2)}</span>
+          </div>
+          
+          {formData.websitesSelected && formData.websitesSelected.length > 1 && (
+            <div className="flex justify-between">
+              <span>Additional Websites ({formData.websitesSelected.length - 1}):</span>
+              <span>${((formData.websitesSelected.length - 1) * 4.99).toFixed(2)}</span>
+            </div>
+          )}
+          
+          {formData.updateFrequency && formData.updateFrequency !== 'hourly' && (
+            <div className="flex justify-between">
+              <span>Frequency Upgrade ({FREQUENCY_LABELS[formData.updateFrequency]}):</span>
+              <span>
+                ${(FREQUENCY_OPTIONS.find(f => f.id === formData.updateFrequency)?.additionalPrice || 0).toFixed(2)}
+              </span>
+            </div>
+          )}
+          
+          <div className="flex justify-between pt-4 border-t border-primary-200 font-bold">
+            <span>Total (Monthly):</span>
+            <span>${calculatedPrice.toFixed(2)}</span>
+          </div>
+        </CardContent>
+        <CardFooter className="flex flex-col items-start">
+          <div className="flex items-center space-x-2 mb-4">
+            <Checkbox 
+              id="terms" 
+              checked={termsAgreed} 
+              onCheckedChange={(checked) => setTermsAgreed(checked === true)}
+            />
+            <label
+              htmlFor="terms"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              I agree to the{" "}
+              <a href="/terms" className="text-primary-600 hover:underline" target="_blank">
+                Terms of Service
+              </a>{" "}
+              and{" "}
+              <a href="/privacy" className="text-primary-600 hover:underline" target="_blank">
+                Privacy Policy
+              </a>
+            </label>
+          </div>
+          <p className="text-sm text-neutral-500">
+            Your subscription will renew automatically each month. You can cancel anytime.
+          </p>
+        </CardFooter>
+      </Card>
+
+      <div className="flex justify-between">
+        <Button
+          type="button"
+          variant="outline"
+          onClick={prevStep}
+        >
+          Previous
+        </Button>
+        <Button 
+          onClick={handleSubmit} 
+          disabled={!termsAgreed}
+          className="bg-primary-600 hover:bg-primary-700"
+        >
+          Proceed to Payment
+        </Button>
+      </div>
     </div>
   );
 }

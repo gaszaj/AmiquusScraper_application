@@ -1,19 +1,30 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Input } from "@/components/ui/input";
-import { SubscriptionFormData } from "@shared/schema";
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { SubscriptionFormData } from "@shared/schema";
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { HelpCircle } from "lucide-react";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  FormDescription,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { WEBSITE_OPTIONS, FREQUENCY_OPTIONS } from "@/lib/constants";
 
 interface WebsiteSelectionProps {
   formData: Partial<SubscriptionFormData>;
@@ -25,7 +36,7 @@ interface WebsiteSelectionProps {
 const websiteSelectionSchema = z.object({
   websitesSelected: z.array(z.string()).min(1, "Select at least one website"),
   facebookMarketplaceUrl: z.string().optional(),
-  updateFrequency: z.enum(['hourly', '30min', '15min', '5min', '1min']),
+  updateFrequency: z.enum(["hourly", "30min", "15min", "5min", "1min"]),
 });
 
 type WebsiteSelectionFormData = z.infer<typeof websiteSelectionSchema>;
@@ -36,219 +47,188 @@ export default function WebsiteSelection({
   nextStep,
   prevStep,
 }: WebsiteSelectionProps) {
-  const [showFacebookUrlField, setShowFacebookUrlField] = useState(
-    formData.websitesSelected?.includes("facebook") || false
+  const [error, setError] = useState<string | null>(null);
+  const [showFacebookUrlField, setShowFacebookUrlField] = useState<boolean>(
+    (formData.websitesSelected || []).includes("facebook")
   );
-  const [fbInstructionsOpen, setFbInstructionsOpen] = useState(false);
 
-  const { register, handleSubmit, formState: { errors }, watch } = useForm<WebsiteSelectionFormData>({
+  const form = useForm<WebsiteSelectionFormData>({
     resolver: zodResolver(websiteSelectionSchema),
     defaultValues: {
       websitesSelected: formData.websitesSelected || [],
       facebookMarketplaceUrl: formData.facebookMarketplaceUrl || "",
-      updateFrequency: formData.updateFrequency || 'hourly',
+      updateFrequency: formData.updateFrequency || "hourly",
     },
   });
 
-  const watchWebsites = watch("websitesSelected");
-
   const onSubmit = (data: WebsiteSelectionFormData) => {
-    updateFormData(data);
-    nextStep();
-  };
+    try {
+      if (data.websitesSelected.includes("facebook") && !data.facebookMarketplaceUrl) {
+        form.setError("facebookMarketplaceUrl", {
+          type: "manual",
+          message: "Please provide a Facebook Marketplace URL",
+        });
+        return;
+      }
 
-  const handleWebsiteChange = (checked: boolean, value: string) => {
-    let updatedWebsites = [...(watchWebsites || [])];
-    
-    if (checked) {
-      updatedWebsites.push(value);
-    } else {
-      updatedWebsites = updatedWebsites.filter(site => site !== value);
-    }
-
-    if (value === "facebook") {
-      setShowFacebookUrlField(checked);
+      updateFormData(data);
+      nextStep();
+    } catch (error: any) {
+      setError(error.message);
     }
   };
+
+  // Watch the websites selected to show/hide the Facebook URL field
+  const watchedWebsites = form.watch("websitesSelected");
+  
+  // Update Facebook URL visibility when selection changes
+  if (watchedWebsites?.includes("facebook") && !showFacebookUrlField) {
+    setShowFacebookUrlField(true);
+  } else if (!watchedWebsites?.includes("facebook") && showFacebookUrlField) {
+    setShowFacebookUrlField(false);
+  }
 
   return (
-    <div className="form-step">
-      <h3 className="text-xl font-title font-semibold mb-6">Select Websites to Monitor</h3>
-      <p className="text-neutral-600 mb-6">
-        Choose which websites you want us to monitor for new car listings.
-      </p>
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold tracking-tight">Website Selection</h2>
+        <p className="text-sm text-neutral-500">
+          Choose which websites you want to monitor and how frequently you want updates.
+        </p>
+      </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="space-y-4 mb-8">
-          <div className="flex items-center p-4 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors">
-            <Checkbox 
-              id="website-autotrader" 
-              {...register("websitesSelected")} 
-              value="autotrader"
-              onCheckedChange={(checked) => handleWebsiteChange(checked as boolean, "autotrader")}
-              defaultChecked={formData.websitesSelected?.includes("autotrader")}
-              className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500" 
-            />
-            <Label htmlFor="website-autotrader" className="ml-3 flex-1 text-neutral-700 cursor-pointer">
-              AutoTrader
-            </Label>
-            <span className="text-neutral-500 text-sm">Included</span>
-          </div>
+      {error && (
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
 
-          <div className="flex items-center p-4 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors">
-            <Checkbox 
-              id="website-cargurus" 
-              {...register("websitesSelected")} 
-              value="cargurus"
-              onCheckedChange={(checked) => handleWebsiteChange(checked as boolean, "cargurus")}
-              defaultChecked={formData.websitesSelected?.includes("cargurus")}
-              className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500" 
-            />
-            <Label htmlFor="website-cargurus" className="ml-3 flex-1 text-neutral-700 cursor-pointer">
-              CarGurus
-            </Label>
-            <span className="text-neutral-500 text-sm">+$4.99/mo</span>
-          </div>
-
-          <div className="flex items-center p-4 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors">
-            <Checkbox 
-              id="website-cars" 
-              {...register("websitesSelected")} 
-              value="cars"
-              onCheckedChange={(checked) => handleWebsiteChange(checked as boolean, "cars")}
-              defaultChecked={formData.websitesSelected?.includes("cars")}
-              className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500" 
-            />
-            <Label htmlFor="website-cars" className="ml-3 flex-1 text-neutral-700 cursor-pointer">
-              Cars.com
-            </Label>
-            <span className="text-neutral-500 text-sm">+$4.99/mo</span>
-          </div>
-
-          <div className="flex items-center p-4 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors">
-            <Checkbox 
-              id="website-facebook" 
-              {...register("websitesSelected")} 
-              value="facebook"
-              onCheckedChange={(checked) => handleWebsiteChange(checked as boolean, "facebook")}
-              defaultChecked={formData.websitesSelected?.includes("facebook")}
-              className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500" 
-            />
-            <Label htmlFor="website-facebook" className="ml-3 flex-1 text-neutral-700 cursor-pointer">
-              Facebook Marketplace
-            </Label>
-            <span className="text-neutral-500 text-sm">+$4.99/mo</span>
-          </div>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="websitesSelected"
+            render={() => (
+              <FormItem>
+                <div className="mb-4">
+                  <FormLabel className="text-base">Websites to monitor</FormLabel>
+                  <FormDescription>
+                    Select one or more websites to monitor for car listings.
+                  </FormDescription>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {WEBSITE_OPTIONS.map((website) => (
+                    <FormField
+                      key={website.id}
+                      control={form.control}
+                      name="websitesSelected"
+                      render={({ field }) => {
+                        return (
+                          <FormItem
+                            key={website.id}
+                            className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4"
+                          >
+                            <FormControl>
+                              <Checkbox
+                                checked={field.value?.includes(website.id)}
+                                onCheckedChange={(checked) => {
+                                  const updatedValue = checked
+                                    ? [...field.value, website.id]
+                                    : field.value?.filter(
+                                        (value) => value !== website.id
+                                      );
+                                  field.onChange(updatedValue);
+                                }}
+                              />
+                            </FormControl>
+                            <div className="space-y-1 leading-none">
+                              <FormLabel className="text-sm font-medium">
+                                {website.name}
+                              </FormLabel>
+                              {website.requiresUrl && (
+                                <FormDescription>
+                                  Requires search URL
+                                </FormDescription>
+                              )}
+                            </div>
+                          </FormItem>
+                        );
+                      }}
+                    />
+                  ))}
+                </div>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           {showFacebookUrlField && (
-            <div className="mt-4 p-4 border border-neutral-200 rounded-lg bg-neutral-50">
-              <Label htmlFor="facebook-url" className="block text-sm font-medium text-neutral-700 mb-1">
-                Facebook Marketplace URL
-              </Label>
-              <Input
-                id="facebook-url"
-                type="url"
-                {...register("facebookMarketplaceUrl")}
-                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                placeholder="Paste your Facebook Marketplace search URL"
-              />
-              <div className="mt-2">
-                <Collapsible open={fbInstructionsOpen} onOpenChange={setFbInstructionsOpen}>
-                  <CollapsibleTrigger asChild>
-                    <Button variant="link" className="text-primary-600 text-sm flex items-center p-0 h-auto">
-                      <HelpCircle className="mr-1 h-4 w-4" /> How to get this URL
-                    </Button>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent className="mt-3 text-sm text-neutral-600 p-3 bg-neutral-100 rounded-md">
-                    <p className="font-medium">To get your Facebook Marketplace URL:</p>
-                    <ol className="list-decimal pl-5 mt-2 space-y-1">
-                      <li>Go to Facebook Marketplace</li>
-                      <li>Search for cars with your desired filters</li>
-                      <li>Copy the entire URL from your browser's address bar</li>
-                    </ol>
-                    <p className="mt-2">
-                      <a href="#" className="text-primary-600 underline">
-                        Watch video tutorial
-                      </a>
-                    </p>
-                  </CollapsibleContent>
-                </Collapsible>
-              </div>
-            </div>
+            <FormField
+              control={form.control}
+              name="facebookMarketplaceUrl"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Facebook Marketplace URL</FormLabel>
+                  <FormDescription>
+                    Paste the URL of your Facebook Marketplace search results
+                  </FormDescription>
+                  <FormControl>
+                    <Input
+                      placeholder="https://www.facebook.com/marketplace/category/vehicles?..."
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           )}
-        </div>
 
-        {errors.websitesSelected && (
-          <p className="mt-1 mb-4 text-sm text-red-500">{errors.websitesSelected.message}</p>
-        )}
+          <FormField
+            control={form.control}
+            name="updateFrequency"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Update Frequency</FormLabel>
+                <FormDescription>
+                  How often should we check for new listings? Higher frequencies may cost more.
+                </FormDescription>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select frequency" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {FREQUENCY_OPTIONS.map((option) => (
+                      <SelectItem key={option.id} value={option.id}>
+                        {option.name}
+                        {option.additionalPrice > 0 && ` (+$${option.additionalPrice})`}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-        <div className="mb-8">
-          <h4 className="text-lg font-medium mb-3">Update Frequency</h4>
-          <p className="text-neutral-600 mb-4">
-            How often would you like us to check for new listings?
-          </p>
-
-          <RadioGroup 
-            defaultValue={formData.updateFrequency || "hourly"}
-            {...register("updateFrequency")}
-            className="space-y-3"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <RadioGroupItem id="freq-60" value="hourly" className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
-                <Label htmlFor="freq-60" className="ml-3 text-neutral-700">Every hour (Default)</Label>
-              </div>
-              <span className="text-neutral-500 text-sm">Included</span>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <RadioGroupItem id="freq-30" value="30min" className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
-                <Label htmlFor="freq-30" className="ml-3 text-neutral-700">Every 30 minutes</Label>
-              </div>
-              <span className="text-neutral-500 text-sm">+$2.99/mo</span>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <RadioGroupItem id="freq-15" value="15min" className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
-                <Label htmlFor="freq-15" className="ml-3 text-neutral-700">Every 15 minutes</Label>
-              </div>
-              <span className="text-neutral-500 text-sm">+$5.99/mo</span>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <RadioGroupItem id="freq-5" value="5min" className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
-                <Label htmlFor="freq-5" className="ml-3 text-neutral-700">Every 5 minutes</Label>
-              </div>
-              <span className="text-neutral-500 text-sm">+$9.99/mo</span>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <RadioGroupItem id="freq-1" value="1min" className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
-                <Label htmlFor="freq-1" className="ml-3 text-neutral-700">Every minute (Near real-time)</Label>
-              </div>
-              <span className="text-neutral-500 text-sm">+$14.99/mo</span>
-            </div>
-          </RadioGroup>
-        </div>
-
-        <div className="flex justify-between">
-          <Button 
-            type="button" 
-            onClick={prevStep}
-            variant="outline"
-            className="bg-neutral-200 text-neutral-700 hover:bg-neutral-300 border-0"
-          >
-            Previous
-          </Button>
-          <Button type="submit" className="bg-primary-600 hover:bg-primary-700">
-            Next Step
-          </Button>
-        </div>
-      </form>
+          <div className="flex justify-between">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={prevStep}
+            >
+              Previous
+            </Button>
+            <Button type="submit">Continue</Button>
+          </div>
+        </form>
+      </Form>
     </div>
   );
 }

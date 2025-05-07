@@ -1,52 +1,50 @@
-// Frequency labels for display
-export const FREQUENCY_LABELS: Record<string, string> = {
-  'hourly': 'Every hour',
-  '30min': 'Every 30 minutes',
-  '15min': 'Every 15 minutes',
-  '5min': 'Every 5 minutes',
-  '1min': 'Every minute'
-};
-
-// Website options with pricing
+// Website options available for scraping
 export const WEBSITE_OPTIONS = [
-  { id: 'autotrader', name: 'AutoTrader', isDefault: true, includedInBase: true },
-  { id: 'cargurus', name: 'CarGurus', price: 4.99 },
-  { id: 'cars', name: 'Cars.com', price: 4.99 },
-  { id: 'facebook', name: 'Facebook Marketplace', price: 4.99, requiresUrl: true }
+  { id: "avto.net", name: "Avto.net", price: 0 },
+  { id: "facebook", name: "Facebook Marketplace", price: 0, requiresUrl: true },
+  { id: "mobile.de", name: "Mobile.de", price: 0 },
+  { id: "autoscout24", name: "AutoScout24", price: 0 },
+  { id: "olx", name: "OLX", price: 0 }
 ];
 
-// Update frequency options with pricing
+// Frequency options for scraping
 export const FREQUENCY_OPTIONS = [
-  { id: 'hourly', label: 'Every hour', price: 0, isDefault: true },
-  { id: '30min', label: 'Every 30 minutes', price: 2.99 },
-  { id: '15min', label: 'Every 15 minutes', price: 5.99 },
-  { id: '5min', label: 'Every 5 minutes', price: 9.99 },
-  { id: '1min', label: 'Every minute', price: 14.99 }
+  { id: "hourly", name: "Every 1 hour", minutes: 60, additionalPrice: 0 },
+  { id: "30min", name: "Every 30 minutes", minutes: 30, additionalPrice: 5 },
+  { id: "15min", name: "Every 15 minutes", minutes: 15, additionalPrice: 10 },
+  { id: "5min", name: "Every 5 minutes", minutes: 5, additionalPrice: 15 },
+  { id: "1min", name: "Every 1 minute", minutes: 1, additionalPrice: 20 }
 ];
+
+// Mapping of frequency options to display labels
+export const FREQUENCY_LABELS: Record<string, string> = {
+  hourly: "Every 1 hour",
+  "30min": "Every 30 minutes",
+  "15min": "Every 15 minutes",
+  "5min": "Every 5 minutes",
+  "1min": "Every 1 minute"
+};
 
 // Language options for notifications
 export const LANGUAGE_OPTIONS = [
-  { value: 'en', label: 'English' },
-  { value: 'es', label: 'Spanish' },
-  { value: 'fr', label: 'French' },
-  { value: 'de', label: 'German' },
-  { value: 'it', label: 'Italian' },
-  { value: 'pt', label: 'Portuguese' },
-  { value: 'ru', label: 'Russian' }
+  { id: "en", name: "English" },
+  { id: "es", name: "Spanish" },
+  { id: "fr", name: "French" },
+  { id: "de", name: "German" },
+  { id: "it", name: "Italian" },
+  { id: "pt", name: "Portuguese" },
+  { id: "ru", name: "Russian" }
 ];
 
-// Fuel type options
+// Fuel type options for car filtering
 export const FUEL_TYPE_OPTIONS = [
-  { value: '', label: 'Any fuel type' },
-  { value: 'gasoline', label: 'Gasoline' },
-  { value: 'diesel', label: 'Diesel' },
-  { value: 'electric', label: 'Electric' },
-  { value: 'hybrid', label: 'Hybrid' },
-  { value: 'plugin_hybrid', label: 'Plug-in Hybrid' }
+  { id: "gasoline", name: "Gasoline" },
+  { id: "diesel", name: "Diesel" },
+  { id: "electric", name: "Electric" },
+  { id: "hybrid", name: "Hybrid" },
+  { id: "plugin_hybrid", name: "Plug-in Hybrid" }
 ];
 
-// Base price for subscription
+// Base pricing
 export const BASE_PRICE = 9.99;
-
-// Additional price per website (after the first one)
 export const ADDITIONAL_WEBSITE_PRICE = 4.99;

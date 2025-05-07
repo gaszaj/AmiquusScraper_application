@@ -1,11 +1,30 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { SubscriptionFormData } from "@shared/schema";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  FormDescription,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { FUEL_TYPE_OPTIONS } from "@/lib/constants";
 import { CAR_BRANDS, getCarModels } from "@/lib/car-models";
-import { useEffect, useState } from "react";
-import { useForm, Controller } from "react-hook-form";
 
 interface CarDetailsProps {
   formData: Partial<SubscriptionFormData>;
@@ -14,19 +33,60 @@ interface CarDetailsProps {
   prevStep: () => void;
 }
 
+const carDetailsSchema = z.object({
+  brand: z.string().optional(),
+  model: z.string().optional(),
+  fuelType: z.enum(['gasoline', 'diesel', 'electric', 'hybrid', 'plugin_hybrid']).optional(),
+  yearMin: z.number().int().positive().optional(),
+  yearMax: z.number().int().positive().optional(),
+  mileageMin: z.number().int().nonnegative().optional(),
+  mileageMax: z.number().int().nonnegative().optional(),
+  priceMin: z.number().int().nonnegative().optional(),
+  priceMax: z.number().int().nonnegative().optional(),
+}).refine((data) => {
+  if (data.yearMin && data.yearMax) {
+    return data.yearMin <= data.yearMax;
+  }
+  return true;
+}, {
+  message: "Minimum year must be less than or equal to maximum year",
+  path: ["yearMin"],
+}).refine((data) => {
+  if (data.mileageMin && data.mileageMax) {
+    return data.mileageMin <= data.mileageMax;
+  }
+  return true;
+}, {
+  message: "Minimum mileage must be less than or equal to maximum mileage",
+  path: ["mileageMin"],
+}).refine((data) => {
+  if (data.priceMin && data.priceMax) {
+    return data.priceMin <= data.priceMax;
+  }
+  return true;
+}, {
+  message: "Minimum price must be less than or equal to maximum price",
+  path: ["priceMin"],
+});
+
 export default function CarDetails({
   formData,
   updateFormData,
   nextStep,
   prevStep,
 }: CarDetailsProps) {
-  const [carModels, setCarModels] = useState<string[]>([]);
-  
-  const { register, handleSubmit, control, watch } = useForm({
+  const [error, setError] = useState<string | null>(null);
+  const [selectedBrand, setSelectedBrand] = useState<string>(formData.brand || "");
+  const [carModels, setCarModels] = useState<string[]>(
+    formData.brand ? getCarModels(formData.brand) : []
+  );
+
+  const form = useForm<z.infer<typeof carDetailsSchema>>({
+    resolver: zodResolver(carDetailsSchema),
     defaultValues: {
       brand: formData.brand || "",
       model: formData.model || "",
-      fuelType: formData.fuelType || "",
+      fuelType: formData.fuelType || undefined,
       yearMin: formData.yearMin || undefined,
       yearMax: formData.yearMax || undefined,
       mileageMin: formData.mileageMin || undefined,
@@ -36,237 +96,293 @@ export default function CarDetails({
     },
   });
 
-  const selectedBrand = watch("brand");
+  const handleBrandChange = (brand: string) => {
+    setSelectedBrand(brand);
+    const models = getCarModels(brand);
+    setCarModels(models);
+    form.setValue("brand", brand);
+    // Reset model when brand changes
+    form.setValue("model", "");
+  };
 
-  // Update models when brand changes
-  useEffect(() => {
-    if (selectedBrand) {
-      setCarModels(getCarModels(selectedBrand));
-    } else {
-      setCarModels([]);
+  const onSubmit = (data: z.infer<typeof carDetailsSchema>) => {
+    try {
+      updateFormData(data);
+      nextStep();
+    } catch (error: any) {
+      setError(error.message);
     }
-  }, [selectedBrand]);
-
-  const onSubmit = (data: any) => {
-    updateFormData(data);
-    nextStep();
   };
 
   return (
-    <div className="form-step">
-      <h3 className="text-xl font-title font-semibold mb-6">Car Details</h3>
-      <p className="text-neutral-600 mb-6">
-        Tell us what type of car you're looking for.
-      </p>
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold tracking-tight">Car Details</h2>
+        <p className="text-sm text-neutral-500">
+          Specify the car details you are looking for. All fields are optional - leave any blank
+          to get a wider range of results.
+        </p>
+      </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-6">
-          <Label htmlFor="car-brand" className="block text-sm font-medium text-neutral-700 mb-1">
-            Brand
-          </Label>
-          <Controller
-            name="brand"
-            control={control}
-            render={({ field }) => (
-              <Select
-                onValueChange={field.onChange}
-                value={field.value}
-              >
-                <SelectTrigger id="car-brand">
-                  <SelectValue placeholder="Select a brand" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">Any brand</SelectItem>
-                  {CAR_BRANDS.map((brand) => (
-                    <SelectItem key={brand.value} value={brand.value}>{brand.label}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            )}
-          />
-        </div>
+      {error && (
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
 
-        <div className="mb-6">
-          <Label htmlFor="car-model" className="block text-sm font-medium text-neutral-700 mb-1">
-            Model
-          </Label>
-          <Controller
-            name="model"
-            control={control}
-            render={({ field }) => (
-              <Select
-                onValueChange={field.onChange}
-                value={field.value}
-                disabled={!selectedBrand}
-              >
-                <SelectTrigger id="car-model">
-                  <SelectValue placeholder={selectedBrand ? "Any model" : "Select a brand first"} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">Any model</SelectItem>
-                  {carModels.map((model) => (
-                    <SelectItem key={model} value={model.toLowerCase().replace(' ', '-')}>{model}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            )}
-          />
-        </div>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="brand"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Brand</FormLabel>
+                  <Select
+                    onValueChange={(value) => handleBrandChange(value)}
+                    value={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select car brand" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {CAR_BRANDS.map((brand) => (
+                        <SelectItem key={brand} value={brand}>
+                          {brand}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        <div className="mb-6">
-          <Label htmlFor="fuel-type" className="block text-sm font-medium text-neutral-700 mb-1">
-            Fuel Type
-          </Label>
-          <Controller
+            <FormField
+              control={form.control}
+              name="model"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Model</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    value={field.value}
+                    disabled={!selectedBrand}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder={selectedBrand ? "Select model" : "Select brand first"} />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {carModels.map((model) => (
+                        <SelectItem key={model} value={model}>
+                          {model}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+          <FormField
+            control={form.control}
             name="fuelType"
-            control={control}
             render={({ field }) => (
-              <Select
-                onValueChange={field.onChange}
-                value={field.value}
-              >
-                <SelectTrigger id="fuel-type">
-                  <SelectValue placeholder="Any fuel type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">Any fuel type</SelectItem>
-                  <SelectItem value="gasoline">Gasoline</SelectItem>
-                  <SelectItem value="diesel">Diesel</SelectItem>
-                  <SelectItem value="electric">Electric</SelectItem>
-                  <SelectItem value="hybrid">Hybrid</SelectItem>
-                  <SelectItem value="plugin_hybrid">Plug-in Hybrid</SelectItem>
-                </SelectContent>
-              </Select>
+              <FormItem>
+                <FormLabel>Fuel Type</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  value={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Any fuel type" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {FUEL_TYPE_OPTIONS.map((option) => (
+                      <SelectItem key={option.id} value={option.id}>
+                        {option.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
             )}
           />
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <Label className="block text-sm font-medium text-neutral-700 mb-3">
-              Year Range
-            </Label>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label htmlFor="year-min" className="block text-xs text-neutral-500 mb-1">
-                  From
-                </Label>
-                <Input
-                  id="year-min"
-                  type="number"
-                  min="1990"
-                  max="2023"
-                  step="1"
-                  {...register("yearMin", { valueAsNumber: true })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                  placeholder="Any"
-                />
-              </div>
-              <div>
-                <Label htmlFor="year-max" className="block text-xs text-neutral-500 mb-1">
-                  To
-                </Label>
-                <Input
-                  id="year-max"
-                  type="number"
-                  min="1990"
-                  max="2023"
-                  step="1"
-                  {...register("yearMax", { valueAsNumber: true })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                  placeholder="Any"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <Label className="block text-sm font-medium text-neutral-700 mb-3">
-              Mileage Range (miles)
-            </Label>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label htmlFor="mileage-min" className="block text-xs text-neutral-500 mb-1">
-                  From
-                </Label>
-                <Input
-                  id="mileage-min"
-                  type="number"
-                  min="0"
-                  step="1000"
-                  {...register("mileageMin", { valueAsNumber: true })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                  placeholder="Any"
-                />
-              </div>
-              <div>
-                <Label htmlFor="mileage-max" className="block text-xs text-neutral-500 mb-1">
-                  To
-                </Label>
-                <Input
-                  id="mileage-max"
-                  type="number"
-                  min="0"
-                  step="1000"
-                  {...register("mileageMax", { valueAsNumber: true })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                  placeholder="Any"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-6">
-          <Label className="block text-sm font-medium text-neutral-700 mb-3">
-            Price Range ($)
-          </Label>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
-              <Label htmlFor="price-min" className="block text-xs text-neutral-500 mb-1">
-                From
-              </Label>
-              <Input
-                id="price-min"
-                type="number"
-                min="0"
-                step="1000"
-                {...register("priceMin", { valueAsNumber: true })}
-                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                placeholder="Any"
+              <FormLabel className="block mb-4">Year Range</FormLabel>
+              <div className="grid grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="yearMin"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          type="number"
+                          placeholder="Min year"
+                          min="1900"
+                          max="2099"
+                          {...field}
+                          onChange={(e) => {
+                            const value = e.target.value === "" ? undefined : parseInt(e.target.value, 10);
+                            field.onChange(value);
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="yearMax"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          type="number"
+                          placeholder="Max year"
+                          min="1900"
+                          max="2099"
+                          {...field}
+                          onChange={(e) => {
+                            const value = e.target.value === "" ? undefined : parseInt(e.target.value, 10);
+                            field.onChange(value);
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </div>
+
+            <div>
+              <FormLabel className="block mb-4">Mileage Range (km)</FormLabel>
+              <div className="grid grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="mileageMin"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          type="number"
+                          placeholder="Min mileage"
+                          min="0"
+                          {...field}
+                          onChange={(e) => {
+                            const value = e.target.value === "" ? undefined : parseInt(e.target.value, 10);
+                            field.onChange(value);
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="mileageMax"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          type="number"
+                          placeholder="Max mileage"
+                          min="0"
+                          {...field}
+                          onChange={(e) => {
+                            const value = e.target.value === "" ? undefined : parseInt(e.target.value, 10);
+                            field.onChange(value);
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <FormLabel className="block mb-4">Price Range (€)</FormLabel>
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="priceMin"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        type="number"
+                        placeholder="Min price"
+                        min="0"
+                        {...field}
+                        onChange={(e) => {
+                          const value = e.target.value === "" ? undefined : parseInt(e.target.value, 10);
+                          field.onChange(value);
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="priceMax"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        type="number"
+                        placeholder="Max price"
+                        min="0"
+                        {...field}
+                        onChange={(e) => {
+                          const value = e.target.value === "" ? undefined : parseInt(e.target.value, 10);
+                          field.onChange(value);
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
             </div>
-            <div>
-              <Label htmlFor="price-max" className="block text-xs text-neutral-500 mb-1">
-                To
-              </Label>
-              <Input
-                id="price-max"
-                type="number"
-                min="0"
-                step="1000"
-                {...register("priceMax", { valueAsNumber: true })}
-                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                placeholder="Any"
-              />
-            </div>
           </div>
-        </div>
 
-        <div className="flex justify-between">
-          <Button
-            type="button"
-            onClick={prevStep}
-            variant="outline"
-            className="bg-neutral-200 text-neutral-700 hover:bg-neutral-300 border-0"
-          >
-            Previous
-          </Button>
-          <Button type="submit" className="bg-primary-600 hover:bg-primary-700">
-            Next Step
-          </Button>
-        </div>
-      </form>
+          <div className="flex justify-between">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={prevStep}
+            >
+              Previous
+            </Button>
+            <Button type="submit">Continue</Button>
+          </div>
+        </form>
+      </Form>
     </div>
   );
 }
