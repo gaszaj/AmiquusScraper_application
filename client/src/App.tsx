@@ -10,6 +10,8 @@ import About from "@/pages/about";
 import Terms from "@/pages/terms";
 import Privacy from "@/pages/privacy";
 import FAQ from "@/pages/faq";
+import Checkout from "@/pages/checkout";
+import Subscribe from "@/pages/subscribe";
 import { AuthProvider } from "@/hooks/use-auth";
 
 function Router() {
@@ -19,6 +21,8 @@ function Router() {
       <Route path="/signup" component={Signup} />
       <Route path="/login" component={Login} />
       <Route path="/dashboard" component={Dashboard} />
+      <Route path="/checkout" component={Checkout} />
+      <Route path="/subscribe" component={Subscribe} />
       <Route path="/about" component={About} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />

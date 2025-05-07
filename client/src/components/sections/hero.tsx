@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 interface HeroProps {
   onGetStarted: () => void;
 }
 
 export default function Hero({ onGetStarted }: HeroProps) {
+  const [_, setLocation] = useLocation();
   return (
     <section className="relative bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +20,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                onClick={onGetStarted}
+                onClick={() => setLocation('/subscribe')}
                 className="bg-white text-primary-600 hover:bg-neutral-100 px-6 py-6"
                 size="lg"
               >
