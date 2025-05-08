@@ -23,8 +23,8 @@
   --secondary: 220 14% 96%;
   --secondary-foreground: 230 14% 16%;
   
-  /* Accent - Orange */
-  --accent: 24 100% 62%;
+  /* Accent - Yellow */
+  --accent: 48 100% 62%;
   --accent-foreground: 230 14% 16%;
   
   /* Destructive - Red */
@@ -77,8 +77,8 @@
   --secondary: 230 25% 24%;
   --secondary-foreground: 210 14% 98%;
   
-  /* Accent - Orange (slightly darker) */
-  --accent: 24 100% 58%; 
+  /* Accent - Yellow (slightly darker) */
+  --accent: 48 100% 58%; 
   --accent-foreground: 0 0% 100%;
   
   /* Destructive - Red */
@@ -128,7 +128,7 @@
   }
 
   .btn-accent {
-    @apply bg-accent hover:bg-orange-500 text-white font-medium py-2.5 px-5 rounded-md transition-colors;
+    @apply bg-accent hover:bg-yellow-500 text-white font-medium py-2.5 px-5 rounded-md transition-colors;
   }
 
   .btn-outline {
