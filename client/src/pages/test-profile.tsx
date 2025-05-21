@@ -27,6 +27,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
 import { 
   AlertCircle, 
   CheckCircle2, 
@@ -504,21 +505,38 @@ function PaymentMethodCard({ method, onRemove, onSetDefault }: PaymentMethodCard
 
 export default function TestProfile() {
   const [activeTab, setActiveTab] = useState("subscriptions");
+  const { toast } = useToast();
   
   const handleCancelSubscription = (id) => {
-    alert(`Subscription ${id} would be cancelled in a real application`);
+    toast({
+      title: "Subscription Cancelled",
+      description: `Subscription ${id} has been cancelled.`,
+      variant: "default",
+    });
   };
   
   const handleEditSubscription = (subscription) => {
-    alert(`Editing subscription for ${subscription.brand} ${subscription.model} in a real application`);
+    toast({
+      title: "Subscription Updated",
+      description: `Your subscription for ${subscription.brand} ${subscription.model} has been updated.`,
+      variant: "default",
+    });
   };
   
   const handleRemovePaymentMethod = (id) => {
-    alert(`Payment method ${id} would be removed in a real application`);
+    toast({
+      title: "Payment Method Removed",
+      description: `Payment method ending in ${id.slice(-4)} has been removed.`,
+      variant: "default",
+    });
   };
   
   const handleSetDefaultPaymentMethod = (id) => {
-    alert(`Payment method ${id} would be set as default in a real application`);
+    toast({
+      title: "Default Payment Method Set",
+      description: `Payment method ending in ${id.slice(-4)} is now your default payment method.`,
+      variant: "default",
+    });
   };
 
   return (

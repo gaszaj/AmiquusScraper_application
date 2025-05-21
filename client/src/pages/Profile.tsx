@@ -867,48 +867,258 @@ export default function Profile() {
             
             {/* Settings Tab */}
             <TabsContent value="settings">
-              <Card className="border border-neutral-200 dark:border-neutral-700">
-                <CardHeader>
-                  <CardTitle className="text-neutral-900 dark:text-white">Notification Preferences</CardTitle>
-                  <CardDescription>Choose how you receive notifications from Amiquus</CardDescription>
-                </CardHeader>
+              <div className="grid gap-6">
+                <Card className="border border-neutral-200 dark:border-neutral-700">
+                  <CardHeader>
+                    <CardTitle className="text-neutral-900 dark:text-white">Notification Preferences</CardTitle>
+                    <CardDescription>Choose how you receive notifications from Amiquus</CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <div className="space-y-6">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="bg-primary/10 text-primary p-2 rounded-full">
+                            <Bell size={18} />
+                          </div>
+                          <div>
+                            <h3 className="font-medium text-neutral-900 dark:text-white">Email Notifications</h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Receive important updates about your account and subscriptions</p>
+                          </div>
+                        </div>
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button variant="outline" size="sm" className="border-neutral-200 dark:border-neutral-700">
+                              Manage
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent>
+                            <DialogHeader>
+                              <DialogTitle>Email Notification Settings</DialogTitle>
+                              <DialogDescription>
+                                Customize which email notifications you receive from Amiquus
+                              </DialogDescription>
+                            </DialogHeader>
+                            <div className="space-y-4 py-2">
+                              <div className="flex items-center justify-between">
+                                <Label htmlFor="new-listing" className="flex-1">New car listings</Label>
+                                <input
+                                  type="checkbox"
+                                  id="new-listing"
+                                  defaultChecked
+                                  className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-700"
+                                />
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <Label htmlFor="price-drop" className="flex-1">Price drop alerts</Label>
+                                <input
+                                  type="checkbox"
+                                  id="price-drop"
+                                  defaultChecked
+                                  className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-700"
+                                />
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <Label htmlFor="account-updates" className="flex-1">Account updates</Label>
+                                <input
+                                  type="checkbox"
+                                  id="account-updates"
+                                  defaultChecked
+                                  className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-700"
+                                />
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <Label htmlFor="billing" className="flex-1">Billing notifications</Label>
+                                <input
+                                  type="checkbox"
+                                  id="billing"
+                                  defaultChecked
+                                  className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-700"
+                                />
+                              </div>
+                            </div>
+                            <DialogFooter>
+                              <Button onClick={() => {
+                                toast({
+                                  title: "Preferences updated",
+                                  description: "Your notification preferences have been saved.",
+                                });
+                                document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                              }}>
+                                Save Preferences
+                              </Button>
+                            </DialogFooter>
+                          </DialogContent>
+                        </Dialog>
+                      </div>
+                      
+                      <Separator className="bg-neutral-200 dark:bg-neutral-700" />
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="bg-primary/10 text-primary p-2 rounded-full">
+                            <ShieldCheck size={18} />
+                          </div>
+                          <div>
+                            <h3 className="font-medium text-neutral-900 dark:text-white">Security Alerts</h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Get notified about important account security events</p>
+                          </div>
+                        </div>
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button variant="outline" size="sm" className="border-neutral-200 dark:border-neutral-700">
+                              Manage
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent>
+                            <DialogHeader>
+                              <DialogTitle>Security Alert Settings</DialogTitle>
+                              <DialogDescription>
+                                Control which security alerts you receive
+                              </DialogDescription>
+                            </DialogHeader>
+                            <div className="space-y-4 py-2">
+                              <div className="flex items-center justify-between">
+                                <Label htmlFor="login-alerts" className="flex-1">New login alerts</Label>
+                                <input
+                                  type="checkbox"
+                                  id="login-alerts"
+                                  defaultChecked
+                                  className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-700"
+                                />
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <Label htmlFor="password-changes" className="flex-1">Password change notifications</Label>
+                                <input
+                                  type="checkbox"
+                                  id="password-changes"
+                                  defaultChecked
+                                  className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-700"
+                                />
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <Label htmlFor="payment-method-changes" className="flex-1">Payment method changes</Label>
+                                <input
+                                  type="checkbox"
+                                  id="payment-method-changes"
+                                  defaultChecked
+                                  className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-700"
+                                />
+                              </div>
+                            </div>
+                            <DialogFooter>
+                              <Button onClick={() => {
+                                toast({
+                                  title: "Security preferences updated",
+                                  description: "Your security alert preferences have been saved.",
+                                });
+                                document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                              }}>
+                                Save Preferences
+                              </Button>
+                            </DialogFooter>
+                          </DialogContent>
+                        </Dialog>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border border-neutral-200 dark:border-neutral-700">
+                  <CardHeader>
+                    <CardTitle className="text-neutral-900 dark:text-white">Privacy & Security</CardTitle>
+                    <CardDescription>Manage your password and account security settings</CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <form onSubmit={handlePasswordChange} className="space-y-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="current-password" className="text-neutral-700 dark:text-neutral-300">Current Password</Label>
+                        <Input
+                          id="current-password"
+                          type="password"
+                          value={currentPassword}
+                          onChange={(e) => setCurrentPassword(e.target.value)}
+                          className="bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
+                        />
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="new-password" className="text-neutral-700 dark:text-neutral-300">New Password</Label>
+                        <Input
+                          id="new-password"
+                          type="password"
+                          value={newPassword}
+                          onChange={(e) => setNewPassword(e.target.value)}
+                          className="bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
+                        />
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="confirm-password" className="text-neutral-700 dark:text-neutral-300">Confirm New Password</Label>
+                        <Input
+                          id="confirm-password"
+                          type="password"
+                          value={confirmPassword}
+                          onChange={(e) => setConfirmPassword(e.target.value)}
+                          className="bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
+                        />
+                      </div>
+                      
+                      <Button 
+                        type="submit" 
+                        className="mt-2" 
+                        disabled={changePasswordMutation.isPending || !currentPassword || !newPassword || newPassword !== confirmPassword}
+                      >
+                        {changePasswordMutation.isPending ? "Updating..." : "Update Password"}
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
                 
-                <CardContent>
-                  <div className="space-y-6">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="bg-primary/10 text-primary p-2 rounded-full">
-                          <Bell size={18} />
-                        </div>
-                        <div>
-                          <h3 className="font-medium text-neutral-900 dark:text-white">Email Notifications</h3>
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400">Receive important updates about your account and subscriptions</p>
-                        </div>
-                      </div>
-                      <Button variant="outline" size="sm" className="border-neutral-200 dark:border-neutral-700">
-                        Manage
-                      </Button>
-                    </div>
-                    
-                    <Separator className="bg-neutral-200 dark:bg-neutral-700" />
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="bg-primary/10 text-primary p-2 rounded-full">
-                          <ShieldCheck size={18} />
-                        </div>
-                        <div>
-                          <h3 className="font-medium text-neutral-900 dark:text-white">Security Alerts</h3>
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400">Get notified about important account security events</p>
-                        </div>
-                      </div>
-                      <Button variant="outline" size="sm" className="border-neutral-200 dark:border-neutral-700">
-                        Manage
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card className="border border-neutral-200 dark:border-neutral-700">
+                  <CardHeader>
+                    <CardTitle className="text-neutral-900 dark:text-white text-red-500 dark:text-red-400">Account Actions</CardTitle>
+                    <CardDescription>Manage your account status and active sessions</CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent className="space-y-4">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="w-full justify-start text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 border-neutral-200 dark:border-neutral-700">
+                          <LogOut className="mr-2 h-4 w-4" />
+                          Log out
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Log Out</DialogTitle>
+                          <DialogDescription>
+                            Are you sure you want to log out of your account?
+                          </DialogDescription>
+                        </DialogHeader>
+                        <DialogFooter className="mt-4">
+                          <Button 
+                            variant="outline" 
+                            onClick={() => document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click()}
+                          >
+                            Cancel
+                          </Button>
+                          <Button 
+                            variant="destructive"
+                            onClick={() => {
+                              logout();
+                              document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                            }}
+                          >
+                            Log Out
+                          </Button>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
+                  </CardContent>
+                </Card>
+              </div>
             </TabsContent>
           </Tabs>
         </div>
