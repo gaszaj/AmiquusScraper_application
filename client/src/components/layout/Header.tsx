@@ -56,7 +56,7 @@ export default function Header() {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
             <ScrollToTopLink 
               href="/#features" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#features" ? "text-primary dark:text-[#ff0]" : ""}`}
@@ -102,8 +102,8 @@ export default function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button type="button" className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white" onClick={toggleMobileMenu}>
+          <div className="lg:hidden">
+            <button type="button" className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white p-2 rounded-md" onClick={toggleMobileMenu}>
               <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
@@ -111,7 +111,7 @@ export default function Header() {
           </div>
 
           {/* User menu and options */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             {/* Subscription Counter - moved to more prominent position */}
             <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-2 sm:px-3 py-1 mr-2 sm:mr-3 flex items-center">
               <span className="hidden sm:inline text-xs mr-2 text-neutral-600 dark:text-neutral-400">Subscribers:</span>
@@ -153,7 +153,7 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 border-t border-neutral-200 dark:border-neutral-700">
           <ScrollToTopLink 
             href="/#features" 
