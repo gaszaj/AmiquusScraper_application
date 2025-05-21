@@ -137,7 +137,7 @@ export default function Waitlist() {
               <span><strong>{stats.active}</strong> subscribers</span>
               <span><strong>{stats.remaining}</strong> spots available</span>
             </div>
-            <Progress value={percentFilled} className="h-2 bg-red-100 dark:bg-red-950" />
+            <Progress value={percentFilled} className="h-2" />
             <p className="text-sm text-red-500 dark:text-red-400 text-center mt-3 font-medium">
               {stats.remaining > 0 
                 ? `${stats.remaining} subscription spots out of ${stats.capacity} currently available.` 
@@ -174,14 +174,14 @@ export default function Waitlist() {
               </CardContent>
             </Card>
           ) : (
-            <Card className="border-2 border-red-500 shadow-lg shadow-red-100 dark:shadow-red-900/20">
-              <CardHeader className="bg-red-50 dark:bg-red-900/20 rounded-t-lg">
-                <CardTitle className="text-red-600 dark:text-red-400">Join the Waitlist</CardTitle>
-                <CardDescription className="text-red-600/80 dark:text-red-400/80">
+            <Card>
+              <CardHeader>
+                <CardTitle>Join the Waitlist</CardTitle>
+                <CardDescription>
                   We'll notify you as soon as a subscription spot becomes available
                 </CardDescription>
               </CardHeader>
-              <CardContent className="bg-white dark:bg-neutral-900">
+              <CardContent>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                     <FormField
