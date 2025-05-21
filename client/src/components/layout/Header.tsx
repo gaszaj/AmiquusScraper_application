@@ -92,13 +92,14 @@ export default function Header() {
 
           {/* User menu and options */}
           <div className="hidden md:flex items-center gap-2">
-            <ThemeToggle />
-            <LanguageSelector />
-            
-            {/* Subscription Counter */}
-            <div className="border-l border-neutral-200 dark:border-neutral-700 pl-2 mr-2">
+            {/* Subscription Counter - moved to more prominent position */}
+            <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-3 py-1 mr-3 flex items-center">
+              <span className="text-xs mr-2 text-neutral-600 dark:text-neutral-400">Subscribers:</span>
               <SubscriptionCounter />
             </div>
+            
+            <ThemeToggle />
+            <LanguageSelector />
 
             {/* Development test button - always visible */}
             <Link href="/test-profile">

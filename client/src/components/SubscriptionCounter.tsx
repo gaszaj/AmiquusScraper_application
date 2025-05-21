@@ -71,9 +71,9 @@ export function SubscriptionCounter() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div className="flex items-center gap-1.5 text-sm">
+          <div className="flex items-center gap-1.5 text-sm cursor-pointer">
             <Users className="h-4 w-4" />
-            <Badge variant="outline" className={`text-xs font-medium py-0.5 ${getColorClass()}`}>
+            <Badge variant="secondary" className={`text-xs font-medium py-1 px-2 ${getColorClass()}`}>
               {stats.active}/{stats.capacity}
             </Badge>
           </div>
