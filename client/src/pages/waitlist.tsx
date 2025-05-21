@@ -161,14 +161,14 @@ export default function Waitlist() {
               </CardContent>
             </Card>
           ) : (
-            <Card>
-              <CardHeader>
-                <CardTitle>Join the Waitlist</CardTitle>
-                <CardDescription>
+            <Card className="border-2 border-red-500 shadow-lg shadow-red-100 dark:shadow-red-900/20">
+              <CardHeader className="bg-red-50 dark:bg-red-900/20 rounded-t-lg">
+                <CardTitle className="text-red-600 dark:text-red-400">Join the Waitlist</CardTitle>
+                <CardDescription className="text-red-600/80 dark:text-red-400/80">
                   We'll notify you as soon as a subscription spot becomes available
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="bg-white dark:bg-neutral-900">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                     <FormField
