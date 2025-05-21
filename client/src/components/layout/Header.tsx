@@ -13,21 +13,13 @@ export default function Header() {
   const { isAuthenticated, login } = useAuth();
   const { toast } = useToast();
   
-  // Test login for development purposes
-  const handleTestLogin = async () => {
-    try {
-      await login("test@example.com", "password123");
-      toast({
-        title: "Test login successful",
-        description: "You're now logged in with a test account",
-      });
-    } catch (error) {
-      toast({
-        title: "Test login failed",
-        description: "Please check your authentication setup",
-        variant: "destructive",
-      });
-    }
+  // Test login for development purposes - removing actual login attempt
+  const handleTestLogin = () => {
+    // Navigate directly to test profile instead of trying to log in
+    toast({
+      title: "Development mode",
+      description: "Use the Test Profile button to see profile functionality without login",
+    });
   };
 
   const toggleMobileMenu = () => {
