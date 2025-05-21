@@ -84,7 +84,18 @@ export default function FAQ() {
               <AccordionTrigger className="text-lg">How much does a subscription cost?</AccordionTrigger>
               <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                 <p className="mb-2">Our pricing starts at $9.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.</p>
-                <p className="mb-2">For specific pricing details, please view our <Link href="/#pricing"><a className="text-primary dark:text-[#ff0] hover:underline">pricing section</a></Link> on the homepage.</p>
+                <p className="mb-2">For specific pricing details, please view our <a href="/#pricing" onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/';
+                  setTimeout(() => {
+                    const section = document.getElementById('pricing');
+                    if (section) {
+                      section.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }, 100);
+                }} className="text-primary dark:text-[#ff0] hover:underline">pricing section</a> on the homepage.</p>
               </AccordionContent>
             </AccordionItem>
             

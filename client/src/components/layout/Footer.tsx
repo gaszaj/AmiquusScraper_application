@@ -3,7 +3,9 @@ import { ReactNode } from "react";
 
 // Custom link component that scrolls to top
 function ScrollToTopLink({ href, children, className }: { href: string; children: ReactNode; className?: string }) {
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
     // For hash links to the home page, navigate to home first
     if (href.startsWith('/#')) {
       window.location.href = '/';
@@ -19,20 +21,18 @@ function ScrollToTopLink({ href, children, className }: { href: string; children
         }
       }, 100);
     } else {
-      // For regular links, scroll to the top
+      // For regular links, navigate to the page
+      window.location.href = href;
+      
+      // And scroll to the top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
   
   return (
-    <Link href={href} className={className} onClick={(e) => { 
-      if (href.startsWith('/#')) {
-        e.preventDefault();
-      }
-      handleClick();
-    }}>
+    <a href={href} className={className} onClick={handleClick}>
       {children}
-    </Link>
+    </a>
   );
 }
 
