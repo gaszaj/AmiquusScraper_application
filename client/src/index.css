@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* Main colors from HTML template */
+  /* Main colors - Light mode */
   --background: 0 0% 100%;
   --foreground: 230 14% 16%;
   --muted: 220 14% 96%;
@@ -15,7 +15,7 @@
   --border: 220 13% 91%;
   --input: 220 13% 91%;
   
-  /* Primary - Amiquus blue */
+  /* Primary - Blue for light mode */
   --primary: 210 100% 51%;
   --primary-foreground: 0 0% 100%;
   
@@ -23,9 +23,9 @@
   --secondary: 220 14% 96%;
   --secondary-foreground: 230 14% 16%;
   
-  /* Accent - Yellow */
-  --accent: 48 100% 62%;
-  --accent-foreground: 230 14% 16%;
+  /* Accent - Blue for light mode (same as primary) */
+  --accent: 210 100% 51%;
+  --accent-foreground: 0 0% 100%;
   
   /* Destructive - Red */
   --destructive: 0 84% 60%;
@@ -58,28 +58,29 @@
 }
 
 .dark {
-  --background: 230 25% 18%;
+  /* Main colors - Dark mode */
+  --background: 230 25% 8%;
   --foreground: 210 14% 98%;
   --muted: 230 25% 24%;
   --muted-foreground: 220 10% 70%;
-  --popover: 230 25% 18%;
+  --popover: 230 25% 10%;
   --popover-foreground: 210 14% 98%;
-  --card: 230 25% 18%;
+  --card: 230 25% 10%;
   --card-foreground: 210 14% 98%;
   --border: 230 25% 26%;
   --input: 230 25% 26%;
   
-  /* Primary - Keep same blue in dark mode */
-  --primary: 210 100% 51%;
-  --primary-foreground: 0 0% 100%;
+  /* Primary - Yellow for dark mode */
+  --primary: 48 100% 58%;
+  --primary-foreground: 230 14% 10%;
   
   /* Secondary - Darker Gray */
   --secondary: 230 25% 24%;
   --secondary-foreground: 210 14% 98%;
   
-  /* Accent - Yellow (slightly darker) */
+  /* Accent - Yellow for dark mode (same as primary) */
   --accent: 48 100% 58%; 
-  --accent-foreground: 0 0% 100%;
+  --accent-foreground: 230 14% 10%;
   
   /* Destructive - Red */
   --destructive: 0 84% 60%;
@@ -90,7 +91,7 @@
   --success-foreground: 0 0% 100%;
   
   /* Ring */
-  --ring: 210 100% 51%;
+  --ring: 48 100% 58%;
 }
 
 @layer base {
