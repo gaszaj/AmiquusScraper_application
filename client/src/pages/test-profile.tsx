@@ -160,7 +160,46 @@ function AddPaymentMethodDialog() {
   );
 }
 
-function SubscriptionCard({ subscription, onCancel, onEdit }) {
+interface Subscription {
+  id: number;
+  brand: string;
+  model: string;
+  yearMin: number;
+  yearMax: number;
+  priceMin: number;
+  priceMax: number;
+  status: string;
+  websitesSelected: string[];
+  updateFrequency: string;
+  notificationLanguage: string;
+  price: number;
+  telegramChatId: string;
+  telegramBotToken: string;
+  facebookMarketplaceUrl: string | null;
+}
+
+interface SubscriptionCardProps {
+  subscription: Subscription;
+  onCancel: (id: number) => void;
+  onEdit: (subscription: Subscription) => void;
+}
+
+function SubscriptionCard({ subscription, onCancel, onEdit }: SubscriptionCardProps) {
+  const [isConfirmingCancel, setIsConfirmingCancel] = useState(false);
+  
+  const handleCancelClick = () => {
+    setIsConfirmingCancel(true);
+  };
+  
+  const confirmCancel = () => {
+    onCancel(subscription.id);
+    setIsConfirmingCancel(false);
+  };
+  
+  const cancelAction = () => {
+    setIsConfirmingCancel(false);
+  };
+  
   return (
     <Card className="mb-4">
       <CardHeader className="pb-2">
@@ -201,29 +240,167 @@ function SubscriptionCard({ subscription, onCancel, onEdit }) {
         </div>
       </CardContent>
       <CardFooter className="flex justify-end space-x-2 pt-2">
-        <Button 
-          variant="outline" 
-          size="sm" 
-          className="text-sm"
-          onClick={() => onEdit(subscription)}
-        >
-          <Edit2 className="h-3.5 w-3.5 mr-1" />
-          Edit
-        </Button>
-        <Button 
-          variant="destructive" 
-          size="sm" 
-          className="text-sm"
-          onClick={() => onCancel(subscription.id)}
-        >
-          Cancel Alert
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="text-sm"
+            >
+              <Edit2 className="h-3.5 w-3.5 mr-1" />
+              Edit
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle>Edit Car Alert</DialogTitle>
+              <DialogDescription>
+                Update your car alert settings for {subscription.brand} {subscription.model}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 pt-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="edit-brand">Brand</Label>
+                  <Input 
+                    id="edit-brand" 
+                    defaultValue={subscription.brand}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="edit-model">Model</Label>
+                  <Input 
+                    id="edit-model" 
+                    defaultValue={subscription.model}
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="edit-year-min">Year Min</Label>
+                  <Input 
+                    id="edit-year-min" 
+                    defaultValue={subscription.yearMin}
+                    type="number"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="edit-year-max">Year Max</Label>
+                  <Input 
+                    id="edit-year-max" 
+                    defaultValue={subscription.yearMax}
+                    type="number"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="edit-price-min">Price Min ($)</Label>
+                  <Input 
+                    id="edit-price-min" 
+                    defaultValue={subscription.priceMin}
+                    type="number"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="edit-price-max">Price Max ($)</Label>
+                  <Input 
+                    id="edit-price-max" 
+                    defaultValue={subscription.priceMax}
+                    type="number"
+                  />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="edit-status">Status</Label>
+                <select 
+                  id="edit-status"
+                  defaultValue={subscription.status}
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value="active">Active</option>
+                  <option value="paused">Paused</option>
+                </select>
+              </div>
+            </div>
+            <DialogFooter className="mt-6">
+              <Button type="button" variant="outline" onClick={() => document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click()}>
+                Cancel
+              </Button>
+              <Button type="button" onClick={() => {
+                onEdit(subscription);
+                document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+              }}>
+                Save Changes
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        <Dialog open={isConfirmingCancel} onOpenChange={setIsConfirmingCancel}>
+          <DialogTrigger asChild>
+            <Button 
+              variant="destructive" 
+              size="sm" 
+              className="text-sm"
+              onClick={handleCancelClick}
+            >
+              Cancel Alert
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Cancel Car Alert</DialogTitle>
+              <DialogDescription>
+                Are you sure you want to cancel your car alert for {subscription.brand} {subscription.model}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter className="mt-4">
+              <Button variant="outline" onClick={cancelAction}>
+                Keep My Alert
+              </Button>
+              <Button variant="destructive" onClick={confirmCancel}>
+                Cancel Alert
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </CardFooter>
     </Card>
   );
 }
 
-function PaymentMethodCard({ method, onRemove, onSetDefault }) {
+interface PaymentMethod {
+  id: string;
+  brand: string;
+  last4: string;
+  expMonth: number;
+  expYear: number;
+  isDefault: boolean;
+}
+
+interface PaymentMethodCardProps {
+  method: PaymentMethod;
+  onRemove: (id: string) => void;
+  onSetDefault: (id: string) => void;
+}
+
+function PaymentMethodCard({ method, onRemove, onSetDefault }: PaymentMethodCardProps) {
+  const [isConfirmingRemove, setIsConfirmingRemove] = useState(false);
+  
+  const handleRemoveClick = () => {
+    setIsConfirmingRemove(true);
+  };
+  
+  const confirmRemove = () => {
+    onRemove(method.id);
+    setIsConfirmingRemove(false);
+  };
+  
+  const cancelAction = () => {
+    setIsConfirmingRemove(false);
+  };
+  
   return (
     <Card className={`mb-4 ${method.isDefault ? 'border-primary dark:border-[#ff0]' : ''}`}>
       <CardHeader className="pb-2">
@@ -259,23 +436,67 @@ function PaymentMethodCard({ method, onRemove, onSetDefault }) {
       </CardHeader>
       <CardFooter className="flex justify-end space-x-2 pt-0">
         {!method.isDefault && (
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="text-sm"
-            onClick={() => onSetDefault(method.id)}
-          >
-            Set as Default
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="text-sm"
+              >
+                Set as Default
+              </Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Set Default Payment Method</DialogTitle>
+                <DialogDescription>
+                  Would you like to set the {method.brand.charAt(0).toUpperCase() + method.brand.slice(1)} card ending in {method.last4} as your default payment method? This card will be used for all future subscription payments.
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter className="mt-4">
+                <Button variant="outline" onClick={() => document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click()}>
+                  Cancel
+                </Button>
+                <Button onClick={() => {
+                  onSetDefault(method.id);
+                  document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                }}>
+                  Set as Default
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
         )}
-        <Button 
-          variant="destructive" 
-          size="sm" 
-          className="text-sm"
-          onClick={() => onRemove(method.id)}
-        >
-          Remove
-        </Button>
+        
+        <Dialog open={isConfirmingRemove} onOpenChange={setIsConfirmingRemove}>
+          <DialogTrigger asChild>
+            <Button 
+              variant="destructive" 
+              size="sm" 
+              className="text-sm"
+              onClick={handleRemoveClick}
+            >
+              Remove
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Remove Payment Method</DialogTitle>
+              <DialogDescription>
+                Are you sure you want to remove your {method.brand.charAt(0).toUpperCase() + method.brand.slice(1)} card ending in {method.last4}? 
+                {method.isDefault && " This is your default payment method and removing it may affect your active subscriptions."}
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter className="mt-4">
+              <Button variant="outline" onClick={cancelAction}>
+                Cancel
+              </Button>
+              <Button variant="destructive" onClick={confirmRemove}>
+                Remove Card
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </CardFooter>
     </Card>
   );
