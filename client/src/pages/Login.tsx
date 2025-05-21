@@ -1,73 +1,32 @@
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
-import { useMutation } from "@tanstack/react-query";
-import { Helmet } from "react-helmet";
-import useAuth from "@/hooks/useAuth";
+import { useAuth } from "@/hooks/use-auth";
+import { Loader2 } from "lucide-react";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { toast } = useToast();
-  const navigate = useNavigate();
-  const [location] = useLocation();
-  const { login, isAuthenticated } = useAuth();
+  const [location, navigate] = useLocation();
+  const { login, isAuthenticated, isLoading } = useAuth();
   
   // Extract return URL from query params if present
-  const params = new URLSearchParams(location.split("?")[1]);
+  const params = new URLSearchParams(location.split("?")[1] || "");
   const returnUrl = params.get("returnUrl") || "/dashboard";
   
   // If already authenticated, redirect to dashboard
-  if (isAuthenticated) {
+  if (isAuthenticated && !isLoading) {
     navigate(returnUrl);
     return null;
   }
   
-  const loginMutation = useMutation({
-    mutationFn: async (credentials: { email: string; password: string }) => {
-      return await apiRequest("POST", "/api/auth/login", credentials);
-    },
-    onSuccess: async (response) => {
-      const data = await response.json();
-      login(data.user);
-      
-      toast({
-        title: "Login successful",
-        description: "Welcome back to Amiquus!",
-      });
-      
-      navigate(returnUrl);
-    },
-    onError: (error) => {
-      toast({
-        title: "Login failed",
-        description: error instanceof Error ? error.message : "Invalid email or password",
-        variant: "destructive",
-      });
-    },
-  });
-  
-  const handleGoogleLogin = async () => {
-    try {
-      window.location.href = "/api/auth/google";
-    } catch (error) {
-      toast({
-        title: "Google login failed",
-        description: "There was an error connecting to Google. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
+  // Handle login with simple async function
+  const handleLogin = async () => {
     if (!email || !password) {
       toast({
         title: "Missing fields",
@@ -77,7 +36,31 @@ export default function Login() {
       return;
     }
     
-    loginMutation.mutate({ email, password });
+    try {
+      await login(email, password);
+      
+      toast({
+        title: "Login successful",
+        description: "Welcome back to Amiquus!",
+      });
+      
+      navigate(returnUrl);
+    } catch (error: any) {
+      toast({
+        title: "Login failed",
+        description: error.message || "Invalid email or password",
+        variant: "destructive",
+      });
+    }
+  };
+  
+  const handleGoogleLogin = () => {
+    window.location.href = "/api/auth/google";
+  };
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleLogin();
   };
   
   return (
