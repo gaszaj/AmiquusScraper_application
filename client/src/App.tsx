@@ -16,6 +16,7 @@ import Checkout from "@/pages/checkout";
 import Subscribe from "@/pages/subscribe";
 import SetupAlerts from "@/pages/setup-alerts";
 import Profile from "@/pages/Profile";
+import TestProfile from "@/pages/test-profile";
 import { AuthProvider } from "@/hooks/use-auth";
 
 function Router() {
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/subscribe" component={Subscribe} />
       <Route path="/setup-alerts" component={SetupAlerts} />
       <Route path="/profile" component={Profile} />
+      <Route path="/test-profile" component={TestProfile} />
       <Route path="/about" component={About} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />

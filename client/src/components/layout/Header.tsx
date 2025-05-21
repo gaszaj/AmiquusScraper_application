@@ -114,15 +114,26 @@ export default function Header() {
                     Get Started
                   </Button>
                 </Link>
-                {/* Test login button for development only */}
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleTestLogin}
-                  className="ml-2 border-dashed border-yellow-500 dark:border-yellow-400 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-950 hover:text-yellow-700 dark:hover:text-yellow-300"
-                >
-                  DEV: Test Login
-                </Button>
+                {/* Development test buttons */}
+                <div className="flex space-x-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleTestLogin}
+                    className="border-dashed border-yellow-500 dark:border-yellow-400 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-950 hover:text-yellow-700 dark:hover:text-yellow-300"
+                  >
+                    DEV: Test Login
+                  </Button>
+                  <Link href="/test-profile">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-dashed border-green-500 dark:border-green-400 text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-950 hover:text-green-700 dark:hover:text-green-300"
+                    >
+                      DEV: Test Profile
+                    </Button>
+                  </Link>
+                </div>
               </>
             )}
 
