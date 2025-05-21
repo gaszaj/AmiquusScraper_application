@@ -93,6 +93,11 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-2">
             <ThemeToggle />
             <LanguageSelector />
+            
+            {/* Subscription Counter */}
+            <div className="border-l border-neutral-200 dark:border-neutral-700 pl-2 mr-2">
+              <SubscriptionCounter />
+            </div>
 
             {/* Development test button - always visible */}
             <Link href="/test-profile">

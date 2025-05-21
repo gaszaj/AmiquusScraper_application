@@ -21,6 +21,7 @@ export interface IStorage {
   updateSubscription(id: number, data: Partial<InsertSubscription>): Promise<Subscription>;
   updateSubscriptionStripeId(id: number, stripeSubscriptionId: string): Promise<Subscription>;
   deleteSubscription(id: number): Promise<void>;
+  getActiveSubscriptionCount(): Promise<number>;
 }
 
 export class MemStorage implements IStorage {
@@ -144,6 +145,17 @@ export class MemStorage implements IStorage {
     }
     
     this.subscriptions.delete(id);
+  }
+  
+  async getActiveSubscriptionCount(): Promise<number> {
+    // Count subscriptions with status 'active'
+    let count = 0;
+    for (const subscription of this.subscriptions.values()) {
+      if (subscription.status === 'active') {
+        count++;
+      }
+    }
+    return count;
   }
 }
 

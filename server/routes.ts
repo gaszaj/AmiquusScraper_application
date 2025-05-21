@@ -401,6 +401,27 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Get active subscription count
+  app.get("/api/subscription-stats", async (req, res) => {
+    try {
+      // Count active subscriptions
+      const count = await storage.getActiveSubscriptionCount();
+      
+      // Capacity is set to 30 as per requirements
+      const capacity = 30;
+      
+      res.json({
+        active: count,
+        capacity: capacity,
+        remaining: Math.max(0, capacity - count),
+        full: count >= capacity
+      });
+    } catch (error: any) {
+      console.error("Error getting subscription stats:", error);
+      res.status(500).json({ message: "Error getting subscription stats" });
+    }
+  });
+
   // Stripe subscription creation
   app.post("/api/create-subscription", async (req, res) => {
     try {
@@ -410,6 +431,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       if (!req.isAuthenticated()) {
         return res.status(401).json({ message: "Authentication required" });
+      }
+      
+      // Check if we've reached the subscription limit
+      const stats = await storage.getActiveSubscriptionCount();
+      if (stats >= 30) {
+        return res.status(400).json({ 
+          message: "We've reached our capacity for new subscriptions. Please check back later.",
+          code: "CAPACITY_REACHED"
+        });
       }
       
       const user = req.user as any;
