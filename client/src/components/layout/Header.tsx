@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
@@ -11,9 +11,33 @@ import ScrollToTopLink from "@/components/ScrollToTopLink";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showFullMenu, setShowFullMenu] = useState(true);
   const [location] = useLocation();
   const { isAuthenticated, login } = useAuth();
   const { toast } = useToast();
+  
+  // Check window size and update menu style
+  useEffect(() => {
+    const checkWindowSize = () => {
+      // Show full menu only when window width is large enough (1024px for lg breakpoint)
+      const shouldShowFullMenu = window.innerWidth >= 1024;
+      setShowFullMenu(shouldShowFullMenu);
+      
+      // Close mobile menu when resizing to large screens
+      if (shouldShowFullMenu && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    
+    // Initial check
+    checkWindowSize();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkWindowSize);
+    
+    // Cleanup on unmount
+    return () => window.removeEventListener('resize', checkWindowSize);
+  }, [mobileMenuOpen]);
   
   // Test login for development purposes - removing actual login attempt
   const handleTestLogin = () => {
@@ -55,63 +79,69 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            <ScrollToTopLink 
-              href="/#features" 
-              className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#features" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={handleMobileMenuClose}
-            >
-              Features
-            </ScrollToTopLink>
-            <ScrollToTopLink 
-              href="/#how-it-works" 
-              className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#how-it-works" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={handleMobileMenuClose}
-            >
-              How It Works
-            </ScrollToTopLink>
-            <ScrollToTopLink 
-              href="/#pricing" 
-              className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#pricing" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={handleMobileMenuClose}
-            >
-              Pricing
-            </ScrollToTopLink>
-            <ScrollToTopLink 
-              href="/setup-alerts" 
-              className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/setup-alerts" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={handleMobileMenuClose}
-            >
-              Get Alerts
-            </ScrollToTopLink>
-            <ScrollToTopLink 
-              href="/waitlist" 
-              className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/waitlist" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={handleMobileMenuClose}
-            >
-              Waitlist
-            </ScrollToTopLink>
-            <ScrollToTopLink 
-              href="/faq" 
-              className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/faq" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={handleMobileMenuClose}
-            >
-              FAQ
-            </ScrollToTopLink>
-          </nav>
+          {/* Navigation - only visible when full menu is showing */}
+          {showFullMenu && (
+            <nav className="flex space-x-8">
+              <ScrollToTopLink 
+                href="/#features" 
+                className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#features" ? "text-primary dark:text-[#ff0]" : ""}`}
+                onClick={handleMobileMenuClose}
+              >
+                Features
+              </ScrollToTopLink>
+              <ScrollToTopLink 
+                href="/#how-it-works" 
+                className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#how-it-works" ? "text-primary dark:text-[#ff0]" : ""}`}
+                onClick={handleMobileMenuClose}
+              >
+                How It Works
+              </ScrollToTopLink>
+              <ScrollToTopLink 
+                href="/#pricing" 
+                className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#pricing" ? "text-primary dark:text-[#ff0]" : ""}`}
+                onClick={handleMobileMenuClose}
+              >
+                Pricing
+              </ScrollToTopLink>
+              <ScrollToTopLink 
+                href="/setup-alerts" 
+                className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/setup-alerts" ? "text-primary dark:text-[#ff0]" : ""}`}
+                onClick={handleMobileMenuClose}
+              >
+                Get Alerts
+              </ScrollToTopLink>
+              <ScrollToTopLink 
+                href="/waitlist" 
+                className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/waitlist" ? "text-primary dark:text-[#ff0]" : ""}`}
+                onClick={handleMobileMenuClose}
+              >
+                Waitlist
+              </ScrollToTopLink>
+              <ScrollToTopLink 
+                href="/faq" 
+                className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/faq" ? "text-primary dark:text-[#ff0]" : ""}`}
+                onClick={handleMobileMenuClose}
+              >
+                FAQ
+              </ScrollToTopLink>
+            </nav>
+          )}
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button type="button" className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white p-2 rounded-md" onClick={toggleMobileMenu}>
+          {/* Hamburger menu button - visible when full menu is hidden */}
+          {!showFullMenu && (
+            <button 
+              type="button" 
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white p-2 rounded-md" 
+              onClick={toggleMobileMenu}
+            >
               <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
-          </div>
+          )}
 
-          {/* User menu and options */}
-          <div className="hidden lg:flex items-center gap-2">
+          {/* User menu and options - layout changes based on menu mode */}
+          <div className={`${showFullMenu ? 'flex' : 'hidden'} items-center gap-2`}>
             {/* Subscription Counter - moved to more prominent position */}
             <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-2 sm:px-3 py-1 mr-2 sm:mr-3 flex items-center">
               <span className="hidden sm:inline text-xs mr-2 text-neutral-600 dark:text-neutral-400">Subscribers:</span>
@@ -152,8 +182,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
-      <div className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      {/* Mobile menu - visible when menu is toggled */}
+      <div className={`${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 border-t border-neutral-200 dark:border-neutral-700">
           <ScrollToTopLink 
             href="/#features" 
