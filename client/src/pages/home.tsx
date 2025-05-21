@@ -1,10 +1,9 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import HowItWorks from "@/components/home/HowItWorks";
 import Features from "@/components/sections/features";
 import Pricing from "@/components/sections/pricing";
 import FaqSection from "@/components/sections/faq-section";
+import LimitedAvailability from "@/components/home/LimitedAvailability";
 import Signup from "@/pages/signup";
 import { useLocation } from "wouter";
 import { useEffect, useRef } from "react";
@@ -37,10 +36,12 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow pt-16"> {/* Added top padding to account for fixed header height */}
+    <>
+      <main>
         <Hero onGetStarted={scrollToSignup} />
+        <div className="container mx-auto px-4 py-8">
+          <LimitedAvailability />
+        </div>
         <Features />
         <HowItWorks />
         <Pricing onGetStarted={scrollToSignup} />
@@ -49,7 +50,6 @@ export default function Home() {
         </div>
         <FaqSection />
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }
