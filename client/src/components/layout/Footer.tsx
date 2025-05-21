@@ -1,4 +1,40 @@
 import { Link } from "wouter";
+import { ReactNode } from "react";
+
+// Custom link component that scrolls to top
+function ScrollToTopLink({ href, children, className }: { href: string; children: ReactNode; className?: string }) {
+  const handleClick = () => {
+    // For hash links to the home page, navigate to home first
+    if (href.startsWith('/#')) {
+      window.location.href = '/';
+      
+      // After a brief moment, scroll to the section
+      setTimeout(() => {
+        const sectionId = href.substring(2);
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // For regular links, scroll to the top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+  
+  return (
+    <Link href={href} className={className} onClick={(e) => { 
+      if (href.startsWith('/#')) {
+        e.preventDefault();
+      }
+      handleClick();
+    }}>
+      {children}
+    </Link>
+  );
+}
 
 export default function Footer() {
   return (
@@ -36,24 +72,24 @@ export default function Footer() {
             <h5 className="text-lg font-medium mb-4">Quick Links</h5>
             <ul className="space-y-2">
               <li>
-                <Link href="/#features" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/#features" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   Features
-                </Link>
+                </ScrollToTopLink>
               </li>
               <li>
-                <Link href="/#pricing" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/#pricing" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   Pricing
-                </Link>
+                </ScrollToTopLink>
               </li>
               <li>
-                <Link href="/faq" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/faq" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   FAQ
-                </Link>
+                </ScrollToTopLink>
               </li>
               <li>
-                <Link href="/service" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/service" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   Get Started
-                </Link>
+                </ScrollToTopLink>
               </li>
             </ul>
           </div>
@@ -62,24 +98,24 @@ export default function Footer() {
             <h5 className="text-lg font-medium mb-4">Legal</h5>
             <ul className="space-y-2">
               <li>
-                <Link href="/terms" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/terms" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   Terms of Service
-                </Link>
+                </ScrollToTopLink>
               </li>
               <li>
-                <Link href="/privacy" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/privacy" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   Privacy Policy
-                </Link>
+                </ScrollToTopLink>
               </li>
               <li>
-                <Link href="/terms#cookies" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/terms#cookies" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   Cookie Policy
-                </Link>
+                </ScrollToTopLink>
               </li>
               <li>
-                <Link href="/privacy#gdpr" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
+                <ScrollToTopLink href="/privacy#gdpr" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
                   GDPR Compliance
-                </Link>
+                </ScrollToTopLink>
               </li>
             </ul>
           </div>
@@ -106,18 +142,18 @@ export default function Footer() {
         <div className="border-t border-neutral-200 dark:border-neutral-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Amiquus. All rights reserved.</p>
           <div className="flex space-x-4">
-            <Link href="/about" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
+            <ScrollToTopLink href="/about" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
               About Us
-            </Link>
-            <Link href="/blog" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
+            </ScrollToTopLink>
+            <ScrollToTopLink href="/blog" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
               Blog
-            </Link>
-            <Link href="/careers" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
+            </ScrollToTopLink>
+            <ScrollToTopLink href="/careers" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
               Careers
-            </Link>
-            <Link href="/support" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
+            </ScrollToTopLink>
+            <ScrollToTopLink href="/support" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
               Support
-            </Link>
+            </ScrollToTopLink>
           </div>
         </div>
       </div>

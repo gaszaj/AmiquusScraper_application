@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
@@ -26,6 +26,43 @@ export default function Header() {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+  
+  // Handle navigation with scroll to top
+  const handleNavigation = useCallback((path: string) => {
+    // If it's a hash link for the home page sections
+    if (path.startsWith('/#')) {
+      // First navigate to home
+      window.location.href = '/';
+      
+      // Then after a small delay, scroll to the section
+      setTimeout(() => {
+        const sectionId = path.substring(2); // Remove /# to get just the ID
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // If section not found, scroll to top
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 100);
+      
+      // Close mobile menu if open
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+      
+      return true; // Indicate that we handled navigation
+    }
+    
+    // For regular pages, just scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+    
+    return false; // Let wouter handle regular navigation
+  }, [mobileMenuOpen]);
 
   return (
     <header className="bg-white dark:bg-neutral-900 fixed w-full z-50 shadow-sm">
@@ -52,36 +89,42 @@ export default function Header() {
             <Link 
               href="/#features" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#features" ? "text-primary dark:text-[#ff0]" : ""}`}
+              onClick={(e) => { e.preventDefault(); handleNavigation("/#features"); }}
             >
               Features
             </Link>
             <Link 
               href="/#how-it-works" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#how-it-works" ? "text-primary dark:text-[#ff0]" : ""}`}
+              onClick={(e) => { e.preventDefault(); handleNavigation("/#how-it-works"); }}
             >
               How It Works
             </Link>
             <Link 
               href="/#pricing" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#pricing" ? "text-primary dark:text-[#ff0]" : ""}`}
+              onClick={(e) => { e.preventDefault(); handleNavigation("/#pricing"); }}
             >
               Pricing
             </Link>
             <Link 
               href="/setup-alerts" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/setup-alerts" ? "text-primary dark:text-[#ff0]" : ""}`}
+              onClick={(e) => { e.preventDefault(); handleNavigation("/setup-alerts"); }}
             >
               Get Alerts
             </Link>
             <Link 
               href="/waitlist" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/waitlist" ? "text-primary dark:text-[#ff0]" : ""}`}
+              onClick={(e) => { e.preventDefault(); handleNavigation("/waitlist"); }}
             >
               Waitlist
             </Link>
             <Link 
               href="/faq" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/faq" ? "text-primary dark:text-[#ff0]" : ""}`}
+              onClick={(e) => { e.preventDefault(); handleNavigation("/faq"); }}
             >
               FAQ
             </Link>
@@ -144,42 +187,42 @@ export default function Header() {
           <Link 
             href="/#features" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => { e.preventDefault(); handleNavigation("/#features"); }}
           >
             Features
           </Link>
           <Link 
             href="/#how-it-works" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => { e.preventDefault(); handleNavigation("/#how-it-works"); }}
           >
             How It Works
           </Link>
           <Link 
             href="/#pricing" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => { e.preventDefault(); handleNavigation("/#pricing"); }}
           >
             Pricing
           </Link>
           <Link 
             href="/setup-alerts" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => { e.preventDefault(); handleNavigation("/setup-alerts"); }}
           >
             Get Alerts
           </Link>
           <Link 
             href="/waitlist" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => { e.preventDefault(); handleNavigation("/waitlist"); }}
           >
             Waitlist
           </Link>
           <Link 
             href="/faq" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => { e.preventDefault(); handleNavigation("/faq"); }}
           >
             FAQ
           </Link>
