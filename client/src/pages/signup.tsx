@@ -128,9 +128,12 @@ export default function Signup({ embedded = false }: SignupProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-title font-bold mb-4">Create Your Car Alert</h2>
-          <p className="text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-neutral-600 max-w-2xl mx-auto mb-4">
             Set up your personalized car listing notifications in just a few steps.
           </p>
+          <Link href="/setup-alerts" className="inline-block px-6 py-3 bg-[#ff0] text-neutral-900 hover:bg-yellow-300 transition font-semibold rounded-xl shadow-md hover:shadow-lg">
+            Get Alerts Now
+          </Link>
         </div>
         
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
