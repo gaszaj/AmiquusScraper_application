@@ -33,28 +33,28 @@ export default function TelegramCarAlertForm() {
   };
 
   return (
-    <section id="setup_telegram_bot" className="bg-neutral-900 py-24">
+    <section id="setup_telegram_bot" className="bg-white dark:bg-neutral-900 py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl font-bold text-white">Set Up Your Car Alerts</h1>
-          <p className="mt-4 text-xl text-neutral-400">Configure your Telegram bot to receive notifications about your dream car</p>
+          <h1 className="text-4xl font-bold text-neutral-900 dark:text-white">Set Up Your Car Alerts</h1>
+          <p className="mt-4 text-xl text-neutral-600 dark:text-neutral-400">Configure your Telegram bot to receive notifications about your dream car</p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {/* Car Search Preferences Form */}
-          <div className="bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 mb-8">
+          <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Car Brand & Model */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="car_brand">Car Brand</label>
+                  <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="car_brand">Car Brand</label>
                   <select 
                     id="car_brand" 
                     name="car_brand"
                     value={carBrand}
                     onChange={handleBrandChange}
-                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition"
+                    className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition"
                   >
                     <option value="">Select Brand</option>
                     <option value="toyota">Toyota</option>
@@ -66,11 +66,11 @@ export default function TelegramCarAlertForm() {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="car_model">Car Model</label>
+                  <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="car_model">Car Model</label>
                   <select 
                     id="car_model" 
                     name="car_model" 
-                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition"
+                    className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition"
                     disabled={!carBrand}
                   >
                     <option value="">Select Model</option>
@@ -84,23 +84,23 @@ export default function TelegramCarAlertForm() {
               {/* Price Range */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="price_min">Minimum Price</label>
+                  <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="price_min">Minimum Price</label>
                   <input 
                     type="number" 
                     id="price_min" 
                     name="price_min" 
-                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition" 
                     placeholder="Enter minimum price"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="price_max">Maximum Price</label>
+                  <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="price_max">Maximum Price</label>
                   <input 
                     type="number" 
                     id="price_max" 
                     name="price_max" 
-                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition" 
                     placeholder="Enter maximum price"
                   />
                 </div>
@@ -109,12 +109,12 @@ export default function TelegramCarAlertForm() {
               {/* Build Year Range */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="year_min">Minimum Year</label>
+                  <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="year_min">Minimum Year</label>
                   <input 
                     type="number" 
                     id="year_min" 
                     name="year_min" 
-                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition" 
                     placeholder="Enter minimum year" 
                     min="1900" 
                     max="2024"
@@ -122,12 +122,12 @@ export default function TelegramCarAlertForm() {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="year_max">Maximum Year</label>
+                  <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="year_max">Maximum Year</label>
                   <input 
                     type="number" 
                     id="year_max" 
                     name="year_max" 
-                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition" 
                     placeholder="Enter maximum year" 
                     min="1900" 
                     max="2024"
@@ -137,7 +137,7 @@ export default function TelegramCarAlertForm() {
 
               {/* Websites to monitor */}
               <div>
-                <label className="block text-sm font-medium text-neutral-300 mb-2">Websites to Monitor</label>
+                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Websites to Monitor</label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                   <div className="flex items-center space-x-2">
                     <input 
@@ -145,9 +145,9 @@ export default function TelegramCarAlertForm() {
                       id="website_autotrader" 
                       name="websites" 
                       value="autotrader"
-                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                      className="h-4 w-4 text-primary dark:text-primary rounded border-neutral-300 dark:border-neutral-600 focus:ring-primary dark:focus:ring-primary" 
                     />
-                    <label htmlFor="website_autotrader" className="text-neutral-300">AutoTrader</label>
+                    <label htmlFor="website_autotrader" className="text-neutral-700 dark:text-neutral-300">AutoTrader</label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <input 
@@ -155,9 +155,9 @@ export default function TelegramCarAlertForm() {
                       id="website_cargurus" 
                       name="websites" 
                       value="cargurus"
-                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                      className="h-4 w-4 text-primary dark:text-primary rounded border-neutral-300 dark:border-neutral-600 focus:ring-primary dark:focus:ring-primary" 
                     />
-                    <label htmlFor="website_cargurus" className="text-neutral-300">CarGurus</label>
+                    <label htmlFor="website_cargurus" className="text-neutral-700 dark:text-neutral-300">CarGurus</label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <input 
@@ -165,9 +165,9 @@ export default function TelegramCarAlertForm() {
                       id="website_cars" 
                       name="websites" 
                       value="cars"
-                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                      className="h-4 w-4 text-primary dark:text-primary rounded border-neutral-300 dark:border-neutral-600 focus:ring-primary dark:focus:ring-primary" 
                     />
-                    <label htmlFor="website_cars" className="text-neutral-300">Cars.com</label>
+                    <label htmlFor="website_cars" className="text-neutral-700 dark:text-neutral-300">Cars.com</label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <input 
@@ -175,9 +175,9 @@ export default function TelegramCarAlertForm() {
                       id="website_facebook" 
                       name="websites" 
                       value="facebook"
-                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                      className="h-4 w-4 text-primary dark:text-primary rounded border-neutral-300 dark:border-neutral-600 focus:ring-primary dark:focus:ring-primary" 
                     />
-                    <label htmlFor="website_facebook" className="text-neutral-300">Facebook Marketplace</label>
+                    <label htmlFor="website_facebook" className="text-neutral-700 dark:text-neutral-300">Facebook Marketplace</label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <input 
@@ -185,9 +185,9 @@ export default function TelegramCarAlertForm() {
                       id="website_craigslist" 
                       name="websites" 
                       value="craigslist"
-                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                      className="h-4 w-4 text-primary dark:text-primary rounded border-neutral-300 dark:border-neutral-600 focus:ring-primary dark:focus:ring-primary" 
                     />
-                    <label htmlFor="website_craigslist" className="text-neutral-300">Craigslist</label>
+                    <label htmlFor="website_craigslist" className="text-neutral-700 dark:text-neutral-300">Craigslist</label>
                   </div>
                 </div>
               </div>
@@ -195,13 +195,13 @@ export default function TelegramCarAlertForm() {
           </div>
 
           {/* Telegram Bot Setup Section */}
-          <div className="bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-white mb-6">Set Up Your Telegram Bot</h2>
+          <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
+            <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">Set Up Your Telegram Bot</h2>
             
             {/* Telegram Setup Instructions */}
-            <div className="prose prose-invert max-w-none mb-8">
-              <h3 className="text-xl font-semibold text-white mb-4">Setup Instructions:</h3>
-              <ol className="list-decimal list-inside text-neutral-300 space-y-2">
+            <div className="prose dark:prose-invert max-w-none mb-8">
+              <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">Setup Instructions:</h3>
+              <ol className="list-decimal list-inside text-neutral-700 dark:text-neutral-300 space-y-2">
                 <li>Open Telegram and search for "BotFather"</li>
                 <li>Start a chat with BotFather by clicking "Start"</li>
                 <li>Type /newbot and follow the instructions to create a new bot</li>
@@ -215,41 +215,41 @@ export default function TelegramCarAlertForm() {
             {/* Telegram Token Form */}
             <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="telegram_token">Telegram Bot Token</label>
+                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="telegram_token">Telegram Bot Token</label>
                 <input 
                   type="text" 
                   id="telegram_token" 
                   name="telegram_token"
                   value={telegramToken}
                   onChange={(e) => setTelegramToken(e.target.value)}
-                  className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                  className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition" 
                   placeholder="Enter your bot token from BotFather"
                 />
-                <p className="text-sm text-neutral-500 mt-1">Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890</p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-1">Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890</p>
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="telegram_chat_id">Your Telegram Chat ID</label>
+                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2" htmlFor="telegram_chat_id">Your Telegram Chat ID</label>
                 <input 
                   type="text" 
                   id="telegram_chat_id" 
                   name="telegram_chat_id"
                   value={telegramChatId}
                   onChange={(e) => setTelegramChatId(e.target.value)}
-                  className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                  className="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary dark:focus:border-primary transition" 
                   placeholder="Enter your Telegram chat ID"
                 />
-                <p className="text-sm text-neutral-500 mt-1">You can get this by messaging @userinfobot on Telegram</p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-1">You can get this by messaging @userinfobot on Telegram</p>
               </div>
             </form>
           </div>
 
           {/* Telegram Chat Preview Section */}
-          <div className="bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-white mb-6">Preview Telegram Notifications</h2>
+          <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
+            <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">Preview Telegram Notifications</h2>
             
             {/* Telegram Chat Preview */}
-            <div className="w-full mb-8 bg-[#273746] rounded-xl p-4 border border-neutral-700">
+            <div className="w-full mb-8 bg-neutral-100 dark:bg-[#273746] rounded-xl p-4 border border-neutral-300 dark:border-neutral-700">
               <div className="flex items-start space-x-3 mb-4">
                 <div className="bg-blue-500 rounded-full h-10 w-10 flex items-center justify-center text-white">
                   A
@@ -283,19 +283,19 @@ export default function TelegramCarAlertForm() {
             </div>
             
             {/* Pricing Section */}
-            <div className="border-t border-neutral-700 pt-6 mt-8">
+            <div className="border-t border-neutral-200 dark:border-neutral-700 pt-6 mt-8">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-neutral-300">Basic Plan (3 websites)</span>
-                <span className="text-white font-medium">$9.99/month</span>
+                <span className="text-neutral-700 dark:text-neutral-300">Basic Plan (3 websites)</span>
+                <span className="text-neutral-900 dark:text-white font-medium">$9.99/month</span>
               </div>
               <div className="flex justify-between items-center mb-4">
-                <span className="text-neutral-300">Additional websites (2)</span>
-                <span className="text-white font-medium">$9.98/month</span>
+                <span className="text-neutral-700 dark:text-neutral-300">Additional websites (2)</span>
+                <span className="text-neutral-900 dark:text-white font-medium">$9.98/month</span>
               </div>
-              <div className="border-t border-neutral-700 pt-4 mt-4">
+              <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-white font-medium">Total</span>
-                  <span className="text-[#ff0] font-bold text-xl">$19.97/month</span>
+                  <span className="text-neutral-900 dark:text-white font-medium">Total</span>
+                  <span className="text-primary dark:text-primary font-bold text-xl">$19.97/month</span>
                 </div>
               </div>
             </div>
@@ -305,11 +305,11 @@ export default function TelegramCarAlertForm() {
               <Button 
                 type="submit"
                 onClick={handleSubmit}
-                className="w-full py-3 px-4 bg-[#ff0] text-neutral-900 hover:bg-yellow-300 transition font-semibold rounded-xl"
+                className="w-full py-3 px-4 bg-primary hover:bg-primary-600 dark:bg-primary dark:hover:bg-primary-600 text-white dark:text-neutral-900 transition font-semibold rounded-xl"
               >
                 Start My Car Alert Service
               </Button>
-              <p className="text-center text-neutral-500 text-sm mt-2">Cancel anytime. 7-day money back guarantee.</p>
+              <p className="text-center text-neutral-500 dark:text-neutral-500 text-sm mt-2">Cancel anytime. 7-day money back guarantee.</p>
             </div>
           </div>
         </div>
