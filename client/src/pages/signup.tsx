@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import PageWrapper from "@/components/layout/PageWrapper";
 import PersonalInfo from "@/components/multi-step-form/personal-info";
 import WebsiteSelection from "@/components/multi-step-form/website-selection";
 import CarDetails from "@/components/multi-step-form/car-details";
