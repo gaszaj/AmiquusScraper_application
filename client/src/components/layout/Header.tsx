@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
@@ -7,6 +7,7 @@ import { LanguageSelector } from "@/components/language-selector";
 import { UserProfile } from "@/components/user-profile";
 import { SubscriptionCounter } from "@/components/SubscriptionCounter";
 import { useToast } from "@/hooks/use-toast";
+import ScrollToTopLink from "@/components/ScrollToTopLink";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,42 +28,12 @@ export default function Header() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
   
-  // Handle navigation with scroll to top
-  const handleNavigation = useCallback((path: string) => {
-    // If it's a hash link for the home page sections
-    if (path.startsWith('/#')) {
-      // First navigate to home
-      window.location.href = '/';
-      
-      // Then after a small delay, scroll to the section
-      setTimeout(() => {
-        const sectionId = path.substring(2); // Remove /# to get just the ID
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          // If section not found, scroll to top
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }, 100);
-      
-      // Close mobile menu if open
-      if (mobileMenuOpen) {
-        setMobileMenuOpen(false);
-      }
-      
-      return true; // Indicate that we handled navigation
-    }
-    
-    // For regular pages, just scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    
+  // Close mobile menu after navigation
+  const handleMobileMenuClose = () => {
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);
     }
-    
-    return false; // Let wouter handle regular navigation
-  }, [mobileMenuOpen]);
+  };
 
   return (
     <header className="bg-white dark:bg-neutral-900 fixed w-full z-50 shadow-sm">
@@ -86,48 +57,48 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link 
+            <ScrollToTopLink 
               href="/#features" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#features" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={(e) => { e.preventDefault(); handleNavigation("/#features"); }}
+              onClick={handleMobileMenuClose}
             >
               Features
-            </Link>
-            <Link 
+            </ScrollToTopLink>
+            <ScrollToTopLink 
               href="/#how-it-works" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#how-it-works" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={(e) => { e.preventDefault(); handleNavigation("/#how-it-works"); }}
+              onClick={handleMobileMenuClose}
             >
               How It Works
-            </Link>
-            <Link 
+            </ScrollToTopLink>
+            <ScrollToTopLink 
               href="/#pricing" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#pricing" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={(e) => { e.preventDefault(); handleNavigation("/#pricing"); }}
+              onClick={handleMobileMenuClose}
             >
               Pricing
-            </Link>
-            <Link 
+            </ScrollToTopLink>
+            <ScrollToTopLink 
               href="/setup-alerts" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/setup-alerts" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={(e) => { e.preventDefault(); handleNavigation("/setup-alerts"); }}
+              onClick={handleMobileMenuClose}
             >
               Get Alerts
-            </Link>
-            <Link 
+            </ScrollToTopLink>
+            <ScrollToTopLink 
               href="/waitlist" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/waitlist" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={(e) => { e.preventDefault(); handleNavigation("/waitlist"); }}
+              onClick={handleMobileMenuClose}
             >
               Waitlist
-            </Link>
-            <Link 
+            </ScrollToTopLink>
+            <ScrollToTopLink 
               href="/faq" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/faq" ? "text-primary dark:text-[#ff0]" : ""}`}
-              onClick={(e) => { e.preventDefault(); handleNavigation("/faq"); }}
+              onClick={handleMobileMenuClose}
             >
               FAQ
-            </Link>
+            </ScrollToTopLink>
           </nav>
 
           {/* Mobile menu button */}
@@ -164,15 +135,15 @@ export default function Header() {
             {!isAuthenticated && (
               <>
                 <div className="mx-2">
-                  <Link href="/login" className="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition">
+                  <ScrollToTopLink href="/login" className="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition">
                     Log in
-                  </Link>
+                  </ScrollToTopLink>
                 </div>
-                <Link href="/register">
+                <ScrollToTopLink href="/register">
                   <Button className="bg-primary hover:bg-primary-600 dark:bg-[#ff0] dark:hover:bg-yellow-300 text-white dark:text-neutral-900 font-medium">
                     Get Started
                   </Button>
-                </Link>
+                </ScrollToTopLink>
               </>
             )}
 
@@ -184,48 +155,48 @@ export default function Header() {
       {/* Mobile menu */}
       <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 border-t border-neutral-200 dark:border-neutral-700">
-          <Link 
+          <ScrollToTopLink 
             href="/#features" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={(e) => { e.preventDefault(); handleNavigation("/#features"); }}
+            onClick={handleMobileMenuClose}
           >
             Features
-          </Link>
-          <Link 
+          </ScrollToTopLink>
+          <ScrollToTopLink 
             href="/#how-it-works" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={(e) => { e.preventDefault(); handleNavigation("/#how-it-works"); }}
+            onClick={handleMobileMenuClose}
           >
             How It Works
-          </Link>
-          <Link 
+          </ScrollToTopLink>
+          <ScrollToTopLink 
             href="/#pricing" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={(e) => { e.preventDefault(); handleNavigation("/#pricing"); }}
+            onClick={handleMobileMenuClose}
           >
             Pricing
-          </Link>
-          <Link 
+          </ScrollToTopLink>
+          <ScrollToTopLink 
             href="/setup-alerts" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={(e) => { e.preventDefault(); handleNavigation("/setup-alerts"); }}
+            onClick={handleMobileMenuClose}
           >
             Get Alerts
-          </Link>
-          <Link 
+          </ScrollToTopLink>
+          <ScrollToTopLink 
             href="/waitlist" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={(e) => { e.preventDefault(); handleNavigation("/waitlist"); }}
+            onClick={handleMobileMenuClose}
           >
             Waitlist
-          </Link>
-          <Link 
+          </ScrollToTopLink>
+          <ScrollToTopLink 
             href="/faq" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-            onClick={(e) => { e.preventDefault(); handleNavigation("/faq"); }}
+            onClick={handleMobileMenuClose}
           >
             FAQ
-          </Link>
+          </ScrollToTopLink>
 
           {/* Mobile subscription counter */}
           <div className="flex items-center px-3 py-2">
