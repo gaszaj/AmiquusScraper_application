@@ -36,8 +36,7 @@ export default function Login() {
   
   // Get redirectUrl from location search params if present
   const searchParams = new URLSearchParams(window.location.search);
-  const params = Object.fromEntries(searchParams.entries());
-  const redirectUrl = params.get('redirect') || '/dashboard';
+  const redirectUrl = searchParams.get('redirect') || '/dashboard';
 
   // Form setup
   const {
