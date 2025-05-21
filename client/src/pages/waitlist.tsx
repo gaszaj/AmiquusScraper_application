@@ -116,18 +116,18 @@ export default function Waitlist() {
         />
       </Helmet>
       
-      <div className="container max-w-5xl mx-auto px-4 py-12">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold tracking-tight mb-3">
+      <div className="container max-w-5xl mx-auto px-4 py-6 sm:py-12">
+        <div className="text-center mb-6 sm:mb-10">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2 sm:mb-3">
             Join Our Waitlist
           </h1>
-          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto text-sm sm:text-base">
             We've reached our subscription limit to ensure the highest quality service for all users. 
             Join our waitlist to be notified when a spot becomes available.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
           {/* Subscription Status Card */}
           <Card className="border-2 border-red-200 dark:border-red-800">
             <CardHeader className="bg-red-50 dark:bg-red-900/20">

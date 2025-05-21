@@ -29,21 +29,21 @@ export default function Header() {
 
   return (
     <header className="bg-white dark:bg-neutral-900 fixed w-full z-50 shadow-sm">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-1 sm:gap-2">
               <div className="flex items-center">
-                <svg className="size-8 text-primary dark:text-[#ff0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="size-6 sm:size-8 text-primary dark:text-[#ff0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
                 </svg>
-                <svg className="size-4 text-primary dark:text-[#ff0] -mt-3 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="size-3 sm:size-4 text-primary dark:text-[#ff0] -mt-3 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
               </div>
-              <span className="text-neutral-900 dark:text-white font-bold text-xl">Amiquus</span>
+              <span className="text-neutral-900 dark:text-white font-bold text-lg sm:text-xl">Amiquus</span>
             </Link>
           </div>
 
@@ -74,6 +74,12 @@ export default function Header() {
               Get Alerts
             </Link>
             <Link 
+              href="/waitlist" 
+              className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/waitlist" ? "text-primary dark:text-[#ff0]" : ""}`}
+            >
+              Waitlist
+            </Link>
+            <Link 
               href="/faq" 
               className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/faq" ? "text-primary dark:text-[#ff0]" : ""}`}
             >
@@ -93,8 +99,8 @@ export default function Header() {
           {/* User menu and options */}
           <div className="hidden md:flex items-center gap-2">
             {/* Subscription Counter - moved to more prominent position */}
-            <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-3 py-1 mr-3 flex items-center">
-              <span className="text-xs mr-2 text-neutral-600 dark:text-neutral-400">Subscribers:</span>
+            <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-2 sm:px-3 py-1 mr-2 sm:mr-3 flex items-center">
+              <span className="hidden sm:inline text-xs mr-2 text-neutral-600 dark:text-neutral-400">Subscribers:</span>
               <SubscriptionCounter />
             </div>
             
@@ -164,6 +170,13 @@ export default function Header() {
             Get Alerts
           </Link>
           <Link 
+            href="/waitlist" 
+            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Waitlist
+          </Link>
+          <Link 
             href="/faq" 
             className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
             onClick={() => setMobileMenuOpen(false)}
@@ -171,6 +184,14 @@ export default function Header() {
             FAQ
           </Link>
 
+          {/* Mobile subscription counter */}
+          <div className="flex items-center px-3 py-2">
+            <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-3 py-2 flex items-center w-full">
+              <span className="text-neutral-600 dark:text-neutral-400 text-sm mr-2">Subscribers:</span>
+              <SubscriptionCounter />
+            </div>
+          </div>
+          
           {/* Theme and Language in mobile menu */}
           <div className="flex items-center px-3 py-2 gap-2">
             <span className="text-neutral-600 dark:text-neutral-400 text-sm">Theme:</span>
