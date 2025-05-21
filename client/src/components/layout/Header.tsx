@@ -13,15 +13,14 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-neutral-900 border-b border-neutral-800 fixed w-full z-50">
+    <header className="bg-neutral-900 fixed w-full z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2">
               <svg className="size-8 text-[#ff0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
               </svg>
               <span className="text-white font-bold text-xl">Amiquus</span>
             </Link>
@@ -46,6 +45,12 @@ export default function Header() {
               className={`text-neutral-300 hover:text-[#ff0] transition ${location === "/#pricing" ? "text-[#ff0]" : ""}`}
             >
               Pricing
+            </Link>
+            <Link 
+              href="/setup-alerts" 
+              className={`text-neutral-300 hover:text-[#ff0] transition ${location === "/setup-alerts" ? "text-[#ff0]" : ""}`}
+            >
+              Get Alerts
             </Link>
             <Link 
               href="/faq" 
@@ -119,6 +124,13 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
           >
             Pricing
+          </Link>
+          <Link 
+            href="/setup-alerts" 
+            className="block px-3 py-2 text-neutral-300 hover:text-[#ff0] transition" 
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Get Alerts
           </Link>
           <Link 
             href="/faq" 

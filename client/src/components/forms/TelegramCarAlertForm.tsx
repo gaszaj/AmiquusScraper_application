@@ -1,0 +1,262 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+
+export default function TelegramCarAlertForm() {
+  const [carBrand, setCarBrand] = useState("");
+  const [models, setModels] = useState<string[]>([]);
+
+  // Function to load car models based on selected brand
+  const loadModels = (brand: string) => {
+    // This would be replaced with actual data from your API
+    const modelMap: Record<string, string[]> = {
+      "toyota": ["Corolla", "Camry", "RAV4", "Highlander", "4Runner"],
+      "honda": ["Civic", "Accord", "CR-V", "Pilot", "Odyssey"],
+      "bmw": ["3 Series", "5 Series", "X3", "X5", "7 Series"],
+      "mercedes": ["C-Class", "E-Class", "S-Class", "GLC", "GLE"],
+    };
+    
+    return modelMap[brand] || [];
+  };
+
+  const handleBrandChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const brand = e.target.value;
+    setCarBrand(brand);
+    setModels(loadModels(brand));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted");
+  };
+
+  return (
+    <section id="setup_telegram_bot" className="bg-neutral-900 py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h1 className="text-4xl font-bold text-white">Set Up Your Car Alerts</h1>
+          <p className="mt-4 text-xl text-neutral-400">Configure your Telegram bot to receive notifications about your dream car</p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          {/* Car Search Preferences Form */}
+          <div className="bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 mb-8">
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Car Brand & Model */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="car_brand">Car Brand</label>
+                  <select 
+                    id="car_brand" 
+                    name="car_brand"
+                    value={carBrand}
+                    onChange={handleBrandChange}
+                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition"
+                  >
+                    <option value="">Select Brand</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                    <option value="bmw">BMW</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                    {/* Add more options as needed */}
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="car_model">Car Model</label>
+                  <select 
+                    id="car_model" 
+                    name="car_model" 
+                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition"
+                    disabled={!carBrand}
+                  >
+                    <option value="">Select Model</option>
+                    {models.map(model => (
+                      <option key={model} value={model}>{model}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Price Range */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="price_min">Minimum Price</label>
+                  <input 
+                    type="number" 
+                    id="price_min" 
+                    name="price_min" 
+                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    placeholder="Enter minimum price"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="price_max">Maximum Price</label>
+                  <input 
+                    type="number" 
+                    id="price_max" 
+                    name="price_max" 
+                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    placeholder="Enter maximum price"
+                  />
+                </div>
+              </div>
+
+              {/* Build Year Range */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="year_min">Minimum Year</label>
+                  <input 
+                    type="number" 
+                    id="year_min" 
+                    name="year_min" 
+                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    placeholder="Enter minimum year" 
+                    min="1900" 
+                    max="2024"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-2" htmlFor="year_max">Maximum Year</label>
+                  <input 
+                    type="number" 
+                    id="year_max" 
+                    name="year_max" 
+                    className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-[#ff0] transition" 
+                    placeholder="Enter maximum year" 
+                    min="1900" 
+                    max="2024"
+                  />
+                </div>
+              </div>
+
+              {/* Websites to monitor */}
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-2">Websites to Monitor</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                  <div className="flex items-center space-x-2">
+                    <input 
+                      type="checkbox" 
+                      id="website_autotrader" 
+                      name="websites" 
+                      value="autotrader"
+                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                    />
+                    <label htmlFor="website_autotrader" className="text-neutral-300">AutoTrader</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input 
+                      type="checkbox" 
+                      id="website_cargurus" 
+                      name="websites" 
+                      value="cargurus"
+                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                    />
+                    <label htmlFor="website_cargurus" className="text-neutral-300">CarGurus</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input 
+                      type="checkbox" 
+                      id="website_cars" 
+                      name="websites" 
+                      value="cars"
+                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                    />
+                    <label htmlFor="website_cars" className="text-neutral-300">Cars.com</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input 
+                      type="checkbox" 
+                      id="website_facebook" 
+                      name="websites" 
+                      value="facebook"
+                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                    />
+                    <label htmlFor="website_facebook" className="text-neutral-300">Facebook Marketplace</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input 
+                      type="checkbox" 
+                      id="website_craigslist" 
+                      name="websites" 
+                      value="craigslist"
+                      className="h-4 w-4 text-[#ff0] rounded border-neutral-600 focus:ring-[#ff0]" 
+                    />
+                    <label htmlFor="website_craigslist" className="text-neutral-300">Craigslist</label>
+                  </div>
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-4">
+                <Button 
+                  type="submit"
+                  className="w-full py-3 bg-[#ff0] text-neutral-900 hover:bg-yellow-300 transition font-semibold rounded-xl"
+                >
+                  Set Up My Car Alerts
+                </Button>
+              </div>
+            </form>
+          </div>
+
+          {/* Telegram Setup Instructions */}
+          <div className="bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-6">How to Set Up Your Telegram Bot</h2>
+            
+            {/* Telegram Chat Preview */}
+            <div className="w-full mb-8 bg-[#273746] rounded-xl p-4 border border-neutral-700">
+              <div className="flex items-start space-x-3 mb-4">
+                <div className="bg-blue-500 rounded-full h-10 w-10 flex items-center justify-center text-white">
+                  A
+                </div>
+                <div className="bg-white rounded-lg p-3 max-w-[80%]">
+                  <p className="text-sm text-gray-800">🚗 <strong>New Car Alert!</strong></p>
+                  <p className="text-sm text-gray-800">2019 Toyota Camry</p>
+                  <p className="text-sm text-gray-800">Price: $18,500</p>
+                  <p className="text-sm text-gray-800">Miles: 45,000</p>
+                  <p className="text-sm text-gray-800">Location: Denver, CO</p>
+                  <p className="text-sm text-gray-800 mt-2">
+                    <a href="#" className="text-blue-600 underline">View Listing →</a>
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="bg-blue-500 rounded-full h-10 w-10 flex items-center justify-center text-white">
+                  A
+                </div>
+                <div className="bg-white rounded-lg p-3 max-w-[80%]">
+                  <p className="text-sm text-gray-800">🚗 <strong>New Car Alert!</strong></p>
+                  <p className="text-sm text-gray-800">2020 Honda Accord</p>
+                  <p className="text-sm text-gray-800">Price: $22,750</p>
+                  <p className="text-sm text-gray-800">Miles: 28,350</p>
+                  <p className="text-sm text-gray-800">Location: Boulder, CO</p>
+                  <p className="text-sm text-gray-800 mt-2">
+                    <a href="#" className="text-blue-600 underline">View Listing →</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Setup Instructions */}
+            <div className="prose prose-invert max-w-none">
+              <h3 className="text-xl font-semibold text-white mb-4">Setup Instructions:</h3>
+              <ol className="list-decimal list-inside text-neutral-300 space-y-2">
+                <li>Open Telegram and search for "BotFather"</li>
+                <li>Start a chat with BotFather by clicking "Start"</li>
+                <li>Type /newbot and follow the instructions to create a new bot</li>
+                <li>Choose a name for your bot</li>
+                <li>Choose a username for your bot (must end in 'bot')</li>
+                <li>Copy the API token provided by BotFather</li>
+                <li>Send a message to your new bot to activate the chat</li>
+                <li>Enter your bot token and chat ID in your Amiquus settings</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
