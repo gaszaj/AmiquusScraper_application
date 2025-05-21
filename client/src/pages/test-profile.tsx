@@ -562,18 +562,115 @@ export default function TestProfile() {
               </div>
             </CardContent>
             <CardFooter className="flex flex-col space-y-2">
-              <Button variant="outline" className="w-full justify-start">
-                <Settings className="mr-2 h-4 w-4" />
-                Account settings
-              </Button>
-              <Button variant="outline" className="w-full justify-start">
-                <ShieldAlert className="mr-2 h-4 w-4" />
-                Privacy & security
-              </Button>
-              <Button variant="outline" className="w-full justify-start text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300">
-                <LogOut className="mr-2 h-4 w-4" />
-                Log out
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="w-full justify-start">
+                    <Settings className="mr-2 h-4 w-4" />
+                    Account settings
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Account Settings</DialogTitle>
+                    <DialogDescription>
+                      Update your account information and preferences.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="space-y-4 py-2">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" defaultValue={testUser.firstName + " " + testUser.lastName} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" defaultValue={testUser.email} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="username">Username</Label>
+                      <Input id="username" defaultValue={testUser.username} />
+                    </div>
+                  </div>
+                  <DialogFooter>
+                    <Button type="button" variant="outline" onClick={() => document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click()}>Cancel</Button>
+                    <Button onClick={() => {
+                      toast({
+                        title: "Account updated",
+                        description: "Your account settings have been updated successfully.",
+                      });
+                      document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                    }}>Save Changes</Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="w-full justify-start">
+                    <ShieldAlert className="mr-2 h-4 w-4" />
+                    Privacy & security
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Privacy & Security</DialogTitle>
+                    <DialogDescription>
+                      Manage your security settings and privacy preferences.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="space-y-4 py-2">
+                    <div className="space-y-2">
+                      <Label htmlFor="current-password">Current Password</Label>
+                      <Input id="current-password" type="password" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="new-password">New Password</Label>
+                      <Input id="new-password" type="password" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="confirm-password">Confirm New Password</Label>
+                      <Input id="confirm-password" type="password" />
+                    </div>
+                  </div>
+                  <DialogFooter>
+                    <Button type="button" variant="outline" onClick={() => document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click()}>Cancel</Button>
+                    <Button onClick={() => {
+                      toast({
+                        title: "Password updated",
+                        description: "Your password has been updated successfully.",
+                      });
+                      document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                    }}>Update Password</Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="w-full justify-start text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300">
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Log out
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Log Out</DialogTitle>
+                    <DialogDescription>
+                      Are you sure you want to log out of your account?
+                    </DialogDescription>
+                  </DialogHeader>
+                  <DialogFooter>
+                    <Button type="button" variant="outline" onClick={() => document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click()}>Cancel</Button>
+                    <Button variant="destructive" onClick={() => {
+                      toast({
+                        title: "Logged out",
+                        description: "You have been successfully logged out.",
+                      });
+                      document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                      window.location.href = "/login";
+                    }}>Log Out</Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </CardFooter>
           </Card>
         </div>
