@@ -1,160 +1,175 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet";
 import { Link } from "wouter";
 
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow">
-        {/* Hero section */}
-        <section className="bg-white py-16 md:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-title font-bold mb-6">About Amiquus</h1>
-              <p className="text-xl text-neutral-600 mb-8">
-                We're on a mission to simplify the way people find and purchase used cars by providing real-time notifications for new listings.
+    <>
+      <Helmet>
+        <title>About Us | Amiquus - Car Listing Monitoring Service</title>
+        <meta name="description" content="Learn about Amiquus, our mission to revolutionize used car shopping, and the team behind our intelligent car listing monitoring service." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16 max-w-5xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">About Amiquus</h1>
+        <p className="text-lg text-center text-neutral-600 dark:text-neutral-400 mb-12 max-w-3xl mx-auto">
+          We're revolutionizing how people find their perfect used car by bringing advanced monitoring technology to everyone
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold mb-6">Our Story</h2>
+            <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+              Amiquus began in 2023 when our founder, Alex, spent months refreshing car listing websites trying to find a specific rare model at a good price. After missing several opportunities due to delayed notifications, he realized there had to be a better way.
+            </p>
+            <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+              Working with a small team of developers and car enthusiasts, Alex built a monitoring system that could track listings across multiple sites simultaneously and send instant notifications when matches appeared.
+            </p>
+            <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+              What started as a personal project quickly gained interest from friends and family, and by early 2025, Amiquus was born as a service available to everyone. Today, we help car buyers across the country save time and find better deals with our intelligent monitoring technology.
+            </p>
+          </div>
+          <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg h-80 flex items-center justify-center">
+            <div className="text-center p-6">
+              <div className="w-20 h-20 bg-primary/10 dark:bg-[#ff0]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-primary dark:text-[#ff0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+              </div>
+              <p className="text-xl font-medium">Image Placeholder</p>
+              <p className="text-neutral-600 dark:text-neutral-400 mt-2">Our company timeline illustration will appear here</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mb-20">
+          <h2 className="text-3xl font-semibold text-center mb-12">Our Mission</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-primary/10 dark:bg-[#ff0]/10 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary dark:text-[#ff0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Save Time</h3>
+              <p className="text-neutral-600 dark:text-neutral-400">
+                Eliminate the need to constantly refresh multiple websites by automating the search process and receiving timely notifications.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-primary/10 dark:bg-[#ff0]/10 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary dark:text-[#ff0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Find Better Deals</h3>
+              <p className="text-neutral-600 dark:text-neutral-400">
+                Be the first to know when a great deal appears, giving you the advantage in a competitive market where timing is everything.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-primary/10 dark:bg-[#ff0]/10 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary dark:text-[#ff0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Buy Confidently</h3>
+              <p className="text-neutral-600 dark:text-neutral-400">
+                Make informed decisions with comprehensive monitoring across multiple trusted car listing platforms.
               </p>
             </div>
           </div>
-        </section>
-
-        {/* Our story */}
-        <section className="py-16 bg-neutral-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div>
-                <h2 className="text-3xl font-title font-bold mb-4">Our Story</h2>
-                <p className="text-neutral-600 mb-4">
-                  Amiquus was born from a personal frustration experienced by our founder while searching for a specific used car model. After spending weeks manually checking multiple websites several times a day, he missed out on a perfect car because someone else saw the listing first.
-                </p>
-                <p className="text-neutral-600 mb-4">
-                  This frustration led to the creation of Amiquus in 2023 - a platform that automates the monitoring of car listings across multiple websites and sends instant notifications when your dream car is listed.
-                </p>
-                <p className="text-neutral-600">
-                  Today, Amiquus helps thousands of car buyers save time and never miss out on their ideal vehicle. Our service has expanded to support multiple websites, languages, and notification frequencies to meet the diverse needs of our users.
-                </p>
+        </div>
+        
+        <div className="mb-20">
+          <h2 className="text-3xl font-semibold text-center mb-12">Our Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 flex flex-col items-center text-center">
+              <div className="w-32 h-32 bg-neutral-200 dark:bg-neutral-700 rounded-full mb-4 overflow-hidden flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-neutral-400 dark:text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
               </div>
-              <div className="order-first md:order-last">
-                <img 
-                  src="https://images.unsplash.com/photo-1517994112540-009c47ea476b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
-                  alt="Car dealership with satisfied customer" 
-                  className="rounded-lg shadow-md w-full" 
-                />
+              <h3 className="text-xl font-semibold mb-1">Alex Morgan</h3>
+              <p className="text-neutral-500 dark:text-neutral-400 mb-3">Founder & CEO</p>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                Former software engineer with a passion for cars and building innovative solutions.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 flex flex-col items-center text-center">
+              <div className="w-32 h-32 bg-neutral-200 dark:bg-neutral-700 rounded-full mb-4 overflow-hidden flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-neutral-400 dark:text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-semibold mb-1">Sarah Chen</h3>
+              <p className="text-neutral-500 dark:text-neutral-400 mb-3">CTO</p>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                Data science expert specializing in web scraping and information retrieval systems.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 flex flex-col items-center text-center">
+              <div className="w-32 h-32 bg-neutral-200 dark:bg-neutral-700 rounded-full mb-4 overflow-hidden flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-neutral-400 dark:text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Marcus Lee</h3>
+              <p className="text-neutral-500 dark:text-neutral-400 mb-3">Lead Developer</p>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                Full-stack engineer with expertise in building high-performance notification systems.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 flex flex-col items-center text-center">
+              <div className="w-32 h-32 bg-neutral-200 dark:bg-neutral-700 rounded-full mb-4 overflow-hidden flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-neutral-400 dark:text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Elena Rodriguez</h3>
+              <p className="text-neutral-500 dark:text-neutral-400 mb-3">Customer Success</p>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                Former car sales professional dedicated to helping customers find their perfect vehicle.
+              </p>
             </div>
           </div>
-        </section>
-
-        {/* Our values */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-title font-bold mb-12 text-center">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6">
-                <div className="bg-primary-100 text-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-title font-semibold mb-3">Excellence</h3>
-                <p className="text-neutral-600">
-                  We strive for excellence in every aspect of our service, from the accuracy of our notifications to the user experience of our platform.
-                </p>
-              </div>
-              <div className="text-center p-6">
-                <div className="bg-primary-100 text-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-title font-semibold mb-3">Trust</h3>
-                <p className="text-neutral-600">
-                  We build trust through reliability, transparency, and data privacy, ensuring our users can depend on our service for their car search.
-                </p>
-              </div>
-              <div className="text-center p-6">
-                <div className="bg-primary-100 text-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                    <line x1="6" y1="1" x2="6" y2="4"></line>
-                    <line x1="10" y1="1" x2="10" y2="4"></line>
-                    <line x1="14" y1="1" x2="14" y2="4"></line>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-title font-semibold mb-3">Innovation</h3>
-                <p className="text-neutral-600">
-                  We continuously improve our technology to provide the most effective and user-friendly car monitoring service possible.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Team section */}
-        <section className="py-16 bg-neutral-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-title font-bold mb-12 text-center">Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" 
-                  alt="John Smith" 
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4" 
-                />
-                <h3 className="text-xl font-title font-semibold">John Smith</h3>
-                <p className="text-primary-600 mb-2">Founder & CEO</p>
-                <p className="text-neutral-600 text-sm max-w-xs mx-auto">
-                  Former automotive industry executive with a passion for technology and improving the car buying experience.
-                </p>
-              </div>
-              <div className="text-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" 
-                  alt="Sarah Johnson" 
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4" 
-                />
-                <h3 className="text-xl font-title font-semibold">Sarah Johnson</h3>
-                <p className="text-primary-600 mb-2">CTO</p>
-                <p className="text-neutral-600 text-sm max-w-xs mx-auto">
-                  Software engineer with extensive experience in web scraping and notification systems.
-                </p>
-              </div>
-              <div className="text-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" 
-                  alt="Michael Chen" 
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4" 
-                />
-                <h3 className="text-xl font-title font-semibold">Michael Chen</h3>
-                <p className="text-primary-600 mb-2">Head of Customer Success</p>
-                <p className="text-neutral-600 text-sm max-w-xs mx-auto">
-                  Customer service expert dedicated to ensuring our users have the best possible experience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA section */}
-        <section className="bg-primary-600 text-white py-16">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-title font-bold mb-4">Ready to Find Your Dream Car?</h2>
-            <p className="text-primary-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied users who have found their perfect car with Amiquus. 
-              Set up your alerts today and never miss a great deal again.
-            </p>
-            <Link href="/signup">
-              <Button className="bg-white text-primary-600 hover:bg-neutral-100 px-8 py-6" size="lg">
-                Get Started Now
-              </Button>
+        </div>
+        
+        <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-8 text-center mb-12">
+          <h2 className="text-3xl font-semibold mb-6">Join Our Team</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
+            We're always looking for talented individuals who are passionate about technology and revolutionizing the car buying experience. Check out our current openings and join us on our mission.
+          </p>
+          <Link href="/careers">
+            <a className="px-6 py-3 bg-primary dark:bg-[#ff0] text-white dark:text-black rounded-md font-medium hover:opacity-90 transition-opacity inline-block">
+              View Open Positions
+            </a>
+          </Link>
+        </div>
+        
+        <div className="text-center">
+          <h2 className="text-3xl font-semibold mb-6">Have Questions?</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
+            Learn more about how our service works, view pricing options, or get in touch with our support team.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/faq">
+              <a className="px-5 py-2 border border-neutral-300 dark:border-neutral-700 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                Visit FAQ
+              </a>
+            </Link>
+            <Link href="/#pricing">
+              <a className="px-5 py-2 border border-neutral-300 dark:border-neutral-700 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                View Pricing
+              </a>
+            </Link>
+            <Link href="/support">
+              <a className="px-5 py-2 border border-neutral-300 dark:border-neutral-700 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                Contact Support
+              </a>
             </Link>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+        </div>
+      </div>
+    </>
   );
 }

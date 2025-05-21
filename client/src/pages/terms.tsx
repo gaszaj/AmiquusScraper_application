@@ -1,117 +1,141 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import { Helmet } from "react-helmet";
 
 export default function Terms() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow py-16 bg-neutral-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden p-8">
-            <h1 className="text-3xl font-title font-bold mb-6">Terms of Service</h1>
-            <p className="text-neutral-600 mb-4">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
-            
-            <div className="prose prose-neutral max-w-none">
-              <h2>1. Introduction</h2>
-              <p>
-                Welcome to Amiquus ("we," "our," or "us"). By accessing or using our website, mobile application, or any of our services, you agree to be bound by these Terms of Service ("Terms"). Please read these Terms carefully before using Amiquus.
-              </p>
-              <p>
-                These Terms govern your access to and use of the Amiquus platform, which provides car listing monitoring and notification services. By accessing or using our Services, you agree to be bound by these Terms.
-              </p>
-
-              <h2>2. Services Description</h2>
-              <p>
-                Amiquus provides a platform that monitors selected car listing websites for new listings matching your specified criteria and sends notifications via Telegram when matching listings are found.
-              </p>
-              <p>
-                We do not guarantee that our Services will always be available or be uninterrupted. We may suspend, withdraw, discontinue or change all or any part of our Services without notice.
-              </p>
-
-              <h2>3. Account Registration</h2>
-              <p>
-                To use our Services, you must register an account with us. You must provide accurate, current, and complete information during the registration process and keep your account information updated.
-              </p>
-              <p>
-                You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
-              </p>
-
-              <h2>4. Subscription and Payment</h2>
-              <p>
-                Our Services are available on a subscription basis. You agree to pay all fees associated with your subscription plan.
-              </p>
-              <p>
-                Subscription fees are billed in advance on a monthly basis. Your subscription will automatically renew unless you cancel it at least 24 hours before the end of the current billing period.
-              </p>
-              <p>
-                No refunds or credits will be provided for partial months of service, downgrade refunds, or refunds for months unused with an active subscription.
-              </p>
-
-              <h2>5. User Conduct</h2>
-              <p>
-                You agree not to use our Services to:
-              </p>
-              <ul>
-                <li>Violate any applicable laws or regulations</li>
-                <li>Infringe the intellectual property rights of others</li>
-                <li>Attempt to probe, scan, or test the vulnerability of our system</li>
-                <li>Interfere with or disrupt the integrity or performance of our Services</li>
-                <li>Attempt to gain unauthorized access to our Services or related systems</li>
-              </ul>
-
-              <h2>6. Intellectual Property</h2>
-              <p>
-                All content, features, and functionality of our Services, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software, are the exclusive property of Amiquus or its licensors.
-              </p>
-              <p>
-                Our Services are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, modify, create derivative works from, display, perform, distribute, sell, or exploit our Services without our prior written consent.
-              </p>
-
-              <h2>7. Disclaimer of Warranties</h2>
-              <p>
-                OUR SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
-              </p>
-              <p>
-                We do not warrant that our Services will be uninterrupted or error-free, that defects will be corrected, or that our Services or the servers that make them available are free of viruses or other harmful components.
-              </p>
-
-              <h2>8. Limitation of Liability</h2>
-              <p>
-                IN NO EVENT SHALL AMIQUUS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE OUR SERVICES.
-              </p>
-
-              <h2>9. Indemnification</h2>
-              <p>
-                You agree to indemnify, defend, and hold harmless Amiquus and its officers, directors, employees, agents, and affiliates from and against any and all claims, damages, obligations, losses, liabilities, costs, and expenses arising from your use of our Services or your violation of these Terms.
-              </p>
-
-              <h2>10. Termination</h2>
-              <p>
-                We may terminate or suspend your account and access to our Services at our sole discretion, without notice, for any reason, including but not limited to your breach of these Terms.
-              </p>
-              <p>
-                Upon termination, your right to use our Services will immediately cease. All provisions of these Terms that by their nature should survive termination shall survive termination.
-              </p>
-
-              <h2>11. Amendments</h2>
-              <p>
-                We reserve the right to modify these Terms at any time. We will provide notice of any material changes by posting the amended Terms on our website or by sending you an email. Your continued use of our Services after such notification constitutes your acceptance of the amended Terms.
-              </p>
-
-              <h2>12. Governing Law</h2>
-              <p>
-                These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
-              </p>
-
-              <h2>13. Contact Information</h2>
-              <p>
-                If you have any questions about these Terms, please contact us at support@amiquus.com.
-              </p>
-            </div>
-          </div>
+    <>
+      <Helmet>
+        <title>Terms of Service | Amiquus</title>
+        <meta name="description" content="Read the Amiquus Terms of Service that govern your use of our car listing monitoring and notification service." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16 max-w-4xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">Terms of Service</h1>
+        <p className="text-neutral-600 dark:text-neutral-400 mb-8 text-center">
+          Last updated: May 21, 2025
+        </p>
+        
+        <div className="prose prose-neutral dark:prose-invert max-w-none">
+          <h2 id="agreement">1. Agreement to Terms</h2>
+          <p>
+            These Terms of Service constitute a legally binding agreement made between you and Amiquus, concerning your access to and use of our website and services.
+          </p>
+          <p>
+            By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service.
+          </p>
+          
+          <h2 id="changes">2. Changes to Terms</h2>
+          <p>
+            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.
+          </p>
+          <p>
+            By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service.
+          </p>
+          
+          <h2 id="account">3. Account Terms</h2>
+          <p>
+            To use our services, you must:
+          </p>
+          <ul>
+            <li>Be at least 18 years of age</li>
+            <li>Complete the registration process</li>
+            <li>Provide accurate, complete, and up-to-date information</li>
+            <li>Be responsible for maintaining the security of your account and password</li>
+            <li>Be responsible for all activities that occur under your account</li>
+            <li>Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account</li>
+          </ul>
+          
+          <h2 id="payment">4. Payment Terms</h2>
+          <p>
+            Amiquus offers subscription-based services with the following terms:
+          </p>
+          <ul>
+            <li>All fees are exclusive of taxes, which will be added when applicable</li>
+            <li>Subscription prices are subject to change with 30 days' notice</li>
+            <li>Subscriptions automatically renew unless canceled before the next billing cycle</li>
+            <li>Refunds are handled on a case-by-case basis according to our refund policy</li>
+            <li>We use Stripe for secure payment processing, and all payment information is stored by Stripe</li>
+          </ul>
+          
+          <h2 id="capacity">5. Capacity Limits</h2>
+          <p>
+            In order to maintain service quality and reliability, Amiquus limits the number of active subscriptions to 30. When this limit is reached:
+          </p>
+          <ul>
+            <li>New users may join our waitlist</li>
+            <li>Waitlist position is determined on a first-come, first-served basis</li>
+            <li>When capacity becomes available, waitlisted users will be notified in order</li>
+            <li>We reserve the right to modify capacity limits at any time</li>
+          </ul>
+          
+          <h2 id="scraping">6. Web Scraping Limitations</h2>
+          <p>
+            Our service accesses and processes data from multiple car listing websites. By using our service, you acknowledge that:
+          </p>
+          <ul>
+            <li>Amiquus respects the terms of service of the websites we monitor</li>
+            <li>We implement rate limiting and respectful crawling practices</li>
+            <li>The availability of certain websites may change based on their terms and technical measures</li>
+            <li>We make no guarantees regarding the completeness or timeliness of scraped data</li>
+          </ul>
+          
+          <h2 id="intellectual">7. Intellectual Property</h2>
+          <p>
+            The Amiquus service, including its original content, features, and functionality, are and will remain the exclusive property of Amiquus. Our service is protected by copyright, trademark, and other laws of both the United States and foreign countries.
+          </p>
+          <p>
+            Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Amiquus.
+          </p>
+          
+          <h2 id="termination">8. Termination</h2>
+          <p>
+            We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including, without limitation, if you breach the Terms.
+          </p>
+          <p>
+            Upon termination, your right to use the service will immediately cease. If you wish to terminate your account, you may simply discontinue using the service or contact us to request account deletion.
+          </p>
+          
+          <h2 id="limitations">9. Limitation of Liability</h2>
+          <p>
+            In no event shall Amiquus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:
+          </p>
+          <ul>
+            <li>Your access to or use of or inability to access or use the service</li>
+            <li>Any conduct or content of any third party on the service</li>
+            <li>Any content obtained from the service</li>
+            <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+          </ul>
+          
+          <h2 id="disclaimer">10. Disclaimer</h2>
+          <p>
+            Your use of the service is at your sole risk. The service is provided on an "AS IS" and "AS AVAILABLE" basis. The service is provided without warranties of any kind, whether express or implied.
+          </p>
+          <p>
+            Amiquus does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that the results that may be obtained from the use of the service will be accurate or reliable.
+          </p>
+          
+          <h2 id="cookies">11. Cookies Policy</h2>
+          <p>
+            Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our service, your choices regarding cookies, and further information about cookies. Please refer to the Cookies section in our Privacy Policy.
+          </p>
+          
+          <h2 id="governing-law">12. Governing Law</h2>
+          <p>
+            These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
+          </p>
+          <p>
+            Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.
+          </p>
+          
+          <h2 id="contact">13. Contact Us</h2>
+          <p>
+            If you have any questions about these Terms, please contact us:
+          </p>
+          <ul>
+            <li>By email: legal@amiquus.com</li>
+            <li>By visiting the contact page on our website</li>
+          </ul>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </>
   );
 }
