@@ -367,11 +367,12 @@ export default function Profile() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   
-  // Payment methods - mocked for now, will connect to backend
+  // Payment methods
   const { data: paymentMethods, isLoading: isLoadingPayments } = useQuery<any[]>({
     queryKey: ["/api/payment-methods"],
-    enabled: isAuthenticated,
-    placeholderData: [
+    enabled: isAuthenticated && !!user,
+    // For demo purposes only, this would be replaced with actual backend API call
+    placeholderData: user ? [
       { 
         id: 'pm_123', 
         brand: 'visa', 
@@ -380,14 +381,15 @@ export default function Profile() {
         expYear: 2025, 
         isDefault: true
       }
-    ]
+    ] : []
   });
   
-  // Subscriptions query - mocked for now, will connect to backend
+  // Subscriptions query
   const { data: subscriptions, isLoading: isLoadingSubscriptions } = useQuery<Subscription[]>({
     queryKey: ["/api/subscriptions"],
-    enabled: isAuthenticated,
-    placeholderData: [
+    enabled: isAuthenticated && !!user,
+    // For demo purposes only, this would be replaced with actual backend API call
+    placeholderData: user ? [
       {
         id: 1,
         userId: 1,
@@ -407,7 +409,7 @@ export default function Profile() {
         createdAt: new Date(),
         updatedAt: new Date(),
       } as Subscription
-    ]
+    ] : []
   });
   
   // Fill form with user data

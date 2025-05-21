@@ -13,6 +13,7 @@ import FAQ from "@/pages/faq";
 import Checkout from "@/pages/checkout";
 import Subscribe from "@/pages/subscribe";
 import SetupAlerts from "@/pages/setup-alerts";
+import Profile from "@/pages/Profile";
 import { AuthProvider } from "@/hooks/use-auth";
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/checkout" component={Checkout} />
       <Route path="/subscribe" component={Subscribe} />
       <Route path="/setup-alerts" component={SetupAlerts} />
+      <Route path="/profile" component={Profile} />
       <Route path="/about" component={About} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
