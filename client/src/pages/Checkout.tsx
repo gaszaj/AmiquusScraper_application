@@ -31,7 +31,13 @@ const PAYMENT_METHODS = [
 ];
 
 // The form that appears inside the Stripe Elements
-function CheckoutForm({ selectedPlan }: { selectedPlan: typeof PLANS[0] }) {
+function CheckoutForm({ 
+  selectedPlan, 
+  onPaymentSuccess 
+}: { 
+  selectedPlan: typeof PLANS[0]; 
+  onPaymentSuccess: (paymentIntent: any) => Promise<void>;
+}) {
   const stripe = useStripe();
   const elements = useElements();
   const [isProcessing, setIsProcessing] = useState(false);
@@ -80,13 +86,17 @@ function CheckoutForm({ selectedPlan }: { selectedPlan: typeof PLANS[0] }) {
         // The payment has succeeded
         toast({
           title: "Payment successful!",
-          description: `Your ${selectedPlan.period} subscription is now active`,
+          description: "Processing your subscription...",
         });
         
-        // Redirect to dashboard after short delay to show success message
-        setTimeout(() => {
-          navigate("/dashboard");
-        }, 1500);
+        try {
+          // Call the onPaymentSuccess callback to create subscription
+          await onPaymentSuccess(paymentIntent);
+        } catch (subscriptionError) {
+          console.error("Error creating subscription:", subscriptionError);
+          // The payment succeeded but there was an error creating the subscription
+          // The error toast will be shown by the onPaymentSuccess function
+        }
       } else {
         // Payment requires additional action or is processing
         setIsProcessing(false);
@@ -158,10 +168,45 @@ function CheckoutForm({ selectedPlan }: { selectedPlan: typeof PLANS[0] }) {
 export default function Checkout() {
   const [clientSecret, setClientSecret] = useState("");
   const [selectedPlan, setSelectedPlan] = useState(PLANS[0]);
-  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(PAYMENT_METHODS[0].id);
+  const [subscriptionData, setSubscriptionData] = useState<any>(null);
+  const [isProcessingSubscription, setIsProcessingSubscription] = useState(false);
   const { isAuthenticated, isLoading } = useAuth();
   const [location, navigate] = useLocation();
   const { toast } = useToast();
+
+  // Load subscription data from URL or session storage
+  useEffect(() => {
+    // Check URL params for amount and plan type
+    const params = new URLSearchParams(window.location.search);
+    const amount = params.get('amount');
+    const planType = params.get('type');
+    
+    if (amount) {
+      // Find matching plan or use custom amount
+      const price = parseFloat(amount);
+      if (!isNaN(price)) {
+        if (planType === 'yearly' || planType === 'annual') {
+          setSelectedPlan(PLANS[1]);
+        } else {
+          // Create custom plan with the specified amount
+          setSelectedPlan({
+            ...PLANS[0],
+            price: price
+          });
+        }
+      }
+    }
+
+    // Try to load subscription data from sessionStorage
+    try {
+      const savedData = sessionStorage.getItem('subscriptionData');
+      if (savedData) {
+        setSubscriptionData(JSON.parse(savedData));
+      }
+    } catch (error) {
+      console.error("Error loading subscription data:", error);
+    }
+  }, []);
 
   useEffect(() => {
     // If user is not authenticated, redirect to login
@@ -171,7 +216,7 @@ export default function Checkout() {
         description: "Please log in to continue with checkout",
         variant: "destructive",
       });
-      navigate("/login?returnUrl=/checkout", { replace: true });
+      navigate("/login?returnUrl=" + encodeURIComponent(window.location.pathname + window.location.search), { replace: true });
       return;
     }
 
@@ -198,6 +243,58 @@ export default function Checkout() {
       fetchPaymentIntent();
     }
   }, [isAuthenticated, isLoading, navigate, selectedPlan.price, toast]);
+  
+  // Create subscription after successful payment
+  const handlePaymentSuccess = async (paymentIntent: any) => {
+    if (!subscriptionData) {
+      toast({
+        title: "Missing subscription data",
+        description: "Subscription details are missing. Please try setting up your car alert again.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setIsProcessingSubscription(true);
+    
+    try {
+      // Create subscription in database
+      const response = await apiRequest("POST", "/api/subscriptions", {
+        ...subscriptionData,
+        websitesSelected: subscriptionData.websites, // Fix field name
+        paymentIntentId: paymentIntent.id,
+        price: selectedPlan.price,
+      });
+      
+      if (response.ok) {
+        const subscription = await response.json();
+        
+        // Clear subscription data from session storage
+        sessionStorage.removeItem('subscriptionData');
+        
+        toast({
+          title: "Success! Your car alert is active",
+          description: "You'll start receiving notifications for new listings matching your criteria.",
+        });
+        
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 1500);
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to create subscription");
+      }
+    } catch (error) {
+      console.error("Subscription creation error:", error);
+      toast({
+        title: "Error creating subscription",
+        description: error instanceof Error ? error.message : "Please contact support if this issue persists",
+        variant: "destructive",
+      });
+    } finally {
+      setIsProcessingSubscription(false);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -299,7 +396,10 @@ export default function Checkout() {
                       }
                     } 
                   }}>
-                    <CheckoutForm selectedPlan={selectedPlan} />
+                    <CheckoutForm 
+                      selectedPlan={selectedPlan} 
+                      onPaymentSuccess={handlePaymentSuccess}
+                    />
                   </Elements>
                 ) : (
                   <div className="flex justify-center p-8">

@@ -55,19 +55,7 @@ export default function Service() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate checkout data
-    if (!formData.checkout.cardName || 
-        !formData.checkout.cardNumber || 
-        !formData.checkout.cardExpiry || 
-        !formData.checkout.cardCvc) {
-      toast({
-        title: "Missing information",
-        description: "Please fill in all payment details",
-        variant: "destructive",
-      });
-      return;
-    }
-    
+    // Validate terms agreement
     if (!formData.checkout.termsAgreed) {
       toast({
         title: "Terms not accepted",
@@ -80,25 +68,38 @@ export default function Service() {
     setIsSubmitting(true);
     
     try {
-      // Create subscription through API
-      const response = await apiRequest("POST", "/api/subscriptions", {
+      // First save the subscription data to session storage so we can access it in the checkout page
+      sessionStorage.setItem('subscriptionData', JSON.stringify({
         user: formData.user,
-        websites: formData.websites,
-        carDetails: formData.carDetails,
-        telegramSetup: formData.telegramSetup,
-        totalPrice: calculatedPrice,
+        websites: formData.websites.selectedWebsites,
+        facebookMarketplaceUrl: formData.websites.facebookUrl || null,
+        updateFrequency: formData.websites.updateFrequency,
+        brand: formData.carDetails.brand,
+        model: formData.carDetails.model,
+        fuelType: formData.carDetails.fuelType,
+        yearMin: formData.carDetails.yearMin,
+        yearMax: formData.carDetails.yearMax,
+        mileageMin: formData.carDetails.mileageMin,
+        mileageMax: formData.carDetails.mileageMax,
+        priceMin: formData.carDetails.priceMin,
+        priceMax: formData.carDetails.priceMax,
+        telegramBotToken: formData.telegramSetup.telegramToken,
+        telegramChatId: formData.telegramSetup.telegramChatId,
+        notificationLanguage: formData.telegramSetup.notificationLanguage,
+        price: calculatedPrice,
+      }));
+      
+      // Redirect to checkout page
+      toast({
+        title: "Information saved",
+        description: "Redirecting to secure checkout..."
       });
       
-      if (response.ok) {
-        toast({
-          title: "Subscription created!",
-          description: "Your car tracking subscription has been set up successfully",
-        });
-        navigate("/dashboard");
-      }
+      // Navigate to checkout page with price
+      navigate(`/checkout?amount=${calculatedPrice}&type=monthly`);
     } catch (error) {
       toast({
-        title: "Error creating subscription",
+        title: "Error saving information",
         description: error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
