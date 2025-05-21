@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Signup from "@/pages/signup";
@@ -53,6 +54,7 @@ function App() {
             <Router />
           </main>
           <Footer />
+          <ScrollToTop />
         </div>
       </TooltipProvider>
     </AuthProvider>
