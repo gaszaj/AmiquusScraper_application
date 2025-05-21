@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import { Link } from "wouter";
 import { 
   Accordion,
   AccordionContent,
@@ -15,7 +14,7 @@ export default function FAQ() {
         <meta name="description" content="Find answers to the most common questions about Amiquus car listing monitoring service, subscriptions, notification setup, and more." />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <div className="container mx-auto px-4 py-24 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Frequently Asked Questions</h1>
         <p className="text-lg text-center text-neutral-600 dark:text-neutral-400 mb-12 max-w-3xl mx-auto">
           Find quick answers to common questions about our car listing monitoring service
