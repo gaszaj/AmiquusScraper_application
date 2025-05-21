@@ -21,59 +21,82 @@ const PLANS = [
   { id: "annual", name: "Annual Plan", price: 287.88, period: "yearly", discount: "20%" },
 ];
 
-// Payment method options
+// Payment method options - only using card payments as requested
 const PAYMENT_METHODS = [
   { id: "card", name: "Credit Card", icons: [
     "https://cdn-icons-png.flaticon.com/512/349/349221.png", // Visa
     "https://cdn-icons-png.flaticon.com/512/349/349228.png", // Mastercard
     "https://cdn-icons-png.flaticon.com/512/349/349230.png", // Amex
   ]},
-  { id: "apple_pay", name: "Apple Pay", icon: "https://cdn-icons-png.flaticon.com/512/349/349237.png" },
-  { id: "google_pay", name: "Google Pay", icon: "https://cdn-icons-png.flaticon.com/512/349/349241.png" },
 ];
 
 // The form that appears inside the Stripe Elements
-function CheckoutForm() {
+function CheckoutForm({ selectedPlan }: { selectedPlan: typeof PLANS[0] }) {
   const stripe = useStripe();
   const elements = useElements();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const { toast } = useToast();
   const [location, navigate] = useLocation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submitted");
 
     if (!stripe || !elements) {
+      // Stripe.js hasn't loaded yet. Make sure to disable form submission until Stripe.js has loaded
+      toast({
+        title: "Payment system loading",
+        description: "Please wait a moment and try again",
+        variant: "destructive",
+      });
       return;
     }
 
     setIsProcessing(true);
+    setErrorMessage(null);
 
     try {
-      const { error } = await stripe.confirmPayment({
+      // Confirm the payment with Stripe
+      const { error, paymentIntent } = await stripe.confirmPayment({
         elements,
         confirmParams: {
           // Make sure to change this to your payment completion page
-          return_url: window.location.origin + "/dashboard",
+          return_url: `${window.location.origin}/dashboard`,
         },
+        redirect: 'if_required'
       });
 
       if (error) {
+        // This point will only be reached if there's an immediate error when confirming the payment
+        setErrorMessage(error.message || "An unknown error occurred");
         toast({
           title: "Payment failed",
           description: error.message || "An error occurred with your payment",
           variant: "destructive",
         });
         setIsProcessing(false);
-      } else {
-        // The payment has been processed! Show a success message
+      } else if (paymentIntent && paymentIntent.status === 'succeeded') {
+        // The payment has succeeded
         toast({
-          title: "Payment successful",
-          description: "Your subscription is now active",
+          title: "Payment successful!",
+          description: `Your ${selectedPlan.period} subscription is now active`,
         });
-        navigate("/dashboard");
+        
+        // Redirect to dashboard after short delay to show success message
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 1500);
+      } else {
+        // Payment requires additional action or is processing
+        setIsProcessing(false);
+        toast({
+          title: "Payment processing",
+          description: "Your payment is being processed. You'll be notified when it completes.",
+        });
       }
     } catch (err: any) {
+      setErrorMessage(err.message || "An unknown error occurred");
       toast({
         title: "Payment failed",
         description: err.message || "An error occurred with your payment",
@@ -84,24 +107,49 @@ function CheckoutForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <PaymentElement className="mb-6" />
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="py-2">
+        <PaymentElement 
+          options={{
+            layout: {
+              type: 'tabs',
+              defaultCollapsed: false,
+            }
+          }} 
+        />
+      </div>
 
-      <div className="mt-8">
+      {errorMessage && (
+        <div className="bg-red-500/10 border border-red-500/30 text-red-500 p-4 rounded-lg text-sm">
+          {errorMessage}
+        </div>
+      )}
+
+      <div className="pt-4">
+        <div className="flex justify-between items-center mb-4">
+          <span className="text-neutral-400">Total:</span>
+          <span className="text-xl font-bold text-white">${selectedPlan.price} <span className="text-sm font-normal text-neutral-400">/ {selectedPlan.period}</span></span>
+        </div>
+
         <button
           type="submit"
           disabled={!stripe || isProcessing}
-          className="w-full py-3 rounded-lg bg-primary dark:bg-[#ff0] text-white dark:text-black font-semibold text-lg hover:bg-primary/90 dark:hover:bg-yellow-400 transition-colors disabled:opacity-70"
+          className="w-full py-4 rounded-lg bg-yellow-400 text-black font-semibold text-lg hover:bg-yellow-300 transition-colors disabled:opacity-70"
         >
           {isProcessing ? (
             <div className="flex items-center justify-center">
               <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-              Processing...
+              Processing payment...
             </div>
           ) : (
-            "Subscribe Now"
+            "Complete Purchase"
           )}
         </button>
+        
+        <p className="text-center text-sm text-neutral-400 mt-4">
+          By completing your purchase, you agree to our <a href="/terms" className="text-yellow-400 hover:underline">Terms of Service</a> 
+          and acknowledge our <a href="/privacy" className="text-yellow-400 hover:underline">Privacy Policy</a>.
+        </p>
       </div>
     </form>
   );
@@ -224,43 +272,19 @@ export default function Checkout() {
                 </div>
               </div>
 
-              {/* Payment Methods */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white mb-4">Select Payment Method</h3>
-                
-                {/* Credit Card */}
-                {PAYMENT_METHODS.map((method) => (
-                  <div key={method.id} className="bg-neutral-700/30 p-6 rounded-xl">
-                    <label className={`flex items-center space-x-3 cursor-pointer w-full ${
-                      selectedPaymentMethod === method.id ? 'text-yellow-400' : 'text-white'
-                    }`}>
-                      <input 
-                        type="radio" 
-                        name="payment" 
-                        className="form-radio text-yellow-400" 
-                        checked={selectedPaymentMethod === method.id}
-                        onChange={() => setSelectedPaymentMethod(method.id)}
-                      />
-                      <span className="text-white">{method.name}</span>
-                      
-                      {method.icons ? (
-                        <div className="flex space-x-2 ml-auto">
-                          {method.icons.map((icon, idx) => (
-                            <img key={idx} src={icon} className="h-8" alt={`${method.name} icon ${idx + 1}`} />
-                          ))}
-                        </div>
-                      ) : method.icon ? (
-                        <img src={method.icon} className="h-8 ml-auto" alt={`${method.name} icon`} />
-                      ) : null}
-                    </label>
+              {/* Credit Card Payment Section */}
+              <div className="bg-neutral-700/30 p-6 rounded-xl">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-semibold text-white">Card Payment</h3>
+                  <div className="flex space-x-2">
+                    {PAYMENT_METHODS[0].icons.map((icon, idx) => (
+                      <img key={idx} src={icon} className="h-8" alt={`Card type ${idx + 1}`} />
+                    ))}
                   </div>
-                ))}
-              </div>
-
-              {/* Stripe Payment Element */}
-              {clientSecret && (
-                <div className="bg-neutral-700/30 p-6 rounded-xl mt-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">Enter Payment Details</h3>
+                </div>
+                
+                {/* Stripe Payment Element */}
+                {clientSecret ? (
                   <Elements stripe={stripePromise} options={{ 
                     clientSecret, 
                     appearance: { 
@@ -275,16 +299,19 @@ export default function Checkout() {
                       }
                     } 
                   }}>
-                    <CheckoutForm />
+                    <CheckoutForm selectedPlan={selectedPlan} />
                   </Elements>
-                </div>
-              )}
+                ) : (
+                  <div className="flex justify-center p-8">
+                    <div className="flex flex-col items-center">
+                      <Loader2 className="w-8 h-8 animate-spin text-yellow-400 mb-2" />
+                      <p className="text-neutral-400">Preparing secure payment form...</p>
+                    </div>
+                  </div>
+                )}
+              </div>
               
-              {!clientSecret && (
-                <div className="flex justify-center p-6">
-                  <Loader2 className="w-8 h-8 animate-spin text-yellow-400" />
-                </div>
-              )}
+              {/* Removed duplicate loader */}
               
               {/* Secure badge and guarantees */}
               <div className="mt-8 p-6 bg-neutral-700/30 rounded-xl">
