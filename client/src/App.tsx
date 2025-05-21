@@ -1,6 +1,8 @@
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Signup from "@/pages/signup";

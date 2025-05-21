@@ -76,15 +76,16 @@ export default function Login() {
   }
   
   return (
-    <div className="min-h-[calc(100vh-5rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-neutral-900">
-      <Card className="w-full max-w-md shadow-lg dark:border-neutral-800 dark:bg-neutral-800/50">
-        <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold text-center dark:text-white">Welcome back</CardTitle>
-          <CardDescription className="text-center dark:text-neutral-300">
-            Log in to your Amiquus account
-          </CardDescription>
-        </CardHeader>
-        
+    <div className="flex flex-col min-h-[calc(100vh-5rem)]">
+      <div className="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-neutral-900">
+        <Card className="w-full max-w-md shadow-lg dark:border-neutral-800 dark:bg-neutral-800/50">
+          <CardHeader className="space-y-1">
+            <CardTitle className="text-2xl font-bold text-center dark:text-white">Welcome back</CardTitle>
+            <CardDescription className="text-center dark:text-neutral-300">
+              Log in to your Amiquus account
+            </CardDescription>
+          </CardHeader>
+          
         <CardContent className="space-y-4">
           <Button
             variant="outline"
