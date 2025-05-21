@@ -5,11 +5,30 @@ import { useAuth } from "@/hooks/use-auth";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSelector } from "@/components/language-selector";
 import { UserProfile } from "@/components/user-profile";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, login } = useAuth();
+  const { toast } = useToast();
+  
+  // Test login for development purposes
+  const handleTestLogin = async () => {
+    try {
+      await login("test@example.com", "password123");
+      toast({
+        title: "Test login successful",
+        description: "You're now logged in with a test account",
+      });
+    } catch (error) {
+      toast({
+        title: "Test login failed",
+        description: "Please check your authentication setup",
+        variant: "destructive",
+      });
+    }
+  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -95,6 +114,15 @@ export default function Header() {
                     Get Started
                   </Button>
                 </Link>
+                {/* Test login button for development only */}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleTestLogin}
+                  className="ml-2 border-dashed border-yellow-500 dark:border-yellow-400 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-950 hover:text-yellow-700 dark:hover:text-yellow-300"
+                >
+                  DEV: Test Login
+                </Button>
               </>
             )}
 
