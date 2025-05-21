@@ -2,18 +2,21 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageSelector } from "@/components/language-selector";
+import { UserProfile } from "@/components/user-profile";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
-  const { user, isAuthenticated, logout } = useAuth();
+  const { isAuthenticated } = useAuth();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
-    <header className="bg-neutral-900 fixed w-full z-50">
+    <header className="bg-neutral-900 dark:bg-neutral-900 fixed w-full z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -75,34 +78,27 @@ export default function Header() {
             </button>
           </div>
 
-          {/* User menu */}
-          <div className="hidden md:flex items-center gap-4">
-            {isAuthenticated ? (
+          {/* User menu and options */}
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
+            <LanguageSelector />
+
+            {!isAuthenticated && (
               <>
-                <Link href="/dashboard" className="text-neutral-300 hover:text-[#ff0] transition">
-                  Dashboard
-                </Link>
-                <div className="h-6 w-px bg-neutral-700"></div>
-                <button onClick={logout} className="flex items-center gap-2 text-neutral-300 hover:text-[#ff0] transition">
-                  <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                  </svg>
-                  <span>{user?.username || "My Account"}</span>
-                </button>
-              </>
-            ) : (
-              <>
-                <Link href="/login" className="text-neutral-300 hover:text-[#ff0] transition">
-                  Log in
-                </Link>
-                <div className="h-6 w-px bg-neutral-700"></div>
+                <div className="mx-2">
+                  <Link href="/login" className="text-neutral-300 hover:text-[#ff0] transition">
+                    Log in
+                  </Link>
+                </div>
                 <Link href="/register">
-                  <button className="bg-[#ff0] text-neutral-900 hover:bg-yellow-300 px-4 py-2 rounded font-medium transition">
+                  <Button className="bg-[#ff0] text-neutral-900 hover:bg-yellow-300 font-medium">
                     Get Started
-                  </button>
+                  </Button>
                 </Link>
               </>
             )}
+
+            <UserProfile />
           </div>
         </div>
       </div>
@@ -145,27 +141,18 @@ export default function Header() {
           >
             FAQ
           </Link>
+
+          {/* Theme and Language in mobile menu */}
+          <div className="flex items-center px-3 py-2 gap-2">
+            <span className="text-neutral-400 text-sm">Theme:</span>
+            <ThemeToggle />
+          </div>
+          <div className="flex items-center px-3 py-2 gap-2">
+            <span className="text-neutral-400 text-sm">Language:</span>
+            <LanguageSelector />
+          </div>
           
-          {isAuthenticated ? (
-            <>
-              <Link 
-                href="/dashboard" 
-                className="block px-3 py-2 text-neutral-300 hover:text-[#ff0] transition" 
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Dashboard
-              </Link>
-              <button 
-                onClick={() => {
-                  logout();
-                  setMobileMenuOpen(false);
-                }}
-                className="block w-full text-left px-3 py-2 text-neutral-300 hover:text-[#ff0] transition"
-              >
-                Log out
-              </button>
-            </>
-          ) : (
+          {!isAuthenticated && (
             <>
               <Link 
                 href="/login" 
