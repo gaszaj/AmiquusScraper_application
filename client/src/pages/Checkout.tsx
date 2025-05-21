@@ -153,17 +153,17 @@ export default function Checkout() {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-[calc(100vh-5rem)] bg-slate-50 dark:bg-neutral-900">
-        <Loader2 className="w-8 h-8 animate-spin text-primary dark:text-[#ff0]" />
+      <div className="flex items-center justify-center min-h-[calc(100vh-5rem)] bg-neutral-900">
+        <Loader2 className="w-8 h-8 animate-spin text-yellow-400" />
       </div>
     );
   }
 
   return (
-    <section id="checkout" className="bg-slate-50 dark:bg-neutral-900 py-16 sm:py-24">
+    <section id="checkout" className="bg-neutral-900 py-16 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Urgency Banner */}
-        <div className="bg-primary/10 dark:bg-[#ff0]/10 border border-primary/20 dark:border-[#ff0]/20 text-primary dark:text-[#ff0] p-4 rounded-xl mb-12 shadow-lg">
+        <div className="bg-gradient-to-r from-amber-500 to-yellow-500 text-black p-4 rounded-xl mb-12 shadow-lg">
           <div className="flex items-center justify-center">
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -174,49 +174,51 @@ export default function Checkout() {
 
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl font-bold text-neutral-900 dark:text-white">Secure Checkout</h1>
-          <p className="mt-4 text-xl text-neutral-600 dark:text-neutral-400">Complete your subscription to start receiving car alerts</p>
+          <h1 className="text-4xl font-bold text-white">Set Up Your Car Alerts</h1>
+          <p className="mt-4 text-xl text-neutral-400">Complete your subscription to start receiving instant car notifications</p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {/* Checkout Section */}
-          <div className="bg-white dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-6 sm:p-8 shadow-lg">
+          <div className="bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 shadow-lg">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Secure Checkout</h2>
+              <h2 className="text-2xl font-semibold text-white">Secure Checkout</h2>
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                 </svg>
-                <span className="text-green-600 dark:text-green-500 font-medium">Secure Payment</span>
+                <span className="text-green-500 font-medium">Secure Payment</span>
               </div>
             </div>
 
             {/* Payment Options */}
             <div className="space-y-6">
               {/* Plan Selection */}
-              <div className="bg-neutral-100 dark:bg-neutral-800 p-5 sm:p-6 rounded-xl">
-                <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">Choose Your Plan</h3>
+              <div className="bg-neutral-700/30 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold text-white mb-4">Choose Your Plan</h3>
                 <div className="space-y-4">
                   {PLANS.map((plan) => (
                     <label 
                       key={plan.id}
-                      className="flex items-center justify-between p-4 bg-white dark:bg-neutral-700/50 border border-neutral-200 dark:border-neutral-600 rounded-lg cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-700/70 transition shadow-sm"
+                      className={`flex items-center justify-between p-4 bg-neutral-700/50 rounded-lg cursor-pointer hover:bg-neutral-700/70 transition ${
+                        selectedPlan.id === plan.id ? 'ring-2 ring-yellow-400' : ''
+                      }`}
                       onClick={() => setSelectedPlan(plan)}
                     >
                       <div className="flex items-center">
                         <input 
                           type="radio" 
                           name="plan" 
-                          className="form-radio text-primary dark:text-[#ff0]" 
+                          className="form-radio text-yellow-400" 
                           checked={selectedPlan.id === plan.id}
                           onChange={() => {}}
                         />
-                        <span className="ml-3 text-neutral-900 dark:text-white">{plan.name}</span>
+                        <span className="ml-3 text-white">{plan.name}</span>
                         {plan.discount && (
                           <span className="ml-2 bg-green-500 text-xs font-bold px-2 py-1 rounded-full text-white">SAVE {plan.discount}</span>
                         )}
                       </div>
-                      <span className="text-2xl font-bold text-neutral-900 dark:text-white">${plan.price}</span>
+                      <span className="text-2xl font-bold text-white">${plan.price}</span>
                     </label>
                   ))}
                 </div>
@@ -224,20 +226,22 @@ export default function Checkout() {
 
               {/* Payment Methods */}
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">Select Payment Method</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Select Payment Method</h3>
                 
                 {/* Credit Card */}
                 {PAYMENT_METHODS.map((method) => (
-                  <div key={method.id} className="bg-neutral-100 dark:bg-neutral-800 p-5 sm:p-6 rounded-xl">
-                    <label className="flex items-center space-x-3 cursor-pointer w-full">
+                  <div key={method.id} className="bg-neutral-700/30 p-6 rounded-xl">
+                    <label className={`flex items-center space-x-3 cursor-pointer w-full ${
+                      selectedPaymentMethod === method.id ? 'text-yellow-400' : 'text-white'
+                    }`}>
                       <input 
                         type="radio" 
                         name="payment" 
-                        className="form-radio text-primary dark:text-[#ff0]" 
+                        className="form-radio text-yellow-400" 
                         checked={selectedPaymentMethod === method.id}
                         onChange={() => setSelectedPaymentMethod(method.id)}
                       />
-                      <span className="text-neutral-900 dark:text-white">{method.name}</span>
+                      <span className="text-white">{method.name}</span>
                       
                       {method.icons ? (
                         <div className="flex space-x-2 ml-auto">
@@ -255,9 +259,22 @@ export default function Checkout() {
 
               {/* Stripe Payment Element */}
               {clientSecret && (
-                <div className="bg-neutral-100 dark:bg-neutral-800 p-5 sm:p-6 rounded-xl mt-6">
-                  <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">Enter Payment Details</h3>
-                  <Elements stripe={stripePromise} options={{ clientSecret, appearance: { theme: 'night' } }}>
+                <div className="bg-neutral-700/30 p-6 rounded-xl mt-6">
+                  <h3 className="text-xl font-semibold text-white mb-4">Enter Payment Details</h3>
+                  <Elements stripe={stripePromise} options={{ 
+                    clientSecret, 
+                    appearance: { 
+                      theme: 'night',
+                      variables: {
+                        colorPrimary: '#facc15',
+                        colorBackground: '#374151',
+                        colorText: '#ffffff',
+                        colorDanger: '#ef4444',
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        borderRadius: '8px',
+                      }
+                    } 
+                  }}>
                     <CheckoutForm />
                   </Elements>
                 </div>
@@ -265,30 +282,30 @@ export default function Checkout() {
               
               {!clientSecret && (
                 <div className="flex justify-center p-6">
-                  <Loader2 className="w-8 h-8 animate-spin text-primary dark:text-[#ff0]" />
+                  <Loader2 className="w-8 h-8 animate-spin text-yellow-400" />
                 </div>
               )}
               
               {/* Secure badge and guarantees */}
-              <div className="mt-8 p-6 bg-neutral-100 dark:bg-neutral-800 rounded-xl">
+              <div className="mt-8 p-6 bg-neutral-700/30 rounded-xl">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
                   <div className="flex items-center">
                     <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                     </svg>
-                    <span className="text-neutral-700 dark:text-neutral-300">Secure Payment</span>
+                    <span className="text-neutral-300">Secure Payment</span>
                   </div>
                   <div className="flex items-center">
                     <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                     </svg>
-                    <span className="text-neutral-700 dark:text-neutral-300">Money-back Guarantee</span>
+                    <span className="text-neutral-300">Money-back Guarantee</span>
                   </div>
                   <div className="flex items-center">
                     <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
-                    <span className="text-neutral-700 dark:text-neutral-300">Instant Access</span>
+                    <span className="text-neutral-300">Instant Access</span>
                   </div>
                 </div>
               </div>
