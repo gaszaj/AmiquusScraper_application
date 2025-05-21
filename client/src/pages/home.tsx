@@ -37,20 +37,18 @@ export default function Home() {
   };
 
   return (
-    <>
-      <main>
-        <Hero onGetStarted={scrollToSignup} />
-        <div className="container mx-auto px-4 py-8">
-          <LimitedAvailability />
-        </div>
-        <Features />
-        <HowItWorks />
-        <Pricing onGetStarted={scrollToSignup} />
-        <div id="signup-form" ref={signupRef}>
-          <Signup embedded={true} />
-        </div>
-        <FaqSection />
-      </main>
-    </>
+    <PageWrapper noPadding>
+      <Hero onGetStarted={scrollToSignup} />
+      <div className="container mx-auto px-4 py-8">
+        <LimitedAvailability />
+      </div>
+      <Features />
+      <HowItWorks />
+      <Pricing onGetStarted={scrollToSignup} />
+      <div id="signup-form" ref={signupRef}>
+        <Signup embedded={true} />
+      </div>
+      <FaqSection />
+    </PageWrapper>
   );
 }
