@@ -8,18 +8,18 @@ interface HeroProps {
 
 export default function Hero({ onGetStarted }: HeroProps) {
   return (
-    <section className="relative bg-neutral-900 text-white pt-24 pb-16 md:py-32 overflow-hidden">
+    <section className="relative bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white pt-24 pb-16 md:py-32 overflow-hidden">
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-sm font-medium text-accent mb-6">
+            <div className="inline-flex items-center rounded-full bg-primary/10 dark:bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:text-primary mb-6">
               <span className="mr-2">⚡</span> Track used car listings in real-time
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-neutral-300">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-neutral-900 dark:text-white">
               Never Miss Your Perfect Car Deal Again
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-neutral-300 max-w-xl">
+            <p className="text-lg md:text-xl mb-8 text-neutral-600 dark:text-neutral-300 max-w-xl">
               Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.
             </p>
             
@@ -28,47 +28,46 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 <Button 
                   onClick={onGetStarted} 
                   size="rounded-xl" 
-                  variant="accent" 
-                  className="shadow-lg shadow-accent/20 w-full sm:w-auto"
+                  className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:hover:bg-primary-600 dark:text-neutral-900 shadow-lg shadow-primary/20 w-full sm:w-auto"
                 >
                   Start Free Trial
                 </Button>
               ) : (
                 <Link href="/service">
-                  <Button size="rounded-xl" variant="accent" className="shadow-lg shadow-accent/20 w-full sm:w-auto">
+                  <Button size="rounded-xl" className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:hover:bg-primary-600 dark:text-neutral-900 shadow-lg shadow-primary/20 w-full sm:w-auto">
                     Start Free Trial
                   </Button>
                 </Link>
               )}
               <Link href="/#how-it-works">
-                <Button size="rounded-xl" variant="outline" className="border-neutral-700 text-white hover:bg-neutral-800 w-full sm:w-auto">
+                <Button size="rounded-xl" variant="outline" className="border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 w-full sm:w-auto">
                   See How It Works
                 </Button>
               </Link>
             </div>
             
             {/* Trust indicators */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-neutral-400 text-sm">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-neutral-600 dark:text-neutral-400 text-sm">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span>15+ websites tracked</span>
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span>Real-time alerts</span>
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span>No setup required</span>
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span>Cancel anytime</span>
@@ -80,26 +79,26 @@ export default function Hero({ onGetStarted }: HeroProps) {
           <div className="relative mt-8 lg:mt-0">
             {/* Mobile notification cards - visible only on small screens */}
             <div className="lg:hidden space-y-4 mb-8">
-              <div className="bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl">
+              <div className="bg-white dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-200 dark:border-neutral-800 p-4 rounded-lg shadow-xl">
                 <div className="flex items-start gap-3">
-                  <div className="bg-accent/20 text-accent p-2 rounded-full shrink-0">
+                  <div className="bg-primary/20 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-full shrink-0">
                     <Bell size={18} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white">New Match!</h4>
-                    <p className="text-sm text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
+                    <h4 className="font-medium text-neutral-900 dark:text-white">New Match!</h4>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl">
+              <div className="bg-white dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-200 dark:border-neutral-800 p-4 rounded-lg shadow-xl">
                 <div className="flex items-start gap-3">
-                  <div className="bg-primary-600/20 text-primary-400 p-2 rounded-full shrink-0">
+                  <div className="bg-blue-600/20 dark:bg-primary-600/20 text-blue-600 dark:text-primary-400 p-2 rounded-full shrink-0">
                     <MessageSquare size={18} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white">Telegram Alert</h4>
-                    <p className="text-sm text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
+                    <h4 className="font-medium text-neutral-900 dark:text-white">Telegram Alert</h4>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
                   </div>
                 </div>
               </div>
@@ -108,7 +107,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
             {/* Desktop image and notification cards - hidden on small screens */}
             <div className="relative hidden lg:block">
               {/* Main image */}
-              <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-neutral-800">
+              <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-neutral-200 dark:border-neutral-800">
                 <img 
                   src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80" 
                   alt="Luxury sports car in showroom" 
@@ -117,34 +116,34 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 />
                 
                 {/* Notification card previews */}
-                <div className="absolute -bottom-6 -left-6 bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
+                <div className="absolute -bottom-6 -left-6 bg-white dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-200 dark:border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
                   <div className="flex items-start gap-3">
-                    <div className="bg-accent/20 text-accent p-2 rounded-full">
+                    <div className="bg-primary/20 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-full">
                       <Bell size={18} />
                     </div>
                     <div>
-                      <h4 className="font-medium text-white">New Match!</h4>
-                      <p className="text-sm text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
+                      <h4 className="font-medium text-neutral-900 dark:text-white">New Match!</h4>
+                      <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="absolute -top-5 -right-5 bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
+                <div className="absolute -top-5 -right-5 bg-white dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-200 dark:border-neutral-800 p-4 rounded-lg shadow-xl max-w-xs">
                   <div className="flex items-start gap-3">
-                    <div className="bg-primary-600/20 text-primary-400 p-2 rounded-full">
+                    <div className="bg-blue-600/20 dark:bg-primary-600/20 text-blue-600 dark:text-primary-400 p-2 rounded-full">
                       <MessageSquare size={18} />
                     </div>
                     <div>
-                      <h4 className="font-medium text-white">Telegram Alert</h4>
-                      <p className="text-sm text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
+                      <h4 className="font-medium text-neutral-900 dark:text-white">Telegram Alert</h4>
+                      <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
                     </div>
                   </div>
                 </div>
               </div>
               
               {/* Background decorative elements */}
-              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-accent/30 to-accent/5 blur-3xl rounded-full"></div>
-              <div className="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-primary-600/20 to-primary-800/5 blur-3xl rounded-full"></div>
+              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-primary/30 to-primary/5 dark:from-primary/30 dark:to-primary/5 blur-3xl rounded-full"></div>
+              <div className="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-blue-600/20 to-blue-800/5 dark:from-primary-600/20 dark:to-primary-800/5 blur-3xl rounded-full"></div>
             </div>
           </div>
         </div>
@@ -154,7 +153,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-            fill="#111111"></path>
+            fill="#f9fafb" className="dark:fill-[#111111]"></path>
         </svg>
       </div>
     </section>

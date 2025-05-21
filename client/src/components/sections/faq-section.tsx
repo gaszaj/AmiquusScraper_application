@@ -35,11 +35,11 @@ export default function FaqSection() {
   ];
 
   return (
-    <section id="faq" className="py-16 bg-white">
+    <section id="faq" className="py-16 bg-white dark:bg-neutral-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-title font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-neutral-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-title font-bold mb-4 text-neutral-900 dark:text-white">Frequently Asked Questions</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
             Find answers to the most common questions about our service.
           </p>
         </div>
@@ -47,11 +47,15 @@ export default function FaqSection() {
         <div className="max-w-3xl mx-auto space-y-6">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="bg-neutral-50 rounded-xl overflow-hidden shadow-sm mb-4">
-                <AccordionTrigger className="px-6 py-4 text-left font-medium">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="bg-neutral-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm dark:shadow-md mb-4 border border-neutral-200 dark:border-neutral-700"
+              >
+                <AccordionTrigger className="px-6 py-4 text-left font-medium text-neutral-900 dark:text-white">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-neutral-600">
+                <AccordionContent className="px-6 pb-4 text-neutral-600 dark:text-neutral-400">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -60,10 +64,10 @@ export default function FaqSection() {
         </div>
         
         <div className="mt-12 text-center">
-          <p className="text-neutral-600 mb-4">Still have questions?</p>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-4">Still have questions?</p>
           <a 
             href="mailto:support@amiquus.com" 
-            className="text-primary-600 font-medium hover:text-primary-700 transition-colors flex items-center justify-center"
+            className="text-primary dark:text-primary font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center justify-center"
           >
             Contact our support team <ChevronRight className="ml-1 h-4 w-4" />
           </a>

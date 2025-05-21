@@ -35,11 +35,11 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-16 bg-white">
+    <section id="features" className="py-16 bg-white dark:bg-neutral-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-title font-bold mb-4">Why Choose Amiquus?</h2>
-          <p className="text-neutral-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-title font-bold mb-4 text-neutral-900 dark:text-white">Why Choose Amiquus?</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
             Save time and never miss out on your perfect car with our automated tracking service.
           </p>
         </div>
@@ -48,13 +48,13 @@ export default function Features() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-neutral-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-neutral-50 dark:bg-neutral-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-neutral-200 dark:border-neutral-700"
             >
-              <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-primary-100 dark:bg-primary/20 text-primary dark:text-primary rounded-lg flex items-center justify-center mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-title font-semibold mb-3">{feature.title}</h3>
-              <p className="text-neutral-600">{feature.description}</p>
+              <h3 className="text-xl font-title font-semibold mb-3 text-neutral-900 dark:text-white">{feature.title}</h3>
+              <p className="text-neutral-600 dark:text-neutral-400">{feature.description}</p>
             </div>
           ))}
         </div>
