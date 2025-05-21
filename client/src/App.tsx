@@ -19,6 +19,9 @@ import SetupAlerts from "@/pages/setup-alerts";
 import Profile from "@/pages/Profile";
 import TestProfile from "@/pages/test-profile";
 import Waitlist from "@/pages/waitlist";
+import Blog from "@/pages/blog";
+import Careers from "@/pages/careers";
+import Support from "@/pages/support";
 import { AuthProvider } from "@/hooks/use-auth";
 
 function Router() {
@@ -38,6 +41,9 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/faq" component={FAQ} />
       <Route path="/waitlist" component={Waitlist} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/careers" component={Careers} />
+      <Route path="/support" component={Support} />
       <Route component={NotFound} />
     </Switch>
   );
