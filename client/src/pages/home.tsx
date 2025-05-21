@@ -7,6 +7,7 @@ import LimitedAvailability from "@/components/home/LimitedAvailability";
 import Signup from "@/pages/signup";
 import { useLocation } from "wouter";
 import { useEffect, useRef } from "react";
+import PageWrapper from "@/components/layout/PageWrapper";
 
 export default function Home() {
   const [location] = useLocation();

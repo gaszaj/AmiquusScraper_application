@@ -123,19 +123,19 @@ export default function Signup({ embedded = false }: SignupProps) {
   };
 
   const content = (
-    <section className="py-16 bg-neutral-50">
+    <section className="py-8 bg-neutral-50 dark:bg-neutral-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-title font-bold mb-4">Create Your Car Alert</h2>
-          <p className="text-neutral-600 max-w-2xl mx-auto mb-4">
+          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-4">
             Set up your personalized car listing notifications in just a few steps.
           </p>
-          <Link href="/setup-alerts" className="inline-block px-6 py-3 bg-[#ff0] text-neutral-900 hover:bg-yellow-300 transition font-semibold rounded-xl shadow-md hover:shadow-lg">
+          <Link href="/setup-alerts" className="inline-block px-6 py-3 bg-primary dark:bg-[#ff0] text-white dark:text-neutral-900 hover:bg-primary/90 dark:hover:bg-yellow-300 transition font-semibold rounded-xl shadow-md hover:shadow-lg">
             Get Alerts Now
           </Link>
         </div>
         
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
           <div className="p-8">
             <FormProgress currentStep={currentStep} totalSteps={5} />
             {renderStep()}
@@ -150,12 +150,8 @@ export default function Signup({ embedded = false }: SignupProps) {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow">
-        {content}
-      </main>
-      <Footer />
-    </div>
+    <PageWrapper>
+      {content}
+    </PageWrapper>
   );
 }
