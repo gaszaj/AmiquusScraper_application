@@ -84,12 +84,12 @@ export default function Login() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow flex items-center justify-center py-12 bg-neutral-50">
+      <main className="flex-grow flex items-center justify-center py-12 bg-slate-50 dark:bg-neutral-900">
         <div className="w-full max-w-md px-4">
-          <Card className="w-full">
+          <Card className="w-full border-neutral-200 dark:border-neutral-800 dark:bg-neutral-800/50">
             <CardHeader className="space-y-1">
-              <CardTitle className="text-2xl font-title text-center">Log in to your account</CardTitle>
-              <CardDescription className="text-center">
+              <CardTitle className="text-2xl font-bold text-center dark:text-white">Log in to your account</CardTitle>
+              <CardDescription className="text-center dark:text-neutral-300">
                 Enter your email and password to access your dashboard
               </CardDescription>
             </CardHeader>
@@ -103,23 +103,24 @@ export default function Login() {
               
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="text-neutral-700 dark:text-neutral-300">Email</Label>
                   <Input
                     id="email"
                     type="email"
                     placeholder="your.email@example.com"
                     {...register("email")}
                     disabled={isLoading}
+                    className="dark:bg-neutral-900 dark:border-neutral-700 dark:text-white"
                   />
                   {errors.email && (
-                    <p className="text-sm text-red-500">{errors.email.message}</p>
+                    <p className="text-sm text-red-500 dark:text-red-400">{errors.email.message}</p>
                   )}
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <Label htmlFor="password">Password</Label>
-                    <Link href="/forgot-password" className="text-sm text-primary-600 hover:text-primary-700">
+                    <Label htmlFor="password" className="text-neutral-700 dark:text-neutral-300">Password</Label>
+                    <Link href="/forgot-password" className="text-sm text-primary hover:text-primary/90 dark:text-[#ff0] dark:hover:text-yellow-400">
                       Forgot password?
                     </Link>
                   </div>
@@ -129,15 +130,16 @@ export default function Login() {
                     placeholder="••••••••"
                     {...register("password")}
                     disabled={isLoading}
+                    className="dark:bg-neutral-900 dark:border-neutral-700 dark:text-white"
                   />
                   {errors.password && (
-                    <p className="text-sm text-red-500">{errors.password.message}</p>
+                    <p className="text-sm text-red-500 dark:text-red-400">{errors.password.message}</p>
                   )}
                 </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary-600 hover:bg-primary-700"
+                  className="w-full bg-primary hover:bg-primary/90 dark:bg-[#ff0] dark:hover:bg-yellow-400 dark:text-black"
                   disabled={isLoading}
                 >
                   {isLoading ? (
@@ -153,17 +155,17 @@ export default function Login() {
               
               <div className="relative my-4">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-neutral-200"></div>
+                  <div className="w-full border-t dark:border-neutral-700 border-neutral-200"></div>
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white px-2 text-neutral-500">Or continue with</span>
+                  <span className="bg-white dark:bg-neutral-800/50 px-2 text-neutral-500 dark:text-neutral-400">Or continue with</span>
                 </div>
               </div>
               
               <Button 
                 type="button" 
                 variant="outline" 
-                className="w-full" 
+                className="w-full dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800" 
                 onClick={handleGoogleLogin}
                 disabled={isLoading}
               >
@@ -188,10 +190,10 @@ export default function Login() {
                 Google
               </Button>
             </CardContent>
-            <CardFooter>
-              <p className="text-center text-sm text-neutral-600 w-full">
+            <CardFooter className="border-t dark:border-neutral-700">
+              <p className="text-center text-sm text-neutral-600 dark:text-neutral-400 w-full">
                 Don't have an account?{" "}
-                <Link href="/signup" className="text-primary-600 hover:text-primary-700 font-medium">
+                <Link href="/signup" className="text-primary hover:text-primary/90 dark:text-[#ff0] dark:hover:text-yellow-400 font-medium">
                   Sign up
                 </Link>
               </p>
