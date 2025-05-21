@@ -17,6 +17,7 @@ import Subscribe from "@/pages/subscribe";
 import SetupAlerts from "@/pages/setup-alerts";
 import Profile from "@/pages/Profile";
 import TestProfile from "@/pages/test-profile";
+import Waitlist from "@/pages/waitlist";
 import { AuthProvider } from "@/hooks/use-auth";
 
 function Router() {
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/waitlist" component={Waitlist} />
       <Route component={NotFound} />
     </Switch>
   );
