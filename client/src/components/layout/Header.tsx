@@ -5,6 +5,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSelector } from "@/components/language-selector";
 import { UserProfile } from "@/components/user-profile";
+import { SubscriptionCounter } from "../SubscriptionCounter";
 import { useToast } from "@/hooks/use-toast";
 
 export default function Header() {

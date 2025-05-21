@@ -2,6 +2,7 @@ import Hero from "@/components/home/Hero";
 import Features from "@/components/home/Features";
 import HowItWorks from "@/components/home/HowItWorks";
 import Pricing from "@/components/home/Pricing";
+import LimitedAvailability from "@/components/home/LimitedAvailability";
 import FAQ from "@/components/home/FAQ";
 import { Helmet } from "react-helmet";
 
@@ -19,6 +20,9 @@ export default function Home() {
         <meta property="og:type" content="website" />
       </Helmet>
       <Hero />
+      <div className="container mx-auto px-4 py-8">
+        <LimitedAvailability />
+      </div>
       <Features />
       <HowItWorks />
       <Pricing />
