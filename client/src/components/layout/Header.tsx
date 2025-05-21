@@ -122,7 +122,7 @@ export default function Header() {
             <LanguageSelector />
 
             {/* Development test button - always visible */}
-            <Link href="/test-profile">
+            <ScrollToTopLink href="/test-profile">
               <Button
                 variant="outline"
                 size="sm"
@@ -130,7 +130,7 @@ export default function Header() {
               >
                 DEV: Test Profile
               </Button>
-            </Link>
+            </ScrollToTopLink>
 
             {!isAuthenticated && (
               <>
@@ -218,20 +218,20 @@ export default function Header() {
           
           {!isAuthenticated && (
             <>
-              <Link 
+              <ScrollToTopLink 
                 href="/login" 
                 className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMobileMenuClose}
               >
                 Log in
-              </Link>
-              <Link 
+              </ScrollToTopLink>
+              <ScrollToTopLink 
                 href="/register" 
                 className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMobileMenuClose}
               >
                 Get Started
-              </Link>
+              </ScrollToTopLink>
             </>
           )}
         </div>

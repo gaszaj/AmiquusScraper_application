@@ -1,40 +1,6 @@
 import { Link } from "wouter";
 import { ReactNode } from "react";
-
-// Custom link component that scrolls to top
-function ScrollToTopLink({ href, children, className }: { href: string; children: ReactNode; className?: string }) {
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    
-    // For hash links to the home page, navigate to home first
-    if (href.startsWith('/#')) {
-      window.location.href = '/';
-      
-      // After a brief moment, scroll to the section
-      setTimeout(() => {
-        const sectionId = href.substring(2);
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      // For regular links, navigate to the page
-      window.location.href = href;
-      
-      // And scroll to the top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }
-  
-  return (
-    <a href={href} className={className} onClick={handleClick}>
-      {children}
-    </a>
-  );
-}
+import ScrollToTopLink from "@/components/ScrollToTopLink";
 
 export default function Footer() {
   return (
