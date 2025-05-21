@@ -121,7 +121,7 @@ export default function Header() {
             <ThemeToggle />
             <LanguageSelector />
 
-            {/* Development test button - always visible */}
+            {/* Development test button - visible only on desktop */}
             <ScrollToTopLink href="/test-profile">
               <Button
                 variant="outline"
@@ -196,6 +196,15 @@ export default function Header() {
             onClick={handleMobileMenuClose}
           >
             FAQ
+          </ScrollToTopLink>
+
+          {/* Development Test Profile button in mobile menu */}
+          <ScrollToTopLink 
+            href="/test-profile" 
+            className="block px-3 py-2 border border-dashed border-green-500 dark:border-green-400 text-green-600 dark:text-green-400 m-3 rounded-md font-medium text-center"
+            onClick={handleMobileMenuClose}
+          >
+            DEV: Test Profile
           </ScrollToTopLink>
 
           {/* Mobile subscription counter */}
