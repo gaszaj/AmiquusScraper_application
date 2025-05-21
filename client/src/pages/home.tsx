@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow pt-16"> {/* Added top padding to account for fixed header height */}
         <Hero onGetStarted={scrollToSignup} />
         <Features />
         <HowItWorks />
