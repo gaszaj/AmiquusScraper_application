@@ -119,13 +119,26 @@ export default function Waitlist() {
         </div>
         
         {stats && (
-          <div className="max-w-2xl mx-auto mb-10">
-            <div className="flex justify-between mb-2 text-sm font-medium">
-              <span>{stats.active} subscribers</span>
-              <span>{stats.remaining} spots available</span>
+          <div className="max-w-2xl mx-auto mb-10 border-2 border-red-500 rounded-lg p-4 shadow-lg shadow-red-100 dark:shadow-red-900/20 bg-white dark:bg-neutral-900">
+            <div className="mb-4">
+              <h3 className="text-red-600 dark:text-red-400 font-bold text-lg mb-2">Limited Availability</h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4">
+                We limit our system to only 30 active subscribers to ensure:
+              </p>
+              <ul className="text-neutral-600 dark:text-neutral-400 space-y-2 mb-4 pl-5 list-disc">
+                <li>Exceptional scraping reliability and speed for all users</li>
+                <li>Reduced chances of being blocked by car listing websites</li>
+                <li>Personalized support for each subscriber</li>
+                <li>Fair distribution of server resources</li>
+              </ul>
             </div>
-            <Progress value={percentFilled} className="h-2" />
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center mt-3">
+            
+            <div className="flex justify-between mb-2 text-sm font-medium text-red-600 dark:text-red-400">
+              <span><strong>{stats.active}</strong> subscribers</span>
+              <span><strong>{stats.remaining}</strong> spots available</span>
+            </div>
+            <Progress value={percentFilled} className="h-2 bg-red-100 dark:bg-red-950" />
+            <p className="text-sm text-red-500 dark:text-red-400 text-center mt-3 font-medium">
               {stats.remaining > 0 
                 ? `${stats.remaining} subscription spots out of ${stats.capacity} currently available.` 
                 : "All subscription spots are currently filled. Join the waitlist to be notified when a spot becomes available."}
