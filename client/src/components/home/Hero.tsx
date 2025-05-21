@@ -8,13 +8,7 @@ interface HeroProps {
 
 export default function Hero({ onGetStarted }: HeroProps) {
   return (
-    <section className="relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-primary-950 text-white pt-24 pb-16 md:py-32 overflow-hidden">
-      {/* Abstract background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-accent/5 blur-3xl"></div>
-        <div className="absolute top-1/4 -left-20 w-60 h-60 rounded-full bg-primary-600/10 blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-40 h-40 rounded-full bg-accent/10 blur-3xl"></div>
-      </div>
+    <section className="relative bg-neutral-900 text-white pt-24 pb-16 md:py-32 overflow-hidden">
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
