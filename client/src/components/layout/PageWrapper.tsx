@@ -19,11 +19,11 @@ export default function PageWrapper({
 }: PageWrapperProps) {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      {/* <Header /> */}
       <main className={`flex-grow ${noPadding ? '' : 'pt-24 md:pt-28'} ${className}`}>
         {children}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

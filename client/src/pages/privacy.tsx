@@ -8,7 +8,7 @@ export default function Privacy() {
         <meta name="description" content="Learn about how Amiquus handles your personal data, privacy rights, and data collection practices." />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <div className="container mx-auto px-4 py-24 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">Privacy Policy</h1>
         <p className="text-neutral-600 dark:text-neutral-400 mb-8 text-center">
           Last updated: May 21, 2025

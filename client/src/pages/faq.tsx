@@ -191,7 +191,7 @@ export default function FAQ() {
             </div>
           </div>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

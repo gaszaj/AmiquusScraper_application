@@ -61,7 +61,7 @@ export default function Header() {
 
   return (
     <header className="bg-white dark:bg-neutral-900 fixed w-full z-50 shadow-sm">
-      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
