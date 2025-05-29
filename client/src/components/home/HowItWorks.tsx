@@ -38,7 +38,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 bg-neutral-100 dark:bg-neutral-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">How Amiquus Works</h2>
+          <h2 className="text-3xl text-black md:text-4xl font-bold mb-4 dark:text-white">How Amiquus Works</h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
             Set up once and let our automated system find the perfect car deal for you
           </p>
@@ -52,7 +52,7 @@ export default function HowItWorks() {
               className="group relative overflow-hidden rounded-xl bg-white dark:bg-neutral-900 shadow-md dark:shadow-none dark:border dark:border-neutral-800 transition-all duration-300 hover:shadow-xl dark:hover:border-neutral-700 p-6"
             >
               {/* Step number */}
-              <div className="absolute top-4 right-4 bg-accent text-neutral-900 font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm">
+              <div className="absolute top-4 right-4 bg-accent text-white dark:text-neutral-900 font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm">
                 {index + 1}
               </div>
               
@@ -73,7 +73,7 @@ export default function HowItWorks() {
         <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-6 md:p-12 shadow-lg">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h3 className="text-2xl text-black md:text-3xl font-bold dark:text-white mb-6">
                 Why Choose Amiquus?
               </h3>
               <ul className="space-y-4">
@@ -94,7 +94,7 @@ export default function HowItWorks() {
               </ul>
               <div className="mt-8">
                 <Link href="/service">
-                  <Button size="lg" variant="accent" className="shadow-lg shadow-accent/20">
+                  <Button size="lg" variant="accent" className="shadow-lg shadow-accent/20 text-white dark:text-black">
                     Start Your Free Trial
                   </Button>
                 </Link>
@@ -118,7 +118,7 @@ export default function HowItWorks() {
                     
                     <div className="border-t border-neutral-800 pt-5 mt-5">
                       <div className="flex items-start gap-4">
-                        <div className="bg-primary-600/20 text-primary-400 p-3 rounded-full">
+                        <div className="bg-accent/20 text-accent p-3 rounded-full">
                           <MessageSquare size={24} />
                         </div>
                         <div>
