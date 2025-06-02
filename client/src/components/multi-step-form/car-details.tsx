@@ -34,7 +34,7 @@ interface CarDetailsProps {
 }
 
 const carDetailsSchema = z.object({
-  brand: z.string().optional(),
+  brand: z.string().min(1, "Brand is required"),
   model: z.string().optional(),
   fuelType: z.enum(['gasoline', 'diesel', 'electric', 'hybrid', 'plugin_hybrid']).optional(),
   yearMin: z.number().int().positive().optional(),

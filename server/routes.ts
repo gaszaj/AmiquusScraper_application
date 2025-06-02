@@ -346,6 +346,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // api fetches
+  app.get("/api/newcommer", async (req, res) => {
+    try {
+      const response = await fetch("https://amiquus.com/JSON_FILES_FOLDER/newcommer_json_api.php?action=read_all");
+      const data = await response.json();
+      res.json(data);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to fetch from remote server" });
+    }
+  });
+  
   // Stripe payment intent creation
   app.post("/api/create-payment-intent", async (req, res) => {
     try {

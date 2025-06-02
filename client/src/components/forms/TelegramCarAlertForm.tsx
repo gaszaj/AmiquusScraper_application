@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import blueCar from "@/images/blue_car.webp";
 import redCar from "@/images/red_car.webp";
@@ -33,6 +33,24 @@ export default function TelegramCarAlertForm() {
     // Handle form submission logic here
     console.log("Form submitted");
   };
+
+  // const [data, setData] = useState<any>(null);
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   fetch("/api/newcommer") // calls your own backend, which bypasses CORS
+  //   .then(res => res.json())
+  //     .then((json) => {
+  //       setData(json);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Error fetching data:", err);
+  //       setLoading(false);
+  //     });
+  // }, []);
+
+  // console.log(data, loading)
 
   return (
     <section
@@ -363,8 +381,7 @@ export default function TelegramCarAlertForm() {
                     <p className="text-sm text-gray-800">
                       Volkswagen Arteon 2.0
                     </p>
-                    <p className="text-sm text-gray-800">Price: €
-36,850</p>
+                    <p className="text-sm text-gray-800">Price: € 36,850</p>
                     <p className="text-sm text-gray-800">Kilometres: 73,000</p>
                     <p className="text-sm text-gray-800">
                       Location: OBVEZNA NAJAVA - Cvetlicna ul.3
@@ -396,12 +413,12 @@ export default function TelegramCarAlertForm() {
                     <p className="text-sm text-gray-800">
                       🚗 <strong>New Car Alert!</strong>
                     </p>
-                    <p className="text-sm text-gray-800">
-                      Ford
-                    </p>
+                    <p className="text-sm text-gray-800">Ford</p>
                     <p className="text-sm text-gray-800">Price: €22,750</p>
                     <p className="text-sm text-gray-800">Kilometres: 170,000</p>
-                    <p className="text-sm text-gray-800">Location: castrop-Rauxel, NW</p>
+                    <p className="text-sm text-gray-800">
+                      Location: castrop-Rauxel, NW
+                    </p>
                     <p className="text-sm text-gray-800 mt-2">
                       <a href="#" className="text-blue-600 underline">
                         View Listing →

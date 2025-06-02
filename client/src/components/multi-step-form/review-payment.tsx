@@ -291,7 +291,6 @@ export default function ReviewPayment({
         <Button 
           onClick={handleSubmit} 
           disabled={!termsAgreed}
-          className="bg-primary-600 hover:bg-primary-700"
         >
           Proceed to Payment
         </Button>

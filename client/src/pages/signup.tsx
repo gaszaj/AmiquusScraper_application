@@ -26,6 +26,8 @@ export default function Signup({ embedded = false }: SignupProps) {
     notificationLanguage: 'en',
   });
 
+  // console.log('formData', formData)
+
   const { createSubscription, calculatePrice } = useSubscription();
 
   const updateFormData = (data: Partial<SubscriptionFormData>) => {

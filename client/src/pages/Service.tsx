@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { MultiStepForm, FormStep } from "@/components/ui/multi-step-form";
 import { PriceCalculator } from "@/components/ui/price-calculator";
@@ -8,7 +8,7 @@ import CarDetailsForm, { CarDetailsFormData } from "@/components/forms/CarDetail
 import TelegramSetupForm, { TelegramSetupFormData } from "@/components/forms/TelegramSetupForm";
 import CheckoutForm, { CheckoutFormData } from "@/components/forms/CheckoutForm";
 import UserInfoForm, { UserInfoFormData } from "@/components/forms/UserInfoForm";
-import { useSubscription } from "@/hooks/useSubscription";
+import { useSubscription } from "@/hooks/use-subscription";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { Helmet } from "react-helmet";
@@ -26,7 +26,7 @@ export default function Service() {
   
   const { calculatedPrice, items } = useSubscription();
   const { toast } = useToast();
-  const navigate = useNavigate();
+  const [location, setLocation] = useLocation();
   
   const handleStepChange = (step: number) => {
     setCurrentStep(step);
@@ -96,7 +96,7 @@ export default function Service() {
       });
       
       // Navigate to checkout page with price
-      navigate(`/checkout?amount=${calculatedPrice}&type=monthly`);
+      setLocation(`/checkout?amount=${calculatedPrice}&type=monthly`);
     } catch (error) {
       toast({
         title: "Error saving information",

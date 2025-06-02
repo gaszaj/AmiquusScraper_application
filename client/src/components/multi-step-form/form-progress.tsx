@@ -19,14 +19,15 @@ export default function FormProgress({ currentStep, totalSteps }: FormProgressPr
             <div
               className={`rounded-full flex items-center justify-center w-10 h-10 text-sm font-medium border-2 
                 ${step.status === "completed" 
-                  ? "bg-primary-600 text-white border-primary-600" 
+                  ? "bg-primary-600 text-black dark:text-white border-primary-600" 
                   : step.status === "active" 
                     ? "border-primary-600 text-primary-600" 
                     : "border-gray-300 text-gray-400"
                 }`}
             >
               {step.status === "completed" ? (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-5 h-5" fill="none" stroke={`${step.status === "completed" ? "currentColor" : "currentColor"}`}
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               ) : (
