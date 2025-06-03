@@ -12,6 +12,12 @@ export const users = pgTable("users", {
   lastName: text("last_name"),
   stripeCustomerId: text("stripe_customer_id").unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
+  // 👇 New fields for email verification
+  isEmailVerified: boolean("is_email_verified").default(false).notNull(),
+  resetToken: text("reset_token"),
+  resetTokenExpiry: timestamp("reset_token_expiry", { mode: 'date' }),
+  verificationCode: text("verification_code"),
+  verificationCodeExpiry: timestamp("verification_code_expiry", { mode: 'date' }),
 });
 
 export const updateUserSchema = createInsertSchema(users).pick({

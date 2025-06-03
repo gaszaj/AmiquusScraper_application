@@ -8,6 +8,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Signup from "@/pages/signup";
 import Login from "@/pages/login";
+import Register from "@/pages/Register"
 import Dashboard from "@/pages/dashboard";
 import About from "@/pages/about";
 import Terms from "@/pages/terms";
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/signup" component={Signup} />
       <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/subscribe" component={Subscribe} />

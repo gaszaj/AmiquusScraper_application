@@ -178,7 +178,7 @@ export default function Login() {
                 Google
               </Button>
             </CardContent>
-            <CardFooter className="border-t dark:border-neutral-700">
+            <CardFooter className="pt-3 border-t dark:border-neutral-700">
               <p className="text-center text-sm text-neutral-600 dark:text-neutral-400 w-full">
                 Don't have an account?{" "}
                 <Link href="/signup" className="text-primary hover:text-primary/90 dark:text-[#ff0] dark:hover:text-yellow-400 font-medium">
