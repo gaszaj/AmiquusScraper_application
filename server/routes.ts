@@ -96,35 +96,46 @@ export async function registerRoutes(app: Express): Promise<Server> {
         },
         async (accessToken, refreshToken, profile, done) => {
           try {
-            let user = await storage.getUserByGoogleId(profile.id);
+            const googleId = profile.id;
+            const email = profile.emails?.[0]?.value;
 
-            if (!user) {
+            // Check if user already exists by Google ID
+            let user = await storage.getUserByGoogleId(googleId);
+
+            if (!user && email) {
               // Check if a user with this email already exists
-              const email = profile.emails?.[0]?.value;
-              if (email) {
-                user = await storage.getUserByEmail(email);
+              user = await storage.getUserByEmail(email);
 
-                if (user) {
-                  // Link Google account to existing user
-                  user = await storage.updateUserGoogleId(user.id, profile.id);
-                } else {
-                  // Create new user from Google profile
-                  user = await storage.createUser({
-                    username:
-                      profile.displayName.replace(/\s+/g, "").toLowerCase() ||
-                      `user${Date.now()}`,
-                    email: email,
-                    googleId: profile.id,
-                    firstName: profile.name?.givenName,
-                    lastName: profile.name?.familyName,
-                  });
-                }
+              if (user) {
+                // Link Google ID to existing user
+                user = await storage.updateUserGoogleId(user.id, googleId);
+              } else {
+                // Create a new user
+                const generatedUsername =
+                  profile.displayName?.replace(/\\s+/g, "").toLowerCase() ||
+                  `user${Date.now()}`;
+
+                user = await storage.createUser({
+                  googleId,
+                  email,
+                  username: generatedUsername,
+                  firstName: profile.name?.givenName || undefined,
+                  lastName: profile.name?.familyName || undefined,
+                  isEmailVerified: true,
+                });
               }
             }
 
+            if (!user) {
+              return done(
+                new Error("Google login failed: no user created or found"),
+              );
+            }
+
             return done(null, user);
-          } catch (error) {
-            return done(error);
+          } catch (err) {
+            console.error("Google OAuth error:", err);
+            return done(err as Error);
           }
         },
       ),
@@ -177,6 +188,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         verificationCodeExpiry,
         isEmailVerified: false,
       });
+
+      if (!user) {
+        return res.status(500).json({ message: "Registration failed" });
+      }
 
       // Send email with code
       await emailService.sendVerificationEmail(user.email, verificationCode);
@@ -256,6 +271,90 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.post("/api/auth/resend-code", async (req, res) => {
+    try {
+      if (!req.isAuthenticated()) {
+        return res.status(401).json({ message: "Authentication required" });
+      }
+
+      const userId = (req.user as any).id;
+      const user = await storage.getUser(userId);
+
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      if (user.isEmailVerified) {
+        return res.status(400).json({ message: "Email is already verified" });
+      }
+
+      // Generate new code and expiry
+      const verificationCode = generateVerificationCode();
+      const verificationCodeExpiry = getVerificationCodeExpiry();
+
+      // Update in DB
+      await storage.updateUser(userId, {
+        verificationCode,
+        verificationCodeExpiry,
+      });
+
+      // Send email
+      await emailService.sendVerificationEmail(user.email, verificationCode);
+
+      return res.status(200).json({ message: "Verification code resent" });
+    } catch (error) {
+      console.error("Error resending code:", error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.post("/api/auth/change-email", async (req, res) => {
+    const { newEmail } = req.body;
+
+    try {
+      if (!req.isAuthenticated()) {
+        return res.status(401).json({ message: "Authentication required" });
+      }
+
+      const userId = (req.user as any).id;
+      const user = await storage.getUser(userId);
+
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      if (user.isEmailVerified) {
+        return res.status(400).json({ message: "Email is already verified" });
+      }
+
+      const existingEmail = await storage.getUserByEmail(newEmail);
+      if (existingEmail) {
+        return res.status(400).json({ message: "New email already used" });
+      }
+
+      // Generate new code and expiry
+      const verificationCode = generateVerificationCode();
+      const verificationCodeExpiry = getVerificationCodeExpiry();
+
+      // Update user with new email and code
+      await storage.updateUser(userId, {
+        email: newEmail,
+        verificationCode,
+        verificationCodeExpiry,
+      });
+
+      // Send new verification email
+      await emailService.sendVerificationEmail(newEmail, verificationCode);
+
+      return res
+        .status(200)
+        .json({ message: "Email updated and new verification code sent" });
+    } catch (error) {
+      console.error("Error changing email:", error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
   app.post("/api/auth/login", (req, res, next) => {
     try {
       // Validate request body
@@ -274,7 +373,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
             return next(err);
           }
 
-          const { password, ...userWithoutPassword } = user;
+          const {
+            password,
+            verificationCode,
+            verificationCodeExpiry,
+            ...userWithoutPassword
+          } = user;
           return res.json(userWithoutPassword);
         });
       })(req, res, next);
@@ -287,18 +391,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Start OAuth flow
   app.get(
     "/api/auth/google",
-    passport.authenticate("google", { scope: ["profile", "email"] }),
+    passport.authenticate("google", { scope: ["profile", "email"] })
   );
 
+  // Handle OAuth callback
   app.get(
     "/api/auth/google/callback",
     passport.authenticate("google", { failureRedirect: "/login" }),
     (req, res) => {
+      // You can dynamically redirect based on query string if needed
       res.redirect("/dashboard");
-    },
+    }
   );
+
 
   app.post("/api/auth/logout", (req, res) => {
     req.logout((err) => {
@@ -311,7 +419,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/auth/session", (req, res) => {
     if (req.isAuthenticated()) {
-      const { password, ...userWithoutPassword } = req.user as any;
+      const {
+        password,
+        verificationCode,
+        verificationCodeExpiry,
+        ...userWithoutPassword
+      } = req.user as any;
       return res.json({ user: userWithoutPassword });
     }
     return res.status(401).json({ message: "Not authenticated" });

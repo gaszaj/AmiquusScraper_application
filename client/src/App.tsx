@@ -9,6 +9,7 @@ import Home from "@/pages/home";
 import Signup from "@/pages/signup";
 import Login from "@/pages/login";
 import Register from "@/pages/Register"
+import VerifyEmail from "@/pages/verify-email"
 import Dashboard from "@/pages/dashboard";
 import About from "@/pages/about";
 import Terms from "@/pages/terms";
@@ -24,6 +25,7 @@ import Blog from "@/pages/blog";
 import Careers from "@/pages/careers";
 import Support from "@/pages/support";
 import { AuthProvider } from "@/hooks/use-auth";
+import { ProtectedRoute } from "@/lib/protected-route"
 
 function Router() {
   return (
@@ -32,6 +34,7 @@ function Router() {
       <Route path="/signup" component={Signup} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
+      <ProtectedRoute path="/verify-email" component={VerifyEmail} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/subscribe" component={Subscribe} />

@@ -34,12 +34,12 @@ class EmailService implements IEmailService {
         htmlContent: emailHtml,
         sender: {
           name: "Amiquus",
-          email: "verify@academia-assistant.com", // Make sure this domain is authorized
+          email: "info@amiquus.com", // Make sure this domain is authorized
         },
         to: [
           {
             email,
-            name: "", // Optional
+            // name: "", // Optional
           },
         ],
         headers: {

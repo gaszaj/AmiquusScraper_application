@@ -1,4 +1,5 @@
-import { pgTable, text, serial, integer, boolean, timestamp, json, pgEnum } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, boolean, timestamp, json, pgEnum, 	AnyPgColumn, } from "drizzle-orm/pg-core";
+import { SQL, sql } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -107,6 +108,11 @@ export const insertSubscriptionSchema = createInsertSchema(subscriptions).omit({
   createdAt: true,
   updatedAt: true,
 });
+
+export function lower(column: AnyPgColumn): SQL {
+  return sql`lower(${column})`;
+}
+
 
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;

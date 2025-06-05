@@ -21,6 +21,7 @@ export default function Register() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
@@ -30,13 +31,13 @@ export default function Register() {
   const [location, navigate] = useLocation();
   const { isAuthenticated, isLoading, register } = useAuth();
 
-  // Extract return URL from query params if present
-  const params = new URLSearchParams(location.split("?")[1] || "");
-  const returnUrl = params.get("returnUrl") || "/dashboard";
+  // Get redirectUrl from location search params if present
+  const searchParams = new URLSearchParams(window.location.search);
+  const redirectUrl = searchParams.get("redirect") || "/dashboard";
 
   // If already authenticated, redirect to dashboard
   if (isAuthenticated && !isLoading) {
-    navigate(returnUrl);
+    navigate(redirectUrl);
     return null;
   }
 
@@ -46,13 +47,23 @@ export default function Register() {
 
   const handleRegister = async () => {
     // Form validation
-    if (!firstName || !lastName || !email || !password) {
+    if (!firstName || !lastName || !email || !password || !username) {
       toast({
         title: "Missing fields",
         description: "Please fill in all required fields",
         variant: "destructive",
       });
       return;
+    }
+
+    // username must be alphanumeric and between 3 and 20 characters and must not contain spaces
+    const usernameRegex = /^[a-zA-Z0-9]{3,20}$/;
+    if (!usernameRegex.test(username)){
+      toast({
+        title: "Invalid username",
+        description: "Username must be alphanumeric and between 3 and 20 characters",
+        variant: "destructive",
+      });
     }
 
     if (password !== confirmPassword) {
@@ -76,15 +87,15 @@ export default function Register() {
     setIsRegistering(true);
 
     try {
-      const userData = { firstName, lastName, email, password };
+      const userData = { firstName, lastName, email, password, username };
       await register(userData);
 
       toast({
         title: "Registration successful",
-        description: "Welcome to Amiquus! Your account has been created.",
+        description: "Welcome to Amiquus! You will be redirected to verify your email address.",
       });
 
-      navigate("/service");
+      navigate("/verify-email");
     } catch (error: any) {
       toast({
         title: "Registration failed",
@@ -175,6 +186,7 @@ export default function Register() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     required
+                    placeholder="John"
                     className="dark:bg-neutral-900 dark:border-neutral-700 dark:text-white"
                   />
                 </div>
@@ -191,11 +203,30 @@ export default function Register() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     required
+                    placeholder="Doe"
                     className="dark:bg-neutral-900 dark:border-neutral-700 dark:text-white"
                   />
                 </div>
               </div>
-
+              <div className="space-y-2">
+                <Label
+                  htmlFor="username"
+                  className="text-neutral-700 dark:text-neutral-300"
+                >
+                  Username
+                </Label>
+                <Input
+                  id="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                  className="dark:bg-neutral-900 dark:border-neutral-700 dark:text-white"
+                  placeholder="yourusername"
+                  autoComplete="username"
+                  autoCapitalize="none"
+                  autoCorrect="off"
+                />
+              </div>
               <div className="space-y-2">
                 <Label
                   htmlFor="email"
