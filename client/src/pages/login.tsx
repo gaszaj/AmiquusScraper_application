@@ -19,6 +19,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import ReCAPTCHAWidget from "@/components/forms/ReCAPTCHAWidget";
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -32,11 +33,12 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const { login, user } = useAuth();
   const [location, setLocation] = useLocation();
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const { toast } = useToast();
-  
+
   // Get redirectUrl from location search params if present
   const searchParams = new URLSearchParams(window.location.search);
-  const redirectUrl = searchParams.get('redirect') || '/dashboard';
+  const redirectUrl = searchParams.get("redirect") || "/dashboard";
 
   // Form setup
   const {
@@ -60,20 +62,33 @@ export default function Login() {
 
   const onSubmit = async (data: LoginFormData) => {
     setError(null);
+
+    if (!captchaToken) {
+      toast({
+        title: "Captcha required",
+        description: "Please complete the captcha before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
-    
+
     try {
-      await login(data.email, data.password);
+      await login(data.email, data.password, captchaToken);
       toast({
         title: "Login successful",
-        description: "You have been logged in successfully."
+        description: "You have been logged in successfully.",
       });
       setLocation(redirectUrl);
     } catch (err: any) {
-      setError(err.message || "Failed to login. Please check your credentials.");
+      setError(
+        err.message || "Failed to login. Please check your credentials.",
+      );
       toast({
         title: "Login failed",
-        description: err.message || "Please check your credentials and try again.",
+        description:
+          err.message || "Please check your credentials and try again.",
         variant: "destructive",
       });
     } finally {
@@ -91,7 +106,9 @@ export default function Login() {
         <div className="w-full max-w-md px-4">
           <Card className="w-full border-neutral-200 dark:border-neutral-800 dark:bg-neutral-800/50">
             <CardHeader className="space-y-1">
-              <CardTitle className="text-2xl font-bold text-center dark:text-white">Log in to your account</CardTitle>
+              <CardTitle className="text-2xl font-bold text-center dark:text-white">
+                Log in to your account
+              </CardTitle>
               <CardDescription className="text-center dark:text-neutral-300">
                 Enter your email and password to access your dashboard
               </CardDescription>
@@ -115,7 +132,9 @@ export default function Login() {
                     className={errors.email ? "border-red-500" : ""}
                   />
                   {errors.email && (
-                    <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>
+                    <p className="text-sm text-red-500 mt-1">
+                      {errors.email.message}
+                    </p>
                   )}
                 </div>
                 <div className="space-y-1">
@@ -129,8 +148,13 @@ export default function Login() {
                     className={errors.password ? "border-red-500" : ""}
                   />
                   {errors.password && (
-                    <p className="text-sm text-red-500 mt-1">{errors.password.message}</p>
+                    <p className="text-sm text-red-500 mt-1">
+                      {errors.password.message}
+                    </p>
                   )}
+                </div>
+                <div className="flex justify-center items-center w-full">
+                  <ReCAPTCHAWidget onChange={setCaptchaToken} />
                 </div>
                 <Button type="submit" className="w-full" disabled={isLoading}>
                   {isLoading ? (
@@ -148,10 +172,16 @@ export default function Login() {
                   <span className="w-full border-t border-neutral-300 dark:border-neutral-700" />
                 </div>
                 <div className="relative flex justify-center text-xs">
-                  <span className="bg-white dark:bg-neutral-800 px-2 text-neutral-500 dark:text-neutral-400">or</span>
+                  <span className="bg-white dark:bg-neutral-800 px-2 text-neutral-500 dark:text-neutral-400">
+                    or
+                  </span>
                 </div>
               </div>
-              <Button variant="outline" onClick={handleGoogleLogin} className="w-full">
+              <Button
+                variant="outline"
+                onClick={handleGoogleLogin}
+                className="w-full"
+              >
                 <svg
                   className="mr-2 h-4 w-4"
                   viewBox="0 0 24 24"
@@ -181,7 +211,10 @@ export default function Login() {
             <CardFooter className="pt-3 border-t dark:border-neutral-700">
               <p className="text-center text-sm text-neutral-600 dark:text-neutral-400 w-full">
                 Don't have an account?{" "}
-                <Link href="/register" className="text-primary hover:text-primary/90 dark:text-[#ff0] dark:hover:text-yellow-400 font-medium">
+                <Link
+                  href="/register"
+                  className="text-primary hover:text-primary/90 dark:text-[#ff0] dark:hover:text-yellow-400 font-medium"
+                >
                   Register
                 </Link>
               </p>

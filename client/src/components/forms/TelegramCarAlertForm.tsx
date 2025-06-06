@@ -2,6 +2,23 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import blueCar from "@/images/blue_car.webp";
 import redCar from "@/images/red_car.webp";
+import { newcomerDefault } from "@/data/newcomer-default";
+
+type NewComerResponse = {
+  websites: {
+    website_names: string[];
+    website_objects: {
+      [key: string]: {
+        url: string;
+        bot_file_path: string;
+      };
+    };
+  };
+  fuel_types: string[];
+  brands_and_models: {
+    [brand: string]: string[];
+  };
+};
 
 export default function TelegramCarAlertForm() {
   const [carBrand, setCarBrand] = useState("");
@@ -34,23 +51,23 @@ export default function TelegramCarAlertForm() {
     console.log("Form submitted");
   };
 
-  // const [data, setData] = useState<any>(null);
-  // const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   fetch("/api/newcommer") // calls your own backend, which bypasses CORS
-  //   .then(res => res.json())
-  //     .then((json) => {
-  //       setData(json);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       console.error("Error fetching data:", err);
-  //       setLoading(false);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("/api/newcommer")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching data:", err);
+        setLoading(false);
+      });
+  }, []);
 
-  // console.log(data, loading)
+  console.log(data, loading);
 
   return (
     <section

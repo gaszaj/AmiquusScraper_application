@@ -31,6 +31,8 @@ const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2023-10-16" })
   : undefined;
 
+const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || ""
+
 const MemorySessionStore = MemoryStore(session);
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -155,6 +157,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       done(error);
     }
   });
+
+  async function verifyCaptcha(token: string): Promise<boolean> {
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `secret=${RECAPTCHA_SITE_SECRET}&response=${token}`,
+    });
+
+    const data = await response.json();
+    return data.success;
+  }
+
 
   // Auth routes
   app.post("/api/auth/register", async (req, res) => {
@@ -355,10 +371,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.post("/api/auth/login", (req, res, next) => {
+  app.post("/api/auth/login", async (req, res, next) => {
     try {
       // Validate request body
       userLoginSchema.parse(req.body);
+
+      const { captchaToken } = req.body;
+      if (!captchaToken) {
+        return res.status(400).json({ message: "Captcha token missing" });
+      }
+
+      const isValidCaptcha = await verifyCaptcha(captchaToken);
+        if (!isValidCaptcha) {
+          return res.status(400).json({ message: "Captcha verification failed" });
+        }
 
       passport.authenticate("local", (err, user, info) => {
         if (err) {
@@ -557,14 +583,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/newcommer", async (req, res) => {
     try {
       const response = await fetch(
-        "https://amiquus.com/JSON_FILES_FOLDER/newcommer_json_api.php?action=read_all",
+        "https://amiquus.com/JSON_FILES_FOLDER/newcommer_json_api.php?action=read_all"
       );
-      const data = await response.json();
-      res.json(data);
+      const text = await response.text(); // Read raw text
+
+      try {
+        const data = JSON.parse(text); // Try parsing it as JSON
+        res.json(data);
+      } catch (jsonError) {
+        console.error("Not valid JSON. Response was:", text);
+        throw new Error("Invalid JSON response from remote server.");
+      }
     } catch (error) {
+      console.error("Error fetching newcommer data:", error);
       res.status(500).json({ error: "Failed to fetch from remote server" });
     }
   });
+
 
   // Stripe payment intent creation
   app.post("/api/create-payment-intent", async (req, res) => {

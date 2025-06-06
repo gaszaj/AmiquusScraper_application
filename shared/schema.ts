@@ -28,6 +28,7 @@ export const updateUserSchema = createInsertSchema(users).pick({
 });
 
 export const userLoginSchema = z.object({
+  captchaToken: z.string().optional(),
   email: z.string().email("Please enter a valid email"),
   password: z.string().min(6, "Password must be at least 6 characters"),
 });
