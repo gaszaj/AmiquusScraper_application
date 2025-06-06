@@ -63,19 +63,23 @@ export default function Login() {
   const onSubmit = async (data: LoginFormData) => {
     setError(null);
 
-    if (!captchaToken) {
-      toast({
-        title: "Captcha required",
-        description: "Please complete the captcha before submitting.",
-        variant: "destructive",
-      });
-      return;
-    }
+    // if (!captchaToken) {
+    //   toast({
+    //     title: "Captcha required",
+    //     description: "Please complete the captcha before submitting.",
+    //     variant: "destructive",
+    //   });
+    //   return;
+    // }
 
     setIsLoading(true);
 
     try {
-      await login(data.email, data.password, captchaToken);
+      // Execute reCAPTCHA v3
+      const token = await window.grecaptcha.execute("6Lf3z1crAAAAAMCp96_QY901Kuaa54DAsLVLd8QC", { action: "login" });
+      if (!token) throw new Error("Captcha verification failed");
+    
+      await login(data.email, data.password, token);
       toast({
         title: "Login successful",
         description: "You have been logged in successfully.",
@@ -153,9 +157,9 @@ export default function Login() {
                     </p>
                   )}
                 </div>
-                <div className="flex justify-center items-center w-full">
+                {/* <div className="flex justify-center items-center w-full">
                   <ReCAPTCHAWidget onChange={setCaptchaToken} />
-                </div>
+                </div> */}
                 <Button type="submit" className="w-full" disabled={isLoading}>
                   {isLoading ? (
                     <>

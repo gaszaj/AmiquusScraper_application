@@ -17,7 +17,7 @@ export default function ReCAPTCHAWidget({ onChange }: ReCAPTCHAWidgetProps) {
 
   return (
     <ReCAPTCHA
-      sitekey="6Lf6BFMrAAAAADsao1SE1yVvAFyzLOJjUuHSxIAY"
+      sitekey="6Lf3z1crAAAAAMCp96_QY901Kuaa54DAsLVLd8QC"
       onChange={onChange}
       theme={resolvedTheme}
       className="mx-auto"

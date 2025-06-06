@@ -33,6 +33,8 @@ const stripe = process.env.STRIPE_SECRET_KEY
 
 const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || ""
 
+const JSON_BASE_URL = process.env.JSON_BASE_URL || "https://apiamiquus.amiquus.com/JSON_FILES_FOLDER"
+
 const MemorySessionStore = MemoryStore(session);
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -168,6 +170,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     });
 
     const data = await response.json();
+    console.log("Captcha verification result:",data)
     return data.success;
   }
 
@@ -583,7 +586,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/newcommer", async (req, res) => {
     try {
       const response = await fetch(
-        "https://amiquus.com/JSON_FILES_FOLDER/newcommer_json_api.php?action=read_all"
+        `${JSON_BASE_URL}/newcommer_json_api.php?name=newcommer`
       );
       const text = await response.text(); // Read raw text
 
