@@ -35,6 +35,8 @@ const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || ""
 
 const JSON_BASE_URL = process.env.JSON_BASE_URL || "https://apiamiquus.amiquus.com/JSON_FILES_FOLDER"
 
+const BEARER_TOKEN = process.env.BEARER_TOKEN || ""
+
 const MemorySessionStore = MemoryStore(session);
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -584,14 +586,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // api fetches
   app.get("/api/newcommer", async (req, res) => {
+    if (!BEARER_TOKEN) {
+      return res.status(500).json({ error: "BEARER_TOKEN is not configured" });
+    }
     try {
       const response = await fetch(
-        `${JSON_BASE_URL}/newcommer_json_api.php?name=newcommer`
+        `${JSON_BASE_URL}/newcommer_json_api.php?name=newcommer`,
+        {
+          headers: {
+            Authorization: `Bearer ${BEARER_TOKEN}`, // your token
+          },
+        }
       );
-      const text = await response.text(); // Read raw text
+
+      const text = await response.text();
 
       try {
-        const data = JSON.parse(text); // Try parsing it as JSON
+        const data = JSON.parse(text);
         res.json(data);
       } catch (jsonError) {
         console.error("Not valid JSON. Response was:", text);

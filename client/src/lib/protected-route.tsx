@@ -26,7 +26,7 @@ export function ProtectedRoute({
     ) {
       setLocation("/verify-email");
     } else if (user && user.isEmailVerified && location.startsWith("/verify-email")){
-      setLocation("/dashboard")
+      setLocation("/setup-alerts")
     }
   }, [user, isLoading, setLocation, location]);
 

@@ -130,7 +130,6 @@ export const newcomerDefault = {
       "TT (all)",
     ],
     BMW: [
-      "",
       "1802",
       "2002",
       "i3",
@@ -202,7 +201,6 @@ export const newcomerDefault = {
       "all",
     ],
     Citroen: [
-      "",
       "2 CV",
       "Ami",
       "AX",

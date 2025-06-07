@@ -104,6 +104,69 @@ export const subscriptionFormSchema = z.object({
   price: z.number().min(1, "Price calculation failed"),
 });
 
+export const alertSchema = z.object({
+  carBrand: z.string().min(1, "Car brand is required"),
+  carModel: z.string().min(1, "Car model is required"),
+  fuelType: z.string().min(1, "Fuel type is required"),
+
+  priceMin: z
+    .string()
+    .regex(/^\d*$/, "Minimum price must be a number")
+    .optional()
+    .or(z.literal("")),
+  priceMax: z
+    .string()
+    .regex(/^\d*$/, "Maximum price must be a number")
+    .optional()
+    .or(z.literal("")),
+
+  yearMin: z
+    .string()
+    .regex(/^\d{4}$/, "Minimum year must be a valid year")
+    .optional()
+    .or(z.literal("")),
+  yearMax: z
+    .string()
+    .regex(/^\d{4}$/, "Maximum year must be a valid year")
+    .optional()
+    .or(z.literal("")),
+
+  maxKilometers: z
+    .string()
+    .regex(/^\d*$/, "Max kilometers must be a number")
+    .optional()
+    .or(z.literal("")),
+
+  telegramToken: z.string().min(1, "Telegram bot token is required"),
+  telegramChatId: z.string().min(1, "Telegram chat ID is required"),
+
+  websitesSelected: z
+    .array(z.string())
+    .min(1, "At least one website must be selected"),
+
+  facebookMarketplaceUrl: z
+    .string()
+    .optional()
+    .or(z.literal("")),
+
+  updateFrequency: z.enum(["hourly", "30min", "15min", "5min", "1min"]),
+
+  notificationLanguage: z
+    .string()
+    .min(1, "Notification language is required"),
+}).superRefine((data, ctx) => {
+  if (
+    data.websitesSelected.includes("facebook") &&
+    !data.facebookMarketplaceUrl
+  ) {
+    ctx.addIssue({
+      path: ["facebookMarketplaceUrl"],
+      message: "Facebook Marketplace URL is required when Facebook is selected",
+      code: z.ZodIssueCode.custom,
+    });
+  }
+});
+
 export const insertSubscriptionSchema = createInsertSchema(subscriptions).omit({
   id: true,
   createdAt: true,
@@ -122,3 +185,4 @@ export type InsertSubscription = typeof subscriptions.$inferInsert;
 export type SubscriptionFormData = z.infer<typeof subscriptionFormSchema>;
 export type UserLogin = z.infer<typeof userLoginSchema>;
 export type UserRegister = z.infer<typeof userRegisterSchema>;
+export type AlertFormSchema = z.infer<typeof alertSchema>;

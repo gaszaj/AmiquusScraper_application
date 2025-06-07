@@ -19,7 +19,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import ReCAPTCHAWidget from "@/components/forms/ReCAPTCHAWidget";
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -33,7 +32,6 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const { login, user } = useAuth();
   const [location, setLocation] = useLocation();
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const { toast } = useToast();
 
   // Get redirectUrl from location search params if present
@@ -157,9 +155,6 @@ export default function Login() {
                     </p>
                   )}
                 </div>
-                {/* <div className="flex justify-center items-center w-full">
-                  <ReCAPTCHAWidget onChange={setCaptchaToken} />
-                </div> */}
                 <Button type="submit" className="w-full" disabled={isLoading}>
                   {isLoading ? (
                     <>

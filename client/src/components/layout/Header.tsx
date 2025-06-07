@@ -13,9 +13,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showFullMenu, setShowFullMenu] = useState(true);
   const [location] = useLocation();
-  const { isAuthenticated, login } = useAuth();
+  const { isAuthenticated, login, user } = useAuth();
   const { toast } = useToast();
-  
+
   // Check window size and update menu style
   useEffect(() => {
     const checkWindowSize = () => {
