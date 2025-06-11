@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { SubscriptionFormData } from "@shared/schema";
+import { AlertFormSchema } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { AlertCircle, Check } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -11,7 +11,6 @@ import {
   CardTitle,
   CardFooter
 } from "@/components/ui/card";
-import { useSubscription } from "@/hooks/use-subscription";
 import { 
   WEBSITE_OPTIONS, 
   FREQUENCY_OPTIONS, 
@@ -20,15 +19,16 @@ import {
   FUEL_TYPE_OPTIONS
 } from "@/lib/constants";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useAuth } from "@/hooks/use-auth";
 
 interface ReviewPaymentProps {
-  formData: Partial<SubscriptionFormData>;
-  updateFormData: (data: Partial<SubscriptionFormData>) => void;
+  formData: Partial<AlertFormSchema>;
+  updateFormData: (data: Partial<AlertFormSchema>) => void;
   prevStep: () => void;
   onSubmit: () => void;
 }
 
-function calculateBasePrice(formData: Partial<SubscriptionFormData>): number {
+function calculateBasePrice(formData: Partial<AlertFormSchema>): number {
   if (!formData.websitesSelected || formData.websitesSelected.length === 0) {
     return 0;
   }
@@ -67,6 +67,8 @@ export default function ReviewPayment({
   prevStep,
   onSubmit,
 }: ReviewPaymentProps) {
+  const { user, isAuthenticated } = useAuth();
+  
   const [error, setError] = useState<string | null>(null);
   const [termsAgreed, setTermsAgreed] = useState(false);
   const [calculatedPrice, setCalculatedPrice] = useState(0);
@@ -128,10 +130,10 @@ export default function ReviewPayment({
           <CardContent className="space-y-2">
             <div>
               <span className="font-medium">Name:</span>{" "}
-              {formData.firstName} {formData.lastName}
+              {user?.firstName} {user?.lastName}
             </div>
             <div>
-              <span className="font-medium">Email:</span> {formData.email}
+              <span className="font-medium">Email:</span> {user?.email}
             </div>
           </CardContent>
         </Card>
@@ -170,14 +172,14 @@ export default function ReviewPayment({
             <CardTitle className="text-xl">Car Specifications</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
-            {formData.brand && (
+            {formData.carBrand && (
               <div>
-                <span className="font-medium">Brand:</span> {formData.brand}
+                <span className="font-medium">Brand:</span> {formData.carBrand}
               </div>
             )}
-            {formData.model && (
+            {formData.carModel && (
               <div>
-                <span className="font-medium">Model:</span> {formData.model}
+                <span className="font-medium">Model:</span> {formData.carModel}
               </div>
             )}
             {formData.fuelType && (
@@ -191,10 +193,10 @@ export default function ReviewPayment({
                 {formData.yearMin || "Any"} - {formData.yearMax || "Any"}
               </div>
             )}
-            {(formData.mileageMin || formData.mileageMax) && (
+            {(formData.maxKilometers || formData.maxKilometers) && (
               <div>
                 <span className="font-medium">Mileage Range (km):</span>{" "}
-                {formData.mileageMin || "Any"} - {formData.mileageMax || "Any"}
+                {formData.maxKilometers || "Any"}
               </div>
             )}
             {(formData.priceMin || formData.priceMax) && (

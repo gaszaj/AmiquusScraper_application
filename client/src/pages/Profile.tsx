@@ -39,11 +39,9 @@ import {
 } from "@/components/ui/dialog";
 import { useElements, useStripe, PaymentElement, Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
 
 // Load Stripe
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY || '');
+const stripePromise = loadStripe( 'pk_test_51R7GaAKTt4KB6Gxykv1ZJ3j8VqeEcLx1lpbfrb8XmzpRhzi7ljw0EpMBSR56ChCrQFIXS9nsPKUn9L0x7vXJH90R00EkcJodyl');
 
 // Payment Method Form component
 function AddPaymentMethodForm() {
@@ -106,6 +104,13 @@ function AddPaymentMethodDialog() {
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
+
+  const options = {
+    // passing the SetupIntent's client secret
+    clientSecret: clientSecret,
+    // Fully customizable with appearance API.
+    appearance: {/*...*/},
+  };
   
   const handleOpen = async () => {
     setIsOpen(true);
@@ -115,6 +120,7 @@ function AddPaymentMethodDialog() {
       const data = await response.json();
       setClientSecret(data.clientSecret);
     } catch (error) {
+      console.error("Error creating setup intent:", error);
       toast({
         title: "Error",
         description: "Unable to initialize payment setup",
@@ -140,7 +146,7 @@ function AddPaymentMethodDialog() {
           </DialogDescription>
         </DialogHeader>
         {clientSecret ? (
-          <Elements stripe={stripePromise} options={{ clientSecret }}>
+          <Elements stripe={stripePromise} options={options}>
             <AddPaymentMethodForm />
           </Elements>
         ) : (
@@ -591,9 +597,8 @@ export default function Profile() {
   
   return (
     <>
-      <Header />
       <div className="py-16 container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
-        <div className="max-w-4xl mx-auto">
+        <div className="mt-20 max-w-4xl mx-auto">
           <div className="mb-8">
             <h1 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-white">My Profile</h1>
             <p className="text-neutral-600 dark:text-neutral-400">Manage your account settings and subscription details</p>
@@ -1123,7 +1128,6 @@ export default function Profile() {
           </Tabs>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

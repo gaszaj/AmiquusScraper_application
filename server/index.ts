@@ -1,8 +1,15 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
+import {registerStripeRoutes} from "./routes/stripe";
 import { setupVite, serveStatic, log } from "./vite";
+import stripeWebhookHandler from "./routes/webhook"; // create this module
 
 const app = express();
+
+// ✅ Register Stripe webhook BEFORE body parsing
+app.use("/api/stripe-webhook", stripeWebhookHandler);
+
+// ✅ Then use JSON parsing for everything else
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -38,6 +45,7 @@ app.use((req, res, next) => {
 
 (async () => {
   const server = await registerRoutes(app);
+  registerStripeRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;

@@ -77,6 +77,7 @@ export const subscriptions = pgTable("subscriptions", {
   telegramChatId: text("telegram_chat_id").notNull(),
   notificationLanguage: languageEnum("notification_language").notNull().default('en'),
   price: integer("price").notNull(),
+  stripePriceId: text("stripe_price_id"),
   status: text("status").notNull().default("active"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
@@ -102,6 +103,7 @@ export const subscriptionFormSchema = z.object({
   telegramChatId: z.string().min(1, "Telegram chat ID is required"),
   notificationLanguage: z.enum(['en', 'es', 'fr', 'de', 'it', 'pt', 'ru']),
   price: z.number().min(1, "Price calculation failed"),
+  stripePriceId: z.string().optional(),
 });
 
 export const alertSchema = z.object({

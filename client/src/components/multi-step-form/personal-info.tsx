@@ -2,7 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SubscriptionFormData } from "@shared/schema";
+import { AlertFormSchema } from "@shared/schema";
 import {
   Form,
   FormControl,
@@ -15,10 +15,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useAuth } from "@/hooks/use-auth";
 
 interface PersonalInfoProps {
-  formData: Partial<SubscriptionFormData>;
-  updateFormData: (data: Partial<SubscriptionFormData>) => void;
+  formData: Partial<AlertFormSchema>;
+  updateFormData: (data: Partial<AlertFormSchema>) => void;
   nextStep: () => void;
 }
 
@@ -30,21 +31,26 @@ const personalInfoSchema = z.object({
 
 type PersonalInfoFormData = z.infer<typeof personalInfoSchema>;
 
-export default function PersonalInfo({ formData, updateFormData, nextStep }: PersonalInfoProps) {
+export default function PersonalInfo({
+  formData,
+  updateFormData,
+  nextStep,
+}: PersonalInfoProps) {
+  const { user, isAuthenticated } = useAuth();
   const [error, setError] = useState<string | null>(null);
 
   const form = useForm<PersonalInfoFormData>({
     resolver: zodResolver(personalInfoSchema),
     defaultValues: {
-      firstName: formData.firstName || "",
-      lastName: formData.lastName || "",
-      email: formData.email || "",
+      firstName: user?.firstName || "",
+      lastName: user?.lastName || "",
+      email: user?.email || "",
     },
   });
 
   const onSubmit = (data: PersonalInfoFormData) => {
     try {
-      updateFormData(data);
+      // updateFormData(data);
       nextStep();
     } catch (error: any) {
       setError(error.message);
@@ -54,9 +60,12 @@ export default function PersonalInfo({ formData, updateFormData, nextStep }: Per
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibold tracking-tight">Personal Information</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">
+          Personal Information
+        </h2>
         <p className="text-sm text-neutral-500">
-          Please provide your personal details so we can set up your notifications correctly.
+          Please provide your personal details so we can set up your
+          notifications correctly.
         </p>
       </div>
 
@@ -77,7 +86,7 @@ export default function PersonalInfo({ formData, updateFormData, nextStep }: Per
                 <FormItem>
                   <FormLabel>First Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John" {...field} />
+                    <Input placeholder="John"  disabled {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -90,7 +99,7 @@ export default function PersonalInfo({ formData, updateFormData, nextStep }: Per
                 <FormItem>
                   <FormLabel>Last Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Doe" {...field} />
+                    <Input placeholder="Doe" disabled {...field}   />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -105,7 +114,12 @@ export default function PersonalInfo({ formData, updateFormData, nextStep }: Per
               <FormItem>
                 <FormLabel>Email Address</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="john.doe@example.com" {...field} />
+                  <Input
+                    type="email"
+                    placeholder="john.doe@example.com"
+                     disabled
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -113,7 +127,15 @@ export default function PersonalInfo({ formData, updateFormData, nextStep }: Per
           />
 
           <div className="flex justify-end">
-            <Button type="submit" size="lg">Continue</Button>
+            {!user ? (
+              <Button type="button" size="lg" onClick={() => (window.location.href = "/login?redirect=setup-alerts")}>
+                Login or Sign Up to Continue
+              </Button>
+            ) : (
+              <Button type="submit" size="lg">
+                Continue
+              </Button>
+            )}
           </div>
         </form>
       </Form>

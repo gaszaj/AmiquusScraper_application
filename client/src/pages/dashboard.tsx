@@ -1,24 +1,16 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
 import { useAuth } from "@/hooks/use-auth";
-import { useSubscription } from "@/hooks/use-subscription";
 import { Button } from "@/components/ui/button";
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardFooter, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card";
 import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -30,17 +22,26 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Plus, Car, Bell, CheckCircle2, AlertTriangle, X } from "lucide-react";
+import {
+  Loader2,
+  Plus,
+  Car,
+  Bell,
+  CheckCircle2,
+  AlertTriangle,
+  X,
+} from "lucide-react";
 import { Subscription } from "@shared/schema";
 import { FREQUENCY_LABELS } from "@/lib/constants";
 
 export default function Dashboard() {
   const [location, setLocation] = useLocation();
   const { user, isLoading: authLoading } = useAuth();
-  const { getUserSubscriptions, deleteSubscription } = useSubscription();
   const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedSubscription, setSelectedSubscription] = useState<number | null>(null);
+  const [selectedSubscription, setSelectedSubscription] = useState<
+    number | null
+  >(null);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   useEffect(() => {
@@ -65,11 +66,20 @@ export default function Dashboard() {
     }
   }, [user, authLoading, getUserSubscriptions, setLocation]);
 
+  useEffect(() => {
+    if (window.location.search) {
+      const { pathname } = window.location;
+      window.history.replaceState({}, "", pathname);
+    }
+  }, []);
+
   const handleDeleteSubscription = async () => {
     if (selectedSubscription) {
       try {
         await deleteSubscription(selectedSubscription);
-        setSubscriptions(subscriptions.filter(s => s.id !== selectedSubscription));
+        setSubscriptions(
+          subscriptions.filter((s) => s.id !== selectedSubscription),
+        );
         setDeleteDialogOpen(false);
         setSelectedSubscription(null);
       } catch (error) {
@@ -84,15 +94,22 @@ export default function Dashboard() {
   };
 
   const formatWebsites = (websites: string[]): string => {
-    return websites.map(site => {
-      switch(site) {
-        case 'autotrader': return 'AutoTrader';
-        case 'cargurus': return 'CarGurus';
-        case 'cars': return 'Cars.com';
-        case 'facebook': return 'Facebook Marketplace';
-        default: return site;
-      }
-    }).join(', ');
+    return websites
+      .map((site) => {
+        switch (site) {
+          case "autotrader":
+            return "AutoTrader";
+          case "cargurus":
+            return "CarGurus";
+          case "cars":
+            return "Cars.com";
+          case "facebook":
+            return "Facebook Marketplace";
+          default:
+            return site;
+        }
+      })
+      .join(", ");
   };
 
   if (authLoading) {
@@ -104,8 +121,8 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
+    <div className="flex flex-col min-h-screen mt-16">
+      {/* <Header /> */}
       <main className="flex-grow py-10 bg-neutral-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
@@ -115,8 +132,8 @@ export default function Dashboard() {
                 Manage your car listing notifications and subscription settings
               </p>
             </div>
-            <Button 
-              onClick={() => setLocation("/signup")} 
+            <Button
+              onClick={() => setLocation("/signup")}
               className="bg-primary-600 hover:bg-primary-700"
             >
               <Plus size={16} className="mr-2" /> New Car Alert
@@ -138,13 +155,16 @@ export default function Dashboard() {
                 <Card>
                   <CardContent className="py-12 text-center">
                     <Car className="h-12 w-12 text-neutral-400 mx-auto mb-4" />
-                    <h3 className="text-xl font-title font-semibold mb-2">No Car Alerts Yet</h3>
+                    <h3 className="text-xl font-title font-semibold mb-2">
+                      No Car Alerts Yet
+                    </h3>
                     <p className="text-neutral-600 mb-6 max-w-xl mx-auto">
-                      You haven't set up any car listing alerts yet. Create your first alert to start
-                      getting notified when your dream car becomes available.
+                      You haven't set up any car listing alerts yet. Create your
+                      first alert to start getting notified when your dream car
+                      becomes available.
                     </p>
-                    <Button 
-                      onClick={() => setLocation("/signup")} 
+                    <Button
+                      onClick={() => setLocation("/signup")}
                       className="bg-primary-600 hover:bg-primary-700"
                     >
                       <Plus size={16} className="mr-2" /> Create Car Alert
@@ -156,32 +176,44 @@ export default function Dashboard() {
                   {subscriptions.map((subscription) => (
                     <Card key={subscription.id} className="relative">
                       <Badge className="absolute top-4 right-4 bg-green-100 text-green-800 hover:bg-green-100">
-                        {subscription.status === "active" ? "Active" : subscription.status}
+                        {subscription.status === "active"
+                          ? "Active"
+                          : subscription.status}
                       </Badge>
                       <CardHeader>
                         <CardTitle className="flex items-center">
                           <Car className="mr-2 h-5 w-5 text-primary-600" />
-                          {subscription.brand ? `${subscription.brand} ${subscription.model || ''}` : 'Any car'}
+                          {subscription.brand
+                            ? `${subscription.brand} ${subscription.model || ""}`
+                            : "Any car"}
                         </CardTitle>
                         <CardDescription>
-                          Monitoring: {formatWebsites(subscription.websitesSelected as string[])}
+                          Monitoring:{" "}
+                          {formatWebsites(
+                            subscription.websitesSelected as string[],
+                          )}
                         </CardDescription>
                       </CardHeader>
                       <CardContent className="space-y-3">
                         <div className="grid grid-cols-2 gap-4 text-sm">
                           <div>
                             <p className="text-neutral-500">Update frequency</p>
-                            <p className="font-medium">{FREQUENCY_LABELS[subscription.updateFrequency]}</p>
+                            <p className="font-medium">
+                              {FREQUENCY_LABELS[subscription.updateFrequency]}
+                            </p>
                           </div>
                           <div>
                             <p className="text-neutral-500">Price</p>
-                            <p className="font-medium">${(subscription.price / 100).toFixed(2)}/month</p>
+                            <p className="font-medium">
+                              ${(subscription.price / 100).toFixed(2)}/month
+                            </p>
                           </div>
                           {subscription.yearMin || subscription.yearMax ? (
                             <div>
                               <p className="text-neutral-500">Year range</p>
                               <p className="font-medium">
-                                {subscription.yearMin || 'Any'} - {subscription.yearMax || 'Any'}
+                                {subscription.yearMin || "Any"} -{" "}
+                                {subscription.yearMax || "Any"}
                               </p>
                             </div>
                           ) : null}
@@ -189,31 +221,44 @@ export default function Dashboard() {
                             <div>
                               <p className="text-neutral-500">Price range</p>
                               <p className="font-medium">
-                                ${subscription.priceMin || 'Any'} - ${subscription.priceMax || 'Any'}
+                                ${subscription.priceMin || "Any"} - $
+                                {subscription.priceMax || "Any"}
                               </p>
                             </div>
                           ) : null}
                         </div>
                         <div className="flex items-center text-sm text-neutral-600 mt-2">
                           <Bell className="mr-2 h-4 w-4 text-secondary-500" />
-                          Notifications sent in {
-                            subscription.notificationLanguage === 'en' ? 'English' :
-                            subscription.notificationLanguage === 'es' ? 'Spanish' :
-                            subscription.notificationLanguage === 'fr' ? 'French' :
-                            subscription.notificationLanguage === 'de' ? 'German' :
-                            subscription.notificationLanguage === 'it' ? 'Italian' :
-                            subscription.notificationLanguage === 'pt' ? 'Portuguese' :
-                            subscription.notificationLanguage === 'ru' ? 'Russian' :
-                            subscription.notificationLanguage
-                          }
+                          Notifications sent in{" "}
+                          {subscription.notificationLanguage === "en"
+                            ? "English"
+                            : subscription.notificationLanguage === "es"
+                              ? "Spanish"
+                              : subscription.notificationLanguage === "fr"
+                                ? "French"
+                                : subscription.notificationLanguage === "de"
+                                  ? "German"
+                                  : subscription.notificationLanguage === "it"
+                                    ? "Italian"
+                                    : subscription.notificationLanguage === "pt"
+                                      ? "Portuguese"
+                                      : subscription.notificationLanguage ===
+                                          "ru"
+                                        ? "Russian"
+                                        : subscription.notificationLanguage}
                         </div>
                       </CardContent>
                       <CardFooter className="flex justify-between">
-                        <Button variant="outline" onClick={() => setLocation(`/edit-subscription/${subscription.id}`)}>
+                        <Button
+                          variant="outline"
+                          onClick={() =>
+                            setLocation(`/edit-subscription/${subscription.id}`)
+                          }
+                        >
                           Edit
                         </Button>
-                        <Button 
-                          variant="destructive" 
+                        <Button
+                          variant="destructive"
                           onClick={() => confirmDelete(subscription.id)}
                         >
                           Cancel Alert
@@ -229,16 +274,22 @@ export default function Dashboard() {
               <Card>
                 <CardHeader>
                   <CardTitle>Account Information</CardTitle>
-                  <CardDescription>Manage your personal details and preferences</CardDescription>
+                  <CardDescription>
+                    Manage your personal details and preferences
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="text-lg font-medium mb-3">Personal Details</h3>
+                      <h3 className="text-lg font-medium mb-3">
+                        Personal Details
+                      </h3>
                       <div className="space-y-2">
                         <div>
                           <p className="text-neutral-500 text-sm">Name</p>
-                          <p className="font-medium">{user?.firstName} {user?.lastName}</p>
+                          <p className="font-medium">
+                            {user?.firstName} {user?.lastName}
+                          </p>
                         </div>
                         <div>
                           <p className="text-neutral-500 text-sm">Email</p>
@@ -251,10 +302,12 @@ export default function Dashboard() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium mb-3">Authentication</h3>
+                      <h3 className="text-lg font-medium mb-3">
+                        Authentication
+                      </h3>
                       <div className="space-y-2">
                         <div className="flex items-center">
-                          {user?.password ? (
+                          {user?.hasPassword ? (
                             <div className="flex items-center">
                               <CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />
                               <span>Password-based login enabled</span>
@@ -285,7 +338,8 @@ export default function Dashboard() {
                   <div className="border-t border-neutral-200 pt-6">
                     <h3 className="text-lg font-medium mb-3">Payment Method</h3>
                     <p className="text-neutral-600 mb-4">
-                      You can update your payment method for all active subscriptions here.
+                      You can update your payment method for all active
+                      subscriptions here.
                     </p>
                     <Button className="bg-primary-600 hover:bg-primary-700">
                       Update Payment Method
@@ -297,20 +351,20 @@ export default function Dashboard() {
           </Tabs>
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
 
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Are you sure?</AlertDialogTitle>
             <AlertDialogDescription>
-              This will permanently cancel your car alert subscription.
-              You will no longer receive notifications for new car listings.
+              This will permanently cancel your car alert subscription. You will
+              no longer receive notifications for new car listings.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={handleDeleteSubscription}
             >
@@ -321,4 +375,38 @@ export default function Dashboard() {
       </AlertDialog>
     </div>
   );
+}
+
+export async function getUserSubscriptions() {
+  const res = await fetch("/api/subscriptions", {
+    method: "GET",
+    credentials: "include", // send cookies if using session-based auth
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(errorText || "Failed to fetch subscriptions");
+  }
+
+  return res.json();
+}
+
+export async function deleteSubscription(subscriptionId: number) {
+  const res = await fetch(`/api/subscriptions/${subscriptionId}`, {
+    method: "DELETE",
+    credentials: "include", // send cookies if using session-based auth
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(errorText || "Failed to delete subscription");
+  }
+
+  return res.json();
 }

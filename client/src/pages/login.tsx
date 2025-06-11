@@ -82,7 +82,8 @@ export default function Login() {
         title: "Login successful",
         description: "You have been logged in successfully.",
       });
-      setLocation(redirectUrl);
+      // setLocation(redirectUrl);
+      window.location.href = redirectUrl;
     } catch (err: any) {
       setError(
         err.message || "Failed to login. Please check your credentials.",

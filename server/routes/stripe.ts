@@ -3,9 +3,9 @@ import Stripe from "stripe";
 import { storage } from "../storage";
 
 // Initialize Stripe
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  apiVersion: "2023-10-16",
-});
+const stripe = new Stripe(
+  "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
+);
 
 // Simple auth middleware for demo purposes
 const isAuthenticated = (req: Request, res: Response, next: Function) => {
@@ -29,7 +29,10 @@ export function registerStripeRoutes(app: Express) {
         // Create a new customer
         const customer = await stripe.customers.create({
           email: user.email,
-          name: `${user.firstName || ""} ${user.lastName || ""}`.trim() || user.username,
+          name: `${user.firstName} ${user.lastName}`,
+          metadata: {
+            userId: user.id.toString(),
+          },
         });
         
         customerId = customer.id;
@@ -42,8 +45,12 @@ export function registerStripeRoutes(app: Express) {
       const setupIntent = await stripe.setupIntents.create({
         customer: customerId,
         payment_method_types: ["card"],
+        metadata: {
+          userId: user.id.toString(),
+        },
       });
-      
+
+      console.log("Setup intent created:", setupIntent)
       res.json({ clientSecret: setupIntent.client_secret });
     } catch (error: any) {
       console.error("Error creating setup intent:", error);
@@ -141,7 +148,10 @@ export function registerStripeRoutes(app: Express) {
         // Create a new customer
         const customer = await stripe.customers.create({
           email: user.email,
-          name: `${user.firstName || ""} ${user.lastName || ""}`.trim() || user.username,
+          name: `${user.firstName} ${user.lastName}`,
+          metadata: {
+            userId: user.id.toString(),
+          },
         });
         
         customerId = customer.id;
@@ -155,6 +165,9 @@ export function registerStripeRoutes(app: Express) {
         amount: Math.round(amount * 100), // Convert to cents
         currency: "usd",
         customer: customerId,
+        metadata: {
+          userId: user.id.toString(),
+        },
       });
       
       res.json({ clientSecret: paymentIntent.client_secret });

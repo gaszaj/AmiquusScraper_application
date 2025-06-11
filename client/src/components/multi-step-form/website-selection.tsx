@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SubscriptionFormData } from "@shared/schema";
+import { AlertFormSchema } from "@shared/schema";
 import {
   Form,
   FormControl,
@@ -25,19 +25,40 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { WEBSITE_OPTIONS, FREQUENCY_OPTIONS } from "@/lib/constants";
+import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 
 interface WebsiteSelectionProps {
-  formData: Partial<SubscriptionFormData>;
-  updateFormData: (data: Partial<SubscriptionFormData>) => void;
+  formData: Partial<AlertFormSchema>;
+  updateFormData: (data: Partial<AlertFormSchema>) => void;
   nextStep: () => void;
   prevStep: () => void;
+  setJsonData: Dispatch<SetStateAction<NewComerResponse | null>>;
+  setLoadingJson: Dispatch<SetStateAction<boolean>>;
+  websites: string[];
 }
 
-const websiteSelectionSchema = z.object({
-  websitesSelected: z.array(z.string()).min(1, "Select at least one website"),
-  facebookMarketplaceUrl: z.string().optional(),
-  updateFrequency: z.enum(["hourly", "30min", "15min", "5min", "1min"]),
-});
+const websiteSelectionSchema = z
+  .object({
+    websitesSelected: z
+      .array(z.string())
+      .min(1, "At least one website must be selected"),
+
+    facebookMarketplaceUrl: z.string().optional().or(z.literal("")),
+    updateFrequency: z.enum(["hourly", "30min", "15min", "5min", "1min"]),
+  })
+  .superRefine((data, ctx) => {
+    if (
+      data.websitesSelected.includes("facebook") &&
+      !data.facebookMarketplaceUrl
+    ) {
+      ctx.addIssue({
+        path: ["facebookMarketplaceUrl"],
+        message:
+          "Facebook Marketplace URL is required when Facebook is selected",
+        code: z.ZodIssueCode.custom,
+      });
+    }
+  });
 
 type WebsiteSelectionFormData = z.infer<typeof websiteSelectionSchema>;
 
@@ -46,11 +67,24 @@ export default function WebsiteSelection({
   updateFormData,
   nextStep,
   prevStep,
+  setJsonData,
+  setLoadingJson,
+  websites,
 }: WebsiteSelectionProps) {
+  useEffect(() => {
+    fetch("/api/newcommer")
+      .then((res) => res.json())
+      .then((json) => {
+        setJsonData(json);
+        setLoadingJson(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching data:", err);
+        setLoadingJson(false);
+      });
+  }, []);
+
   const [error, setError] = useState<string | null>(null);
-  const [showFacebookUrlField, setShowFacebookUrlField] = useState<boolean>(
-    (formData.websitesSelected || []).includes("facebook")
-  );
 
   const form = useForm<WebsiteSelectionFormData>({
     resolver: zodResolver(websiteSelectionSchema),
@@ -63,14 +97,6 @@ export default function WebsiteSelection({
 
   const onSubmit = (data: WebsiteSelectionFormData) => {
     try {
-      if (data.websitesSelected.includes("facebook") && !data.facebookMarketplaceUrl) {
-        form.setError("facebookMarketplaceUrl", {
-          type: "manual",
-          message: "Please provide a Facebook Marketplace URL",
-        });
-        return;
-      }
-
       updateFormData(data);
       nextStep();
     } catch (error: any) {
@@ -78,22 +104,25 @@ export default function WebsiteSelection({
     }
   };
 
-  // Watch the websites selected to show/hide the Facebook URL field
-  const watchedWebsites = form.watch("websitesSelected");
-  
-  // Update Facebook URL visibility when selection changes
-  if (watchedWebsites?.includes("facebook") && !showFacebookUrlField) {
-    setShowFacebookUrlField(true);
-  } else if (!watchedWebsites?.includes("facebook") && showFacebookUrlField) {
-    setShowFacebookUrlField(false);
-  }
+  // // Watch the websites selected to show/hide the Facebook URL field
+  // const watchedWebsites = form.watch("websitesSelected");
+
+  // // Update Facebook URL visibility when selection changes
+  // if (watchedWebsites?.includes("facebook") && !showFacebookUrlField) {
+  //   setShowFacebookUrlField(true);
+  // } else if (!watchedWebsites?.includes("facebook") && showFacebookUrlField) {
+  //   setShowFacebookUrlField(false);
+  // }
 
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibold tracking-tight">Website Selection</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">
+          Website Selection
+        </h2>
         <p className="text-sm text-neutral-500">
-          Choose which websites you want to monitor and how frequently you want updates.
+          Choose which websites you want to monitor and how frequently you want
+          updates.
         </p>
       </div>
 
@@ -106,85 +135,128 @@ export default function WebsiteSelection({
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          {/* Websites to monitor */}
           <FormField
             control={form.control}
             name="websitesSelected"
-            render={() => (
+            render={({ field }) => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel className="text-base">Websites to monitor</FormLabel>
+                  <FormLabel>Websites to monitor</FormLabel>
                   <FormDescription>
                     Select one or more websites to monitor for car listings.
                   </FormDescription>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {WEBSITE_OPTIONS.map((website) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                  {websites.map((site) => (
                     <FormField
-                      key={website.id}
+                      key={site}
                       control={form.control}
                       name="websitesSelected"
                       render={({ field }) => {
                         return (
-                          <FormItem
-                            key={website.id}
-                            className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4"
-                          >
+                          <FormItem className="flex items-center gap-2">
                             <FormControl>
                               <Checkbox
-                                checked={field.value?.includes(website.id)}
+                                checked={field.value?.includes(site)}
                                 onCheckedChange={(checked) => {
-                                  const updatedValue = checked
-                                    ? [...field.value, website.id]
-                                    : field.value?.filter(
-                                        (value) => value !== website.id
+                                  return checked
+                                    ? field.onChange([...field.value, site])
+                                    : field.onChange(
+                                        field.value?.filter(
+                                          (value) => value !== site,
+                                        ),
                                       );
-                                  field.onChange(updatedValue);
                                 }}
                               />
                             </FormControl>
-                            <div className="space-y-1 leading-none">
-                              <FormLabel className="text-sm font-medium">
-                                {website.name}
-                              </FormLabel>
-                              {website.requiresUrl && (
-                                <FormDescription>
-                                  Requires search URL
-                                </FormDescription>
-                              )}
-                            </div>
+                            <FormLabel className="text-neutral-700 dark:text-neutral-300">
+                              {site.charAt(0).toUpperCase() + site.slice(1)}
+                            </FormLabel>
                           </FormItem>
                         );
                       }}
                     />
                   ))}
+                  <FormField
+                    control={form.control}
+                    name="websitesSelected"
+                    render={({ field }) => (
+                      <FormItem className="flex items-center gap-2">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value?.includes("facebook")}
+                            onCheckedChange={(checked) => {
+                              return checked
+                                ? field.onChange([...field.value, "facebook"])
+                                : field.onChange(
+                                    field.value?.filter(
+                                      (value) => value !== "facebook",
+                                    ),
+                                  );
+                            }}
+                          />
+                        </FormControl>
+                        <FormLabel className="text-neutral-700 dark:text-neutral-300">
+                          Facebook Marketplace
+                        </FormLabel>
+                      </FormItem>
+                    )}
+                  />
                 </div>
                 <FormMessage />
               </FormItem>
             )}
           />
 
-          {showFacebookUrlField && (
-            <FormField
-              control={form.control}
-              name="facebookMarketplaceUrl"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Facebook Marketplace URL</FormLabel>
-                  <FormDescription>
-                    Paste the URL of your Facebook Marketplace search results
-                  </FormDescription>
-                  <FormControl>
-                    <Input
-                      placeholder="https://www.facebook.com/marketplace/category/vehicles?..."
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          {/* Facebook Marketplace URL */}
+          {form.watch("websitesSelected")?.includes("facebook") && (
+            <>
+              <FormField
+                control={form.control}
+                name="facebookMarketplaceUrl"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Facebook Marketplace URL</FormLabel>
+                    <FormDescription>
+                      Paste the URL of your Facebook Marketplace search results
+                      here.
+                    </FormDescription>
+                    <FormControl>
+                      <Input
+                        type="text"
+                        placeholder="https://www.facebook.com/marketplace/..."
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <div className="space-y-2">
+                <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                  Need help finding your Facebook Marketplace search link?
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Watch the video below for step-by-step instructions.
+                </p>
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
+                    title="How to copy Facebook Marketplace search link"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </>
           )}
 
+          {/* Update Frequency */}
           <FormField
             control={form.control}
             name="updateFrequency"
@@ -192,7 +264,8 @@ export default function WebsiteSelection({
               <FormItem>
                 <FormLabel>Update Frequency</FormLabel>
                 <FormDescription>
-                  How often should we check for new listings? Higher frequencies may cost more.
+                  How often should we check for new listings? Higher frequencies
+                  may cost more.
                 </FormDescription>
                 <Select
                   onValueChange={field.onChange}
@@ -207,7 +280,8 @@ export default function WebsiteSelection({
                     {FREQUENCY_OPTIONS.map((option) => (
                       <SelectItem key={option.id} value={option.id}>
                         {option.name}
-                        {option.additionalPrice > 0 && ` (+$${option.additionalPrice})`}
+                        {option.additionalPrice > 0 &&
+                          ` (+$${option.additionalPrice})`}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -218,11 +292,7 @@ export default function WebsiteSelection({
           />
 
           <div className="flex justify-between">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={prevStep}
-            >
+            <Button type="button" variant="outline" onClick={prevStep}>
               Previous
             </Button>
             <Button type="submit">Continue</Button>

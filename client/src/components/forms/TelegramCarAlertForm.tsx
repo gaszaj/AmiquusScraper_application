@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { Button } from "@/components/ui/button";
 import blueCar from "@/images/blue_car.webp";
 import redCar from "@/images/red_car.webp";
@@ -28,8 +28,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/use-auth";
 import LoginPromptModal from "@/components/modals/login-prompt";
+import { apiRequest } from "@/lib/queryClient";
+import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 
-type NewComerResponse = {
+export type NewComerResponse = {
   websites: {
     website_names: string[];
     website_objects: {
@@ -45,14 +47,20 @@ type NewComerResponse = {
   };
 };
 
-export default function TelegramCarAlertForm() {
+export default function TelegramCarAlertForm({
+  setClientSecret,
+}: {
+  setClientSecret: Dispatch<SetStateAction<string | null>>;
+}) {
   const [data, setData] = useState<NewComerResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [termsAgreed, setTermsAgreed] = useState(false);
   const { toast } = useToast();
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, isLoading, user } = useAuth();
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const [showLogin, setShowLogin] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   // form fields
   const [carBrands, setCarBrands] = useState<string[]>([]);
@@ -103,6 +111,40 @@ export default function TelegramCarAlertForm() {
     }
   }, [isAuthenticated, isLoading]);
 
+  function calculateBasePrice(form: AlertFormSchema): number {
+    const websitesCount = form.websitesSelected?.length || 0;
+    const frequency = form.updateFrequency || "hourly";
+
+    if (websitesCount === 0) return 0;
+
+    let price = 9.99;
+
+    if (websitesCount > 1) {
+      price += 4.99 * (websitesCount - 1);
+    }
+
+    const frequencyOption = FREQUENCY_OPTIONS.find(
+      (option) => option.id === frequency,
+    );
+    if (frequencyOption?.additionalPrice) {
+      price += frequencyOption.additionalPrice;
+    }
+
+    return price;
+  }
+
+  const websitesSelected = form.watch("websitesSelected");
+  const updateFrequency = form.watch("updateFrequency");
+
+  useEffect(() => {
+    const price = calculateBasePrice({
+      ...form.getValues(),
+      websitesSelected,
+      updateFrequency,
+    });
+    setTotalPrice(price);
+  }, [websitesSelected, updateFrequency]);
+
   useEffect(() => {
     if (!loading) {
       if (data) {
@@ -130,19 +172,7 @@ export default function TelegramCarAlertForm() {
 
   const currentYear = new Date().getFullYear();
 
-  // const handleBrandChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  //   const brand = e.target.value;
-  //   setCarBrand(brand);
-  //   setModels(loadModels(brand));
-  // };
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // Handle form submission logic here
-  //   console.log("Form submitted");
-  // };
-
-  const onSubmit = (values: AlertFormSchema) => {
+  const onSubmit = async (values: AlertFormSchema) => {
     if (!termsAgreed) {
       toast({
         title: "Terms not accepted",
@@ -150,8 +180,108 @@ export default function TelegramCarAlertForm() {
         variant: "destructive",
       });
     }
-    console.log(values);
-    // send to backend or show toast
+
+    if (!user) {
+      setShowLogin(true);
+      return;
+    }
+
+    const subscriptionData = {
+      userId: user.id,
+      websitesSelected: values.websitesSelected,
+      facebookMarketplaceUrl: values.facebookMarketplaceUrl || "",
+      updateFrequency: values.updateFrequency,
+      brand: values.carBrand,
+      model: values.carModel,
+      fuelType: values.fuelType,
+      yearMin: Number(values.yearMin),
+      yearMax: Number(values.yearMax),
+      mileageMin: 0,
+      mileageMax: Number(values.maxKilometers),
+      priceMin: Number(values.priceMin),
+      priceMax: Number(values.priceMax),
+      telegramBotToken: values.telegramToken,
+      telegramChatId: values.telegramChatId,
+      notificationLanguage: values.notificationLanguage,
+      price: totalPrice,
+    };
+
+    setSubmitting(true);
+
+    try {
+      if (user.stripeCustomerId) {
+        const customerResponse = await fetch(
+          `/api/customer/payment-methods?customerId=${user.stripeCustomerId}`,
+        );
+
+        if (!customerResponse.ok) {
+          throw new Error("Failed to fetch payment methods");
+        }
+
+        const data = await customerResponse.json();
+
+        if (!data.hasPaymentMethod) {
+          // use "/api/set-alerts-intent"
+          const response = await apiRequest(
+            "POST",
+            "/api/set-alerts-intent",
+            subscriptionData,
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+            setClientSecret(data.clientSecret);
+          } else {
+            const errorData = await response.json();
+            throw new Error(
+              errorData.message || "Failed to create subscription",
+            );
+          }
+        } else {
+          //subscribe direct
+          const response = await apiRequest(
+            "POST",
+            "/api/subscriptions",
+            subscriptionData,
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+            toast({
+              title: "Subscription created",
+              description: "Your subscription has been created successfully",
+              variant: "default",
+            });
+            // go to dashboard
+            window.location.href = "/dashboard";
+          }
+        }
+      } else {
+        // post to "/api/set-alerts-intent"
+        const response = await apiRequest(
+          "POST",
+          "/api/set-alerts-intent",
+          subscriptionData,
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          setClientSecret(data.clientSecret);
+        } else {
+          const errorData = await response.json();
+          throw new Error(errorData.message || "Failed to create subscription");
+        }
+      }
+    } catch (error) {
+      toast({
+        title: "Error creating subscription",
+        description:
+          error instanceof Error ? error.message : "Please try again",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (loading) {
@@ -583,6 +713,26 @@ export default function TelegramCarAlertForm() {
                   <li>Copy your Chat ID</li>
                 </ol>
               </div>
+              {/* ⬇️ Telegram instructions video */}
+              <div className="space-y-2 my-6">
+                <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                  Need help setting up your Telegram Bot Token and Chat ID?
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Watch the video below for a step-by-step guide.
+                </p>
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                    title="Telegram Setup Instructions"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
 
               {/* Telegram Token Form */}
               <div className="space-y-6">
@@ -742,7 +892,10 @@ export default function TelegramCarAlertForm() {
               <div className="border-t border-neutral-200 dark:border-neutral-700 pt-6 mt-8">
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-neutral-700 dark:text-neutral-300">
-                    Basic Plan (3 websites)
+                    {/* get selected websites length */}
+                    Basic Plan ({form.watch("websitesSelected")?.length ||
+                      0}{" "}
+                    websites)
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
                     $9.99/month
@@ -750,19 +903,46 @@ export default function TelegramCarAlertForm() {
                 </div>
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-neutral-700 dark:text-neutral-300">
-                    Additional websites (2)
+                    Additional websites (
+                    {Math.max(
+                      (form.watch("websitesSelected")?.length || 1) - 1,
+                      0,
+                    )}
+                    )
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
-                    $9.98/month
+                    {/* $9.98/month */}$
+                    {(
+                      Math.max(
+                        (form.watch("websitesSelected")?.length || 1) - 1,
+                        0,
+                      ) * 4.99
+                    ).toFixed(2)}
                   </span>
                 </div>
+                {form.watch("updateFrequency") !== "hourly" && (
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-neutral-700 dark:text-neutral-300">
+                      Update Frequency (
+                      {FREQUENCY_LABELS[form.watch("updateFrequency")]})
+                    </span>
+                    <span className="text-neutral-900 dark:text-white font-medium">
+                      $
+                      {(
+                        FREQUENCY_OPTIONS.find(
+                          (f) => f.id === form.watch("updateFrequency"),
+                        )?.additionalPrice || 0
+                      ).toFixed(2)}
+                    </span>
+                  </div>
+                )}
                 <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-neutral-900 dark:text-white font-medium">
-                      Total
+                      Total (Monthly):
                     </span>
                     <span className="text-primary dark:text-primary font-bold text-xl">
-                      $19.97/month
+                      ${totalPrice.toFixed(2)}
                     </span>
                   </div>
                 </div>
@@ -810,8 +990,13 @@ export default function TelegramCarAlertForm() {
                 <Button
                   type="submit"
                   className="w-full py-3 px-4 bg-primary hover:bg-primary-600 dark:bg-primary dark:hover:bg-primary-600 text-white dark:text-neutral-900 transition font-semibold rounded-xl"
+                  disabled={submitting}
                 >
-                  Start My Car Alert Service
+                  {submitting ? (
+                    <Loader2 className="ml-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    "Start My Car Alert Service"
+                  )}
                 </Button>
                 <p className="text-center text-neutral-500 dark:text-neutral-500 text-sm mt-2">
                   Cancel anytime. 7-day money back guarantee.
@@ -822,7 +1007,10 @@ export default function TelegramCarAlertForm() {
         </Form>
       </div>
       {showLogin && (
-        <LoginPromptModal open={showLogin} onClose={() => setShowLogin(false)} />
+        <LoginPromptModal
+          open={showLogin}
+          onClose={() => setShowLogin(false)}
+        />
       )}
     </section>
   );

@@ -1,12 +1,12 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import Stripe from "stripe";
 import session from "express-session";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
-import MemoryStore from "memorystore";
+import express from "express";
+
 import bcrypt from "bcrypt";
 import {
   subscriptionFormSchema,
@@ -20,6 +20,7 @@ import {
   getVerificationCodeExpiry,
 } from "./libs/utils";
 import { emailService } from "./email-service";
+import Stripe from "stripe";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   console.warn(
@@ -27,17 +28,22 @@ if (!process.env.STRIPE_SECRET_KEY) {
   );
 }
 
-const stripe = process.env.STRIPE_SECRET_KEY
-  ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2023-10-16" })
-  : undefined;
+// const stripe = process.env.STRIPE_SECRET_KEY
+//   ? new Stripe(process.env.STRIPE_SECRET_KEY)
+//   : undefined;
 
-const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || ""
+const stripe = new Stripe(
+  "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
+);
 
-const JSON_BASE_URL = process.env.JSON_BASE_URL || "https://apiamiquus.amiquus.com/JSON_FILES_FOLDER"
 
-const BEARER_TOKEN = process.env.BEARER_TOKEN || ""
+const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || "";
 
-const MemorySessionStore = MemoryStore(session);
+const JSON_BASE_URL =
+  process.env.JSON_BASE_URL ||
+  "https://apiamiquus.amiquus.com/JSON_FILES_FOLDER";
+
+const BEARER_TOKEN = process.env.BEARER_TOKEN || "";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Session setup
@@ -50,9 +56,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         secure: process.env.NODE_ENV === "production",
         maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
       },
-      store: new MemorySessionStore({
-        checkPeriod: 86400000, // prune expired entries every 24h
-      }),
+      store: storage.sessionStore, // Use PostgreSQL to store sessions
     }),
   );
 
@@ -163,20 +167,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   async function verifyCaptcha(token: string): Promise<boolean> {
-    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+    const response = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `secret=${RECAPTCHA_SITE_SECRET}&response=${token}`,
       },
-      body: `secret=${RECAPTCHA_SITE_SECRET}&response=${token}`,
-    });
+    );
 
     const data = await response.json();
-    console.log("Captcha verification result:",data)
+    console.log("Captcha verification result:", data);
     return data.success;
   }
-
-
+  
   // Auth routes
   app.post("/api/auth/register", async (req, res) => {
     try {
@@ -387,9 +393,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const isValidCaptcha = await verifyCaptcha(captchaToken);
-        if (!isValidCaptcha) {
-          return res.status(400).json({ message: "Captcha verification failed" });
-        }
+      if (!isValidCaptcha) {
+        return res.status(400).json({ message: "Captcha verification failed" });
+      }
 
       passport.authenticate("local", (err, user, info) => {
         if (err) {
@@ -423,21 +429,33 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Start OAuth flow
-  app.get(
-    "/api/auth/google",
-    passport.authenticate("google", { scope: ["profile", "email"] })
-  );
+  app.get("/api/auth/google", (req, res, next) => {
+    const redirectRaw = req.query.redirect;
+    const redirect = typeof redirectRaw === "string" ? redirectRaw : undefined;
+
+    console.log("Redirect via state param:", redirect);
+
+    passport.authenticate("google", {
+      scope: ["profile", "email"],
+      state: redirect,
+    })(req, res, next);
+  });
 
   // Handle OAuth callback
   app.get(
     "/api/auth/google/callback",
     passport.authenticate("google", { failureRedirect: "/login" }),
     (req, res) => {
-      // You can dynamically redirect based on query string if needed
-      res.redirect("/dashboard");
-    }
-  );
+      const state = req.query.state;
+      const redirectTo =
+        typeof state === "string" && state.startsWith("/")
+          ? state
+          : `/${state || "dashboard"}`;
 
+      console.log("Redirecting to:", redirectTo);
+      res.redirect(redirectTo);
+    },
+  );
 
   app.post("/api/auth/logout", (req, res) => {
     req.logout((err) => {
@@ -456,35 +474,94 @@ export async function registerRoutes(app: Express): Promise<Server> {
         verificationCodeExpiry,
         ...userWithoutPassword
       } = req.user as any;
-      return res.json({ user: userWithoutPassword });
+      const hasPassword = !!password
+      return res.json({ user: {...userWithoutPassword, hasPassword} });
     }
     return res.status(401).json({ message: "Not authenticated" });
   });
 
   // Subscription routes
-  app.post("/api/subscriptions", async (req, res) => {
+  // list payment methods
+  app.get("/api/customer/payment-methods", async (req, res) => {
+    const { customerId } = req.query;
+
+    if (!stripe) {
+      return res.status(500).json({ message: "Stripe is not configured" });
+    }
+
+    if (!customerId || typeof customerId !== "string") {
+      return res.status(400).json({ error: "Customer ID is required" });
+    }
+
+    const paymentMethods = await stripe.customers.listPaymentMethods(
+      customerId,
+      { limit: 1 },
+    );
+    if (!paymentMethods) {
+      return res.status(200).json({ hasPaymentMethod: false });
+    }
+    if (paymentMethods.data.length === 0) {
+      return res.status(200).json({ hasPaymentMethod: false });
+    }
+    const paymentMethod = paymentMethods.data[0];
+    if (!paymentMethod) {
+      return res.status(200).json({ hasPaymentMethod: false });
+    }
+    return res.status(200).json({
+      hasPaymentMethod: true,
+      paymentMethod,
+    });
+  });
+
+  app.post("/api/set-alerts-intent", async (req, res) => {
     try {
       if (!req.isAuthenticated()) {
         return res.status(401).json({ message: "Authentication required" });
       }
 
-      const data = subscriptionFormSchema.parse(req.body);
+      const data = req.body;
       const userId = (req.user as any).id;
 
+      if (!stripe) {
+        return res.status(500).json({ message: "Stripe is not configured" });
+      }
+
       // Create Stripe customer if not exists
-      if (stripe) {
-        const user = req.user as any;
-        let customerId = user.stripeCustomerId;
 
-        if (!customerId) {
-          const customer = await stripe.customers.create({
-            email: user.email,
-            name: `${data.firstName} ${data.lastName}`,
-          });
+      const user = req.user as any;
+      let customerId = user.stripeCustomerId;
 
-          customerId = customer.id;
-          await storage.updateUserStripeCustomerId(userId, customerId);
-        }
+      if (!customerId) {
+        const customer = await stripe.customers.create({
+          email: user.email,
+          name: `${user.firstName} ${user.lastName}`,
+          metadata: {
+            userId: user.id.toString(),
+          },
+        });
+
+        customerId = customer.id;
+        await storage.updateUserStripeCustomerId(userId, customerId);
+      }
+      // Convert dollars to cents
+      const unitAmountInCents = Math.round(data.price * 100);
+
+      const price = await stripe.prices.create({
+        currency: "usd",
+        unit_amount: unitAmountInCents,
+        recurring: {
+          interval: "month",
+        },
+        product_data: {
+          name: `Amiquus Subscription - ${data.brand}`,
+        },
+        metadata: {
+          userId: userId.toString(),
+        },
+      });
+
+      if (!price) {
+        return res.status(500).json({ message: "Failed to create price" });
       }
 
       // Create subscription
@@ -505,11 +582,159 @@ export async function registerRoutes(app: Express): Promise<Server> {
         telegramBotToken: data.telegramBotToken,
         telegramChatId: data.telegramChatId,
         notificationLanguage: data.notificationLanguage,
-        price: data.price,
+        price: unitAmountInCents,
+        status: "pending",
+        stripePriceId: price.id,
       });
 
-      return res.status(201).json(subscription);
+      console.log("Subscription created:", subscription);
+
+      if (!subscription) {
+        return res
+          .status(500)
+          .json({ message: "Failed to create subscription" });
+      }
+
+      // get User
+      const updatedUser = await storage.getUser(userId);
+
+      if (!updatedUser || !updatedUser.stripeCustomerId) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      // Create payment intent
+      const setupIntent = await stripe.setupIntents.create({
+        customer: updatedUser.stripeCustomerId,
+        automatic_payment_methods: {
+          enabled: true,
+        },
+        metadata: {
+          userId,
+          userSubscriptionId: subscription.id,
+        },
+      });
+
+      res.status(200).json({ clientSecret: setupIntent.client_secret });
     } catch (error) {
+      if (error instanceof ZodError) {
+        const validationError = fromZodError(error);
+        return res.status(400).json({ message: validationError.message });
+      }
+      return res.status(500).json({ message: "Failed to create subscription" });
+    }
+  });
+
+  // if user has payment method
+  app.post("/api/subscriptions", async (req, res) => {
+    try {
+      if (!req.isAuthenticated()) {
+        return res.status(401).json({ message: "Authentication required" });
+      }
+
+      const data = req.body;
+      const userId = (req.user as any).id;
+
+      if (!stripe) {
+        return res.status(500).json({ message: "Stripe is not configured" });
+      }
+
+      // Create Stripe customer if not exists
+      const user = req.user as any;
+      let customerId = user.stripeCustomerId;
+
+      if (!customerId) {
+        const customer = await stripe.customers.create({
+          email: user.email,
+          name: `${user.firstName} ${user.lastName}`,
+          metadata: {
+            userId: user.id.toString(),
+          },
+        });
+
+        customerId = customer.id;
+        await storage.updateUserStripeCustomerId(userId, customerId);
+      }
+
+      // Convert dollars to cents
+      const unitAmountInCents = Math.round(data.price * 100);
+
+      const price = await stripe.prices.create({
+        currency: "usd",
+        unit_amount: unitAmountInCents,
+        recurring: {
+          interval: "month",
+        },
+        product_data: {
+          name: `Amiquus Subscription - ${data.brand}`,
+        },
+        metadata: {
+          userId: userId.toString(),
+        },
+      });
+
+      if (!price) {
+        return res.status(500).json({ message: "Failed to create price" });
+      }
+
+      // Get payment methods
+      const paymentMethods = await stripe.customers.listPaymentMethods(customerId, {
+        type: "card",
+        limit: 1,
+      });
+
+      if (!paymentMethods.data.length) {
+        return res.status(400).json({
+          message: "No payment method found. Please add a payment method before subscribing.",
+        });
+      }
+
+      // Create subscription
+      const dbSubscription = await storage.createSubscription({
+        userId,
+        websitesSelected: data.websitesSelected,
+        facebookMarketplaceUrl: data.facebookMarketplaceUrl,
+        updateFrequency: data.updateFrequency,
+        brand: data.brand,
+        model: data.model,
+        fuelType: data.fuelType,
+        yearMin: data.yearMin,
+        yearMax: data.yearMax,
+        mileageMin: data.mileageMin,
+        mileageMax: data.mileageMax,
+        priceMin: data.priceMin,
+        priceMax: data.priceMax,
+        telegramBotToken: data.telegramBotToken,
+        telegramChatId: data.telegramChatId,
+        notificationLanguage: data.notificationLanguage,
+        price: unitAmountInCents,
+        status: "pending",
+        stripePriceId: price.id,
+      });
+
+      console.log("Subscription created:", dbSubscription);
+
+      if (!dbSubscription) {
+        return res
+          .status(500)
+          .json({ message: "Failed to create subscription" });
+      }
+
+
+      // Create Stripe subscription with default payment method
+      await stripe.subscriptions.create({
+        customer: customerId,
+        items: [{ price: price.id }],
+        default_payment_method: paymentMethods.data[0].id,
+        metadata: {
+          userId: userId.toString(),
+          userSubscriptionId: dbSubscription.id.toString(),
+        },
+      });
+
+
+      return res.status(201).json(dbSubscription);
+    } catch (error) {
+      console.log("Error creating subscription:", error);
       if (error instanceof ZodError) {
         const validationError = fromZodError(error);
         return res.status(400).json({ message: validationError.message });
@@ -574,7 +799,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         await stripe.subscriptions.cancel(subscription.stripeSubscriptionId);
       }
 
-      await storage.deleteSubscription(subscriptionId);
+      // await storage.deleteSubscription(subscriptionId);
 
       return res
         .status(200)
@@ -596,7 +821,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           headers: {
             Authorization: `Bearer ${BEARER_TOKEN}`, // your token
           },
-        }
+        },
       );
 
       const text = await response.text();
@@ -613,7 +838,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ error: "Failed to fetch from remote server" });
     }
   });
-
 
   // Stripe payment intent creation
   app.post("/api/create-payment-intent", async (req, res) => {

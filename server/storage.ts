@@ -9,6 +9,8 @@ import {
   InsertSubscription,
   lower
 } from "@shared/schema";
+import session from "express-session";
+import connectPg from "connect-pg-simple";
 
 // Interface for all storage operations
 export interface IStorage {
@@ -38,7 +40,35 @@ export interface IStorage {
   getActiveSubscriptionCount(): Promise<number>;
 }
 
+// Import required modules for session storage
+import { pool } from "./db";
+import * as pg from "pg";
+const PostgresStore = connectPg(session);
+
 export class DrizzleStorage implements IStorage {
+  sessionStore: session.Store;
+
+  constructor() {
+    console.log("Initialized DatabaseStorage for persistent data storage");
+    try {
+      // Create session store using PostgreSQL
+      // Cast the pool to pg.Pool since connect-pg-simple expects that type
+      this.sessionStore = new PostgresStore({
+        pool: pool as unknown as pg.Pool,
+        tableName: "session",
+        createTableIfMissing: true,
+        schemaName: "public",
+      });
+      console.log("PostgreSQL session store initialized successfully");
+    } catch (error) {
+      console.error("Error initializing PostgreSQL session store:", error);
+      // Fallback to memory store if PostgreSQL store fails
+      const MemoryStore = session.MemoryStore;
+      this.sessionStore = new MemoryStore();
+      console.log("Fallback to memory session store");
+    }
+  }
+  
   async getUser(id: number) {
     const result = await db
       .select()
@@ -112,9 +142,24 @@ export class DrizzleStorage implements IStorage {
   }
 
   async createSubscription(sub: InsertSubscription) {
-    const result = await db.insert(subscriptions).values(sub).returning();
-    return result[0];
+    try {
+      const [result] = await db
+        .insert(subscriptions)
+        .values(sub)
+        .returning();
+
+      return result;
+    } catch (error) {
+      console.error("Error creating subscription:", {
+        message: (error as any)?.message,
+        details: error,
+        data: sub,
+      });
+
+      throw new Error("Failed to create subscription");
+    }
   }
+
 
   async getSubscription(id: number) {
     const result = await db
