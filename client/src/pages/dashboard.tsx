@@ -123,7 +123,7 @@ export default function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen mt-16">
       {/* <Header /> */}
-      <main className="flex-grow py-10 bg-neutral-50">
+      <main className="flex-grow py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
@@ -133,8 +133,7 @@ export default function Dashboard() {
               </p>
             </div>
             <Button
-              onClick={() => setLocation("/signup")}
-              className="bg-primary-600 hover:bg-primary-700"
+              onClick={() => setLocation("/setup-alerts")}
             >
               <Plus size={16} className="mr-2" /> New Car Alert
             </Button>

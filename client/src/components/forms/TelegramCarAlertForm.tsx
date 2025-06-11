@@ -150,11 +150,11 @@ export default function TelegramCarAlertForm({
       if (data) {
         setCarBrands(Object.keys(data.brands_and_models));
         setFuelTypes(data.fuel_types);
-        setWebsites(Object.keys(data.websites.website_objects));
+        setWebsites(data.websites.website_names);
       } else {
         setCarBrands(Object.keys(newcomerDefault.brands_and_models));
         setFuelTypes(newcomerDefault.fuel_types);
-        setWebsites(Object.keys(newcomerDefault.websites.website_objects));
+        setWebsites(newcomerDefault.websites.website_names);
       }
     }
   }, [data, loading]);

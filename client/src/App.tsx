@@ -19,7 +19,7 @@ import Checkout from "@/pages/checkout";
 import Subscribe from "@/pages/subscribe";
 import SetupAlerts from "@/pages/setup-alerts";
 import Profile from "@/pages/Profile";
-import TestProfile from "@/pages/test-profile";
+import NewProfile from "@/pages/new-profile";
 import Waitlist from "@/pages/waitlist";
 import Blog from "@/pages/blog";
 import Careers from "@/pages/careers";
@@ -39,8 +39,9 @@ function Router() {
       <Route path="/checkout" component={Checkout} />
       <Route path="/subscribe" component={Subscribe} />
       <Route path="/setup-alerts" component={SetupAlerts} />
-      <Route path="/profile" component={Profile} />
-      <Route path="/test-profile" component={TestProfile} />
+      <ProtectedRoute path="/profile" component={NewProfile} />
+      <Route path="/old-profile" component={Profile} />
+      {/* <Route path="/test-profile" component={NewProfile} /> */}
       <Route path="/about" component={About} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />

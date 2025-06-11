@@ -36,7 +36,6 @@ const stripe = new Stripe(
   "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
 );
 
-
 const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || "";
 
 const JSON_BASE_URL =
@@ -182,7 +181,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     console.log("Captcha verification result:", data);
     return data.success;
   }
-  
+
   // Auth routes
   app.post("/api/auth/register", async (req, res) => {
     try {
@@ -474,11 +473,85 @@ export async function registerRoutes(app: Express): Promise<Server> {
         verificationCodeExpiry,
         ...userWithoutPassword
       } = req.user as any;
-      const hasPassword = !!password
-      return res.json({ user: {...userWithoutPassword, hasPassword} });
+      const hasPassword = !!password;
+      return res.json({ user: { ...userWithoutPassword, hasPassword } });
     }
     return res.status(401).json({ message: "Not authenticated" });
   });
+
+  // Change password route
+  app.post("/api/user/change-password", async (req, res) => {
+    try {
+      if (!req.isAuthenticated?.()) {
+        return res.status(401).json({ message: "Authentication required" });
+      }
+
+      const user = req.user as any;
+      const { currentPassword, newPassword, confirmPassword } = req.body;
+
+      if (!newPassword || !confirmPassword) {
+        return res.status(400).json({ message: "New password fields are required" });
+      }
+
+      if (newPassword !== confirmPassword) {
+        return res.status(400).json({ message: "New passwords do not match" });
+      }
+
+      // If user has a password, verify current password
+      if (user.password) {
+        const isValid = await bcrypt.compare(currentPassword, user.password);
+        if (!isValid) {
+          return res.status(400).json({ message: "Current password is incorrect" });
+        }
+      }
+
+      // Hash and update the new password
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      await storage.updateUser(user.id, { password: hashedPassword });
+
+      return res.status(200).json({ message: "Password updated successfully" });
+    } catch (error: any) {
+      console.error("Error changing password:", error);
+      return res.status(500).json({ message: "Failed to change password" });
+    }
+  });
+
+  app.post("/api/user/update-profile", async (req, res) => {
+    try {
+      if (!req.isAuthenticated?.()) {
+        return res.status(401).json({ message: "Authentication required" });
+      }
+
+      const userId = (req.user as any).id;
+      const existingUser = await storage.getUser(userId);
+      const { email, username, firstName, lastName } = req.body;
+
+      // Prevent email update if Google user with no password
+      const isGoogleOnlyUser = !!existingUser.googleId && !existingUser.password;
+      const emailChanged = email && email !== existingUser.email;
+
+      if (isGoogleOnlyUser && emailChanged) {
+        return res.status(400).json({
+          message:
+            "You signed in with Google. Please set a password before changing your email.",
+        });
+      }
+
+      await storage.updateUser(userId, {
+        email,
+        username,
+        firstName,
+        lastName,
+      });
+
+      return res.status(200).json({ message: "Profile updated successfully." });
+    } catch (err: any) {
+      console.error("Profile update failed:", err);
+      return res.status(500).json({ message: "Failed to update profile." });
+    }
+  });
+
+
 
   // Subscription routes
   // list payment methods
@@ -677,14 +750,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       // Get payment methods
-      const paymentMethods = await stripe.customers.listPaymentMethods(customerId, {
-        type: "card",
-        limit: 1,
-      });
+      const paymentMethods = await stripe.customers.listPaymentMethods(
+        customerId,
+        {
+          type: "card",
+          limit: 1,
+        },
+      );
 
       if (!paymentMethods.data.length) {
         return res.status(400).json({
-          message: "No payment method found. Please add a payment method before subscribing.",
+          message:
+            "No payment method found. Please add a payment method before subscribing.",
         });
       }
 
@@ -719,7 +796,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
           .json({ message: "Failed to create subscription" });
       }
 
-
       // Create Stripe subscription with default payment method
       await stripe.subscriptions.create({
         customer: customerId,
@@ -730,7 +806,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
           userSubscriptionId: dbSubscription.id.toString(),
         },
       });
-
 
       return res.status(201).json(dbSubscription);
     } catch (error) {
@@ -809,6 +884,61 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // update subscription
+  app.put("/api/subscriptions/:id", async (req, res) => {
+    try {
+      if (!req.isAuthenticated?.()) {
+        return res.status(401).json({ message: "Authentication required" });
+      }
+
+      const userId = (req.user as any).id;
+      const subscriptionId = parseInt(req.params.id);
+      const { id, createdAt, updatedAt, ...data } = req.body; // ⬅️ Remove `id`, `createdAt`, `updatedAt` if present
+
+
+      const subscription = await storage.getSubscription(subscriptionId);
+
+      if (!subscription || subscription.userId !== userId) {
+        return res.status(404).json({ message: "Subscription not found" });
+      }
+
+      // Handle Stripe pause
+      if (data.status === "paused") {
+        const stripeSubId =
+          subscription.stripeSubscriptionId || data.stripeSubscriptionId;
+
+        if (stripeSubId) {
+          const stripeSubscription =
+            await stripe.subscriptions.retrieve(stripeSubId);
+
+          if (stripeSubscription.status === "active") {
+            await stripe.subscriptions.update(stripeSubId, {
+              pause_collection: {
+                behavior: "void",
+              },
+            });
+          }
+        } else {
+          return res
+            .status(400)
+            .json({ message: "Stripe subscription ID is missing" });
+        }
+      }
+
+      
+
+      // Update your DB subscription
+      await storage.updateSubscription(subscriptionId, data);
+
+      return res
+        .status(200)
+        .json({ message: "Subscription updated successfully" });
+    } catch (error: any) {
+      console.error("Error updating subscription:", error);
+      return res.status(500).json({ message: "Failed to update subscription" });
+    }
+  });
+
   // api fetches
   app.get("/api/newcommer", async (req, res) => {
     if (!BEARER_TOKEN) {
@@ -828,6 +958,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       try {
         const data = JSON.parse(text);
+        // console.log("Newcommer data:", data)
         res.json(data);
       } catch (jsonError) {
         console.error("Not valid JSON. Response was:", text);

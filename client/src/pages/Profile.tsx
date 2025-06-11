@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,23 +19,23 @@ import { queryClient } from "@/lib/queryClient";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { User, Subscription } from "@shared/schema";
-import { 
-  CreditCard, 
-  UserCircle, 
-  Settings, 
-  LogOut, 
-  AlertCircle, 
-  Edit, 
-  Trash2, 
-  Plus, 
-  Calendar, 
-  Tag, 
-  RefreshCw, 
+import {
+  CreditCard,
+  UserCircle,
+  Settings,
+  LogOut,
+  AlertCircle,
+  Edit,
+  Trash2,
+  Plus,
+  Calendar,
+  Tag,
+  RefreshCw,
   Bell,
-  ShieldCheck
+  ShieldCheck,
 } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
-import { 
+import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -37,11 +44,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { useElements, useStripe, PaymentElement, Elements } from "@stripe/react-stripe-js";
+import {
+  useElements,
+  useStripe,
+  PaymentElement,
+  Elements,
+} from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
 // Load Stripe
-const stripePromise = loadStripe( 'pk_test_51R7GaAKTt4KB6Gxykv1ZJ3j8VqeEcLx1lpbfrb8XmzpRhzi7ljw0EpMBSR56ChCrQFIXS9nsPKUn9L0x7vXJH90R00EkcJodyl');
+const stripePromise = loadStripe(
+  "pk_test_51R7GaAKTt4KB6Gxykv1ZJ3j8VqeEcLx1lpbfrb8XmzpRhzi7ljw0EpMBSR56ChCrQFIXS9nsPKUn9L0x7vXJH90R00EkcJodyl",
+);
 
 // Payment Method Form component
 function AddPaymentMethodForm() {
@@ -49,16 +63,16 @@ function AddPaymentMethodForm() {
   const elements = useElements();
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!stripe || !elements) {
       return;
     }
-    
+
     setIsProcessing(true);
-    
+
     try {
       const { error } = await stripe.confirmSetup({
         elements,
@@ -66,7 +80,7 @@ function AddPaymentMethodForm() {
           return_url: `${window.location.origin}/profile?tab=billing`,
         },
       });
-      
+
       if (error) {
         toast({
           title: "Error adding payment method",
@@ -84,13 +98,13 @@ function AddPaymentMethodForm() {
       setIsProcessing(false);
     }
   };
-  
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <PaymentElement />
-      <Button 
-        type="submit" 
-        disabled={!stripe || isProcessing} 
+      <Button
+        type="submit"
+        disabled={!stripe || isProcessing}
         className="w-full mt-4"
       >
         {isProcessing ? "Processing..." : "Add Payment Method"}
@@ -109,9 +123,11 @@ function AddPaymentMethodDialog() {
     // passing the SetupIntent's client secret
     clientSecret: clientSecret,
     // Fully customizable with appearance API.
-    appearance: {/*...*/},
+    appearance: {
+      /*...*/
+    },
   };
-  
+
   const handleOpen = async () => {
     setIsOpen(true);
     // Get setup intent from backend
@@ -129,7 +145,7 @@ function AddPaymentMethodDialog() {
       setIsOpen(false);
     }
   };
-  
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
@@ -160,41 +176,56 @@ function AddPaymentMethodDialog() {
 }
 
 // Subscription Card
-function SubscriptionCard({ subscription, onCancel, onEdit }: { 
-  subscription: Subscription, 
-  onCancel: (id: number) => void,
-  onEdit: (subscription: Subscription) => void
+function SubscriptionCard({
+  subscription,
+  onCancel,
+  onEdit,
+}: {
+  subscription: Subscription;
+  onCancel: (id: number) => void;
+  onEdit: (subscription: Subscription) => void;
 }) {
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
-  
+
   const formatWebsites = (websites: string[]) => {
     if (!websites || websites.length === 0) return "None";
     if (websites.length <= 2) return websites.join(", ");
     return `${websites.slice(0, 2).join(", ")} +${websites.length - 2} more`;
   };
-  
+
   const formatDate = (dateString: string | Date) => {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
-  
+
   return (
     <Card className="border border-neutral-200 dark:border-neutral-700 shadow-sm hover:shadow-md transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <div>
             <CardTitle className="flex items-center gap-2 text-neutral-900 dark:text-white">
-              <span>{subscription.brand || "Any"} {subscription.model || "Any"}</span>
-              <Badge variant="outline" className="ml-2 bg-primary/10 text-primary border-primary/20">
+              <span>
+                {subscription.brand || "Any"} {subscription.model || "Any"}
+              </span>
+              <Badge
+                variant="outline"
+                className="ml-2 bg-primary/10 text-primary border-primary/20"
+              >
                 {subscription.status}
               </Badge>
             </CardTitle>
-            <CardDescription>Created on {formatDate(subscription.createdAt)}</CardDescription>
+            <CardDescription>
+              Created on {formatDate(subscription.createdAt)}
+            </CardDescription>
           </div>
           <div className="flex gap-2">
-            <Button 
-              variant="outline" 
-              size="sm" 
+            <Button
+              variant="outline"
+              size="sm"
               onClick={() => onEdit(subscription)}
               className="text-sm border-neutral-200 dark:border-neutral-700"
             >
@@ -203,9 +234,9 @@ function SubscriptionCard({ subscription, onCancel, onEdit }: {
             </Button>
             <Dialog open={isConfirmOpen} onOpenChange={setIsConfirmOpen}>
               <DialogTrigger asChild>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <Button
+                  variant="outline"
+                  size="sm"
                   className="text-sm border-neutral-200 dark:border-neutral-700 text-red-600 dark:text-red-400 hover:text-red-700"
                 >
                   <Trash2 size={14} className="mr-1" />
@@ -216,17 +247,18 @@ function SubscriptionCard({ subscription, onCancel, onEdit }: {
                 <DialogHeader>
                   <DialogTitle>Cancel Subscription</DialogTitle>
                   <DialogDescription>
-                    Are you sure you want to cancel this subscription? This action cannot be undone.
+                    Are you sure you want to cancel this subscription? This
+                    action cannot be undone.
                   </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     onClick={() => setIsConfirmOpen(false)}
                   >
                     Keep Subscription
                   </Button>
-                  <Button 
+                  <Button
                     variant="destructive"
                     onClick={() => {
                       onCancel(subscription.id);
@@ -271,12 +303,14 @@ function SubscriptionCard({ subscription, onCancel, onEdit }: {
             </p>
           </div>
         </div>
-        
+
         <Separator className="my-4" />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>
-            <p className="text-neutral-500 dark:text-neutral-400 mb-1">Price Range</p>
+            <p className="text-neutral-500 dark:text-neutral-400 mb-1">
+              Price Range
+            </p>
             <p className="font-medium text-neutral-900 dark:text-white">
               {subscription.priceMin && subscription.priceMax
                 ? `$${subscription.priceMin.toLocaleString()} - $${subscription.priceMax.toLocaleString()}`
@@ -284,7 +318,9 @@ function SubscriptionCard({ subscription, onCancel, onEdit }: {
             </p>
           </div>
           <div>
-            <p className="text-neutral-500 dark:text-neutral-400 mb-1">Year Range</p>
+            <p className="text-neutral-500 dark:text-neutral-400 mb-1">
+              Year Range
+            </p>
             <p className="font-medium text-neutral-900 dark:text-white">
               {subscription.yearMin && subscription.yearMax
                 ? `${subscription.yearMin} - ${subscription.yearMax}`
@@ -298,16 +334,16 @@ function SubscriptionCard({ subscription, onCancel, onEdit }: {
 }
 
 // Payment Method Card
-function PaymentMethodCard({ 
-  method, 
-  isDefault, 
-  onSetDefault, 
-  onRemove 
-}: { 
-  method: any, 
-  isDefault: boolean, 
-  onSetDefault: () => void, 
-  onRemove: () => void 
+function PaymentMethodCard({
+  method,
+  isDefault,
+  onSetDefault,
+  onRemove,
+}: {
+  method: any;
+  isDefault: boolean;
+  onSetDefault: () => void;
+  onRemove: () => void;
 }) {
   return (
     <Card className="border border-neutral-200 dark:border-neutral-700 shadow-sm">
@@ -319,9 +355,13 @@ function PaymentMethodCard({
             </div>
             <div>
               <p className="font-medium text-neutral-900 dark:text-white flex items-center">
-                {method.brand.charAt(0).toUpperCase() + method.brand.slice(1)} •••• {method.last4}
+                {method.brand.charAt(0).toUpperCase() + method.brand.slice(1)}{" "}
+                •••• {method.last4}
                 {isDefault && (
-                  <Badge variant="outline" className="ml-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800">
+                  <Badge
+                    variant="outline"
+                    className="ml-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800"
+                  >
                     Default
                   </Badge>
                 )}
@@ -331,21 +371,21 @@ function PaymentMethodCard({
               </p>
             </div>
           </div>
-          
+
           <div className="flex space-x-2">
             {!isDefault && (
-              <Button 
-                variant="outline" 
-                size="sm" 
+              <Button
+                variant="outline"
+                size="sm"
                 onClick={onSetDefault}
                 className="text-sm border-neutral-200 dark:border-neutral-700"
               >
                 Set Default
               </Button>
             )}
-            <Button 
-              variant="outline" 
-              size="sm" 
+            <Button
+              variant="outline"
+              size="sm"
               onClick={onRemove}
               className="text-sm border-neutral-200 dark:border-neutral-700 text-red-600 dark:text-red-400 hover:text-red-700"
             >
@@ -364,7 +404,7 @@ export default function Profile() {
   const [, navigate] = useLocation();
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState("account");
-  
+
   // Form state
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -372,52 +412,60 @@ export default function Profile() {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  
+
   // Payment methods
-  const { data: paymentMethods, isLoading: isLoadingPayments } = useQuery<any[]>({
+  const { data: paymentMethods, isLoading: isLoadingPayments } = useQuery<
+    any[]
+  >({
     queryKey: ["/api/payment-methods"],
     enabled: isAuthenticated && !!user,
     // For demo purposes only, this would be replaced with actual backend API call
-    placeholderData: user ? [
-      { 
-        id: 'pm_123', 
-        brand: 'visa', 
-        last4: '4242', 
-        expMonth: 12, 
-        expYear: 2025, 
-        isDefault: true
-      }
-    ] : []
+    placeholderData: user
+      ? [
+          {
+            id: "pm_123",
+            brand: "visa",
+            last4: "4242",
+            expMonth: 12,
+            expYear: 2025,
+            isDefault: true,
+          },
+        ]
+      : [],
   });
-  
+
   // Subscriptions query
-  const { data: subscriptions, isLoading: isLoadingSubscriptions } = useQuery<Subscription[]>({
+  const { data: subscriptions, isLoading: isLoadingSubscriptions } = useQuery<
+    Subscription[]
+  >({
     queryKey: ["/api/subscriptions"],
     enabled: isAuthenticated && !!user,
     // For demo purposes only, this would be replaced with actual backend API call
-    placeholderData: user ? [
-      {
-        id: 1,
-        userId: 1,
-        status: "active",
-        brand: "Toyota",
-        model: "Camry",
-        fuelType: "gasoline",
-        yearMin: 2018,
-        yearMax: 2023,
-        priceMin: 15000,
-        priceMax: 30000,
-        websitesSelected: ["AutoTrader", "Cars.com", "CarGurus"],
-        updateFrequency: "hourly",
-        telegramBotToken: "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11",
-        telegramChatId: "123456789",
-        price: 1999, // $19.99 stored in cents
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      } as Subscription
-    ] : []
+    placeholderData: user
+      ? [
+          {
+            id: 1,
+            userId: 1,
+            status: "active",
+            brand: "Toyota",
+            model: "Camry",
+            fuelType: "gasoline",
+            yearMin: 2018,
+            yearMax: 2023,
+            priceMin: 15000,
+            priceMax: 30000,
+            websitesSelected: ["AutoTrader", "Cars.com", "CarGurus"],
+            updateFrequency: "hourly",
+            telegramBotToken: "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11",
+            telegramChatId: "123456789",
+            price: 1999, // $19.99 stored in cents
+            createdAt: new Date(),
+            updatedAt: new Date(),
+          } as Subscription,
+        ]
+      : [],
   });
-  
+
   // Fill form with user data
   useEffect(() => {
     if (user) {
@@ -426,26 +474,33 @@ export default function Profile() {
       setEmail(user.email || "");
     }
   }, [user]);
-  
+
   // Parse URL query parameter for active tab
   useEffect(() => {
     const url = new URL(window.location.href);
     const tab = url.searchParams.get("tab");
-    if (tab && ["account", "billing", "subscriptions", "settings"].includes(tab)) {
+    if (
+      tab &&
+      ["account", "billing", "subscriptions", "settings"].includes(tab)
+    ) {
       setActiveTab(tab);
     }
   }, []);
-  
+
   // Redirect if not authenticated
   useEffect(() => {
     if (!isAuthenticated && !user) {
       navigate("/login");
     }
   }, [isAuthenticated, user, navigate]);
-  
+
   // Update profile mutation
   const updateProfileMutation = useMutation({
-    mutationFn: async (profileData: { firstName: string; lastName: string; email: string }) => {
+    mutationFn: async (profileData: {
+      firstName: string;
+      lastName: string;
+      email: string;
+    }) => {
       return await apiRequest("PATCH", "/api/user/profile", profileData);
     },
     onSuccess: () => {
@@ -458,16 +513,23 @@ export default function Profile() {
     onError: (error) => {
       toast({
         title: "Error updating profile",
-        description: error instanceof Error ? error.message : "Please try again",
+        description:
+          error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
     },
   });
-  
+
   // Change password mutation
   const changePasswordMutation = useMutation({
-    mutationFn: async (passwordData: { currentPassword: string; newPassword: string }) => {
-      return await apiRequest("POST", "/api/user/change-password", passwordData);
+    mutationFn: async (passwordData: {
+      currentPassword: string;
+      newPassword: string;
+    }) => {
+      return await apiRequest("POST", "/api/user/change-password", {
+        ...passwordData,
+        confirmPassword: passwordData.newPassword,
+      });
     },
     onSuccess: () => {
       toast({
@@ -481,16 +543,20 @@ export default function Profile() {
     onError: (error) => {
       toast({
         title: "Error changing password",
-        description: error instanceof Error ? error.message : "Please try again",
+        description:
+          error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
     },
   });
-  
+
   // Remove payment method mutation
   const removePaymentMethodMutation = useMutation({
     mutationFn: async (paymentMethodId: string) => {
-      return await apiRequest("DELETE", `/api/payment-methods/${paymentMethodId}`);
+      return await apiRequest(
+        "DELETE",
+        `/api/payment-methods/${paymentMethodId}`,
+      );
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/payment-methods"] });
@@ -502,33 +568,39 @@ export default function Profile() {
     onError: (error) => {
       toast({
         title: "Error removing payment method",
-        description: error instanceof Error ? error.message : "Please try again",
+        description:
+          error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
     },
   });
-  
+
   // Set default payment method mutation
   const setDefaultPaymentMethodMutation = useMutation({
     mutationFn: async (paymentMethodId: string) => {
-      return await apiRequest("POST", `/api/payment-methods/${paymentMethodId}/default`);
+      return await apiRequest(
+        "POST",
+        `/api/payment-methods/${paymentMethodId}/default`,
+      );
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/payment-methods"] });
       toast({
         title: "Default payment method updated",
-        description: "Your default payment method has been updated successfully",
+        description:
+          "Your default payment method has been updated successfully",
       });
     },
     onError: (error) => {
       toast({
         title: "Error updating default payment method",
-        description: error instanceof Error ? error.message : "Please try again",
+        description:
+          error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
     },
   });
-  
+
   // Cancel subscription mutation
   const cancelSubscriptionMutation = useMutation({
     mutationFn: async (subscriptionId: number) => {
@@ -544,22 +616,23 @@ export default function Profile() {
     onError: (error) => {
       toast({
         title: "Error canceling subscription",
-        description: error instanceof Error ? error.message : "Please try again",
+        description:
+          error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
     },
   });
-  
+
   // Handle profile update
   const handleProfileUpdate = (e: React.FormEvent) => {
     e.preventDefault();
     updateProfileMutation.mutate({ firstName, lastName, email });
   };
-  
+
   // Handle password change
   const handlePasswordChange = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (newPassword !== confirmPassword) {
       toast({
         title: "Passwords don't match",
@@ -568,193 +641,245 @@ export default function Profile() {
       });
       return;
     }
-    
+
     changePasswordMutation.mutate({ currentPassword, newPassword });
   };
-  
+
   // Handle payment method operations
   const handleSetDefaultPaymentMethod = (paymentMethodId: string) => {
     setDefaultPaymentMethodMutation.mutate(paymentMethodId);
   };
-  
+
   const handleRemovePaymentMethod = (paymentMethodId: string) => {
     removePaymentMethodMutation.mutate(paymentMethodId);
   };
-  
+
   // Handle edit subscription
   const handleEditSubscription = (subscription: Subscription) => {
     navigate(`/service?edit=${subscription.id}`);
   };
-  
+
   // Handle cancel subscription
   const handleCancelSubscription = (subscriptionId: number) => {
     cancelSubscriptionMutation.mutate(subscriptionId);
   };
-  
+
   if (!isAuthenticated || !user) {
     return null; // Will redirect via useEffect
   }
-  
+
   return (
     <>
       <div className="py-16 container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
         <div className="mt-20 max-w-4xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-white">My Profile</h1>
-            <p className="text-neutral-600 dark:text-neutral-400">Manage your account settings and subscription details</p>
+            <h1 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-white">
+              My Profile
+            </h1>
+            <p className="text-neutral-600 dark:text-neutral-400">
+              Manage your account settings and subscription details
+            </p>
           </div>
-          
-          <Tabs defaultValue={activeTab} value={activeTab} onValueChange={setActiveTab}>
+
+          <Tabs
+            defaultValue={activeTab}
+            value={activeTab}
+            onValueChange={setActiveTab}
+          >
             <TabsList className="mb-8 bg-neutral-100 dark:bg-neutral-800 p-1">
-              <TabsTrigger 
-                value="account" 
+              <TabsTrigger
+                value="account"
                 className="flex items-center data-[state=active]:bg-white dark:data-[state=active]:bg-neutral-700"
               >
                 <UserCircle className="h-4 w-4 mr-2" />
                 Account
               </TabsTrigger>
-              <TabsTrigger 
-                value="subscriptions" 
+              <TabsTrigger
+                value="subscriptions"
                 className="flex items-center data-[state=active]:bg-white dark:data-[state=active]:bg-neutral-700"
               >
                 <Bell className="h-4 w-4 mr-2" />
                 Subscriptions
               </TabsTrigger>
-              <TabsTrigger 
-                value="billing" 
+              <TabsTrigger
+                value="billing"
                 className="flex items-center data-[state=active]:bg-white dark:data-[state=active]:bg-neutral-700"
               >
                 <CreditCard className="h-4 w-4 mr-2" />
                 Payment Methods
               </TabsTrigger>
-              <TabsTrigger 
-                value="settings" 
+              <TabsTrigger
+                value="settings"
                 className="flex items-center data-[state=active]:bg-white dark:data-[state=active]:bg-neutral-700"
               >
                 <Settings className="h-4 w-4 mr-2" />
                 Settings
               </TabsTrigger>
             </TabsList>
-            
+
             {/* Account Tab */}
             <TabsContent value="account">
               <div className="grid gap-6">
                 <Card className="border border-neutral-200 dark:border-neutral-700">
                   <CardHeader>
-                    <CardTitle className="text-neutral-900 dark:text-white">Profile Information</CardTitle>
-                    <CardDescription>Update your personal information</CardDescription>
+                    <CardTitle className="text-neutral-900 dark:text-white">
+                      Profile Information
+                    </CardTitle>
+                    <CardDescription>
+                      Update your personal information
+                    </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <form onSubmit={handleProfileUpdate}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
-                          <Label htmlFor="first-name" className="text-neutral-700 dark:text-neutral-300">First Name</Label>
-                          <Input 
-                            id="first-name" 
-                            value={firstName} 
-                            onChange={(e) => setFirstName(e.target.value)} 
+                          <Label
+                            htmlFor="first-name"
+                            className="text-neutral-700 dark:text-neutral-300"
+                          >
+                            First Name
+                          </Label>
+                          <Input
+                            id="first-name"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
                             className="mt-1 bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                           />
                         </div>
-                        
+
                         <div>
-                          <Label htmlFor="last-name" className="text-neutral-700 dark:text-neutral-300">Last Name</Label>
-                          <Input 
-                            id="last-name" 
-                            value={lastName} 
-                            onChange={(e) => setLastName(e.target.value)} 
+                          <Label
+                            htmlFor="last-name"
+                            className="text-neutral-700 dark:text-neutral-300"
+                          >
+                            Last Name
+                          </Label>
+                          <Input
+                            id="last-name"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
                             className="mt-1 bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                           />
                         </div>
                       </div>
-                      
+
                       <div className="mb-6">
-                        <Label htmlFor="email" className="text-neutral-700 dark:text-neutral-300">Email Address</Label>
-                        <Input 
-                          id="email" 
-                          type="email" 
-                          value={email} 
-                          onChange={(e) => setEmail(e.target.value)} 
+                        <Label
+                          htmlFor="email"
+                          className="text-neutral-700 dark:text-neutral-300"
+                        >
+                          Email Address
+                        </Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           className="mt-1 bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                         />
                       </div>
-                      
-                      <Button 
-                        type="submit" 
+
+                      <Button
+                        type="submit"
                         disabled={updateProfileMutation.isPending}
                         className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:text-neutral-900 dark:hover:bg-primary-600"
                       >
-                        {updateProfileMutation.isPending ? "Saving..." : "Save Changes"}
+                        {updateProfileMutation.isPending
+                          ? "Saving..."
+                          : "Save Changes"}
                       </Button>
                     </form>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="border border-neutral-200 dark:border-neutral-700">
                   <CardHeader>
-                    <CardTitle className="text-neutral-900 dark:text-white">Change Password</CardTitle>
-                    <CardDescription>Update your account password</CardDescription>
+                    <CardTitle className="text-neutral-900 dark:text-white">
+                      Change Password
+                    </CardTitle>
+                    <CardDescription>
+                      Update your account password
+                    </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <form onSubmit={handlePasswordChange}>
                       <div className="space-y-4">
                         <div>
-                          <Label htmlFor="current-password" className="text-neutral-700 dark:text-neutral-300">Current Password</Label>
-                          <Input 
-                            id="current-password" 
-                            type="password" 
+                          <Label
+                            htmlFor="current-password"
+                            className="text-neutral-700 dark:text-neutral-300"
+                          >
+                            Current Password
+                          </Label>
+                          <Input
+                            id="current-password"
+                            type="password"
                             value={currentPassword}
                             onChange={(e) => setCurrentPassword(e.target.value)}
                             className="mt-1 bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                           />
                         </div>
-                        
+
                         <div>
-                          <Label htmlFor="new-password" className="text-neutral-700 dark:text-neutral-300">New Password</Label>
-                          <Input 
-                            id="new-password" 
-                            type="password" 
+                          <Label
+                            htmlFor="new-password"
+                            className="text-neutral-700 dark:text-neutral-300"
+                          >
+                            New Password
+                          </Label>
+                          <Input
+                            id="new-password"
+                            type="password"
                             value={newPassword}
                             onChange={(e) => setNewPassword(e.target.value)}
                             className="mt-1 bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                           />
                         </div>
-                        
+
                         <div>
-                          <Label htmlFor="confirm-password" className="text-neutral-700 dark:text-neutral-300">Confirm New Password</Label>
-                          <Input 
-                            id="confirm-password" 
-                            type="password" 
+                          <Label
+                            htmlFor="confirm-password"
+                            className="text-neutral-700 dark:text-neutral-300"
+                          >
+                            Confirm New Password
+                          </Label>
+                          <Input
+                            id="confirm-password"
+                            type="password"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             className="mt-1 bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                           />
                         </div>
                       </div>
-                      
-                      <Button 
-                        type="submit" 
+
+                      <Button
+                        type="submit"
                         className="mt-6 bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:text-neutral-900 dark:hover:bg-primary-600"
                         disabled={changePasswordMutation.isPending}
                       >
-                        {changePasswordMutation.isPending ? "Updating..." : "Update Password"}
+                        {changePasswordMutation.isPending
+                          ? "Updating..."
+                          : "Update Password"}
                       </Button>
                     </form>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="border border-neutral-200 dark:border-neutral-700">
                   <CardHeader>
-                    <CardTitle className="text-neutral-900 dark:text-white">Account Actions</CardTitle>
+                    <CardTitle className="text-neutral-900 dark:text-white">
+                      Account Actions
+                    </CardTitle>
                     <CardDescription>Manage your account</CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent>
-                    <Button 
-                      variant="destructive" 
-                      onClick={logout} 
+                    <Button
+                      variant="destructive"
+                      onClick={logout}
                       className="flex items-center"
                     >
                       <LogOut className="h-4 w-4 mr-2" />
@@ -764,22 +889,22 @@ export default function Profile() {
                 </Card>
               </div>
             </TabsContent>
-            
+
             {/* Subscriptions Tab */}
             <TabsContent value="subscriptions">
               <div className="grid gap-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Your Subscriptions</h2>
+                  <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
+                    Your Subscriptions
+                  </h2>
                   <Link href="/service">
-                    <Button 
-                      className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:text-neutral-900 dark:hover:bg-primary-600 flex items-center gap-2"
-                    >
+                    <Button className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:text-neutral-900 dark:hover:bg-primary-600 flex items-center gap-2">
                       <Plus size={16} />
                       New Subscription
                     </Button>
                   </Link>
                 </div>
-                
+
                 {isLoadingSubscriptions ? (
                   <div className="flex justify-center py-12">
                     <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
@@ -787,9 +912,9 @@ export default function Profile() {
                 ) : subscriptions && subscriptions.length > 0 ? (
                   <div className="space-y-6">
                     {subscriptions.map((subscription) => (
-                      <SubscriptionCard 
-                        key={subscription.id} 
-                        subscription={subscription} 
+                      <SubscriptionCard
+                        key={subscription.id}
+                        subscription={subscription}
                         onCancel={handleCancelSubscription}
                         onEdit={handleEditSubscription}
                       />
@@ -799,14 +924,15 @@ export default function Profile() {
                   <Card className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 py-12">
                     <CardContent className="flex flex-col items-center justify-center text-center">
                       <Bell className="h-12 w-12 text-neutral-400 dark:text-neutral-500 mb-4" />
-                      <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">No Subscriptions Yet</h3>
+                      <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">
+                        No Subscriptions Yet
+                      </h3>
                       <p className="text-neutral-600 dark:text-neutral-400 max-w-md mb-6">
-                        You don't have any active subscriptions. Get started by creating your first car alert subscription.
+                        You don't have any active subscriptions. Get started by
+                        creating your first car alert subscription.
                       </p>
                       <Link href="/service">
-                        <Button 
-                          className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:text-neutral-900 dark:hover:bg-primary-600"
-                        >
+                        <Button className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:text-neutral-900 dark:hover:bg-primary-600">
                           Create Subscription
                         </Button>
                       </Link>
@@ -815,15 +941,17 @@ export default function Profile() {
                 )}
               </div>
             </TabsContent>
-            
+
             {/* Billing Tab */}
             <TabsContent value="billing">
               <div className="grid gap-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Payment Methods</h2>
+                  <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
+                    Payment Methods
+                  </h2>
                   <AddPaymentMethodDialog />
                 </div>
-                
+
                 {isLoadingPayments ? (
                   <div className="flex justify-center py-12">
                     <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
@@ -831,11 +959,13 @@ export default function Profile() {
                 ) : paymentMethods && paymentMethods.length > 0 ? (
                   <div className="space-y-4">
                     {paymentMethods.map((method) => (
-                      <PaymentMethodCard 
+                      <PaymentMethodCard
                         key={method.id}
                         method={method}
                         isDefault={method.isDefault}
-                        onSetDefault={() => handleSetDefaultPaymentMethod(method.id)}
+                        onSetDefault={() =>
+                          handleSetDefaultPaymentMethod(method.id)
+                        }
                         onRemove={() => handleRemovePaymentMethod(method.id)}
                       />
                     ))}
@@ -844,41 +974,55 @@ export default function Profile() {
                   <Card className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 py-12">
                     <CardContent className="flex flex-col items-center justify-center text-center">
                       <CreditCard className="h-12 w-12 text-neutral-400 dark:text-neutral-500 mb-4" />
-                      <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">No Payment Methods</h3>
+                      <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">
+                        No Payment Methods
+                      </h3>
                       <p className="text-neutral-600 dark:text-neutral-400 max-w-md mb-6">
-                        You haven't added any payment methods yet. Add a credit or debit card to manage your subscriptions.
+                        You haven't added any payment methods yet. Add a credit
+                        or debit card to manage your subscriptions.
                       </p>
                       <AddPaymentMethodDialog />
                     </CardContent>
                   </Card>
                 )}
-                
+
                 <div className="mt-8">
                   <Card className="border border-neutral-200 dark:border-neutral-700">
                     <CardHeader>
-                      <CardTitle className="text-neutral-900 dark:text-white">Billing History</CardTitle>
-                      <CardDescription>View your past and upcoming invoices</CardDescription>
+                      <CardTitle className="text-neutral-900 dark:text-white">
+                        Billing History
+                      </CardTitle>
+                      <CardDescription>
+                        View your past and upcoming invoices
+                      </CardDescription>
                     </CardHeader>
-                    
+
                     <CardContent>
                       <div className="text-center py-6">
-                        <p className="text-neutral-600 dark:text-neutral-400">Your billing history will be available here once you have active subscriptions.</p>
+                        <p className="text-neutral-600 dark:text-neutral-400">
+                          Your billing history will be available here once you
+                          have active subscriptions.
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
                 </div>
               </div>
             </TabsContent>
-            
+
             {/* Settings Tab */}
             <TabsContent value="settings">
               <div className="grid gap-6">
                 <Card className="border border-neutral-200 dark:border-neutral-700">
                   <CardHeader>
-                    <CardTitle className="text-neutral-900 dark:text-white">Notification Preferences</CardTitle>
-                    <CardDescription>Choose how you receive notifications from Amiquus</CardDescription>
+                    <CardTitle className="text-neutral-900 dark:text-white">
+                      Notification Preferences
+                    </CardTitle>
+                    <CardDescription>
+                      Choose how you receive notifications from Amiquus
+                    </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <div className="space-y-6">
                       <div className="flex items-center justify-between">
@@ -887,26 +1031,40 @@ export default function Profile() {
                             <Bell size={18} />
                           </div>
                           <div>
-                            <h3 className="font-medium text-neutral-900 dark:text-white">Email Notifications</h3>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Receive important updates about your account and subscriptions</p>
+                            <h3 className="font-medium text-neutral-900 dark:text-white">
+                              Email Notifications
+                            </h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                              Receive important updates about your account and
+                              subscriptions
+                            </p>
                           </div>
                         </div>
                         <Dialog>
                           <DialogTrigger asChild>
-                            <Button variant="outline" size="sm" className="border-neutral-200 dark:border-neutral-700">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="border-neutral-200 dark:border-neutral-700"
+                            >
                               Manage
                             </Button>
                           </DialogTrigger>
                           <DialogContent>
                             <DialogHeader>
-                              <DialogTitle>Email Notification Settings</DialogTitle>
+                              <DialogTitle>
+                                Email Notification Settings
+                              </DialogTitle>
                               <DialogDescription>
-                                Customize which email notifications you receive from Amiquus
+                                Customize which email notifications you receive
+                                from Amiquus
                               </DialogDescription>
                             </DialogHeader>
                             <div className="space-y-4 py-2">
                               <div className="flex items-center justify-between">
-                                <Label htmlFor="new-listing" className="flex-1">New car listings</Label>
+                                <Label htmlFor="new-listing" className="flex-1">
+                                  New car listings
+                                </Label>
                                 <input
                                   type="checkbox"
                                   id="new-listing"
@@ -915,7 +1073,9 @@ export default function Profile() {
                                 />
                               </div>
                               <div className="flex items-center justify-between">
-                                <Label htmlFor="price-drop" className="flex-1">Price drop alerts</Label>
+                                <Label htmlFor="price-drop" className="flex-1">
+                                  Price drop alerts
+                                </Label>
                                 <input
                                   type="checkbox"
                                   id="price-drop"
@@ -924,7 +1084,12 @@ export default function Profile() {
                                 />
                               </div>
                               <div className="flex items-center justify-between">
-                                <Label htmlFor="account-updates" className="flex-1">Account updates</Label>
+                                <Label
+                                  htmlFor="account-updates"
+                                  className="flex-1"
+                                >
+                                  Account updates
+                                </Label>
                                 <input
                                   type="checkbox"
                                   id="account-updates"
@@ -933,7 +1098,9 @@ export default function Profile() {
                                 />
                               </div>
                               <div className="flex items-center justify-between">
-                                <Label htmlFor="billing" className="flex-1">Billing notifications</Label>
+                                <Label htmlFor="billing" className="flex-1">
+                                  Billing notifications
+                                </Label>
                                 <input
                                   type="checkbox"
                                   id="billing"
@@ -943,35 +1110,51 @@ export default function Profile() {
                               </div>
                             </div>
                             <DialogFooter>
-                              <Button onClick={() => {
-                                toast({
-                                  title: "Preferences updated",
-                                  description: "Your notification preferences have been saved.",
-                                });
-                                document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
-                              }}>
+                              <Button
+                                onClick={() => {
+                                  toast({
+                                    title: "Preferences updated",
+                                    description:
+                                      "Your notification preferences have been saved.",
+                                  });
+                                  document
+                                    .querySelector<HTMLButtonElement>(
+                                      '[data-state="open"] button[aria-label="Close"]',
+                                    )
+                                    ?.click();
+                                }}
+                              >
                                 Save Preferences
                               </Button>
                             </DialogFooter>
                           </DialogContent>
                         </Dialog>
                       </div>
-                      
+
                       <Separator className="bg-neutral-200 dark:bg-neutral-700" />
-                      
+
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <div className="bg-primary/10 text-primary p-2 rounded-full">
                             <ShieldCheck size={18} />
                           </div>
                           <div>
-                            <h3 className="font-medium text-neutral-900 dark:text-white">Security Alerts</h3>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Get notified about important account security events</p>
+                            <h3 className="font-medium text-neutral-900 dark:text-white">
+                              Security Alerts
+                            </h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                              Get notified about important account security
+                              events
+                            </p>
                           </div>
                         </div>
                         <Dialog>
                           <DialogTrigger asChild>
-                            <Button variant="outline" size="sm" className="border-neutral-200 dark:border-neutral-700">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="border-neutral-200 dark:border-neutral-700"
+                            >
                               Manage
                             </Button>
                           </DialogTrigger>
@@ -984,7 +1167,12 @@ export default function Profile() {
                             </DialogHeader>
                             <div className="space-y-4 py-2">
                               <div className="flex items-center justify-between">
-                                <Label htmlFor="login-alerts" className="flex-1">New login alerts</Label>
+                                <Label
+                                  htmlFor="login-alerts"
+                                  className="flex-1"
+                                >
+                                  New login alerts
+                                </Label>
                                 <input
                                   type="checkbox"
                                   id="login-alerts"
@@ -993,7 +1181,12 @@ export default function Profile() {
                                 />
                               </div>
                               <div className="flex items-center justify-between">
-                                <Label htmlFor="password-changes" className="flex-1">Password change notifications</Label>
+                                <Label
+                                  htmlFor="password-changes"
+                                  className="flex-1"
+                                >
+                                  Password change notifications
+                                </Label>
                                 <input
                                   type="checkbox"
                                   id="password-changes"
@@ -1002,7 +1195,12 @@ export default function Profile() {
                                 />
                               </div>
                               <div className="flex items-center justify-between">
-                                <Label htmlFor="payment-method-changes" className="flex-1">Payment method changes</Label>
+                                <Label
+                                  htmlFor="payment-method-changes"
+                                  className="flex-1"
+                                >
+                                  Payment method changes
+                                </Label>
                                 <input
                                   type="checkbox"
                                   id="payment-method-changes"
@@ -1012,13 +1210,20 @@ export default function Profile() {
                               </div>
                             </div>
                             <DialogFooter>
-                              <Button onClick={() => {
-                                toast({
-                                  title: "Security preferences updated",
-                                  description: "Your security alert preferences have been saved.",
-                                });
-                                document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
-                              }}>
+                              <Button
+                                onClick={() => {
+                                  toast({
+                                    title: "Security preferences updated",
+                                    description:
+                                      "Your security alert preferences have been saved.",
+                                  });
+                                  document
+                                    .querySelector<HTMLButtonElement>(
+                                      '[data-state="open"] button[aria-label="Close"]',
+                                    )
+                                    ?.click();
+                                }}
+                              >
                                 Save Preferences
                               </Button>
                             </DialogFooter>
@@ -1031,14 +1236,23 @@ export default function Profile() {
 
                 <Card className="border border-neutral-200 dark:border-neutral-700">
                   <CardHeader>
-                    <CardTitle className="text-neutral-900 dark:text-white">Privacy & Security</CardTitle>
-                    <CardDescription>Manage your password and account security settings</CardDescription>
+                    <CardTitle className="text-neutral-900 dark:text-white">
+                      Privacy & Security
+                    </CardTitle>
+                    <CardDescription>
+                      Manage your password and account security settings
+                    </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <form onSubmit={handlePasswordChange} className="space-y-4">
                       <div className="space-y-2">
-                        <Label htmlFor="current-password" className="text-neutral-700 dark:text-neutral-300">Current Password</Label>
+                        <Label
+                          htmlFor="current-password"
+                          className="text-neutral-700 dark:text-neutral-300"
+                        >
+                          Current Password
+                        </Label>
                         <Input
                           id="current-password"
                           type="password"
@@ -1047,9 +1261,14 @@ export default function Profile() {
                           className="bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                         />
                       </div>
-                      
+
                       <div className="space-y-2">
-                        <Label htmlFor="new-password" className="text-neutral-700 dark:text-neutral-300">New Password</Label>
+                        <Label
+                          htmlFor="new-password"
+                          className="text-neutral-700 dark:text-neutral-300"
+                        >
+                          New Password
+                        </Label>
                         <Input
                           id="new-password"
                           type="password"
@@ -1058,9 +1277,14 @@ export default function Profile() {
                           className="bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                         />
                       </div>
-                      
+
                       <div className="space-y-2">
-                        <Label htmlFor="confirm-password" className="text-neutral-700 dark:text-neutral-300">Confirm New Password</Label>
+                        <Label
+                          htmlFor="confirm-password"
+                          className="text-neutral-700 dark:text-neutral-300"
+                        >
+                          Confirm New Password
+                        </Label>
                         <Input
                           id="confirm-password"
                           type="password"
@@ -1069,28 +1293,42 @@ export default function Profile() {
                           className="bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
                         />
                       </div>
-                      
-                      <Button 
-                        type="submit" 
-                        className="mt-2" 
-                        disabled={changePasswordMutation.isPending || !currentPassword || !newPassword || newPassword !== confirmPassword}
+
+                      <Button
+                        type="submit"
+                        className="mt-2"
+                        disabled={
+                          changePasswordMutation.isPending ||
+                          !currentPassword ||
+                          !newPassword ||
+                          newPassword !== confirmPassword
+                        }
                       >
-                        {changePasswordMutation.isPending ? "Updating..." : "Update Password"}
+                        {changePasswordMutation.isPending
+                          ? "Updating..."
+                          : "Update Password"}
                       </Button>
                     </form>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="border border-neutral-200 dark:border-neutral-700">
                   <CardHeader>
-                    <CardTitle className="text-neutral-900 dark:text-white text-red-500 dark:text-red-400">Account Actions</CardTitle>
-                    <CardDescription>Manage your account status and active sessions</CardDescription>
+                    <CardTitle className="text-neutral-900 dark:text-white text-red-500 dark:text-red-400">
+                      Account Actions
+                    </CardTitle>
+                    <CardDescription>
+                      Manage your account status and active sessions
+                    </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent className="space-y-4">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <Button variant="outline" className="w-full justify-start text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 border-neutral-200 dark:border-neutral-700">
+                        <Button
+                          variant="outline"
+                          className="w-full justify-start text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 border-neutral-200 dark:border-neutral-700"
+                        >
                           <LogOut className="mr-2 h-4 w-4" />
                           Log out
                         </Button>
@@ -1103,17 +1341,27 @@ export default function Profile() {
                           </DialogDescription>
                         </DialogHeader>
                         <DialogFooter className="mt-4">
-                          <Button 
-                            variant="outline" 
-                            onClick={() => document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click()}
+                          <Button
+                            variant="outline"
+                            onClick={() =>
+                              document
+                                .querySelector<HTMLButtonElement>(
+                                  '[data-state="open"] button[aria-label="Close"]',
+                                )
+                                ?.click()
+                            }
                           >
                             Cancel
                           </Button>
-                          <Button 
+                          <Button
                             variant="destructive"
                             onClick={() => {
                               logout();
-                              document.querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')?.click();
+                              document
+                                .querySelector<HTMLButtonElement>(
+                                  '[data-state="open"] button[aria-label="Close"]',
+                                )
+                                ?.click();
                             }}
                           >
                             Log Out

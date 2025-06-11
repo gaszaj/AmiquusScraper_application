@@ -152,7 +152,7 @@ export default function Header() {
             <LanguageSelector />
 
             {/* Development test button - visible only on desktop */}
-            <ScrollToTopLink href="/test-profile">
+            {/* <ScrollToTopLink href="/test-profile">
               <Button
                 variant="outline"
                 size="sm"
@@ -160,7 +160,7 @@ export default function Header() {
               >
                 DEV: Test Profile
               </Button>
-            </ScrollToTopLink>
+            </ScrollToTopLink> */}
 
             {!isAuthenticated && (
               <>
@@ -229,13 +229,13 @@ export default function Header() {
           </ScrollToTopLink>
 
           {/* Development Test Profile button in mobile menu */}
-          <ScrollToTopLink 
+          {/* <ScrollToTopLink 
             href="/test-profile" 
             className="block px-3 py-2 border border-dashed border-green-500 dark:border-green-400 text-green-600 dark:text-green-400 m-3 rounded-md font-medium text-center"
             onClick={handleMobileMenuClose}
           >
             DEV: Test Profile
-          </ScrollToTopLink>
+          </ScrollToTopLink> */}
 
           {/* Mobile subscription counter */}
           <div className="flex items-center px-3 py-2">
@@ -272,6 +272,9 @@ export default function Header() {
                 Get Started
               </ScrollToTopLink>
             </>
+          )}
+          {isAuthenticated && (
+            <UserProfile />
           )}
         </div>
       </div>

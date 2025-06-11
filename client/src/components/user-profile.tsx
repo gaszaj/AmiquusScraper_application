@@ -43,6 +43,12 @@ export function UserProfile() {
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <Link href="/profile" className="flex items-center gap-2 cursor-pointer">
+                <User className="h-4 w-4" />
+                <span>Profile</span>
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/profile" className="flex items-center gap-2 cursor-pointer">
                 <Settings className="h-4 w-4" />
                 <span>Settings</span>
               </Link>

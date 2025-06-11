@@ -46,11 +46,11 @@ export default function Signup({ embedded = false }: SignupProps) {
       if (jsonData) {
         setCarBrands(Object.keys(jsonData.brands_and_models));
         setFuelTypes(jsonData.fuel_types);
-        setWebsites(Object.keys(jsonData.websites.website_objects));
+        setWebsites(jsonData.websites.website_names);
       } else {
         setCarBrands(Object.keys(newcomerDefault.brands_and_models));
         setFuelTypes(newcomerDefault.fuel_types);
-        setWebsites(Object.keys(newcomerDefault.websites.website_objects));
+        setWebsites(newcomerDefault.websites.website_names);
       }
     }
   }, [jsonData, loadingJson]);

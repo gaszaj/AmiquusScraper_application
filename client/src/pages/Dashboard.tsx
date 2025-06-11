@@ -145,8 +145,8 @@ export default function Dashboard() {
                         <div className="flex items-center justify-between">
                           <CardTitle className="flex items-center">
                             <Car className="h-5 w-5 mr-2 text-primary-600" />
-                            {subscription.carDetails.brand ? `${subscription.carDetails.brand.charAt(0).toUpperCase() + subscription.carDetails.brand.slice(1)}` : "Any Brand"}
-                            {subscription.carDetails.model ? ` ${subscription.carDetails.model.charAt(0).toUpperCase() + subscription.carDetails.model.slice(1).replace('-', ' ')}` : ""}
+                            {subscription.brand ? `${subscription.brand.charAt(0).toUpperCase() + subscription.brand.slice(1)}` : "Any Brand"}
+                            {subscription.model ? ` ${subscription.model.charAt(0).toUpperCase() + subscription.model.slice(1).replace('-', ' ')}` : ""}
                           </CardTitle>
                           <Badge className="bg-green-100 text-green-800 hover:bg-green-100">Active</Badge>
                         </div>
@@ -160,7 +160,7 @@ export default function Dashboard() {
                           <div>
                             <h3 className="text-sm font-medium text-neutral-500 mb-2">Monitored Websites</h3>
                             <div className="flex flex-wrap gap-2">
-                              {subscription.websites.selectedWebsites.map((website) => (
+                              {subscription.websitesSelected.map((website) => (
                                 <Badge key={website} variant="outline">
                                   {website.charAt(0).toUpperCase() + website.slice(1)}
                                 </Badge>
@@ -168,18 +168,18 @@ export default function Dashboard() {
                             </div>
                             
                             <h3 className="text-sm font-medium text-neutral-500 mt-4 mb-2">Update Frequency</h3>
-                            <p>{subscription.websites.updateFrequency === "60" ? "Every hour" : 
-                               subscription.websites.updateFrequency === "30" ? "Every 30 minutes" :
-                               subscription.websites.updateFrequency === "15" ? "Every 15 minutes" :
-                               subscription.websites.updateFrequency === "5" ? "Every 5 minutes" :
+                            <p>{subscription.updateFrequency === "60" ? "Every hour" : 
+                               subscription.updateFrequency === "30" ? "Every 30 minutes" :
+                               subscription.updateFrequency === "15" ? "Every 15 minutes" :
+                               subscription.updateFrequency === "5" ? "Every 5 minutes" :
                                "Every minute"}</p>
                           </div>
                           
                           <div>
                             <h3 className="text-sm font-medium text-neutral-500 mb-2">Car Details</h3>
                             <div className="space-y-1">
-                              {subscription.carDetails.fuelType && (
-                                <p><span className="font-medium">Fuel:</span> {subscription.carDetails.fuelType.charAt(0).toUpperCase() + subscription.carDetails.fuelType.slice(1)}</p>
+                              {subscription.fuelType && (
+                                <p><span className="font-medium">Fuel:</span> {subscription.fuelType.charAt(0).toUpperCase() + subscription.fuelType.slice(1)}</p>
                               )}
                               {(subscription.carDetails.yearMin || subscription.carDetails.yearMax) && (
                                 <p><span className="font-medium">Year:</span> {subscription.carDetails.yearMin || "Any"} - {subscription.carDetails.yearMax || "Any"}</p>
