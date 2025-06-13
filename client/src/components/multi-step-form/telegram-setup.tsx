@@ -35,9 +35,7 @@ interface TelegramSetupProps {
 const telegramSetupSchema = z.object({
   telegramToken: z.string().min(1, "Telegram bot token is required"),
   telegramChatId: z.string().min(1, "Telegram chat ID is required"),
-  notificationLanguage: z
-    .string()
-    .min(1, "Notification language is required"),
+  notificationLanguage: z.string().min(1, "Notification language is required"),
 });
 
 type TelegramSetupFormData = z.infer<typeof telegramSetupSchema>;
@@ -112,8 +110,8 @@ export default function TelegramSetup({
                     <li>Open Telegram and search for @userinfobot</li>
                     <li>Send any message to the bot</li>
                     <li>
-                      The bot will reply with your information including your Chat
-                      ID
+                      The bot will reply with your information including your
+                      Chat ID
                     </li>
                     <li>Copy the Chat ID (it's a number)</li>
                   </ol>
@@ -198,14 +196,10 @@ export default function TelegramSetup({
                       </FormControl>
                       <SelectContent>
                         <SelectItem value="en">English</SelectItem>
-                        <SelectItem value="de">German</SelectItem>
-                        <SelectItem value="fr">French</SelectItem>
-                        <SelectItem value="es">Spanish</SelectItem>
-                        <SelectItem value="it">Italian</SelectItem>
-                        <SelectItem value="nl">Dutch</SelectItem>
-                        <SelectItem value="pl">Polish</SelectItem>
-                        <SelectItem value="pt">Portuguese</SelectItem>
-                        <SelectItem value="ru">Russian</SelectItem>
+                        <SelectItem value="de">Deutsch</SelectItem>
+                        <SelectItem value="fr">Français</SelectItem>
+                        <SelectItem value="es">Español</SelectItem>
+                        <SelectItem value="it">Italiano</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />

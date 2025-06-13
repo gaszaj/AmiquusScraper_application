@@ -148,61 +148,70 @@ export default function WebsiteSelection({
                   </FormDescription>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                  {websites.map((site) => (
-                    <FormField
-                      key={site}
-                      control={form.control}
-                      name="websitesSelected"
-                      render={({ field }) => {
-                        return (
-                          <FormItem className="flex items-center gap-2">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value?.includes(site)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, site])
-                                    : field.onChange(
-                                        field.value?.filter(
-                                          (value) => value !== site,
-                                        ),
-                                      );
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel className="text-neutral-700 dark:text-neutral-300">
-                              {site.charAt(0).toUpperCase() + site.slice(1)}
-                            </FormLabel>
-                          </FormItem>
-                        );
-                      }}
-                    />
-                  ))}
-                  <FormField
-                    control={form.control}
-                    name="websitesSelected"
-                    render={({ field }) => (
-                      <FormItem className="flex items-center gap-2">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value?.includes("facebook")}
-                            onCheckedChange={(checked) => {
-                              return checked
-                                ? field.onChange([...field.value, "facebook"])
-                                : field.onChange(
-                                    field.value?.filter(
-                                      (value) => value !== "facebook",
-                                    ),
-                                  );
-                            }}
-                          />
-                        </FormControl>
-                        <FormLabel className="text-neutral-700 dark:text-neutral-300">
-                          Facebook Marketplace
-                        </FormLabel>
-                      </FormItem>
-                    )}
-                  />
+                  {websites.map((site) => {
+                    if (site == "facebook") {
+                      return (
+                        <FormField
+                          control={form.control}
+                          name="websitesSelected"
+                          render={({ field }) => (
+                            <FormItem className="flex items-center gap-2">
+                              <FormControl>
+                                <Checkbox
+                                  checked={field.value?.includes("facebook")}
+                                  onCheckedChange={(checked) => {
+                                    return checked
+                                      ? field.onChange([
+                                          ...field.value,
+                                          "facebook",
+                                        ])
+                                      : field.onChange(
+                                          field.value?.filter(
+                                            (value) => value !== "facebook",
+                                          ),
+                                        );
+                                  }}
+                                />
+                              </FormControl>
+                              <FormLabel className="text-neutral-700 dark:text-neutral-300">
+                                Facebook Marketplace
+                              </FormLabel>
+                            </FormItem>
+                          )}
+                        />
+                      );
+                    }
+                    return (
+                      <FormField
+                        key={site}
+                        control={form.control}
+                        name="websitesSelected"
+                        render={({ field }) => {
+                          return (
+                            <FormItem className="flex items-center gap-2">
+                              <FormControl>
+                                <Checkbox
+                                  checked={field.value?.includes(site)}
+                                  onCheckedChange={(checked) => {
+                                    return checked
+                                      ? field.onChange([...field.value, site])
+                                      : field.onChange(
+                                          field.value?.filter(
+                                            (value) => value !== site,
+                                          ),
+                                        );
+                                  }}
+                                />
+                              </FormControl>
+                              <FormLabel className="text-neutral-700 dark:text-neutral-300">
+                                {site.charAt(0).toUpperCase() + site.slice(1)}
+                              </FormLabel>
+                            </FormItem>
+                          );
+                        }}
+                      />
+                    );
+                  })}
                 </div>
                 <FormMessage />
               </FormItem>

@@ -137,6 +137,80 @@ class EmailService implements IEmailService {
       console.error("❌ Error sending admin subscription alert:", error);
     }
   }
+  async sendAdminNewWaitlistAlert(userEmail: string, userName: string): Promise<void> {
+    try {
+      const htmlContent = `
+        <div style="font-family: Arial, sans-serif; padding: 20px;">
+          <h2>📥 New Waitlist Signup</h2>
+          <p><strong>Name:</strong> ${userName}</p>
+          <p><strong>Email:</strong> ${userEmail}</p>
+          <p>A new user has joined the waitlist. You may want to contact them if a slot becomes available.</p>
+          <br/>
+          <p>— Amiquus System</p>
+        </div>
+      `;
+
+      const sendEmail: brevo.SendSmtpEmail = {
+        subject: `🚀 New Waitlist Entry – ${userName}`,
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [
+          {
+            email: "gasper.zajc@gmail.com",
+            name: "Gasper",
+          },
+        ],
+        headers: {
+          "X-Mailin-custom": "admin_waitlist_alert",
+        },
+      };
+
+      const response = await apiInstance.sendTransacEmail(sendEmail);
+      console.log(`[EMAIL] Admin notified of new waitlist signup: ${userEmail}`, response);
+    } catch (error) {
+      console.error("❌ Error sending admin waitlist email:", error);
+    }
+  }
+
+  async sendUserWaitlistConfirmation(userEmail: string, userName: string): Promise<void> {
+    try {
+      const htmlContent = `
+        <div style="font-family: Arial, sans-serif; padding: 20px;">
+          <h2> You're On the List!</h2>
+          <p>Hi ${userName},</p>
+          <p>Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.</p>
+          <p>If you have any questions, feel free to reply to this email.</p>
+          <br/>
+          <p>Best regards,<br/>The Amiquus Team</p>
+        </div>
+      `;
+
+      const sendEmail: brevo.SendSmtpEmail = {
+        subject: "You’re on the Amiquus Waitlist!",
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [
+          {
+            email: userEmail,
+          },
+        ],
+        headers: {
+          "X-Mailin-custom": "user_waitlist_confirmation",
+        },
+      };
+
+      const response = await apiInstance.sendTransacEmail(sendEmail);
+      console.log(`[EMAIL] Waitlist confirmation sent to ${userEmail}`, response);
+    } catch (error) {
+      console.error("❌ Error sending user waitlist confirmation:", error);
+    }
+  }
 }
 
 // Export a singleton instance

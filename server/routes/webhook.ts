@@ -100,8 +100,8 @@ router.post(
             fuel_type: dbPlan.fuelType,
             brand: dbPlan.brand,
             model: dbPlan.model,
-            model_year_lower_limit: "",
-            model_year_upper_limit: "",
+            model_year_lower_limit: dbPlan.yearMin,
+            model_year_upper_limit: dbPlan.yearMax,
           },
         };
         const apiUrl = `${JSON_BASE_URL}/user_json_api.php`;
@@ -114,6 +114,15 @@ router.post(
             "Content-Type": "application/json",
           },
           body: JSON.stringify(userJson),
+        });
+
+        // update stripe subscription metadata with json id
+        await stripe.subscriptions.update(customerSubscriptionCreated.id, {
+          metadata: {
+            jsonId: jsonId,
+            userId: userId,
+            userSubscriptionId: userSubscriptionId,
+          },
         });
 
         console.log(response);
@@ -135,7 +144,10 @@ router.post(
         }
 
         // send email
-        await emailService.sendAdminNewSubscriptionAlert(user.email, dbPlan.brand as string);
+        await emailService.sendAdminNewSubscriptionAlert(
+          user.email,
+          dbPlan.brand as string,
+        );
 
         break;
       }
@@ -148,7 +160,7 @@ router.post(
           userId: string;
         };
 
-        if (!metadata.userId || !metadata.userSubscriptionId){
+        if (!metadata.userId || !metadata.userSubscriptionId) {
           console.error("User ID or subscription ID not found in metadata");
           return;
         }
@@ -188,6 +200,7 @@ router.post(
         const subscription = event.data.object;
         const userId = subscription.metadata.userId;
         const subscriptionId = subscription.metadata.userSubscriptionId;
+        const metaJsonId = subscription.metadata.jsonId
 
         if (!userId || !subscriptionId) {
           console.error("Missing metadata");
@@ -206,7 +219,7 @@ router.post(
           status: subscription.status,
         });
 
-        const jsonId = user.email + subscriptionId;
+        const jsonId = metaJsonId ? metaJsonId : user.email + subscriptionId;
         const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
 
         const res = await fetch(getUrl, {
@@ -245,6 +258,7 @@ router.post(
         const subscription = event.data.object;
         const userId = subscription.metadata.userId;
         const subscriptionId = subscription.metadata.userSubscriptionId;
+        const metaJsonId = subscription.metadata.jsonId
 
         if (!userId || !subscriptionId) {
           console.error("Missing metadata");
@@ -260,7 +274,7 @@ router.post(
         // delete subscription
         await storage.deleteSubscription(parseInt(subscriptionId));
 
-        const jsonId = user.email + subscriptionId;
+        const jsonId = metaJsonId ? metaJsonId : user.email + subscriptionId;
         const deleteUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
 
         const deleteRes = await fetch(deleteUrl, {

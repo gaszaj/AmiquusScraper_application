@@ -18,6 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -45,13 +46,19 @@ import { useAuth } from "@/hooks/use-auth";
 import { queryClient, apiRequest } from "@/lib/queryClient";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { User as UserType, Subscription } from "@shared/schema";
-import { newcomerDefault } from "@/data/newcomer-default";
-import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
-import { useElements, useStripe, PaymentElement, Elements } from "@stripe/react-stripe-js";
+import { useLocation } from "wouter"
+import {
+  useElements,
+  useStripe,
+  PaymentElement,
+  Elements,
+} from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
 // Load Stripe
-const stripePromise = loadStripe( 'pk_test_51R7GaAKTt4KB6Gxykv1ZJ3j8VqeEcLx1lpbfrb8XmzpRhzi7ljw0EpMBSR56ChCrQFIXS9nsPKUn9L0x7vXJH90R00EkcJodyl');
+const stripePromise = loadStripe(
+  "pk_test_51R7GaAKTt4KB6Gxykv1ZJ3j8VqeEcLx1lpbfrb8XmzpRhzi7ljw0EpMBSR56ChCrQFIXS9nsPKUn9L0x7vXJH90R00EkcJodyl",
+);
 
 // Payment Method Form component
 function AddPaymentMethodForm() {
@@ -98,9 +105,9 @@ function AddPaymentMethodForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <PaymentElement />
-      <Button 
-        type="submit" 
-        disabled={!stripe || isProcessing} 
+      <Button
+        type="submit"
+        disabled={!stripe || isProcessing}
         className="w-full mt-4"
       >
         {isProcessing ? "Processing..." : "Add Payment Method"}
@@ -119,7 +126,9 @@ function AddPaymentMethodDialog() {
     // passing the SetupIntent's client secret
     clientSecret: clientSecret,
     // Fully customizable with appearance API.
-    appearance: {/*...*/},
+    appearance: {
+      /*...*/
+    },
   };
 
   const handleOpen = async () => {
@@ -139,11 +148,14 @@ function AddPaymentMethodDialog() {
       setIsOpen(false);
     }
   };
-  
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button onClick={handleOpen} className="ml-auto flex gap-2 items-center">
+        <Button
+          onClick={handleOpen}
+          className="ml-auto flex gap-2 items-center"
+        >
           <PlusCircle className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -172,30 +184,14 @@ function AddPaymentMethodDialog() {
 interface SubscriptionCardProps {
   subscription: Subscription;
   onCancel: (id: number) => void;
-  onEdit: (subscription: Subscription) => void;
-  loadModels: (brand: string) => string[];
-  websites: string[];
-  carBrands: string[];
-  fuelTypes: string[];
-  models: string[];
-  setModels: Dispatch<SetStateAction<string[]>>;
 }
 
 function SubscriptionCard({
   subscription,
   onCancel,
-  onEdit,
-  loadModels,
-  websites,
-  carBrands,
-  fuelTypes,
-  models,
-  setModels,
 }: SubscriptionCardProps) {
+   const [location, navigate ] = useLocation();
   const [isConfirmingCancel, setIsConfirmingCancel] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [brand, setBrand] = useState(subscription.brand || "");
-  const [model, setModel] = useState(subscription.model || "");
 
   const handleCancelClick = () => {
     setIsConfirmingCancel(true);
@@ -258,193 +254,14 @@ function SubscriptionCard({
         </div>
       </CardContent>
       <CardFooter className="flex justify-end space-x-2 pt-2">
-        <Dialog open={isEditing} onOpenChange={setIsEditing}>
-          <DialogTrigger asChild>
-            <Button variant="outline" size="sm" className="text-sm">
-              <Edit2 className="h-3.5 w-3.5 mr-1" />
-              Edit
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-md">
-            <DialogHeader>
-              <DialogTitle>Edit Car Alert</DialogTitle>
-              <DialogDescription>
-                Update your car alert settings for {subscription.brand}{" "}
-                {subscription.model}
-              </DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 pt-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="edit-brand">Brand</Label>
-                  <Select
-                    value={brand}
-                    onValueChange={(value) => {
-                      setBrand(value);
-                      setModels(loadModels(value));
-                    }}
-                  >
-                    <SelectTrigger id="edit-brand">
-                      <SelectValue placeholder="Select Brand" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {carBrands.map((b) => (
-                        <SelectItem key={b} value={b}>
-                          {b}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="edit-model">Model</Label>
-                  <Select
-                    value={model}
-                    onValueChange={(value) => setModel(value)}
-                    disabled={!models.length}
-                  >
-                    <SelectTrigger id="edit-model">
-                      <SelectValue placeholder="Select Model" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {models.length > 0 ? (
-                        models.map((m) =>
-                          m.trim() !== "" ? (
-                            <SelectItem key={m} value={m}>
-                              {m}
-                            </SelectItem>
-                          ) : null,
-                        )
-                      ) : (
-                        <SelectItem value="placeholder-no-models" disabled>
-                          No Models Available
-                        </SelectItem>
-                      )}
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="edit-year-min">Year Min</Label>
-                  <Input
-                    id="edit-year-min"
-                    defaultValue={subscription.yearMin}
-                    type="number"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="edit-year-max">Year Max</Label>
-                  <Input
-                    id="edit-year-max"
-                    defaultValue={subscription.yearMax}
-                    type="number"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="edit-price-min">Price Min ($)</Label>
-                  <Input
-                    id="edit-price-min"
-                    defaultValue={subscription.priceMin}
-                    type="number"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="edit-price-max">Price Max ($)</Label>
-                  <Input
-                    id="edit-price-max"
-                    defaultValue={subscription.priceMax}
-                    type="number"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="edit-status">Status</Label>
-                <select
-                  id="edit-status"
-                  defaultValue={subscription.status}
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  <option value="active">Active</option>
-                  <option value="paused">Paused</option>
-                </select>
-              </div>
-            </div>
-            <DialogFooter className="mt-6">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => {
-                  document
-                    .querySelector<HTMLButtonElement>(
-                      '[data-state="open"] button[aria-label="Close"]',
-                    )
-                    ?.click();
-                  setIsEditing(false);
-                }}
-              >
-                Cancel
-              </Button>
-              <Button
-                type="button"
-                onClick={() => {
-                  const updatedData = {
-                    brand,
-                    model,
-                    yearMin: Number(
-                      (
-                        document.getElementById(
-                          "edit-year-min",
-                        ) as HTMLInputElement
-                      )?.value,
-                    ),
-                    yearMax: Number(
-                      (
-                        document.getElementById(
-                          "edit-year-max",
-                        ) as HTMLInputElement
-                      )?.value,
-                    ),
-                    priceMin: Number(
-                      (
-                        document.getElementById(
-                          "edit-price-min",
-                        ) as HTMLInputElement
-                      )?.value,
-                    ),
-                    priceMax: Number(
-                      (
-                        document.getElementById(
-                          "edit-price-max",
-                        ) as HTMLInputElement
-                      )?.value,
-                    ),
-                    status: (
-                      document.getElementById(
-                        "edit-status",
-                      ) as HTMLSelectElement
-                    )?.value,
-                  };
-
-                  onEdit({ ...subscription, ...updatedData });
-
-                  document
-                    .querySelector<HTMLButtonElement>(
-                      '[data-state="open"] button[aria-label="Close"]',
-                    )
-                    ?.click();
-
-                  setIsEditing(false);
-                }}
-              >
-                Save Changes
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-
+        <Button 
+          variant="outline" size="sm" className="text-sm"
+          //gp to "/edit/:id"
+          onClick={() => navigate(`/edit/${subscription.id}`)}
+          >
+          <Edit2 className="h-3.5 w-3.5 mr-1" />
+          Edit
+        </Button>
         <Dialog open={isConfirmingCancel} onOpenChange={setIsConfirmingCancel}>
           <DialogTrigger asChild>
             <Button
@@ -653,69 +470,7 @@ function PaymentMethodCard({
 export default function NewProfile() {
   const [activeTab, setActiveTab] = useState("subscriptions");
   const { toast } = useToast();
-  const { isAuthenticated, user, logout } = useAuth();
-
-  const [jsonData, setJsonData] = useState<NewComerResponse | null>(null);
-  const [loadingJson, setLoadingJson] = useState(false);
-
-  const [carBrands, setCarBrands] = useState<string[]>([]);
-  const [models, setModels] = useState<string[]>([]);
-  const [fuelTypes, setFuelTypes] = useState<string[]>([]);
-  const [websites, setWebsites] = useState<string[]>([]);
-
-  // Form state
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [currentPassword, setCurrentPassword] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-
-  useEffect(() => {
-    if (!loadingJson) {
-      if (jsonData) {
-        setCarBrands(Object.keys(jsonData.brands_and_models));
-        setFuelTypes(jsonData.fuel_types);
-        setWebsites(jsonData.websites.website_names);
-      } else {
-        setCarBrands(Object.keys(newcomerDefault.brands_and_models));
-        setFuelTypes(newcomerDefault.fuel_types);
-        setWebsites(newcomerDefault.websites.website_names);
-      }
-    }
-  }, [jsonData, loadingJson]);
-
-  const loadModels = (brand: string) => {
-    return (
-      jsonData?.brands_and_models[brand] ||
-      newcomerDefault.brands_and_models[
-        brand as keyof typeof newcomerDefault.brands_and_models
-      ] ||
-      []
-    );
-  };
-
-  useEffect(() => {
-    fetch("/api/newcommer")
-      .then((res) => res.json())
-      .then((json) => {
-        setJsonData(json);
-        setLoadingJson(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching data:", err);
-        setLoadingJson(false);
-      });
-  }, []);
-
-  // Fill form with user data
-  useEffect(() => {
-    if (user) {
-      setFirstName(user.firstName || "");
-      setLastName(user.lastName || "");
-      setEmail(user.email || "");
-    }
-  }, [user]);
+  const { isAuthenticated, user, logout, checkAuth } = useAuth();
 
   // Subscriptions query
   const { data: subscriptions, isLoading: isLoadingSubscriptions } = useQuery<
@@ -736,7 +491,10 @@ export default function NewProfile() {
   // Remove payment method mutation
   const removePaymentMethodMutation = useMutation({
     mutationFn: async (paymentMethodId: string) => {
-      return await apiRequest("DELETE", `/api/payment-methods/${paymentMethodId}`);
+      return await apiRequest(
+        "DELETE",
+        `/api/payment-methods/${paymentMethodId}`,
+      );
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/payment-methods"] });
@@ -748,7 +506,8 @@ export default function NewProfile() {
     onError: (error) => {
       toast({
         title: "Error removing payment method",
-        description: error instanceof Error ? error.message : "Please try again",
+        description:
+          error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
     },
@@ -757,19 +516,24 @@ export default function NewProfile() {
   // Set default payment method mutation
   const setDefaultPaymentMethodMutation = useMutation({
     mutationFn: async (paymentMethodId: string) => {
-      return await apiRequest("POST", `/api/payment-methods/${paymentMethodId}/default`);
+      return await apiRequest(
+        "POST",
+        `/api/payment-methods/${paymentMethodId}/default`,
+      );
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/payment-methods"] });
       toast({
         title: "Default payment method updated",
-        description: "Your default payment method has been updated successfully",
+        description:
+          "Your default payment method has been updated successfully",
       });
     },
     onError: (error) => {
       toast({
         title: "Error updating default payment method",
-        description: error instanceof Error ? error.message : "Please try again",
+        description:
+          error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
       });
     },
@@ -796,27 +560,7 @@ export default function NewProfile() {
     }
   };
 
-  const handleEditSubscription = async (subscription: Subscription) => {
-    try {
-      console.log("Updating subscription:", subscription);
-      await updateSubscription(subscription.id, subscription);
-      // run query to refresh subscriptions list
-      queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
 
-      toast({
-        title: "Subscription Updated",
-        description: `Your subscription for ${subscription.brand} ${subscription.model} has been updated.`,
-        variant: "default",
-      });
-    } catch (error) {
-      console.error("Failed to update subscription:", error);
-      toast({
-        title: "Error",
-        description: "Failed to update subscription. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
 
   const handleRemovePaymentMethod = (id: any) => {
     removePaymentMethodMutation.mutate(id);
@@ -905,26 +649,36 @@ export default function NewProfile() {
                     </div>
                   </div>
                   <DialogFooter>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() =>
-                        document
-                          .querySelector<HTMLButtonElement>(
-                            '[data-state="open"] button[aria-label="Close"]',
-                          )
-                          ?.click()
-                      }
-                    >
-                      Cancel
-                    </Button>
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() =>
+                          document
+                            .querySelector<HTMLButtonElement>(
+                              '[data-state="open"] button[aria-label="Close"]',
+                            )
+                            ?.click()
+                        }
+                      >
+                        Cancel
+                      </Button>
+                    </DialogClose>
                     <Button
                       onClick={async () => {
-                        const nameInput = document.getElementById("name") as HTMLInputElement;
-                        const emailInput = document.getElementById("email") as HTMLInputElement;
-                        const usernameInput = document.getElementById("username") as HTMLInputElement;
+                        const nameInput = document.getElementById(
+                          "name",
+                        ) as HTMLInputElement;
+                        const emailInput = document.getElementById(
+                          "email",
+                        ) as HTMLInputElement;
+                        const usernameInput = document.getElementById(
+                          "username",
+                        ) as HTMLInputElement;
 
-                        const [firstName, ...lastNameParts] = nameInput.value.trim().split(" ");
+                        const [firstName, ...lastNameParts] = nameInput.value
+                          .trim()
+                          .split(" ");
                         const lastName = lastNameParts.join(" ");
 
                         const payload = {
@@ -948,25 +702,31 @@ export default function NewProfile() {
                             toast({
                               variant: "destructive",
                               title: "Update failed",
-                              description: result.message || "Could not update profile.",
+                              description:
+                                result.message || "Could not update profile.",
                             });
                             return;
                           }
 
+                          checkAuth();
                           toast({
                             title: "Account updated",
-                            description: "Your account settings have been updated successfully.",
+                            description:
+                              "Your account settings have been updated successfully.",
                           });
 
                           // Close dialog
                           document
-                            .querySelector<HTMLButtonElement>('[data-state="open"] button[aria-label="Close"]')
+                            .querySelector<HTMLButtonElement>(
+                              '[data-state="open"] button[aria-label="Close"]',
+                            )
                             ?.click();
                         } catch (err) {
                           toast({
                             variant: "destructive",
                             title: "Update error",
-                            description: "Something went wrong. Please try again.",
+                            description:
+                              "Something went wrong. Please try again.",
                           });
                         }
                       }}
@@ -1008,19 +768,21 @@ export default function NewProfile() {
                     </div>
                   </div>
                   <DialogFooter>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() =>
-                        document
-                          .querySelector<HTMLButtonElement>(
-                            '[data-state="open"] button[aria-label="Close"]',
-                          )
-                          ?.click()
-                      }
-                    >
-                      Cancel
-                    </Button>
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() =>
+                          document
+                            .querySelector<HTMLButtonElement>(
+                              '[data-state="open"] button[aria-label="Close"]',
+                            )
+                            ?.click()
+                        }
+                      >
+                        Cancel
+                      </Button>
+                    </DialogClose>
                     <Button
                       onClick={async () => {
                         const current = (
@@ -1074,7 +836,7 @@ export default function NewProfile() {
                       }}
                     >
                       Update Password
-                    </Button>  
+                    </Button>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
@@ -1122,7 +884,7 @@ export default function NewProfile() {
                             '[data-state="open"] button[aria-label="Close"]',
                           )
                           ?.click();
-                        logout()
+                        logout();
                         window.location.href = "/login";
                       }}
                     >
@@ -1176,13 +938,6 @@ export default function NewProfile() {
                           key={subscription.id}
                           subscription={subscription}
                           onCancel={handleCancelSubscription}
-                          onEdit={handleEditSubscription}
-                          loadModels={loadModels}
-                          websites={websites}
-                          carBrands={carBrands}
-                          fuelTypes={fuelTypes}
-                          models={models}
-                          setModels={setModels}
                         />
                       ))
                     ) : (
@@ -1273,23 +1028,4 @@ export async function deleteSubscription(subscriptionId: number) {
   return res.json();
 }
 
-export async function updateSubscription(
-  subscriptionId: number,
-  updateData: Subscription,
-) {
-  const res = await fetch(`/api/subscriptions/${subscriptionId}`, {
-    method: "PUT",
-    credentials: "include", // important for session-based auth
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(updateData),
-  });
 
-  if (!res.ok) {
-    const errorText = await res.text();
-    throw new Error(errorText || "Failed to update subscription");
-  }
-
-  return res.json();
-}

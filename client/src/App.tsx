@@ -10,6 +10,7 @@ import Signup from "@/pages/signup";
 import Login from "@/pages/login";
 import Register from "@/pages/Register"
 import VerifyEmail from "@/pages/verify-email"
+import SubscriptionPage from "@/pages/subscription"
 import Dashboard from "@/pages/dashboard";
 import About from "@/pages/about";
 import Terms from "@/pages/terms";
@@ -35,12 +36,13 @@ function Router() {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <ProtectedRoute path="/verify-email" component={VerifyEmail} />
-      <Route path="/dashboard" component={Dashboard} />
+      <ProtectedRoute path="/dashboard" component={NewProfile} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/subscribe" component={Subscribe} />
       <Route path="/setup-alerts" component={SetupAlerts} />
       <ProtectedRoute path="/profile" component={NewProfile} />
-      <Route path="/old-profile" component={Profile} />
+      <ProtectedRoute path="/edit/:id" component={SubscriptionPage} />
+      {/* <Route path="/old-profile" component={Profile} /> */}
       {/* <Route path="/test-profile" component={NewProfile} /> */}
       <Route path="/about" component={About} />
       <Route path="/terms" component={Terms} />

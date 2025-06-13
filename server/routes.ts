@@ -132,6 +132,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
                   lastName: profile.name?.familyName || undefined,
                   isEmailVerified: true,
                 });
+
+                if (user) {
+                  // create stipe customer
+                  const stripeCustomer = await stripe.customers.create({
+                    email: user.email,
+                    name: `${user.firstName} ${user.lastName}`,
+                    metadata: {
+                      userId: user.id.toString(),
+                    },
+                  });
+
+                  await storage.updateUserStripeCustomerId(
+                    user.id,
+                    stripeCustomer.id,
+                  );
+                }
               }
             }
 
@@ -219,8 +235,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(500).json({ message: "Registration failed" });
       }
 
+      // create stipe customer
+      const stripeCustomer = await stripe.customers.create({
+        email: user.email,
+        name: `${user.firstName} ${user.lastName}`,
+        metadata: {
+          userId: user.id.toString(),
+        },
+      });
+
       // Send email with code
       await emailService.sendVerificationEmail(user.email, verificationCode);
+
+      // update user with stripe customer id
+      await storage.updateUserStripeCustomerId(user.id, stripeCustomer.id);
 
       // Remove password from response
       const {
@@ -490,7 +518,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { currentPassword, newPassword, confirmPassword } = req.body;
 
       if (!newPassword || !confirmPassword) {
-        return res.status(400).json({ message: "New password fields are required" });
+        return res
+          .status(400)
+          .json({ message: "New password fields are required" });
       }
 
       if (newPassword !== confirmPassword) {
@@ -501,7 +531,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (user.password) {
         const isValid = await bcrypt.compare(currentPassword, user.password);
         if (!isValid) {
-          return res.status(400).json({ message: "Current password is incorrect" });
+          return res
+            .status(400)
+            .json({ message: "Current password is incorrect" });
         }
       }
 
@@ -527,7 +559,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { email, username, firstName, lastName } = req.body;
 
       // Prevent email update if Google user with no password
-      const isGoogleOnlyUser = !!existingUser.googleId && !existingUser.password;
+      const isGoogleOnlyUser =
+        !!existingUser.googleId && !existingUser.password;
       const emailChanged = email && email !== existingUser.email;
 
       if (isGoogleOnlyUser && emailChanged) {
@@ -551,7 +584,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.post("/api/waitlist", async (req, res) => {
+    try {
+      const { email, firstName, lastname } = req.body;
 
+      const userName = `${firstName} ${lastname}`;
+
+      await emailService.sendAdminNewWaitlistAlert(email, userName);
+      await emailService.sendUserWaitlistConfirmation(email, userName);
+
+      return res
+        .status(200)
+        .json({ message: "Added to waitlist successfully" });
+    } catch (error) {
+      return res.status(500).json({ message: "Failed to add to waitlist" });
+    }
+  });
 
   // Subscription routes
   // list payment methods
@@ -623,7 +671,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         currency: "usd",
         unit_amount: unitAmountInCents,
         recurring: {
-          interval: "month",
+          interval: "day",
         },
         product_data: {
           name: `Amiquus Subscription - ${data.brand}`,
@@ -735,7 +783,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         currency: "usd",
         unit_amount: unitAmountInCents,
         recurring: {
-          interval: "month",
+          interval: "day",
         },
         product_data: {
           name: `Amiquus Subscription - ${data.brand}`,
@@ -884,58 +932,175 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // update subscription
   app.put("/api/subscriptions/:id", async (req, res) => {
     try {
+      // ─── Authorization ───────────────────────────────
       if (!req.isAuthenticated?.()) {
         return res.status(401).json({ message: "Authentication required" });
       }
 
-      const userId = (req.user as any).id;
+      const user = req.user as any;
+      const userId = user.id;
       const subscriptionId = parseInt(req.params.id);
-      const { id, createdAt, updatedAt, ...data } = req.body; // ⬅️ Remove `id`, `createdAt`, `updatedAt` if present
+      const { id, createdAt, updatedAt, ...data } = req.body;
 
-
+      // ─── Subscription Retrieval ──────────────────────
       const subscription = await storage.getSubscription(subscriptionId);
-
       if (!subscription || subscription.userId !== userId) {
         return res.status(404).json({ message: "Subscription not found" });
       }
 
-      // Handle Stripe pause
-      if (data.status === "paused") {
-        const stripeSubId =
-          subscription.stripeSubscriptionId || data.stripeSubscriptionId;
+      if (!stripe) {
+        return res.status(500).json({ message: "Stripe is not configured" });
+      }
 
-        if (stripeSubId) {
-          const stripeSubscription =
-            await stripe.subscriptions.retrieve(stripeSubId);
+      // ─── Stripe Price Update (if price changed) ──────
+      let priceId = subscription.stripePriceId;
+      const isPriceSame = subscription.price === data.price;
 
-          if (stripeSubscription.status === "active") {
-            await stripe.subscriptions.update(stripeSubId, {
-              pause_collection: {
-                behavior: "void",
-              },
-            });
-          }
-        } else {
+      if (!isPriceSame) {
+        const newPrice = await stripe.prices.create({
+          currency: "usd",
+          unit_amount: data.price,
+          recurring: { interval: "day" },
+          product_data: { name: `Amiquus Subscription - ${data.brand}` },
+          metadata: { userId: userId.toString() },
+        });
+
+        if (!newPrice) {
           return res
-            .status(400)
-            .json({ message: "Stripe subscription ID is missing" });
+            .status(500)
+            .json({ message: "Failed to create new Stripe price" });
+        }
+
+        priceId = newPrice.id;
+      }
+
+      // ─── Update Subscription in Database ─────────────
+      await storage.updateSubscription(subscriptionId, {
+        ...data,
+        stripePriceId: priceId,
+      });
+
+      // ─── Update Stripe Subscription ──────────────────
+      const stripeSubId =
+        subscription.stripeSubscriptionId || data.stripeSubscriptionId;
+      if (!stripeSubId) {
+        return res
+          .status(400)
+          .json({ message: "Stripe subscription ID is missing" });
+      }
+
+      const stripeSubscription =
+        await stripe.subscriptions.retrieve(stripeSubId);
+      const subscriptionItemId = stripeSubscription.items.data[0]?.id;
+
+      if (!subscriptionItemId) {
+        return res
+          .status(500)
+          .json({ message: "Stripe subscription item not found" });
+      }
+
+      if (isPriceSame) {
+         if (data.status === "active" && subscription.status === "paused") {
+            await stripe.subscriptions.resume(stripeSubId);
+         } else if (data.status === "paused" && subscription.status === "active") {
+            await stripe.subscriptions.update(stripeSubId, {
+               pause_collection: { behavior: "void" }
+            })
+         }
+      } else {
+       // update price
+        if (data.status === "active" && subscription.status === "paused") {
+          await stripe.subscriptions.update(stripeSubId, {
+            items: [{ id: subscriptionItemId, price: priceId as string }],
+            pause_collection: null,
+          })
+
+        } else {
+          await stripe.subscriptions.update(stripeSubId, {
+            items: [{ id: subscriptionItemId, price: priceId as string }],
+          })
         }
       }
 
-      
 
-      // Update your DB subscription
-      await storage.updateSubscription(subscriptionId, data);
+      // ─── Sync JSON with External System ───────────────
+      const jsonId =
+        stripeSubscription.metadata.jsonId || `${user.email}${subscriptionId}`;
+      const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+      const jsonRes = await fetch(getUrl, {
+        method: "GET",
+        headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
+      });
 
+      if (!jsonRes.ok) {
+        console.error("[JSON Sync] Failed to fetch existing JSON");
+        return res
+          .status(500)
+          .json({ message: "Failed to fetch existing JSON" });
+      }
+
+      const existingJson = await jsonRes.json();
+      const putUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+
+      const updatedJson = {
+        ...existingJson,
+        user_info: {
+          ...existingJson.user_info,
+          payment_status: subscription.status,
+        },
+        running_frequency: data.updateFrequency,
+        websites: {
+          websites_to_scrap: data.websitesSelected,
+        },
+        first_run_throwback_time: "86400",
+        language_tag: {
+          language: [data.notificationLanguage],
+        },
+        filters: {
+          ...existingJson.filters,
+          facebook_link: data.facebookMarketplaceUrl,
+          min_mileage: data.mileageMin,
+          max_mileage: data.mileageMax,
+          telegram_bot_token: data.telegramBotToken,
+          telegram_chat_id: data.telegramChatId,
+          telegram_language: data.notificationLanguage,
+          min_price: data.priceMin,
+          max_price: data.priceMax,
+          fuel_type: data.fuelType,
+          brand: data.brand,
+          model: data.model,
+          model_year_lower_limit: data.yearMin,
+          model_year_upper_limit: data.yearMax,
+        },
+      };
+
+      const updateRes = await fetch(putUrl, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${BEARER_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedJson),
+      });
+
+      if (!updateRes.ok) {
+        console.error("[JSON Sync] Failed to update JSON for", jsonId);
+        return res
+          .status(500)
+          .json({ message: "Failed to update external JSON data" });
+      }
+
+      console.log(
+        `[✅] Subscription #${subscriptionId} updated & synced for user ${user.email}`,
+      );
       return res
         .status(200)
         .json({ message: "Subscription updated successfully" });
     } catch (error: any) {
-      console.error("Error updating subscription:", error);
-      return res.status(500).json({ message: "Failed to update subscription" });
+      console.error("❌ Error updating subscription:", error);
+      return res.status(500).json({ message: "Internal server error" });
     }
   });
 
