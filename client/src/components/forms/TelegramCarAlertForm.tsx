@@ -28,6 +28,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/use-auth";
 import LoginPromptModal from "@/components/modals/login-prompt";
+import WaitlistPromptModal from "@/components/modals/waitlist-prompt"
 import { apiRequest } from "@/lib/queryClient";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 
@@ -60,6 +61,7 @@ export default function TelegramCarAlertForm({
   const [totalPrice, setTotalPrice] = useState(0);
 
   const [showLogin, setShowLogin] = useState(false);
+  const [showWaitList, setShowWaitList] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   // form fields
@@ -110,6 +112,25 @@ export default function TelegramCarAlertForm({
       }
     }
   }, [isAuthenticated, isLoading]);
+
+  useEffect(() => {
+    async function checkStats() {
+      try {
+        const response = await apiRequest('GET', '/api/subscription-stats');
+        const stats = await response.json();
+
+        if (stats.active >= 30) {
+          setShowWaitList(true);
+        } else {
+          setShowWaitList(false);
+        }
+      } catch (err) {
+        console.error("Failed to fetch subscription stats:", err);
+      }
+    }
+
+    checkStats();
+  }, []);
 
   function calculateBasePrice(form: AlertFormSchema): number {
     const websitesCount = form.websitesSelected?.length || 0;
@@ -172,6 +193,12 @@ export default function TelegramCarAlertForm({
 
   const currentYear = new Date().getFullYear();
 
+  const parseNullableNumber = (val: string | number | undefined) => {
+    const num = Number(val);
+    return !val || num === 0 ? null : num;
+  };
+
+
   const onSubmit = async (values: AlertFormSchema) => {
     if (!termsAgreed) {
       toast({
@@ -194,12 +221,12 @@ export default function TelegramCarAlertForm({
       brand: values.carBrand,
       model: values.carModel,
       fuelType: values.fuelType,
-      yearMin: Number(values.yearMin),
-      yearMax: Number(values.yearMax),
-      mileageMin: 0,
-      mileageMax: Number(values.maxKilometers),
-      priceMin: Number(values.priceMin),
-      priceMax: Number(values.priceMax),
+      yearMin: parseNullableNumber(values.yearMin),
+      yearMax: parseNullableNumber(values.yearMax),
+      mileageMin: null,
+      mileageMax: parseNullableNumber(values.maxKilometers),
+      priceMin: parseNullableNumber(values.priceMin),
+      priceMax: parseNullableNumber(values.priceMax),
       telegramBotToken: values.telegramToken,
       telegramChatId: values.telegramChatId,
       notificationLanguage: values.notificationLanguage,
@@ -612,7 +639,6 @@ export default function TelegramCarAlertForm({
                 )}
               />
 
-            
               <FormField
                 control={form.control}
                 name="updateFrequency"
@@ -1018,6 +1044,12 @@ export default function TelegramCarAlertForm({
         <LoginPromptModal
           open={showLogin}
           onClose={() => setShowLogin(false)}
+        />
+      )}
+      {showWaitList && (
+        <WaitlistPromptModal
+          open={showWaitList}
+          onClose={() => setShowWaitList(false)}
         />
       )}
     </section>

@@ -271,8 +271,8 @@ router.post(
           return;
         }
 
-        // delete subscription
-        await storage.deleteSubscription(parseInt(subscriptionId));
+        // // delete subscription
+        // await storage.deleteSubscription(parseInt(subscriptionId));
 
         const jsonId = metaJsonId ? metaJsonId : user.email + subscriptionId;
         const deleteUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
@@ -302,6 +302,91 @@ router.post(
 
         break;
       }
+        case "invoice.payment_failed": {
+          const invoice = event.data.object;
+
+          const customerId = invoice.customer as string;
+          const subscriptionId = invoice.parent?.subscription_details?.subscription as string;
+
+          try {
+            // Fetch the Stripe subscription to get metadata
+            const stripeSubscription = await stripe.subscriptions.retrieve(subscriptionId);
+
+            const userId = stripeSubscription.metadata.userId;
+            const userSubscriptionId = stripeSubscription.metadata.userSubscriptionId;
+            const jsonId = stripeSubscription.metadata.jsonId || `${invoice.customer_email}${userSubscriptionId}`;
+
+            if (!userId || !userSubscriptionId) {
+              console.error("Missing metadata for user or subscription");
+              return;
+            }
+
+            // Check if this is the first payment attempt failure
+            const attempts = invoice.attempt_count;
+            console.log(`Invoice failed - attempts: ${attempts}`);
+
+            if (attempts < 2) {
+              console.log("Retrying, not pausing subscription yet.");
+              break;
+            }
+
+            // Pause Stripe subscription
+            await stripe.subscriptions.update(subscriptionId, {
+              pause_collection: { behavior: "void" },
+            });
+
+            // Update DB
+            await storage.updateSubscription(parseInt(userSubscriptionId), {
+              status: "paused",
+            });
+
+            // Update JSON
+            const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+            const res = await fetch(getUrl, {
+              method: "GET",
+              headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
+            });
+
+            if (res.ok) {
+              const existingJson = await res.json();
+              existingJson.user_info.payment_status = "paused";
+
+              await fetch(getUrl, {
+                method: "PUT",
+                headers: {
+                  Authorization: `Bearer ${BEARER_TOKEN}`,
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(existingJson),
+              });
+            }
+
+            // Notify user via email
+            const user = await storage.getUser(parseInt(userId));
+            if (user) {
+              await emailService.sendCustomEmail(
+                user.email,
+                "Action Required: Subscription Paused",
+                `
+                <p>Hello ${user.firstName || "there"},</p>
+                <p>We were unable to process your recent payment after multiple attempts.</p>
+                <p>Your subscription has been paused. To resume, please update your payment details.</p>
+                <br/>
+                <p><a href="https://amiquus.com/dashboard">Go to Dashboard</a></p>
+                <p>— The Amiquus Team</p>
+                `
+              );
+            }
+
+            console.log("Paused subscription and notified user");
+
+          } catch (err) {
+            console.error("Error handling payment failure:", err);
+          }
+
+          break;
+        }
+
 
       // ... handle other event types
       default:

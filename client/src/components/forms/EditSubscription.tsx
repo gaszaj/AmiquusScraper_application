@@ -60,10 +60,15 @@ export default function EditSubscriptionPage({
   const [models, setModels] = useState<string[]>([]);
   const [fuelTypes, setFuelTypes] = useState<string[]>([]);
   const [websites, setWebsites] = useState<string[]>([]);
-  const [websiteNotInJson, setWebsiteNotInJson] = useState<string[]>([]);
+  // const [websiteNotInJson, setWebsiteNotInJson] = useState<string[]>([]);
 
   const [location, navigate] = useLocation();
   const [subStatus, setSubStatus] = useState(subscription.status || "active");
+
+  const parseNullableNumber = (val: string | number | undefined) => {
+    const num = Number(val);
+    return !val || num === 0 ? null : num;
+  };
 
   const form = useForm<AlertFormSchema>({
     resolver: zodResolver(alertSchema),
@@ -154,17 +159,17 @@ export default function EditSubscriptionPage({
   }, [subscription]);
 
   // websites not in json are websites that are not in the json file but are in the database
-  useEffect(() => {
-    if (subscription) {
-      const websitesLower = websites.map((w) => w.toLowerCase());
-      const websitesNotInJson = (
-        subscription.websitesSelected as string[]
-      )?.filter(
-        (website: string) => !websitesLower.includes(website.toLowerCase()),
-      );
-      setWebsiteNotInJson(websitesNotInJson || []);
-    }
-  }, [subscription, websites]);
+  // useEffect(() => {
+  //   if (subscription) {
+  //     const websitesLower = websites.map((w) => w.toLowerCase());
+  //     const websitesNotInJson = (
+  //       subscription.websitesSelected as string[]
+  //     )?.filter(
+  //       (website: string) => !websitesLower.includes(website.toLowerCase()),
+  //     );
+  //     setWebsiteNotInJson(websitesNotInJson || []);
+  //   }
+  // }, [subscription, websites]);
 
   // Function to load car models based on selected brand
   const loadModels = (brand: string) => {
@@ -190,11 +195,11 @@ export default function EditSubscriptionPage({
         brand: values.carBrand,
         model: values.carModel,
         fuelType: values.fuelType,
-        priceMin: Number(values.priceMin),
-        priceMax: Number(values.priceMax),
-        yearMin: Number(values.yearMin),
-        yearMax: Number(values.yearMax),
-        mileageMax: Number(values.maxKilometers),
+        priceMin: parseNullableNumber(values.priceMin),
+        priceMax: parseNullableNumber(values.priceMax),
+        yearMin: parseNullableNumber(values.yearMin),
+        yearMax: parseNullableNumber(values.yearMax),
+        mileageMax: parseNullableNumber(values.maxKilometers),
         telegramBotToken: values.telegramToken,
         telegramChatId: values.telegramChatId,
         websitesSelected: values.websitesSelected,
@@ -222,13 +227,16 @@ export default function EditSubscriptionPage({
         title: "Subscription Updated",
         description: `Your subscription for ${values.carBrand} ${values.carModel} has been updated.`,
       });
-      navigate("/dashboard");
+      
+      window.location.href = "/dashboard";
     } catch (error: any) {
       toast({
         title: "Error",
         description: error.message || "Failed to update subscription",
         variant: "destructive",
       });
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -557,7 +565,7 @@ export default function EditSubscriptionPage({
           />
 
           {/* Websites Not in JSON */}
-          {websiteNotInJson.length > 0 && (
+          {/* {websiteNotInJson.length > 0 && (
             <div className="mt-6">
               <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
                 Unsupported Websites:
@@ -604,7 +612,7 @@ export default function EditSubscriptionPage({
                 team. .
               </p>
             </div>
-          )}
+          )} */}
           <FormField
             control={form.control}
             name="updateFrequency"

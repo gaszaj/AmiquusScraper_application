@@ -32,6 +32,7 @@ export default function Signup({ embedded = false }: SignupProps) {
 
   const { toast } = useToast();
   const [clientSecret, setClientSecret] = useState<string | null>(null);
+  const [showWaitList, setShowWaitList] = useState(false);
 
   // form fields
   const [carBrands, setCarBrands] = useState<string[]>([]);
@@ -40,6 +41,25 @@ export default function Signup({ embedded = false }: SignupProps) {
   const [websites, setWebsites] = useState<string[]>([]);
 
   const [currentStep, setCurrentStep] = useState(1);
+
+  useEffect(() => {
+    async function checkStats() {
+      try {
+        const response = await apiRequest("GET", "/api/subscription-stats");
+        const stats = await response.json();
+
+        if (stats.active >= 30) {
+          setShowWaitList(true);
+        } else {
+          setShowWaitList(false);
+        }
+      } catch (err) {
+        console.error("Failed to fetch subscription stats:", err);
+      }
+    }
+
+    checkStats();
+  }, []);
 
   useEffect(() => {
     if (!loadingJson) {
@@ -102,6 +122,11 @@ export default function Signup({ embedded = false }: SignupProps) {
     setCurrentStep((prev) => Math.max(prev - 1, 1));
   };
 
+  const parseNullableNumber = (val: string | number | undefined) => {
+    const num = Number(val);
+    return !val || num === 0 ? null : num;
+  };
+
   const handleSubmit = async () => {
     if (user) {
       const subscriptionData = {
@@ -112,12 +137,12 @@ export default function Signup({ embedded = false }: SignupProps) {
         brand: formData.carBrand,
         model: formData.carModel,
         fuelType: formData.fuelType,
-        yearMin: Number(formData.yearMin),
-        yearMax: Number(formData.yearMax),
-        mileageMin: 0,
-        mileageMax: Number(formData.maxKilometers),
-        priceMin: Number(formData.priceMin),
-        priceMax: Number(formData.priceMax),
+        yearMin: parseNullableNumber(formData.yearMin),
+        yearMax: parseNullableNumber(formData.yearMax),
+        mileageMin: null,
+        mileageMax: parseNullableNumber(formData.maxKilometers) ,
+        priceMin: parseNullableNumber(formData.priceMin),
+        priceMax: parseNullableNumber(formData.priceMax),
         telegramBotToken: formData.telegramToken,
         telegramChatId: formData.telegramChatId,
         notificationLanguage: formData.notificationLanguage,
@@ -277,24 +302,44 @@ export default function Signup({ embedded = false }: SignupProps) {
             Get Alerts Now
           </Link>
         </div>
-        {user && (
+        {showWaitList && (
           <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
-            {clientSecret && <PaymentScreen clientSecret={clientSecret} />}
-            {!clientSecret && (
-              <div className="p-8">
-                <FormProgress currentStep={currentStep} totalSteps={5} />
-                {renderStep()}
-              </div>
-            )}
-          </div>
-        )}
-        {!user && (
-          <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
-            <div className="p-8">
-              <FormProgress currentStep={currentStep} totalSteps={5} />
-              {renderStep()}
+            <div className="space-y-6 p-4 flex flex-col gap-4 justify-center items-center">
+              <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-4">
+                We are currently at full capacity. Please join our waitlist to
+                be notified when a spot opens up.
+              </p>
+              <Link
+                href="/waitlist"
+                className="inline-block px-6 py-3 bg-primary dark:bg-[#ff0] text-white dark:text-neutral-900 hover:bg-primary/90 dark:hover:bg-yellow-300 transition font-semibold rounded-xl shadow-md hover:shadow-lg"
+              >
+                Join Waitlist
+              </Link>
             </div>
           </div>
+        )}
+        {!showWaitList && (
+          <>
+            {user && (
+              <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
+                {clientSecret && <PaymentScreen clientSecret={clientSecret} />}
+                {!clientSecret && (
+                  <div className="p-8">
+                    <FormProgress currentStep={currentStep} totalSteps={5} />
+                    {renderStep()}
+                  </div>
+                )}
+              </div>
+            )}
+            {!user && (
+              <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
+                <div className="p-8">
+                  <FormProgress currentStep={currentStep} totalSteps={5} />
+                  {renderStep()}
+                </div>
+              </div>
+            )}
+          </>
         )}
       </div>
     </section>

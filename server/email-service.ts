@@ -175,6 +175,18 @@ class EmailService implements IEmailService {
     }
   }
 
+  async sendCustomEmail(email: string, subject: string, htmlContent: string) {
+    const sendEmail: brevo.SendSmtpEmail = {
+      subject,
+      htmlContent,
+      sender: { name: "Amiquus", email: "info@amiquus.com" },
+      to: [{ email }],
+    };
+
+    await apiInstance.sendTransacEmail(sendEmail);
+  }
+
+
   async sendUserWaitlistConfirmation(userEmail: string, userName: string): Promise<void> {
     try {
       const htmlContent = `

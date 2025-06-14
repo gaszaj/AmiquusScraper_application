@@ -249,7 +249,7 @@ function SubscriptionCard({
           </div>
           <div className="flex items-start space-x-2">
             <span className="font-medium">Price:</span>
-            <span>${subscription.price.toFixed(2)}/month</span>
+            <span>${(subscription.price / 100).toFixed(2)}/month</span>
           </div>
         </div>
       </CardContent>

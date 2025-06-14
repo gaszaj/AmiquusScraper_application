@@ -646,7 +646,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!stripe) {
         return res.status(500).json({ message: "Stripe is not configured" });
       }
-
       // Create Stripe customer if not exists
 
       const user = req.user as any;
@@ -922,7 +921,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         await stripe.subscriptions.cancel(subscription.stripeSubscriptionId);
       }
 
-      // await storage.deleteSubscription(subscriptionId);
+      await storage.deleteSubscription(subscriptionId);
 
       return res
         .status(200)
@@ -1048,7 +1047,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ...existingJson,
         user_info: {
           ...existingJson.user_info,
-          payment_status: subscription.status,
+          payment_status: data.status,
         },
         running_frequency: data.updateFrequency,
         websites: {
