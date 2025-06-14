@@ -1,43 +1,12 @@
-import express from "express";
-import { registerRoutes } from "../server/routes";
-import { registerStripeRoutes } from "../server/routes/stripe";
-import stripeWebhookHandler from "../server/routes/webhook";
 
-const app = express();
+import { createApp } from "../dist/app.js"; // will be compiled here after esbuild
 
-app.use("/api/stripe-webhook", stripeWebhookHandler);
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+let cachedApp: any;
 
-// Logging
-app.use((req, res, next) => {
-  const start = Date.now();
-  const path = req.path;
-  let capturedJsonResponse: any;
+export default async function handler(req: any, res: any) {
+  if (!cachedApp) {
+    cachedApp = await createApp();
+  }
 
-  const originalResJson = res.json;
-  res.json = function (bodyJson, ...args) {
-    capturedJsonResponse = bodyJson;
-    return originalResJson.apply(res, [bodyJson, ...args]);
-  };
-
-  res.on("finish", () => {
-    const duration = Date.now() - start;
-    if (path.startsWith("/api")) {
-      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
-      }
-      if (logLine.length > 80) logLine = logLine.slice(0, 79) + "…";
-      console.log(logLine);
-    }
-  });
-
-  next();
-});
-
-registerRoutes(app);
-registerStripeRoutes(app);
-
-
-export default app;
+  return cachedApp(req, res);
+}
