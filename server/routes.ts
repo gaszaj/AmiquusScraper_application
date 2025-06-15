@@ -57,6 +57,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   //     store: storage.sessionStore, // Use PostgreSQL to store sessions
   //   }),
   // );
+  app.set("trust proxy", 1);
 
   app.use(
     session({
@@ -64,10 +65,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       resave: false,
       saveUninitialized: false,
       cookie: {
-        secure: process.env.NODE_ENV === "production", // ❗ this must be false locally
+        secure: true,
+        sameSite: "lax",
         httpOnly: true,
-        sameSite: "lax", // or "strict" if you control both FE & BE
-        maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+        maxAge: 1000 * 60 * 60 * 24 * 7,
       },
       store: storage.sessionStore,
     }),
