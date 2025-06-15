@@ -5,7 +5,6 @@ import session from "express-session";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
-import express from "express";
 
 import bcrypt from "bcrypt";
 import {
@@ -46,18 +45,34 @@ const BEARER_TOKEN = process.env.BEARER_TOKEN || "";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Session setup
+  // app.use(
+  //   session({
+  //     secret: process.env.SESSION_SECRET || "amiquus-secret-key",
+  //     resave: false,
+  //     saveUninitialized: false,
+  //     cookie: {
+  //       secure: process.env.NODE_ENV === "production",
+  //       maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+  //     },
+  //     store: storage.sessionStore, // Use PostgreSQL to store sessions
+  //   }),
+  // );
+
   app.use(
     session({
       secret: process.env.SESSION_SECRET || "amiquus-secret-key",
       resave: false,
       saveUninitialized: false,
       cookie: {
-        secure: process.env.NODE_ENV === "production",
+        secure: process.env.NODE_ENV === "production", // ❗ this must be false locally
+        httpOnly: true,
+        sameSite: "lax", // or "strict" if you control both FE & BE
         maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
       },
-      store: storage.sessionStore, // Use PostgreSQL to store sessions
+      store: storage.sessionStore,
     }),
   );
+
 
   // Initialize passport
   app.use(passport.initialize());

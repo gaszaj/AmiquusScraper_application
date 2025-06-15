@@ -30,12 +30,12 @@ export default function Hero({ onGetStarted }: HeroProps) {
                   size="rounded-xl" 
                   className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:hover:bg-primary-600 dark:text-neutral-900 shadow-lg shadow-primary/20 w-full sm:w-auto"
                 >
-                  Start Free Trial
+                  Set Up Your Alerts
                 </Button>
               ) : (
-                <Link href="/service">
+                <Link href="/setup-alerts">
                   <Button size="rounded-xl" className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:hover:bg-primary-600 dark:text-neutral-900 shadow-lg shadow-primary/20 w-full sm:w-auto">
-                    Start Free Trial
+                    Set Up Your Alerts
                   </Button>
                 </Link>
               )}

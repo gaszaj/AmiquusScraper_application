@@ -93,9 +93,9 @@ export default function HowItWorks() {
                 ))}
               </ul>
               <div className="mt-8">
-                <Link href="/service">
+                <Link href="/setup-alerts">
                   <Button size="lg" variant="accent" className="shadow-lg shadow-accent/20 text-white dark:text-black">
-                    Start Your Free Trial
+                    Set Up Your Alerts
                   </Button>
                 </Link>
               </div>

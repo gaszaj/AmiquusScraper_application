@@ -201,7 +201,7 @@ export default function Header() {
                 </Link>
                 <Link href="/signup">
                   <Button className="bg-accent hover:bg-accent/90 text-neutral-900 font-medium">
-                    Start Free Trial
+                    Set Up Your Alerts
                   </Button>
                 </Link>
               </>
