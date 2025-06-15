@@ -7,7 +7,7 @@ const stripe = new Stripe(
   "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
 );
 
-const endpointSecret = "whsec_CaxuZZI1INaJfNXKz2UUYxb3prhkwDcn";
+const endpointSecret = "whsec_ayGhqM2Mt9UA9YGNXoFJwODeChhJFWru";
 
 const JSON_BASE_URL =
   process.env.JSON_BASE_URL ||
