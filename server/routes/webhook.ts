@@ -3,11 +3,11 @@ import Stripe from "stripe";
 import { storage } from "../storage"; // your DB utils
 import { emailService } from "../email-service";
 
-const stripe = new Stripe(
-  "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
-);
+const stripe = process.env.STRIPE_SECRET_KEY
+? new Stripe(process.env.STRIPE_SECRET_KEY)
+: undefined;
 
-const endpointSecret = "whsec_ayGhqM2Mt9UA9YGNXoFJwODeChhJFWru";
+const endpointSecret = "whsec_ztqn6TukivBY7q3uD9fZ3n9eZkhlSnPV";
 
 const JSON_BASE_URL =
   process.env.JSON_BASE_URL ||

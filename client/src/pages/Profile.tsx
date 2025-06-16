@@ -52,10 +52,9 @@ import {
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
+const publicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY
 // Load Stripe
-const stripePromise = loadStripe(
-  "pk_test_51R7GaAKTt4KB6Gxykv1ZJ3j8VqeEcLx1lpbfrb8XmzpRhzi7ljw0EpMBSR56ChCrQFIXS9nsPKUn9L0x7vXJH90R00EkcJodyl",
-);
+const stripePromise = loadStripe(publicKey as string)
 
 // Payment Method Form component
 function AddPaymentMethodForm() {

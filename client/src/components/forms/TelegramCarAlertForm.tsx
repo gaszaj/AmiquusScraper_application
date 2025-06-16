@@ -138,10 +138,12 @@ export default function TelegramCarAlertForm({
 
     if (websitesCount === 0) return 0;
 
-    let price = 9.99;
-
+    // let price = 9.99;
+     let price = 1.00;
+    
     if (websitesCount > 1) {
-      price += 4.99 * (websitesCount - 1);
+      // price += 4.99 * (websitesCount - 1);
+      price += 0.50 * (websitesCount - 1);
     }
 
     const frequencyOption = FREQUENCY_OPTIONS.find(
@@ -945,12 +947,17 @@ export default function TelegramCarAlertForm({
                     )
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
-                    {/* $9.98/month */}$
-                    {(
+                    {/* {(
                       Math.max(
                         (form.watch("websitesSelected")?.length || 1) - 1,
                         0,
                       ) * 4.99
+                    ).toFixed(2)} */}
+                    {(
+                      Math.max(
+                        (form.watch("websitesSelected")?.length || 1) - 1,
+                        0,
+                      ) * 1.00
                     ).toFixed(2)}
                   </span>
                 </div>

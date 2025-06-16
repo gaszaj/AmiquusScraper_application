@@ -140,13 +140,14 @@ export default function Signup({ embedded = false }: SignupProps) {
         yearMin: parseNullableNumber(formData.yearMin),
         yearMax: parseNullableNumber(formData.yearMax),
         mileageMin: null,
-        mileageMax: parseNullableNumber(formData.maxKilometers) ,
+        mileageMax: parseNullableNumber(formData.maxKilometers),
         priceMin: parseNullableNumber(formData.priceMin),
         priceMax: parseNullableNumber(formData.priceMax),
         telegramBotToken: formData.telegramToken,
         telegramChatId: formData.telegramChatId,
         notificationLanguage: formData.notificationLanguage,
-        price: formData.price || 9.99,
+        price: formData.price || 1.00,
+        // price: formData.price || 9.99,
       };
 
       try {

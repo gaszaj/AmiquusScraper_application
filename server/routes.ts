@@ -27,13 +27,13 @@ if (!process.env.STRIPE_SECRET_KEY) {
   );
 }
 
-// const stripe = process.env.STRIPE_SECRET_KEY
-//   ? new Stripe(process.env.STRIPE_SECRET_KEY)
-//   : undefined;
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : undefined;
 
-const stripe = new Stripe(
-  "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
-);
+// const stripe = new Stripe(
+//   "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
+// );
 
 const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || "";
 

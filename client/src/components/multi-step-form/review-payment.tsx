@@ -42,11 +42,15 @@ function calculateBasePrice(formData: Partial<AlertFormSchema>): number {
   // Calculate price using useSubscription hook's calculatePrice function
   const calculatePrice = (count: number, freq: string) => {
     // Base price for one website
-    let price = 9.99;
+    // let price = 9.99;
+    let price = 1.00;
     
     // Add price for additional websites
+    // if (count > 1) {
+    //   price += 4.99 * (count - 1);
+    // }
     if (count > 1) {
-      price += 4.99 * (count - 1);
+      price += 0.50 * (count - 1);
     }
     
     // Add price for frequency
@@ -231,13 +235,15 @@ export default function ReviewPayment({
         <CardContent className="space-y-4">
           <div className="flex justify-between">
             <span>Base Subscription:</span>
-            <span>${(9.99).toFixed(2)}</span>
+            {/* <span>${(9.99).toFixed(2)}</span> */}
+            <span>${(1.00).toFixed(2)}</span>
           </div>
           
           {formData.websitesSelected && formData.websitesSelected.length > 1 && (
             <div className="flex justify-between">
               <span>Additional Websites ({formData.websitesSelected.length - 1}):</span>
-              <span>${((formData.websitesSelected.length - 1) * 4.99).toFixed(2)}</span>
+              {/* <span>${((formData.websitesSelected.length - 1) * 4.99).toFixed(2)}</span> */}
+              <span>${((formData.websitesSelected.length - 1) * 0.50).toFixed(2)}</span>
             </div>
           )}
           

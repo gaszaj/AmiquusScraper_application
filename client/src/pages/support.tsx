@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 
 export default function Support() {
+  
   return (
     <>
       <Helmet>
@@ -20,8 +21,8 @@ export default function Support() {
           Find answers to common questions or get in touch with our support team
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-16">
+          {/* <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 text-center">
             <div className="w-16 h-16 bg-primary/10 dark:bg-[#ff0]/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary dark:text-[#ff0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -32,7 +33,7 @@ export default function Support() {
               Get real-time assistance through our chat system during business hours
             </p>
             <button className="text-primary dark:text-[#ff0] font-medium hover:underline">Start Chat</button>
-          </div>
+          </div> */}
           
           <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 text-center">
             <div className="w-16 h-16 bg-primary/10 dark:bg-[#ff0]/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -47,7 +48,7 @@ export default function Support() {
             <a href="mailto:support@amiquus.com" className="text-primary dark:text-[#ff0] font-medium hover:underline">support@amiquus.com</a>
           </div>
           
-          <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 text-center">
+          {/* <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md dark:shadow-neutral-900 text-center">
             <div className="w-16 h-16 bg-primary/10 dark:bg-[#ff0]/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary dark:text-[#ff0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
@@ -58,7 +59,7 @@ export default function Support() {
               Contact us directly through our Telegram support channel
             </p>
             <a href="https://t.me/AmiquusSupport" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-[#ff0] font-medium hover:underline">@AmiquusSupport</a>
-          </div>
+          </div> */}
         </div>
         
         <h2 className="text-2xl font-semibold mb-6">Frequently Asked Questions</h2>
