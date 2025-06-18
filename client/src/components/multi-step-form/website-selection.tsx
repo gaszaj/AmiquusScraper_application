@@ -26,6 +26,8 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { WEBSITE_OPTIONS, FREQUENCY_OPTIONS } from "@/lib/constants";
 import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
+import { useLanguage } from "@/components/language-provider";
+
 
 interface WebsiteSelectionProps {
   formData: Partial<AlertFormSchema>;
@@ -37,30 +39,6 @@ interface WebsiteSelectionProps {
   websites: string[];
 }
 
-const websiteSelectionSchema = z
-  .object({
-    websitesSelected: z
-      .array(z.string())
-      .min(1, "At least one website must be selected"),
-
-    facebookMarketplaceUrl: z.string().optional().or(z.literal("")),
-    updateFrequency: z.enum(["hourly", "30min", "15min", "5min", "1min"]),
-  })
-  .superRefine((data, ctx) => {
-    if (
-      data.websitesSelected.includes("facebook") &&
-      !data.facebookMarketplaceUrl
-    ) {
-      ctx.addIssue({
-        path: ["facebookMarketplaceUrl"],
-        message:
-          "Facebook Marketplace URL is required when Facebook is selected",
-        code: z.ZodIssueCode.custom,
-      });
-    }
-  });
-
-type WebsiteSelectionFormData = z.infer<typeof websiteSelectionSchema>;
 
 export default function WebsiteSelection({
   formData,
@@ -71,6 +49,31 @@ export default function WebsiteSelection({
   setLoadingJson,
   websites,
 }: WebsiteSelectionProps) {
+  const { t } = useLanguage();
+
+  const websiteSelectionSchema = z
+    .object({
+      websitesSelected: z
+        .array(z.string())
+        .min(1, t("websiteSelection.errors.websites")),
+      facebookMarketplaceUrl: z.string().optional().or(z.literal("")),
+      updateFrequency: z.enum(["hourly", "30min", "15min", "5min", "1min"]),
+    })
+    .superRefine((data, ctx) => {
+      if (
+        data.websitesSelected.includes("facebook") &&
+        !data.facebookMarketplaceUrl
+      ) {
+        ctx.addIssue({
+          path: ["facebookMarketplaceUrl"],
+          message: t("websiteSelection.errors.facebookUrl"),
+          code: z.ZodIssueCode.custom,
+        });
+      }
+    });
+
+  type WebsiteSelectionFormData = z.infer<typeof websiteSelectionSchema>;
+  
   useEffect(() => {
     fetch("/api/newcommer")
       .then((res) => res.json())
@@ -104,25 +107,14 @@ export default function WebsiteSelection({
     }
   };
 
-  // // Watch the websites selected to show/hide the Facebook URL field
-  // const watchedWebsites = form.watch("websitesSelected");
-
-  // // Update Facebook URL visibility when selection changes
-  // if (watchedWebsites?.includes("facebook") && !showFacebookUrlField) {
-  //   setShowFacebookUrlField(true);
-  // } else if (!watchedWebsites?.includes("facebook") && showFacebookUrlField) {
-  //   setShowFacebookUrlField(false);
-  // }
-
   return (
     <div className="space-y-6">
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">
-          Website Selection
+          {t("websiteSelection.heading")}
         </h2>
         <p className="text-sm text-neutral-500">
-          Choose which websites you want to monitor and how frequently you want
-          updates.
+          {t("websiteSelection.description")}
         </p>
       </div>
 
@@ -142,9 +134,9 @@ export default function WebsiteSelection({
             render={({ field }) => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel>Websites to monitor</FormLabel>
+                   <FormLabel>{t("websiteSelection.labels.websites")}</FormLabel>
                   <FormDescription>
-                    Select one or more websites to monitor for car listings.
+                    {t("websiteSelection.help.websites")}
                   </FormDescription>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -226,10 +218,9 @@ export default function WebsiteSelection({
                 name="facebookMarketplaceUrl"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Facebook Marketplace URL</FormLabel>
+                    <FormLabel>  {t("websiteSelection.labels.facebookUrl")}</FormLabel>
                     <FormDescription>
-                      Paste the URL of your Facebook Marketplace search results
-                      here.
+                      {t("websiteSelection.help.facebookUrl")}
                     </FormDescription>
                     <FormControl>
                       <Input
@@ -245,10 +236,10 @@ export default function WebsiteSelection({
 
               <div className="space-y-2">
                 <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                  Need help finding your Facebook Marketplace search link?
+                  {t("websiteSelection.help.videoTitle")}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Watch the video below for step-by-step instructions.
+                {t("websiteSelection.help.videoDesc")}
                 </p>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                   <iframe
@@ -271,10 +262,10 @@ export default function WebsiteSelection({
             name="updateFrequency"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Update Frequency</FormLabel>
+                <FormLabel>                  {t("websiteSelection.labels.updateFrequency")}
+</FormLabel>
                 <FormDescription>
-                  How often should we check for new listings? Higher frequencies
-                  may cost more.
+                  {t("websiteSelection.help.updateFrequency")}
                 </FormDescription>
                 <Select
                   onValueChange={field.onChange}
@@ -282,7 +273,7 @@ export default function WebsiteSelection({
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select frequency" />
+                      <SelectValue placeholder={t("websiteSelection.placeholders.frequency")} />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -302,9 +293,11 @@ export default function WebsiteSelection({
 
           <div className="flex justify-between">
             <Button type="button" variant="outline" onClick={prevStep}>
-              Previous
+              {t("websiteSelection.actions.previous")}
             </Button>
-            <Button type="submit">Continue</Button>
+            <Button type="submit">
+              {t("websiteSelection.actions.continue")}
+            </Button>
           </div>
         </form>
       </Form>

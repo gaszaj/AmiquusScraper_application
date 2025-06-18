@@ -1,12 +1,15 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { BellRing, Search, Bell, Car, MessageSquare } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 interface HeroProps {
   onGetStarted?: () => void;
 }
 
 export default function Hero({ onGetStarted }: HeroProps) {
+   const { t } = useLanguage();
+  
   return (
     <section className="relative bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white pt-24 pb-16 md:py-32 overflow-hidden">
 
@@ -14,13 +17,13 @@ export default function Hero({ onGetStarted }: HeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="max-w-2xl">
             <div className="inline-flex items-center rounded-full bg-primary/10 dark:bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:text-primary mb-6">
-              <span className="mr-2">⚡</span> Track used car listings in real-time
+              <span className="mr-2">⚡</span>{t("hero.label")}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-neutral-900 dark:text-white">
-              Never Miss Your Perfect Car Deal Again
+              {t("hero.title")}
             </h1>
             <p className="text-lg md:text-xl mb-8 text-neutral-600 dark:text-neutral-300 max-w-xl">
-              Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.
+              {t("hero.subtitle")}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -30,18 +33,18 @@ export default function Hero({ onGetStarted }: HeroProps) {
                   size="rounded-xl" 
                   className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:hover:bg-primary-600 dark:text-neutral-900 shadow-lg shadow-primary/20 w-full sm:w-auto"
                 >
-                  Set Up Your Alerts
+                   {t("hero.button1")}
                 </Button>
               ) : (
                 <Link href="/setup-alerts">
                   <Button size="rounded-xl" className="bg-primary hover:bg-primary-600 text-white dark:bg-primary dark:hover:bg-primary-600 dark:text-neutral-900 shadow-lg shadow-primary/20 w-full sm:w-auto">
-                    Set Up Your Alerts
+                     {t("hero.subtitle")}
                   </Button>
                 </Link>
               )}
               <Link href="/#how-it-works">
                 <Button size="rounded-xl" variant="outline" className="border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 w-full sm:w-auto">
-                  See How It Works
+                  {t("hero.button2")}
                 </Button>
               </Link>
             </div>
@@ -52,25 +55,25 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>15+ websites tracked</span>
+                <span>{t("hero.trustIndicators.websites")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Real-time alerts</span>
+                <span>{t("hero.trustIndicators.realtime")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>No setup required</span>
+                <span>{t("hero.trustIndicators.noSetup")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Cancel anytime</span>
+                <span>{t("hero.trustIndicators.cancelAnytime")}</span>
               </div>
             </div>
           </div>

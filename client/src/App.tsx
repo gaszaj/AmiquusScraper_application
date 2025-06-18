@@ -27,12 +27,12 @@ import Careers from "@/pages/careers";
 import Support from "@/pages/support";
 import { AuthProvider } from "@/hooks/use-auth";
 import { ProtectedRoute } from "@/lib/protected-route"
+import { LanguageProvider } from "@/components/language-provider";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/signup" component={Signup} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <ProtectedRoute path="/verify-email" component={VerifyEmail} />
@@ -60,6 +60,7 @@ function Router() {
 function App() {
   return (
     <AuthProvider>
+      <LanguageProvider>
       <TooltipProvider>
         <Toaster />
         <div className="flex flex-col min-h-screen">
@@ -71,6 +72,7 @@ function App() {
           <ScrollToTop />
         </div>
       </TooltipProvider>
+      </LanguageProvider>
     </AuthProvider>
   );
 }

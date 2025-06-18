@@ -19,12 +19,14 @@ import {
 import { newcomerDefault } from "@/data/newcomer-default";
 import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 import PaymentScreen from "@/components/subscription/PaymentScreen";
+import { useLanguage } from "@/components/language-provider";
 
 interface SignupProps {
   embedded?: boolean;
 }
 
 export default function Signup({ embedded = false }: SignupProps) {
+  const { t, language } = useLanguage();
   const [location, setLocation] = useLocation();
   const { user } = useAuth();
   const [jsonData, setJsonData] = useState<NewComerResponse | null>(null);
@@ -89,10 +91,10 @@ export default function Signup({ embedded = false }: SignupProps) {
   const [formData, setFormData] = useState<Partial<AlertFormSchema>>({
     websitesSelected: [],
     updateFrequency: "hourly",
-    notificationLanguage: "en",
+    notificationLanguage: language,
   });
 
-  const { createSubscription, calculatePrice } = useSubscription();
+  const { calculatePrice } = useSubscription();
 
   const updateFormData = (data: Partial<AlertFormSchema>) => {
     setFormData((prev) => {
@@ -146,7 +148,7 @@ export default function Signup({ embedded = false }: SignupProps) {
         telegramBotToken: formData.telegramToken,
         telegramChatId: formData.telegramChatId,
         notificationLanguage: formData.notificationLanguage,
-        price: formData.price || 1.00,
+        price: formData.price || 1.0,
         // price: formData.price || 9.99,
       };
 
@@ -190,8 +192,8 @@ export default function Signup({ embedded = false }: SignupProps) {
             if (response.ok) {
               const data = await response.json();
               toast({
-                title: "Subscription created",
-                description: "Your subscription has been created successfully",
+                title: t("signup.toast.success.title"),
+                description: t("signup.toast.success.description"),
                 variant: "default",
               });
               // go to dashboard
@@ -218,6 +220,11 @@ export default function Signup({ embedded = false }: SignupProps) {
         }
       } catch (error) {
         console.error("Failed to create subscription:", error);
+        toast({
+          title: t("signup.toast.error.title"),
+          description: t("signup.toast.error.description"),
+          variant: "destructive",
+        });
       }
     } else {
       // Save form data in session storage and redirect to login/register
@@ -290,31 +297,29 @@ export default function Signup({ embedded = false }: SignupProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-title font-bold mb-4">
-            Create Your Car Alert
+            {t("signup.heading")}
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-4">
-            Set up your personalized car listing notifications in just a few
-            steps.
+            {t("signup.subheading")}
           </p>
           <Link
             href="/setup-alerts"
             className="inline-block px-6 py-3 bg-primary dark:bg-[#ff0] text-white dark:text-neutral-900 hover:bg-primary/90 dark:hover:bg-yellow-300 transition font-semibold rounded-xl shadow-md hover:shadow-lg"
           >
-            Get Alerts Now
+            {t("signup.cta")}
           </Link>
         </div>
         {showWaitList && (
           <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
             <div className="space-y-6 p-4 flex flex-col gap-4 justify-center items-center">
               <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-4">
-                We are currently at full capacity. Please join our waitlist to
-                be notified when a spot opens up.
+                {t("signup.waitlist.message")}
               </p>
               <Link
                 href="/waitlist"
                 className="inline-block px-6 py-3 bg-primary dark:bg-[#ff0] text-white dark:text-neutral-900 hover:bg-primary/90 dark:hover:bg-yellow-300 transition font-semibold rounded-xl shadow-md hover:shadow-lg"
               >
-                Join Waitlist
+                {t("signup.waitlist.cta")}
               </Link>
             </div>
           </div>

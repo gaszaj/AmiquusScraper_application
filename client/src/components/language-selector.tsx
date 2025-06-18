@@ -7,9 +7,11 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 import { Globe } from "lucide-react";
+import { Language as LanguageType } from "@/translations";
+import { useLanguage } from "@/components/language-provider";
 
 type Language = {
-  code: string;
+  code: LanguageType;
   name: string;
   flag: string;
 };
@@ -23,9 +25,9 @@ const languages: Language[] = [
 ];
 
 export function LanguageSelector() {
-  const [language, setLanguage] = useState("en");
+  const { language, setLanguage} = useLanguage();
 
-  const handleLanguageChange = (value: string) => {
+  const handleLanguageChange = (value: LanguageType) => {
     setLanguage(value);
     // Here you would implement actual language change logic
     // For example, using i18n

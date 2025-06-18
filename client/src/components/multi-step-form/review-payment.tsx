@@ -3,23 +3,24 @@ import { AlertFormSchema } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { AlertCircle, Check } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardHeader, 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
   CardTitle,
-  CardFooter
+  CardFooter,
 } from "@/components/ui/card";
-import { 
-  WEBSITE_OPTIONS, 
-  FREQUENCY_OPTIONS, 
+import {
+  WEBSITE_OPTIONS,
+  FREQUENCY_OPTIONS,
   FREQUENCY_LABELS,
   LANGUAGE_OPTIONS,
-  FUEL_TYPE_OPTIONS
+  FUEL_TYPE_OPTIONS,
 } from "@/lib/constants";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useAuth } from "@/hooks/use-auth";
+import { useLanguage } from "@/components/language-provider";
 
 interface ReviewPaymentProps {
   formData: Partial<AlertFormSchema>;
@@ -35,30 +36,32 @@ function calculateBasePrice(formData: Partial<AlertFormSchema>): number {
 
   // Get websites count
   const websitesCount = formData.websitesSelected.length;
-  
+
   // Get frequency option
-  const frequency = formData.updateFrequency || 'hourly';
-  
+  const frequency = formData.updateFrequency || "hourly";
+
   // Calculate price using useSubscription hook's calculatePrice function
   const calculatePrice = (count: number, freq: string) => {
     // Base price for one website
     // let price = 9.99;
-    let price = 1.00;
-    
+    let price = 1.0;
+
     // Add price for additional websites
     // if (count > 1) {
     //   price += 4.99 * (count - 1);
     // }
     if (count > 1) {
-      price += 0.50 * (count - 1);
+      price += 0.5 * (count - 1);
     }
-    
+
     // Add price for frequency
-    const frequencyOption = FREQUENCY_OPTIONS.find(option => option.id === freq);
+    const frequencyOption = FREQUENCY_OPTIONS.find(
+      (option) => option.id === freq,
+    );
     if (frequencyOption && frequencyOption.additionalPrice) {
       price += frequencyOption.additionalPrice;
     }
-    
+
     return price;
   };
 
@@ -71,8 +74,9 @@ export default function ReviewPayment({
   prevStep,
   onSubmit,
 }: ReviewPaymentProps) {
+  const { t } = useLanguage();
   const { user, isAuthenticated } = useAuth();
-  
+
   const [error, setError] = useState<string | null>(null);
   const [termsAgreed, setTermsAgreed] = useState(false);
   const [calculatedPrice, setCalculatedPrice] = useState(0);
@@ -81,7 +85,7 @@ export default function ReviewPayment({
     // Calculate price based on selections
     const price = calculateBasePrice(formData);
     setCalculatedPrice(price);
-    
+
     // Update the price in the form data
     updateFormData({ price });
   }, [formData, updateFormData]);
@@ -91,7 +95,7 @@ export default function ReviewPayment({
       setError("You must agree to the terms and conditions");
       return;
     }
-    
+
     try {
       onSubmit();
     } catch (error: any) {
@@ -100,23 +104,23 @@ export default function ReviewPayment({
   };
 
   const getLanguageName = (code: string) => {
-    const language = LANGUAGE_OPTIONS.find(lang => lang.id === code);
+    const language = LANGUAGE_OPTIONS.find((lang) => lang.id === code);
     return language ? language.name : code;
   };
 
   const getFuelTypeName = (code: string | undefined) => {
     if (!code) return "Any";
-    const fuelType = FUEL_TYPE_OPTIONS.find(fuel => fuel.id === code);
+    const fuelType = FUEL_TYPE_OPTIONS.find((fuel) => fuel.id === code);
     return fuelType ? fuelType.name : code;
   };
 
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibold tracking-tight">Review Your Subscription</h2>
-        <p className="text-sm text-neutral-500">
-          Please review your subscription details before proceeding to payment.
-        </p>
+        <h2 className="text-2xl font-semibold tracking-tight">
+          {t("review.title")}
+        </h2>
+        <p className="text-sm text-neutral-500">{t("review.description")}</p>
       </div>
 
       {error && (
@@ -129,83 +133,105 @@ export default function ReviewPayment({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Personal Information</CardTitle>
+            <CardTitle className="text-xl">
+              {t("review.personal.title")}
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             <div>
-              <span className="font-medium">Name:</span>{" "}
+              <span className="font-medium">{t("review.personal.name")}:</span>{" "}
               {user?.firstName} {user?.lastName}
             </div>
             <div>
-              <span className="font-medium">Email:</span> {user?.email}
+              <span className="font-medium">{t("review.personal.email")}:</span>{" "}
+              {user?.email}
             </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Monitoring Settings</CardTitle>
+            <CardTitle className="text-xl">
+              {t("review.monitoring.title")}
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             <div>
-              <span className="font-medium">Websites:</span>{" "}
+              <span className="font-medium">
+                {t("review.monitoring.websites")}:
+              </span>
               <ul className="list-disc ml-5 mt-1">
-                {formData.websitesSelected?.map(websiteId => {
-                  const website = WEBSITE_OPTIONS.find(w => w.id === websiteId);
-                  return (
-                    <li key={websiteId}>{website?.name || websiteId}</li>
+                {formData.websitesSelected?.map((websiteId) => {
+                  const website = WEBSITE_OPTIONS.find(
+                    (w) => w.id === websiteId,
                   );
+                  return <li key={websiteId}>{website?.name || websiteId}</li>;
                 })}
               </ul>
             </div>
             {formData.facebookMarketplaceUrl && (
               <div>
-                <span className="font-medium">Facebook URL:</span>{" "}
-                <span className="break-all text-sm">{formData.facebookMarketplaceUrl}</span>
+                <span className="font-medium">
+                  {t("review.monitoring.facebookUrl")}:
+                </span>{" "}
+                <span className="break-all text-sm">
+                  {formData.facebookMarketplaceUrl}
+                </span>
               </div>
             )}
             <div>
-              <span className="font-medium">Update Frequency:</span>{" "}
-              {FREQUENCY_LABELS[formData.updateFrequency || 'hourly']}
+              <span className="font-medium">
+                {t("review.monitoring.updateFrequency")}:
+              </span>{" "}
+              {FREQUENCY_LABELS[formData.updateFrequency || "hourly"]}
             </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Car Specifications</CardTitle>
+            <CardTitle className="text-xl">{t("review.specs.title")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             {formData.carBrand && (
               <div>
-                <span className="font-medium">Brand:</span> {formData.carBrand}
+                <span className="font-medium">{t("review.specs.brand")}:</span>{" "}
+                {formData.carBrand}
               </div>
             )}
             {formData.carModel && (
               <div>
-                <span className="font-medium">Model:</span> {formData.carModel}
+                <span className="font-medium">{t("review.specs.model")}:</span>{" "}
+                {formData.carModel}
               </div>
             )}
             {formData.fuelType && (
               <div>
-                <span className="font-medium">Fuel Type:</span> {getFuelTypeName(formData.fuelType)}
+                <span className="font-medium">
+                  {t("review.specs.fuelType")}:
+                </span>{" "}
+                {getFuelTypeName(formData.fuelType)}
               </div>
             )}
             {(formData.yearMin || formData.yearMax) && (
               <div>
-                <span className="font-medium">Year Range:</span>{" "}
+                <span className="font-medium">
+                  {t("review.specs.yearRange")}:
+                </span>{" "}
                 {formData.yearMin || "Any"} - {formData.yearMax || "Any"}
               </div>
             )}
-            {(formData.maxKilometers || formData.maxKilometers) && (
+            {formData.maxKilometers && (
               <div>
-                <span className="font-medium">Mileage Range (km):</span>{" "}
-                {formData.maxKilometers || "Any"}
+                <span className="font-medium">
+                  {t("review.specs.mileage")}:
+                </span>{" "}
+                {formData.maxKilometers}
               </div>
             )}
             {(formData.priceMin || formData.priceMax) && (
               <div>
-                <span className="font-medium">Price Range (€):</span>{" "}
+                <span className="font-medium">{t("review.specs.price")}:</span>{" "}
                 {formData.priceMin || "Any"} - {formData.priceMax || "Any"}
               </div>
             )}
@@ -214,15 +240,22 @@ export default function ReviewPayment({
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Notification Settings</CardTitle>
+            <CardTitle className="text-xl">
+              {t("review.notification.title")}
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             <div>
-              <span className="font-medium">Telegram Bot:</span> Connected
+              <span className="font-medium">
+                {t("review.notification.telegram")}:
+              </span>{" "}
+              Connected
             </div>
             <div>
-              <span className="font-medium">Notification Language:</span>{" "}
-              {getLanguageName(formData.notificationLanguage || 'en')}
+              <span className="font-medium">
+                {t("review.notification.language")}:
+              </span>{" "}
+              {getLanguageName(formData.notificationLanguage || "en")}
             </div>
           </CardContent>
         </Card>
@@ -230,77 +263,79 @@ export default function ReviewPayment({
 
       <Card className="bg-primary-50 border-primary-200">
         <CardHeader>
-          <CardTitle className="text-xl">Subscription Summary</CardTitle>
+          <CardTitle className="text-xl">{t("review.summary.title")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex justify-between">
-            <span>Base Subscription:</span>
+            <span>{t("review.summary.base")}:</span>
             {/* <span>${(9.99).toFixed(2)}</span> */}
-            <span>${(1.00).toFixed(2)}</span>
+            <span>${(1.0).toFixed(2)}</span>
           </div>
-          
-          {formData.websitesSelected && formData.websitesSelected.length > 1 && (
+
+          {formData.websitesSelected &&
+            formData.websitesSelected.length > 1 && (
+              <div className="flex justify-between">
+                <span>
+                  {t("review.summary.extraWebsites")} ({formData.websitesSelected.length - 1})
+                </span>
+                {/* <span>${((formData.websitesSelected.length - 1) * 4.99).toFixed(2)}</span> */}
+                <span>
+                  ${((formData.websitesSelected.length - 1) * 0.5).toFixed(2)}
+                </span>
+              </div>
+            )}
+
+          {formData.updateFrequency && formData.updateFrequency !== "hourly" && (
             <div className="flex justify-between">
-              <span>Additional Websites ({formData.websitesSelected.length - 1}):</span>
-              {/* <span>${((formData.websitesSelected.length - 1) * 4.99).toFixed(2)}</span> */}
-              <span>${((formData.websitesSelected.length - 1) * 0.50).toFixed(2)}</span>
-            </div>
-          )}
-          
-          {formData.updateFrequency && formData.updateFrequency !== 'hourly' && (
-            <div className="flex justify-between">
-              <span>Frequency Upgrade ({FREQUENCY_LABELS[formData.updateFrequency]}):</span>
               <span>
-                ${(FREQUENCY_OPTIONS.find(f => f.id === formData.updateFrequency)?.additionalPrice || 0).toFixed(2)}
+                {t("review.summary.frequencyUpgrade")}
+                ({FREQUENCY_LABELS[formData.updateFrequency]})
+              </span>
+              <span>
+                ${(
+                  FREQUENCY_OPTIONS.find((f) => f.id === formData.updateFrequency)?.additionalPrice || 0
+                ).toFixed(2)}
               </span>
             </div>
           )}
-          
+
           <div className="flex justify-between pt-4 border-t border-primary-200 font-bold">
-            <span>Total (Monthly):</span>
+             <span>{t("review.summary.total")}:</span>
             <span>${calculatedPrice.toFixed(2)}</span>
           </div>
         </CardContent>
         <CardFooter className="flex flex-col items-start">
           <div className="flex items-center space-x-2 mb-4">
-            <Checkbox 
-              id="terms" 
-              checked={termsAgreed} 
+            <Checkbox
+              id="terms"
+              checked={termsAgreed}
               onCheckedChange={(checked) => setTermsAgreed(checked === true)}
             />
             <label
               htmlFor="terms"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              I agree to the{" "}
+              {t("review.terms.checkbox")}{" "}
               <a href="/terms" className="text-primary-600 hover:underline" target="_blank">
-                Terms of Service
+                {t("review.terms.tos")}
               </a>{" "}
-              and{" "}
+              {t("review.terms.checkbox")}{" "}
               <a href="/privacy" className="text-primary-600 hover:underline" target="_blank">
-                Privacy Policy
+                {t("review.terms.privacy")}
               </a>
+
             </label>
           </div>
-          <p className="text-sm text-neutral-500">
-            Your subscription will renew automatically each month. You can cancel anytime.
-          </p>
+          <p className="text-sm text-neutral-500">{t("review.terms.note")}</p>
         </CardFooter>
       </Card>
 
       <div className="flex justify-between">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={prevStep}
-        >
-          Previous
+        <Button type="button" variant="outline" onClick={prevStep}>
+          {t("review.actions.previous")}
         </Button>
-        <Button 
-          onClick={handleSubmit} 
-          disabled={!termsAgreed}
-        >
-          Proceed to Payment
+        <Button onClick={handleSubmit} disabled={!termsAgreed}>
+          {t("review.actions.submit")}
         </Button>
       </div>
     </div>

@@ -16,6 +16,9 @@ import { Button } from "@/components/ui/button";
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useAuth } from "@/hooks/use-auth";
+import { useLanguage } from "@/components/language-provider";
+
+
 
 interface PersonalInfoProps {
   formData: Partial<AlertFormSchema>;
@@ -23,19 +26,23 @@ interface PersonalInfoProps {
   nextStep: () => void;
 }
 
-const personalInfoSchema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  email: z.string().email("Please enter a valid email"),
-});
 
-type PersonalInfoFormData = z.infer<typeof personalInfoSchema>;
 
 export default function PersonalInfo({
   formData,
   updateFormData,
   nextStep,
 }: PersonalInfoProps) {
+  const { t } = useLanguage();
+  
+  const personalInfoSchema = z.object({
+    firstName: z.string().min(1, t("personalInfo.errors.firstName")),
+    lastName: z.string().min(1, t("personalInfo.errors.lastName")),
+    email: z.string().email(t("personalInfo.errors.email")),
+  });
+
+  type PersonalInfoFormData = z.infer<typeof personalInfoSchema>;
+  
   const { user, isAuthenticated } = useAuth();
   const [error, setError] = useState<string | null>(null);
 
@@ -61,11 +68,10 @@ export default function PersonalInfo({
     <div className="space-y-6">
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">
-          Personal Information
+          {t("personalInfo.heading")}
         </h2>
         <p className="text-sm text-neutral-500">
-          Please provide your personal details so we can set up your
-          notifications correctly.
+          {t("personalInfo.description")}
         </p>
       </div>
 
@@ -84,9 +90,9 @@ export default function PersonalInfo({
               name="firstName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>First Name</FormLabel>
+                  <FormLabel>{t("personalInfo.labels.firstName")}</FormLabel>
                   <FormControl>
-                    <Input placeholder="John"  disabled {...field} />
+                    <Input  placeholder={t("personalInfo.placeholders.firstName")} disabled {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -97,9 +103,9 @@ export default function PersonalInfo({
               name="lastName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel>{t("personalInfo.labels.lastName")}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Doe" disabled {...field}   />
+                    <Input placeholder={t("personalInfo.placeholders.lastName")} disabled {...field}   />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -112,11 +118,11 @@ export default function PersonalInfo({
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email Address</FormLabel>
+                <FormLabel>{t("personalInfo.labels.email")}</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="john.doe@example.com"
+                    placeholder={t("personalInfo.placeholders.email")}
                      disabled
                     {...field}
                   />
@@ -128,13 +134,13 @@ export default function PersonalInfo({
 
           <div className="flex justify-end">
             {!user ? (
-              <Button type="button" size="lg" onClick={() => (window.location.href = "/login?redirect=setup-alerts")}>
-                Login or Sign Up to Continue
-              </Button>
+      <Button type="button" size="lg" onClick={() => (window.location.href = "/login?redirect=setup-alerts")}>
+        {t("personalInfo.actions.login")}
+      </Button>
             ) : (
-              <Button type="submit" size="lg">
-                Continue
-              </Button>
+      <Button type="submit" size="lg">
+        {t("personalInfo.actions.continue")}
+      </Button>
             )}
           </div>
         </form>

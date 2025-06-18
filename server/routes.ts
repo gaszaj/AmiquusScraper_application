@@ -892,7 +892,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const userId = (req.user as any).id;
       const subscriptions = await storage.getUserSubscriptions(userId);
 
-      return res.json(subscriptions);
+      // Exclude subscriptions with status 'pending'
+      const activeSubscriptions = subscriptions.filter(
+        (sub) => sub.status !== "pending"
+      );
+
+      return res.json(activeSubscriptions);
     } catch (error) {
       return res.status(500).json({ message: "Failed to fetch subscriptions" });
     }
@@ -1034,6 +1039,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
             pause_collection: null,
           })
 
+        // } else if (data.status === "paused" && subscription.status === "active") {
+        //   await stripe.subscriptions.update(stripeSubId,
+                                            
         } else {
           await stripe.subscriptions.update(stripeSubId, {
             items: [{ id: subscriptionItemId, price: priceId as string }],

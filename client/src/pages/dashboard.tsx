@@ -163,7 +163,7 @@ export default function Dashboard() {
                       becomes available.
                     </p>
                     <Button
-                      onClick={() => setLocation("/signup")}
+                      onClick={() => setLocation("/setup-alerts")}
                       className="bg-primary-600 hover:bg-primary-700"
                     >
                       <Plus size={16} className="mr-2" /> Create Car Alert

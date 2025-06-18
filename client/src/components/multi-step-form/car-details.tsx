@@ -23,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useLanguage } from "@/components/language-provider";
 // import { FUEL_TYPE_OPTIONS } from "@/lib/constants";
 // import { CAR_BRANDS, getCarModels } from "@/lib/car-models";
 
@@ -38,39 +39,39 @@ interface CarDetailsProps {
   setModels: (models: string[]) => void;
 }
 
-const carDetailsSchema = z.object({
-  carBrand: z.string().min(1, "Car brand is required"),
-  carModel: z.string().min(1, "Car model is required"),
-  fuelType: z.string().min(1, "Fuel type is required"),
+// const carDetailsSchema = z.object({
+//   carBrand: z.string().min(1, "Car brand is required"),
+//   carModel: z.string().min(1, "Car model is required"),
+//   fuelType: z.string().min(1, "Fuel type is required"),
 
-  priceMin: z
-    .string()
-    .regex(/^\d*$/, "Minimum price must be a number")
-    .optional()
-    .or(z.literal("")),
-  priceMax: z
-    .string()
-    .regex(/^\d*$/, "Maximum price must be a number")
-    .optional()
-    .or(z.literal("")),
+//   priceMin: z
+//     .string()
+//     .regex(/^\d*$/, "Minimum price must be a number")
+//     .optional()
+//     .or(z.literal("")),
+//   priceMax: z
+//     .string()
+//     .regex(/^\d*$/, "Maximum price must be a number")
+//     .optional()
+//     .or(z.literal("")),
 
-  yearMin: z
-    .string()
-    .regex(/^\d{4}$/, "Minimum year must be a valid year")
-    .optional()
-    .or(z.literal("")),
-  yearMax: z
-    .string()
-    .regex(/^\d{4}$/, "Maximum year must be a valid year")
-    .optional()
-    .or(z.literal("")),
+//   yearMin: z
+//     .string()
+//     .regex(/^\d{4}$/, "Minimum year must be a valid year")
+//     .optional()
+//     .or(z.literal("")),
+//   yearMax: z
+//     .string()
+//     .regex(/^\d{4}$/, "Maximum year must be a valid year")
+//     .optional()
+//     .or(z.literal("")),
 
-  maxKilometers: z
-    .string()
-    .regex(/^\d*$/, "Max kilometers must be a number")
-    .optional()
-    .or(z.literal("")),
-});
+//   maxKilometers: z
+//     .string()
+//     .regex(/^\d*$/, "Max kilometers must be a number")
+//     .optional()
+//     .or(z.literal("")),
+// });
 
 export default function CarDetails({
   formData,
@@ -83,7 +84,40 @@ export default function CarDetails({
   loadModels,
   setModels,
 }: CarDetailsProps) {
+  const { t } = useLanguage();
+  const currentYear = new Date().getFullYear();
   const [error, setError] = useState<string | null>(null);
+
+  const carDetailsSchema = z.object({
+    carBrand: z.string().min(1, t("carDetails.errors.carBrand")),
+    carModel: z.string().min(1, t("carDetails.errors.carModel")),
+    fuelType: z.string().min(1, t("carDetails.errors.fuelType")),
+    priceMin: z
+      .string()
+      .regex(/^\d*$/, t("carDetails.errors.priceMin"))
+      .optional()
+      .or(z.literal("")),
+    priceMax: z
+      .string()
+      .regex(/^\d*$/, t("carDetails.errors.priceMax"))
+      .optional()
+      .or(z.literal("")),
+    yearMin: z
+      .string()
+      .regex(/^\d{4}$/, t("carDetails.errors.yearMin"))
+      .optional()
+      .or(z.literal("")),
+    yearMax: z
+      .string()
+      .regex(/^\d{4}$/, t("carDetails.errors.yearMax"))
+      .optional()
+      .or(z.literal("")),
+    maxKilometers: z
+      .string()
+      .regex(/^\d*$/, t("carDetails.errors.maxKilometers"))
+      .optional()
+      .or(z.literal("")),
+  });
 
   const form = useForm<z.infer<typeof carDetailsSchema>>({
     resolver: zodResolver(carDetailsSchema),
@@ -98,8 +132,6 @@ export default function CarDetails({
       priceMax: formData.priceMax || undefined,
     },
   });
-  
-  const currentYear = new Date().getFullYear();
 
   const onSubmit = (data: z.infer<typeof carDetailsSchema>) => {
     try {
@@ -113,10 +145,12 @@ export default function CarDetails({
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibold tracking-tight">Car Details</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">
+          {" "}
+          {t("carDetails.heading")}
+        </h2>
         <p className="text-sm text-neutral-500">
-          Specify the car details you are looking for. All fields are optional -
-          leave any blank to get a wider range of results.
+          {t("carDetails.description")}
         </p>
       </div>
 
@@ -136,7 +170,7 @@ export default function CarDetails({
               name="carBrand"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Car Brand</FormLabel>
+                  <FormLabel>{t("carDetails.labels.carBrand")}</FormLabel>
                   <Select
                     onValueChange={(value) => {
                       field.onChange(value);
@@ -146,7 +180,9 @@ export default function CarDetails({
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select Car Brand" />
+                        <SelectValue
+                          placeholder={t("carDetails.placeholders.carBrand")}
+                        />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -166,7 +202,7 @@ export default function CarDetails({
               name="carModel"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Car Model</FormLabel>
+                  <FormLabel>{t("carDetails.labels.carModel")}</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
@@ -177,8 +213,8 @@ export default function CarDetails({
                         <SelectValue
                           placeholder={
                             form.watch("carBrand")
-                              ? "Select Car Model"
-                              : "Select Car Brand First"
+                              ? t("carDetails.placeholders.carModel")
+                              : t("carDetails.placeholders.carModelDisabled")
                           }
                         />
                       </SelectTrigger>
@@ -195,7 +231,7 @@ export default function CarDetails({
                         )
                       ) : (
                         <SelectItem value="placeholder-no-models" disabled>
-                          No Models Available
+                          {t("carDetails.options.noModelsAvailable")}
                         </SelectItem>
                       )}
                     </SelectContent>
@@ -212,14 +248,16 @@ export default function CarDetails({
             name="fuelType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Fuel Type</FormLabel>
+                <FormLabel>{t("carDetails.labels.fuelType")}</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select Fuel Type" />
+                      <SelectValue
+                        placeholder={t("carDetails.placeholders.fuelType")}
+                      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -242,11 +280,11 @@ export default function CarDetails({
               name="priceMin"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Minimum Price</FormLabel>
+                  <FormLabel>{t("carDetails.labels.priceMin")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter minimum price"
+                      placeholder={t("carDetails.placeholders.priceMin")}
                       {...field}
                     />
                   </FormControl>
@@ -259,11 +297,11 @@ export default function CarDetails({
               name="priceMax"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Maximum Price</FormLabel>
+                  <FormLabel>{t("carDetails.labels.priceMax")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter maximum price"
+                      placeholder={t("carDetails.placeholders.priceMax")}
                       {...field}
                     />
                   </FormControl>
@@ -280,11 +318,11 @@ export default function CarDetails({
               name="yearMin"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Minimum Year</FormLabel>
+                  <FormLabel>{t("carDetails.labels.yearMin")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter minimum year"
+                      placeholder={t("carDetails.placeholders.yearMin")}
                       min="1900"
                       max={currentYear}
                       {...field}
@@ -299,11 +337,11 @@ export default function CarDetails({
               name="yearMax"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Maximum Year</FormLabel>
+                  <FormLabel>{t("carDetails.labels.yearMax")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter maximum year"
+                      placeholder={t("carDetails.placeholders.yearMax")}
                       min="1900"
                       max={currentYear}
                       {...field}
@@ -321,11 +359,11 @@ export default function CarDetails({
             name="maxKilometers"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Max Kilometers</FormLabel>
+                <FormLabel>{t("carDetails.labels.maxKilometers")}</FormLabel>
                 <FormControl>
                   <Input
                     type="number"
-                    placeholder="Enter maximum kilometers"
+                    placeholder={t("carDetails.placeholders.maxKilometers")}
                     min="0"
                     max="1000000"
                     {...field}
@@ -337,9 +375,9 @@ export default function CarDetails({
           />
           <div className="flex justify-between">
             <Button type="button" variant="outline" onClick={prevStep}>
-              Previous
+              {t("carDetails.actions.previous")}
             </Button>
-            <Button type="submit">Continue</Button>
+            <Button type="submit">{t("carDetails.actions.continue")}</Button>
           </div>
         </form>
       </Form>

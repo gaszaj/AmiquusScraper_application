@@ -28,9 +28,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/use-auth";
 import LoginPromptModal from "@/components/modals/login-prompt";
-import WaitlistPromptModal from "@/components/modals/waitlist-prompt"
+import WaitlistPromptModal from "@/components/modals/waitlist-prompt";
 import { apiRequest } from "@/lib/queryClient";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
+import { useLanguage } from "@/components/language-provider";
+import { buildAlertSchema } from "@/lib/buildAlertSchema";
 
 export type NewComerResponse = {
   websites: {
@@ -53,6 +55,7 @@ export default function TelegramCarAlertForm({
 }: {
   setClientSecret: Dispatch<SetStateAction<string | null>>;
 }) {
+  const { t, language } = useLanguage();
   const [data, setData] = useState<NewComerResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [termsAgreed, setTermsAgreed] = useState(false);
@@ -71,7 +74,7 @@ export default function TelegramCarAlertForm({
   const [websites, setWebsites] = useState<string[]>([]);
 
   const form = useForm<AlertFormSchema>({
-    resolver: zodResolver(alertSchema),
+    resolver: zodResolver(buildAlertSchema),
     defaultValues: {
       carBrand: "",
       carModel: "",
@@ -86,7 +89,7 @@ export default function TelegramCarAlertForm({
       websitesSelected: [],
       facebookMarketplaceUrl: "",
       updateFrequency: "hourly",
-      notificationLanguage: "en",
+      notificationLanguage: language,
     },
   });
 
@@ -116,7 +119,7 @@ export default function TelegramCarAlertForm({
   useEffect(() => {
     async function checkStats() {
       try {
-        const response = await apiRequest('GET', '/api/subscription-stats');
+        const response = await apiRequest("GET", "/api/subscription-stats");
         const stats = await response.json();
 
         if (stats.active >= 30) {
@@ -139,11 +142,11 @@ export default function TelegramCarAlertForm({
     if (websitesCount === 0) return 0;
 
     // let price = 9.99;
-     let price = 1.00;
-    
+    let price = 1.0;
+
     if (websitesCount > 1) {
       // price += 4.99 * (websitesCount - 1);
-      price += 0.50 * (websitesCount - 1);
+      price += 0.5 * (websitesCount - 1);
     }
 
     const frequencyOption = FREQUENCY_OPTIONS.find(
@@ -155,6 +158,13 @@ export default function TelegramCarAlertForm({
 
     return price;
   }
+
+  const setupSteps = t("telegram.setupSteps", {
+    returnObjects: true,
+  }) as string[];
+  const chatIdSteps = t("telegram.chatIdSteps", {
+    returnObjects: true,
+  }) as string[];
 
   const websitesSelected = form.watch("websitesSelected");
   const updateFrequency = form.watch("updateFrequency");
@@ -200,12 +210,11 @@ export default function TelegramCarAlertForm({
     return !val || num === 0 ? null : num;
   };
 
-
   const onSubmit = async (values: AlertFormSchema) => {
     if (!termsAgreed) {
       toast({
-        title: "Terms not accepted",
-        description: "You must agree to the terms of service to continue",
+        title: t("setupAlerts.toasts.terms.title"),
+        description: t("setupAlerts.toasts.terms.description"),
         variant: "destructive",
       });
     }
@@ -277,8 +286,8 @@ export default function TelegramCarAlertForm({
           if (response.ok) {
             const data = await response.json();
             toast({
-              title: "Subscription created",
-              description: "Your subscription has been created successfully",
+              title: t("setupAlerts.toasts.success.title"),
+              description: t("setupAlerts.toasts.success.description"),
               variant: "default",
             });
             // go to dashboard
@@ -303,7 +312,7 @@ export default function TelegramCarAlertForm({
       }
     } catch (error) {
       toast({
-        title: "Error creating subscription",
+        title: t("setupAlerts.toasts.error.title"),
         description:
           error instanceof Error ? error.message : "Please try again",
         variant: "destructive",
@@ -330,11 +339,10 @@ export default function TelegramCarAlertForm({
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-4xl font-bold text-neutral-900 dark:text-white">
-            Set Up Your Car Alerts
+            {t("setupAlerts.title")}
           </h1>
           <p className="mt-4 text-xl text-neutral-600 dark:text-neutral-400">
-            Configure your Telegram bot to receive notifications about your
-            dream car
+            {t("setupAlerts.subtitle")}
           </p>
         </div>
 
@@ -352,7 +360,7 @@ export default function TelegramCarAlertForm({
                   name="carBrand"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Car Brand</FormLabel>
+                      <FormLabel>{t("carDetails.labels.carBrand")}</FormLabel>
                       <Select
                         onValueChange={(value) => {
                           field.onChange(value);
@@ -362,7 +370,11 @@ export default function TelegramCarAlertForm({
                       >
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select Car Brand" />
+                            <SelectValue
+                              placeholder={t(
+                                "carDetails.placeholders.carBrand",
+                              )}
+                            />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -382,7 +394,7 @@ export default function TelegramCarAlertForm({
                   name="carModel"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Car Model</FormLabel>
+                      <FormLabel> {t("carDetails.labels.carModel")}</FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
@@ -393,8 +405,10 @@ export default function TelegramCarAlertForm({
                             <SelectValue
                               placeholder={
                                 form.watch("carBrand")
-                                  ? "Select Car Model"
-                                  : "Select Car Brand First"
+                                  ? t("carDetails.placeholders.carModel")
+                                  : t(
+                                      "carDetails.placeholders.carModelDisabled",
+                                    )
                               }
                             />
                           </SelectTrigger>
@@ -411,7 +425,7 @@ export default function TelegramCarAlertForm({
                             )
                           ) : (
                             <SelectItem value="placeholder-no-models" disabled>
-                              No Models Available
+                              {t("carDetails.options.noModelsAvailable")}
                             </SelectItem>
                           )}
                         </SelectContent>
@@ -428,14 +442,16 @@ export default function TelegramCarAlertForm({
                 name="fuelType"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Fuel Type</FormLabel>
+                    <FormLabel>{t("carDetails.labels.fuelType")}</FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select Fuel Type" />
+                          <SelectValue
+                            placeholder={t("carDetails.placeholders.fuelType")}
+                          />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -458,11 +474,11 @@ export default function TelegramCarAlertForm({
                   name="priceMin"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Minimum Price</FormLabel>
+                      <FormLabel>{t("carDetails.labels.priceMin")}</FormLabel>
                       <FormControl>
                         <Input
                           type="number"
-                          placeholder="Enter minimum price"
+                          placeholder={t("carDetails.placeholders.priceMin")}
                           {...field}
                         />
                       </FormControl>
@@ -475,11 +491,11 @@ export default function TelegramCarAlertForm({
                   name="priceMax"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Maximum Price</FormLabel>
+                      <FormLabel>{t("carDetails.labels.priceMax")}</FormLabel>
                       <FormControl>
                         <Input
                           type="number"
-                          placeholder="Enter maximum price"
+                          placeholder={t("carDetails.placeholders.priceMax")}
                           {...field}
                         />
                       </FormControl>
@@ -496,11 +512,11 @@ export default function TelegramCarAlertForm({
                   name="yearMin"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Minimum Year</FormLabel>
+                      <FormLabel>{t("carDetails.labels.yearMin")}</FormLabel>
                       <FormControl>
                         <Input
                           type="number"
-                          placeholder="Enter minimum year"
+                          placeholder={t("carDetails.placeholders.yearMin")}
                           min="1900"
                           max={currentYear}
                           {...field}
@@ -515,11 +531,11 @@ export default function TelegramCarAlertForm({
                   name="yearMax"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Maximum Year</FormLabel>
+                      <FormLabel>{t("carDetails.labels.yearMax")}</FormLabel>
                       <FormControl>
                         <Input
                           type="number"
-                          placeholder="Enter maximum year"
+                          placeholder={t("carDetails.placeholders.yearMax")}
                           min="1900"
                           max={currentYear}
                           {...field}
@@ -537,11 +553,13 @@ export default function TelegramCarAlertForm({
                 name="maxKilometers"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Max Kilometers</FormLabel>
+                    <FormLabel>
+                      {t("carDetails.labels.maxKilometers")}
+                    </FormLabel>
                     <FormControl>
                       <Input
                         type="number"
-                        placeholder="Enter maximum kilometers"
+                        placeholder={t("carDetails.placeholders.maxKilometers")}
                         min="0"
                         max="1000000"
                         {...field}
@@ -559,9 +577,9 @@ export default function TelegramCarAlertForm({
                 render={({ field }) => (
                   <FormItem>
                     <div className="mb-4">
-                      <FormLabel>Websites to monitor</FormLabel>
+                      <FormLabel> {t("websiteSelection.heading")}</FormLabel>
                       <FormDescription>
-                        Select one or more websites to monitor for car listings.
+                        {t("websiteSelection.description")}
                       </FormDescription>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -646,14 +664,20 @@ export default function TelegramCarAlertForm({
                 name="updateFrequency"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Update Frequency</FormLabel>
+                    <FormLabel>
+                      {t("websiteSelection.labels.updateFrequency")}
+                    </FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select Update Frequency" />
+                          <SelectValue
+                            placeholder={t(
+                              "websiteSelection.placeholders.frequency",
+                            )}
+                          />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -677,10 +701,12 @@ export default function TelegramCarAlertForm({
                     name="facebookMarketplaceUrl"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Facebook Marketplace URL</FormLabel>
+                        <FormLabel>
+                          {" "}
+                          {t("websiteSelection.labels.facebookUrl")}
+                        </FormLabel>
                         <FormDescription>
-                          Paste the URL of your Facebook Marketplace search
-                          results here.
+                          {t("websiteSelection.help.facebookUrl")}
                         </FormDescription>
                         <FormControl>
                           <Input
@@ -696,10 +722,10 @@ export default function TelegramCarAlertForm({
 
                   <div className="space-y-2">
                     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                      Need help finding your Facebook Marketplace search link?
+                      {t("websiteSelection.help.videoTitle")}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      Watch the video below for step-by-step instructions.
+                      {t("websiteSelection.help.videoDesc")}
                     </p>
                     <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                       <iframe
@@ -719,47 +745,38 @@ export default function TelegramCarAlertForm({
             {/* Telegram Bot Setup Section */}
             <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
               <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
-                Set Up Your Telegram Bot
+                {t("telegram.subHeading")}
               </h2>
 
               {/* Telegram Setup Instructions */}
               <div className="prose dark:prose-invert max-w-none mb-8">
                 <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-                  Setup Instructions:
+                  {t("telegram.setupTitle")}
                 </h3>
+
                 <ol className="list-decimal list-inside text-neutral-700 dark:text-neutral-300 space-y-2">
-                  <li>Open Telegram and search for "BotFather"</li>
-                  <li>Start a chat with BotFather by clicking "Start"</li>
-                  <li>
-                    Type /newbot and follow the instructions to create a new bot
-                  </li>
-                  <li>Choose a name for your bot</li>
-                  <li>Choose a username for your bot (must end in 'bot')</li>
-                  <li>Copy the API token provided by BotFather</li>
-                  <li>Send a message to your new bot to activate the chat</li>
+                  {setupSteps.map((step, index) => (
+                    <li key={index}>{step}</li>
+                  ))}
                 </ol>
               </div>
               <div className="prose dark:prose-invert max-w-none mb-8">
                 <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-                  How to get your Telegram Chat ID:
+                  {t("telegram.chatIdTitle")}
                 </h3>
                 <ol className="list-decimal list-inside text-neutral-700 dark:text-neutral-300 space-y-2">
-                  <li>Open Telegram and search for "userinfobot"</li>
-                  <li>Send any message to the bot</li>
-                  <li>
-                    The bot will reply with your information including your Chat
-                    ID
-                  </li>
-                  <li>Copy your Chat ID</li>
+                  {chatIdSteps.map((step, index) => (
+                    <li key={index}>{step}</li>
+                  ))}
                 </ol>
               </div>
               {/* ⬇️ Telegram instructions video */}
               <div className="space-y-2 my-6">
                 <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                  Need help setting up your Telegram Bot Token and Chat ID?
+                  {t("telegram.helpTitle")}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Watch the video below for a step-by-step guide.
+                  {t("telegram.helpDescription")}
                 </p>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                   <iframe
@@ -781,16 +798,16 @@ export default function TelegramCarAlertForm({
                   name="telegramToken"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Telegram Bot Token</FormLabel>
+                      <FormLabel>{t("telegram.botTokenLabel")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Enter your bot token from BotFather"
+                          placeholder={t("telegram.botTokenPlaceholder")}
                           {...field}
                         />
                       </FormControl>
                       <FormMessage />
                       <FormDescription>
-                        Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890
+                        {t("telegram.botTokenExample")}
                       </FormDescription>
                     </FormItem>
                   )}
@@ -800,16 +817,16 @@ export default function TelegramCarAlertForm({
                   name="telegramChatId"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Your Telegram Chat ID</FormLabel>
+                      <FormLabel>{t("telegram.chatIdLabel")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Enter your Telegram chat ID"
+                          placeholder={t("telegram.chatIdPlaceholder")}
                           {...field}
                         />
                       </FormControl>
                       <FormMessage />
                       <FormDescription>
-                        You can get this by messaging @userinfobot on Telegram
+                        {t("telegram.chatIdDescription")}
                       </FormDescription>
                     </FormItem>
                   )}
@@ -819,14 +836,16 @@ export default function TelegramCarAlertForm({
                   name="notificationLanguage"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Notification Language</FormLabel>
+                      <FormLabel>{t("telegram.languageLabel")}</FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
                       >
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select Telegram Message Language" />
+                            <SelectValue
+                              placeholder={t("telegram.languagePlaceholder")}
+                            />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -847,7 +866,7 @@ export default function TelegramCarAlertForm({
             {/* Telegram Chat Preview Section */}
             <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
               <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
-                Preview Telegram Notifications
+                {t("telegram.previewTitle")}
               </h2>
               {/* Telegram Chat Preview */}
               <div className="w-full mb-8 bg-neutral-100 dark:bg-[#273746] rounded-xl p-4 border border-neutral-300 dark:border-neutral-700">
@@ -868,21 +887,21 @@ export default function TelegramCarAlertForm({
                     />
                     <div className="w-full p-3">
                       <p className="text-sm text-gray-800">
-                        🚗 <strong>New Car Alert!</strong>
+                        <strong> {t("telegram.carAlertTitle")}</strong>
                       </p>
                       <p className="text-sm text-gray-800">
                         Volkswagen Arteon 2.0
                       </p>
-                      <p className="text-sm text-gray-800">Price: € 36,850</p>
+                      <p className="text-sm text-gray-800">  {t("telegram.priceLabel", { price: "€ 36,850" })}</p>
                       <p className="text-sm text-gray-800">
-                        Kilometres: 73,000
+                        {t("telegram.kilometresLabel", { kms: "73,000" })}
                       </p>
                       <p className="text-sm text-gray-800">
-                        Location: OBVEZNA NAJAVA - Cvetlicna ul.3
+                        {t("telegram.locationLabel", { location: "OBVEZNA NAJAVA - Cvetlicna ul.3" })}
                       </p>
                       <p className="text-sm text-gray-800 mt-2">
                         <a href="#" className="text-blue-600 underline">
-                          View Listing →
+                          {t("telegram.viewListing")}
                         </a>
                       </p>
                     </div>
@@ -905,19 +924,21 @@ export default function TelegramCarAlertForm({
                     />
                     <div className="w-full p-3">
                       <p className="text-sm text-gray-800">
-                        🚗 <strong>New Car Alert!</strong>
+                        {t("telegram.carAlertTitle")}
                       </p>
                       <p className="text-sm text-gray-800">Ford</p>
-                      <p className="text-sm text-gray-800">Price: €22,750</p>
                       <p className="text-sm text-gray-800">
-                        Kilometres: 170,000
+                        {t("telegram.priceLabel", { price: "€ 22,750" })}</p>
+                      <p className="text-sm text-gray-800">
+                        {t("telegram.kilometresLabel", { kms: "170,000" })}
+
                       </p>
                       <p className="text-sm text-gray-800">
-                        Location: castrop-Rauxel, NW
+                        {t("telegram.locationLabel", { location: "castrop-Rauxel, NW" })}
                       </p>
                       <p className="text-sm text-gray-800 mt-2">
                         <a href="#" className="text-blue-600 underline">
-                          View Listing →
+                          {t("telegram.viewListing")}
                         </a>
                       </p>
                     </div>
@@ -929,17 +950,18 @@ export default function TelegramCarAlertForm({
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-neutral-700 dark:text-neutral-300">
                     {/* get selected websites length */}
-                    Basic Plan ({form.watch("websitesSelected")?.length ||
+                    {t("setupAlerts.basicPlan")}
+                    ({form.watch("websitesSelected")?.length ||
                       0}{" "}
-                    websites)
+                    `${t("review.monitoring.websites")}`)
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
-                    $9.99/month
+                     {t("setupAlerts.baseTitle")}
                   </span>
                 </div>
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-neutral-700 dark:text-neutral-300">
-                    Additional websites (
+                    {t("review.summary.extraWebsites")} (
                     {Math.max(
                       (form.watch("websitesSelected")?.length || 1) - 1,
                       0,
@@ -957,14 +979,14 @@ export default function TelegramCarAlertForm({
                       Math.max(
                         (form.watch("websitesSelected")?.length || 1) - 1,
                         0,
-                      ) * 1.00
+                      ) * 1.0
                     ).toFixed(2)}
                   </span>
                 </div>
                 {form.watch("updateFrequency") !== "hourly" && (
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-neutral-700 dark:text-neutral-300">
-                      Update Frequency (
+                   {t("websiteSelection.label.updateFrequency")} (
                       {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                     </span>
                     <span className="text-neutral-900 dark:text-white font-medium">
@@ -980,7 +1002,7 @@ export default function TelegramCarAlertForm({
                 <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-neutral-900 dark:text-white font-medium">
-                      Total (Monthly):
+                      {t("review.summary.total")}
                     </span>
                     <span className="text-primary dark:text-primary font-bold text-xl">
                       ${totalPrice.toFixed(2)}
@@ -1002,27 +1024,26 @@ export default function TelegramCarAlertForm({
                     htmlFor="terms"
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   >
-                    I agree to the{" "}
+                     {t("review.terms.checkbox")}{" "}
                     <a
                       href="/terms"
                       className="text-primary-600 hover:underline"
                       target="_blank"
                     >
-                      Terms of Service
+                      {t("review.terms.tos")}
                     </a>{" "}
-                    and{" "}
+                    {t("register.and")}{" "}
                     <a
                       href="/privacy"
                       className="text-primary-600 hover:underline"
                       target="_blank"
                     >
-                      Privacy Policy
+                      {t("register.privacyPolicy")}
                     </a>
                   </label>
                 </div>
                 <p className="text-sm text-neutral-500">
-                  Your subscription will renew automatically each month. You can
-                  cancel anytime.
+                  {t("review.terms.note")}
                 </p>
               </div>
 
@@ -1036,11 +1057,11 @@ export default function TelegramCarAlertForm({
                   {submitting ? (
                     <Loader2 className="ml-2 h-4 w-4 animate-spin" />
                   ) : (
-                    "Start My Car Alert Service"
+                  t("setupAlerts.button")
                   )}
                 </Button>
                 <p className="text-center text-neutral-500 dark:text-neutral-500 text-sm mt-2">
-                  Cancel anytime. 7-day money back guarantee.
+                  {t("setupAlerts.cancel")}
                 </p>
               </div>
             </div>

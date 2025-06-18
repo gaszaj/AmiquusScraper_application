@@ -5,42 +5,45 @@ import {
   MousePointer, Radio, CarFront, Mail, 
   Search, ListFilter, Bell, MessageSquare 
 } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 export default function HowItWorks() {
+  const { t } = useLanguage();
   const steps = [
     {
       icon: <Settings className="h-10 w-10" />,
       color: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
-      title: "Set Your Preferences",
-      description: "Select car brands, models, price range, and other criteria you're interested in monitoring."
+      title: t("howItWorks.steps.preferences.title"),
+      description: t("howItWorks.steps.preferences.description")
     },
     {
       icon: <MessageSquare className="h-10 w-10" />,
       color: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
-      title: "Connect Telegram",
-      description: "Link your Telegram account to receive instant notifications about new listings."
+      title: t("howItWorks.steps.telegram.title"),
+      description: t("howItWorks.steps.telegram.description")
     },
     {
       icon: <Bell className="h-10 w-10" />,
       color: "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400",
-      title: "Get Instant Notifications",
-      description: "Receive alerts the moment a car matching your criteria appears on any of our monitored websites."
+      title: t("howItWorks.steps.notifications.title"),
+      description: t("howItWorks.steps.notifications.description")
     },
     {
       icon: <CarFront className="h-10 w-10" />,
       color: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
-      title: "Find Your Perfect Car",
-      description: "Be the first to know about new listings and secure the best deals before anyone else."
+      title: t("howItWorks.steps.findCar.title"),
+      description: t("howItWorks.steps.findCar.description")
     },
   ];
+
 
   return (
     <section id="how-it-works" className="py-20 bg-neutral-100 dark:bg-neutral-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl text-black md:text-4xl font-bold mb-4 dark:text-white">How Amiquus Works</h2>
+          <h2 className="text-3xl text-black md:text-4xl font-bold mb-4 dark:text-white">{t("howItWorks.title")}</h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            Set up once and let our automated system find the perfect car deal for you
+            {t("howItWorks.subtitle")}
           </p>
         </div>
 
@@ -74,16 +77,10 @@ export default function HowItWorks() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <h3 className="text-2xl text-black md:text-3xl font-bold dark:text-white mb-6">
-                Why Choose Amiquus?
+                {t("howItWorks.whyTitle")}
               </h3>
               <ul className="space-y-4">
-                {[
-                  "Track over 15 car listing websites simultaneously",
-                  "Customizable search criteria with advanced filtering",
-                  "Real-time notifications via Telegram",
-                  "Automatic price drop and new listing alerts",
-                  "Easy setup process that takes less than 5 minutes",
-                ].map((feature, index) => (
+                {t("howItWorks.features", { returnObjects: true }).map((feature: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="mt-1 bg-accent/20 p-1 rounded-full">
                       <Check className="h-4 w-4 text-accent" />
@@ -95,7 +92,7 @@ export default function HowItWorks() {
               <div className="mt-8">
                 <Link href="/setup-alerts">
                   <Button size="lg" variant="accent" className="shadow-lg shadow-accent/20 text-white dark:text-black">
-                    Set Up Your Alerts
+                    {t("howItWorks.setAlerts")}
                   </Button>
                 </Link>
               </div>
@@ -111,8 +108,8 @@ export default function HowItWorks() {
                         <Bell size={24} />
                       </div>
                       <div>
-                        <h4 className="font-medium text-lg text-white">New Match Found!</h4>
-                        <p className="text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
+                        <h4 className="font-medium text-lg text-white">   {t("howItWorks.notificationMockup1.title")}</h4>
+                        <p className="text-neutral-300 mt-1">{t("howItWorks.notificationMockup1.description")}</p>
                       </div>
                     </div>
                     
@@ -122,8 +119,8 @@ export default function HowItWorks() {
                           <MessageSquare size={24} />
                         </div>
                         <div>
-                          <h4 className="font-medium text-lg text-white">Telegram Alert</h4>
-                          <p className="text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
+                          <h4 className="font-medium text-lg text-white">{t("howItWorks.notificationMockup2.title")}</h4>
+                          <p className="text-neutral-300 mt-1">{t("howItWorks.notificationMockup2.description")}</p>
                         </div>
                       </div>
                     </div>

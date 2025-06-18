@@ -1,15 +1,18 @@
 import { Link } from "wouter";
 import { ReactNode } from "react";
 import ScrollToTopLink from "@/components/ScrollToTopLink";
+import { useLanguage } from "@/components/language-provider"
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-white dark:bg-neutral-900 text-neutral-800 dark:text-white pt-16 pb-8 border-t border-neutral-200 dark:border-neutral-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h4 className="text-xl font-title font-bold mb-4">Amiquus</h4>
-            <p className="text-neutral-600 dark:text-neutral-400 mb-4">Your personal assistant for finding the perfect used car deal at the perfect time.</p>
+            <h4 className="text-xl font-title font-bold mb-4">{t("footer.brandTitle")}</h4>
+            <p className="text-neutral-600 dark:text-neutral-400 mb-4">{t("footer.brandDescription")}</p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" className="text-neutral-500 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 320 512">
@@ -35,90 +38,90 @@ export default function Footer() {
           </div>
           
           <div>
-            <h5 className="text-lg font-medium mb-4">Quick Links</h5>
+            <h5 className="text-lg font-medium mb-4">{t("footer.quickLinks")}</h5>
             <ul className="space-y-2">
               <li>
                 <ScrollToTopLink href="/#features" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  Features
+                  {t("footer.features")}
                 </ScrollToTopLink>
               </li>
               <li>
                 <ScrollToTopLink href="/#pricing" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  Pricing
+                  {t("footer.pricing")}
                 </ScrollToTopLink>
               </li>
               <li>
                 <ScrollToTopLink href="/faq" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  FAQ
+                   {t("footer.faq")}
                 </ScrollToTopLink>
               </li>
               <li>
                 <ScrollToTopLink href="/setup-alerts" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  Get Started
+                   {t("footer.getStarted")}
                 </ScrollToTopLink>
               </li>
             </ul>
           </div>
           
           <div>
-            <h5 className="text-lg font-medium mb-4">Legal</h5>
+            <h5 className="text-lg font-medium mb-4">      {t("footer.legal")}</h5>
             <ul className="space-y-2">
               <li>
                 <ScrollToTopLink href="/terms" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  Terms of Service
+                  {t("footer.terms")}
                 </ScrollToTopLink>
               </li>
               <li>
                 <ScrollToTopLink href="/privacy" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  Privacy Policy
+                  {t("footer.privacy")}
                 </ScrollToTopLink>
               </li>
               <li>
                 <ScrollToTopLink href="/terms#cookies" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  Cookie Policy
+                   {t("footer.cookies")}
                 </ScrollToTopLink>
               </li>
               <li>
                 <ScrollToTopLink href="/privacy#gdpr" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors">
-                  GDPR Compliance
+                  {t("footer.gdpr")}
                 </ScrollToTopLink>
               </li>
             </ul>
           </div>
           
           <div>
-            <h5 className="text-lg font-medium mb-4">Contact</h5>
+            <h5 className="text-lg font-medium mb-4">{t("footer.contact")}</h5>
             <ul className="space-y-2 text-neutral-600 dark:text-neutral-400">
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>support@amiquus.com</span>
+                <span>{t("footer.email")}</span>
               </li>
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                 </svg>
-                <span>Contact us on Telegram<br />@AmiquusSupport</span>
+                <span>{t("footer.telegram")}<br />@AmiquusSupport</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-neutral-200 dark:border-neutral-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Amiquus. All rights reserved.</p>
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Amiquus. {t("footer.copyright")}</p>
           <div className="flex space-x-4">
             <ScrollToTopLink href="/about" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
-              About Us
+              {t("footer.about")}
             </ScrollToTopLink>
             <ScrollToTopLink href="/blog" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
-              Blog
+              {t("footer.blog")}
             </ScrollToTopLink>
             <ScrollToTopLink href="/careers" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
-              Careers
+              {t("footer.careers")}
             </ScrollToTopLink>
             <ScrollToTopLink href="/support" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
-              Support
+              {t("footer.support")}
             </ScrollToTopLink>
           </div>
         </div>

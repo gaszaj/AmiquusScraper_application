@@ -28,7 +28,8 @@ import {
 } from "@/components/ui/form";
 import { Progress } from "@/components/ui/progress";
 import { Loader2, AlertCircle, CheckCircle } from "lucide-react";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import PaymentScreen from "@/components/subscription/PaymentScreen";
+import { useLanguage } from "@/components/language-provider";
 
 const waitlistSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -39,11 +40,16 @@ const waitlistSchema = z.object({
 type WaitlistFormData = z.infer<typeof waitlistSchema>;
 
 export default function Waitlist() {
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [stats, setStats] = useState<{ active: number; capacity: number; remaining: number } | null>(null);
+  const [stats, setStats] = useState<{
+    active: number;
+    capacity: number;
+    remaining: number;
+  } | null>(null);
   const { toast } = useToast();
-  
+
   const form = useForm<WaitlistFormData>({
     resolver: zodResolver(waitlistSchema),
     defaultValues: {
@@ -57,28 +63,29 @@ export default function Waitlist() {
   useEffect(() => {
     async function fetchStats() {
       try {
-        const response = await apiRequest('GET', '/api/subscription-stats');
+        const response = await apiRequest("GET", "/api/subscription-stats");
         const data = await response.json();
         setStats(data);
       } catch (error) {
-        console.error('Failed to fetch subscription stats', error);
+        console.error("Failed to fetch subscription stats", error);
       }
     }
-    
+
     fetchStats();
   }, []);
 
   const onSubmit = async (data: WaitlistFormData) => {
     setIsSubmitting(true);
-    
+
     try {
-      const response = await apiRequest('POST', '/api/waitlist', data);
-      
+      const response = await apiRequest("POST", "/api/waitlist", data);
+
       if (response.ok) {
         setSuccess(true);
         toast({
           title: "You're on the list!",
-          description: "Thanks for joining our waitlist. We'll notify you when a spot becomes available.",
+          description:
+            "Thanks for joining our waitlist. We'll notify you when a spot becomes available.",
         });
       } else {
         const error = await response.json();
@@ -96,56 +103,61 @@ export default function Waitlist() {
   };
 
   // Calculate percentage of capacity filled
-  const percentFilled = stats ? Math.floor((stats.active / stats.capacity) * 100) : 0;
+  const percentFilled = stats
+    ? Math.floor((stats.active / stats.capacity) * 100)
+    : 0;
 
   return (
     <PageWrapper>
       <Helmet>
-        <title>Join the Waitlist - Amiquus</title>
-        <meta
-          name="description"
-          content="Join the Amiquus waitlist to be notified when subscriptions become available."
-        />
+        <title>{t("waitlist.metaTitle")}</title>
+        <meta name="description" content={t("waitlist.metaDescription")} />
       </Helmet>
-      
+
       <div className="container max-w-5xl mx-auto px-4 py-6">
         <div className="text-center mb-6 sm:mb-10">
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2 sm:mb-3">
-            Join Our Waitlist
+             {t("waitlist.title")}
           </h1>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Due to high demand, we limit the number of active subscriptions to ensure the best service quality for all users.
+            {t("waitlist.subtitle")}
           </p>
         </div>
-        
+
         {stats && (
           <div className="max-w-2xl mx-auto mb-10 border-2 border-red-500 rounded-lg p-4 shadow-lg shadow-red-100 dark:shadow-red-900/20 bg-white dark:bg-neutral-900">
             <div className="mb-4">
-              <h3 className="text-red-600 dark:text-red-400 font-bold text-lg mb-2">Limited Availability</h3>
+              <h3 className="text-red-600 dark:text-red-400 font-bold text-lg mb-2">
+                 {t("waitlist.limited.heading")}
+              </h3>
               <p className="text-neutral-700 dark:text-neutral-300 mb-4">
-                We limit our system to only 30 active subscribers to ensure:
+                 {t("waitlist.limited.description")}
               </p>
               <ul className="text-neutral-600 dark:text-neutral-400 space-y-2 mb-4 pl-5 list-disc">
-                <li>Exceptional scraping reliability and speed for all users</li>
-                <li>Reduced chances of being blocked by car listing websites</li>
-                <li>Personalized support for each subscriber</li>
-                <li>Fair distribution of server resources</li>
+                <li>{t("waitlist.limited.points.0")}</li>
+                <li>{t("waitlist.limited.points.1")}</li>
+                <li>{t("waitlist.limited.points.2")}</li>
+                <li>{t("waitlist.limited.points.3")}</li>
               </ul>
             </div>
-            
+
             <div className="flex justify-between mb-2 text-sm font-medium text-red-600 dark:text-red-400">
-              <span><strong>{stats.active}</strong> subscribers</span>
-              <span><strong>{stats.remaining}</strong> spots available</span>
+              <span>
+                <strong>{stats.active}</strong> subscribers
+              </span>
+              <span>
+                <strong>{stats.remaining}</strong> spots available
+              </span>
             </div>
             <Progress value={percentFilled} className="h-2" />
             <p className="text-sm text-red-500 dark:text-red-400 text-center mt-3 font-medium">
-              {stats.remaining > 0 
-                ? `${stats.remaining} subscription spots out of ${stats.capacity} currently available.` 
-                : "All subscription spots are currently filled. Join the waitlist to be notified when a spot becomes available."}
+              {stats.remaining > 0
+                ? t("waitlist.limited.available", { remaining: stats.remaining, capacity: stats.capacity })
+                : t("waitlist.limited.full")}
             </p>
           </div>
         )}
-        
+
         <div className="max-w-md mx-auto">
           {success ? (
             <Card>
@@ -155,20 +167,23 @@ export default function Waitlist() {
                 </div>
                 <div className="text-center">
                   <CardTitle className="text-xl">
-                    You're on the waitlist!
+                    {t("waitlist.success.title")}
                   </CardTitle>
                 </div>
                 <CardDescription>
-                  We'll notify you as soon as a subscription spot becomes available
+                  {t("waitlist.success.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <div className="text-center space-y-4">
                   <p className="text-neutral-600 dark:text-neutral-400">
-                    Thank you for your interest in Amiquus! We've added you to our waitlist and will contact you as soon as we have an opening.
+                    {t("waitlist.success.message")}
                   </p>
-                  <Button variant="outline" onClick={() => window.location.href = "/"}>
-                    Return to Homepage
+                  <Button
+                    variant="outline"
+                    onClick={() => (window.location.href = "/")}
+                  >
+                    {t("waitlist.success.button")}
                   </Button>
                 </div>
               </CardContent>
@@ -176,22 +191,25 @@ export default function Waitlist() {
           ) : (
             <Card>
               <CardHeader>
-                <CardTitle>Join the Waitlist</CardTitle>
+                <CardTitle>{t("waitlist.cantJoin.title")}</CardTitle>
                 <CardDescription>
-                  We'll notify you as soon as a subscription spot becomes available
+                  {t("waitlist.cantJoin.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-5"
+                  >
                     <FormField
                       control={form.control}
                       name="firstName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>First Name</FormLabel>
+                          <FormLabel>{t("waitlist.form.firstName.label")}</FormLabel>
                           <FormControl>
-                            <Input placeholder="John" {...field} />
+                            <Input placeholder={t("waitlist.form.firstName.placeholder")}  {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -202,9 +220,9 @@ export default function Waitlist() {
                       name="lastName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Last Name</FormLabel>
+                          <FormLabel>{t("waitlist.form.lastName.label")}</FormLabel>
                           <FormControl>
-                            <Input placeholder="Doe" {...field} />
+                            <Input placeholder={t("waitlist.form.lastName.placeholder")}  {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -215,25 +233,32 @@ export default function Waitlist() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email</FormLabel>
+                          <FormLabel>{t("waitlist.form.email.label")}</FormLabel>
                           <FormControl>
-                            <Input placeholder="john.doe@example.com" {...field} />
+                            <Input
+                              placeholder={t("waitlist.form.email.placeholder")}
+                              {...field}
+                            />
                           </FormControl>
                           <FormDescription>
-                            We'll use this email to notify you when a spot becomes available
+                            {t("waitlist.form.email.description")}
                           </FormDescription>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    <Button
+                      type="submit"
+                      className="w-full"
+                      disabled={isSubmitting}
+                    >
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Submitting...
+                          {t("waitlist.form.submitting")}
                         </>
                       ) : (
-                        "Join Waitlist"
+                      t("waitlist.form.submit")
                       )}
                     </Button>
                   </form>

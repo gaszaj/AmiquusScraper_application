@@ -19,15 +19,21 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useLanguage } from "@/components/language-provider";
 
-const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-});
 
-type LoginFormData = z.infer<typeof loginSchema>;
+
 
 export default function Login() {
+  const { t } = useLanguage();
+  
+  const loginSchema = z.object({
+    email: z.string().email(t("login.errors.invalidEmail")),
+    password: z.string().min(6, t("login.errors.shortPassword")),
+  });
+
+  type LoginFormData = z.infer<typeof loginSchema>;
+
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { login, user } = useAuth();
@@ -79,8 +85,8 @@ export default function Login() {
     
       await login(data.email, data.password, token);
       toast({
-        title: "Login successful",
-        description: "You have been logged in successfully.",
+        title: t("login.successTitle"),
+        description: t("login.successMessage"),
       });
       // setLocation(redirectUrl);
       window.location.href = redirectUrl;
@@ -89,10 +95,8 @@ export default function Login() {
         err.message || "Failed to login. Please check your credentials.",
       );
       toast({
-        title: "Login failed",
-        description:
-          err.message || "Please check your credentials and try again.",
-        variant: "destructive",
+        title: t("login.errorTitle"),
+        description: err.message || t("login.genericError"),
       });
     } finally {
       setIsLoading(false);
@@ -110,10 +114,10 @@ export default function Login() {
           <Card className="w-full border-neutral-200 dark:border-neutral-800 dark:bg-neutral-800/50">
             <CardHeader className="space-y-1">
               <CardTitle className="text-2xl font-bold text-center dark:text-white">
-                Log in to your account
+                {t("login.title")}
               </CardTitle>
               <CardDescription className="text-center dark:text-neutral-300">
-                Enter your email and password to access your dashboard
+                {t("login.description")}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -125,7 +129,7 @@ export default function Login() {
               )}
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div className="space-y-1">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">{t("login.emailLabel")}</Label>
                   <Input
                     id="email"
                     type="email"
@@ -141,7 +145,7 @@ export default function Login() {
                   )}
                 </div>
                 <div className="space-y-1">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">{t("login.passwordLabel")}</Label>
                   <Input
                     id="password"
                     type="password"
@@ -160,10 +164,10 @@ export default function Login() {
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Logging in...
+                      {t("login.loggingIn")}
                     </>
                   ) : (
-                    "Log in"
+      t("login.loginButton")
                   )}
                 </Button>
               </form>
@@ -205,17 +209,17 @@ export default function Login() {
                     fill="#1976D2"
                   />
                 </svg>
-                Google
+                {t("login.loginWithGoogle")}
               </Button>
             </CardContent>
             <CardFooter className="pt-3 border-t dark:border-neutral-700">
               <p className="text-center text-sm text-neutral-600 dark:text-neutral-400 w-full">
-                Don't have an account?{" "}
+                {t("login.noAccount")}{" "}
                 <Link
                   href="/register"
                   className="text-primary hover:text-primary/90 dark:text-[#ff0] dark:hover:text-yellow-400 font-medium"
                 >
-                  Register
+                  {t("login.registerLink")}
                 </Link>
               </p>
             </CardFooter>

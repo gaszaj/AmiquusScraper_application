@@ -46,7 +46,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { queryClient, apiRequest } from "@/lib/queryClient";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { User as UserType, Subscription } from "@shared/schema";
-import { useLocation } from "wouter"
+import { useLocation } from "wouter";
 import {
   useElements,
   useStripe,
@@ -54,14 +54,16 @@ import {
   Elements,
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { useLanguage } from "@/components/language-provider";
 
-const publicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY
+const publicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 
 // Load Stripe
-const stripePromise = loadStripe(publicKey as string)
+const stripePromise = loadStripe(publicKey as string);
 
 // Payment Method Form component
 function AddPaymentMethodForm() {
+  const { t } = useLanguage();
   const stripe = useStripe();
   const elements = useElements();
   const { toast } = useToast();
@@ -86,15 +88,15 @@ function AddPaymentMethodForm() {
 
       if (error) {
         toast({
-          title: "Error adding payment method",
+          title: t("dashboardPayment.errorTitle"),
           description: error.message,
           variant: "destructive",
         });
       }
     } catch (err) {
       toast({
-        title: "Error adding payment method",
-        description: "An unexpected error occurred",
+        title: t("dashboardPayment.errorTitle"),
+        description: t("dashboardPayment.errorMessage"),
         variant: "destructive",
       });
     } finally {
@@ -110,13 +112,16 @@ function AddPaymentMethodForm() {
         disabled={!stripe || isProcessing}
         className="w-full mt-4"
       >
-        {isProcessing ? "Processing..." : "Add Payment Method"}
+        {isProcessing
+          ? t("dashboardPayment.processing")
+          : t("dashboardPayment.add")}
       </Button>
     </form>
   );
 }
 
 function AddPaymentMethodDialog() {
+  const { t } = useLanguage();
   const [clientSecret, setClientSecret] = useState<string | null>(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -141,8 +146,8 @@ function AddPaymentMethodDialog() {
     } catch (error) {
       console.error("Error creating setup intent:", error);
       toast({
-        title: "Error",
-        description: "Unable to initialize payment setup",
+        title: t("dashboardPayment.initError.title"),
+        description: t("dashboardPayment.initError.description"),
         variant: "destructive",
       });
       setIsOpen(false);
@@ -157,14 +162,14 @@ function AddPaymentMethodDialog() {
           className="ml-auto flex gap-2 items-center"
         >
           <PlusCircle className="h-4 w-4" />
-          Add Payment Method
+          {t("dashboardPayment.add")}
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Add Payment Method</DialogTitle>
+          <DialogTitle>{t("dashboardPayment.add")}</DialogTitle>
           <DialogDescription>
-            Add a new credit or debit card for your subscription payments.
+            {t("dashboardPayment.description")}
           </DialogDescription>
         </DialogHeader>
         {clientSecret ? (
@@ -186,11 +191,9 @@ interface SubscriptionCardProps {
   onCancel: (id: number) => void;
 }
 
-function SubscriptionCard({
-  subscription,
-  onCancel,
-}: SubscriptionCardProps) {
-   const [location, navigate ] = useLocation();
+function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
+  const { t } = useLanguage();
+  const [location, navigate] = useLocation();
   const [isConfirmingCancel, setIsConfirmingCancel] = useState(false);
 
   const handleCancelClick = () => {
@@ -215,7 +218,9 @@ function SubscriptionCard({
               {subscription.brand} {subscription.model}
             </CardTitle>
             <CardDescription>
-              Years: {subscription.yearMin}-{subscription.yearMax}, Price: $
+              {t("dashboard.subscriptionCard.years")}: {subscription.yearMin}-
+              {subscription.yearMax},{" "}
+              {t("dashboard.subscriptionCard.priceRange")}: $
               {subscription.priceMin}-${subscription.priceMax}
             </CardDescription>
           </div>
@@ -234,33 +239,43 @@ function SubscriptionCard({
       <CardContent className="pb-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
           <div className="flex items-start space-x-2">
-            <span className="font-medium">Websites:</span>
+            <span className="font-medium">
+              {t("dashboard.subscriptionCard.websites")}:
+            </span>
             <span>
               {(subscription.websitesSelected as string[]).join(", ")}
             </span>
           </div>
           <div className="flex items-start space-x-2">
-            <span className="font-medium">Updates:</span>
+            <span className="font-medium">
+              {t("dashboard.subscriptionCard.updates")}:
+            </span>
             <span>{subscription.updateFrequency}</span>
           </div>
           <div className="flex items-start space-x-2">
-            <span className="font-medium">Language:</span>
+            <span className="font-medium">
+              {t("dashboard.subscriptionCard.language")}:
+            </span>
             <span>{subscription.notificationLanguage.toUpperCase()}</span>
           </div>
           <div className="flex items-start space-x-2">
-            <span className="font-medium">Price:</span>
+            <span className="font-medium">
+              {t("dashboard.subscriptionCard.price")}:
+            </span>
             <span>${(subscription.price / 100).toFixed(2)}/month</span>
           </div>
         </div>
       </CardContent>
       <CardFooter className="flex justify-end space-x-2 pt-2">
-        <Button 
-          variant="outline" size="sm" className="text-sm"
+        <Button
+          variant="outline"
+          size="sm"
+          className="text-sm"
           //gp to "/edit/:id"
           onClick={() => navigate(`/edit/${subscription.id}`)}
-          >
+        >
           <Edit2 className="h-3.5 w-3.5 mr-1" />
-          Edit
+          {t("dashboard.subscriptionCard.edit")}
         </Button>
         <Dialog open={isConfirmingCancel} onOpenChange={setIsConfirmingCancel}>
           <DialogTrigger asChild>
@@ -270,25 +285,27 @@ function SubscriptionCard({
               className="text-sm"
               onClick={handleCancelClick}
             >
-              Cancel Alert
+              {t("dashboard.subscriptionCard.cancelAlert")}
             </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Cancel Car Alert</DialogTitle>
+              <DialogTitle>
+                {t("dashboard.subscriptionCard.cancelTitle")}
+              </DialogTitle>
               <DialogDescription>
-                Are you sure you want to cancel your car alert for{" "}
-                {subscription.brand} {subscription.model}? This will stop all
-                notifications and you'll need to set up a new alert if you want
-                to monitor this car again.
+                {t("dashboard.subscriptionCard.cancelDescription", {
+                  brand: subscription.brand,
+                  model: subscription.model,
+                })}
               </DialogDescription>
             </DialogHeader>
             <DialogFooter className="mt-4">
               <Button variant="outline" onClick={cancelAction}>
-                Keep My Alert
+                {t("dashboard.subscriptionCard.keepMyAlert")}
               </Button>
               <Button variant="destructive" onClick={confirmCancel}>
-                Cancel Alert
+                {t("dashboard.subscriptionCard.confirmCancel")}
               </Button>
             </DialogFooter>
           </DialogContent>
@@ -318,6 +335,7 @@ function PaymentMethodCard({
   onRemove,
   onSetDefault,
 }: PaymentMethodCardProps) {
+  const { t } = useLanguage();
   const [isConfirmingRemove, setIsConfirmingRemove] = useState(false);
 
   const handleRemoveClick = () => {
@@ -373,12 +391,13 @@ function PaymentMethodCard({
                 variant="outline"
                 className="ml-2 border-green-500 text-green-600 dark:border-green-400 dark:text-green-400"
               >
-                Default
+                {t("dashboard.paymentMethodCard.default")}
               </Badge>
             )}
           </CardTitle>
           <CardDescription>
-            Expires {method.expMonth}/{method.expYear}
+            {t("dashboard.paymentMethodCard.expires")} {method.expMonth}/
+            {method.expYear}
           </CardDescription>
         </div>
       </CardHeader>
@@ -387,17 +406,21 @@ function PaymentMethodCard({
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="outline" size="sm" className="text-sm">
-                Set as Default
+                {t("dashboard.paymentMethodCard.setAsDefault")}
               </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>Set Default Payment Method</DialogTitle>
+                <DialogTitle>
+                  {t("dashboard.paymentMethodCard.setDefaultTitle")}
+                </DialogTitle>
                 <DialogDescription>
-                  Would you like to set the{" "}
-                  {method.brand.charAt(0).toUpperCase() + method.brand.slice(1)}{" "}
-                  card ending in {method.last4} as your default payment method?
-                  This card will be used for all future subscription payments.
+                  {t("dashboard.paymentMethodCard.setDefaultDescription", {
+                    brand:
+                      method.brand.charAt(0).toUpperCase() +
+                      method.brand.slice(1),
+                    last4: method.last4,
+                  })}
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter className="mt-4">
@@ -411,7 +434,7 @@ function PaymentMethodCard({
                       ?.click()
                   }
                 >
-                  Cancel
+                  {t("dashboard.paymentMethodCard.cancel")}
                 </Button>
                 <Button
                   onClick={() => {
@@ -423,7 +446,7 @@ function PaymentMethodCard({
                       ?.click();
                   }}
                 >
-                  Set as Default
+                  {t("dashboard.paymentMethodCard.setAsDefault")}
                 </Button>
               </DialogFooter>
             </DialogContent>
@@ -438,26 +461,31 @@ function PaymentMethodCard({
               className="text-sm"
               onClick={handleRemoveClick}
             >
-              Remove
+              {t("dashboard.paymentMethodCard.remove")}
             </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Remove Payment Method</DialogTitle>
+              <DialogTitle>
+                {t("dashboard.paymentMethodCard.removeTitle")}
+              </DialogTitle>
               <DialogDescription>
-                Are you sure you want to remove your{" "}
-                {method.brand.charAt(0).toUpperCase() + method.brand.slice(1)}{" "}
-                card ending in {method.last4}?
+                {t("dashboard.paymentMethodCard.removeDescription", {
+                  brand:
+                    method.brand.charAt(0).toUpperCase() +
+                    method.brand.slice(1),
+                  last4: method.last4,
+                })}
                 {method.isDefault &&
-                  " This is your default payment method and removing it may affect your active subscriptions."}
+                  " " + t("dashboard.paymentMethodCard.removeWarning")}
               </DialogDescription>
             </DialogHeader>
             <DialogFooter className="mt-4">
               <Button variant="outline" onClick={cancelAction}>
-                Cancel
+                {t("dashboard.paymentMethodCard.cancel")}
               </Button>
               <Button variant="destructive" onClick={confirmRemove}>
-                Remove Card
+                {t("dashboard.paymentMethodCard.confirmRemove")}
               </Button>
             </DialogFooter>
           </DialogContent>
@@ -468,6 +496,7 @@ function PaymentMethodCard({
 }
 
 export default function NewProfile() {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState("subscriptions");
   const { toast } = useToast();
   const { isAuthenticated, user, logout, checkAuth } = useAuth();
@@ -560,8 +589,6 @@ export default function NewProfile() {
     }
   };
 
-
-
   const handleRemovePaymentMethod = (id: any) => {
     removePaymentMethodMutation.mutate(id);
   };
@@ -593,7 +620,9 @@ export default function NewProfile() {
               {user && (
                 <div className="space-y-4">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Member since</span>
+                    <span className="text-muted-foreground">
+                      {t("profile.sidebar.memberSince")}
+                    </span>
                     <span>
                       {user?.createdAt &&
                         new Date(user.createdAt).toLocaleDateString("en-US", {
@@ -604,12 +633,12 @@ export default function NewProfile() {
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Subscriptions</span>
+                    <span className="text-muted-foreground">{t("profile.sidebar.subscriptions")}</span>
                     <span>{subscriptions ? subscriptions.length : 0}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">
-                      Payment methods
+                      {t("profile.sidebar.methods")}
                     </span>
                     <span>{paymentMethods ? paymentMethods.length : 0}</span>
                   </div>
@@ -621,30 +650,36 @@ export default function NewProfile() {
                 <DialogTrigger asChild>
                   <Button variant="outline" className="w-full justify-start">
                     <Settings className="mr-2 h-4 w-4" />
-                    Account settings
+                    {t("profile.sidebar.account")}
                   </Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Account Settings</DialogTitle>
+                    <DialogTitle className="capitalize">{t("profile.account.title")}</DialogTitle>
                     <DialogDescription>
-                      Update your account information and preferences.
+                      {t("profile.account.desc")}
                     </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4 py-2">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="name">
+                        {t("profile.account.name")}
+                      </Label>
                       <Input
                         id="name"
                         defaultValue={user?.firstName + " " + user?.lastName}
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">
+                        {t("profile.account.email")}
+                      </Label>
                       <Input id="email" defaultValue={user?.email} />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="username">Username</Label>
+                      <Label htmlFor="username">
+                        {t("profile.account.username")}
+                      </Label>
                       <Input id="username" defaultValue={user?.username} />
                     </div>
                   </div>
@@ -661,7 +696,7 @@ export default function NewProfile() {
                             ?.click()
                         }
                       >
-                        Cancel
+                        {t("profile.account.cancel")}
                       </Button>
                     </DialogClose>
                     <Button
@@ -731,7 +766,7 @@ export default function NewProfile() {
                         }
                       }}
                     >
-                      Save Changes
+                       {t("profile.account.save")}
                     </Button>
                   </DialogFooter>
                 </DialogContent>
@@ -741,28 +776,28 @@ export default function NewProfile() {
                 <DialogTrigger asChild>
                   <Button variant="outline" className="w-full justify-start">
                     <ShieldAlert className="mr-2 h-4 w-4" />
-                    Privacy & security
+                     {t("profile.sidebar.privacy")}
                   </Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Privacy & Security</DialogTitle>
+                    <DialogTitle> {t("profile.security.title")}</DialogTitle>
                     <DialogDescription>
-                      Manage your security settings and privacy preferences.
+                       {t("profile.security.desc")}
                     </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4 py-2">
                     <div className="space-y-2">
-                      <Label htmlFor="current-password">Current Password</Label>
+                      <Label htmlFor="current-password"> {t("profile.security.current")} </Label>
                       <Input id="current-password" type="password" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="new-password">New Password</Label>
+                      <Label htmlFor="new-password">{t("profile.security.new")}</Label>
                       <Input id="new-password" type="password" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="confirm-password">
-                        Confirm New Password
+                        {t("profile.security.confirm")}
                       </Label>
                       <Input id="confirm-password" type="password" />
                     </div>
@@ -780,7 +815,7 @@ export default function NewProfile() {
                             ?.click()
                         }
                       >
-                        Cancel
+                         {t("profile.account.cancel")}
                       </Button>
                     </DialogClose>
                     <Button
@@ -835,7 +870,7 @@ export default function NewProfile() {
                         }
                       }}
                     >
-                      Update Password
+                      {t("profile.security.update")}
                     </Button>
                   </DialogFooter>
                 </DialogContent>
@@ -848,14 +883,15 @@ export default function NewProfile() {
                     className="w-full justify-start text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300"
                   >
                     <LogOut className="mr-2 h-4 w-4" />
-                    Log out
+                     {t("profile.sidebar.logout")}
                   </Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Log Out</DialogTitle>
+                    <DialogTitle>
+                       {t("profile.logout.title")}</DialogTitle>
                     <DialogDescription>
-                      Are you sure you want to log out of your account?
+                      {t("profile.logout.desc")}
                     </DialogDescription>
                   </DialogHeader>
                   <DialogFooter>
@@ -870,7 +906,7 @@ export default function NewProfile() {
                           ?.click()
                       }
                     >
-                      Cancel
+                       {t("profile.account.cancel")}
                     </Button>
                     <Button
                       variant="destructive"
@@ -888,7 +924,7 @@ export default function NewProfile() {
                         window.location.href = "/login";
                       }}
                     >
-                      Log Out
+                      {t("profile.logout.title")}
                     </Button>
                   </DialogFooter>
                 </DialogContent>
@@ -905,8 +941,12 @@ export default function NewProfile() {
             className="w-full"
           >
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="subscriptions">My Alerts</TabsTrigger>
-              <TabsTrigger value="payment">Payment Methods</TabsTrigger>
+              <TabsTrigger value="subscriptions">
+                 {t("profile.tabs.alerts")}
+              </TabsTrigger>
+              <TabsTrigger value="payment">
+                 {t("profile.tabs.payments")}
+              </TabsTrigger>
             </TabsList>
 
             {/* Subscriptions Tab */}
@@ -914,16 +954,18 @@ export default function NewProfile() {
               <Card>
                 <CardHeader>
                   <div className="flex justify-between items-center">
-                    <CardTitle>Car Alert Subscriptions</CardTitle>
+                    <CardTitle>
+                      {t("profile.alerts.title")}
+                    </CardTitle>
                     <Link href="/setup-alerts">
                       <Button className="flex gap-2 items-center bg-primary dark:bg-[#ff0] text-white dark:text-black">
                         <PlusCircle className="h-4 w-4" />
-                        Add New Alert
+                        {t("profile.alerts.add")}
                       </Button>
                     </Link>
                   </div>
                   <CardDescription>
-                    Manage your car search alerts and notification preferences.
+                    {t("profile.alerts.desc")}
                   </CardDescription>
                 </CardHeader>
                 {isLoadingSubscriptions ? (
@@ -943,11 +985,11 @@ export default function NewProfile() {
                     ) : (
                       <div className="text-center py-8">
                         <p className="text-muted-foreground">
-                          You don't have any active car alerts.
+                           {t("profile.alerts.none")}
                         </p>
                         <Link href="/setup-alerts">
                           <Button className="mt-4">
-                            Create your first alert
+                             {t("profile.alerts.cta")}
                           </Button>
                         </Link>
                       </div>
@@ -962,11 +1004,13 @@ export default function NewProfile() {
               <Card>
                 <CardHeader>
                   <div className="flex justify-between items-center">
-                    <CardTitle>Payment Methods</CardTitle>
+                    <CardTitle>
+                      {t("profile.payments.title")}
+                    </CardTitle>
                     <AddPaymentMethodDialog />
                   </div>
                   <CardDescription>
-                    Manage your payment methods for subscription billing.
+                     {t("profile.payments.desc")}
                   </CardDescription>
                 </CardHeader>
                 {isLoadingPayments ? (
@@ -987,7 +1031,7 @@ export default function NewProfile() {
                     ) : (
                       <div className="text-center py-8">
                         <p className="text-muted-foreground">
-                          You don't have any payment methods saved.
+                           {t("profile.payments.none")}
                         </p>
                         <AddPaymentMethodDialog />
                       </div>
@@ -998,7 +1042,7 @@ export default function NewProfile() {
                   <div className="flex items-center space-x-2 w-full bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <p className="text-sm text-green-700 dark:text-green-300">
-                      Your payment information is encrypted and securely stored.
+                      {t("profile.payments.encrypted")}
                     </p>
                   </div>
                 </CardFooter>
@@ -1027,5 +1071,3 @@ export async function deleteSubscription(subscriptionId: number) {
 
   return res.json();
 }
-
-

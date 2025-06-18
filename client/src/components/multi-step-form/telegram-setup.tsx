@@ -23,7 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { LANGUAGE_OPTIONS } from "@/lib/constants";
+import { useLanguage } from "@/components/language-provider";
 
 interface TelegramSetupProps {
   formData: Partial<AlertFormSchema>;
@@ -32,32 +32,31 @@ interface TelegramSetupProps {
   prevStep: () => void;
 }
 
-const telegramSetupSchema = z.object({
-  telegramToken: z.string().min(1, "Telegram bot token is required"),
-  telegramChatId: z.string().min(1, "Telegram chat ID is required"),
-  notificationLanguage: z.string().min(1, "Notification language is required"),
-});
-
-type TelegramSetupFormData = z.infer<typeof telegramSetupSchema>;
-
 export default function TelegramSetup({
   formData,
   updateFormData,
   nextStep,
   prevStep,
 }: TelegramSetupProps) {
+  const { t, language } = useLanguage();
   const [error, setError] = useState<string | null>(null);
 
-  const form = useForm<TelegramSetupFormData>({
+  const telegramSetupSchema = z.object({
+    telegramToken: z.string().min(1, t("telegram.errors.token")),
+    telegramChatId: z.string().min(1, t("telegram.errors.chatId")),
+    notificationLanguage: z.string().min(1, t("telegram.errors.language")),
+  });
+
+  const form = useForm<z.infer<typeof telegramSetupSchema>>({
     resolver: zodResolver(telegramSetupSchema),
     defaultValues: {
       telegramToken: formData.telegramToken || "",
       telegramChatId: formData.telegramChatId || "",
-      notificationLanguage: formData.notificationLanguage || "en",
+      notificationLanguage: formData.notificationLanguage || language,
     },
   });
 
-  const onSubmit = (data: TelegramSetupFormData) => {
+  const onSubmit = (data: z.infer<typeof telegramSetupSchema>) => {
     try {
       updateFormData(data);
       nextStep();
@@ -70,11 +69,9 @@ export default function TelegramSetup({
     <div className="space-y-6">
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">
-          Telegram Setup
+          {t("telegram.heading")}
         </h2>
-        <p className="text-sm text-neutral-500">
-          Set up Telegram notifications by providing your bot token and chat ID.
-        </p>
+        <p className="text-sm text-neutral-500">{t("telegram.description")}</p>
       </div>
 
       {error && (
@@ -88,43 +85,41 @@ export default function TelegramSetup({
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
             <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
-              Set Up Your Telegram Bot
+              {t("telegram.subHeading")}
             </h2>
 
             {/* Telegram Setup Instructions */}
             <Alert className="mt-6">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>
-                <p className="text-sm">
-                  <strong>How to get a Telegram Bot Token:</strong>
-                  <ol className="list-decimal ml-5 mt-2 space-y-1">
-                    <li>Open Telegram and search for @BotFather</li>
-                    <li>Send the command /newbot</li>
-                    <li>Follow the instructions to create a bot</li>
-                    <li>Copy the token provided by BotFather</li>
-                  </ol>
+                <p className="text-sm font-medium">
+                  {t("telegram.instructions.botTitle")}
                 </p>
-                <p className="text-sm mt-3">
-                  <strong>How to get your Telegram Chat ID:</strong>
-                  <ol className="list-decimal ml-5 mt-2 space-y-1">
-                    <li>Open Telegram and search for @userinfobot</li>
-                    <li>Send any message to the bot</li>
-                    <li>
-                      The bot will reply with your information including your
-                      Chat ID
-                    </li>
-                    <li>Copy the Chat ID (it's a number)</li>
-                  </ol>
+                <ol className="list-decimal ml-5 mt-2 space-y-1 text-sm">
+                  <li>{t("telegram.instructions.botStep1")}</li>
+                  <li>{t("telegram.instructions.botStep2")}</li>
+                  <li>{t("telegram.instructions.botStep3")}</li>
+                  <li>{t("telegram.instructions.botStep4")}</li>
+                </ol>
+                <p className="text-sm mt-3 font-medium">
+                  {t("telegram.instructions.chatTitle")}
                 </p>
+                <ol className="list-decimal ml-5 mt-2 space-y-1 text-sm">
+                  <li>{t("telegram.instructions.chatStep1")}</li>
+                  <li>{t("telegram.instructions.chatStep2")}</li>
+                  <li>{t("telegram.instructions.chatStep3")}</li>
+                  <li>{t("telegram.instructions.chatStep4")}</li>
+                </ol>
               </AlertDescription>
             </Alert>
-            {/* ⬇️ Telegram instructions video */}
+
+            {/* Telegram Video Guide */}
             <div className="space-y-2 my-6">
               <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                Need help setting up your Telegram Bot Token and Chat ID?
+                {t("telegram.videoPrompt")}
               </p>
               <p className="text-sm text-muted-foreground">
-                Watch the video below for a step-by-step guide.
+                {t("telegram.videoDescription")}
               </p>
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                 <iframe
@@ -139,67 +134,69 @@ export default function TelegramSetup({
               </div>
             </div>
 
-            {/* Telegram Token Form */}
+            {/* Telegram Form Fields */}
             <div className="space-y-6">
               <FormField
                 control={form.control}
                 name="telegramToken"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Telegram Bot Token</FormLabel>
+                    <FormLabel>{t("telegram.labels.token")}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Enter your bot token from BotFather"
+                        placeholder={t("telegram.placeholders.token")}
                         {...field}
                       />
                     </FormControl>
                     <FormMessage />
                     <FormDescription>
-                      Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890
+                      {t("telegram.examples.token")}
                     </FormDescription>
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="telegramChatId"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Your Telegram Chat ID</FormLabel>
+                    <FormLabel>{t("telegram.labels.chatId")}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Enter your Telegram chat ID"
+                        placeholder={t("telegram.placeholders.chatId")}
                         {...field}
                       />
                     </FormControl>
                     <FormMessage />
                     <FormDescription>
-                      You can get this by messaging @userinfobot on Telegram
+                      {t("telegram.examples.chatId")}
                     </FormDescription>
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="notificationLanguage"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Notification Language</FormLabel>
+                    <FormLabel>{t("telegram.labels.language")}</FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select Telegram Message Language" />
+                          <SelectValue placeholder={t("telegram.placeholders.language")} />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="en">English</SelectItem>
-                        <SelectItem value="de">Deutsch</SelectItem>
-                        <SelectItem value="fr">Français</SelectItem>
-                        <SelectItem value="es">Español</SelectItem>
-                        <SelectItem value="it">Italiano</SelectItem>
+                        <SelectItem value="en">{t("telegram.languages.en")}</SelectItem>
+                        <SelectItem value="de">{t("telegram.languages.de")}</SelectItem>
+                        <SelectItem value="fr">{t("telegram.languages.fr")}</SelectItem>
+                        <SelectItem value="es">{t("telegram.languages.es")}</SelectItem>
+                        <SelectItem value="it">{t("telegram.languages.it")}</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -209,11 +206,14 @@ export default function TelegramSetup({
             </div>
           </div>
 
+          {/* Navigation */}
           <div className="flex justify-between">
             <Button type="button" variant="outline" onClick={prevStep}>
-              Previous
+              {t("telegram.actions.previous")}
             </Button>
-            <Button type="submit">Continue</Button>
+            <Button type="submit">
+              {t("telegram.actions.continue")}
+            </Button>
           </div>
         </form>
       </Form>

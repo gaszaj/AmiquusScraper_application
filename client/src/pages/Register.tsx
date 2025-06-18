@@ -16,8 +16,10 @@ import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/use-auth";
 import { Loader2 } from "lucide-react";
 import PageWrapper from "@/components/layout/PageWrapper";
+import { useLanguage } from "@/components/language-provider";
 
 export default function Register() {
+   const { t } = useLanguage();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -49,8 +51,8 @@ export default function Register() {
     // Form validation
     if (!firstName || !lastName || !email || !password || !username) {
       toast({
-        title: "Missing fields",
-        description: "Please fill in all required fields",
+        title: t("register.toast.missingFields.title"),
+        description: t("register.toast.missingFields.desc"),
         variant: "destructive",
       });
       return;
@@ -60,16 +62,17 @@ export default function Register() {
     const usernameRegex = /^[a-zA-Z0-9]{3,20}$/;
     if (!usernameRegex.test(username)){
       toast({
-        title: "Invalid username",
-        description: "Username must be alphanumeric and between 3 and 20 characters",
+        title: t("register.toast.invalidUsername.title"),
+        description: t("register.toast.invalidUsername.desc"),
         variant: "destructive",
       });
+      return;
     }
 
     if (password !== confirmPassword) {
       toast({
-        title: "Passwords don't match",
-        description: "Please make sure your passwords match",
+        title: t("register.toast.passwordMismatch.title"),
+        description: t("register.toast.passwordMismatch.desc"),
         variant: "destructive",
       });
       return;
@@ -77,8 +80,8 @@ export default function Register() {
 
     if (!acceptTerms) {
       toast({
-        title: "Terms not accepted",
-        description: "You must accept the terms and privacy policy to continue",
+        title: t("register.toast.termsNotAccepted.title"),
+        description: t("register.toast.termsNotAccepted.desc"),
         variant: "destructive",
       });
       return;
@@ -91,16 +94,16 @@ export default function Register() {
       await register(userData);
 
       toast({
-        title: "Registration successful",
-        description: "Welcome to Amiquus! You will be redirected to verify your email address.",
+        title: t("register.toast.success.title"),
+        description: t("register.toast.success.desc"),
+        variant: "destructive",
       });
 
       navigate("/verify-email");
     } catch (error: any) {
       toast({
-        title: "Registration failed",
-        description:
-          error.message || "Please check your information and try again",
+        title: t("register.toast.failure.title"),
+        description: t("register.toast.failure.desc"),
         variant: "destructive",
       });
       setIsRegistering(false);
@@ -126,12 +129,13 @@ export default function Register() {
         <Card className="w-full max-w-md shadow-lg dark:border-neutral-800 dark:bg-neutral-800/50">
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl font-bold text-center dark:text-white">
-              Create an account
+              {t("register.title")}
             </CardTitle>
             <CardDescription className="text-center dark:text-neutral-300">
-              Sign up to start tracking your dream car
+              {t("register.description")}
             </CardDescription>
           </CardHeader>
+
 
           <CardContent className="space-y-4">
             <Button
@@ -158,7 +162,7 @@ export default function Register() {
                 />
                 <path d="M1 1h22v22H1z" fill="none" />
               </svg>
-              Sign up with Google
+              {t("register.google")}
             </Button>
 
             <div className="relative">
@@ -167,7 +171,7 @@ export default function Register() {
               </div>
               <div className="relative flex justify-center text-xs uppercase">
                 <span className="bg-card px-2 text-muted-foreground dark:bg-neutral-800/50 dark:text-neutral-400">
-                  Or continue with
+                  {t("register.orContinue")}
                 </span>
               </div>
             </div>
@@ -179,7 +183,7 @@ export default function Register() {
                     htmlFor="first-name"
                     className="text-neutral-700 dark:text-neutral-300"
                   >
-                    First Name
+                    {t("register.firstName")}
                   </Label>
                   <Input
                     id="first-name"
@@ -196,7 +200,7 @@ export default function Register() {
                     htmlFor="last-name"
                     className="text-neutral-700 dark:text-neutral-300"
                   >
-                    Last Name
+                    {t("register.lastName")}
                   </Label>
                   <Input
                     id="last-name"
@@ -213,7 +217,7 @@ export default function Register() {
                   htmlFor="username"
                   className="text-neutral-700 dark:text-neutral-300"
                 >
-                  Username
+                  {t("register.username")}
                 </Label>
                 <Input
                   id="username"
@@ -232,7 +236,7 @@ export default function Register() {
                   htmlFor="email"
                   className="text-neutral-700 dark:text-neutral-300"
                 >
-                  Email
+                  {t("register.email")}
                 </Label>
                 <Input
                   id="email"
@@ -250,7 +254,7 @@ export default function Register() {
                   htmlFor="password"
                   className="text-neutral-700 dark:text-neutral-300"
                 >
-                  Password
+                  {t("register.password")}
                 </Label>
                 <Input
                   id="password"
@@ -268,7 +272,7 @@ export default function Register() {
                   htmlFor="confirm-password"
                   className="text-neutral-700 dark:text-neutral-300"
                 >
-                  Confirm Password
+                  {t("register.confirmPassword")}
                 </Label>
                 <Input
                   id="confirm-password"
@@ -295,19 +299,19 @@ export default function Register() {
                     htmlFor="terms"
                     className="text-sm text-neutral-600 dark:text-neutral-400 leading-snug"
                   >
-                    I agree to the{" "}
+                     {t("register.termsNotice")}{" "}
                     <Link
                       href="/terms"
                       className="text-primary hover:underline dark:text-[#ff0]"
                     >
-                      Terms of Service
+                      {t("register.termsOfService")}
                     </Link>{" "}
-                    and{" "}
+                     {t("register.and")}{" "}
                     <Link
                       href="/privacy"
                       className="text-primary hover:underline dark:text-[#ff0]"
                     >
-                      Privacy Policy
+                      {t("register.privacyPolicy")}
                     </Link>
                   </label>
                 </div>
@@ -321,10 +325,10 @@ export default function Register() {
                 {isRegistering ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Creating account...
+                    {t("register.creating")}
                   </>
                 ) : (
-                  "Create account"
+                 t("register.createBtn")
                 )}
               </Button>
             </form>
@@ -332,12 +336,12 @@ export default function Register() {
 
           <CardFooter className="flex flex-col border-t dark:border-neutral-700 pt-4">
             <p className="text-center text-sm text-neutral-600 dark:text-neutral-400">
-              Already have an account?{" "}
+              {t("register.alreadyHave")}{" "}
               <Link
                 href="/login"
                 className="text-primary hover:underline dark:text-[#ff0]"
               >
-                Log in
+                 {t("register.login")}
               </Link>
             </p>
           </CardFooter>

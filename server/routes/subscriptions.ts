@@ -17,12 +17,19 @@ export function registerSubscriptionRoutes(app: Express) {
     try {
       const userId = req.user.id;
       const subscriptions = await storage.getUserSubscriptions(userId);
-      res.json(subscriptions);
+
+      // Exclude subscriptions with status 'pending'
+      const activeSubscriptions = subscriptions.filter(
+        (sub) => sub.status !== "pending"
+      );
+
+      res.json(activeSubscriptions);
     } catch (error: any) {
       console.error("Error fetching subscriptions:", error);
       res.status(500).json({ message: error.message });
     }
   });
+
   
   // Get a specific subscription
   app.get("/api/subscriptions/:id", isAuthenticated, async (req: any, res) => {

@@ -26,7 +26,8 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLocation } from "wouter";
-import { useAuth } from "@/hooks/use-auth";
+import { useLanguage } from "@/components/language-provider";
+import { buildAlertSchema } from "@/lib/buildAlertSchema";
 
 export type NewComerResponse = {
   websites: {
@@ -49,6 +50,7 @@ export default function EditSubscriptionPage({
 }: {
   subscription: Subscription;
 }) {
+  const { t, language } = useLanguage();
   const [data, setData] = useState<NewComerResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
@@ -71,7 +73,7 @@ export default function EditSubscriptionPage({
   };
 
   const form = useForm<AlertFormSchema>({
-    resolver: zodResolver(alertSchema),
+    resolver: zodResolver(buildAlertSchema),
     defaultValues: {
       carBrand: subscription.brand as string,
       carModel: subscription.model as string,
@@ -154,7 +156,7 @@ export default function EditSubscriptionPage({
   useEffect(() => {
     if (subscription) {
       setModels(loadModels(subscription.brand as string));
-      setSubStatus(subscription.status)
+      setSubStatus(subscription.status);
     }
   }, [subscription]);
 
@@ -188,6 +190,19 @@ export default function EditSubscriptionPage({
     setSubmitting(true);
     const unitAmountInCents = Math.round(totalPrice * 100);
 
+    // prevent pause if price changes
+    if (unitAmountInCents !== subscription.price){
+      if (subStatus === "paused"){
+        toast({
+          title: t("subscription.toasts.priceError.title"),
+          description: t("subscription.toasts.priceError.description"),
+          variant: "destructive"
+        })
+        setSubmitting(false);
+        return;
+      }
+    }
+    
     try {
       const updateData = {
         ...subscription,
@@ -224,14 +239,17 @@ export default function EditSubscriptionPage({
       }
 
       toast({
-        title: "Subscription Updated",
-        description: `Your subscription for ${values.carBrand} ${values.carModel} has been updated.`,
+        title: t("subscription.toasts.success.title"),
+        description: t("subscription.toasts.success.description", {
+          brand: values.carBrand,
+          model: values.carModel,
+        }),
       });
-      
+
       window.location.href = "/dashboard";
     } catch (error: any) {
       toast({
-        title: "Error",
+        title: t("subscription.toasts.error.title"),
         description: error.message || "Failed to update subscription",
         variant: "destructive",
       });
@@ -243,14 +261,13 @@ export default function EditSubscriptionPage({
   return (
     <div className="py-12 px-6 max-w-4xl mx-auto">
       <p className="mb-9 text-base text-neutral-600 dark:text-neutral-400">
-        You can pause your subscription at any time. When you pause your
-        subscription, your car alerts will stop until you resume them.
+        {t("subscription.description")}
       </p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           {/* status */}
           <div className="flex flex-col gap-2">
-            <FormLabel>Status</FormLabel>
+            <FormLabel>{t("subscription.form.status.label")}</FormLabel>
             <Select
               onValueChange={(value) => setSubStatus(value)}
               disabled={submitting}
@@ -259,11 +276,17 @@ export default function EditSubscriptionPage({
               name="status"
             >
               <SelectTrigger>
-                <SelectValue placeholder="Select Status" />
+                <SelectValue
+                  placeholder={t("subscription.form.status.placeholder")}
+                />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="active">Active</SelectItem>
-                <SelectItem value="paused">Paused</SelectItem>
+                <SelectItem value="active">
+                  {t("subscription.form.status.active")}
+                </SelectItem>
+                <SelectItem value="paused">
+                  {t("subscription.form.status.paused")}
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -273,18 +296,20 @@ export default function EditSubscriptionPage({
               name="carBrand"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Car Brand</FormLabel>
+                  <FormLabel>{t("carDetails.labels.carBrand")}</FormLabel>
                   <Select
                     onValueChange={(value) => {
                       field.onChange(value);
                       setModels(loadModels(value));
                     }}
-                    disabled={subStatus === "paused"}
                     defaultValue={field.value}
+                    disabled={subStatus === "paused"}
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select Car Brand" />
+                        <SelectValue
+                          placeholder={t("carDetails.placeholders.carBrand")}
+                        />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -305,7 +330,7 @@ export default function EditSubscriptionPage({
               disabled={subStatus === "paused"}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Car Model</FormLabel>
+                  <FormLabel> {t("carDetails.labels.carModel")}</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
@@ -316,8 +341,8 @@ export default function EditSubscriptionPage({
                         <SelectValue
                           placeholder={
                             form.watch("carBrand")
-                              ? "Select Car Model"
-                              : "Select Car Brand First"
+                              ? t("carDetails.placeholders.carModel")
+                              : t("carDetails.placeholders.carModelDisabled")
                           }
                         />
                       </SelectTrigger>
@@ -334,7 +359,7 @@ export default function EditSubscriptionPage({
                         )
                       ) : (
                         <SelectItem value="placeholder-no-models" disabled>
-                          No Models Available
+                          {t("carDetails.options.noModelsAvailable")}
                         </SelectItem>
                       )}
                     </SelectContent>
@@ -350,7 +375,7 @@ export default function EditSubscriptionPage({
             name="fuelType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Fuel Type</FormLabel>
+                <FormLabel>{t("carDetails.labels.fuelType")}</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -358,7 +383,9 @@ export default function EditSubscriptionPage({
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select Fuel Type" />
+                      <SelectValue
+                        placeholder={t("carDetails.placeholders.fuelType")}
+                      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -381,11 +408,11 @@ export default function EditSubscriptionPage({
               name="priceMin"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Minimum Price</FormLabel>
+                  <FormLabel>{t("carDetails.labels.priceMin")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter minimum price"
+                      placeholder={t("carDetails.placeholders.priceMin")}
                       disabled={subStatus === "paused"}
                       {...field}
                     />
@@ -399,11 +426,11 @@ export default function EditSubscriptionPage({
               name="priceMax"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Maximum Price</FormLabel>
+                  <FormLabel>{t("carDetails.labels.priceMax")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter maximum price"
+                      placeholder={t("carDetails.placeholders.priceMax")}
                       disabled={subStatus === "paused"}
                       {...field}
                     />
@@ -421,11 +448,11 @@ export default function EditSubscriptionPage({
               name="yearMin"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Minimum Year</FormLabel>
+                  <FormLabel>{t("carDetails.labels.yearMin")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter minimum year"
+                      placeholder={t("carDetails.placeholders.yearMin")}
                       min="1900"
                       max={currentYear}
                       disabled={subStatus === "paused"}
@@ -441,11 +468,11 @@ export default function EditSubscriptionPage({
               name="yearMax"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Maximum Year</FormLabel>
+                  <FormLabel>{t("carDetails.labels.yearMax")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Enter maximum year"
+                      placeholder={t("carDetails.placeholders.yearMax")}
                       min="1900"
                       max={currentYear}
                       disabled={subStatus === "paused"}
@@ -464,11 +491,11 @@ export default function EditSubscriptionPage({
             name="maxKilometers"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Max Kilometers</FormLabel>
+                <FormLabel>{t("carDetails.labels.maxKilometers")}</FormLabel>
                 <FormControl>
                   <Input
                     type="number"
-                    placeholder="Enter maximum kilometers"
+                    placeholder={t("carDetails.placeholders.maxKilometers")}
                     min="0"
                     max="1000000"
                     disabled={subStatus === "paused"}
@@ -486,9 +513,9 @@ export default function EditSubscriptionPage({
             render={({ field }) => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel>Websites to monitor</FormLabel>
+                  <FormLabel> {t("websiteSelection.heading")}</FormLabel>
                   <FormDescription>
-                    Select one or more websites to monitor for car listings.
+                    {t("websiteSelection.description")}
                   </FormDescription>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -618,7 +645,9 @@ export default function EditSubscriptionPage({
             name="updateFrequency"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Update Frequency</FormLabel>
+                <FormLabel>
+                  {t("websiteSelection.labels.updateFrequency")}
+                </FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -626,7 +655,11 @@ export default function EditSubscriptionPage({
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select Update Frequency" />
+                      <SelectValue
+                        placeholder={t(
+                          "websiteSelection.placeholders.frequency",
+                        )}
+                      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -650,10 +683,12 @@ export default function EditSubscriptionPage({
                 name="facebookMarketplaceUrl"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Facebook Marketplace URL</FormLabel>
+                    <FormLabel>
+                      {" "}
+                      {t("websiteSelection.labels.facebookUrl")}
+                    </FormLabel>
                     <FormDescription>
-                      Paste the URL of your Facebook Marketplace search results
-                      here.
+                      {t("websiteSelection.help.facebookUrl")}
                     </FormDescription>
                     <FormControl>
                       <Input
@@ -670,10 +705,10 @@ export default function EditSubscriptionPage({
 
               <div className="space-y-2">
                 <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                  Need help finding your Facebook Marketplace search link?
+                  {t("websiteSelection.help.videoTitle")}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Watch the video below for step-by-step instructions.
+                  {t("websiteSelection.help.videoDesc")}
                 </p>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                   <iframe
@@ -697,16 +732,16 @@ export default function EditSubscriptionPage({
               disabled={subStatus === "paused"}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Telegram Bot Token</FormLabel>
+                  <FormLabel>{t("telegram.botTokenLabel")}</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Enter your bot token from BotFather"
+                      placeholder={t("telegram.botTokenPlaceholder")}
                       {...field}
                     />
                   </FormControl>
                   <FormMessage />
                   <FormDescription>
-                    Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890
+                    {t("telegram.botTokenExample")}
                   </FormDescription>
                 </FormItem>
               )}
@@ -717,16 +752,16 @@ export default function EditSubscriptionPage({
               disabled={subStatus === "paused"}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Your Telegram Chat ID</FormLabel>
+                  <FormLabel>{t("telegram.chatIdLabel")}</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Enter your Telegram chat ID"
+                      placeholder={t("telegram.chatIdPlaceholder")}
                       {...field}
                     />
                   </FormControl>
                   <FormMessage />
                   <FormDescription>
-                    You can get this by messaging @userinfobot on Telegram
+                    {t("telegram.chatIdDescription")}
                   </FormDescription>
                 </FormItem>
               )}
@@ -736,7 +771,7 @@ export default function EditSubscriptionPage({
               name="notificationLanguage"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Notification Language</FormLabel>
+                  <FormLabel>{t("telegram.languageLabel")}</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
@@ -744,7 +779,9 @@ export default function EditSubscriptionPage({
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select Telegram Message Language" />
+                        <SelectValue
+                          placeholder={t("telegram.languagePlaceholder")}
+                        />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -766,16 +803,17 @@ export default function EditSubscriptionPage({
             <div className="flex justify-between items-center mb-4">
               <span className="text-neutral-700 dark:text-neutral-300">
                 {/* get selected websites length */}
-                Basic Plan ({form.watch("websitesSelected")?.length || 0}{" "}
-                websites)
+                {t("setupAlerts.basicPlan")} (
+                {form.watch("websitesSelected")?.length || 0} {" "}
+                {t("review.monitoring.websites")})
               </span>
               <span className="text-neutral-900 dark:text-white font-medium">
-                $9.99/month
+                {t("setupAlerts.baseTitle")}
               </span>
             </div>
             <div className="flex justify-between items-center mb-4">
               <span className="text-neutral-700 dark:text-neutral-300">
-                Additional websites (
+                {t("review.summary.extraWebsites")} (
                 {Math.max((form.watch("websitesSelected")?.length || 1) - 1, 0)}
                 )
               </span>
@@ -792,7 +830,7 @@ export default function EditSubscriptionPage({
             {form.watch("updateFrequency") !== "hourly" && (
               <div className="flex justify-between items-center mb-4">
                 <span className="text-neutral-700 dark:text-neutral-300">
-                  Update Frequency (
+                  {t("websiteSelection.label.updateFrequency")} (
                   {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                 </span>
                 <span className="text-neutral-900 dark:text-white font-medium">
@@ -808,7 +846,7 @@ export default function EditSubscriptionPage({
             <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
               <div className="flex justify-between items-center">
                 <span className="text-neutral-900 dark:text-white font-medium">
-                  Total (Monthly):
+                  {t("review.summary.total")}
                 </span>
                 <span className="text-primary dark:text-primary font-bold text-xl">
                   ${totalPrice.toFixed(2)}
@@ -824,13 +862,13 @@ export default function EditSubscriptionPage({
               variant="outline"
               onClick={() => navigate("/dashboard")}
             >
-              Back
+              {t("subscription.actions.back")}
             </Button>
             <Button type="submit" disabled={submitting}>
               {submitting ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               ) : (
-                "Save Changes"
+                t("subscription.actions.save")
               )}
             </Button>
           </div>

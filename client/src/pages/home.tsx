@@ -8,8 +8,12 @@ import Signup from "@/pages/signup";
 import { useLocation } from "wouter";
 import { useEffect, useRef } from "react";
 import PageWrapper from "@/components/layout/PageWrapper";
+import { useLanguage } from "@/components/language-provider";
+
+
 
 export default function Home() {
+  const { t } = useLanguage();
   const [location] = useLocation();
   const signupRef = useRef<HTMLDivElement>(null);
 

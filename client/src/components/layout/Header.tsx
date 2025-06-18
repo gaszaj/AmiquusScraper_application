@@ -8,8 +8,10 @@ import { UserProfile } from "@/components/user-profile";
 import { SubscriptionCounter } from "@/components/SubscriptionCounter";
 import { useToast } from "@/hooks/use-toast";
 import ScrollToTopLink from "@/components/ScrollToTopLink";
+import { useLanguage } from "@/components/language-provider";
 
 export default function Header() {
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showFullMenu, setShowFullMenu] = useState(true);
   const [location] = useLocation();
@@ -22,36 +24,37 @@ export default function Header() {
       // Show full menu only when window width is large enough (1024px for lg breakpoint)
       const shouldShowFullMenu = window.innerWidth >= 1024;
       setShowFullMenu(shouldShowFullMenu);
-      
+
       // Close mobile menu when resizing to large screens
       if (shouldShowFullMenu && mobileMenuOpen) {
         setMobileMenuOpen(false);
       }
     };
-    
+
     // Initial check
     checkWindowSize();
-    
+
     // Add event listener for window resize
-    window.addEventListener('resize', checkWindowSize);
-    
+    window.addEventListener("resize", checkWindowSize);
+
     // Cleanup on unmount
-    return () => window.removeEventListener('resize', checkWindowSize);
+    return () => window.removeEventListener("resize", checkWindowSize);
   }, [mobileMenuOpen]);
-  
+
   // Test login for development purposes - removing actual login attempt
   const handleTestLogin = () => {
     // Navigate directly to test profile instead of trying to log in
     toast({
       title: "Development mode",
-      description: "Use the Test Profile button to see profile functionality without login",
+      description:
+        "Use the Test Profile button to see profile functionality without login",
     });
   };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-  
+
   // Close mobile menu after navigation
   const handleMobileMenuClose = () => {
     if (mobileMenuOpen) {
@@ -67,87 +70,129 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-1 sm:gap-2">
               <div className="flex items-center">
-                <svg className="size-6 sm:size-8 text-primary dark:text-[#ff0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+                <svg
+                  className="size-6 sm:size-8 text-primary dark:text-[#ff0]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+                  ></path>
                 </svg>
-                <svg className="size-3 sm:size-4 text-primary dark:text-[#ff0] -mt-3 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                <svg
+                  className="size-3 sm:size-4 text-primary dark:text-[#ff0] -mt-3 -ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
                 </svg>
               </div>
-              <span className="text-neutral-900 dark:text-white font-bold text-lg sm:text-xl">Amiquus</span>
+              <span className="text-neutral-900 dark:text-white font-bold text-lg sm:text-xl">
+                Amiquus
+              </span>
             </Link>
           </div>
 
           {/* Navigation - only visible when full menu is showing */}
           {showFullMenu && (
             <nav className="flex space-x-8">
-              <ScrollToTopLink 
-                href="/#features" 
+              <ScrollToTopLink
+                href="/#features"
                 className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#features" ? "text-primary dark:text-[#ff0]" : ""}`}
                 onClick={handleMobileMenuClose}
               >
-                Features
+                {t("navigations.features")}
               </ScrollToTopLink>
-              <ScrollToTopLink 
-                href="/#how-it-works" 
+              <ScrollToTopLink
+                href="/#how-it-works"
                 className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#how-it-works" ? "text-primary dark:text-[#ff0]" : ""}`}
                 onClick={handleMobileMenuClose}
               >
-                How It Works
+                {t("navigations.how")}
               </ScrollToTopLink>
-              <ScrollToTopLink 
-                href="/#pricing" 
+              <ScrollToTopLink
+                href="/#pricing"
                 className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/#pricing" ? "text-primary dark:text-[#ff0]" : ""}`}
                 onClick={handleMobileMenuClose}
               >
-                Pricing
+                {t("navigations.pricing")}
               </ScrollToTopLink>
-              <ScrollToTopLink 
-                href="/setup-alerts" 
+              <ScrollToTopLink
+                href="/setup-alerts"
                 className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/setup-alerts" ? "text-primary dark:text-[#ff0]" : ""}`}
                 onClick={handleMobileMenuClose}
               >
-                Get Alerts
+                {t("navigations.getAlerts")}
               </ScrollToTopLink>
-              <ScrollToTopLink 
-                href="/waitlist" 
+              <ScrollToTopLink
+                href="/waitlist"
                 className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/waitlist" ? "text-primary dark:text-[#ff0]" : ""}`}
                 onClick={handleMobileMenuClose}
               >
-                Waitlist
+                {t("navigations.waitlist")}
               </ScrollToTopLink>
-              <ScrollToTopLink 
-                href="/faq" 
+              <ScrollToTopLink
+                href="/faq"
                 className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/faq" ? "text-primary dark:text-[#ff0]" : ""}`}
                 onClick={handleMobileMenuClose}
               >
-                FAQ
+                {t("navigations.faq")}
               </ScrollToTopLink>
             </nav>
           )}
 
           {/* Hamburger menu button - visible when full menu is hidden */}
           {!showFullMenu && (
-            <button 
-              type="button" 
-              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white p-2 rounded-md" 
+            <button
+              type="button"
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white p-2 rounded-md"
               onClick={toggleMobileMenu}
             >
-              <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <svg
+                className="size-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </button>
           )}
 
           {/* User menu and options - layout changes based on menu mode */}
-          <div className={`${showFullMenu ? 'flex' : 'hidden'} items-center gap-2`}>
+          <div
+            className={`${showFullMenu ? "flex" : "hidden"} items-center gap-2`}
+          >
             {/* Subscription Counter - moved to more prominent position */}
             <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-2 sm:px-3 py-1 mr-2 sm:mr-3 flex items-center">
-              <span className="hidden sm:inline text-xs mr-2 text-neutral-600 dark:text-neutral-400">Subscribers:</span>
+              <span className="hidden sm:inline text-xs mr-2 text-neutral-600 dark:text-neutral-400">
+                {" "}
+                {t("navigations.subscribers")}:
+              </span>
               <SubscriptionCounter />
             </div>
-            
+
             <ThemeToggle />
             <LanguageSelector />
 
@@ -165,13 +210,16 @@ export default function Header() {
             {!isAuthenticated && (
               <>
                 <div className="mx-2">
-                  <ScrollToTopLink href="/login" className="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition">
-                    Log in
+                  <ScrollToTopLink
+                    href="/login"
+                    className="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
+                  >
+                    {t("navigations.login")}
                   </ScrollToTopLink>
                 </div>
                 <ScrollToTopLink href="/register">
                   <Button className="bg-primary hover:bg-primary-600 dark:bg-[#ff0] dark:hover:bg-yellow-300 text-white dark:text-neutral-900 font-medium">
-                    Get Started
+                    {t("navigations.getStarted")}
                   </Button>
                 </ScrollToTopLink>
               </>
@@ -183,49 +231,49 @@ export default function Header() {
       </div>
 
       {/* Mobile menu - visible when menu is toggled */}
-      <div className={`${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`${mobileMenuOpen ? "block" : "hidden"}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 border-t border-neutral-200 dark:border-neutral-700">
-          <ScrollToTopLink 
-            href="/#features" 
-            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
+          <ScrollToTopLink
+            href="/#features"
+            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
             onClick={handleMobileMenuClose}
           >
-            Features
+            {t("navigations.features")}
           </ScrollToTopLink>
-          <ScrollToTopLink 
-            href="/#how-it-works" 
-            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
+          <ScrollToTopLink
+            href="/#how-it-works"
+            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
             onClick={handleMobileMenuClose}
           >
-            How It Works
+            {t("navigations.how")}
           </ScrollToTopLink>
-          <ScrollToTopLink 
-            href="/#pricing" 
-            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
+          <ScrollToTopLink
+            href="/#pricing"
+            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
             onClick={handleMobileMenuClose}
           >
-            Pricing
+            {t("navigations.pricing")}
           </ScrollToTopLink>
-          <ScrollToTopLink 
-            href="/setup-alerts" 
-            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
+          <ScrollToTopLink
+            href="/setup-alerts"
+            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
             onClick={handleMobileMenuClose}
           >
-            Get Alerts
+            {t("navigations.getAlerts")}
           </ScrollToTopLink>
-          <ScrollToTopLink 
-            href="/waitlist" 
-            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
+          <ScrollToTopLink
+            href="/waitlist"
+            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
             onClick={handleMobileMenuClose}
           >
-            Waitlist
+            {t("navigations.waitlist")}
           </ScrollToTopLink>
-          <ScrollToTopLink 
-            href="/faq" 
-            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
+          <ScrollToTopLink
+            href="/faq"
+            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
             onClick={handleMobileMenuClose}
           >
-            FAQ
+            {t("navigations.faq")}
           </ScrollToTopLink>
 
           {/* Development Test Profile button in mobile menu */}
@@ -240,42 +288,47 @@ export default function Header() {
           {/* Mobile subscription counter */}
           <div className="flex items-center px-3 py-2">
             <div className="border border-neutral-200 dark:border-neutral-700 rounded-md px-3 py-2 flex items-center w-full">
-              <span className="text-neutral-600 dark:text-neutral-400 text-sm mr-2">Subscribers:</span>
+              <span className="text-neutral-600 dark:text-neutral-400 text-sm mr-2">
+                {" "}
+                {t("navigations.subscribers")}:
+              </span>
               <SubscriptionCounter />
             </div>
           </div>
-          
+
           {/* Theme and Language in mobile menu */}
           <div className="flex items-center px-3 py-2 gap-2">
-            <span className="text-neutral-600 dark:text-neutral-400 text-sm">Theme:</span>
+            <span className="text-neutral-600 dark:text-neutral-400 text-sm">
+              {t("navigations.theme")}:
+            </span>
             <ThemeToggle />
           </div>
           <div className="flex items-center px-3 py-2 gap-2">
-            <span className="text-neutral-600 dark:text-neutral-400 text-sm">Language:</span>
+            <span className="text-neutral-600 dark:text-neutral-400 text-sm">
+              {t("navigations.language")}:
+            </span>
             <LanguageSelector />
           </div>
-          
+
           {!isAuthenticated && (
             <>
-              <ScrollToTopLink 
-                href="/login" 
-                className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition" 
-                onClick={handleMobileMenuClose}
-              >
-                Log in
-              </ScrollToTopLink>
-              <ScrollToTopLink 
-                href="/register" 
+              <ScrollToTopLink
+                href="/login"
                 className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
                 onClick={handleMobileMenuClose}
               >
-                Get Started
+                {t("navigations.login")}
+              </ScrollToTopLink>
+              <ScrollToTopLink
+                href="/register"
+                className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
+                onClick={handleMobileMenuClose}
+              >
+                {t("navigations.getStarted")}
               </ScrollToTopLink>
             </>
           )}
-          {isAuthenticated && (
-            <UserProfile />
-          )}
+          {isAuthenticated && <UserProfile />}
         </div>
       </div>
     </header>

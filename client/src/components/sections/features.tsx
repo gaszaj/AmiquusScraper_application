@@ -1,46 +1,51 @@
 import { Search, Bell, Sliders, Clock, Globe, UserCircle } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
+
 
 export default function Features() {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: <Search className="text-xl" />,
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: t("features.multiSite.title"),
+      description: t("features.multiSite.description")
     },
     {
       icon: <Bell className="text-xl" />,
-      title: "Instant Notifications",
-      description: "Receive immediate alerts via Telegram when a car matching your criteria is listed for sale."
+      title: t("features.notifications.title"),
+      description: t("features.notifications.description")
     },
     {
       icon: <Sliders className="text-xl" />,
-      title: "Custom Filters",
-      description: "Set precise criteria including brand, model, year, mileage, and price range to find exactly what you want."
+      title: t("features.filters.title"),
+      description: t("features.filters.description")
     },
     {
       icon: <Clock className="text-xl" />,
-      title: "Customizable Frequency",
-      description: "Choose how often we check for new listings, from hourly updates to real-time monitoring."
+      title: t("features.frequency.title"),
+      description: t("features.frequency.description")
     },
     {
       icon: <Globe className="text-xl" />,
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings."
+      title: t("features.languages.title"),
+      description: t("features.languages.description")
     },
     {
       icon: <UserCircle className="text-xl" />,
-      title: "Easy Account Management",
-      description: "Manage multiple search profiles and modify your subscription settings with a few clicks."
+      title: t("features.account.title"),
+      description: t("features.account.description")
     }
   ];
+
 
   return (
     <section id="features" className="py-16 bg-white dark:bg-neutral-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-title font-bold mb-4 text-neutral-900 dark:text-white">Why Choose Amiquus?</h2>
+          <h2 className="text-3xl md:text-4xl font-title font-bold mb-4 text-neutral-900 dark:text-white">{t("features.heading")}</h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Save time and never miss out on your perfect car with our automated tracking service.
+            {t("features.subheading")}
           </p>
         </div>
         

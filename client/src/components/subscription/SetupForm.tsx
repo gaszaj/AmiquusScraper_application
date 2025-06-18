@@ -7,8 +7,11 @@ import {
   PaymentElement,
 } from "@stripe/react-stripe-js";
 import { toast } from "@/hooks/use-toast";
+import { useLanguage } from "@/components/language-provider";
+
 
 const SetupForm = () => {
+  const { t } = useLanguage();
   const stripe = useStripe();
   const elements = useElements();
 
@@ -40,16 +43,16 @@ const SetupForm = () => {
       // details incomplete)
       toast({
         variant: "destructive",
-        title: "Error",
-        description: error.message,
-      })
-      setErrorMessage(error.message ? error.message : "An unexpected error occurred.");
+        title: t("payment.toast.error.title"),
+        description: error.message || t("payment.toast.error.fallback")
+      });
+      setErrorMessage(error.message || t("payment.toast.error.fallback"));
       setSubmitting(false);
     } else {
       toast({
-        title: "Success",
-        description: "Your payment method has been successfully set up."
-      })
+        title: t("payment.toast.success.title"),
+        description: t("payment.toast.success.description")
+      });
       setErrorMessage(null);
       setSubmitting(false);
       // Your customer will be redirected to your `return_url`. For some payment
@@ -70,7 +73,7 @@ const SetupForm = () => {
         {/* Show error message to your customers */}
         {errorMessage && <div>{errorMessage}</div>}
         <Button disabled={!stripe || submitting} type="submit">
-          {submitting ? "Processing..." : "Set up payment method"}
+          {submitting ? t("payment.button.processing") : t("payment.button.submit")}
         </Button>
       </motion.div>
     </form>

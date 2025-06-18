@@ -5,6 +5,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/language-provider";
 
 type Props = {
   open: boolean;
@@ -12,18 +13,20 @@ type Props = {
 };
 
 export default function WaitlistPromptModal({ open, onClose }: Props) {
+  const { t } = useLanguage();
+
   return (
     <Dialog open={open} onOpenChange={() => window.location.href = "/waitlist"}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Join the Waitlist</DialogTitle>
+          <DialogTitle>{t("waitlistPrompt.title")}</DialogTitle>
         </DialogHeader>
         <p className="text-sm text-muted-foreground">
-          We're currently at full capacity. Join the waitlist to be notified when a slot becomes available.
+          {t("waitlistPrompt.description")}
         </p>
         <div className="flex justify-end gap-3 mt-4">
           <Button onClick={() => (window.location.href = "/waitlist")}>
-            Join Waitlist
+            {t("waitlistPrompt.button")}
           </Button>
         </div>
       </DialogContent>

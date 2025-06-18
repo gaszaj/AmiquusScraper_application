@@ -14,8 +14,10 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/hooks/use-auth";
+import { useLanguage } from "@/components/language-provider";
 
 export default function VerifyEmail() {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const { user, isAuthenticated, isLoading, checkAuth } = useAuth();
   const [code, setCode] = useState("");
@@ -25,7 +27,6 @@ export default function VerifyEmail() {
   const [updatingEmail, setUpdatingEmail] = useState(false);
   const [verifying, setVerifying] = useState(false);
 
-  
   useEffect(() => {
     const timer = setInterval(() => {
       setSecondsLeft((prev) => (prev > 0 ? prev - 1 : 0));
@@ -44,10 +45,13 @@ export default function VerifyEmail() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
 
-      toast({ title: "Email verified", description: data.message });
+      toast({
+        title: t("verifyEmail.toast.verified"),
+        description: data.message,
+      });
     } catch (err: any) {
       toast({
-        title: "Verification failed",
+        title: t("verifyEmail.toast.failed"),
         description: err.message,
         variant: "destructive",
       });
@@ -62,11 +66,14 @@ export default function VerifyEmail() {
       const res = await fetch("/api/auth/resend-code", { method: "POST" });
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
-      toast({ title: "Verification code resent", description: data.message });
+      toast({
+        title: t("verifyEmail.toast.resent"),
+        description: data.message,
+      });
       setSecondsLeft(60);
     } catch (err: any) {
       toast({
-        title: "Error",
+        title: t("verifyEmail.toast.failed"),
         description: err.message,
         variant: "destructive",
       });
@@ -78,18 +85,18 @@ export default function VerifyEmail() {
   const handleChangeEmail = async () => {
     if (!newEmail) {
       return toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address",
+        title: t("verifyEmail.toast.invalidEmail"),
+        description: t("verifyEmail.toast.enterValidEmail"),
         variant: "destructive",
       });
     }
 
     if (newEmail === user?.email) {
       return toast({
-        title: "Same email",
-        description: "The new email is the same as the current email",
+        title: t("verifyEmail.toast.sameEmail"),
+        description: t("verifyEmail.toast.sameEmailDesc"),
         variant: "destructive",
-      })
+      });
     }
 
     setUpdatingEmail(true);
@@ -103,10 +110,10 @@ export default function VerifyEmail() {
       if (!res.ok) throw new Error(data.message);
       toast({ title: "Email updated", description: data.message });
       setSecondsLeft(60);
-        checkAuth()
+      checkAuth();
     } catch (err: any) {
       toast({
-        title: "Error",
+        title: t("verifyEmail.toast.failed"),
         description: err.message,
         variant: "destructive",
       });
@@ -114,8 +121,6 @@ export default function VerifyEmail() {
       setUpdatingEmail(false);
     }
   };
-
-
 
   if (isLoading) {
     return (
@@ -131,15 +136,17 @@ export default function VerifyEmail() {
         <Card className="w-full max-w-md shadow-lg dark:border-neutral-800 dark:bg-neutral-800/50">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-center dark:text-white">
-              Verify Your Email ({user?.email})
+              {t("verifyEmail.title")} ({user?.email})
             </CardTitle>
             <CardDescription className="text-center dark:text-neutral-300">
-              A verification code has been sent to your email.
+              {t("verifyEmail.description")}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label className="dark:text-neutral-300">Verification Code</Label>
+              <Label className="dark:text-neutral-300">
+                {t("verifyEmail.codeLabel")}
+              </Label>
               <Input
                 type="text"
                 value={code}
@@ -155,13 +162,15 @@ export default function VerifyEmail() {
                 {verifying ? (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 ) : (
-                  "Verify Email"
+                  t("verifyEmail.verifyButton")
                 )}
               </Button>
             </div>
 
             <div className="space-y-2">
-              <Label className="dark:text-neutral-300">Update Email</Label>
+              <Label className="dark:text-neutral-300">
+                {t("verifyEmail.updateEmailLabel")}
+              </Label>
               <Input
                 type="email"
                 value={newEmail}
@@ -177,7 +186,7 @@ export default function VerifyEmail() {
                 {updatingEmail ? (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 ) : (
-                  "Update Email"
+                  t("verifyEmail.updateEmailButton")
                 )}
               </Button>
             </div>
@@ -195,7 +204,7 @@ export default function VerifyEmail() {
                   {resending ? (
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   ) : (
-                    "Resend Code"
+                  t("verifyEmail.resendButton")
                   )}
                 </Button>
               )}
@@ -203,7 +212,7 @@ export default function VerifyEmail() {
           </CardContent>
           <CardFooter className="flex flex-col border-t dark:border-neutral-700 pt-4">
             <p className="text-center text-sm text-neutral-600 dark:text-neutral-400">
-              Didn’t receive the code? Check your spam folder.
+              {t("verifyEmail.footerNote")}
             </p>
           </CardFooter>
         </Card>
