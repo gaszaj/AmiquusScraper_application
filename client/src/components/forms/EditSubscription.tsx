@@ -73,7 +73,7 @@ export default function EditSubscriptionPage({
   };
 
   const form = useForm<AlertFormSchema>({
-    resolver: zodResolver(buildAlertSchema),
+    resolver: zodResolver(alertSchema),
     defaultValues: {
       carBrand: subscription.brand as string,
       carModel: subscription.model as string,

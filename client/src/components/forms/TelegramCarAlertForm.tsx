@@ -74,7 +74,7 @@ export default function TelegramCarAlertForm({
   const [websites, setWebsites] = useState<string[]>([]);
 
   const form = useForm<AlertFormSchema>({
-    resolver: zodResolver(buildAlertSchema),
+    resolver: zodResolver(alertSchema),
     defaultValues: {
       carBrand: "",
       carModel: "",
@@ -892,12 +892,17 @@ export default function TelegramCarAlertForm({
                       <p className="text-sm text-gray-800">
                         Volkswagen Arteon 2.0
                       </p>
-                      <p className="text-sm text-gray-800">  {t("telegram.priceLabel", { price: "€ 36,850" })}</p>
+                      <p className="text-sm text-gray-800">
+                        {" "}
+                        {t("telegram.priceLabel", { price: "€ 36,850" })}
+                      </p>
                       <p className="text-sm text-gray-800">
                         {t("telegram.kilometresLabel", { kms: "73,000" })}
                       </p>
                       <p className="text-sm text-gray-800">
-                        {t("telegram.locationLabel", { location: "OBVEZNA NAJAVA - Cvetlicna ul.3" })}
+                        {t("telegram.locationLabel", {
+                          location: "OBVEZNA NAJAVA - Cvetlicna ul.3",
+                        })}
                       </p>
                       <p className="text-sm text-gray-800 mt-2">
                         <a href="#" className="text-blue-600 underline">
@@ -928,13 +933,15 @@ export default function TelegramCarAlertForm({
                       </p>
                       <p className="text-sm text-gray-800">Ford</p>
                       <p className="text-sm text-gray-800">
-                        {t("telegram.priceLabel", { price: "€ 22,750" })}</p>
-                      <p className="text-sm text-gray-800">
-                        {t("telegram.kilometresLabel", { kms: "170,000" })}
-
+                        {t("telegram.priceLabel", { price: "€ 22,750" })}
                       </p>
                       <p className="text-sm text-gray-800">
-                        {t("telegram.locationLabel", { location: "castrop-Rauxel, NW" })}
+                        {t("telegram.kilometresLabel", { kms: "170,000" })}
+                      </p>
+                      <p className="text-sm text-gray-800">
+                        {t("telegram.locationLabel", {
+                          location: "castrop-Rauxel, NW",
+                        })}
                       </p>
                       <p className="text-sm text-gray-800 mt-2">
                         <a href="#" className="text-blue-600 underline">
@@ -950,13 +957,12 @@ export default function TelegramCarAlertForm({
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-neutral-700 dark:text-neutral-300">
                     {/* get selected websites length */}
-                    {t("setupAlerts.basicPlan")}
-                    ({form.watch("websitesSelected")?.length ||
-                      0}{" "}
-                    `${t("review.monitoring.websites")}`)
+                    {t("setupAlerts.basicPlan")}(
+                    {form.watch("websitesSelected")?.length || 0} `$
+                    {t("review.monitoring.websites")}`)
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
-                     {t("setupAlerts.baseTitle")}
+                    {t("setupAlerts.baseTitle")}
                   </span>
                 </div>
                 <div className="flex justify-between items-center mb-4">
@@ -986,7 +992,7 @@ export default function TelegramCarAlertForm({
                 {form.watch("updateFrequency") !== "hourly" && (
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-neutral-700 dark:text-neutral-300">
-                   {t("websiteSelection.label.updateFrequency")} (
+                      {t("websiteSelection.label.updateFrequency")} (
                       {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                     </span>
                     <span className="text-neutral-900 dark:text-white font-medium">
@@ -1024,7 +1030,7 @@ export default function TelegramCarAlertForm({
                     htmlFor="terms"
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   >
-                     {t("review.terms.checkbox")}{" "}
+                    {t("review.terms.checkbox")}{" "}
                     <a
                       href="/terms"
                       className="text-primary-600 hover:underline"
@@ -1057,7 +1063,7 @@ export default function TelegramCarAlertForm({
                   {submitting ? (
                     <Loader2 className="ml-2 h-4 w-4 animate-spin" />
                   ) : (
-                  t("setupAlerts.button")
+                    t("setupAlerts.button")
                   )}
                 </Button>
                 <p className="text-center text-neutral-500 dark:text-neutral-500 text-sm mt-2">
