@@ -207,7 +207,7 @@ export default function Header() {
               </Button>
             </ScrollToTopLink> */}
 
-            {!isAuthenticated && (
+            {/* {!isAuthenticated && (
               <>
                 <div className="mx-2">
                   <ScrollToTopLink
@@ -223,7 +223,7 @@ export default function Header() {
                   </Button>
                 </ScrollToTopLink>
               </>
-            )}
+            )} */}
 
             <UserProfile />
           </div>
