@@ -111,10 +111,12 @@ export default function EditSubscriptionPage({
 
     if (websitesCount === 0) return 0;
 
-    let price = 9.99;
+    // let price = 9.99;
+    let price = 1.0;
 
     if (websitesCount > 1) {
-      price += 4.99 * (websitesCount - 1);
+      // price += 4.99 * (websitesCount - 1);
+      price += 0.5 * (websitesCount - 1);
     }
 
     const frequencyOption = FREQUENCY_OPTIONS.find(
