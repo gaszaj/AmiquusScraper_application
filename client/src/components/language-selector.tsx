@@ -26,6 +26,7 @@ const languages: Language[] = [
 
 export function LanguageSelector() {
   const { language, setLanguage} = useLanguage();
+  const selectedLang = languages.find((l) => l.code === language);
 
   const handleLanguageChange = (value: LanguageType) => {
     setLanguage(value);
@@ -35,8 +36,12 @@ export function LanguageSelector() {
 
   return (
     <Select value={language} onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-10 h-10 rounded-full p-0 border-0 bg-transparent hover:bg-neutral-800 transition-colors flex justify-center">
-        <Globe className="h-5 w-5 text-neutral-400" />
+      <SelectTrigger className="h-10 rounded-md px-3 border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm font-medium transition-colors">
+        <Globe className="h-5 w-5 text-neutral-400 min-h-5 min-w-5" />
+        {/* <div className="flex items-center gap-2">
+          <span>{selectedLang?.flag}</span>
+          <span>{selectedLang?.name}</span>
+        </div> */}
         <SelectValue className="sr-only" />
       </SelectTrigger>
       <SelectContent>
@@ -44,7 +49,7 @@ export function LanguageSelector() {
           <SelectItem key={lang.code} value={lang.code}>
             <div className="flex items-center gap-2">
               <span>{lang.flag}</span>
-              <span>{lang.name}</span>
+              <span >{lang.name}</span>
             </div>
           </SelectItem>
         ))}
