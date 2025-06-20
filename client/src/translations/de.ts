@@ -362,7 +362,8 @@ export const de = {
     description:
       "Richten Sie Telegram-Benachrichtigungen ein, indem Sie Ihren Bot-Token und Ihre Chat-ID angeben.",
     subHeading: "Telegram-Bot einrichten",
-
+    info: "Wenn Sie Probleme beim Erstellen des Telegramm-Bots haben, kontaktieren Sie uns. Wir rufen Sie an und helfen Ihnen beim Erstellen.",
+contact: "Kontaktieren Sie uns",
     instructions: {
       botTitle: "So erhalten Sie ein Telegram-Bot-Token:",
       botStep1: "Öffnen Sie Telegram und suchen Sie nach @BotFather",

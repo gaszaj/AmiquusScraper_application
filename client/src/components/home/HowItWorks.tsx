@@ -6,6 +6,7 @@ import {
   Search, ListFilter, Bell, MessageSquare 
 } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
+import whyChooseUsImage from "@/images/why-choose-img.webp"
 
 export default function HowItWorks() {
   const { t } = useLanguage();
@@ -101,8 +102,8 @@ export default function HowItWorks() {
             {/* Notification mockup */}
             <div className="relative">
               <div className="relative mx-auto max-w-sm">
-                <div className="rounded-xl bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p-6 shadow-2xl">
-                  <div className="space-y-6">
+                <div className="rounded-xl bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 p6 shadow-2xl">
+                  {/* <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-accent/20 text-accent p-3 rounded-full">
                         <Bell size={24} />
@@ -124,7 +125,8 @@ export default function HowItWorks() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+                  <img src={whyChooseUsImage} alt="Why Choose Us" className="rounded-xl" />
                 </div>
               </div>
             </div>

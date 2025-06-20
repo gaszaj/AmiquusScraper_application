@@ -12,11 +12,11 @@ export default function LoginPromptModal({ open, onClose }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={() => window.location.href = "/register"}>
-      <DialogContent>
+      <DialogContent className="w-full max-w-md">
         <DialogHeader>
           <DialogTitle>{t("loginPrompt.title")}</DialogTitle>
         </DialogHeader>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground text-center sm:text-left">
           {t("loginPrompt.description")}
         </p>
         <div className="flex justify-end gap-3 mt-4">

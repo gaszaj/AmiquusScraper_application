@@ -314,6 +314,8 @@ export const en = {
     description:
       "Set up Telegram notifications by providing your bot token and chat ID.",
     subHeading: "Set Up Your Telegram Bot",
+    info: "If you have issues creating the telegram bot, contact us and we will call you and help you create one.",
+    contact: "Contact Us",
     instructions: {
       botTitle: "How to get a Telegram Bot Token:",
       botStep1: "Open Telegram and search for @BotFather",

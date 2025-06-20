@@ -791,6 +791,12 @@ export default function TelegramCarAlertForm({
                 </div>
               </div>
 
+              <p className="text-sm text-muted-foreground py-0.5">
+                {t("telegram.info")} <a href="/contact" className="text-blue-500 hover:underline">
+                  {t("telegram.contact")}
+                </a>
+              </p>
+
               {/* Telegram Token Form */}
               <div className="space-y-6">
                 <FormField
@@ -958,8 +964,8 @@ export default function TelegramCarAlertForm({
                   <span className="text-neutral-700 dark:text-neutral-300">
                     {/* get selected websites length */}
                     {t("setupAlerts.basicPlan")}(
-                    {form.watch("websitesSelected")?.length || 0} `$
-                    {t("review.monitoring.websites")}`)
+                    {form.watch("websitesSelected")?.length || 0} {" "}
+                    {t("review.monitoring.websites")})
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
                     {t("setupAlerts.baseTitle")}
@@ -992,7 +998,7 @@ export default function TelegramCarAlertForm({
                 {form.watch("updateFrequency") !== "hourly" && (
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-neutral-700 dark:text-neutral-300">
-                      {t("websiteSelection.label.updateFrequency")} (
+                      {t("websiteSelection.labels.updateFrequency")} (
                       {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                     </span>
                     <span className="text-neutral-900 dark:text-white font-medium">

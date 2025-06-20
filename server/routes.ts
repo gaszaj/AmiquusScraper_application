@@ -604,9 +604,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post("/api/waitlist", async (req, res) => {
     try {
-      const { email, firstName, lastname } = req.body;
+      const { email, firstName, lastName } = req.body;
 
-      const userName = `${firstName} ${lastname}`;
+      if (!email || !firstName || !lastName){
+        return res.status(400).json({ message: "All fields are required" });
+      }
+
+      const userName = `${firstName} ${lastName}`;
 
       await emailService.sendAdminNewWaitlistAlert(email, userName);
       await emailService.sendUserWaitlistConfirmation(email, userName);

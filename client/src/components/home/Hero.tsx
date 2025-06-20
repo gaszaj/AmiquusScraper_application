@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { BellRing, Search, Bell, Car, MessageSquare } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
+import heroImage from "@/images/hero-image.webp"
 
 interface HeroProps {
   onGetStarted?: () => void;
@@ -112,8 +113,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
               {/* Main image */}
               <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-neutral-200 dark:border-neutral-800">
                 <img 
-                  src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80" 
-                  alt="Luxury sports car in showroom" 
+                  src={heroImage} 
+                  alt="Hero image" 
                   className="w-full h-auto object-cover rounded-lg" 
                   loading="lazy"
                 />

@@ -134,6 +134,12 @@ export default function TelegramSetup({
               </div>
             </div>
 
+             <p className="text-sm text-muted-foreground py-0.5">
+              {t("telegram.info")} <a href="/contact" className="text-blue-500 hover:underline">
+                {t("telegram.contact")}
+              </a>
+            </p>
+
             {/* Telegram Form Fields */}
             <div className="space-y-6">
               <FormField
