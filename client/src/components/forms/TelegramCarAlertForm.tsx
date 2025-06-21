@@ -293,6 +293,8 @@ export default function TelegramCarAlertForm({
             // go to dashboard
             window.location.href = "/dashboard";
           }
+
+          console.log("response", data)
         }
       } else {
         // post to "/api/set-alerts-intent"

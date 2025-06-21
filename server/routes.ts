@@ -866,7 +866,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       // Create Stripe subscription with default payment method
-      await stripe.subscriptions.create({
+     const stripeRes = await stripe.subscriptions.create({
         customer: customerId,
         items: [{ price: price.id }],
         default_payment_method: paymentMethods.data[0].id,
@@ -876,7 +876,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         },
       });
 
-      return res.status(201).json(dbSubscription);
+      return res.status(201).json(stripeRes);
     } catch (error) {
       console.log("Error creating subscription:", error);
       if (error instanceof ZodError) {
