@@ -75,7 +75,7 @@ export default function LimitedAvailability() {
         barColor: "bg-amber-500",
         buttonText: t("limited.limited.buttonText"),
         buttonVariant: "default" as const,
-        buttonLink: "/service",
+        buttonLink: "/setup-alerts",
       };
     } else {
       return {
@@ -90,7 +90,7 @@ export default function LimitedAvailability() {
         barColor: "bg-green-500",
         buttonText: t("limited.available.buttonText"),
         buttonVariant: "default" as const,
-        buttonLink: "/service",
+        buttonLink: "/setup-alerts",
       };
     }
   };

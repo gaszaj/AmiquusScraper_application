@@ -17,6 +17,7 @@ import { fromZodError } from "zod-validation-error";
 import {
   generateVerificationCode,
   getVerificationCodeExpiry,
+  getSubscriptionStats,
 } from "./libs/utils";
 import { emailService } from "./email-service";
 import Stripe from "stripe";
@@ -59,8 +60,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // );
   app.set("trust proxy", 1);
 
-
-  
   app.use(
     session({
       secret: process.env.SESSION_SECRET || "amiquus-secret-key",
@@ -75,7 +74,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       store: storage.sessionStore,
     }),
   );
-
 
   // Initialize passport
   app.use(passport.initialize());
@@ -606,7 +604,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { email, firstName, lastName } = req.body;
 
-      if (!email || !firstName || !lastName){
+      if (!email || !firstName || !lastName) {
         return res.status(400).json({ message: "All fields are required" });
       }
 
@@ -664,6 +662,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const data = req.body;
       const userId = (req.user as any).id;
+
+      const stats = await getSubscriptionStats();
+      if (stats.full) {
+        return res.status(403).json({
+          message:
+            "Subscription capacity has been reached. Please join the waitlist.",
+        });
+      }
 
       if (!stripe) {
         return res.status(500).json({ message: "Stripe is not configured" });
@@ -729,8 +735,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
         stripePriceId: price.id,
       });
 
-      console.log("Subscription created:", subscription);
-
       if (!subscription) {
         return res
           .status(500)
@@ -778,6 +782,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       if (!stripe) {
         return res.status(500).json({ message: "Stripe is not configured" });
+      }
+
+      // 🚫 Capacity Check First
+      const stats = await getSubscriptionStats();
+
+      if (stats.full) {
+        return res.status(403).json({
+          message:
+            "Subscription capacity has been reached. Please join the waitlist.",
+        });
       }
 
       // Create Stripe customer if not exists
@@ -857,8 +871,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
         stripePriceId: price.id,
       });
 
-      console.log("Subscription created:", dbSubscription);
-
       if (!dbSubscription) {
         return res
           .status(500)
@@ -866,7 +878,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       // Create Stripe subscription with default payment method
-     const stripeRes = await stripe.subscriptions.create({
+      const stripeRes = await stripe.subscriptions.create({
         customer: customerId,
         items: [{ price: price.id }],
         default_payment_method: paymentMethods.data[0].id,
@@ -898,7 +910,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Exclude subscriptions with status 'pending'
       const activeSubscriptions = subscriptions.filter(
-        (sub) => sub.status !== "pending"
+        (sub) => sub.status !== "pending",
       );
 
       return res.json(activeSubscriptions);
@@ -965,6 +977,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(401).json({ message: "Authentication required" });
       }
 
+      // 🚫 Capacity Check First
+      const stats = await getSubscriptionStats();
+
       const user = req.user as any;
       const userId = user.id;
       const subscriptionId = parseInt(req.params.id);
@@ -978,6 +993,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       if (!stripe) {
         return res.status(500).json({ message: "Stripe is not configured" });
+      }
+
+      if (
+        (subscription.websitesSelected as string[]).length <
+          data.websitesSelected.length &&
+        stats.full
+      ) {
+        return res.status(403).json({
+          message:
+            "Subscription capacity has been reached. Please join the waitlist.",
+        });
+      }
+
+      if (subscription.status !== "active" && data.status === "active") {
+        if (stats.full) {
+          return res.status(403).json({
+            message:
+              "Subscription capacity has been reached. Please join the waitlist.",
+          });
+        }
       }
 
       // ─── Stripe Price Update (if price changed) ──────
@@ -1028,31 +1063,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       if (isPriceSame) {
-         if (data.status === "active" && subscription.status === "paused") {
-            await stripe.subscriptions.resume(stripeSubId);
-         } else if (data.status === "paused" && subscription.status === "active") {
-            await stripe.subscriptions.update(stripeSubId, {
-               pause_collection: { behavior: "void" }
-            })
-         }
+        if (data.status === "active" && subscription.status === "paused") {
+          await stripe.subscriptions.resume(stripeSubId);
+        } else if (
+          data.status === "paused" &&
+          subscription.status === "active"
+        ) {
+          await stripe.subscriptions.update(stripeSubId, {
+            pause_collection: { behavior: "void" },
+          });
+        }
       } else {
-       // update price
+        // update price
         if (data.status === "active" && subscription.status === "paused") {
           await stripe.subscriptions.update(stripeSubId, {
             items: [{ id: subscriptionItemId, price: priceId as string }],
             pause_collection: null,
-          })
+          });
 
-        // } else if (data.status === "paused" && subscription.status === "active") {
-        //   await stripe.subscriptions.update(stripeSubId,
-                                            
+          // } else if (data.status === "paused" && subscription.status === "active") {
+          //   await stripe.subscriptions.update(stripeSubId,
         } else {
           await stripe.subscriptions.update(stripeSubId, {
             items: [{ id: subscriptionItemId, price: priceId as string }],
-          })
+          });
         }
       }
-
 
       // ─── Sync JSON with External System ───────────────
       const jsonId =
@@ -1222,20 +1258,62 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Get active subscription count
   app.get("/api/subscription-stats", async (req, res) => {
+    // Count active subscriptions
+    // const count = await storage.getActiveSubscriptionCount()
     try {
-      // Count active subscriptions
-      const count = await storage.getActiveSubscriptionCount();
-
-      // Capacity is set to 30 as per requirements
       const capacity = 30;
 
+      // Step 1: Get all usernames
+      const usernameRes = await fetch(`${JSON_BASE_URL}/user_json_api.php`, {
+        headers: {
+          Authorization: `Bearer ${BEARER_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      const { users }: { users: string[] } = await usernameRes.json();
+
+      // Step 2: Fetch each user's JSON data
+      const userJsons = await Promise.all(
+        users.map(async (username) => {
+          try {
+            const res = await fetch(
+              `${JSON_BASE_URL}/user_json_api.php?username=${username}`,
+              {
+                headers: {
+                  Authorization: `Bearer ${BEARER_TOKEN}`,
+                  "Content-Type": "application/json",
+                },
+              },
+            );
+            if (!res.ok) return null;
+            return await res.json();
+          } catch (err) {
+            console.error(`Error fetching JSON for ${username}:`, err);
+            return null;
+          }
+        }),
+      );
+
+      // Step 3: Count subscriptions (each website = 1 slot)
+      let activeCount = 0;
+
+      userJsons.forEach((user) => {
+        if (user?.user_info?.payment_status === "active") {
+          const websites = user.websites?.websites_to_scrap;
+          if (Array.isArray(websites)) {
+            activeCount += websites.length;
+          }
+        }
+      });
+
+      // Step 4: Send response
       res.json({
-        active: count,
-        capacity: capacity,
-        remaining: Math.max(0, capacity - count),
-        full: count >= capacity,
+        active: activeCount,
+        capacity,
+        remaining: Math.max(0, capacity - activeCount),
+        full: activeCount >= capacity,
       });
     } catch (error: any) {
       console.error("Error getting subscription stats:", error);
@@ -1254,13 +1332,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(401).json({ message: "Authentication required" });
       }
 
-      // Check if we've reached the subscription limit
-      const stats = await storage.getActiveSubscriptionCount();
-      if (stats >= 30) {
-        return res.status(400).json({
+      const stats = await getSubscriptionStats();
+      if (stats.full) {
+        return res.status(403).json({
           message:
-            "We've reached our capacity for new subscriptions. Please check back later.",
-          code: "CAPACITY_REACHED",
+            "Subscription capacity has been reached. Please join the waitlist.",
+           code: "CAPACITY_REACHED",
         });
       }
 
