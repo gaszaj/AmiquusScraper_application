@@ -1098,71 +1098,74 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       }
 
-      // ─── Sync JSON with External System ───────────────
-      const jsonId =
-        stripeSubscription.metadata.jsonId || `${user.email}${subscriptionId}`;
-      const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
-      const jsonRes = await fetch(getUrl, {
-        method: "GET",
-        headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
-      });
+      if (isPriceSame) {
+        // ─── Sync JSON with External System ───────────────
+        const jsonId =
+          stripeSubscription.metadata.jsonId ||
+          `${user.email}${subscriptionId}`;
+        const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+        const jsonRes = await fetch(getUrl, {
+          method: "GET",
+          headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
+        });
 
-      if (!jsonRes.ok) {
-        console.error("[JSON Sync] Failed to fetch existing JSON");
-        return res
-          .status(500)
-          .json({ message: "Failed to fetch existing JSON" });
-      }
+        if (!jsonRes.ok) {
+          console.error("[JSON Sync] Failed to fetch existing JSON");
+          return res
+            .status(500)
+            .json({ message: "Failed to fetch existing JSON" });
+        }
 
-      const existingJson = await jsonRes.json();
-      const putUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+        const existingJson = await jsonRes.json();
+        const putUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
 
-      const updatedJson = {
-        ...existingJson,
-        user_info: {
-          ...existingJson.user_info,
-          payment_status: data.status,
-        },
-        running_frequency: data.updateFrequency,
-        websites: {
-          websites_to_scrap: data.websitesSelected,
-        },
-        first_run_throwback_time: "86400",
-        language_tag: {
-          language: [data.notificationLanguage],
-        },
-        filters: {
-          ...existingJson.filters,
-          facebook_link: data.facebookMarketplaceUrl,
-          min_mileage: data.mileageMin,
-          max_mileage: data.mileageMax,
-          telegram_bot_token: data.telegramBotToken,
-          telegram_chat_id: data.telegramChatId,
-          telegram_language: data.notificationLanguage,
-          min_price: data.priceMin,
-          max_price: data.priceMax,
-          fuel_type: data.fuelType,
-          brand: data.brand,
-          model: data.model,
-          model_year_lower_limit: data.yearMin,
-          model_year_upper_limit: data.yearMax,
-        },
-      };
+        const updatedJson = {
+          ...existingJson,
+          user_info: {
+            ...existingJson.user_info,
+            payment_status: data.status,
+          },
+          running_frequency: data.updateFrequency,
+          websites: {
+            websites_to_scrap: data.websitesSelected,
+          },
+          first_run_throwback_time: "86400",
+          language_tag: {
+            language: [data.notificationLanguage],
+          },
+          filters: {
+            ...existingJson.filters,
+            facebook_link: data.facebookMarketplaceUrl,
+            min_mileage: data.mileageMin,
+            max_mileage: data.mileageMax,
+            telegram_bot_token: data.telegramBotToken,
+            telegram_chat_id: data.telegramChatId,
+            telegram_language: data.notificationLanguage,
+            min_price: data.priceMin,
+            max_price: data.priceMax,
+            fuel_type: data.fuelType,
+            brand: data.brand,
+            model: data.model,
+            model_year_lower_limit: data.yearMin,
+            model_year_upper_limit: data.yearMax,
+          },
+        };
 
-      const updateRes = await fetch(putUrl, {
-        method: "PUT",
-        headers: {
-          Authorization: `Bearer ${BEARER_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedJson),
-      });
+        const updateRes = await fetch(putUrl, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${BEARER_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedJson),
+        });
 
-      if (!updateRes.ok) {
-        console.error("[JSON Sync] Failed to update JSON for", jsonId);
-        return res
-          .status(500)
-          .json({ message: "Failed to update external JSON data" });
+        if (!updateRes.ok) {
+          console.error("[JSON Sync] Failed to update JSON for", jsonId);
+          return res
+            .status(500)
+            .json({ message: "Failed to update external JSON data" });
+        }
       }
 
       console.log(

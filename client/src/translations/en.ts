@@ -692,6 +692,8 @@ export const en = {
       add: "Add New Alert",
       none: "You don't have any active car alerts.",
       cta: "Create your first alert",
+      warning:
+        "⚠️ Changes to your subscription will be applied in the next billing period, and only after a successful payment. If the payment fails, your current alert setup will remain unchanged.",
     },
     payments: {
       title: "Payment Methods",
@@ -764,7 +766,7 @@ export const en = {
       priceError: {
         title: "Cannot Update Subscription",
         description:
-          "You pause and update your subscription price at the same time. You either need to pause or update the price."
+          "You pause and update your subscription price at the same time. You either need to pause or update the price.",
       },
       error: {
         title: "Error updating subscription",
@@ -1353,5 +1355,5 @@ export const en = {
   notFound: {
     title: "404 Page Not Found",
     message: "Did you forget to add the page to the router?",
-  }
+  },
 };

@@ -322,6 +322,9 @@ router.post(
         const user = await storage.getUser(parseInt(userId));
         if (!user) return;
 
+        // get db subscription
+        const dbSubscription = await storage.getSubscription(parseInt(userSubscriptionId));
+
         await emailService.sendInvoiceEmail(
           user.email,
           invoice.hosted_invoice_url as string,
@@ -342,8 +345,37 @@ router.post(
 
         if (res.ok) {
           const existingJson = await res.json();
-          existingJson.user_info.payment_status = "active";
-          existingJson.filters.extra_note = `Updated on ${new Date().toISOString()}`;
+          const updatedJson = {
+            ...existingJson,
+            user_info: {
+              ...existingJson.user_info,
+              payment_status: "active",
+            },
+            running_frequency: dbSubscription.updateFrequency,
+            websites: {
+              websites_to_scrap: dbSubscription.websitesSelected,
+            },
+            first_run_throwback_time: "86400",
+            language_tag: {
+              language: [dbSubscription.notificationLanguage],
+            },
+            filters: {
+              ...existingJson.filters,
+              facebook_link: dbSubscription.facebookMarketplaceUrl,
+              min_mileage: dbSubscription.mileageMin,
+              max_mileage: dbSubscription.mileageMax,
+              telegram_bot_token: dbSubscription.telegramBotToken,
+              telegram_chat_id: dbSubscription.telegramChatId,
+              telegram_language: dbSubscription.notificationLanguage,
+              min_price: dbSubscription.priceMin,
+              max_price: dbSubscription.priceMax,
+              fuel_type: dbSubscription.fuelType,
+              brand: dbSubscription.brand,
+              model: dbSubscription.model,
+              model_year_lower_limit: dbSubscription.yearMin,
+              model_year_upper_limit: dbSubscription.yearMax,
+            },
+          };
 
           await fetch(getUrl, {
             method: "PUT",
@@ -351,7 +383,7 @@ router.post(
               Authorization: `Bearer ${BEARER_TOKEN}`,
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(existingJson),
+            body: JSON.stringify(updatedJson),
           });
         }
 

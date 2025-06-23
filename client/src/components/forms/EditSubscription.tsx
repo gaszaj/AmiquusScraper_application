@@ -264,6 +264,11 @@ export default function EditSubscriptionPage({
     <div className="py-12 px-6 max-w-4xl mx-auto">
       <p className="mb-9 text-base text-neutral-600 dark:text-neutral-400">
         {t("subscription.description")}
+        <br/>
+         <br/>
+        <span className="text-sm text-muted-foreground">
+          {t("profile.alerts.warning")}
+        </span>
       </p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -861,7 +866,9 @@ export default function EditSubscriptionPage({
               </div>
             </div>
           </div>
-
+          <span className="text-sm text-muted-foreground">
+            {t("profile.alerts.warning")}
+          </span>
           {/* Continue with year range, price range, kilometers, facebook url, telegram setup, etc */}
           <div className="flex justify-end gap-6">
             <Button

@@ -966,6 +966,11 @@ export default function NewProfile() {
                   </div>
                   <CardDescription>
                     {t("profile.alerts.desc")}
+                    <br />
+                     <br/>
+                    <span className="text-sm text-muted-foreground">
+                      {t("profile.alerts.warning")}
+                    </span>
                   </CardDescription>
                 </CardHeader>
                 {isLoadingSubscriptions ? (

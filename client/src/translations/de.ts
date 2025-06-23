@@ -363,7 +363,7 @@ export const de = {
       "Richten Sie Telegram-Benachrichtigungen ein, indem Sie Ihren Bot-Token und Ihre Chat-ID angeben.",
     subHeading: "Telegram-Bot einrichten",
     info: "Wenn Sie Probleme beim Erstellen des Telegramm-Bots haben, kontaktieren Sie uns. Wir rufen Sie an und helfen Ihnen beim Erstellen.",
-contact: "Kontaktieren Sie uns",
+    contact: "Kontaktieren Sie uns",
     instructions: {
       botTitle: "So erhalten Sie ein Telegram-Bot-Token:",
       botStep1: "Öffnen Sie Telegram und suchen Sie nach @BotFather",
@@ -751,6 +751,8 @@ contact: "Kontaktieren Sie uns",
       add: "Neuen Alarm hinzufügen",
       none: "Sie haben keine aktiven Fahrzeugalarme.",
       cta: "Erstellen Sie Ihren ersten Alarm",
+      warning:
+        "⚠️ Änderungen an deinem Abonnement werden im nächsten Abrechnungszeitraum wirksam – jedoch nur nach einer erfolgreichen Zahlung. Falls die Zahlung fehlschlägt, bleibt deine aktuelle Einrichtung unverändert.",
     },
     payments: {
       title: "Zahlungsmethoden",
@@ -1417,5 +1419,5 @@ contact: "Kontaktieren Sie uns",
   notFound: {
     title: "404 Seite nicht gefunden",
     message: "Haben Sie vergessen, die Seite zur Navigation hinzuzufügen?",
-  }
+  },
 };
