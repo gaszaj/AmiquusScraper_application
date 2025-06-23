@@ -4,8 +4,8 @@ import { storage } from "../storage"; // your DB utils
 import { emailService } from "../email-service";
 
 const stripe = process.env.STRIPE_SECRET_KEY
-? new Stripe(process.env.STRIPE_SECRET_KEY)
-: undefined;
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : undefined;
 
 const endpointSecret = "whsec_ztqn6TukivBY7q3uD9fZ3n9eZkhlSnPV";
 
@@ -188,6 +188,7 @@ router.post(
           customer: customerId as string,
           items: [{ price: dbPlan.stripePriceId as string }],
           default_payment_method: paymentMethods.data[0].id,
+          collection_method: "charge_automatically",
           metadata: {
             userId: metadata.userId,
             userSubscriptionId: metadata.userSubscriptionId,
@@ -200,7 +201,7 @@ router.post(
         const subscription = event.data.object;
         const userId = subscription.metadata.userId;
         const subscriptionId = subscription.metadata.userSubscriptionId;
-        const metaJsonId = subscription.metadata.jsonId
+        const metaJsonId = subscription.metadata.jsonId;
 
         if (!userId || !subscriptionId) {
           console.error("Missing metadata");
@@ -258,7 +259,7 @@ router.post(
         const subscription = event.data.object;
         const userId = subscription.metadata.userId;
         const subscriptionId = subscription.metadata.userSubscriptionId;
-        const metaJsonId = subscription.metadata.jsonId
+        const metaJsonId = subscription.metadata.jsonId;
 
         if (!userId || !subscriptionId) {
           console.error("Missing metadata");
@@ -293,12 +294,54 @@ router.post(
       case "invoice.payment_succeeded": {
         const invoice = event.data.object;
 
+        // Get the associated subscription
+        const subscriptionId = invoice.subscription as string;
+        const stripeSubscription = await stripe.subscriptions.retrieve(subscriptionId);
+
+        if (stripeSubscription.status !== "active") {
+          console.log("Subscription not active yet. Skipping activation.");
+          return;
+        }
+
+        const userId = stripeSubscription.metadata.userId;
+        const userSubscriptionId = stripeSubscription.metadata.userSubscriptionId;
+        const jsonId = stripeSubscription.metadata.jsonId || `${invoice.customer_email}${userSubscriptionId}`;
+
+        const user = await storage.getUser(parseInt(userId));
+        if (!user) return;
+
         await emailService.sendInvoiceEmail(
-          invoice.customer_email as string,
+          user.email,
           invoice.hosted_invoice_url as string,
           invoice.number as string,
-          invoice.amount_paid / 100,
+          invoice.amount_paid / 100
         );
+
+        // Update DB and JSON status to active
+        await storage.updateSubscription(parseInt(userSubscriptionId), {
+          status: "active",
+        });
+
+        const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+        const res = await fetch(getUrl, {
+          method: "GET",
+          headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
+        });
+
+        if (res.ok) {
+          const existingJson = await res.json();
+          existingJson.user_info.payment_status = "active";
+          existingJson.filters.extra_note = `Updated on ${new Date().toISOString()}`;
+
+          await fetch(getUrl, {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${BEARER_TOKEN}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(existingJson),
+          });
+        }
 
         break;
       }
@@ -309,11 +352,14 @@ router.post(
         const subscriptionId = invoice.subscription as string; // updated from `parent?.subscription_details`
 
         try {
-          const stripeSubscription = await stripe.subscriptions.retrieve(subscriptionId);
+          const stripeSubscription =
+            await stripe.subscriptions.retrieve(subscriptionId);
           const userId = stripeSubscription.metadata.userId;
-          const userSubscriptionId = stripeSubscription.metadata.userSubscriptionId;
+          const userSubscriptionId =
+            stripeSubscription.metadata.userSubscriptionId;
           const jsonId =
-            stripeSubscription.metadata.jsonId || `${invoice.customer_email}${userSubscriptionId}`;
+            stripeSubscription.metadata.jsonId ||
+            `${invoice.customer_email}${userSubscriptionId}`;
 
           if (!userId || !userSubscriptionId) {
             console.error("Missing metadata for user or subscription");
@@ -321,7 +367,8 @@ router.post(
           }
 
           const attempts = invoice.attempt_count || 1;
-          const invoiceUrl = invoice.hosted_invoice_url || invoice.invoice_pdf || "#";
+          const invoiceUrl =
+            invoice.hosted_invoice_url || invoice.invoice_pdf || "#";
 
           const user = await storage.getUser(parseInt(userId));
           if (user) {
@@ -352,7 +399,7 @@ router.post(
 
               <br/>
               <p>— The Amiquus Team</p>
-              `
+              `,
             );
           }
 
@@ -393,7 +440,6 @@ router.post(
 
         break;
       }
-
 
       // ... handle other event types
       default:

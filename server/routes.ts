@@ -882,6 +882,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         customer: customerId,
         items: [{ price: price.id }],
         default_payment_method: paymentMethods.data[0].id,
+        collection_method: "charge_automatically",
         metadata: {
           userId: userId.toString(),
           userSubscriptionId: dbSubscription.id.toString(),
