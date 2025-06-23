@@ -135,22 +135,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 // Link Google ID to existing user
                 user = await storage.updateUserGoogleId(user.id, googleId);
               } else {
-                // Create a new user
-                const generatedUsername =
-                  profile.displayName?.replace(/\\s+/g, "").toLowerCase() ||
+                // Generate a base username
+                let baseUsername =
+                  profile.displayName?.replace(/\s+/g, "").toLowerCase() ||
                   `user${Date.now()}`;
+
+                let uniqueUsername = baseUsername;
+                let suffix = 1;
+
+                // Ensure username is unique
+                while (await storage.getUserByUsername(uniqueUsername)) {
+                  uniqueUsername = `${baseUsername}${suffix++}`;
+                }
 
                 user = await storage.createUser({
                   googleId,
                   email,
-                  username: generatedUsername,
+                  username: uniqueUsername,
                   firstName: profile.name?.givenName || undefined,
                   lastName: profile.name?.familyName || undefined,
                   isEmailVerified: true,
                 });
 
                 if (user) {
-                  // create stipe customer
+                  // create Stripe customer
                   const stripeCustomer = await stripe.customers.create({
                     email: user.email,
                     name: `${user.firstName} ${user.lastName}`,
@@ -166,7 +174,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 }
               }
             }
-
             if (!user) {
               return done(
                 new Error("Google login failed: no user created or found"),
@@ -1338,7 +1345,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(403).json({
           message:
             "Subscription capacity has been reached. Please join the waitlist.",
-           code: "CAPACITY_REACHED",
+          code: "CAPACITY_REACHED",
         });
       }
 

@@ -132,16 +132,28 @@ router.post(
           const invoice = await stripe.invoices.retrieve(
             customerSubscriptionCreated.latest_invoice as string,
           );
-          const amountPaid = invoice.amount_paid / 100;
-          const invoiceUrl = invoice.hosted_invoice_url;
 
-          await emailService.sendInvoiceEmail(
-            user.email,
-            invoiceUrl as string,
-            invoice.number as string,
-            amountPaid,
-          );
+          // ✅ Only send email if payment was successful
+          if (invoice.paid && invoice.status === "paid") {
+            const amountPaid = invoice.amount_paid / 100;
+            const invoiceUrl = invoice.hosted_invoice_url;
+
+            await emailService.sendInvoiceEmail(
+              user.email,
+              invoiceUrl as string,
+              invoice.number as string,
+              amountPaid,
+            );
+          } else {
+            await emailService.sendPendingInvoiceEmail(
+              user.email,
+              invoice.hosted_invoice_url as string,
+              invoice.number as string,
+              invoice.amount_due / 100
+            );
+          }
         }
+
 
         // send email
         await emailService.sendAdminNewSubscriptionAlert(

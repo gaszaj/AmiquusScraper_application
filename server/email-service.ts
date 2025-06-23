@@ -95,6 +95,50 @@ class EmailService implements IEmailService {
       console.error("❌ Error sending invoice email:", error);
     }
   }
+  async sendPendingInvoiceEmail(
+    email: string,
+    invoiceUrl: string,
+    invoiceId: string,
+    amountDue: number
+  ): Promise<void> {
+    try {
+      const htmlContent = `
+        <div style="font-family: Arial, sans-serif; padding: 20px;">
+          <h2>Action Required: Complete Your Payment for Amiquus Subscription</h2>
+          <p>Hi there,</p>
+          <p>Your invoice <strong>#${invoiceId}</strong> is still unpaid. To activate your subscription, please complete the payment of <strong>$${amountDue.toFixed(2)}</strong>.</p>
+          <p>You can securely pay using the link below:</p>
+          <a href="${invoiceUrl}" style="display:inline-block;padding:10px 16px;background:#f44336;color:white;text-decoration:none;border-radius:5px;">
+            Pay Invoice
+          </a>
+          <br /><br />
+          <p>If you’ve already made this payment, you can ignore this email.</p>
+          <p>Need help? <a href="https://amiquus.com/support">Contact Support</a>.</p>
+          <br />
+          <p>— The Amiquus Team</p>
+        </div>
+      `;
+
+      const sendEmail: brevo.SendSmtpEmail = {
+        subject: `Payment Pending – Invoice #${invoiceId} for Your Amiquus Subscription`,
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [{ email }],
+        headers: {
+          "X-Mailin-custom": "pending_invoice_email",
+        },
+      };
+
+      const response = await apiInstance.sendTransacEmail(sendEmail);
+      console.log(`[EMAIL] Pending invoice email sent to ${email}:`, response);
+    } catch (error) {
+      console.error("❌ Error sending pending invoice email:", error);
+    }
+  }
+
   async sendAdminNewSubscriptionAlert(
     userEmail: string,
     planName: string,
