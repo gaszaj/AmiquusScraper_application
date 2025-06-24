@@ -125,8 +125,11 @@ export default function TelegramSetup({
                 <iframe
                   width="100%"
                   height="315"
-                  src="https://www.youtube.com/embed/jNQXAC9IVRw"
-                  title="Telegram Setup Instructions"
+                  ata-cmp-vendor="s30"
+                   src="about:blank" 
+                  class="cmplazyload"
+                  data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
+                  title="How to copy Facebook Marketplace search link"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
