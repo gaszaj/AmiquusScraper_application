@@ -28,6 +28,7 @@ import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/components/language-provider";
 import { buildAlertSchema } from "@/lib/buildAlertSchema";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export type NewComerResponse = {
   websites: {
@@ -193,18 +194,18 @@ export default function EditSubscriptionPage({
     const unitAmountInCents = Math.round(totalPrice * 100);
 
     // prevent pause if price changes
-    if (unitAmountInCents !== subscription.price){
-      if (subStatus === "paused"){
+    if (unitAmountInCents !== subscription.price) {
+      if (subStatus === "paused") {
         toast({
           title: t("subscription.toasts.priceError.title"),
           description: t("subscription.toasts.priceError.description"),
-          variant: "destructive"
-        })
+          variant: "destructive",
+        });
         setSubmitting(false);
         return;
       }
     }
-    
+
     try {
       const updateData = {
         ...subscription,
@@ -264,8 +265,8 @@ export default function EditSubscriptionPage({
     <div className="py-12 px-6 max-w-4xl mx-auto">
       <p className="mb-9 text-base text-neutral-600 dark:text-neutral-400">
         {t("subscription.description")}
-        <br/>
-         <br/>
+        <br />
+        <br />
         <span className="text-sm text-muted-foreground">
           {t("profile.alerts.warning")}
         </span>
@@ -722,7 +723,7 @@ export default function EditSubscriptionPage({
                     width="100%"
                     height="315"
                     ata-cmp-vendor="s30"
-                     src="about:blank" 
+                    src="about:blank"
                     class="cmplazyload"
                     data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
                     title="How to copy Facebook Marketplace search link"
@@ -735,7 +736,8 @@ export default function EditSubscriptionPage({
             </>
           )}
           <p className="text-sm text-muted-foreground py-0.5">
-            {t("telegram.info")} <a href="/contact" className="text-blue-500 hover:underline">
+            {t("telegram.info")}{" "}
+            <a href="/contact" className="text-blue-500 hover:underline">
               {t("telegram.contact")}
             </a>
           </p>
@@ -756,7 +758,10 @@ export default function EditSubscriptionPage({
                   </FormControl>
                   <FormMessage />
                   <FormDescription>
-                    {t("telegram.botTokenExample")}
+                    <ScrollArea className="max-w-full w-full rounded-md border whitespace-nowrap min-h-6 p-2">
+                      {t("telegram.botTokenExample")}
+                      <ScrollBar orientation="horizontal" />
+                    </ScrollArea>
                   </FormDescription>
                 </FormItem>
               )}
@@ -819,7 +824,7 @@ export default function EditSubscriptionPage({
               <span className="text-neutral-700 dark:text-neutral-300">
                 {/* get selected websites length */}
                 {t("setupAlerts.basicPlan")} (
-                {form.watch("websitesSelected")?.length || 0} {" "}
+                {form.watch("websitesSelected")?.length || 0}{" "}
                 {t("review.monitoring.websites")})
               </span>
               <span className="text-neutral-900 dark:text-white font-medium">

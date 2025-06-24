@@ -6,9 +6,10 @@ import heroImage from "@/images/hero-image.webp"
 
 interface HeroProps {
   onGetStarted?: () => void;
+  onHowItWorks: () => void
 }
 
-export default function Hero({ onGetStarted }: HeroProps) {
+export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
    const { t } = useLanguage();
   
   return (
@@ -43,8 +44,11 @@ export default function Hero({ onGetStarted }: HeroProps) {
                   </Button>
                 </Link>
               )}
+              
               <Link href="/#how-it-works">
-                <Button size="rounded-xl" variant="outline" className="border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 w-full sm:w-auto">
+                <Button size="rounded-xl" variant="outline" className="border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 w-full sm:w-auto"
+                  onClick={onHowItWorks}  
+                  >
                   {t("hero.button2")}
                 </Button>
               </Link>

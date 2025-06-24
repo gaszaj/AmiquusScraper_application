@@ -330,7 +330,7 @@ export default function Signup({ embedded = false }: SignupProps) {
               <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
                 {clientSecret && <PaymentScreen clientSecret={clientSecret} />}
                 {!clientSecret && (
-                  <div className="p-8">
+                  <div className="sm:p-8 p-4">
                     <FormProgress currentStep={currentStep} totalSteps={5} />
                     {renderStep()}
                   </div>
@@ -339,7 +339,7 @@ export default function Signup({ embedded = false }: SignupProps) {
             )}
             {!user && (
               <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
-                <div className="p-8">
+                <div className="sm:p-8 p-4">
                   <FormProgress currentStep={currentStep} totalSteps={5} />
                   {renderStep()}
                 </div>

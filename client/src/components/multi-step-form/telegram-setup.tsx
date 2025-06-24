@@ -24,6 +24,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useLanguage } from "@/components/language-provider";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 interface TelegramSetupProps {
   formData: Partial<AlertFormSchema>;
@@ -83,7 +84,7 @@ export default function TelegramSetup({
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
+          <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl sm:p-8 mb-8 shadow-sm p-4">
             <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
               {t("telegram.subHeading")}
             </h2>
@@ -126,7 +127,7 @@ export default function TelegramSetup({
                   width="100%"
                   height="315"
                   ata-cmp-vendor="s30"
-                   src="about:blank" 
+                  src="about:blank"
                   class="cmplazyload"
                   data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
                   title="How to copy Facebook Marketplace search link"
@@ -137,8 +138,9 @@ export default function TelegramSetup({
               </div>
             </div>
 
-             <p className="text-sm text-muted-foreground py-0.5">
-              {t("telegram.info")} <a href="/contact" className="text-blue-500 hover:underline">
+            <p className="text-sm text-muted-foreground py-0.5">
+              {t("telegram.info")}{" "}
+              <a href="/contact" className="text-blue-500 hover:underline">
                 {t("telegram.contact")}
               </a>
             </p>
@@ -159,7 +161,10 @@ export default function TelegramSetup({
                     </FormControl>
                     <FormMessage />
                     <FormDescription>
-                      {t("telegram.examples.token")}
+                      <ScrollArea className="max-w-full w-full rounded-md border whitespace-nowrap min-h-6 p-2">
+                        {t("telegram.examples.token")}
+                        <ScrollBar orientation="horizontal" />
+                      </ScrollArea>
                     </FormDescription>
                   </FormItem>
                 )}
@@ -197,15 +202,27 @@ export default function TelegramSetup({
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder={t("telegram.placeholders.language")} />
+                          <SelectValue
+                            placeholder={t("telegram.placeholders.language")}
+                          />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="en">{t("telegram.languages.en")}</SelectItem>
-                        <SelectItem value="de">{t("telegram.languages.de")}</SelectItem>
-                        <SelectItem value="fr">{t("telegram.languages.fr")}</SelectItem>
-                        <SelectItem value="es">{t("telegram.languages.es")}</SelectItem>
-                        <SelectItem value="it">{t("telegram.languages.it")}</SelectItem>
+                        <SelectItem value="en">
+                          {t("telegram.languages.en")}
+                        </SelectItem>
+                        <SelectItem value="de">
+                          {t("telegram.languages.de")}
+                        </SelectItem>
+                        <SelectItem value="fr">
+                          {t("telegram.languages.fr")}
+                        </SelectItem>
+                        <SelectItem value="es">
+                          {t("telegram.languages.es")}
+                        </SelectItem>
+                        <SelectItem value="it">
+                          {t("telegram.languages.it")}
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -220,9 +237,7 @@ export default function TelegramSetup({
             <Button type="button" variant="outline" onClick={prevStep}>
               {t("telegram.actions.previous")}
             </Button>
-            <Button type="submit">
-              {t("telegram.actions.continue")}
-            </Button>
+            <Button type="submit">{t("telegram.actions.continue")}</Button>
           </div>
         </form>
       </Form>

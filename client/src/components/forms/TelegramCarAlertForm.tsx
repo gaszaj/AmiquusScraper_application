@@ -33,6 +33,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLanguage } from "@/components/language-provider";
 import { buildAlertSchema } from "@/lib/buildAlertSchema";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export type NewComerResponse = {
   websites: {
@@ -294,7 +295,7 @@ export default function TelegramCarAlertForm({
             window.location.href = "/dashboard";
           }
 
-          console.log("response", data)
+          console.log("response", data);
         }
       } else {
         // post to "/api/set-alerts-intent"
@@ -354,7 +355,7 @@ export default function TelegramCarAlertForm({
             className="space-y-5 max-w-4xl mx-auto"
           >
             {/* Car Search Preferences Form */}
-            <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm space-y-6">
+            <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl sm:p-8 mb-8 shadow-sm space-y-6 p-4">
               {/* Car Brand & Model */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <FormField
@@ -731,24 +732,24 @@ export default function TelegramCarAlertForm({
                     </p>
                     <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                       <iframe
-                          width="100%"
-                          height="315"
-                          ata-cmp-vendor="s30"
-                           src="about:blank" 
-                          class="cmplazyload"
-                          data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
-                          title="How to copy Facebook Marketplace search link"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        width="100%"
+                        height="315"
+                        ata-cmp-vendor="s30"
+                        src="about:blank"
+                        class="cmplazyload"
+                        data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
+                        title="How to copy Facebook Marketplace search link"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
                   </div>
                 </>
               )}
             </div>
             {/* Telegram Bot Setup Section */}
-            <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
+            <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl sm:p-8 mb-8 shadow-sm p-4">
               <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
                 {t("telegram.subHeading")}
               </h2>
@@ -785,22 +786,23 @@ export default function TelegramCarAlertForm({
                 </p>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                   <iframe
-                      width="100%"
-                      height="315"
-                      ata-cmp-vendor="s30"
-                       src="about:blank" 
-                      class="cmplazyload"
-                      data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
-                      title="How to copy Facebook Marketplace search link"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
+                    width="100%"
+                    height="315"
+                    ata-cmp-vendor="s30"
+                    src="about:blank"
+                    class="cmplazyload"
+                    data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
+                    title="How to copy Facebook Marketplace search link"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
 
               <p className="text-sm text-muted-foreground py-0.5">
-                {t("telegram.info")} <a href="/contact" className="text-blue-500 hover:underline">
+                {t("telegram.info")}{" "}
+                <a href="/contact" className="text-blue-500 hover:underline">
                   {t("telegram.contact")}
                 </a>
               </p>
@@ -821,7 +823,10 @@ export default function TelegramCarAlertForm({
                       </FormControl>
                       <FormMessage />
                       <FormDescription>
-                        {t("telegram.botTokenExample")}
+                        <ScrollArea className="max-w-full w-full rounded-md border whitespace-nowrap min-h-6 p-2">
+                          {t("telegram.botTokenExample")}
+                          <ScrollBar orientation="horizontal" />
+                        </ScrollArea>
                       </FormDescription>
                     </FormItem>
                   )}
@@ -878,7 +883,7 @@ export default function TelegramCarAlertForm({
             </div>
 
             {/* Telegram Chat Preview Section */}
-            <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-8 mb-8 shadow-sm">
+            <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-2xl sm:p-8 mb-8 shadow-sm p-4">
               <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
                 {t("telegram.previewTitle")}
               </h2>
@@ -972,7 +977,7 @@ export default function TelegramCarAlertForm({
                   <span className="text-neutral-700 dark:text-neutral-300">
                     {/* get selected websites length */}
                     {t("setupAlerts.basicPlan")}(
-                    {form.watch("websitesSelected")?.length || 0} {" "}
+                    {form.watch("websitesSelected")?.length || 0}{" "}
                     {t("review.monitoring.websites")})
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">

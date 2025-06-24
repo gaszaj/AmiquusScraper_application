@@ -10,12 +10,11 @@ import { useEffect, useRef } from "react";
 import PageWrapper from "@/components/layout/PageWrapper";
 import { useLanguage } from "@/components/language-provider";
 
-
-
 export default function Home() {
   const { t } = useLanguage();
   const [location] = useLocation();
   const signupRef = useRef<HTMLDivElement>(null);
+  const howItWorksRef = useRef<HTMLDivElement>(null);
 
   // Handle hash-based navigation
   useEffect(() => {
@@ -26,7 +25,7 @@ export default function Home() {
         setTimeout(() => {
           window.scrollTo({
             top: element.getBoundingClientRect().top + window.scrollY - 100,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }, 100);
       }
@@ -36,18 +35,26 @@ export default function Home() {
   // Scroll to signup form when clicking on CTA buttons
   const scrollToSignup = () => {
     if (signupRef.current) {
-      signupRef.current.scrollIntoView({ behavior: 'smooth' });
+      signupRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  const scrollToHowItWorks = () => {
+    if (howItWorksRef.current) {
+      howItWorksRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }  
+
   return (
     <PageWrapper noPadding>
-      <Hero onGetStarted={scrollToSignup} />
+      <Hero onGetStarted={scrollToSignup} onHowItWorks={scrollToHowItWorks} />
       <div className="container mx-auto px-4 py-8">
         <LimitedAvailability />
       </div>
       <Features />
-      <HowItWorks />
+      <div id="how-it-works" ref={howItWorksRef}>
+        <HowItWorks />
+      </div>
       <Pricing onGetStarted={scrollToSignup} />
       <div id="signup-form" ref={signupRef}>
         <Signup embedded={true} />
