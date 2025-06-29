@@ -306,7 +306,7 @@ router.post(
         const invoice = event.data.object;
 
         // Get the associated subscription
-        const subscriptionId = invoice.subscription as string;
+        const subscriptionId = invoice.parent?.subscription_details?.subscription; as string;
         const stripeSubscription =
           await stripe.subscriptions.retrieve(subscriptionId);
 
@@ -397,12 +397,25 @@ router.post(
       case "invoice.payment_failed": {
         const deletedInvoice = event.data.object;
 
+        await emailService.sendCustomEmail(
+          "muzardemoses@gmail.com",
+          "Payment Failed Invoice Response",
+          `<div style="font-family: Arial, sans-serif; padding: 20px;">
+            <p>Hello moses,</p>
+          
+
+            <br/>
+            <p>— The Amiquus Team</p>
+            </div>
+            `,
+        );
+
         const customerId = deletedInvoice.customer as string;
-        const subscriptionId = deletedInvoice.subscription as string; // updated from `parent?.subscription_details`
+        const subscriptionId = deletedInvoice.parent?.subscription_details?.subscription;
         const stripeSubscription =
           await stripe.subscriptions.retrieve(subscriptionId);
         const stripeSubscriptionMetadata =
-          deletedInvoice.subscription_details?.metadata ||
+          deletedInvoice.parent?.subscription_details?.metadata ||
           stripeSubscription.metadata;
 
         const userId = stripeSubscriptionMetadata.userId;
