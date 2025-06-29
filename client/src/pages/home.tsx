@@ -43,11 +43,30 @@ export default function Home() {
     if (howItWorksRef.current) {
       howItWorksRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }  
+  };
+
+  // run /api/test/invoice-payment-failed
+
+  // const testInvoicePaymentFailed = async () => {
+  //   const response = await fetch("/api/test/invoice-payment-failed", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
 
   return (
     <PageWrapper noPadding>
       <Hero onGetStarted={scrollToSignup} onHowItWorks={scrollToHowItWorks} />
+      {/* <button
+        onClick={testInvoicePaymentFailed}
+        className="bg-red-500 text-white px-4 py-2 rounded-md"
+        >
+        Test Invoice Payment Failed
+      </button> */}
       <div className="container mx-auto px-4 py-8">
         <LimitedAvailability />
       </div>

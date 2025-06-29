@@ -777,6 +777,115 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // your real webhook handler factored out so we can call it here:
+  async function handleInvoicePaymentFailed(deletedInvoice: any) {
+    const customerId = deletedInvoice.customer as string;
+    const subscriptionId = deletedInvoice.subscription as string;
+    const attempts = deletedInvoice.attempt_count || 1;
+    const invoiceUrl =
+      deletedInvoice.hosted_invoice_url ||
+      deletedInvoice.invoice_pdf ||
+      '#';
+
+    console.log('▶️ Simulating invoice.payment_failed:', { customerId, subscriptionId, attempts });
+
+    // // retrieve metadata off the subscription
+    // const stripeSubscription = await stripe.subscriptions.retrieve(subscriptionId);
+    // const { userId, userSubscriptionId, jsonId: metaJsonId } = stripeSubscription.metadata;
+    // const jsonId = metaJsonId || `${deletedInvoice.customer_email}${userSubscriptionId}`;
+
+    // if (!userId || !userSubscriptionId) {
+    //   throw new Error('Missing metadata for userId or userSubscriptionId');
+    // }
+
+    // const user = await storage.getUser(parseInt(userId, 10));
+    // if (!user) throw new Error(`No user found for ID ${userId}`);
+
+    // send the “payment failed” email
+    await emailService.sendCustomEmail(
+      deletedInvoice.customer_email,
+      'Payment n Failed',
+      `
+      <div style="font-family: Arial, sans-serif; padding: 20px;">
+      <p>Hello ${ 'there'},</p>
+      <p>We were unable to process your recent payment (attempt ${attempts}).</p>
+      ${
+        attempts < 3
+          ? `<p>We will retry your payment shortly. No action is needed for now.</p>`
+          : `<p><strong>Your subscription has now been paused after multiple failed attempts.</strong></p>
+             <p>Please update your payment details to resume your subscription.</p>`
+      }
+      <p style="padding:2px;"></p>
+      <p>
+        <a href="${invoiceUrl}" style="padding:10px;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">View Invoice</a>
+      </p>
+       <p style="padding:2px;"></p>
+      <p>
+        <a href="https://www.amiquus.com/dashboard/" style="padding:10px;background:#007bff;color:white;border-radius:4px;text-decoration:none;">Manage Payment Methods</a>
+      </p>
+      <br/>
+      <p>— The Amiquus Team</p>
+      </div>
+      `,
+    );
+
+    // if it’s the third (or more) failure, pause subscription & update your JSON API
+    if (attempts >= 3) {
+      // await stripe.subscriptions.update(subscriptionId, {
+      //   pause_collection: { behavior: 'void' },
+      // });
+      // await storage.updateSubscription(parseInt(userSubscriptionId, 10), {
+      //   status: 'paused',
+      // });
+
+      // const getUrl = `${process.env.JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+      // const resp = await fetch(getUrl, {
+      //   headers: { Authorization: `Bearer ${process.env.BEARER_TOKEN}` },
+      // });
+      // if (resp.ok) {
+      //   const existing = await resp.json();
+      //   existing.user_info.payment_status = 'paused';
+      //   await fetch(getUrl, {
+      //     method: 'PUT',
+      //     headers: {
+      //       Authorization: `Bearer ${process.env.BEARER_TOKEN}`,
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(existing),
+      //   });
+      // }
+
+      console.log('🛑 Subscription paused after 3 failed attempts');
+    }
+  }
+
+  // test route
+  app.post(
+    '/api/test/invoice-payment-failed',
+    async (req, res) => {
+      if (!req.isAuthenticated()) {
+        return res.status(401).json({ message: "Authentication required" });
+      }
+      
+      try {
+        // optional override from client
+        const dummy = req.body.invoice || {
+          customer: 'cus_test_123',
+          subscription: 'sub_test_456',
+          attempt_count: 2,
+          hosted_invoice_url: 'https://example.com/invoice/123',
+          customer_email: 'muzardemoses@gmail.com',
+        };
+
+        await handleInvoicePaymentFailed(dummy);
+        res.json({ ok: true, message: 'Simulated invoice.payment_failed delivered' });
+      } catch (err: any) {
+        console.error('Test webhook failed:', err);
+        res.status(500).json({ ok: false, error: err.message });
+      }
+    },
+  );
+
   // if user has payment method
   app.post("/api/subscriptions", async (req, res) => {
     try {

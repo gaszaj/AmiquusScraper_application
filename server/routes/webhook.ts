@@ -149,11 +149,10 @@ router.post(
               user.email,
               invoice.hosted_invoice_url as string,
               invoice.number as string,
-              invoice.amount_due / 100
+              invoice.amount_due / 100,
             );
           }
         }
-
 
         // send email
         await emailService.sendAdminNewSubscriptionAlert(
@@ -308,7 +307,8 @@ router.post(
 
         // Get the associated subscription
         const subscriptionId = invoice.subscription as string;
-        const stripeSubscription = await stripe.subscriptions.retrieve(subscriptionId);
+        const stripeSubscription =
+          await stripe.subscriptions.retrieve(subscriptionId);
 
         if (stripeSubscription.status !== "active") {
           console.log("Subscription not active yet. Skipping activation.");
@@ -316,20 +316,25 @@ router.post(
         }
 
         const userId = stripeSubscription.metadata.userId;
-        const userSubscriptionId = stripeSubscription.metadata.userSubscriptionId;
-        const jsonId = stripeSubscription.metadata.jsonId || `${invoice.customer_email}${userSubscriptionId}`;
+        const userSubscriptionId =
+          stripeSubscription.metadata.userSubscriptionId;
+        const jsonId =
+          stripeSubscription.metadata.jsonId ||
+          `${invoice.customer_email}${userSubscriptionId}`;
 
         const user = await storage.getUser(parseInt(userId));
         if (!user) return;
 
         // get db subscription
-        const dbSubscription = await storage.getSubscription(parseInt(userSubscriptionId));
+        const dbSubscription = await storage.getSubscription(
+          parseInt(userSubscriptionId),
+        );
 
         await emailService.sendInvoiceEmail(
           user.email,
           invoice.hosted_invoice_url as string,
           invoice.number as string,
-          invoice.amount_paid / 100
+          invoice.amount_paid / 100,
         );
 
         // Update DB and JSON status to active
@@ -390,36 +395,40 @@ router.post(
         break;
       }
       case "invoice.payment_failed": {
-        const invoice = event.data.object;
+        const deletedInvoice = event.data.object;
 
-        const customerId = invoice.customer as string;
-        const subscriptionId = invoice.subscription as string; // updated from `parent?.subscription_details`
+        const customerId = deletedInvoice.customer as string;
+        const subscriptionId = deletedInvoice.subscription as string; // updated from `parent?.subscription_details`
+        const stripeSubscription =
+          await stripe.subscriptions.retrieve(subscriptionId);
+        const stripeSubscriptionMetadata =
+          deletedInvoice.subscription_details?.metadata ||
+          stripeSubscription.metadata;
 
-        try {
-          const stripeSubscription =
-            await stripe.subscriptions.retrieve(subscriptionId);
-          const userId = stripeSubscription.metadata.userId;
-          const userSubscriptionId =
-            stripeSubscription.metadata.userSubscriptionId;
-          const jsonId =
-            stripeSubscription.metadata.jsonId ||
-            `${invoice.customer_email}${userSubscriptionId}`;
+        const userId = stripeSubscriptionMetadata.userId;
+        const userSubscriptionId =
+          stripeSubscriptionMetadata.userSubscriptionId;
+        const jsonId =
+          stripeSubscriptionMetadata.jsonId ||
+          `${deletedInvoice.customer_email}${userSubscriptionId}`;
 
-          if (!userId || !userSubscriptionId) {
-            console.error("Missing metadata for user or subscription");
-            return;
-          }
+        if (!userId || !userSubscriptionId) {
+          console.error("Missing metadata for user or subscription");
+          return;
+        }
 
-          const attempts = invoice.attempt_count || 1;
-          const invoiceUrl =
-            invoice.hosted_invoice_url || invoice.invoice_pdf || "#";
+        const attempts = deletedInvoice.attempt_count || 1;
+        const invoiceUrl =
+          deletedInvoice.hosted_invoice_url ||
+          deletedInvoice.invoice_pdf ||
+          "#";
 
-          const user = await storage.getUser(parseInt(userId));
-          if (user) {
-            await emailService.sendCustomEmail(
-              user.email,
-              "Payment Failed",
-              `
+        const user = await storage.getUser(parseInt(userId));
+        if (user) {
+          await emailService.sendCustomEmail(
+            user.email,
+            "Payment Failed",
+            `<div style="font-family: Arial, sans-serif; padding: 20px;">
               <p>Hello ${user.firstName || "there"},</p>
               <p>We were unable to process your recent payment (attempt ${attempts}).</p>
               ${
@@ -428,13 +437,13 @@ router.post(
                   : `<p><strong>Your subscription has now been paused after multiple failed attempts.</strong></p>
                      <p>Please update your payment details to resume your subscription.</p>`
               }
-
+ <p style="padding:2px;"></p>
               <p>
                 <a href="${invoiceUrl}" style="display:inline-block;padding:10px 16px;background:#4CAF50;color:white;text-decoration:none;border-radius:5px;">
                   View Invoice
                 </a>
               </p>
-
+<p style="padding:2px;"></p>s
               <p>
                 <a href="https://www.amiquus.com/dashboard/" style="display:inline-block;padding:10px 16px;background:#007bff;color:white;text-decoration:none;border-radius:5px;">
                   Manage Payment Methods
@@ -443,45 +452,44 @@ router.post(
 
               <br/>
               <p>— The Amiquus Team</p>
+              </div>
               `,
-            );
-          }
+          );
+        }
 
-          if (attempts >= 3) {
+        if (attempts >= 3) {
+          if (stripeSubscription && stripeSubscription.status !== "paused") {
             await stripe.subscriptions.update(subscriptionId, {
               pause_collection: { behavior: "void" },
             });
-
-            await storage.updateSubscription(parseInt(userSubscriptionId), {
-              status: "paused",
-            });
-
-            const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
-            const res = await fetch(getUrl, {
-              method: "GET",
-              headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
-            });
-
-            if (res.ok) {
-              const existingJson = await res.json();
-              existingJson.user_info.payment_status = "paused";
-
-              await fetch(getUrl, {
-                method: "PUT",
-                headers: {
-                  Authorization: `Bearer ${BEARER_TOKEN}`,
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(existingJson),
-              });
-            }
-
-            console.log("Paused subscription after 3 failed attempts");
           }
-        } catch (err) {
-          console.error("Error handling payment failure:", err);
-        }
 
+          await storage.updateSubscription(parseInt(userSubscriptionId), {
+            status: "paused",
+          });
+
+          const getUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+          const res = await fetch(getUrl, {
+            method: "GET",
+            headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
+          });
+
+          if (res.ok) {
+            const existingJson = await res.json();
+            existingJson.user_info.payment_status = "paused";
+
+            await fetch(getUrl, {
+              method: "PUT",
+              headers: {
+                Authorization: `Bearer ${BEARER_TOKEN}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(existingJson),
+            });
+          }
+
+          console.log("Paused subscription after 3 failed attempts");
+        }
         break;
       }
 
