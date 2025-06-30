@@ -456,7 +456,7 @@ router.post(
                   View Invoice
                 </a>
               </p>
-<p style="padding:2px;"></p>s
+<p style="padding:2px;"></p>
               <p>
                 <a href="https://www.amiquus.com/dashboard/" style="display:inline-block;padding:10px 16px;background:#007bff;color:white;text-decoration:none;border-radius:5px;">
                   Manage Payment Methods
