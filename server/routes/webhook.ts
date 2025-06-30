@@ -134,7 +134,7 @@ router.post(
           );
 
           // ✅ Only send email if payment was successful
-          if (invoice.paid && invoice.status === "paid") {
+          if (invoice.status === "paid") {
             const amountPaid = invoice.amount_paid / 100;
             const invoiceUrl = invoice.hosted_invoice_url;
 
@@ -306,7 +306,7 @@ router.post(
         const invoice = event.data.object;
 
         // Get the associated subscription
-        const subscriptionId = invoice.parent?.subscription_details?.subscription; as string;
+        const subscriptionId = invoice.parent?.subscription_details?.subscription as string;
         const stripeSubscription =
           await stripe.subscriptions.retrieve(subscriptionId);
 
