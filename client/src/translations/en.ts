@@ -203,6 +203,7 @@ export const en = {
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
       maxKilometers: "Max kilometers must be a number",
+      telegramUsername: "Telegram username is required",
       telegramToken: "Telegram bot token is required",
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
@@ -338,14 +339,16 @@ export const en = {
       token: "Telegram Bot Token",
       chatId: "Your Telegram Chat ID",
       language: "Notification Language",
+      username: "Telegram Username",
     },
 
     placeholders: {
       token: "Enter your bot token from BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Select Telegram Message Language",
+      username: "Enter your Telegram username"
     },
-
+    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
       chatId: "You can get this by messaging @userinfobot on Telegram",
@@ -394,6 +397,7 @@ export const en = {
       token: "Telegram bot token is required",
       chatId: "Telegram chat ID is required",
       language: "Notification language is required",
+      username: "Telegram username is required",
     },
 
     actions: {

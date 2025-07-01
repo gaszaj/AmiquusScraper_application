@@ -73,8 +73,7 @@ export const subscriptions = pgTable("subscriptions", {
   mileageMax: integer("mileage_max"),
   priceMin: integer("price_min"),
   priceMax: integer("price_max"),
-  telegramBotToken: text("telegram_bot_token").notNull(),
-  telegramChatId: text("telegram_chat_id").notNull(),
+  telegramUsername: text("telegram_username").notNull(),
   notificationLanguage: languageEnum("notification_language").notNull().default('en'),
   price: integer("price").notNull(),
   stripePriceId: text("stripe_price_id"),
@@ -99,8 +98,7 @@ export const subscriptionFormSchema = z.object({
   mileageMax: z.number().optional(),
   priceMin: z.number().optional(),
   priceMax: z.number().optional(),
-  telegramBotToken: z.string().min(1, "Telegram bot token is required"),
-  telegramChatId: z.string().min(1, "Telegram chat ID is required"),
+  telegramUsername: z.string().min(1, "Telegram username is required"),
   notificationLanguage: z.enum(['en', 'es', 'fr', 'de', 'it', 'pt', 'ru']),
   price: z.number().min(1, "Price calculation failed"),
   stripePriceId: z.string().optional(),
@@ -139,8 +137,7 @@ export const alertSchema = z.object({
     .optional()
     .or(z.literal("")),
 
-  telegramToken: z.string().min(1, "Telegram bot token is required"),
-  telegramChatId: z.string().min(1, "Telegram chat ID is required"),
+  telegramUsername: z.string().min(1, "Telegram username is required"),
 
   websitesSelected: z
     .array(z.string())

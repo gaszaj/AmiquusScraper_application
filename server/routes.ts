@@ -734,8 +734,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         mileageMax: data.mileageMax,
         priceMin: data.priceMin,
         priceMax: data.priceMax,
-        telegramBotToken: data.telegramBotToken,
-        telegramChatId: data.telegramChatId,
+        telegramUsername: data.telegramUsername,
         notificationLanguage: data.notificationLanguage,
         price: unitAmountInCents,
         status: "pending",
@@ -783,11 +782,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
     const subscriptionId = deletedInvoice.subscription as string;
     const attempts = deletedInvoice.attempt_count || 1;
     const invoiceUrl =
-      deletedInvoice.hosted_invoice_url ||
-      deletedInvoice.invoice_pdf ||
-      '#';
+      deletedInvoice.hosted_invoice_url || deletedInvoice.invoice_pdf || "#";
 
-    console.log('▶️ Simulating invoice.payment_failed:', { customerId, subscriptionId, attempts });
+    console.log("▶️ Simulating invoice.payment_failed:", {
+      customerId,
+      subscriptionId,
+      attempts,
+    });
 
     // // retrieve metadata off the subscription
     // const stripeSubscription = await stripe.subscriptions.retrieve(subscriptionId);
@@ -804,10 +805,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     // send the “payment failed” email
     await emailService.sendCustomEmail(
       deletedInvoice.customer_email,
-      'Payment n Failed',
+      "Payment n Failed",
       `
       <div style="font-family: Arial, sans-serif; padding: 20px;">
-      <p>Hello ${ 'there'},</p>
+      <p>Hello ${"there"},</p>
       <p>We were unable to process your recent payment (attempt ${attempts}).</p>
       ${
         attempts < 3
@@ -855,36 +856,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
       //   });
       // }
 
-      console.log('🛑 Subscription paused after 3 failed attempts');
+      console.log("🛑 Subscription paused after 3 failed attempts");
     }
   }
 
   // test route
-  app.post(
-    '/api/test/invoice-payment-failed',
-    async (req, res) => {
-      if (!req.isAuthenticated()) {
-        return res.status(401).json({ message: "Authentication required" });
-      }
-      
-      try {
-        // optional override from client
-        const dummy = req.body.invoice || {
-          customer: 'cus_test_123',
-          subscription: 'sub_test_456',
-          attempt_count: 2,
-          hosted_invoice_url: 'https://example.com/invoice/123',
-          customer_email: 'muzardemoses@gmail.com',
-        };
+  app.post("/api/test/invoice-payment-failed", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Authentication required" });
+    }
 
-        await handleInvoicePaymentFailed(dummy);
-        res.json({ ok: true, message: 'Simulated invoice.payment_failed delivered' });
-      } catch (err: any) {
-        console.error('Test webhook failed:', err);
-        res.status(500).json({ ok: false, error: err.message });
-      }
-    },
-  );
+    try {
+      // optional override from client
+      const dummy = req.body.invoice || {
+        customer: "cus_test_123",
+        subscription: "sub_test_456",
+        attempt_count: 2,
+        hosted_invoice_url: "https://example.com/invoice/123",
+        customer_email: "muzardemoses@gmail.com",
+      };
+
+      await handleInvoicePaymentFailed(dummy);
+      res.json({
+        ok: true,
+        message: "Simulated invoice.payment_failed delivered",
+      });
+    } catch (err: any) {
+      console.error("Test webhook failed:", err);
+      res.status(500).json({ ok: false, error: err.message });
+    }
+  });
 
   // if user has payment method
   app.post("/api/subscriptions", async (req, res) => {
@@ -979,8 +980,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         mileageMax: data.mileageMax,
         priceMin: data.priceMin,
         priceMax: data.priceMax,
-        telegramBotToken: data.telegramBotToken,
-        telegramChatId: data.telegramChatId,
+        telegramUsername: data.telegramUsername,
         notificationLanguage: data.notificationLanguage,
         price: unitAmountInCents,
         status: "pending",
@@ -1247,8 +1247,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             facebook_link: data.facebookMarketplaceUrl,
             min_mileage: data.mileageMin,
             max_mileage: data.mileageMax,
-            telegram_bot_token: data.telegramBotToken,
-            telegram_chat_id: data.telegramChatId,
+            telegram_username: data.telegramUsername,
             telegram_language: data.notificationLanguage,
             min_price: data.priceMin,
             max_price: data.priceMax,

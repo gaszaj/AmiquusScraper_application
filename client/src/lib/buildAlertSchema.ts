@@ -36,8 +36,7 @@ export const buildAlertSchema = (t: (key: string) => string) =>
       .optional()
       .or(z.literal("")),
 
-    telegramToken: z.string().min(1, t("alertSchema.errors.telegramToken")),
-    telegramChatId: z.string().min(1, t("alertSchema.errors.telegramChatId")),
+    telegramUsername: z.string().min(1, t("alertSchema.errors.telegramUsername")),
 
     websitesSelected: z
       .array(z.string())

@@ -85,8 +85,7 @@ export default function TelegramCarAlertForm({
       yearMin: "",
       yearMax: "",
       maxKilometers: "",
-      telegramToken: "",
-      telegramChatId: "",
+      telegramUsername: "",
       websitesSelected: [],
       facebookMarketplaceUrl: "",
       updateFrequency: "hourly",
@@ -239,8 +238,7 @@ export default function TelegramCarAlertForm({
       mileageMax: parseNullableNumber(values.maxKilometers),
       priceMin: parseNullableNumber(values.priceMin),
       priceMax: parseNullableNumber(values.priceMax),
-      telegramBotToken: values.telegramToken,
-      telegramChatId: values.telegramChatId,
+      telegramUsername: values.telegramUsername,
       notificationLanguage: values.notificationLanguage,
       price: totalPrice,
     };
@@ -755,97 +753,33 @@ export default function TelegramCarAlertForm({
               </h2>
 
               {/* Telegram Setup Instructions */}
-              <div className="prose dark:prose-invert max-w-none mb-8">
-                <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-                  {t("telegram.setupTitle")}
-                </h3>
-
-                <ol className="list-decimal list-inside text-neutral-700 dark:text-neutral-300 space-y-2">
-                  {setupSteps.map((step, index) => (
-                    <li key={index}>{step}</li>
-                  ))}
-                </ol>
-              </div>
-              <div className="prose dark:prose-invert max-w-none mb-8">
-                <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-                  {t("telegram.chatIdTitle")}
-                </h3>
-                <ol className="list-decimal list-inside text-neutral-700 dark:text-neutral-300 space-y-2">
-                  {chatIdSteps.map((step, index) => (
-                    <li key={index}>{step}</li>
-                  ))}
-                </ol>
-              </div>
               {/* ⬇️ Telegram instructions video */}
-              <div className="space-y-2 my-6">
-                <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                  {t("telegram.helpTitle")}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {t("telegram.helpDescription")}
-                </p>
-                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="315"
-                    ata-cmp-vendor="s30"
-                    src="about:blank"
-                    class="cmplazyload"
-                    data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
-                    title="How to copy Facebook Marketplace search link"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
 
-              <p className="text-sm text-muted-foreground py-0.5">
+              {/* <p className="text-sm text-muted-foreground py-0.5">
                 {t("telegram.info")}{" "}
                 <a href="/contact" className="text-blue-500 hover:underline">
                   {t("telegram.contact")}
                 </a>
-              </p>
+              </p> */}
 
               {/* Telegram Token Form */}
               <div className="space-y-6">
                 <FormField
                   control={form.control}
-                  name="telegramToken"
+                  name="telegramUsername"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("telegram.botTokenLabel")}</FormLabel>
+                      <FormLabel>{t("telegram.labels.username")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder={t("telegram.botTokenPlaceholder")}
+                          type="text"
+                          placeholder={t("telegram.placeholders.username")}
                           {...field}
                         />
                       </FormControl>
                       <FormMessage />
                       <FormDescription>
-                        <ScrollArea className="max-w-full w-full rounded-md border whitespace-nowrap min-h-6 p-2">
-                          {t("telegram.botTokenExample")}
-                          <ScrollBar orientation="horizontal" />
-                        </ScrollArea>
-                      </FormDescription>
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="telegramChatId"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t("telegram.chatIdLabel")}</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder={t("telegram.chatIdPlaceholder")}
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                      <FormDescription>
-                        {t("telegram.chatIdDescription")}
+                        {t("telegram.usernameDescription")}
                       </FormDescription>
                     </FormItem>
                   )}

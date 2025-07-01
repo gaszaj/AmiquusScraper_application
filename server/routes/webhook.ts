@@ -92,8 +92,7 @@ router.post(
             facebook_link: dbPlan.facebookMarketplaceUrl,
             min_mileage: dbPlan.mileageMin,
             max_mileage: dbPlan.mileageMax,
-            telegram_bot_token: dbPlan.telegramBotToken,
-            telegram_chat_id: dbPlan.telegramChatId,
+            telegram_username: dbPlan.telegramUsername,
             telegram_language: dbPlan.notificationLanguage,
             min_price: dbPlan.priceMin,
             max_price: dbPlan.priceMax,
@@ -369,8 +368,7 @@ router.post(
               facebook_link: dbSubscription.facebookMarketplaceUrl,
               min_mileage: dbSubscription.mileageMin,
               max_mileage: dbSubscription.mileageMax,
-              telegram_bot_token: dbSubscription.telegramBotToken,
-              telegram_chat_id: dbSubscription.telegramChatId,
+              telegram_username: dbSubscription.telegramUsername,
               telegram_language: dbSubscription.notificationLanguage,
               min_price: dbSubscription.priceMin,
               max_price: dbSubscription.priceMax,
@@ -396,19 +394,6 @@ router.post(
       }
       case "invoice.payment_failed": {
         const deletedInvoice = event.data.object;
-
-        await emailService.sendCustomEmail(
-          "muzardemoses@gmail.com",
-          "Payment Failed Invoice Response",
-          `<div style="font-family: Arial, sans-serif; padding: 20px;">
-            <p>Hello moses,</p>
-          
-
-            <br/>
-            <p>— The Amiquus Team</p>
-            </div>
-            `,
-        );
 
         const customerId = deletedInvoice.customer as string;
         const subscriptionId = deletedInvoice.parent?.subscription_details?.subscription;
@@ -440,7 +425,7 @@ router.post(
         if (user) {
           await emailService.sendCustomEmail(
             user.email,
-            "Payment Failed",
+            `Payment Failed - Invoice #${deletedInvoice.number}`,
             `<div style="font-family: Arial, sans-serif; padding: 20px;">
               <p>Hello ${user.firstName || "there"},</p>
               <p>We were unable to process your recent payment (attempt ${attempts}).</p>

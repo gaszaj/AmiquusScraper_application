@@ -84,8 +84,7 @@ export default function EditSubscriptionPage({
       yearMin: String(subscription.yearMin),
       yearMax: String(subscription.yearMax),
       maxKilometers: String(subscription.mileageMax),
-      telegramToken: subscription.telegramBotToken,
-      telegramChatId: subscription.telegramChatId,
+      telegramUsername: subscription.telegramUsername as string,
       websitesSelected: (subscription.websitesSelected as string[]) || [],
       facebookMarketplaceUrl: subscription.facebookMarketplaceUrl as string,
       updateFrequency: subscription.updateFrequency,
@@ -218,8 +217,7 @@ export default function EditSubscriptionPage({
         yearMin: parseNullableNumber(values.yearMin),
         yearMax: parseNullableNumber(values.yearMax),
         mileageMax: parseNullableNumber(values.maxKilometers),
-        telegramBotToken: values.telegramToken,
-        telegramChatId: values.telegramChatId,
+        telegramUsername: values.telegramUsername,
         websitesSelected: values.websitesSelected,
         facebookMarketplaceUrl: values.facebookMarketplaceUrl,
         updateFrequency: values.updateFrequency,
@@ -735,53 +733,31 @@ export default function EditSubscriptionPage({
               </div>
             </>
           )}
-          <p className="text-sm text-muted-foreground py-0.5">
+          {/* <p className="text-sm text-muted-foreground py-0.5">
             {t("telegram.info")}{" "}
             <a href="/contact" className="text-blue-500 hover:underline">
               {t("telegram.contact")}
             </a>
-          </p>
+          </p> */}
           {/* Telegram Token Form */}
           <div className="space-y-6">
             <FormField
               control={form.control}
-              name="telegramToken"
+              name="telegramUsername"
               disabled={subStatus === "paused"}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("telegram.botTokenLabel")}</FormLabel>
+                  <FormLabel>{t("telegram.labels.username")}</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder={t("telegram.botTokenPlaceholder")}
+                      type="text"
+                      placeholder={t("telegram.placeholders.username")}
                       {...field}
                     />
                   </FormControl>
                   <FormMessage />
                   <FormDescription>
-                    <ScrollArea className="max-w-full w-full rounded-md border whitespace-nowrap min-h-6 p-2">
-                      {t("telegram.botTokenExample")}
-                      <ScrollBar orientation="horizontal" />
-                    </ScrollArea>
-                  </FormDescription>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="telegramChatId"
-              disabled={subStatus === "paused"}
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("telegram.chatIdLabel")}</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder={t("telegram.chatIdPlaceholder")}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                  <FormDescription>
-                    {t("telegram.chatIdDescription")}
+                    {t("telegram.usernameDescription")}
                   </FormDescription>
                 </FormItem>
               )}

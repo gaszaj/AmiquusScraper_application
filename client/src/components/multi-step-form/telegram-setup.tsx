@@ -43,16 +43,14 @@ export default function TelegramSetup({
   const [error, setError] = useState<string | null>(null);
 
   const telegramSetupSchema = z.object({
-    telegramToken: z.string().min(1, t("telegram.errors.token")),
-    telegramChatId: z.string().min(1, t("telegram.errors.chatId")),
+    telegramUsername: z.string().min(1, t("telegram.errors.username")),
     notificationLanguage: z.string().min(1, t("telegram.errors.language")),
   });
 
   const form = useForm<z.infer<typeof telegramSetupSchema>>({
     resolver: zodResolver(telegramSetupSchema),
     defaultValues: {
-      telegramToken: formData.telegramToken || "",
-      telegramChatId: formData.telegramChatId || "",
+      telegramUsername: formData.telegramUsername || "",
       notificationLanguage: formData.notificationLanguage || language,
     },
   });
@@ -90,7 +88,7 @@ export default function TelegramSetup({
             </h2>
 
             {/* Telegram Setup Instructions */}
-            <Alert className="mt-6">
+            {/* <Alert className="mt-6">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>
                 <p className="text-sm font-medium">
@@ -112,10 +110,10 @@ export default function TelegramSetup({
                   <li>{t("telegram.instructions.chatStep4")}</li>
                 </ol>
               </AlertDescription>
-            </Alert>
+            </Alert> */}
 
             {/* Telegram Video Guide */}
-            <div className="space-y-2 my-6">
+            {/* <div className="space-y-2 my-6">
               <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
                 {t("telegram.videoPrompt")}
               </p>
@@ -136,59 +134,38 @@ export default function TelegramSetup({
                   allowFullScreen
                 ></iframe>
               </div>
-            </div>
+            </div> */}
 
-            <p className="text-sm text-muted-foreground py-0.5">
+            {/* <p className="text-sm text-muted-foreground py-0.5">
               {t("telegram.info")}{" "}
               <a href="/contact" className="text-blue-500 hover:underline">
                 {t("telegram.contact")}
               </a>
-            </p>
+            </p> */}
 
             {/* Telegram Form Fields */}
             <div className="space-y-6">
               <FormField
                 control={form.control}
-                name="telegramToken"
+                name="telegramUsername"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t("telegram.labels.token")}</FormLabel>
+                    <FormLabel>{t("telegram.labels.username")}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder={t("telegram.placeholders.token")}
+                        type="text"
+                        placeholder={t("telegram.placeholders.username")}
                         {...field}
                       />
                     </FormControl>
                     <FormMessage />
                     <FormDescription>
-                      <ScrollArea className="max-w-full w-full rounded-md border whitespace-nowrap min-h-6 p-2">
-                        {t("telegram.examples.token")}
-                        <ScrollBar orientation="horizontal" />
-                      </ScrollArea>
+                      {t("telegram.usernameDescription")}
                     </FormDescription>
                   </FormItem>
                 )}
               />
 
-              <FormField
-                control={form.control}
-                name="telegramChatId"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>{t("telegram.labels.chatId")}</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder={t("telegram.placeholders.chatId")}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                    <FormDescription>
-                      {t("telegram.examples.chatId")}
-                    </FormDescription>
-                  </FormItem>
-                )}
-              />
 
               <FormField
                 control={form.control}
