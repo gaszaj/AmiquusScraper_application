@@ -2,6 +2,7 @@ import express from "express";
 import Stripe from "stripe";
 import { storage } from "../storage"; // your DB utils
 import { emailService } from "../email-service";
+import { FREQUENCY_IN_SECONDS } from "../libs/utils";
 
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -73,6 +74,8 @@ router.post(
 
         // create user json
         const jsonId = user.email + userSubscriptionId;
+        const runningFrequency =
+          FREQUENCY_IN_SECONDS[dbPlan.updateFrequency] || 3600;
         const userJson = {
           username: jsonId,
           user_info: {
@@ -80,7 +83,7 @@ router.post(
             user_mail: user.email,
             payment_status: customerSubscriptionCreated.status,
           },
-          running_frequency: dbPlan.updateFrequency,
+          running_frequency: runningFrequency,
           websites: {
             websites_to_scrap: dbPlan.websitesSelected,
           },
@@ -305,7 +308,8 @@ router.post(
         const invoice = event.data.object;
 
         // Get the associated subscription
-        const subscriptionId = invoice.parent?.subscription_details?.subscription as string;
+        const subscriptionId = invoice.parent?.subscription_details
+          ?.subscription as string;
         const stripeSubscription =
           await stripe.subscriptions.retrieve(subscriptionId);
 
@@ -349,13 +353,14 @@ router.post(
 
         if (res.ok) {
           const existingJson = await res.json();
+          const runningFrequency = FREQUENCY_IN_SECONDS[dbSubscription.updateFrequency] || 3600;
           const updatedJson = {
             ...existingJson,
             user_info: {
               ...existingJson.user_info,
               payment_status: "active",
             },
-            running_frequency: dbSubscription.updateFrequency,
+            running_frequency: runningFrequency,
             websites: {
               websites_to_scrap: dbSubscription.websitesSelected,
             },
@@ -396,7 +401,8 @@ router.post(
         const deletedInvoice = event.data.object;
 
         const customerId = deletedInvoice.customer as string;
-        const subscriptionId = deletedInvoice.parent?.subscription_details?.subscription;
+        const subscriptionId =
+          deletedInvoice.parent?.subscription_details?.subscription;
         const stripeSubscription =
           await stripe.subscriptions.retrieve(subscriptionId);
         const stripeSubscriptionMetadata =

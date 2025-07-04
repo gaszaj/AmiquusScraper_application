@@ -18,6 +18,7 @@ import {
   generateVerificationCode,
   getVerificationCodeExpiry,
   getSubscriptionStats,
+  FREQUENCY_IN_SECONDS
 } from "./libs/utils";
 import { emailService } from "./email-service";
 import Stripe from "stripe";
@@ -1227,14 +1228,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
         const existingJson = await jsonRes.json();
         const putUrl = `${JSON_BASE_URL}/user_json_api.php?username=${jsonId}`;
+        const runningFrequency = FREQUENCY_IN_SECONDS[data.updateFrequency] || 3600;
+
 
         const updatedJson = {
           ...existingJson,
           user_info: {
             ...existingJson.user_info,
             payment_status: data.status,
-          },
-          running_frequency: data.updateFrequency,
+          }, 
+          running_frequency: runningFrequency,
           websites: {
             websites_to_scrap: data.websitesSelected,
           },

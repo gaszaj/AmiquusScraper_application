@@ -7,6 +7,15 @@ const JSON_BASE_URL =
 const BEARER_TOKEN = process.env.BEARER_TOKEN || "";
 const CAPACITY = 30;
 
+export const FREQUENCY_IN_SECONDS: Record<string, number> = {
+  hourly: 3600,
+  "30min": 1800,
+  "15min": 900,
+  "5min": 300,
+  "1min": 60,
+};
+
+
 export async function getSubscriptionStats() {
   const res = await fetch(`${JSON_BASE_URL}/user_json_api.php`, {
     headers: {
