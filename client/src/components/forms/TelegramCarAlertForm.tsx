@@ -2,6 +2,7 @@ import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { Button } from "@/components/ui/button";
 import blueCar from "@/images/blue_car.webp";
 import redCar from "@/images/red_car.webp";
+import qrCode from "@/images/qr-code.png";
 import { Loader2 } from "lucide-react";
 import { newcomerDefault } from "@/data/newcomer-default";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -60,6 +61,7 @@ export default function TelegramCarAlertForm({
   const [data, setData] = useState<NewComerResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [termsAgreed, setTermsAgreed] = useState(false);
+  const [hasContactBot, setHasContactBot] = useState(false);
   const { toast } = useToast();
   const { isAuthenticated, isLoading, user } = useAuth();
   const [totalPrice, setTotalPrice] = useState(0);
@@ -211,12 +213,22 @@ export default function TelegramCarAlertForm({
   };
 
   const onSubmit = async (values: AlertFormSchema) => {
+    if (!hasContactBot){
+      toast({
+        title: t("setupAlerts.toasts.contactBot.title"),
+        description: t("setupAlerts.toasts.contactBot.description"),
+        variant: "destructive",
+      });
+      return;
+    }
+    
     if (!termsAgreed) {
       toast({
         title: t("setupAlerts.toasts.terms.title"),
         description: t("setupAlerts.toasts.terms.description"),
         variant: "destructive",
       });
+      return;
     }
 
     if (!user) {
@@ -813,6 +825,46 @@ export default function TelegramCarAlertForm({
                     </FormItem>
                   )}
                 />
+              </div>
+              {/* Confirm Telegram Contact Step */}
+              <div className="space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div>
+                    <p className="text-sm text-muted-foreground">
+                      {t("telegram.contactBotInstruction")}{" "}
+                      <a
+                        href="https://t.me/Amiquus_bot"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 underline"
+                      >
+                        t.me/Amiquus_bot
+                      </a>
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {t("telegram.contactBotNote")}
+                    </p>
+                  </div>
+                  <img
+                    src={qrCode}
+                    alt="Scan QR to open Amiquus Bot"
+                    className="w-24 h-24 object-contain"
+                  />
+                </div>
+
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="hasContactedBot"
+                    checked={hasContactBot}
+                    onCheckedChange={(checked) => setHasContactBot(!!checked)}
+                  />
+                  <label
+                    htmlFor="hasContactedBot"
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    {t("telegram.confirmContact")}
+                  </label>
+                </div>
               </div>
             </div>
 

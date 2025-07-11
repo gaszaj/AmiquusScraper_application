@@ -353,7 +353,8 @@ router.post(
 
         if (res.ok) {
           const existingJson = await res.json();
-          const runningFrequency = FREQUENCY_IN_SECONDS[dbSubscription.updateFrequency] || 3600;
+          const runningFrequency =
+            FREQUENCY_IN_SECONDS[dbSubscription.updateFrequency] || 3600;
           const updatedJson = {
             ...existingJson,
             user_info: {
@@ -438,8 +439,10 @@ router.post(
               ${
                 attempts < 3
                   ? `<p>We will retry your payment shortly. No action is needed for now.</p>`
-                  : `<p><strong>Your subscription has now been paused after multiple failed attempts.</strong></p>
-                     <p>Please update your payment details to resume your subscription.</p>`
+                  : `<p><strong>We attempted to charge your payment method 3 times but all attempts failed.</strong></p>
+<p>As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.</p>
+<p>Please update your payment method and resume your subscription from your profile:</p>
+`
               }
  <p style="padding:2px;"></p>
               <p>

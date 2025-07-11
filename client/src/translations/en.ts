@@ -404,6 +404,9 @@ export const en = {
       previous: "Previous",
       continue: "Continue",
     },
+    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
+    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
+    confirmContact: "I have started a chat with the bot and sent a message",
   },
   review: {
     title: "Review Your Subscription",
@@ -726,6 +729,11 @@ export const en = {
       error: {
         title: "Error creating subscription",
       },
+      contactBot: {
+        title: "Contact Bot Required",
+        description:
+          "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot.",
+      }
     },
   },
   loginPrompt: {

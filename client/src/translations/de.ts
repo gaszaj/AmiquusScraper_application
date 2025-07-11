@@ -458,6 +458,9 @@ export const de = {
       previous: "Zurück",
       continue: "Weiter",
     },
+    contactBotInstruction: "Starte einen Chat mit unserem Telegram-Bot, indem du auf den untenstehenden Link klickst und ihm eine Nachricht sendest:",
+    contactBotNote: "Dies ist erforderlich, um Auto-Benachrichtigungen zu erhalten. Du kannst den QR-Code scannen, wenn du einen Desktop verwendest.",
+    confirmContact: "Ich habe einen Chat mit dem Bot gestartet und eine Nachricht gesendet",
   },
   review: {
     title: "Überprüfen Sie Ihr Abonnement",
@@ -787,6 +790,11 @@ export const de = {
       error: {
         title: "Fehler beim Erstellen des Abonnements",
       },
+      contactBot: {
+        title: "Kontakt mit dem Bot erforderlich",
+        description:
+          "Du musst einen Chat mit unserem Telegram-Bot starten und ihm eine Nachricht senden, um Auto-Benachrichtigungen zu erhalten. Bitte folge den untenstehenden Anweisungen, um den Bot zu kontaktieren.",
+      }
     },
   },
   loginPrompt: {
