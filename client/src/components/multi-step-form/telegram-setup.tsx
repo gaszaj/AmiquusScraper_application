@@ -231,7 +231,7 @@ export default function TelegramSetup({
                       href="https://t.me/Amiquus_bot"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 underline"
+                      className="text-blue-600 text-base dark:text-blue-400 underline"
                     >
                       t.me/Amiquus_bot
                     </a>
@@ -243,7 +243,7 @@ export default function TelegramSetup({
                 <img
                   src={qrCode}
                   alt="Scan QR to open Amiquus Bot"
-                  className="w-24 h-24 object-contain"
+                  className="w-28 h-28 object-contain sm:h-32 sm:w-32"
                 />
               </div>
 
