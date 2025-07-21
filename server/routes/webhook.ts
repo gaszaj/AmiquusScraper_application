@@ -469,6 +469,18 @@ router.post(
             await stripe.subscriptions.update(subscriptionId, {
               pause_collection: { behavior: "void" },
             });
+
+            const latestInvoiceId = subscription.latest_invoice as string;
+
+            if (latestInvoiceId) {
+              const invoice = await stripe.invoices.retrieve(latestInvoiceId);
+              if (invoice.status === "open") {
+                await stripe.invoices.voidInvoice(latestInvoiceId);
+              }
+            }
+
+            // void the failed invoice
+            await stripe.invoices.voidInvoice(deletedInvoice.id);
           }
 
           await storage.updateSubscription(parseInt(userSubscriptionId), {

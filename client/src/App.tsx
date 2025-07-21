@@ -28,6 +28,7 @@ import Support from "@/pages/support";
 import { AuthProvider } from "@/hooks/use-auth";
 import { ProtectedRoute } from "@/lib/protected-route"
 import { LanguageProvider } from "@/components/language-provider";
+import CheckSubscriptionPage from "@/pages/check-subscription"
 
 function Router() {
   return (
@@ -52,6 +53,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/careers" component={Careers} />
       <Route path="/support" component={Support} />
+      <Route path="/check-subscription" component={CheckSubscriptionPage} />
       <Route component={NotFound} />
     </Switch>
   );
