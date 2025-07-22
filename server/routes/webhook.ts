@@ -470,7 +470,7 @@ router.post(
               pause_collection: { behavior: "void" },
             });
 
-            const latestInvoiceId = subscription.latest_invoice as string;
+            const latestInvoiceId = stripeSubscription.latest_invoice as string;
 
             if (latestInvoiceId) {
               const invoice = await stripe.invoices.retrieve(latestInvoiceId);
