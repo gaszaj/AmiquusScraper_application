@@ -53,9 +53,9 @@ export const languageEnum = pgEnum('language', [
   'en', 'es', 'fr', 'de', 'it', 'pt', 'ru'
 ]);
 
-export const fuelTypeEnum = pgEnum('fuel_type', [
-  'gasoline', 'diesel', 'electric', 'hybrid', 'plugin_hybrid'
-]);
+// export const fuelTypeEnum = pgEnum('fuel_type', [
+//   'gasoline', 'diesel', 'electric', 'hybrid', 'plugin_hybrid'
+// ]);
 
 export const subscriptions = pgTable("subscriptions", {
   id: serial("id").primaryKey(),
@@ -66,7 +66,8 @@ export const subscriptions = pgTable("subscriptions", {
   updateFrequency: frequencyEnum("update_frequency").notNull().default('hourly'),
   brand: text("brand"),
   model: text("model"),
-  fuelType: fuelTypeEnum("fuel_type"),
+  fuelType: text("fuel_type"),
+  // fuelType: fuelTypeEnum("fuel_type"),
   yearMin: integer("year_min"),
   yearMax: integer("year_max"),
   mileageMin: integer("mileage_min"),

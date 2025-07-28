@@ -51,7 +51,7 @@ function calculateBasePrice(formData: Partial<AlertFormSchema>): number {
     //   price += 4.99 * (count - 1);
     // }
     if (count > 1) {
-      price += 0.5 * (count - 1);
+      price += 0.1 * (count - 1);
     }
 
     // Add price for frequency
@@ -280,7 +280,7 @@ export default function ReviewPayment({
                 </span>
                 {/* <span>${((formData.websitesSelected.length - 1) * 4.99).toFixed(2)}</span> */}
                 <span>
-                  ${((formData.websitesSelected.length - 1) * 0.5).toFixed(2)}
+                  ${((formData.websitesSelected.length - 1) * 0.1).toFixed(2)}
                 </span>
               </div>
             )}

@@ -8,12 +8,20 @@ export const WEBSITE_OPTIONS = [
 ];
 
 // Frequency options for scraping
+// export const FREQUENCY_OPTIONS = [
+//   { id: "hourly", name: "Every 1 hour", minutes: 60, additionalPrice: 0 },
+//   { id: "30min", name: "Every 30 minutes", minutes: 30, additionalPrice: 5 },
+//   { id: "15min", name: "Every 15 minutes", minutes: 15, additionalPrice: 10 },
+//   { id: "5min", name: "Every 5 minutes", minutes: 5, additionalPrice: 15 },
+//   { id: "1min", name: "Every 1 minute", minutes: 1, additionalPrice: 20 }
+// ];
+
 export const FREQUENCY_OPTIONS = [
   { id: "hourly", name: "Every 1 hour", minutes: 60, additionalPrice: 0 },
-  { id: "30min", name: "Every 30 minutes", minutes: 30, additionalPrice: 5 },
-  { id: "15min", name: "Every 15 minutes", minutes: 15, additionalPrice: 10 },
-  { id: "5min", name: "Every 5 minutes", minutes: 5, additionalPrice: 15 },
-  { id: "1min", name: "Every 1 minute", minutes: 1, additionalPrice: 20 }
+  { id: "30min", name: "Every 30 minutes", minutes: 30, additionalPrice: 0.1 },
+  { id: "15min", name: "Every 15 minutes", minutes: 15, additionalPrice: 0.2 },
+  { id: "5min", name: "Every 5 minutes", minutes: 5, additionalPrice: 0.3 },
+  { id: "1min", name: "Every 1 minute", minutes: 1, additionalPrice: 0.4 }
 ];
 
 // Mapping of frequency options to display labels

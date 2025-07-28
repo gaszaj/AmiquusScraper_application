@@ -116,7 +116,7 @@ export default function EditSubscriptionPage({
 
     if (websitesCount > 1) {
       // price += 4.99 * (websitesCount - 1);
-      price += 0.5 * (websitesCount - 1);
+      price += 0.1 * (websitesCount - 1);
     }
 
     const frequencyOption = FREQUENCY_OPTIONS.find(
@@ -819,7 +819,7 @@ export default function EditSubscriptionPage({
                   Math.max(
                     (form.watch("websitesSelected")?.length || 1) - 1,
                     0,
-                  ) * 4.99
+                  ) * 0.1
                 ).toFixed(2)}
               </span>
             </div>
