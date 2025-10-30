@@ -7,7 +7,7 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 import { Globe } from "lucide-react";
-import { Language as LanguageType } from "@/translations";
+import { Language as LanguageType } from "@shared/translations";
 import { useLanguage } from "@/components/language-provider";
 
 type Language = {

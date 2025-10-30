@@ -17,7 +17,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { useLanguage } from "@/components/language-provider";
 
 export default function VerifyEmail() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const { user, isAuthenticated, isLoading, checkAuth } = useAuth();
   const [code, setCode] = useState("");
@@ -63,7 +63,11 @@ export default function VerifyEmail() {
   const handleResendCode = async () => {
     setResending(true);
     try {
-      const res = await fetch("/api/auth/resend-code", { method: "POST" });
+      const res = await fetch("/api/auth/resend-code", { 
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ language }),
+      });
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
       toast({
@@ -104,7 +108,7 @@ export default function VerifyEmail() {
       const res = await fetch("/api/auth/change-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ newEmail }),
+        body: JSON.stringify({ newEmail, language }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);

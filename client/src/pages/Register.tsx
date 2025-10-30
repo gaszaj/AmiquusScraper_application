@@ -19,7 +19,7 @@ import PageWrapper from "@/components/layout/PageWrapper";
 import { useLanguage } from "@/components/language-provider";
 
 export default function Register() {
-   const { t } = useLanguage();
+   const { t, language } = useLanguage();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -90,7 +90,8 @@ export default function Register() {
     setIsRegistering(true);
 
     try {
-      const userData = { firstName, lastName, email, password, username };
+      // e.g en
+      const userData = { firstName, lastName, email, password, username, language };
       await register(userData);
 
       toast({

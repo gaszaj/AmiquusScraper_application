@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { translations, Language } from "../translations";
+import { Language, translations } from "@shared/translations";
+// import { translations, Language } from "../translations";
 
 interface LanguageContextType {
   language: Language;
@@ -28,7 +29,9 @@ function interpolate(template: string, vars?: { [key: string]: any }): string {
   });
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({
+  children,
+}) => {
   const [language, setLanguage] = useState<Language>(() => {
     // Check if a language preference is stored in localStorage
     const storedLanguage = localStorage.getItem("language") as Language | null;
@@ -51,18 +54,21 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     document.documentElement.lang = language;
   }, [language]);
 
-  const t = (key: string, options?: { [key: string]: any, returnObjects?: boolean }): string | any => {
+  const t = (
+    key: string,
+    options?: { [key: string]: any; returnObjects?: boolean },
+  ): string | any => {
     const keys = key.split(".");
     let value: any = translations[language];
 
     for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
+      if (value && typeof value === "object" && k in value) {
         value = value[k as keyof typeof value];
       } else {
         // Fallback to English
         let fallback = translations.en;
         for (const fk of keys) {
-          if (fallback && typeof fallback === 'object' && fk in fallback) {
+          if (fallback && typeof fallback === "object" && fk in fallback) {
             fallback = fallback[fk as keyof typeof fallback];
           } else {
             return key;
@@ -70,14 +76,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         }
 
         if (options?.returnObjects) return fallback;
-        return typeof fallback === "string" ? interpolate(fallback, options) : key;
+        return typeof fallback === "string"
+          ? interpolate(fallback, options)
+          : key;
       }
     }
 
     if (options?.returnObjects) return value;
     return typeof value === "string" ? interpolate(value, options) : key;
   };
-
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>

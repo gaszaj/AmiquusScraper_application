@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import { storage } from "../storage"; // your DB utils
 import { emailService } from "../email-service";
 import { FREQUENCY_IN_SECONDS } from "../libs/utils";
+import { t } from "../utils/serverI18n";
 
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -145,6 +146,7 @@ router.post(
               invoiceUrl as string,
               invoice.number as string,
               amountPaid,
+              dbPlan.notificationLanguage,
             );
           } else {
             await emailService.sendPendingInvoiceEmail(
@@ -152,6 +154,7 @@ router.post(
               invoice.hosted_invoice_url as string,
               invoice.number as string,
               invoice.amount_due / 100,
+              dbPlan.notificationLanguage
             );
           }
         }
@@ -338,6 +341,7 @@ router.post(
           invoice.hosted_invoice_url as string,
           invoice.number as string,
           invoice.amount_paid / 100,
+          dbSubscription.notificationLanguage
         );
 
         // Update DB and JSON status to active
@@ -429,36 +433,52 @@ router.post(
           "#";
 
         const user = await storage.getUser(parseInt(userId));
+        const dbSubscription = await storage.getSubscription(
+          parseInt(userSubscriptionId),
+        )
+        
         if (user) {
+          const language = dbSubscription.notificationLanguage;
+          const subject = t("emails.invoice.failed.subject", language);
+          const message = t("emails.invoice.failed.message", language);
+          const attemptsA = t("emails.invoice.failed.attemptsA", language);
+          const attemptsB = t("emails.invoice.failed.attemptsB", language);
+          const attemptsC = t("emails.invoice.failed.attemptsC", language);
+          const attemptsD = t("emails.invoice.failed.attemptsD", language);
+          const viewInvoice = t("emails.invoice.failed.viewInvoice", language);
+          const managePayment = t("emails.invoice.failed.managePayment", language);
+          const hello = t("emails.common.hello", language);
+          const team = t("emails.common.team", language);
+          
           await emailService.sendCustomEmail(
             user.email,
-            `Payment Failed - Invoice #${deletedInvoice.number}`,
+            `${subject} #${deletedInvoice.number}`,
             `<div style="font-family: Arial, sans-serif; padding: 20px;">
-              <p>Hello ${user.firstName || "there"},</p>
-              <p>We were unable to process your recent payment (attempt ${attempts}).</p>
+              <p>${hello} ${user.firstName || "there"},</p>
+              <p>${message} ${attempts}).</p>
               ${
                 attempts < 3
-                  ? `<p>We will retry your payment shortly. No action is needed for now.</p>`
-                  : `<p><strong>We attempted to charge your payment method 3 times but all attempts failed.</strong></p>
-<p>As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.</p>
-<p>Please update your payment method and resume your subscription from your profile:</p>
+                  ? `<p>${attemptsA}</p>`
+                  : `<p><strong>${attemptsB}</strong></p>  
+<p>${attemptsC}</p>
+<p>${attemptsD}</p>
 `
               }
  <p style="padding:2px;"></p>
               <p>
                 <a href="${invoiceUrl}" style="display:inline-block;padding:10px 16px;background:#4CAF50;color:white;text-decoration:none;border-radius:5px;">
-                  View Invoice
+                  ${viewInvoice}
                 </a>
               </p>
 <p style="padding:2px;"></p>
               <p>
                 <a href="https://www.amiquus.com/dashboard/" style="display:inline-block;padding:10px 16px;background:#007bff;color:white;text-decoration:none;border-radius:5px;">
-                  Manage Payment Methods
+                  ${managePayment}
                 </a>
               </p>
 
               <br/>
-              <p>— The Amiquus Team</p>
+              <p>${team}</p>
               </div>
               `,
           );

@@ -40,7 +40,7 @@ const waitlistSchema = z.object({
 type WaitlistFormData = z.infer<typeof waitlistSchema>;
 
 export default function Waitlist() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [stats, setStats] = useState<{
@@ -78,7 +78,10 @@ export default function Waitlist() {
     setIsSubmitting(true);
 
     try {
-      const response = await apiRequest("POST", "/api/waitlist", data);
+      const response = await apiRequest("POST", "/api/waitlist", {
+        ...data,
+        language,
+      });
 
       if (response.ok) {
         setSuccess(true);

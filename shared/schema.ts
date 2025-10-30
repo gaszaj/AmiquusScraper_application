@@ -39,6 +39,7 @@ export const userRegisterSchema = z.object({
   password: z.string().min(6, "Password must be at least 6 characters"),
   firstName: z.string().optional(),
   lastName: z.string().optional(),
+  language: z.string().optional()
 });
 
 export const frequencyEnum = pgEnum('frequency', [

@@ -269,7 +269,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       // Send email with code
-      await emailService.sendVerificationEmail(user.email, verificationCode);
+      await emailService.sendVerificationEmail(user.email, verificationCode, data.language);
 
       // update user with stripe customer id
       await storage.updateUserStripeCustomerId(user.id, stripeCustomer.id);
@@ -350,6 +350,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   app.post("/api/auth/resend-code", async (req, res) => {
+    const { language } = req.body;
+    
     try {
       if (!req.isAuthenticated()) {
         return res.status(401).json({ message: "Authentication required" });
@@ -377,7 +379,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       // Send email
-      await emailService.sendVerificationEmail(user.email, verificationCode);
+      await emailService.sendVerificationEmail(user.email, verificationCode, language);
 
       return res.status(200).json({ message: "Verification code resent" });
     } catch (error) {
@@ -387,7 +389,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   app.post("/api/auth/change-email", async (req, res) => {
-    const { newEmail } = req.body;
+    const { newEmail, language } = req.body;
 
     try {
       if (!req.isAuthenticated()) {
@@ -422,7 +424,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       // Send new verification email
-      await emailService.sendVerificationEmail(newEmail, verificationCode);
+      await emailService.sendVerificationEmail(newEmail, verificationCode, language);
 
       return res
         .status(200)
@@ -610,7 +612,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post("/api/waitlist", async (req, res) => {
     try {
-      const { email, firstName, lastName } = req.body;
+      const { email, firstName, lastName, language } = req.body;
 
       if (!email || !firstName || !lastName) {
         return res.status(400).json({ message: "All fields are required" });
@@ -618,8 +620,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const userName = `${firstName} ${lastName}`;
 
-      await emailService.sendAdminNewWaitlistAlert(email, userName);
-      await emailService.sendUserWaitlistConfirmation(email, userName);
+      await emailService.sendAdminNewWaitlistAlert(email, userName, language);
+      await emailService.sendUserWaitlistConfirmation(email, userName, language);
 
       return res
         .status(200)
