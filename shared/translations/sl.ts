@@ -522,24 +522,6 @@ export const sl = {
     register: "Registriraj se",
     title: "Prijava zahtevana"
   },
-  navigations: {
-    faq: "pogosta vprašanja",
-    features: "Funkcije",
-    getalerts: "Prejmite obvestila",
-    getstarted: "Začnite",
-    how: "Kako deluje",
-    language: "Jezik",
-    login: "Prijava",
-    logout: "Odjava",
-    myalerts: "Moja opozorila",
-    pricing: "Cenik",
-    profile: "Profil",
-    settings: "Nastavitve",
-    signup: "Prijava",
-    subscribers: "Naročniki",
-    theme: "Tema",
-    waitlist: "Čakalna lista"
-  },
   notFound: {
     message: "Ste pozabili dodati stran v usmerjevalnik?",
     title: "404 Stran ni bila najdena"

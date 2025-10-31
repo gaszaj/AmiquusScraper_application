@@ -1,3 +1,20 @@
 export const bn = {
-  
+  navigations: {
+    features: "বৈশিষ্ট্য",
+    how: "কীভাবে কাজ করে",
+    pricing: "মূল্য নির্ধারণ",
+    getAlerts: "সতর্কতা পান",
+    waitlist: "অপেক্ষা তালিকা",
+    faq: "সচরাচর জিজ্ঞাসিত প্রশ্নাবলী",
+    login: "প্রবেশ করুন",
+    getStarted: "শুরু করুন",
+    subscribers: "গ্রাহক",
+    theme: "থিম",
+    language: "ভাষা",
+    myAlerts: "আমার সতর্কতা",
+    profile: "প্রোফাইল",
+    settings: "সেটিংস",
+    logout: "প্রস্থান",
+    signUp: "সাইন আপ করুন",
+  },
 }

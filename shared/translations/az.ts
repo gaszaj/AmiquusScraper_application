@@ -1,1 +1,20 @@
-export const az = {}
+export const az = {
+  navigations: {
+    features: "Xüsusiyyətlər",
+    how: "Necə işləyir",
+    pricing: "Qiymətlər",
+    getAlerts: "Bildirişlər alın",
+    waitlist: "Gözləmə siyahısı",
+    faq: "Tez-tez verilən suallar",
+    login: "Daxil olun",
+    getStarted: "Başlayın",
+    subscribers: "Abunəçilər",
+    theme: "Mövzu",
+    language: "Dil",
+    myAlerts: "Mənim bildirişlərim",
+    profile: "Profil",
+    settings: "Parametrlər",
+    logout: "Çıxış",
+    signUp: "Qeydiyyatdan keçin",
+  },
+}

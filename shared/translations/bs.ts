@@ -1,1 +1,20 @@
-export const bs = {}
+export const bs = {
+  navigations: {
+    features: "Karakteristike",
+    how: "Kako funkcionira",
+    pricing: "Cijene",
+    getAlerts: "Primi obavještenja",
+    waitlist: "Lista čekanja",
+    faq: "Često postavljana pitanja",
+    login: "Prijavi se",
+    getStarted: "Započni",
+    subscribers: "Pretplatnici",
+    theme: "Tema",
+    language: "Jezik",
+    myAlerts: "Moja obavještenja",
+    profile: "Profil",
+    settings: "Postavke",
+    logout: "Odjavi se",
+    signUp: "Registruj se",
+  },
+}

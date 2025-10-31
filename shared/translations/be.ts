@@ -1,3 +1,20 @@
 export const be = {
-  
+  navigations: {
+    features: "Магчымасці",
+    how: "Як гэта працуе",
+    pricing: "Цэны",
+    getAlerts: "Атрымаць апавяшчэнні",
+    waitlist: "Спіс чакання",
+    faq: "Частыя пытанні",
+    login: "Увайсці",
+    getStarted: "Пачаць",
+    subscribers: "Падпісчыкі",
+    theme: "Тэма",
+    language: "Мова",
+    myAlerts: "Мае апавяшчэнні",
+    profile: "Профіль",
+    settings: "Налады",
+    logout: "Выйсці",
+    signUp: "Зарэгістравацца",
+  },
 }

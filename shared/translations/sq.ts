@@ -1,4 +1,22 @@
 export const sq = {
+  navigations: {
+    features: "Veçoritë",
+    how: "Si funksionon",
+    pricing: "Çmimet",
+    getAlerts: "Merr njoftimet",
+    waitlist: "Lista e pritjes",
+    faq: "Pyetjet e shpeshta",
+    login: "Hyr",
+    getStarted: "Fillo tani",
+    subscribers: "Abonetët",
+    theme: "Tema",
+    language: "Gjuha",
+    myAlerts: "Njoftimet e mia",
+    profile: "Profili",
+    settings: "Cilësimet",
+    logout: "Dil",
+    signUp: "Regjistrohu",
+  },
   about: {
     description: "Po revolucionarizojmë mënyrën si njerëzit gjejnë makinën e tyre të përdorur të përsosur duke sjellë teknologjinë e avancuar të monitorimit për të gjithë.",
     join: {
@@ -503,24 +521,6 @@ export const sq = {
     login: "Hyrje",
     register: "Regjistrohu",
     title: "Kërkohet hyrja"
-  },
-  navigations: {
-    faq: "Pyetjet e bëra shpesh",
-    features: "Veçoritë",
-    getalerts: "Merr njoftime",
-    getstarted: "Fillo",
-    how: "Si funksionon",
-    language: "Gjuha",
-    login: "Hyrje",
-    logout: "Çkyçu",
-    myalerts: "Njoftimet e mia",
-    pricing: "Çmimet",
-    profile: "Profili",
-    settings: "Cilësimet",
-    signup: "Regjistrohu",
-    subscribers: "Abonues",
-    theme: "Temë",
-    waitlist: "Lista e pritjes"
   },
   notFound: {
     message: "A ke harruar ta shtosh faqen në router?",

@@ -1,4 +1,22 @@
 export const pl = {
+  navigations: {
+    features: "Funkcje",
+    how: "Jak to działa",
+    pricing: "Cennik",
+    getAlerts: "Otrzymuj powiadomienia",
+    waitlist: "Lista oczekujących",
+    faq: "Najczęściej zadawane pytania",
+    login: "Zaloguj się",
+    getStarted: "Rozpocznij",
+    subscribers: "Subskrybenci",
+    theme: "Motyw",
+    language: "Język",
+    myAlerts: "Moje powiadomienia",
+    profile: "Profil",
+    settings: "Ustawienia",
+    logout: "Wyloguj się",
+    signUp: "Zarejestruj się",
+  },
   about: {
     description: "Rewolucjonizujemy sposób, w jaki ludzie znajdują swój idealny używany samochód, udostępniając zaawansowaną technologię monitorowania wszystkim.",
     join: {
@@ -503,24 +521,6 @@ export const pl = {
     login: "Zaloguj się",
     register: "Zarejestruj się",
     title: "Wymagane logowanie"
-  },
-  navigations: {
-    faq: "Najczęściej zadawane pytania",
-    features: "Funkcje",
-    getalerts: "Otrzymuj powiadomienia",
-    getstarted: "Rozpocznij",
-    how: "Jak to działa",
-    language: "Język",
-    login: "Zaloguj się",
-    logout: "Wyloguj się",
-    myalerts: "Moje alerty",
-    pricing: "Cennik",
-    profile: "Profil",
-    settings: "Ustawienia",
-    signup: "Zarejestruj się",
-    subscribers: "Subskrybenci",
-    theme: "Motyw",
-    waitlist: "Lista oczekujących"
   },
   notFound: {
     message: "Czy zapomniałeś dodać stronę do routera?",

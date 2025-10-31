@@ -1,4 +1,22 @@
 export const ja = {
+  navigations: {
+    features: "機能",
+    how: "仕組み",
+    pricing: "料金",
+    getAlerts: "アラートを取得",
+    waitlist: "待機リスト",
+    faq: "よくある質問",
+    login: "ログイン",
+    getStarted: "始める",
+    subscribers: "登録者",
+    theme: "テーマ",
+    language: "言語",
+    myAlerts: "私のアラート",
+    profile: "プロフィール",
+    settings: "設定",
+    logout: "ログアウト",
+    signUp: "サインアップ",
+  },
   about: {
     description: "私たちは、先進的なモニタリング技術を誰もが使えるようにすることで、人々が理想の中古車を見つける方法に革命を起こしています。",
     join: {
@@ -503,24 +521,6 @@ export const ja = {
     login: "ログイン",
     register: "新規登録",
     title: "ログインが必要です"
-  },
-  navigations: {
-    faq: "よくある質問",
-    features: "機能",
-    getalerts: "通知を受け取る",
-    getstarted: "はじめる",
-    how: "使い方",
-    language: "言語",
-    login: "ログイン",
-    logout: "ログアウト",
-    myalerts: "マイアラート",
-    pricing: "料金",
-    profile: "プロフィール",
-    settings: "設定",
-    signup: "新規登録",
-    subscribers: "登録者",
-    theme: "テーマ",
-    waitlist: "ウェイティングリスト"
   },
   notFound: {
     message: "ルーターにページを追加し忘れていませんか？",

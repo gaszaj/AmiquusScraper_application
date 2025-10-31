@@ -1,2 +1,20 @@
 export const bg = {
+  navigations: {
+    features: "Характеристики",
+    how: "Как работи",
+    pricing: "Ценообразуване",
+    getAlerts: "Получете известия",
+    waitlist: "Списък на изчакване",
+    faq: "Често задавани въпроси",
+    login: "Вход",
+    getStarted: "Започнете",
+    subscribers: "Абонати",
+    theme: "Тема",
+    language: "Език",
+    myAlerts: "Моите известия",
+    profile: "Профил",
+    settings: "Настройки",
+    logout: "Изход",
+    signUp: "Регистрация",
+  },
 }

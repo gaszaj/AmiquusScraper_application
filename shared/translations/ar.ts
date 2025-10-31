@@ -1,3 +1,20 @@
 export const ar = {
-  
+  navigations: {
+    features: "المميزات",
+    how: "كيف يعمل",
+    pricing: "التسعير",
+    getAlerts: "احصل على التنبيهات",
+    waitlist: "قائمة الانتظار",
+    faq: "الأسئلة الشائعة",
+    login: "تسجيل الدخول",
+    getStarted: "ابدأ الآن",
+    subscribers: "المشتركون",
+    theme: "السمة",
+    language: "اللغة",
+    myAlerts: "تنبيهاتي",
+    profile: "الملف الشخصي",
+    settings: "الإعدادات",
+    logout: "تسجيل الخروج",
+    signUp: "التسجيل",
+  },
 }
