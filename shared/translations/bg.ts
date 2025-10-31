@@ -21,7 +21,7 @@ export const bg = {
     label: "Track used car listings in real-time",
     title: "Never Miss Your Perfect Car Deal Again",
     subtitle: "Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.",
-    button1: "Set Up Your Alerts",
+    button1: "Настройте вашите сигнали",
     button2: "See How It Works",
     trustIndicators: {
       websites: "Проследявани 15+ уебсайта",
@@ -32,7 +32,7 @@ export const bg = {
   },
   limited: {
     full: {
-      title: "Subscription Limit Reached",
+      title: "Достигнат лимит на абонаменти",
       description: "We've reached our capacity of 30 active subscribers. Join our waitlist to be notified when a spot opens up.",
       buttonText: "Join Waitlist"
     },
@@ -110,13 +110,13 @@ export const bg = {
       "Easy setup process that takes less than 5 minutes"
 
     ],
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Настройте вашите сигнали",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram предупреждение",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -154,20 +154,20 @@ export const bg = {
     button: "Get Started Now"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Създайте вашето автомобилно предупреждение",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "В момента сме с пълен капацитет. Присъединете се към нашия списък за изчакване, за да бъдете уведомени, когато се освободи място.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Абонаментът е създаден",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Абонаментът е неуспешен",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -682,7 +682,7 @@ export const bg = {
         description: "You must agree to the terms of service to continue"
       },
       success: {
-        title: "Subscription created",
+        title: "Абонаментът е създаден",
         description: "Your subscription has been created successfully"
       },
       error: {
@@ -701,7 +701,7 @@ export const bg = {
     login: "Login"
   },
   waitlistPrompt: {
-    title: "Join the Waitlist",
+    title: "Присъединете се към списъка за изчакване",
     description: "We're currently at full capacity. Join the waitlist to be notified when a slot becomes available.",
     button: "Join Waitlist"
   },
@@ -1369,7 +1369,7 @@ export const bg = {
       button: "Return to Homepage"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Присъединете се към списъка за изчакване",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

@@ -104,13 +104,13 @@ export const mn = {
       3: "Үнийн өөрчлөлт болон шинэ зарын мэдэгдэл",
       4: "Тав тухтай, 5 минутаас бага хугацаанд тохируулах боломжтой процесс"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Сэрэмжлүүлгээ тохируулах",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram сэрэмжлүүлэг",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const mn = {
     button: "Одоо эхлүүлэх"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Машины сэрэмжлүүлэг үүсгэх",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Бид одоо бүрэн ачаалалтай байна. Хоосон орон гарахад мэдэгдэл авахын тулд манай хүлээлгийн жагсаалтад нэгдээрэй.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Захиалга үүсгэсэн",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Захиалга амжилтгүй боллоо",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const mn = {
       button: "Нүүр хуудас руу буцах"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Хүлээлгийн жагсаалтад нэгдэх",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

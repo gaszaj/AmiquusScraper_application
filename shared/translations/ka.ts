@@ -104,13 +104,13 @@ export const ka = {
       3: "ავტომატური შეტყობინებები ფასდაკლებებზე და ახალ განცხადებებზე",
       4: "მარტივი დაყენების პროცესი, რომელიც ნაკლებად 5 წუთს მოითხოვს"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "დააყენეთ თქვენი გაფრთხილებები",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram გაფრთხილება",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const ka = {
     button: "დაიწყე ახლავე"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "შექმენით თქვენი მანქანის გაფრთხილება",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "ჩვენ ამჟამად სრული მუშაობით ვართ. შეუერთდით ჩვენს ლოდინის სიას რომ მიიღოთ შეტყობინება როდესაც ადგილი გაათავისუფლდება.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "გამოწერა შეიქმნა",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "გამოწერა ვერ მოხერხდა",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const ka = {
       button: "დაბრუნება მთავარი გვერდზე"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "შეუერთდით ლოდინის სიას",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

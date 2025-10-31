@@ -104,13 +104,13 @@ export const ro = {
       3: "Alerte automate pentru reducerea prețului și anunțuri noi",
       4: "Proces de instalare simplu, care durează mai puțin de 5 minute"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Configurează alertele",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Alertă Telegram",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const ro = {
     button: "Începe acum"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Creează alerta ta auto",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Suntem momentan la capacitate maximă. Alătură-te listei noastre de așteptare pentru a fi notificat când se eliberează un loc.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Abonament creat",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Abonamentul a eșuat",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const ro = {
       button: "Înapoi la pagina principală"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Alătură-te listei de așteptare",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

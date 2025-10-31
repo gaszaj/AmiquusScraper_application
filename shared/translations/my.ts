@@ -104,13 +104,13 @@ export const my = {
       3: "စျေးနှုန်းလျှော့ခြင်းနှင့် အသစ်တင်ထားသောကြော်ငြာများအတွက် အလိုအလျောက်အသိပေးချက်များ",
       4: "တစ်မိနစ်ငယ်အတွင်း အလွယ်တကူ စတင်တပ်ဆင်နိုင်သော လုပ်ငန်းစဉ်"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "သင့်သတိပေးချက်များကို သတ်မှတ်ပါ",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram သတိပေးချက်",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const my = {
     button: "ယခုစတင်လိုက်ပါ"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "သင့်ကား သတိပေးချက်ကို ဖန်တီးပါ",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "ကျွန်ုပ်တို့သည် လောလောဆယ် အပြည့်ရှိနေပါသည်။ နေရာလွတ်လာသောအခါ အကြောင်းကြားရန် ကျွန်ုပ်တို့၏စောင့်ဆိုင်းစာရင်းတွင် ပါဝင်ပါ။",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "စာရင်းသွင်းမှု ဖန်တီးပြီးပါပြီ",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "စာရင်းသွင်းမှု မအောင်မြင်ပါ",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const my = {
       button: "ပင်မစာမျက်နှာသို့ ပြန်သွားရန်"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "စောင့်ဆိုင်းစာရင်းတွင် ပါဝင်ပါ",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

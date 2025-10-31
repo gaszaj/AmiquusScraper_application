@@ -104,13 +104,13 @@ export const lt = {
       3: "Automatiniai pranešimai apie kainų sumažėjimą ir naujus skelbimus",
       4: "Paprastas diegimo procesas, trunkantis mažiau nei 5 minutes"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Nustatykite savo perspėjimus",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram perspėjimas",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const lt = {
     button: "Pradėkite dabar"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Sukurkite savo automobilio perspėjimą",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Šiuo metu esame pilni. Prisijunkite prie mūsų laukiančiųjų sąrašo, kad būtumėte informuoti, kai atsiras vieta.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Prenumerata sukurta",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Prenumerata nepavyko",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const lt = {
       button: "Grįžti į pagrindinį puslapį"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Prisijunkite prie laukiančiųjų sąrašo",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

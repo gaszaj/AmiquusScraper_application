@@ -104,13 +104,13 @@ export const el = {
       3: "Αυτόματες ειδοποιήσεις για μείωση τιμής και νέες καταχωρήσεις",
       4: "Εύκολη διαδικασία εγκατάστασης που παίρνει λιγότερο από 5 λεπτά"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Ρυθμίστε τις ειδοποιήσεις σας",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Ειδοποίηση Telegram",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const el = {
     button: "Ξεκίνα Τώρα"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Δημιουργήστε την ειδοποίηση αυτοκινήτου σας",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Αυτή τη στιγμή είμαστε πλήρεις. Εγγραφείτε στη λίστα αναμονής μας για να ειδοποιηθείτε όταν ανοίξει μια θέση.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Η συνδρομή δημιουργήθηκε",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Η συνδρομή απέτυχε",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const el = {
       button: "Επιστροφή στην αρχική σελίδα"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Εγγραφείτε στη λίστα αναμονής",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

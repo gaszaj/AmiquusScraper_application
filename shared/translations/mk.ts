@@ -104,13 +104,13 @@ export const mk = {
       3: "Автоматски известувања за намалување на цени и нови огласи",
       4: "Едноставен процес на поставување што трае помалку од 5 минути"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Поставете ги вашите известувања",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram известување",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const mk = {
     button: "Започнете сега"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Креирајте известување за автомобил",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Моментално сме полни. Придружете се на нашата листа за чекање за да бидете известени кога ќе се ослободи место.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Претплатата е креирана",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Претплатата не успеа",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const mk = {
       button: "Врати се на почетна страница"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Придружете се на листата за чекање",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

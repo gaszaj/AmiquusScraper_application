@@ -104,13 +104,13 @@ export const da = {
       3: "Automatiske prisfalds- og nye annoncealarmer",
       4: "Nem opsætning, der tager under 5 minutter"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Konfigurer dine advarsler",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram-advarsel",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const da = {
     button: "Kom i gang nu"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Opret din bilalarm",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Vi er i øjeblikket på fuld kapacitet. Tilmeld dig vores venteliste for at blive underrettet, når der bliver en plads ledig.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Abonnement oprettet",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Abonnement mislykkedes",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const da = {
       button: "Tilbage til forsiden"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Tilmeld dig ventelisten",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

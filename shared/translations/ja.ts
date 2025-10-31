@@ -104,13 +104,13 @@ export const ja = {
       3: "自動価格変更・新着通知",
       4: "5分以内で完了する簡単なセットアッププロセス"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "アラートを設定する",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegramアラート",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const ja = {
     button: "今すぐ始める"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "車のアラートを作成する",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "現在、定員に達しています。空きが出た際に通知を受け取るために、ウェイティングリストに参加してください。",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "サブスクリプションが作成されました",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "サブスクリプションに失敗しました",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const ja = {
       button: "ホームページに戻る"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "ウェイティングリストに参加する",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

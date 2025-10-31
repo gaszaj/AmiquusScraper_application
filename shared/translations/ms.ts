@@ -104,13 +104,13 @@ export const ms = {
       3: "Pemberitahuan automatik penurunan harga dan senarai baharu",
       4: "Proses pemasangan mudah yang mengambil masa kurang daripada 5 minit"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Tetapkan Makluman Anda",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Makluman Telegram",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const ms = {
     button: "Mulakan Sekarang"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Cipta Makluman Kereta Anda",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Kami kini berada pada kapasiti penuh. Sila sertai senarai menunggu kami untuk dimaklumkan apabila tempat tersedia.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Langganan dicipta",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Langganan gagal",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const ms = {
       button: "Kembali ke Laman Utama"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Sertai Senarai Menunggu",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

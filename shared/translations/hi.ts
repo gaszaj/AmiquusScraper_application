@@ -21,7 +21,7 @@ export const hi = {
     label: "Track used car listings live on AMIQUUS",
     title: "Don’t Ever Miss Your Perfect Car Deal on AMIQUUS",
     subtitle: "Amiquus instantly notifies you when your dream car is available on any car selling website. Get updates on Telegram as soon as a match is found.",
-    button1: "Set Up Your Alerts",
+    button1: "अपने अलर्ट सेट करें",
     button2: "See Kaise Kaam Karta Hai",
     trustIndicators: {
       websites: "15+ वेबसाइटें ट्रैक की गईं",
@@ -104,13 +104,13 @@ export const hi = {
       3: "Get instant alerts for price drops and new listings",
       4: "Simple setup process, takes less than 5 minutes"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "अपने अलर्ट सेट करें",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "टेलीग्राम अलर्ट",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const hi = {
     button: "Start Karein"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "अपना कार अलर्ट बनाएं",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "हम वर्तमान में पूरी क्षमता पर हैं। जब कोई स्थान खुलता है तो सूचित किए जाने के लिए हमारी प्रतीक्षा सूची में शामिल हों।",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "सदस्यता बनाई गई",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "सदस्यता विफल रही",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -710,7 +710,7 @@ export const hi = {
     login: "Sign In"
   },
   waitlistPrompt: {
-    title: "Join the Waitlist",
+    title: "प्रतीक्षा सूची में शामिल हों",
     description: "Right now, all slots are full. Join the waitlist to get notified when a spot opens up.",
     button: "Join Waiting List"
   },
@@ -1243,7 +1243,7 @@ export const hi = {
       button: "Go back to Homepage"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "प्रतीक्षा सूची में शामिल हों",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

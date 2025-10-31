@@ -104,13 +104,13 @@ export const sq = {
       3: "Njoftime automatike për ulje çmimesh dhe shpallje të reja",
       4: "Proces i lehtë konfigurimi që zgjat më pak se 5 minuta"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Vendosni paralajmërimet tuaja",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Paralajmërim Telegram",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const sq = {
     button: "Fillo Tani"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Krijoni paralajmërimin tuaj të makinës",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Aktualisht jemi në kapacitetin e plotë. Ju lutemi bashkohuni me listën tonë të pritjes për të njoftuar kur hapet një vend.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Abonimi u krijua",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Abonimi dështoi",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const sq = {
       button: "Kthehu te faqja kryesore"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Bashkohuni me listën e pritjes",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

@@ -104,13 +104,13 @@ export const th = {
       3: "แจ้งเตือนอัตโนมัติเมื่อราคาลดและมีประกาศใหม่",
       4: "ติดตั้งง่าย ใช้เวลาไม่ถึง 5 นาที"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "ตั้งค่าการแจ้งเตือนของคุณ",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "การแจ้งเตือน Telegram",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const th = {
     button: "เริ่มต้นใช้งาน"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "สร้างการแจ้งเตือนรถยนต์ของคุณ",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "ขณะนี้เราเต็มแล้ว กรุณาเข้าร่วมรายชื่อรอของเราเพื่อรับการแจ้งเตือนเมื่อมีที่ว่าง",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "สร้างการสมัครสมาชิกแล้ว",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "การสมัครสมาชิกล้มเหลว",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const th = {
       button: "กลับสู่หน้าแรก"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "เข้าร่วมรายชื่อรอ",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

@@ -104,13 +104,13 @@ export const ko = {
       3: "자동 가격 인하 및 신규 매물 알림",
       4: "5분 만에 끝나는 간편한 설치 과정"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "알림 설정하기",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "텔레그램 알림",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const ko = {
     button: "지금 시작하기"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "자동차 알림 만들기",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "현재 정원이 찼습니다. 자리가 나면 알림을 받으려면 대기자 명단에 참여하세요.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "구독이 생성되었습니다",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "구독 실패",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const ko = {
       button: "홈페이지로 돌아가기"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "대기자 명단에 참여하기",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

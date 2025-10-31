@@ -104,13 +104,13 @@ export const hy = {
       3: "Ավտոմատ ծանուցումներ գների իջեցման և նոր հայտարարությունների մասին",
       4: "Հեշտ կարգավորման գործընթաց, որը տևում է պակաս քան 5 րոպե"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Կարգավորեք ձեր ծանուցումները",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram ծանուցում",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const hy = {
     button: "Սկսեք հիմա"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Ստեղծեք ձեր մեքենայի ծանուցումը",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Մենք այս պահին լրիվ զբաղված ենք։ Միացեք մեր սպասման ցանկին՝ տեղեկացվելու համար, երբ տեղ ազատվի։",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Բաժանորդագրությունը ստեղծվել է",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Բաժանորդագրությունը ձախողվեց",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const hy = {
       button: "Վերադառնալ գլխավոր էջ"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Միացեք սպասման ցանկին",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

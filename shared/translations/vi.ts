@@ -104,13 +104,13 @@ export const vi = {
       3: "Thông báo tự động khi giảm giá và có tin đăng mới",
       4: "Quy trình cài đặt dễ dàng, chỉ mất chưa đến 5 phút"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Thiết lập cảnh báo của bạn",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Cảnh báo Telegram",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const vi = {
     button: "Bắt đầu ngay"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Tạo cảnh báo xe của bạn",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Chúng tôi hiện đang ở mức đầy. Vui lòng tham gia danh sách chờ của chúng tôi để được thông báo khi có chỗ trống.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Đã tạo đăng ký",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Đăng ký thất bại",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const vi = {
       button: "Quay lại trang chủ"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Tham gia danh sách chờ",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {

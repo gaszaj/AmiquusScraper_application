@@ -104,13 +104,13 @@ export const et = {
       3: "Automaatne hinnalanguse ja uute kuulutuste teavitus",
       4: "Lihtne seadistusprotsess, mis võtab vähem kui 5 minutit"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Seadista oma hoiatused",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegrami hoiatus",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
     }
   },
@@ -152,20 +152,20 @@ export const et = {
     button: "Alusta kohe"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Loo oma auto hoiatus",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Oleme praegu täis. Liitu meie ootenimekirjaga, et saada teavitus, kui koht vabaneb.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Tellimus loodud",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Tellimus ebaõnnestus",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -1243,7 +1243,7 @@ export const et = {
       button: "Tagasi avalehele"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Liitu ootenimekirjaga",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {
