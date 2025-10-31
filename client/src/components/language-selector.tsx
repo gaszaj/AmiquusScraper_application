@@ -1,10 +1,10 @@
 import { useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
 } from "@/components/ui/select";
 import { Globe } from "lucide-react";
 import { Language as LanguageType } from "@shared/translations";
@@ -17,55 +17,15 @@ type Language = {
 };
 
 const languages: Language[] = [
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "sl", name: "Slovenščina", flag: "🇸🇮" },
-  { code: "hr", name: "Hrvatski", flag: "🇭🇷" },
+  { code: "en", name: "English", flag: "🇬🇧" },
   { code: "es", name: "Español", flag: "🇪🇸" },
-  { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "ar", name: "العربية", flag: "🇸🇦" },
-  { code: "pt", name: "Português", flag: "🇵🇹" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "it", name: "Italiano", flag: "🇮🇹" },
-  { code: "nl", name: "Nederlands", flag: "🇳🇱" },
-  { code: "sv", name: "Svenska", flag: "🇸🇪" },
-  { code: "da", name: "Dansk", flag: "🇩🇰" },
-  { code: "nb", name: "Norsk", flag: "🇳🇴" },
-  { code: "fi", name: "Suomi", flag: "🇫🇮" },
-  { code: "hi", name: "हिन्दी", flag: "🇮🇳" },
-  { code: "ru", name: "Русский", flag: "🇷🇺" },
-  { code: "tr", name: "Türkçe", flag: "🇹🇷" },
-  { code: "cs", name: "Čeština", flag: "🇨🇿" },
-  { code: "pl", name: "Polski", flag: "🇵🇱" },
-  { code: "sk", name: "Slovenčina", flag: "🇸🇰" },
-  { code: "sq", name: "Shqip", flag: "🇦🇱" },
-  { code: "hy", name: "Հայերեն", flag: "🇦🇲" },
-  { code: "az", name: "Azərbaycan dili", flag: "🇦🇿" },
-  { code: "bn", name: "বাংলা", flag: "🇧🇩" },
-  { code: "be", name: "Беларуская", flag: "🇧🇾" },
-  { code: "bs", name: "Bosanski", flag: "🇧🇦" },
-  { code: "bg", name: "Български", flag: "🇧🇬" },
-  { code: "el", name: "Ελληνικά", flag: "🇨🇾" },
-  { code: "et", name: "Eesti", flag: "🇪🇪" },
-  { code: "ka", name: "ქართული", flag: "🇬🇪" },
-  { code: "hu", name: "Magyar", flag: "🇭🇺" },
-  { code: "he", name: "עברית", flag: "🇮🇱" },
-  { code: "ja", name: "日本語", flag: "🇯🇵" },
-  { code: "ko", name: "한국어", flag: "🇰🇷" },
-  { code: "lv", name: "Latviešu", flag: "🇱🇻" },
-  { code: "lt", name: "Lietuvių", flag: "🇱🇹" },
-  { code: "ms", name: "Bahasa Melayu", flag: "🇲🇾" },
-  { code: "ro", name: "Română", flag: "🇲🇩" },
-  { code: "mn", name: "Монгол", flag: "🇲🇳" },
-  { code: "sr", name: "Српски", flag: "🇲🇪" },
-  { code: "my", name: "မြန်မာစာ", flag: "🇲🇲" },
-  { code: "mk", name: "Македонски", flag: "🇲🇰" },
-  { code: "th", name: "ไทย", flag: "🇹🇭" },
-  { code: "uk", name: "Українська", flag: "🇺🇦" },
-  { code: "vi", name: "Tiếng Việt", flag: "🇻🇳" },
 ];
 
 export function LanguageSelector() {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage} = useLanguage();
   const selectedLang = languages.find((l) => l.code === language);
 
   const handleLanguageChange = (value: LanguageType) => {
@@ -89,7 +49,7 @@ export function LanguageSelector() {
           <SelectItem key={lang.code} value={lang.code}>
             <div className="flex items-center gap-2">
               <span>{lang.flag}</span>
-              <span>{lang.name}</span>
+              <span >{lang.name}</span>
             </div>
           </SelectItem>
         ))}
