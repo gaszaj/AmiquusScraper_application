@@ -37,6 +37,8 @@ export default function HowItWorks() {
     },
   ];
 
+  const features = t("howItWorks.features", { returnObjects: true });
+
 
   return (
     <section id="how-it-works" className="py-20 bg-neutral-100 dark:bg-neutral-950">
@@ -81,7 +83,7 @@ export default function HowItWorks() {
                 {t("howItWorks.whyTitle")}
               </h3>
               <ul className="space-y-4">
-                {t("howItWorks.features", { returnObjects: true }).map((feature: string, index: number) => (
+                {features.map((feature: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="mt-1 bg-accent/20 p-1 rounded-full">
                       <Check className="h-4 w-4 text-accent" />
