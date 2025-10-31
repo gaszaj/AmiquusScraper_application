@@ -1,4 +1,22 @@
 export const sl = {
+  navigations: {
+    features: "Funkcije",
+    how: "Kako deluje",
+    pricing: "Cene",
+    getAlerts: "Prejmi opozorila",
+    waitlist: "Seznam čakajočih",
+    faq: "Pogosta vprašanja",
+    login: "Prijava",
+    getStarted: "Začnite",
+    subscribers: "Naročniki",
+    theme: "Tema",
+    language: "Jezik",
+    myAlerts: "Moja opozorila",
+    profile: "Profil",
+    settings: "Nastavitve",
+    logout: "Odjava",
+    signUp: "Registracija",
+  },
   about: {
     description: "Revolucioniramo način, kako ljudje najdejo svoj popoln rabljen avto, saj napredno tehnologijo spremljanja omogočamo vsem.",
     join: {

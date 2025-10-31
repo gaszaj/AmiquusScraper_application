@@ -1,4 +1,22 @@
 export const pt = {
+  navigations: {
+    features: "Características",
+    how: "Como funciona",
+    pricing: "Preços",
+    getAlerts: "Obter alertas",
+    waitlist: "Lista de espera",
+    faq: "Perguntas frequentes",
+    login: "Entrar",
+    getStarted: "Começar",
+    subscribers: "Subscritores",
+    theme: "Tema",
+    language: "Idioma",
+    myAlerts: "Os meus alertas",
+    profile: "Perfil",
+    settings: "Definições",
+    logout: "Sair",
+    signUp: "Registar",
+  },
   about: {
     description:
       "Estamos a revolucionar a forma como as pessoas encontram o carro usado perfeito, ao levar tecnologia avançada de monitorização a todos.",

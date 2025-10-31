@@ -1,4 +1,22 @@
 export const hr = {
+  navigations: {
+    features: "Značajke",
+    how: "Kako funkcionira",
+    pricing: "Cijene",
+    getAlerts: "Primaj obavijesti",
+    waitlist: "Lista čekanja",
+    faq: "Često postavljana pitanja",
+    login: "Prijava",
+    getStarted: "Započni",
+    subscribers: "Pretplatnici",
+    theme: "Tema",
+    language: "Jezik",
+    myAlerts: "Moje obavijesti",
+    profile: "Profil",
+    settings: "Postavke",
+    logout: "Odjava",
+    signUp: "Registracija",
+  },
   about: {
     description:
       "Revolucioniramo način na koji ljudi pronalaze svoj savršeni rabljeni automobil donoseći naprednu tehnologiju nadzora svima",

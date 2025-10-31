@@ -1,4 +1,22 @@
 export const fr = {
+  navigations: {
+    features: "Fonctionnalités",
+    how: "Comment ça marche",
+    pricing: "Tarifs",
+    getAlerts: "Obtenir des alertes",
+    waitlist: "Liste d'attente",
+    faq: "FAQ",
+    login: "Se connecter",
+    getStarted: "Commencer",
+    subscribers: "Abonnés",
+    theme: "Thème",
+    language: "Langue",
+    myAlerts: "Mes alertes",
+    profile: "Profil",
+    settings: "Paramètres",
+    logout: "Se déconnecter",
+    signUp: "S'inscrire",
+  },
   about: {
     description:
       "Nous révolutionnons la façon dont les gens trouvent leur voiture d’occasion idéale en rendant la technologie de surveillance avancée accessible à tous.",

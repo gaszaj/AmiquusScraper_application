@@ -1,4 +1,22 @@
 export const nl = {
+  navigations: {
+    features: "Kenmerken",
+    how: "Hoe het werkt",
+    pricing: "Prijzen",
+    getAlerts: "Meldingen ontvangen",
+    waitlist: "Wachtlijst",
+    faq: "Veelgestelde vragen",
+    login: "Inloggen",
+    getStarted: "Begin nu",
+    subscribers: "Abonnees",
+    theme: "Thema",
+    language: "Taal",
+    myAlerts: "Mijn meldingen",
+    profile: "Profiel",
+    settings: "Instellingen",
+    logout: "Uitloggen",
+    signUp: "Registreren",
+  },
   about: {
     description:
       "Wij veranderen de manier waarop mensen hun perfecte tweedehands auto vinden door geavanceerde monitoringtechnologie voor iedereen toegankelijk te maken.",
