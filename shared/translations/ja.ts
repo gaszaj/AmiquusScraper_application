@@ -395,8 +395,7 @@ export const ja = {
     careers: "採用情報",
     contact: "お問い合わせ",
     cookies: "クッキーポリシー",
-    copyright: "All rights reserved.  
-全著作権所有",
+    copyright: "All rights reserved.全著作権所有",
     email: "support@amiquus.com",
     faq: "よくある質問",
     features: "機能",
