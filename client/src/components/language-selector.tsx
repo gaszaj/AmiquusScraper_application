@@ -16,6 +16,7 @@ type Language = {
   flag: string;
 };
 
+
 const languages: Language[] = [
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "sl", name: "Slovenščina", flag: "🇸🇮" },
