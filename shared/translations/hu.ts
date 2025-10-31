@@ -24,16 +24,10 @@ export const hu = {
     button1: "Állítsa be az értesítéseit",
     button2: "Nézd meg, hogyan működik",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Bármikor lemondhatja",
-      nosetup: "Nincs szükség telepítésre",
-      realtime: "Valós idejű értesítések",
-      websites: "Több mint 15 weboldal követése"
+      websites: "15+ weboldal követése",
+      realtime: "Valós idejű riasztások",
+      noSetup: "Nincs szükség beállításra",
+      cancelAnytime: "Bármikor lemondható"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const hu = {
     heading: "Miért válassza az Amiquus-t?",
     subheading: "Takarítson meg időt, és soha ne maradjon le a tökéletes autójáról az AMIQUUS automatizált követési szolgáltatásával!",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Többoldalas követés",
+      description: "Kövessen nyomon több autóhirdetési weboldalt egyidejűleg anélkül, hogy mindegyiket manuálisan ellenőrizné."
     },
     notifications: {
       title: "Azonnali értesítések",
@@ -73,61 +67,12 @@ export const hu = {
       description: "Válaszd ki, milyen gyakran ellenőrizzük az új hirdetéseket, az óránkénti frissítésektől a valós idejű figyelésig."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Többnyelvű támogatás",
+      description: "Kapjon értesítéseket az Ön által preferált nyelven a hirdetések könnyebb megértése érdekében."
     },
     account: {
       title: "Egyszerű fiókkezelés",
       description: "Kezeld egyszerre több keresési profilt, és módosítsd előfizetési beállításaidat néhány kattintással."
-    },
-    multisite: {
-      description: "Több autóhirdetési weboldalt figyelhetsz egyszerre, anélkül hogy mindegyiket külön-külön kellene ellenőrizned.",
-      title: "Többoldalas követés"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const hu = {
         description: "Értesítést kapsz, amint a feltételeidnek megfelelő autó megjelenik bármelyik általunk figyelt weboldalon."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Találja meg tökéletes autóját",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Értesülj elsőként az új hirdetésekről, és csapj le a legjobb ajánlatokra, mielőtt mások megtennék!",
-        title: "Találd meg a tökéletes autódat"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const hu = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3-as sorozat, 2019, $32,500 – Most került fel az AutoTraderre",
-      title: "Új találat érkezett!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-osztály, 2020, 48 000 km – Az ár 2 000 dollárral csökkent",
-      title: "Telegram értesítés"
-    },
-    setalerts: "Állítsa be az értesítéseit",
-    whytitle: "Miért válassza az Amiquus-t?"
+    }
   },
   pricing: {
     title: "Egyszerű, átlátható árképzés",
@@ -218,17 +149,7 @@ export const hu = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Kezdje el most",
-    addonstitle: "Kiegészítők:",
-    basetitle: "Alap csomag: 79,99 $/hó",
-    footernote: "Minden csomag korlátlan keresési beállítást és egyszerű előfizetéskezelést tartalmaz.",
-    includedfeatures: {
-      0: "Egy weboldal megfigyelése",
-      1: "Óránkénti frissítések",
-      2: "Korlátlan szűrők",
-      3: "Telegram értesítések"
-    },
-    includedtitle: "Mit tartalmaz:"
+    button: "Kezdje el most"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const hu = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Az autómárka megadása kötelező",
-      carmodel: "Az autó modellje kötelező",
-      facebookmarketplaceurl: "A Facebook Marketplace URL megadása kötelező, ha a Facebook ki van választva.",
-      fueltype: "Üzemanyagtípus megadása kötelező",
-      maxkilometers: "A maximális kilométerszámnak számnak kell lennie.",
-      notificationlanguage: "Az értesítési nyelv megadása kötelező.",
-      pricemax: "A maximális árnak számnak kell lennie",
-      pricemin: "A minimális árnak számnak kell lennie",
-      telegramchatid: "A Telegram csevegés azonosító megadása kötelező.",
-      telegramtoken: "Telegram bot token megadása kötelező",
-      telegramusername: "A Telegram felhasználónév megadása kötelező",
-      websitesselected: "Legalább egy weboldalt ki kell választani.",
-      yearmax: "A maximális évnek érvényes évnek kell lennie.",
-      yearmin: "A minimális évnek érvényes évnek kell lennie."
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const hu = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Email-cím",
-      firstname: "Keresztnév",
-      lastname: "Vezetéknév"
+      email: "Email-cím"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "János",
-      lastname: "Szarvas"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Kérjük, adjon meg egy érvényes e-mail címet",
-      firstname: "Keresztnév megadása kötelező",
-      lastname: "Vezetéknév megadása kötelező"
+      email: "Kérjük, adjon meg egy érvényes e-mail címet"
     },
     actions: {
       login: "Jelentkezz be vagy regisztrálj a folytatáshoz",
@@ -332,9 +233,7 @@ export const hu = {
     labels: {
       websites: "Weboldalak figyelése",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace URL",
-      updatefrequency: "Frissítési gyakoriság"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Válassza ki a gyakoriságot"
@@ -344,16 +243,11 @@ export const hu = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Illessze be ide a Facebook Marketplace keresési eredményeinek URL-jét.",
-      updatefrequency: "Milyen gyakran ellenőrizzük az új hirdetéseket? A gyakoribb ellenőrzés magasabb költségekkel járhat.",
-      videodesc: "Nézd meg az alábbi videót a lépésről lépésre szóló útmutatóért.",
-      videotitle: "Segítségre van szükséged a Facebook Marketplace keresési linked megtalálásához?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Legalább egy weboldalt ki kell választani.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "A Facebook Marketplace URL megadása kötelező, ha a Facebook ki van választva."
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Előző",
@@ -371,15 +265,7 @@ export const hu = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Autómárka",
-      carmodel: "Autómodell",
-      fueltype: "Üzemanyag típusa",
-      maxkilometers: "Maximális kilométer",
-      pricemax: "Maximális ár",
-      pricemin: "Minimális ár",
-      yearmax: "Maximális év",
-      yearmin: "Minimális év"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const hu = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Válassza ki az autómárkát",
-      carmodel: "Válassza ki az autómodellt",
-      carmodeldisabled: "Először válassza ki az autómárkát",
-      fueltype: "Válassza ki az üzemanyagtípust",
-      maxkilometers: "Adja meg a maximális kilométerszámot",
-      pricemax: "Adja meg a legmagasabb árat",
-      pricemin: "Adja meg a minimum árat",
-      yearmax: "Adja meg a maximális évet",
-      yearmin: "Adja meg a minimális évet"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nincs elérhető modell"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const hu = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Az autómárka megadása kötelező",
-      carmodel: "Az autómodell megadása kötelező",
-      fueltype: "Üzemanyagtípus megadása kötelező",
-      maxkilometers: "A maximális kilométerszámnak számnak kell lennie.",
-      pricemax: "A maximális árnak számnak kell lennie.",
-      pricemin: "A minimális árnak számnak kell lennie.",
-      yearmax: "A maximális évnek érvényes évnek kell lennie.",
-      yearmin: "A minimális évnek érvényes évnek kell lennie."
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Előző",
@@ -444,17 +312,7 @@ export const hu = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Nyisd meg a Telegramot, és keresd meg a @BotFather-t",
-      botstep2: "Küldd el a /newbot parancsot",
-      botstep3: "Kövesd az utasításokat a bot létrehozásához",
-      botstep4: "Másold ki a BotFather által megadott tokent",
-      bottitle: "Hogyan szerezhetsz Telegram Bot Tokent:",
-      chatstep1: "Nyisd meg a Telegramot, és keresd meg a @userinfobot felhasználót",
-      chatstep2: "Küldj bármilyen üzenetet a botnak",
-      chatstep3: "A bot válaszolni fog az adataiddal, beleértve a Chat ID-det is.",
-      chatstep4: "Másolja a csevegés azonosítóját (ez egy szám)",
-      chattitle: "Hogyan szerezheti meg a Telegram Chat ID-ját:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const hu = {
       token: "Telegram bot token",
       chatId: "Your Telegram Chat ID",
       language: "Értesítési nyelv",
-      username: "Telegram felhasználónév",
-      chatid: "Telegram csevegési azonosítód"
+      username: "Telegram felhasználónév"
     },
     placeholders: {
       token: "Add meg a bot tokened a BotFather-tól",
       chatId: "Enter your Telegram chat ID",
       language: "Válassza ki a Telegram üzenet nyelvét",
-      username: "Add meg a Telegram felhasználóneved",
-      chatid: "Add meg a Telegram csevegési azonosítódat"
+      username: "Add meg a Telegram felhasználóneved"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Értem! Kérlek, add meg a lefordítandó szöveget.",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Ezt úgy szerezheted meg, ha írsz üzenetet az @userinfobot felhasználónak a Telegramon."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const hu = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const hu = {
       token: "Telegram bot token megadása kötelező",
       chatId: "Telegram chat ID is required",
       language: "Az értesítési nyelv megadása kötelező.",
-      username: "A Telegram felhasználónév megadása kötelező",
-      chatid: "A Telegram csevegési azonosító megadása kötelező"
+      username: "A Telegram felhasználónév megadása kötelező"
     },
     actions: {
       previous: "Előző",
@@ -544,47 +398,7 @@ export const hu = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Példa: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Telegram Bot Token",
-    bottokenplaceholder: "Add meg a bot tokened a BotFather-tól",
-    caralerttitle: "🚗 Új autó érkezett!",
-    chatiddescription: "Ezt úgy szerezheted meg, ha üzensz az @userinfobot felhasználónak a Telegramon.",
-    chatidlabel: "Telegram csevegési azonosítód",
-    chatidplaceholder: "Add meg a Telegram csevegési azonosítódat",
-    chatidsteps: {
-      0: "Nyisd meg a Telegramot, és keresd meg a \"userinfobot\"-ot",
-      1: "Küldj bármilyen üzenetet a botnak",
-      2: "A bot válaszolni fog az adataiddal, beleértve a Chat ID-det is.",
-      3: "Másold a Chat azonosítódat"
-    },
-    chatidtitle: "Hogyan szerezheted meg a Telegram Chat ID-det:",
-    confirmcontact: "Elindítottam egy beszélgetést a bottal, és üzenetet küldtem.",
-    contactbotinstruction: "Indítsd el a csevegést a Telegram botunkkal az alábbi linkre kattintva, majd küldj neki üzenetet:",
-    contactbotnote: "Ez szükséges az autós értesítések fogadásához. Ha asztali gépen vagy, beolvashatod a QR-kódot.",
-    helpdescription: "Nézd meg az alábbi videót a lépésről lépésre szóló útmutatóért.",
-    helptitle: "Segítségre van szükséged a Telegram Bot Token és Chat ID beállításához?",
-    kilometreslabel: "Kilométer: {{kms}}",
-    languagelabel: "Értesítési nyelv",
-    languageplaceholder: "Válassza ki a Telegram üzenet nyelvét",
-    locationlabel: "Helyszín: {{location}}",
-    previewtitle: "Telegram értesítések előnézete",
-    pricelabel: "Ár: {{price}}",
-    setupsteps: {
-      0: "Nyisd meg a Telegramot, és keresd meg a \"BotFather\"-t",
-      1: "Indítsd el a csevegést a BotFather-rel a „Start” gombra kattintva",
-      2: "Írd be a /newbot parancsot, és kövesd az utasításokat egy új bot létrehozásához.",
-      3: "Válassz nevet a botodnak",
-      4: "Válassz felhasználónevet a botodnak (aminek „bot”-ra kell végződnie)",
-      5: "Másold ki a BotFather által megadott API tokent",
-      6: "Küldj üzenetet az új botodnak a csevegés aktiválásához"
-    },
-    setuptitle: "Telepítési útmutató:",
-    subheading: "Állítsd be a Telegram botodat",
-    usernamedescription: "Ez a felhasználónév a Telegram-fiókodban (az @ jel nélkül).",
-    videodescription: "Nézd meg az alábbi videót a lépésről lépésre szóló útmutatóért.",
-    videoprompt: "Segítségre van szükséged a Telegram Bot Token és Chat ID beállításához?",
-    viewlisting: "Hirdetés megtekintése →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Tekintse át az előfizetését",
@@ -598,9 +412,7 @@ export const hu = {
       title: "Megfigyelési beállítások",
       websites: "Weboldalak",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook URL",
-      updatefrequency: "Frissítési gyakoriság"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Autó specifikációk",
@@ -609,9 +421,7 @@ export const hu = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Hatótávolság (km)",
-      price: "Árkategória (€)",
-      fueltype: "Üzemanyag típusa",
-      yearrange: "Évszakasz"
+      price: "Árkategória (€)"
     },
     notification: {
       title: "Értesítési beállítások",
@@ -623,9 +433,7 @@ export const hu = {
       base: "Alap előfizetés",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Összesen (havonta)",
-      extrawebsites: "További weboldalak",
-      frequencyupgrade: "Frekvencia frissítés"
+      total: "Összesen (havonta)"
     },
     terms: {
       checkbox: "Elfogadom a",
@@ -669,9 +477,7 @@ export const hu = {
         answer: "Előfizetését bármikor lemondhatja a fiókja vezérlőpultján. Lépjen a „Előfizetések” menüpontra, válassza ki a lemondani kívánt előfizetést, majd kattintson az „Előfizetés lemondása” gombra. Szolgáltatása az aktuális számlázási időszak végéig elérhető marad.",
         question: "Hogyan mondhatom le az előfizetésemet?"
       }
-    },
-    contactlink: "Lépjen kapcsolatba ügyfélszolgálatunkkal",
-    contactprompt: "Még mindig van kérdése?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const hu = {
     about: "Rólunk",
     blog: "Blog",
     careers: "Karrier",
-    support: "Támogatás",
-    branddescription: "Személyes asszisztensed a tökéletes használt autó ajánlat megtalálásához a legjobb időben.",
-    brandtitle: "Amiquus",
-    getstarted: "Kezdés",
-    quicklinks: "Gyors linkek"
+    support: "Támogatás"
   },
   login: {
     title: "Jelentkezzen be a fiókjába",
@@ -716,21 +518,8 @@ export const hu = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Kérjük, adjon meg egy érvényes e-mail címet.",
-      shortpassword: "A jelszónak legalább 6 karakterből kell állnia"
-    },
-    emaillabel: "E-mail",
-    errortitle: "Sikertelen bejelentkezés",
-    genericerror: "Kérjük, ellenőrizze a hitelesítő adatait, és próbálja meg újra.",
-    loggingin: "Bejelentkezés...",
-    loginbutton: "Bejelentkezés",
-    loginwithgoogle: "Jelentkezz be a Google-lal",
-    noaccount: "Nincs fiókod?",
-    passwordlabel: "Jelszó",
-    registerlink: "Regisztrálj",
-    successmessage: "Sikeresen bejelentkeztél.",
-    successtitle: "Sikeres bejelentkezés"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Fiók létrehozása",
@@ -774,33 +563,8 @@ export const hu = {
       failure: {
         title: "A regisztráció sikertelen",
         desc: "Kérjük, ellenőrizze adatait, és próbálja meg újra."
-      },
-      invalidusername: {
-        desc: "A felhasználónév csak betűket és számokat tartalmazhat, és 3–20 karakter hosszú lehet.",
-        title: "Érvénytelen felhasználónév"
-      },
-      missingfields: {
-        desc: "Kérjük, töltse ki az összes kötelező mezőt!",
-        title: "Hiányzó mezők"
-      },
-      passwordmismatch: {
-        desc: "Kérjük, győződj meg róla, hogy a jelszavaid megegyeznek.",
-        title: "A jelszavak nem egyeznek"
-      },
-      termsnotaccepted: {
-        desc: "A folytatáshoz el kell fogadnod a feltételeket és az adatvédelmi szabályzatot.",
-        title: "Feltételek nem elfogadottak"
       }
-    },
-    alreadyhave: "Már van fiókod?",
-    confirmpassword: "Jelszó megerősítése",
-    createbtn: "Fiók létrehozása",
-    firstname: "Keresztnév",
-    lastname: "Vezetéknév",
-    orcontinue: "Vagy folytasd ezzel",
-    privacypolicy: "Adatvédelmi szabályzat",
-    termsnotice: "Elfogadom a",
-    termsofservice: "Szolgáltatási feltételek"
+    }
   },
   verifyEmail: {
     title: "Erősítse meg e-mail-címét",
@@ -821,20 +585,8 @@ export const hu = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-mail frissítve",
-      entervalidemail: "Kérjük, adjon meg egy érvényes e-mail címet.",
-      invalidemail: "Érvénytelen e-mail cím",
-      sameemail: "Ugyanaz az e-mail",
-      sameemaildesc: "Az új e-mail cím megegyezik a jelenlegi e-mail címmel."
-    },
-    codelabel: "Ellenőrző kód",
-    footernote: "Nem kaptad meg a kódot? Nézd meg a spam mappádat!",
-    resendbutton: "Kód újraküldése",
-    resendcountdown: "Újraküldheti a kódot {{seconds}} másodperc múlva.",
-    updateemailbutton: "E-mail frissítése",
-    updateemaillabel: "E-mail frissítése",
-    verifybutton: "E-mail megerősítése"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Fizetési mód hozzáadása",
@@ -845,12 +597,6 @@ export const hu = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Váratlan hiba történt",
-    errortitle: "Hiba a fizetési mód hozzáadásakor",
-    initerror: {
-      description: "Nem sikerült inicializálni a fizetési beállítást",
-      title: "Hiba"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const hu = {
       methods: "Fizetési módok",
       account: "Fiókbeállítások",
       privacy: "Adatvédelem és biztonság",
-      logout: "Kijelentkezés",
-      membersince: "Tagja ettől"
+      logout: "Kijelentkezés"
     },
     account: {
       title: "Fiókbeállítások",
@@ -955,14 +700,8 @@ export const hu = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Az autós értesítések fogadásához el kell indítanod egy beszélgetést a Telegram botunkkal, és üzenetet kell küldened neki. Kérjük, kövesd az alábbi utasításokat a bot eléréséhez.",
-        title: "Kapcsolattartó bot szükséges"
       }
-    },
-    basetitle: "79,99 USD/hó",
-    basicplan: "Alap csomag"
+    }
   },
   loginPrompt: {
     title: "Bejelentkezés szükséges",
@@ -1005,15 +744,8 @@ export const hu = {
       },
       error: {
         title: "Hiba a feliratkozás frissítésekor"
-      },
-      priceerror: {
-        description: "Egyszerre szünetelteted és frissíted az előfizetésed árát. Válaszd ki, hogy szünetelteted vagy frissíted az árat.",
-        title: "Nem sikerült frissíteni az előfizetést"
       }
-    },
-    notfound: "Előfizetés nem található",
-    notfoundsub: "Vissza a vezérlőpultra",
-    subtitle: "Szerkeszd az előfizetésed adatait lentebb"
+    }
   },
   about: {
     title: "Az Amiquusról",
@@ -1241,8 +973,7 @@ export const hu = {
           1: "A kapcsolat oldal meglátogatásával a weboldalunkon"
         }
       }
-    },
-    lastupdated: "Utoljára frissítve: 2025. május 21."
+    }
   },
   privacy: {
     metaTitle: "Adatvédelmi tájékoztató | Amiquus",
@@ -1363,8 +1094,7 @@ export const hu = {
           1: "A kapcsolat oldal meglátogatásával a weboldalunkon"
         }
       }
-    },
-    lastupdated: "Utoljára frissítve: 2025. május 21."
+    }
   },
   faqs: {
     metaTitle: "Gyakran Ismételt Kérdések | Amiquus",
@@ -1408,34 +1138,6 @@ export const hu = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Beállítod a keresési feltételeidet (márka, modell, árkategória stb.)",
-          1: "Ön választja ki, hogy mely weboldalakat szeretné figyelni.",
-          2: "Összekapcsolod a Telegram-fiókodat az értesítésekhez",
-          3: "Rendszerünk folyamatosan figyeli az Ön által kiválasztott weboldalakat az új hirdetésekért.",
-          4: "Amikor megjelenik egy megfelelő autó, azonnali Telegram értesítést kapsz minden részlettel és egy közvetlen hivatkozással."
-        },
-        question: "Hogyan működik?"
-      },
-      whatis: {
-        answer: "Amiquus egy olyan szolgáltatás, amely több autóhirdetési weboldalt figyel, hogy megtalálja azokat a járműveket, amelyek megfelelnek az Ön egyedi keresési feltételeinek. Amint megjelenik egy megfelelő hirdetés, azonnali értesítést kap Telegramon keresztül, így Ön az elsők között lehet, aki felveszi a kapcsolatot az eladóval, és megszerezheti a legjobb ajánlatokat.",
-        question: "Mi az az Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Jelenleg a következő főbb autóhirdetési platformokat figyeljük:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (URL-en keresztül)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Folyamatosan bővítjük a platformok körét, hogy a lehető legátfogóbb lefedettséget biztosítsuk.",
-        question: "Mely autóhirdetési oldalakat figyeli?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const hu = {
           2: "Válassza a „Előfizetések” fület",
           3: "Kattintson a „Előfizetés lemondása” gombra annál az előfizetésnél, amelyet le szeretne mondani."
         },
-        note: "Az előfizetésed aktív marad a jelenlegi számlázási időszak végéig.",
-        stepsintro: "Előfizetését bármikor lemondhatja a fiók profiloldalán."
+        note: "Az előfizetésed aktív marad a jelenlegi számlázási időszak végéig."
       },
       multiple: {
         question: "Lehet több előfizetésem különböző autómodellekre?",
@@ -1488,8 +1189,7 @@ export const hu = {
           4: "Add meg a bot tokenedet és a chat azonosítódat az AMIQUUS előfizetésed beállításaiban.",
           5: "Tesztelje az értesítési beállítását a `Tesztüzenet küldése` gombbal"
         },
-        note: "Részletes, lépésről lépésre vezető útmutató képernyőképekkel a feliratkozás beállítása során elérhető.",
-        stepsintro: "A Telegram-értesítések beállításához:"
+        note: "Részletes, lépésről lépésre vezető útmutató képernyőképekkel a feliratkozás beállítása során elérhető."
       },
       frequency: {
         question: "Milyen gyakran fogok értesítéseket kapni?",
@@ -1561,19 +1261,7 @@ export const hu = {
         description: "Ezt az e-mail címet arra fogjuk használni, hogy értesítsünk, amikor felszabadul egy hely."
       },
       submit: "Csatlakozz a várólistához",
-      submitting: "Beküldés...",
-      firstname: {
-        label: "Keresztnév",
-        placeholder: "János"
-      },
-      lastname: {
-        label: "Vezetéknév",
-        placeholder: "Szarvas"
-      }
-    },
-    cantjoin: {
-      description: "Értesítünk, amint elérhetővé válik egy előfizetési hely.",
-      title: "Csatlakozz a várólistához"
+      submitting: "Beküldés..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const hu = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Küldjön nekünk e-mailt, és 24 órán belül válaszolunk!",
-      email: "support@amiquus.com",
-      title: "E-mailes ügyfélszolgálat"
-    },
-    faqheading: "Gyakran ismételt kérdések",
-    stillneedhelp: {
-      button: "Lépjen kapcsolatba az ügyfélszolgálattal",
-      description: "Ha nem találtad meg a kérdésedre a választ, bátran vedd fel a kapcsolatot ügyfélszolgálatunkkal. Azért vagyunk itt, hogy segítsünk!",
-      heading: "Még mindig segítségre van szüksége?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const hu = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Mégse",
-    confirmremove: "Kártya eltávolítása",
-    default: "Alapértelmezett",
-    expires: "Lejár",
-    remove: "Eltávolítás",
-    removedescription: "Biztosan törölni szeretné a(z) {{brand}} kártyáját, amelynek utolsó négy számjegye: {{last4}}?",
-    removetitle: "Fizetési mód eltávolítása",
-    removewarning: "Ez az alapértelmezett fizetési módod, és annak eltávolítása hatással lehet az aktív előfizetéseidre.",
-    setasdefault: "Beállítás alapértelmezettként",
-    setdefaultdescription: "Szeretné beállítani a(z) {{brand}} kártyát, amelynek utolsó négy számjegye {{last4}}, alapértelmezett fizetési módszerként? Ezt a kártyát fogjuk használni minden jövőbeli előfizetési fizetéshez.",
-    setdefaulttitle: "Alapértelmezett fizetési mód beállítása"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Riasztás törlése",
-    canceldescription: "Biztosan törölni szeretné az autóriasztást erre: {{brand}} {{model}}? Ezzel minden értesítés leáll, és ha újra szeretné figyelni ezt az autót, új riasztást kell beállítania.",
-    canceltitle: "Autóriasztás lemondása",
-    confirmcancel: "Riasztás törlése",
-    edit: "Szerkesztés",
-    keepmyalert: "Értesítésem megtartása",
-    language: "Nyelv",
-    price: "Ár",
-    pricerange: "Ár",
-    updates: "Frissítések",
-    websites: "Weboldalak",
-    years: "Évek"
-  },
-  signUp: {
-    cta: "Értesítések kérése most",
-    heading: "Hozza létre autós értesítését",
-    subheading: "Állítsd be személyre szabott autóhirdetés-értesítéseidet néhány egyszerű lépésben.",
-    toast: {
-      error: {
-        description: "Nem sikerült létrehozni az előfizetést. Kérjük, próbálja meg később újra.",
-        title: "Előfizetés sikertelen"
-      },
-      success: {
-        description: "Előfizetésed sikeresen létrejött.",
-        title: "Előfizetés létrehozva"
-      }
-    },
-    waitlist: {
-      cta: "Csatlakozz a várólistához",
-      message: "Jelenleg teljes kapacitással működünk. Kérjük, csatlakozz a várólistánkhoz, hogy értesítést kapj, amikor felszabadul egy hely."
     }
   }
 };

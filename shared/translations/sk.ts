@@ -24,16 +24,10 @@ export const sk = {
     button1: "Nastavte si upozornenia",
     button2: "Pozrite sa, ako to funguje",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Zrušiť kedykoľvek",
-      nosetup: "Nie je potrebné žiadne nastavenie",
+      websites: "Sledovaných 15+ webov",
       realtime: "Upozornenia v reálnom čase",
-      websites: "Sledovanie viac ako 15 webových stránok"
+      noSetup: "Nie je potrebné nastavenie",
+      cancelAnytime: "Zrušiť kedykoľvek"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const sk = {
     heading: "Prečo si vybrať Amiquus?",
     subheading: "Ušetrite čas a nikdy nezmeškajte svoje ideálne auto s našou automatizovanou službou sledovania.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Sledovanie viacerých stránok",
+      description: "Sledujte viacero webových stránok s ponukami automobilov súčasne bez potreby kontrolovať každú manuálne."
     },
     notifications: {
       title: "Okamžité upozornenia",
@@ -73,61 +67,12 @@ export const sk = {
       description: "Vyberte, ako často budeme kontrolovať nové inzeráty, od hodinových aktualizácií až po sledovanie v reálnom čase."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Podpora viacerých jazykov",
+      description: "Prijímajte oznámenia v uprednostňovanom jazyku pre ľahšie pochopenie inzerátov."
     },
     account: {
       title: "Jednoduchá správa účtu",
       description: "Spravujte viacero vyhľadávacích profilov a upravujte nastavenia predplatného len niekoľkými kliknutiami."
-    },
-    multisite: {
-      description: "Sledujte viaceré webové stránky s inzerciami áut naraz bez nutnosti manuálne kontrolovať každú zvlášť.",
-      title: "Sledovanie na viacerých stránkach"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const sk = {
         description: "Dostávajte upozornenia hneď, ako sa na niektorej z našich sledovaných webových stránok objaví auto, ktoré zodpovedá vašim kritériám."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Nájdite svoj dokonalý automobil",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Buďte prví, kto sa dozvie o nových ponukách na AMIQUUS a získajte tie najlepšie ponuky skôr než ostatní.",
-        title: "Nájdite svoje ideálne auto"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const sk = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 Series, 2019, $32,500 – Práve pridané na AutoTrader",
-      title: "Našli sme novú zhodu!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-trieda, 2020, 30 000 míľ – Cena znížená o 2 000 $",
-      title: "Telegram upozornenie"
-    },
-    setalerts: "Nastavte si upozornenia",
-    whytitle: "Prečo si vybrať Amiquus?"
+    }
   },
   pricing: {
     title: "Jednoduché, transparentné ceny",
@@ -218,17 +149,7 @@ export const sk = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Začať teraz",
-    addonstitle: "Doplnky:",
-    basetitle: "Základný balík: 79,99 $/mesiac",
-    footernote: "Všetky plány zahŕňajú neobmedzené konfigurácie vyhľadávania a jednoduchú správu predplatného.",
-    includedfeatures: {
-      0: "Jedno monitorovanie webovej stránky",
-      1: "Hodinové aktualizácie",
-      2: "Neobmedzené filtre",
-      3: "Telegram notifikácie"
-    },
-    includedtitle: "Čo je súčasťou:"
+    button: "Začať teraz"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const sk = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Značka auta je povinná",
-      carmodel: "Model vozidla je povinný",
-      facebookmarketplaceurl: "URL pre Facebook Marketplace je povinný, keď je vybraný Facebook.",
-      fueltype: "Typ paliva je povinný",
-      maxkilometers: "Maximálny počet kilometrov musí byť číslo",
-      notificationlanguage: "Je potrebné zvoliť jazyk upozornení.",
-      pricemax: "Maximálna cena musí byť číslo",
-      pricemin: "Minimálna cena musí byť číslo",
-      telegramchatid: "Je potrebné zadať Telegram chat ID.",
-      telegramtoken: "Je vyžadovaný token pre Telegram bota",
-      telegramusername: "Používateľské meno na Telegrame je povinné",
-      websitesselected: "Musí byť vybraná aspoň jedna webová stránka.",
-      yearmax: "Maximálny rok musí byť platný rok",
-      yearmin: "Minimálny rok musí byť platný rok"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const sk = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Emailová adresa",
-      firstname: "Meno",
-      lastname: "Priezvisko"
+      email: "Emailová adresa"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Ján",
-      lastname: "Jeleň"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Zadajte platný e-mail",
-      firstname: "Meno je povinné",
-      lastname: "Priezvisko je povinné"
+      email: "Zadajte platný e-mail"
     },
     actions: {
       login: "Prihláste sa alebo zaregistrujte pre pokračovanie",
@@ -332,9 +233,7 @@ export const sk = {
     labels: {
       websites: "Webstránky na sledovanie",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Frekvencia aktualizácií"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Vyberte frekvenciu"
@@ -344,16 +243,11 @@ export const sk = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Vložte sem URL výsledkov vyhľadávania na Facebook Marketplace.",
-      updatefrequency: "Ako často by sme mali kontrolovať nové inzeráty? Vyššia frekvencia môže znamenať vyššie náklady.",
-      videodesc: "Pozrite si video nižšie pre podrobné inštrukcie krok za krokom.",
-      videotitle: "Potrebujete pomocť s vyhľadaním vášho odkazu na vyhľadávanie na Facebook Marketplace?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Je potrebné vybrať aspoň jednu webovú stránku.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL Facebook Marketplace je povinný, keď je vybraný Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Predchádzajúce",
@@ -371,15 +265,7 @@ export const sk = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Značka auta",
-      carmodel: "Model auta",
-      fueltype: "Typ paliva",
-      maxkilometers: "Maximálny počet kilometrov",
-      pricemax: "Maximálna cena",
-      pricemin: "Minimálna cena",
-      yearmax: "Maximálny rok",
-      yearmin: "Minimálny rok"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const sk = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Vyberte značku auta",
-      carmodel: "Vyberte model auta",
-      carmodeldisabled: "Najskôr vyberte značku auta",
-      fueltype: "Vyberte typ paliva",
-      maxkilometers: "Zadajte maximálny počet kilometrov",
-      pricemax: "Zadajte maximálnu cenu",
-      pricemin: "Zadajte minimálnu cenu",
-      yearmax: "Zadajte maximálny rok",
-      yearmin: "Zadajte minimálny rok"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nie sú dostupné žiadne modely"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const sk = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Značka auta je povinná",
-      carmodel: "Model vozidla je povinný",
-      fueltype: "Typ paliva je povinný",
-      maxkilometers: "Maximálny počet kilometrov musí byť číslo",
-      pricemax: "Maximálna cena musí byť číslo",
-      pricemin: "Minimálna cena musí byť číslo",
-      yearmax: "Maximálny rok musí byť platný rok",
-      yearmin: "Minimálny rok musí byť platný rok"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Predchádzajúce",
@@ -444,17 +312,7 @@ export const sk = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Otvorte Telegram a vyhľadajte @BotFather",
-      botstep2: "Zadajte príkaz /newbot",
-      botstep3: "Postupujte podľa pokynov na vytvorenie bota",
-      botstep4: "Skopírujte token, ktorý poskytol BotFather",
-      bottitle: "Ako získať token pre Telegram bota:",
-      chatstep1: "Otvorte Telegram a vyhľadajte @userinfobot",
-      chatstep2: "Pošlite akúkoľvek správu botovi",
-      chatstep3: "Bot vám odpovie s vašimi informáciami vrátane vášho Chat ID",
-      chatstep4: "Skopírujte ID chatu (je to číslo)",
-      chattitle: "Ako získať svoj Telegram Chat ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const sk = {
       token: "Token Telegram bota",
       chatId: "Your Telegram Chat ID",
       language: "Jazyk notifikácií",
-      username: "Telegram používateľské meno",
-      chatid: "Váš Telegram Chat ID"
+      username: "Telegram používateľské meno"
     },
     placeholders: {
       token: "Zadajte svoj token bota od BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Vyberte jazyk správy pre Telegram",
-      username: "Zadajte svoje používateľské meno na Telegrame",
-      chatid: "Zadajte svoj Telegram chat ID"
+      username: "Zadajte svoje používateľské meno na Telegrame"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Rozumiem! Prosím, zadajte text, ktorý chcete preložiť.",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Toto získate, ak napíšete správu @userinfobot na Telegrame."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const sk = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const sk = {
       token: "Token Telegram bota je povinný",
       chatId: "Telegram chat ID is required",
       language: "Je potrebné vybrať jazyk upozornenia.",
-      username: "Používateľské meno na Telegrame je povinné",
-      chatid: "Telegram chat ID je povinný"
+      username: "Používateľské meno na Telegrame je povinné"
     },
     actions: {
       previous: "Predchádzajúce",
@@ -544,47 +398,7 @@ export const sk = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Príklad: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Token Telegram bota",
-    bottokenplaceholder: "Zadajte svoj token bota od BotFather",
-    caralerttitle: "🚗 Nové vozidlo!",
-    chatiddescription: "Toto získate, ak napíšete správu @userinfobot na Telegrame.",
-    chatidlabel: "Váš Telegram Chat ID",
-    chatidplaceholder: "Zadajte svoj Telegram chat ID",
-    chatidsteps: {
-      0: "Otvorte Telegram a vyhľadajte \"userinfobot\"",
-      1: "Pošli akúkoľvek správu botovi",
-      2: "Bot vám odpovie s vašimi informáciami vrátane vášho Chat ID",
-      3: "Skopírujte svoje ID chatu"
-    },
-    chatidtitle: "Ako získať svoj Telegram Chat ID:",
-    confirmcontact: "Začal som chat s botom a poslal správu.",
-    contactbotinstruction: "Začnite chat s naším Telegram botom kliknutím na odkaz nižšie a pošlite mu správu:",
-    contactbotnote: "Toto je potrebné na prijímanie upozornení na autá. Ak ste na počítači, môžete naskenovať QR kód.",
-    helpdescription: "Pozrite si video nižšie pre podrobný návod krok za krokom.",
-    helptitle: "Potrebujete pomoc s nastavením vášho Telegram Bot Tokenu a Chat ID?",
-    kilometreslabel: "Kilometre: {{kms}}",
-    languagelabel: "Jazyk upozornení",
-    languageplaceholder: "Vyberte jazyk správy pre Telegram",
-    locationlabel: "Poloha: {{location}}",
-    previewtitle: "Náhľad upozornení Telegram",
-    pricelabel: "Cena: {{price}}",
-    setupsteps: {
-      0: "Otvorte Telegram a vyhľadajte \"BotFather\"",
-      1: "Začnite chat s BotFather kliknutím na „Štart“",
-      2: "Napíš /newbot a postupuj podľa pokynov na vytvorenie nového bota",
-      3: "Zvoľte meno pre svojho bota",
-      4: "Zvoľte používateľské meno pre svojho bota (musí končiť na 'bot')",
-      5: "Skopírujte API token poskytnutý BotFatherom",
-      6: "Pošlite správu svojmu novému botovi, aby ste aktivovali chat"
-    },
-    setuptitle: "Pokyny na nastavenie:",
-    subheading: "Nastavte svojho Telegram bota",
-    usernamedescription: "Toto je používateľské meno na vašom Telegram účte (bez znaku @).",
-    videodescription: "Pozrite si video nižšie pre podrobný návod krok za krokom.",
-    videoprompt: "Potrebujete pomoc s nastavením vášho Telegram Bot Tokenu a Chat ID?",
-    viewlisting: "Zobraziť inzerát →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Skontrolujte svoje predplatné",
@@ -598,9 +412,7 @@ export const sk = {
       title: "Nastavenia monitorovania",
       websites: "Webstránky",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook URL",
-      updatefrequency: "Frekvencia aktualizácií"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Špecifikácie auta",
@@ -609,9 +421,7 @@ export const sk = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Dojazd (km)",
-      price: "Cenové rozpätie (€)",
-      fueltype: "Typ paliva",
-      yearrange: "Rozsah rokov"
+      price: "Cenové rozpätie (€)"
     },
     notification: {
       title: "Nastavenia upozornení",
@@ -623,9 +433,7 @@ export const sk = {
       base: "Základné predplatné",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Spolu (mesačne)",
-      extrawebsites: "Ďalšie webové stránky",
-      frequencyupgrade: "Aktualizácia frekvencie"
+      total: "Spolu (mesačne)"
     },
     terms: {
       checkbox: "Súhlasím s",
@@ -669,9 +477,7 @@ export const sk = {
         answer: "Svoje predplatné môžete kedykoľvek zrušiť v ovládacom paneli svojho účtu. Prejdite do sekcie „Predplatné“, vyberte predplatné, ktoré chcete zrušiť, a kliknite na tlačidlo „Zrušiť predplatné“. Vaša služba zostane aktívna až do konca aktuálneho fakturačného obdobia.",
         question: "Ako zruším svoje predplatné?"
       }
-    },
-    contactlink: "Kontaktujte náš tím podpory",
-    contactprompt: "Stále máte otázky?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const sk = {
     about: "O nás",
     blog: "Blog",
     careers: "Kariéra",
-    support: "Podpora",
-    branddescription: "Váš osobný asistent na hľadanie tej najlepšej ponuky jazdeného auta v správnom čase.",
-    brandtitle: "Amiquus",
-    getstarted: "Začať",
-    quicklinks: "Rýchle odkazy"
+    support: "Podpora"
   },
   login: {
     title: "Prihláste sa do svojho účtu",
@@ -716,21 +518,8 @@ export const sk = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Zadajte platnú e-mailovú adresu.",
-      shortpassword: "Heslo musí mať aspoň 6 znakov"
-    },
-    emaillabel: "E-mail",
-    errortitle: "Prihlásenie zlyhalo",
-    genericerror: "Skontrolujte svoje prihlasovacie údaje a skúste to znova.",
-    loggingin: "Prihlasovanie...",
-    loginbutton: "Prihlásiť sa",
-    loginwithgoogle: "Prihlásiť sa cez Google",
-    noaccount: "Nemáte účet?",
-    passwordlabel: "Heslo",
-    registerlink: "Zaregistrovať sa",
-    successmessage: "Boli ste úspešne prihlásený.",
-    successtitle: "Prihlásenie úspešné"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Vytvoriť účet",
@@ -774,33 +563,8 @@ export const sk = {
       failure: {
         title: "Registrácia zlyhala",
         desc: "Skontrolujte svoje údaje a skúste to znova."
-      },
-      invalidusername: {
-        desc: "Používateľské meno musí byť alfanumerické a mať 3 až 20 znakov.",
-        title: "Neplatné používateľské meno"
-      },
-      missingfields: {
-        desc: "Prosím, vyplňte všetky povinné polia",
-        title: "Chýbajúce polia"
-      },
-      passwordmismatch: {
-        desc: "Uistite sa, že sa vaše heslá zhodujú.",
-        title: "Heslá sa nezhodujú"
-      },
-      termsnotaccepted: {
-        desc: "Musíte súhlasiť s podmienkami a zásadami ochrany osobných údajov, aby ste mohli pokračovať.",
-        title: "Podmienky neboli akceptované"
       }
-    },
-    alreadyhave: "Už máte účet?",
-    confirmpassword: "Potvrďte heslo",
-    createbtn: "Vytvoriť účet",
-    firstname: "Meno",
-    lastname: "Priezvisko",
-    orcontinue: "Alebo pokračujte s",
-    privacypolicy: "Zásady ochrany osobných údajov",
-    termsnotice: "Súhlasím s",
-    termsofservice: "Podmienky používania"
+    }
   },
   verifyEmail: {
     title: "Overte svoj e-mail",
@@ -821,20 +585,8 @@ export const sk = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-mail aktualizovaný",
-      entervalidemail: "Zadajte platnú e-mailovú adresu.",
-      invalidemail: "Neplatný e-mail",
-      sameemail: "Rovnaký e-mail",
-      sameemaildesc: "Nový e-mail je rovnaký ako aktuálny e-mail."
-    },
-    codelabel: "Overovací kód",
-    footernote: "Nedostali ste kód? Skontrolujte si priečinok so spamom.",
-    resendbutton: "Znova odoslať kód",
-    resendcountdown: "Kód môžete odoslať znova o {{seconds}}s",
-    updateemailbutton: "Aktualizovať e‑mail",
-    updateemaillabel: "Aktualizovať e-mail",
-    verifybutton: "Overte e-mail"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Pridať spôsob platby",
@@ -845,12 +597,6 @@ export const sk = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Vyskytla sa neočakávaná chyba",
-    errortitle: "Chyba pri pridávaní platobnej metódy",
-    initerror: {
-      description: "Nepodarilo sa inicializovať nastavenie platby",
-      title: "Chyba"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const sk = {
       methods: "Spôsoby platby",
       account: "Nastavenia účtu",
       privacy: "Súkromie a bezpečnosť",
-      logout: "Odhlásiť sa",
-      membersince: "Člen od"
+      logout: "Odhlásiť sa"
     },
     account: {
       title: "Nastavenia účtu",
@@ -955,14 +700,8 @@ export const sk = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Aby ste mohli dostávať upozornenia na autá, musíte začať chat s naším Telegram botom a poslať správu. Postupujte podľa pokynov nižšie na kontaktovanie bota.",
-        title: "Vyžaduje sa kontaktný bot"
       }
-    },
-    basetitle: "79,99 $/mesiac",
-    basicplan: "Základný balík"
+    }
   },
   loginPrompt: {
     title: "Prihlásenie je vyžadované",
@@ -1005,15 +744,8 @@ export const sk = {
       },
       error: {
         title: "Chyba pri aktualizácii predplatného"
-      },
-      priceerror: {
-        description: "Predplatné nemôžete naraz pozastaviť aj upraviť cenu. Musíte ho buď pozastaviť, alebo upraviť cenu.",
-        title: "Nie je možné aktualizovať predplatné"
       }
-    },
-    notfound: "Predplatné nebolo nájdené",
-    notfoundsub: "Späť na nástenku",
-    subtitle: "Upravte svoje údaje o predplatnom nižšie"
+    }
   },
   about: {
     title: "O spoločnosti Amiquus",
@@ -1241,8 +973,7 @@ export const sk = {
           1: "Návštevou kontaktnej stránky na našej webovej stránke"
         }
       }
-    },
-    lastupdated: "Naposledy aktualizované: 21. mája 2025"
+    }
   },
   privacy: {
     metaTitle: "Zásady ochrany osobných údajov | Amiquus",
@@ -1363,8 +1094,7 @@ export const sk = {
           1: "Návštevou kontaktnej stránky na našej webovej stránke"
         }
       }
-    },
-    lastupdated: "Naposledy aktualizované: 21. mája 2025"
+    }
   },
   faqs: {
     metaTitle: "Často kladené otázky | Amiquus",
@@ -1408,34 +1138,6 @@ export const sk = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Nastavíte si svoje kritériá vyhľadávania (značka, model, cenové rozpätie atď.)",
-          1: "Vy si vyberáte, ktoré webové stránky chcete sledovať.",
-          2: "Prepojíte svoj Telegram účet pre notifikácie",
-          3: "Náš systém nepretržite monitoruje vaše vybrané webové stránky pre nové inzeráty.",
-          4: "Keď sa objaví vyhovujúce auto, okamžite dostanete notifikáciu na Telegrame so všetkými detailmi a priamym odkazom."
-        },
-        question: "Ako to funguje?"
-      },
-      whatis: {
-        answer: "Amiquus je služba, ktorá monitoruje viaceré webové stránky s inzerciou áut a vyhľadáva vozidlá podľa vašich špecifických kritérií. Keď sa objaví zodpovedajúci inzerát, okamžite dostanete notifikáciu cez Telegram, vďaka čomu môžete byť medzi prvými, ktorí kontaktujú predajcu a získajú skvelú ponuku.",
-        question: "Čo je Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Aktuálne monitorujeme nasledujúce hlavné platformy na inzerciu áut:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "CarGurus",
-          3: "TrueCar",
-          4: "Facebook Marketplace (cez URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Neustále pridávame nové platformy, aby sme zabezpečili čo najkomplexnejšie pokrytie.",
-        question: "Ktoré webové stránky s inzerciou áut sledujete?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const sk = {
           2: "Vyberte kartu „Predplatné“",
           3: "Kliknite na tlačidlo „Zrušiť predplatné“ vedľa predplatného, ktoré chcete zrušiť."
         },
-        note: "Vaše predplatné zostane aktívne až do konca vášho aktuálneho fakturačného obdobia.",
-        stepsintro: "Svoje predplatné môžete kedykoľvek zrušiť na stránke profilu svojho účtu:"
+        note: "Vaše predplatné zostane aktívne až do konca vášho aktuálneho fakturačného obdobia."
       },
       multiple: {
         question: "Môžem mať viacero predplatných na rôzne modely áut?",
@@ -1488,8 +1189,7 @@ export const sk = {
           4: "Zadajte svoj token bota a ID chatu v nastaveniach predplatného AMIQUUS.",
           5: "Otestujte svoje nastavenie notifikácií pomocou tlačidla `Odoslať testovaciu správu`"
         },
-        note: "Podrobné krok za krokom návody s obrázkami obrazovky sú k dispozícii počas procesu nastavenia predplatného.",
-        stepsintro: "Na nastavenie upozornení v Telegrame:"
+        note: "Podrobné krok za krokom návody s obrázkami obrazovky sú k dispozícii počas procesu nastavenia predplatného."
       },
       frequency: {
         question: "Ako často budem dostávať notifikácie?",
@@ -1561,19 +1261,7 @@ export const sk = {
         description: "Tento e-mail použijeme na to, aby sme vás informovali, keď sa uvoľní miesto."
       },
       submit: "Pridajte sa na čakaciu listinu",
-      submitting: "Odosielanie...",
-      firstname: {
-        label: "Meno",
-        placeholder: "Ján"
-      },
-      lastname: {
-        label: "Priezvisko",
-        placeholder: "Jeleň"
-      }
-    },
-    cantjoin: {
-      description: "Dáme vám vedieť, hneď ako sa uvoľní miesto na predplatné.",
-      title: "Pridajte sa na čakaciu listinu"
+      submitting: "Odosielanie..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const sk = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Pošlite nám e-mail a ozveme sa vám do 24 hodín.",
-      email: "support@amiquus.com",
-      title: "E-mailová podpora"
-    },
-    faqheading: "Najčastejšie kladené otázky",
-    stillneedhelp: {
-      button: "Kontaktujte podporu",
-      description: "Ak ste nenašli odpoveď na svoju otázku, neváhajte kontaktovať náš tím podpory. Sme tu, aby sme vám pomohli!",
-      heading: "Stále potrebujete pomoc?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const sk = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Zrušiť",
-    confirmremove: "Odstrániť kartu",
-    default: "Predvolené",
-    expires: "Platnosť do",
-    remove: "Odstrániť",
-    removedescription: "Ste si istý, že chcete odstrániť svoju kartu {{brand}}, ktorá končí na {{last4}}?",
-    removetitle: "Odstrániť platobnú metódu",
-    removewarning: "Toto je vaša predvolená platobná metóda a jej odstránenie môže ovplyvniť vaše aktívne predplatné.",
-    setasdefault: "Nastaviť ako predvolené",
-    setdefaultdescription: "Chcete nastaviť kartu {{brand}} končiacu na {{last4}} ako svoju predvolenú platobnú metódu? Táto karta bude použitá na všetky budúce platby za predplatné.",
-    setdefaulttitle: "Nastaviť predvolený spôsob platby"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Zrušiť upozornenie",
-    canceldescription: "Ste si istý, že chcete zrušiť upozornenie na auto {{brand}} {{model}}? Týmto zastavíte všetky notifikácie a ak budete chcieť toto auto opäť sledovať, budete si musieť nastaviť nové upozornenie.",
-    canceltitle: "Zrušiť upozornenie na auto",
-    confirmcancel: "Zrušiť upozornenie",
-    edit: "Upraviť",
-    keepmyalert: "Uložiť moje upozornenie",
-    language: "Jazyk",
-    price: "Cena",
-    pricerange: "Cena",
-    updates: "Aktualizácie",
-    websites: "Webstránky",
-    years: "Roky"
-  },
-  signUp: {
-    cta: "Dostávajte upozornenia teraz",
-    heading: "Vytvorte si upozornenie na auto",
-    subheading: "Nastavte si personalizované upozornenia na inzeráty áut v niekoľkých jednoduchých krokoch.",
-    toast: {
-      error: {
-        description: "Nepodarilo sa nám vytvoriť vaše predplatné. Skúste to prosím znova neskôr.",
-        title: "Predplatné zlyhalo"
-      },
-      success: {
-        description: "Vaše predplatné bolo úspešne vytvorené.",
-        title: "Predplatné bolo vytvorené"
-      }
-    },
-    waitlist: {
-      cta: "Pridajte sa na čakaciu listinu",
-      message: "Momentálne máme plnú kapacitu. Pridajte sa na čakací zoznam, aby ste boli informovaní, keď sa uvoľní miesto."
     }
   }
 };

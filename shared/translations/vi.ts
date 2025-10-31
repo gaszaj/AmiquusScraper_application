@@ -24,16 +24,10 @@ export const vi = {
     button1: "Thiết lập cảnh báo của bạn",
     button2: "Xem cách hoạt động",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Hủy bất cứ lúc nào",
-      nosetup: "Không cần cài đặt",
-      realtime: "Cảnh báo theo thời gian thực",
-      websites: "Theo dõi hơn 15 trang web"
+      websites: "15+ trang web được theo dõi",
+      realtime: "Cảnh báo thời gian thực",
+      noSetup: "Không cần thiết lập",
+      cancelAnytime: "Hủy bất cứ lúc nào"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const vi = {
     heading: "Tại sao chọn Amiquus?",
     subheading: "Tiết kiệm thời gian và không bao giờ bỏ lỡ chiếc xe hoàn hảo với dịch vụ theo dõi tự động của chúng tôi.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Theo dõi đa trang web",
+      description: "Theo dõi nhiều trang web rao vặt xe hơi cùng lúc mà không cần phải kiểm tra từng trang thủ công."
     },
     notifications: {
       title: "Thông báo tức thì",
@@ -73,61 +67,12 @@ export const vi = {
       description: "Chọn tần suất kiểm tra tin đăng mới, từ cập nhật hàng giờ đến giám sát theo thời gian thực."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Hỗ trợ đa ngôn ngữ",
+      description: "Nhận thông báo bằng ngôn ngữ ưa thích của bạn để hiểu danh sách dễ dàng hơn."
     },
     account: {
       title: "Quản lý tài khoản dễ dàng",
       description: "Quản lý nhiều hồ sơ tìm kiếm và thay đổi cài đặt đăng ký chỉ với vài cú nhấp chuột."
-    },
-    multisite: {
-      description: "Theo dõi nhiều trang web đăng tin bán ô tô cùng lúc mà không cần phải kiểm tra từng trang một cách thủ công.",
-      title: "Theo dõi nhiều trang web"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const vi = {
         description: "Nhận thông báo ngay khi có xe phù hợp với tiêu chí của bạn xuất hiện trên bất kỳ trang web nào mà AMIQUUS đang theo dõi."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Tìm chiếc xe hoàn hảo của bạn",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Hãy là người đầu tiên biết về các tin đăng mới và săn được những ưu đãi tốt nhất trước mọi người.",
-        title: "Tìm chiếc xe hoàn hảo của bạn"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const vi = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 Series, 2019, $32,500 - Vừa được đăng trên AutoTrader",
-      title: "Đã tìm thấy kết nối mới!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 48.000 km - Giá giảm 46.000.000₫",
-      title: "Cảnh báo Telegram"
-    },
-    setalerts: "Thiết lập cảnh báo của bạn",
-    whytitle: "Tại sao chọn Amiquus?"
+    }
   },
   pricing: {
     title: "Giá cả minh bạch, đơn giản",
@@ -218,17 +149,7 @@ export const vi = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Bắt đầu ngay",
-    addonstitle: "Tiện ích bổ sung:",
-    basetitle: "Gói cơ bản: 79,99$/tháng",
-    footernote: "Tất cả gói đều bao gồm cấu hình tìm kiếm không giới hạn và quản lý đăng ký dễ dàng.",
-    includedfeatures: {
-      0: "Giám sát một trang web",
-      1: "Cập nhật hàng giờ",
-      2: "Bộ lọc không giới hạn",
-      3: "Thông báo Telegram"
-    },
-    includedtitle: "Những gì bao gồm:"
+    button: "Bắt đầu ngay"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const vi = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Hãng xe là bắt buộc",
-      carmodel: "Vui lòng nhập mẫu xe",
-      facebookmarketplaceurl: "URL Facebook Marketplace là bắt buộc khi bạn chọn Facebook",
-      fueltype: "Loại nhiên liệu là bắt buộc",
-      maxkilometers: "Số kilomet tối đa phải là một số",
-      notificationlanguage: "Ngôn ngữ thông báo là bắt buộc",
-      pricemax: "Giá tối đa phải là một số",
-      pricemin: "Giá tối thiểu phải là một số",
-      telegramchatid: "Cần nhập ID chat Telegram",
-      telegramtoken: "Cần có mã token bot Telegram",
-      telegramusername: "Tên người dùng Telegram là bắt buộc",
-      websitesselected: "Cần chọn ít nhất một trang web",
-      yearmax: "Năm tối đa phải là một năm hợp lệ",
-      yearmin: "Năm tối thiểu phải là một năm hợp lệ"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const vi = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Địa chỉ email",
-      firstname: "Họ tên",
-      lastname: "Họ"
+      email: "Địa chỉ email"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "John, đây là cách",
-      lastname: "Hươu"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Vui lòng nhập địa chỉ email hợp lệ",
-      firstname: "Vui lòng nhập họ tên",
-      lastname: "Họ là bắt buộc"
+      email: "Vui lòng nhập địa chỉ email hợp lệ"
     },
     actions: {
       login: "Đăng nhập hoặc Đăng ký để tiếp tục",
@@ -332,9 +233,7 @@ export const vi = {
     labels: {
       websites: "Các trang web cần theo dõi",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Tần suất cập nhật"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Chọn tần suất"
@@ -344,16 +243,11 @@ export const vi = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Dán liên kết kết quả tìm kiếm Facebook Marketplace của bạn vào đây.",
-      updatefrequency: "Chúng ta nên kiểm tra tin đăng mới bao lâu một lần? Tần suất kiểm tra cao hơn có thể tốn thêm chi phí.",
-      videodesc: "Xem video bên dưới để được hướng dẫn từng bước.",
-      videotitle: "Bạn cần giúp tìm liên kết tìm kiếm Facebook Marketplace của mình?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Cần chọn ít nhất một trang web",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL Facebook Marketplace là bắt buộc khi bạn chọn Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Trước",
@@ -371,15 +265,7 @@ export const vi = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Hãng xe",
-      carmodel: "Mẫu xe",
-      fueltype: "Loại nhiên liệu",
-      maxkilometers: "Số kilômét tối đa",
-      pricemax: "Giá tối đa",
-      pricemin: "Giá tối thiểu",
-      yearmax: "Năm tối đa",
-      yearmin: "Năm tối thiểu"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const vi = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Chọn hãng xe",
-      carmodel: "Chọn mẫu xe",
-      carmodeldisabled: "Vui lòng chọn hãng xe trước",
-      fueltype: "Chọn loại nhiên liệu",
-      maxkilometers: "Nhập số ki-lô-mét tối đa",
-      pricemax: "Nhập giá tối đa",
-      pricemin: "Nhập giá tối thiểu",
-      yearmax: "Nhập năm tối đa",
-      yearmin: "Nhập năm tối thiểu"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Không có mẫu nào beschikbaar"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const vi = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Hãng xe là bắt buộc",
-      carmodel: "Vui lòng nhập mẫu xe",
-      fueltype: "Loại nhiên liệu là bắt buộc",
-      maxkilometers: "Số km tối đa phải là một số",
-      pricemax: "Giá tối đa phải là một số",
-      pricemin: "Giá tối thiểu phải là một số",
-      yearmax: "Năm tối đa phải là một năm hợp lệ",
-      yearmin: "Năm tối thiểu phải là một năm hợp lệ"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Trước",
@@ -444,17 +312,7 @@ export const vi = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Mở Telegram và tìm kiếm @BotFather",
-      botstep2: "Gửi lệnh /newbot",
-      botstep3: "Làm theo hướng dẫn để tạo bot",
-      botstep4: "Sao chép mã token do BotFather cung cấp",
-      bottitle: "Cách lấy mã Token của Bot Telegram:",
-      chatstep1: "Mở Telegram và tìm kiếm @userinfobot",
-      chatstep2: "Gửi bất kỳ tin nhắn nào cho bot",
-      chatstep3: "Bot sẽ trả lời với thông tin của bạn bao gồm cả Chat ID của bạn",
-      chatstep4: "Sao chép ID trò chuyện (đây là một số)",
-      chattitle: "Cách lấy Chat ID Telegram của bạn:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const vi = {
       token: "Mã token bot Telegram",
       chatId: "Your Telegram Chat ID",
       language: "Ngôn ngữ thông báo",
-      username: "Tên người dùng Telegram",
-      chatid: "ID Chat Telegram của bạn"
+      username: "Tên người dùng Telegram"
     },
     placeholders: {
       token: "Nhập mã token bot từ BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Chọn ngôn ngữ tin nhắn Telegram",
-      username: "Nhập tên người dùng Telegram của bạn",
-      chatid: "Nhập ID chat Telegram của bạn"
+      username: "Nhập tên người dùng Telegram của bạn"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Ví dụ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Bạn có thể lấy thông tin này bằng cách nhắn tin cho @userinfobot trên Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const vi = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const vi = {
       token: "Cần nhập mã token của bot Telegram",
       chatId: "Telegram chat ID is required",
       language: "Ngôn ngữ thông báo là bắt buộc",
-      username: "Tên người dùng Telegram là bắt buộc",
-      chatid: "Yêu cầu nhập ID chat Telegram"
+      username: "Tên người dùng Telegram là bắt buộc"
     },
     actions: {
       previous: "Trước",
@@ -544,47 +398,7 @@ export const vi = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Ví dụ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Mã Token Bot Telegram",
-    bottokenplaceholder: "Nhập mã token bot từ BotFather",
-    caralerttitle: "🚗 Xe mới vừa cập bến!",
-    chatiddescription: "Bạn có thể lấy thông tin này bằng cách nhắn tin cho @userinfobot trên Telegram.",
-    chatidlabel: "ID Chat Telegram của bạn",
-    chatidplaceholder: "Nhập ID chat Telegram của bạn",
-    chatidsteps: {
-      0: "Mở Telegram và tìm kiếm \"userinfobot\"",
-      1: "Gửi bất kỳ tin nhắn nào cho bot",
-      2: "Bot sẽ trả lời với thông tin của bạn bao gồm cả Chat ID của bạn.",
-      3: "Sao chép Chat ID của bạn"
-    },
-    chatidtitle: "Cách lấy Chat ID Telegram của bạn:",
-    confirmcontact: "Tôi đã bắt đầu trò chuyện với bot và gửi một tin nhắn.",
-    contactbotinstruction: "Bắt đầu trò chuyện với bot Telegram của chúng tôi bằng cách nhấp vào liên kết bên dưới và gửi tin nhắn cho bot:",
-    contactbotnote: "Bạn cần làm điều này để nhận thông báo về xe. Nếu đang dùng máy tính, bạn có thể quét mã QR.",
-    helpdescription: "Xem video bên dưới để được hướng dẫn từng bước.",
-    helptitle: "Bạn cần trợ giúp để thiết lập Telegram Bot Token và Chat ID?",
-    kilometreslabel: "Số ki-lô-mét: {{kms}}",
-    languagelabel: "Ngôn ngữ thông báo",
-    languageplaceholder: "Chọn ngôn ngữ tin nhắn Telegram",
-    locationlabel: "Vị trí: {{location}}",
-    previewtitle: "Xem trước thông báo Telegram",
-    pricelabel: "Giá: {{price}}",
-    setupsteps: {
-      0: "Mở Telegram và tìm kiếm \"BotFather\"",
-      1: "Bắt đầu trò chuyện với BotFather bằng cách nhấn \"Bắt đầu\"",
-      2: "Nhập /newbot và làm theo hướng dẫn để tạo bot mới",
-      3: "Chọn tên cho bot của bạn",
-      4: "Chọn tên người dùng cho bot của bạn (phải kết thúc bằng 'bot')",
-      5: "Sao chép mã API do BotFather cung cấp",
-      6: "Gửi tin nhắn cho bot mới của bạn để kích hoạt trò chuyện"
-    },
-    setuptitle: "Hướng dẫn cài đặt:",
-    subheading: "Thiết lập Bot Telegram của bạn",
-    usernamedescription: "Đây là tên người dùng trên tài khoản Telegram của bạn (không bao gồm ký tự @).",
-    videodescription: "Xem video bên dưới để được hướng dẫn chi tiết từng bước.",
-    videoprompt: "Bạn cần trợ giúp để thiết lập Telegram Bot Token và Chat ID?",
-    viewlisting: "Xem tin đăng →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Xem lại gói đăng ký của bạn",
@@ -598,9 +412,7 @@ export const vi = {
       title: "Cài đặt giám sát",
       websites: "Trang web",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Liên kết Facebook",
-      updatefrequency: "Tần suất cập nhật"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Thông số kỹ thuật xe",
@@ -609,9 +421,7 @@ export const vi = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Quãng đường di chuyển (km)",
-      price: "Khoảng giá (€)",
-      fueltype: "Loại nhiên liệu",
-      yearrange: "Khoảng năm"
+      price: "Khoảng giá (€)"
     },
     notification: {
       title: "Cài đặt thông báo",
@@ -623,9 +433,7 @@ export const vi = {
       base: "Gói đăng ký cơ bản",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Tổng cộng (hàng tháng)",
-      extrawebsites: "Các trang web bổ sung",
-      frequencyupgrade: "Nâng cấp tần số"
+      total: "Tổng cộng (hàng tháng)"
     },
     terms: {
       checkbox: "Tôi đồng ý với",
@@ -669,9 +477,7 @@ export const vi = {
         answer: "Bạn có thể hủy gói đăng ký bất cứ lúc nào trong trang quản lý tài khoản của mình. Vào mục \"Đăng ký\", chọn gói bạn muốn hủy và nhấn nút \"Hủy đăng ký\". Dịch vụ của bạn sẽ tiếp tục hoạt động đến hết chu kỳ thanh toán hiện tại.",
         question: "Làm thế nào để hủy đăng ký của tôi?"
       }
-    },
-    contactlink: "Liên hệ với đội ngũ hỗ trợ của chúng tôi",
-    contactprompt: "Bạn vẫn còn thắc mắc?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const vi = {
     about: "Về chúng tôi",
     blog: "Blog",
     careers: "Cơ hội nghề nghiệp",
-    support: "Hỗ trợ",
-    branddescription: "Trợ lý cá nhân giúp bạn tìm kiếm chiếc xe cũ phù hợp với mức giá tốt nhất vào đúng thời điểm.",
-    brandtitle: "Amiquus",
-    getstarted: "Bắt đầu",
-    quicklinks: "Liên kết nhanh"
+    support: "Hỗ trợ"
   },
   login: {
     title: "Đăng nhập vào tài khoản của bạn",
@@ -716,21 +518,8 @@ export const vi = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Vui lòng nhập địa chỉ email hợp lệ",
-      shortpassword: "Mật khẩu phải có ít nhất 6 ký tự"
-    },
-    emaillabel: "Email",
-    errortitle: "Đăng nhập không thành công",
-    genericerror: "Vui lòng kiểm tra thông tin đăng nhập và thử lại.",
-    loggingin: "Đang đăng nhập...",
-    loginbutton: "Đăng nhập",
-    loginwithgoogle: "Đăng nhập với Google",
-    noaccount: "Chưa có tài khoản?",
-    passwordlabel: "Mật khẩu",
-    registerlink: "Đăng ký",
-    successmessage: "Bạn đã đăng nhập thành công.",
-    successtitle: "Đăng nhập thành công"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Tạo tài khoản",
@@ -774,33 +563,8 @@ export const vi = {
       failure: {
         title: "Đăng ký không thành công",
         desc: "Vui lòng kiểm tra lại thông tin của bạn và thử lại."
-      },
-      invalidusername: {
-        desc: "Tên người dùng phải là chữ và số, có độ dài từ 3 đến 20 ký tự",
-        title: "Tên đăng nhập không hợp lệ"
-      },
-      missingfields: {
-        desc: "Vui lòng điền đầy đủ các trường bắt buộc",
-        title: "Thiếu thông tin"
-      },
-      passwordmismatch: {
-        desc: "Vui lòng đảm bảo mật khẩu của bạn trùng khớp",
-        title: "Mật khẩu không khớp"
-      },
-      termsnotaccepted: {
-        desc: "Bạn phải chấp nhận các điều khoản và chính sách bảo mật để tiếp tục",
-        title: "Điều khoản chưa được chấp nhận"
       }
-    },
-    alreadyhave: "Bạn đã có tài khoản?",
-    confirmpassword: "Xác nhận mật khẩu",
-    createbtn: "Tạo tài khoản",
-    firstname: "Họ tên",
-    lastname: "Họ",
-    orcontinue: "Hoặc tiếp tục với",
-    privacypolicy: "Chính sách bảo mật",
-    termsnotice: "Tôi đồng ý với",
-    termsofservice: "Điều khoản dịch vụ"
+    }
   },
   verifyEmail: {
     title: "Xác minh email của bạn",
@@ -821,20 +585,8 @@ export const vi = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Email đã được cập nhật",
-      entervalidemail: "Vui lòng nhập địa chỉ email hợp lệ",
-      invalidemail: "Email không hợp lệ",
-      sameemail: "Cùng email",
-      sameemaildesc: "Email mới giống với email hiện tại."
-    },
-    codelabel: "Mã xác thực",
-    footernote: "Không nhận được mã? Kiểm tra thư mục spam của bạn.",
-    resendbutton: "Gửi lại mã",
-    resendcountdown: "Bạn có thể gửi lại mã sau {{seconds}} giây",
-    updateemailbutton: "Cập nhật Email",
-    updateemaillabel: "Cập nhật Email",
-    verifybutton: "Xác minh email"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Thêm phương thức thanh toán",
@@ -845,12 +597,6 @@ export const vi = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Đã xảy ra lỗi không mong muốn",
-    errortitle: "Đã xảy ra lỗi khi thêm phương thức thanh toán",
-    initerror: {
-      description: "Không thể khởi tạo thiết lập thanh toán",
-      title: "Lỗi"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const vi = {
       methods: "Phương thức thanh toán",
       account: "Cài đặt tài khoản",
       privacy: "Quyền riêng tư & bảo mật",
-      logout: "Đăng xuất",
-      membersince: "Thành viên từ"
+      logout: "Đăng xuất"
     },
     account: {
       title: "Cài đặt tài khoản",
@@ -955,14 +700,8 @@ export const vi = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Bạn cần bắt đầu trò chuyện với bot Telegram của chúng tôi và gửi một tin nhắn để nhận thông báo về xe. Vui lòng làm theo hướng dẫn bên dưới để liên hệ với bot.",
-        title: "Yêu cầu Bot Liên Hệ"
       }
-    },
-    basetitle: "79,99 USD/tháng",
-    basicplan: "Gói Cơ Bản"
+    }
   },
   loginPrompt: {
     title: "Yêu cầu đăng nhập",
@@ -1005,15 +744,8 @@ export const vi = {
       },
       error: {
         title: "Lỗi khi cập nhật gói đăng ký"
-      },
-      priceerror: {
-        description: "Bạn đang tạm dừng và cập nhật giá gói đăng ký cùng lúc. Vui lòng chỉ tạm dừng hoặc cập nhật giá.",
-        title: "Không thể cập nhật gói đăng ký"
       }
-    },
-    notfound: "Không tìm thấy gói đăng ký",
-    notfoundsub: "Quay lại bảng điều khiển",
-    subtitle: "Chỉnh sửa thông tin đăng ký của bạn bên dưới"
+    }
   },
   about: {
     title: "Giới thiệu về Amiquus",
@@ -1241,8 +973,7 @@ export const vi = {
           1: "Bằng cách truy cập trang liên hệ trên website của chúng tôi"
         }
       }
-    },
-    lastupdated: "Cập nhật lần cuối: 21 tháng 5, 2025"
+    }
   },
   privacy: {
     metaTitle: "Chính Sách Bảo Mật | Amiquus",
@@ -1363,8 +1094,7 @@ export const vi = {
           1: "Bằng cách truy cập trang liên hệ trên website của chúng tôi"
         }
       }
-    },
-    lastupdated: "Cập nhật lần cuối: 21 tháng 5, 2025"
+    }
   },
   faqs: {
     metaTitle: "Câu hỏi thường gặp | Amiquus",
@@ -1408,34 +1138,6 @@ export const vi = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Bạn thiết lập tiêu chí tìm kiếm của mình (hãng xe, mẫu xe, khoảng giá, v.v.)",
-          1: "Bạn chọn những trang web muốn theo dõi",
-          2: "Bạn kết nối tài khoản Telegram để nhận thông báo",
-          3: "Hệ thống của AMIQUUS liên tục theo dõi các trang web bạn chọn để phát hiện tin đăng mới",
-          4: "Khi có xe phù hợp xuất hiện, bạn sẽ nhận được thông báo Telegram ngay lập tức với đầy đủ chi tiết và liên kết trực tiếp."
-        },
-        question: "Cách hoạt động?"
-      },
-      whatis: {
-        answer: "AMIQUUS là dịch vụ giúp bạn theo dõi nhiều trang web đăng tin bán ô tô, tìm kiếm những chiếc xe phù hợp với tiêu chí riêng của bạn. Khi có tin đăng phù hợp, bạn sẽ nhận được thông báo ngay lập tức qua Telegram, giúp bạn là một trong những người đầu tiên liên hệ với người bán và săn được những ưu đãi tốt nhất.",
-        question: "Amiquus là gì?"
-      },
-      whichwebsites: {
-        answerintro: "Hiện tại, chúng tôi đang theo dõi các nền tảng đăng tin bán ô tô lớn sau:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (qua URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Chúng tôi liên tục bổ sung thêm nền tảng mới để mang đến phạm vi phủ sóng toàn diện nhất.",
-        question: "Bạn theo dõi những trang web đăng tin bán ô tô nào?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const vi = {
           2: "Chọn tab \"Gói đăng ký\"",
           3: "Nhấn vào nút \"Hủy đăng ký\" bên cạnh gói đăng ký bạn muốn hủy"
         },
-        note: "Gói đăng ký của bạn sẽ tiếp tục hoạt động cho đến hết chu kỳ thanh toán hiện tại.",
-        stepsintro: "Bạn có thể hủy đăng ký bất cứ lúc nào tại trang hồ sơ tài khoản của mình:"
+        note: "Gói đăng ký của bạn sẽ tiếp tục hoạt động cho đến hết chu kỳ thanh toán hiện tại."
       },
       multiple: {
         question: "Tôi có thể đăng ký nhiều gói cho các mẫu xe khác nhau không?",
@@ -1488,8 +1189,7 @@ export const vi = {
           4: "Nhập mã token bot và ID chat của bạn trong phần cài đặt đăng ký Amiquus",
           5: "Kiểm tra thiết lập thông báo của bạn bằng nút `Gửi tin nhắn thử nghiệm`"
         },
-        note: "Hướng dẫn chi tiết từng bước kèm hình ảnh minh họa sẽ được cung cấp trong quá trình thiết lập đăng ký.",
-        stepsintro: "Để thiết lập thông báo Telegram:"
+        note: "Hướng dẫn chi tiết từng bước kèm hình ảnh minh họa sẽ được cung cấp trong quá trình thiết lập đăng ký."
       },
       frequency: {
         question: "Tôi sẽ nhận thông báo bao lâu một lần?",
@@ -1561,19 +1261,7 @@ export const vi = {
         description: "Chúng tôi sẽ dùng email này để thông báo cho bạn khi có chỗ trống."
       },
       submit: "Tham gia danh sách chờ",
-      submitting: "Đang gửi...",
-      firstname: {
-        label: "Họ tên",
-        placeholder: "John, hướng dẫn đây"
-      },
-      lastname: {
-        label: "Họ",
-        placeholder: "Hươu"
-      }
-    },
-    cantjoin: {
-      description: "Chúng tôi sẽ thông báo cho bạn ngay khi có chỗ đăng ký mới.",
-      title: "Tham gia danh sách chờ"
+      submitting: "Đang gửi..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const vi = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Gửi cho chúng tôi email và chúng tôi sẽ phản hồi bạn trong vòng 24 giờ",
-      email: "support@amiquus.com",
-      title: "Hỗ trợ qua email"
-    },
-    faqheading: "Câu hỏi thường gặp",
-    stillneedhelp: {
-      button: "Liên hệ hỗ trợ",
-      description: "Nếu bạn chưa tìm thấy câu trả lời cho thắc mắc của mình, đừng ngần ngại liên hệ với đội ngũ hỗ trợ của AMIQUUS. Chúng tôi luôn sẵn sàng giúp bạn!",
-      heading: "Bạn vẫn cần hỗ trợ?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const vi = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Hủy",
-    confirmremove: "Xóa thẻ",
-    default: "Mặc định",
-    expires: "Hết hạn",
-    remove: "Xóa",
-    removedescription: "Bạn có chắc chắn muốn xóa thẻ {{brand}} có số kết thúc là {{last4}} không?",
-    removetitle: "Xóa phương thức thanh toán",
-    removewarning: "Đây là phương thức thanh toán mặc định của bạn và việc xóa nó có thể ảnh hưởng đến các gói đăng ký đang hoạt động của bạn.",
-    setasdefault: "Đặt làm mặc định",
-    setdefaultdescription: "Bạn có muốn đặt thẻ {{brand}} có số kết thúc là {{last4}} làm phương thức thanh toán mặc định không? Thẻ này sẽ được sử dụng cho tất cả các khoản thanh toán gia hạn sau này.",
-    setdefaulttitle: "Đặt phương thức thanh toán mặc định"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Hủy cảnh báo",
-    canceldescription: "Bạn có chắc chắn muốn hủy cảnh báo xe cho {{brand}} {{model}} không? Việc này sẽ dừng tất cả thông báo và bạn sẽ cần tạo cảnh báo mới nếu muốn tiếp tục theo dõi xe này.",
-    canceltitle: "Hủy cảnh báo xe",
-    confirmcancel: "Hủy cảnh báo",
-    edit: "Chỉnh sửa",
-    keepmyalert: "Lưu cảnh báo của tôi",
-    language: "Ngôn ngữ",
-    price: "Giá",
-    pricerange: "Giá",
-    updates: "Cập nhật",
-    websites: "Trang web",
-    years: "Năm"
-  },
-  signUp: {
-    cta: "Nhận cảnh báo ngay",
-    heading: "Tạo cảnh báo xe của bạn",
-    subheading: "Thiết lập thông báo tin đăng xe cá nhân hóa chỉ với vài bước đơn giản.",
-    toast: {
-      error: {
-        description: "Chúng tôi không thể tạo đăng ký của bạn. Vui lòng thử lại sau.",
-        title: "Đăng ký không thành công"
-      },
-      success: {
-        description: "Đăng ký của bạn đã được tạo thành công",
-        title: "Đăng ký đã được tạo"
-      }
-    },
-    waitlist: {
-      cta: "Tham gia danh sách chờ",
-      message: "Hiện tại chúng tôi đã kín chỗ. Vui lòng tham gia danh sách chờ để được thông báo khi có chỗ trống."
     }
   }
 };

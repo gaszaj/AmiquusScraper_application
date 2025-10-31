@@ -24,16 +24,10 @@ export const sl = {
     button1: "Nastavite svoja obvestila",
     button2: "Oglejte si, kako deluje",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Prekličite kadarkoli",
-      nosetup: "Namestitev ni potrebna",
+      websites: "Spremljanih 15+ spletnih mest",
       realtime: "Opozorila v realnem času",
-      websites: "Spremljanje več kot 15 spletnih strani"
+      noSetup: "Ni potrebna namestitev",
+      cancelAnytime: "Prekličite kadarkoli"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const sl = {
     heading: "Zakaj izbrati Amiquus?",
     subheading: "Prihranite čas in nikoli ne zamudite svojega popolnega avtomobila z našo avtomatizirano storitvijo sledenja.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Spremljanje več spletnih mest",
+      description: "Spremljajte več spletnih mest z oglasi avtomobilov hkrati, ne da bi morali vsako ročno preveriti."
     },
     notifications: {
       title: "Takojšnja obvestila",
@@ -73,61 +67,12 @@ export const sl = {
       description: "Izberite, kako pogosto preverjamo nove objave, od urnih posodobitev do spremljanja v realnem času."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Večjezična podpora",
+      description: "Prejemajte obvestila v vašem želenem jeziku za lažje razumevanje oglasov."
     },
     account: {
       title: "Enostavno upravljanje računa",
       description: "Upravljajte več iskalnih profilov in spreminjajte nastavitve naročnine z nekaj kliki."
-    },
-    multisite: {
-      description: "Spremljajte več spletnih strani z oglasi za avtomobile hkrati, brez potrebe po ročnem preverjanju vsake posebej.",
-      title: "Sledenje na več mestih"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const sl = {
         description: "Prejmite obvestila takoj, ko se na katerikoli od naših spremljanih spletnih strani pojavi avtomobil, ki ustreza vašim kriterijem."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Poiščite svoje popolno vozilo",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Bodite prvi obveščeni o novih ponudbah in si zagotovite najboljše ponudbe, še preden jih kdo drug.",
-        title: "Najdite svoj popolni avto"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const sl = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW serija 3, 2019, $32,500 - Pravkar objavljeno na AutoTrader",
-      title: "Najdeno novo ujemanje!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-razred, 2020, 30.000 milj - Cena znižana za 2.000 $",
-      title: "Telegram opozorilo"
-    },
-    setalerts: "Nastavite svoja obvestila",
-    whytitle: "Zakaj izbrati Amiquus?"
+    }
   },
   pricing: {
     title: "Preprosto, pregledno določanje cen",
@@ -218,17 +149,7 @@ export const sl = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Začnite zdaj",
-    addonstitle: "Dodatki:",
-    basetitle: "Osnovni paket: 79,99 $/mesec",
-    footernote: "Vsi paketi vključujejo neomejene konfiguracije iskanja in enostavno upravljanje naročnine.",
-    includedfeatures: {
-      0: "Eno spremljanje spletne strani",
-      1: "Urne posodobitve",
-      2: "Neomejeni filtri",
-      3: "Obvestila na Telegram"
-    },
-    includedtitle: "Kaj je vključeno:"
+    button: "Začnite zdaj"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const sl = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Znamka avtomobila je obvezna",
-      carmodel: "Model avtomobila je obvezen",
-      facebookmarketplaceurl: "URL za Facebook Marketplace je obvezen, ko je izbran Facebook",
-      fueltype: "Vrsta goriva je obvezna",
-      maxkilometers: "Največje število kilometrov mora biti številka",
-      notificationlanguage: "Jezik obvestila je obvezen",
-      pricemax: "Najvišja cena mora biti številka",
-      pricemin: "Najnižja cena mora biti številka",
-      telegramchatid: "Telegram ID klepeta je obvezen",
-      telegramtoken: "Zahtevan je žeton za Telegram bota",
-      telegramusername: "Uporabniško ime za Telegram je obvezno",
-      websitesselected: "Izbrati je treba vsaj eno spletno stran",
-      yearmax: "Največje leto mora biti veljavno leto",
-      yearmin: "Minimalno leto mora biti veljavno leto"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const sl = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "E-poštni naslov",
-      firstname: "Ime",
-      lastname: "Priimek"
+      email: "E-poštni naslov"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "John",
-      lastname: "Jelen"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Prosimo, vnesite veljaven e-poštni naslov",
-      firstname: "Ime je obvezno",
-      lastname: "Priimek je obvezen"
+      email: "Prosimo, vnesite veljaven e-poštni naslov"
     },
     actions: {
       login: "Prijavite se ali registrirajte za nadaljevanje",
@@ -332,9 +233,7 @@ export const sl = {
     labels: {
       websites: "Spletna mesta za spremljanje",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Pogostost posodabljanja"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Izberite frekvenco"
@@ -344,16 +243,11 @@ export const sl = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Prilepite URL vaših rezultatov iskanja na Facebook Marketplace tukaj.",
-      updatefrequency: "Kako pogosto naj preverjamo nove objave? Višje frekvence lahko pomenijo višje stroške.",
-      videodesc: "Oglejte si spodnji video za navodila po korakih.",
-      videotitle: "Potrebujete pomoč pri iskanju vaše povezave za iskanje na Facebook Marketplace?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Izbrati je treba vsaj eno spletno stran",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL Facebook Marketplace je obvezen, ko je izbran Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Prejšnji",
@@ -371,15 +265,7 @@ export const sl = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Znamka avtomobila",
-      carmodel: "Model avtomobila",
-      fueltype: "Vrsta goriva",
-      maxkilometers: "Maksimalni kilometri",
-      pricemax: "Najvišja cena",
-      pricemin: "Najnižja cena",
-      yearmax: "Največje leto",
-      yearmin: "Minimalno leto"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const sl = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Izberite znamko avtomobila",
-      carmodel: "Izberite model avtomobila",
-      carmodeldisabled: "Najprej izberite znamko avtomobila",
-      fueltype: "Izberite vrsto goriva",
-      maxkilometers: "Vnesite največje število kilometrov",
-      pricemax: "Vnesite največjo ceno",
-      pricemin: "Vnesite najmanjšo ceno",
-      yearmax: "Vnesite največje leto",
-      yearmin: "Vnesite najmanjše leto"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Ni razpoložljivih modelov"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const sl = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Znamka avtomobila je obvezna",
-      carmodel: "Model avtomobila je obvezen",
-      fueltype: "Vrsta goriva je obvezna",
-      maxkilometers: "Največje število kilometrov mora biti številka",
-      pricemax: "Najvišja cena mora biti številka",
-      pricemin: "Minimalna cena mora biti številka",
-      yearmax: "Največje leto mora biti veljavno leto",
-      yearmin: "Minimalno leto mora biti veljavno leto"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Prejšnji",
@@ -444,17 +312,7 @@ export const sl = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Odprite Telegram in poiščite @BotFather",
-      botstep2: "Pošlji ukaz /newbot",
-      botstep3: "Sledite navodilom za ustvarjanje bota",
-      botstep4: "Kopirajte žeton, ki ga je zagotovil BotFather",
-      bottitle: "Kako pridobiti žeton za Telegram bota:",
-      chatstep1: "Odprite Telegram in poiščite @userinfobot",
-      chatstep2: "Pošljite katerokoli sporočilo botu",
-      chatstep3: "Bot vam bo odgovoril z vašimi podatki, vključno z vašim Chat ID",
-      chatstep4: "Kopirajte ID klepeta (to je številka)",
-      chattitle: "Kako pridobiti svoj Telegram Chat ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const sl = {
       token: "Telegram žeton bota",
       chatId: "Your Telegram Chat ID",
       language: "Jezik obvestil",
-      username: "Telegram uporabniško ime",
-      chatid: "Vaš Telegram Chat ID"
+      username: "Telegram uporabniško ime"
     },
     placeholders: {
       token: "Vnesite svoj žeton bota od BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Izberite jezik sporočila za Telegram",
-      username: "Vnesite svoje uporabniško ime za Telegram",
-      chatid: "Vnesite svoj Telegram ID za klepet"
+      username: "Vnesite svoje uporabniško ime za Telegram"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Understood! Please provide the text you would like me to translate.",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "To lahko dobite tako, da pošljete sporočilo @userinfobot na Telegramu."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const sl = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const sl = {
       token: "Potrebna je žeton za Telegram bota",
       chatId: "Telegram chat ID is required",
       language: "Jezik obvestila je obvezen",
-      username: "Uporabniško ime za Telegram je obvezno",
-      chatid: "Telegram ID klepeta je obvezen"
+      username: "Uporabniško ime za Telegram je obvezno"
     },
     actions: {
       previous: "Prejšnji",
@@ -544,47 +398,7 @@ export const sl = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Seveda! Prosim, posredujte besedilo, ki ga želite prevesti v slovenščino.",
-    bottokenlabel: "Telegram Bot žeton",
-    bottokenplaceholder: "Vnesite svoj žeton bota od BotFather",
-    caralerttitle: "🚗 Novo vozilo!",
-    chatiddescription: "To lahko dobite tako, da pošljete sporočilo @userinfobot na Telegramu.",
-    chatidlabel: "Vaš Telegram Chat ID",
-    chatidplaceholder: "Vnesite svoj Telegram ID za klepet",
-    chatidsteps: {
-      0: "Odprite Telegram in poiščite \"userinfobot\"",
-      1: "Pošlji katerokoli sporočilo botu",
-      2: "Bot vam bo odgovoril z vašimi podatki, vključno z vašim Chat ID",
-      3: "Kopiraj svojo ID klepeta"
-    },
-    chatidtitle: "Kako pridobiti svoj Telegram Chat ID:",
-    confirmcontact: "Začel sem pogovor z botom in poslal sporočilo",
-    contactbotinstruction: "Začnite klepet z našim Telegram botom tako, da kliknete spodnjo povezavo in mu pošljete sporočilo:",
-    contactbotnote: "To je potrebno za prejemanje obvestil o avtomobilih. Če ste na namizju, lahko skenirate QR kodo.",
-    helpdescription: "Oglejte si spodnji video za navodila po korakih.",
-    helptitle: "Potrebujete pomoč pri nastavitvi svojega Telegram Bot Tokena in Chat ID-ja?",
-    kilometreslabel: "Kilometri: {{kms}}",
-    languagelabel: "Jezik obvestil",
-    languageplaceholder: "Izberite jezik sporočila za Telegram",
-    locationlabel: "Lokacija: {{location}}",
-    previewtitle: "Predogled obvestil Telegram",
-    pricelabel: "Cena: {{price}}",
-    setupsteps: {
-      0: "Odprite Telegram in poiščite \"BotFather\"",
-      1: "Začnite klepet z BotFather s klikom na »Začni«",
-      2: "Vpišite /newbot in sledite navodilom za ustvarjanje novega bota",
-      3: "Izberite ime za svojega bota",
-      4: "Izberite uporabniško ime za svojega bota (mora se končati z 'bot')",
-      5: "Kopirajte žeton API, ki ga je zagotovil BotFather",
-      6: "Pošljite sporočilo svojemu novemu botu, da aktivirate klepet"
-    },
-    setuptitle: "Navodila za nastavitev:",
-    subheading: "Nastavite svojega Telegram bota",
-    usernamedescription: "To je uporabniško ime na vašem Telegram računu (brez simbola @).",
-    videodescription: "Oglejte si spodnji video za navodila po korakih.",
-    videoprompt: "Potrebujete pomoč pri nastavitvi svojega Telegram Bot Tokena in Chat ID-ja?",
-    viewlisting: "Ogled oglasa →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Preglejte svojo naročnino",
@@ -598,9 +412,7 @@ export const sl = {
       title: "Nastavitve nadzora",
       websites: "Spletne strani",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook URL",
-      updatefrequency: "Pogostost posodabljanja"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Specifikacije avtomobila",
@@ -609,9 +421,7 @@ export const sl = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Domet (km)",
-      price: "Cenovni razpon (€)",
-      fueltype: "Vrsta goriva",
-      yearrange: "Obdobje"
+      price: "Cenovni razpon (€)"
     },
     notification: {
       title: "Nastavitve obvestil",
@@ -623,9 +433,7 @@ export const sl = {
       base: "Osnovna naročnina",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Skupaj (mesečno)",
-      extrawebsites: "Dodatna spletna mesta",
-      frequencyupgrade: "Nadgradnja frekvence"
+      total: "Skupaj (mesečno)"
     },
     terms: {
       checkbox: "Strinjam se s",
@@ -669,9 +477,7 @@ export const sl = {
         answer: "Naročnino lahko kadar koli prekličete na nadzorni plošči svojega računa. Pojdite v razdelek »Naročnine«, izberite naročnino, ki jo želite preklicati, in kliknite gumb »Prekliči naročnino«. Vaša storitev bo aktivna do konca trenutnega obračunskega obdobja.",
         question: "Kako prekličem svojo naročnino?"
       }
-    },
-    contactlink: "Kontaktirajte našo podporno ekipo",
-    contactprompt: "Še vedno imate vprašanja?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const sl = {
     about: "O nas",
     blog: "Blog",
     careers: "Kariera",
-    support: "Podpora",
-    branddescription: "Vaš osebni asistent za iskanje popolne ponudbe rabljenega avtomobila ob pravem času.",
-    brandtitle: "Amiquus",
-    getstarted: "Začnite",
-    quicklinks: "Hitre povezave"
+    support: "Podpora"
   },
   login: {
     title: "Prijavite se v svoj račun",
@@ -716,21 +518,8 @@ export const sl = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Prosimo, vnesite veljaven e-poštni naslov",
-      shortpassword: "Geslo mora imeti vsaj 6 znakov"
-    },
-    emaillabel: "E-pošta",
-    errortitle: "Prijava ni uspela",
-    genericerror: "Prosimo, preverite svoje poverilnice in poskusite znova.",
-    loggingin: "Prijavljanje...",
-    loginbutton: "Prijava",
-    loginwithgoogle: "Prijavite se z Google",
-    noaccount: "Nimate računa?",
-    passwordlabel: "Geslo",
-    registerlink: "Registriraj se",
-    successmessage: "Uspešno ste prijavljeni.",
-    successtitle: "Prijava uspešna"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Ustvari račun",
@@ -774,33 +563,8 @@ export const sl = {
       failure: {
         title: "Registracija ni uspela",
         desc: "Prosimo, preverite svoje podatke in poskusite znova."
-      },
-      invalidusername: {
-        desc: "Uporabniško ime mora biti alfanumerično in dolgo med 3 in 20 znakov",
-        title: "Neveljavno uporabniško ime"
-      },
-      missingfields: {
-        desc: "Prosimo, izpolnite vsa zahtevana polja",
-        title: "Manjkajoča polja"
-      },
-      passwordmismatch: {
-        desc: "Prosimo, preverite, ali se vaša gesla ujemajo",
-        title: "Gesli se ne ujemata"
-      },
-      termsnotaccepted: {
-        desc: "Sprejeti morate pogoje in politiko zasebnosti, da lahko nadaljujete",
-        title: "Pogoji niso sprejeti"
       }
-    },
-    alreadyhave: "Že imate račun?",
-    confirmpassword: "Potrdite geslo",
-    createbtn: "Ustvari račun",
-    firstname: "Ime",
-    lastname: "Priimek",
-    orcontinue: "Ali nadaljujte z",
-    privacypolicy: "Pravilnik o zasebnosti",
-    termsnotice: "Strinjam se s",
-    termsofservice: "Pogoji storitve"
+    }
   },
   verifyEmail: {
     title: "Preverite svoj e-poštni naslov",
@@ -821,20 +585,8 @@ export const sl = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-pošta posodobljena",
-      entervalidemail: "Prosimo, vnesite veljaven e-poštni naslov",
-      invalidemail: "Neveljaven e-poštni naslov",
-      sameemail: "Isto e-poštno sporočilo",
-      sameemaildesc: "Nov e-poštni naslov je enak trenutnemu e-poštnemu naslovu."
-    },
-    codelabel: "Verifikacijska koda",
-    footernote: "Niste prejeli kode? Preverite mapo z neželeno pošto.",
-    resendbutton: "Ponovno pošlji kodo",
-    resendcountdown: "Kodo lahko ponovno pošljete čez {{seconds}}s",
-    updateemailbutton: "Posodobi e-pošto",
-    updateemaillabel: "Posodobi e-pošto",
-    verifybutton: "Potrdite e-pošto"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Dodaj način plačila",
@@ -845,12 +597,6 @@ export const sl = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Prišlo je do nepričakovane napake",
-    errortitle: "Napaka pri dodajanju plačilne metode",
-    initerror: {
-      description: "Ni mogoče inicializirati nastavitve plačila",
-      title: "Napaka"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const sl = {
       methods: "Načini plačila",
       account: "Nastavitve računa",
       privacy: "Zasebnost in varnost",
-      logout: "Odjava",
-      membersince: "Član od"
+      logout: "Odjava"
     },
     account: {
       title: "Nastavitve računa",
@@ -955,14 +700,8 @@ export const sl = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Za prejemanje obvestil o avtomobilih morate začeti pogovor z našim Telegram botom in poslati sporočilo. Prosimo, sledite spodnjim navodilom za stik z botom.",
-        title: "Potreben je kontaktni bot"
       }
-    },
-    basetitle: "79,99 $/mesec",
-    basicplan: "Osnovni paket"
+    }
   },
   loginPrompt: {
     title: "Prijava zahtevana",
@@ -1005,15 +744,8 @@ export const sl = {
       },
       error: {
         title: "Napaka pri posodabljanju naročnine"
-      },
-      priceerror: {
-        description: "Naročnino hkrati zaustavite in posodobite ceno. Morate jo ali zaustaviti ali posodobiti ceno.",
-        title: "Ni mogoče posodobiti naročnine"
       }
-    },
-    notfound: "Naročnina ni najdena",
-    notfoundsub: "Nazaj na nadzorno ploščo",
-    subtitle: "Uredite podrobnosti svoje naročnine spodaj"
+    }
   },
   about: {
     title: "O podjetju Amiquus",
@@ -1241,8 +973,7 @@ export const sl = {
           1: "Z obiskom kontaktne strani na naši spletni strani"
         }
       }
-    },
-    lastupdated: "Zadnja posodobitev: 21. maj 2025"
+    }
   },
   privacy: {
     metaTitle: "Pravilnik o zasebnosti | Amiquus",
@@ -1363,8 +1094,7 @@ export const sl = {
           1: "Z obiskom kontaktne strani na naši spletni strani"
         }
       }
-    },
-    lastupdated: "Zadnja posodobitev: 21. maj 2025"
+    }
   },
   faqs: {
     metaTitle: "Pogosto zastavljena vprašanja | Amiquus",
@@ -1408,34 +1138,6 @@ export const sl = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Nastavite svoje iskalne kriterije (znamka, model, cenovni razpon itd.)",
-          1: "Izberete, katere spletne strani želite spremljati",
-          2: "Povežete svoj Telegram račun za obvestila",
-          3: "Naš sistem neprekinjeno spremlja vaše izbrane spletne strani za nove objave",
-          4: "Ko se pojavi ustrezen avto, prejmete takojšnje obvestilo na Telegramu z vsemi podrobnostmi in neposredno povezavo."
-        },
-        question: "Kako deluje?"
-      },
-      whatis: {
-        answer: "Amiquus je storitev, ki spremlja več spletnih strani z avtomobilskimi oglasi za vozila, ki ustrezajo vašim specifičnim kriterijem. Ko se pojavi ustrezen oglas, prejmete takojšnje obvestilo prek Telegrama, kar vam omogoča, da ste med prvimi, ki kontaktirajo prodajalce in si zagotovijo odlične ponudbe.",
-        question: "Kaj je Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Trenutno spremljamo naslednje glavne platforme za prodajo avtomobilov:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "CarGurus",
-          3: "TrueCar",
-          4: "Facebook Marketplace (prek URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Nenehno dodajamo nove platforme, da zagotovimo čim bolj celovito pokritost.",
-        question: "Katere spletne strani za prodajo avtomobilov spremljate?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const sl = {
           2: "Izberite zavihek »Naročnine«",
           3: "Kliknite gumb »Prekliči naročnino« poleg naročnine, ki jo želite preklicati"
         },
-        note: "Vaša naročnina bo ostala aktivna do konca vašega trenutnega obračunskega obdobja.",
-        stepsintro: "Naročnino lahko kadar koli prekličete na strani profila vašega računa:"
+        note: "Vaša naročnina bo ostala aktivna do konca vašega trenutnega obračunskega obdobja."
       },
       multiple: {
         question: "Ali lahko imam več naročnin za različne modele avtomobilov?",
@@ -1488,8 +1189,7 @@ export const sl = {
           4: "Vnesite svoj žeton bota in ID klepeta v nastavitvah naročnine Amiquus",
           5: "Preizkusite svojo nastavitev obveščanja z gumbom `Pošlji testno sporočilo`"
         },
-        note: "Podrobna navodila po korakih s posnetki zaslona so na voljo med postopkom nastavitve naročnine.",
-        stepsintro: "Za nastavitev obvestil v Telegramu:"
+        note: "Podrobna navodila po korakih s posnetki zaslona so na voljo med postopkom nastavitve naročnine."
       },
       frequency: {
         question: "Kako pogosto bom prejemal obvestila?",
@@ -1561,19 +1261,7 @@ export const sl = {
         description: "Ta e-poštni naslov bomo uporabili, da vas obvestimo, ko bo mesto na voljo."
       },
       submit: "Pridružite se čakalni listi",
-      submitting: "Oddajanje...",
-      firstname: {
-        label: "Ime",
-        placeholder: "John"
-      },
-      lastname: {
-        label: "Priimek",
-        placeholder: "Jelen"
-      }
-    },
-    cantjoin: {
-      description: "Obvestili vas bomo, takoj ko bo na voljo mesto za naročnino.",
-      title: "Pridružite se čakalni listi"
+      submitting: "Oddajanje..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const sl = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Pošljite nam e-pošto in odgovorili vam bomo v 24 urah",
-      email: "support@amiquus.com",
-      title: "Podpora po e-pošti"
-    },
-    faqheading: "Pogosto zastavljena vprašanja",
-    stillneedhelp: {
-      button: "Kontaktirajte podporo",
-      description: "Če niste našli odgovora na svoje vprašanje, se brez zadržkov obrnite na našo podporno ekipo. Tu smo, da vam pomagamo!",
-      heading: "Še vedno potrebujete pomoč?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const sl = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Prekliči",
-    confirmremove: "Odstrani kartico",
-    default: "Privzeto",
-    expires: "Poteče",
-    remove: "Odstrani",
-    removedescription: "Ali ste prepričani, da želite odstraniti svojo kartico {{brand}} s končnico {{last4}}?",
-    removetitle: "Odstrani plačilno metodo",
-    removewarning: "To je vaša privzeta plačilna metoda in njena odstranitev lahko vpliva na vaše aktivne naročnine.",
-    setasdefault: "Nastavi kot privzeto",
-    setdefaultdescription: "Ali želite nastaviti kartico {{brand}} s končno številko {{last4}} kot privzeto plačilno metodo? Ta kartica bo uporabljena za vsa prihodnja plačila naročnine.",
-    setdefaulttitle: "Nastavi privzeti način plačila"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Prekliči opozorilo",
-    canceldescription: "Ali ste prepričani, da želite preklicati opozorilo za avto {{brand}} {{model}}? S tem boste ustavili vsa obvestila in morali boste nastaviti novo opozorilo, če boste želeli ponovno spremljati ta avto.",
-    canceltitle: "Prekliči opozorilo za avto",
-    confirmcancel: "Prekliči opozorilo",
-    edit: "Uredi",
-    keepmyalert: "Ohrani moje opozorilo",
-    language: "Jezik",
-    price: "Cena",
-    pricerange: "Cena",
-    updates: "Posodobitve",
-    websites: "Spletne strani",
-    years: "Leta"
-  },
-  signUp: {
-    cta: "Prejmite opozorila zdaj",
-    heading: "Ustvari svoje opozorilo za avto",
-    subheading: "Nastavite svoja prilagojena obvestila o oglasih za avtomobile v samo nekaj korakih.",
-    toast: {
-      error: {
-        description: "Naročnine ni bilo mogoče ustvariti. Poskusite znova pozneje.",
-        title: "Naročnina ni uspela"
-      },
-      success: {
-        description: "Vaša naročnina je bila uspešno ustvarjena",
-        title: "Naročnina ustvarjena"
-      }
-    },
-    waitlist: {
-      cta: "Pridružite se čakalni listi",
-      message: "Trenutno smo polno zasedeni. Pridružite se čakalni listi, da boste obveščeni, ko se sprosti mesto."
     }
   }
 };

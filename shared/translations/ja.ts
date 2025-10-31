@@ -24,16 +24,10 @@ export const ja = {
     button1: "アラートを設定する",
     button2: "使い方を見る",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "いつでもキャンセル可能",
-      nosetup: "設定不要",
-      realtime: "リアルタイム通知",
-      websites: "15以上のウェブサイトを追跡"
+      websites: "15以上のウェブサイトを追跡",
+      realtime: "リアルタイムアラート",
+      noSetup: "セットアップ不要",
+      cancelAnytime: "いつでもキャンセル可能"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const ja = {
     heading: "なぜAMIQUUSを選ぶのか",
     subheading: "時間を節約し、AMIQUUSの自動追跡サービスで理想の車を見逃しません。",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "マルチサイト追跡",
+      description: "複数の中古車リストサイトを同時に監視し、それぞれを手動でチェックする必要はありません。"
     },
     notifications: {
       title: "即時通知",
@@ -73,61 +67,12 @@ export const ja = {
       description: "新着リスティングのチェック頻度を選択してください。毎時の更新からリアルタイム監視まで対応しています。"
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "多言語サポート",
+      description: "リストをより理解しやすくするために、お好みの言語で通知を受け取ります。"
     },
     account: {
       title: "かんたんアカウント管理",
       description: "複数の検索プロファイルを管理し、サブスクリプション設定を数クリックで変更できます。"
-    },
-    multisite: {
-      description: "複数の自動車販売サイトを一度にチェックでき、手間なく最新情報を見逃しません。",
-      title: "複数サイト追跡"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const ja = {
         description: "ご希望の条件に合う車が当社の監視対象ウェブサイトに掲載された瞬間に通知を受け取れます。"
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "あなたにぴったりの車を見つけましょう",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "新着情報をいち早く受け取り、誰よりもお得な物件を手に入れましょう。",
-        title: "あなたにぴったりの車を見つけよう"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const ja = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3シリーズ 2019年式 $32,500 - AutoTraderに新規掲載",
-      title: "新しいマッチが見つかりました！"
-    },
-    notificationmockup2: {
-      description: "メルセデスCクラス 2020年式 走行距離30,000マイル - 価格が$2,000値下げ",
-      title: "テレグラム通知"
-    },
-    setalerts: "アラートを設定する",
-    whytitle: "なぜAMIQUUSを選ぶのか"
+    }
   },
   pricing: {
     title: "シンプルで透明な料金体系",
@@ -218,17 +149,7 @@ export const ja = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "今すぐ始める",
-    addonstitle: "追加オプション:",
-    basetitle: "ベースパッケージ：月額79.99ドル",
-    footernote: "すべてのプランで無制限の検索設定と簡単なサブスクリプション管理がご利用いただけます。",
-    includedfeatures: {
-      0: "ウェブサイト監視１件",
-      1: "毎時更新",
-      2: "無制限フィルター",
-      3: "Telegram通知"
-    },
-    includedtitle: "含まれる内容"
+    button: "今すぐ始める"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const ja = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "車のメーカーは必須です",
-      carmodel: "車種は必須です",
-      facebookmarketplaceurl: "Facebookが選択されている場合は、FacebookマーケットプレイスのURLが必須です",
-      fueltype: "燃料タイプは必須です",
-      maxkilometers: "最大走行距離は数値で入力してください",
-      notificationlanguage: "通知言語は必須です",
-      pricemax: "最大価格は数値で入力してください",
-      pricemin: "最低価格は数値で入力してください",
-      telegramchatid: "TelegramチャットIDは必須です",
-      telegramtoken: "Telegramボットのトークンが必要です",
-      telegramusername: "Telegramのユーザー名は必須です",
-      websitesselected: "少なくとも1つのウェブサイトを選択してください",
-      yearmax: "最大年は有効な年である必要があります",
-      yearmin: "最小年は有効な年である必要があります"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const ja = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "メールアドレス",
-      firstname: "名（な）",
-      lastname: "姓"
+      email: "メールアドレス"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "ジョン",
-      lastname: "ドウ"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "有効なメールアドレスを入力してください",
-      firstname: "名（なまえ）は必須です",
-      lastname: "姓は必須です"
+      email: "有効なメールアドレスを入力してください"
     },
     actions: {
       login: "ログインまたは新規登録して続行",
@@ -332,9 +233,7 @@ export const ja = {
     labels: {
       websites: "監視対象ウェブサイト",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "FacebookマーケットプレイスのURL",
-      updatefrequency: "更新頻度"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "頻度を選択"
@@ -344,16 +243,11 @@ export const ja = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "こちらにFacebookマーケットプレイスの検索結果のURLを貼り付けてください。",
-      updatefrequency: "新着リスティングはどのくらいの頻度でチェックしますか？頻度が高いほどコストが増える場合があります。",
-      videodesc: "下の動画をご覧いただき、手順を確認してください。",
-      videotitle: "Facebookマーケットプレイスの検索リンクの見つけ方でお困りですか？"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "少なくとも1つのウェブサイトを選択してください",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebookが選択されている場合は、FacebookマーケットプレイスのURLが必須です"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "前へ",
@@ -371,15 +265,7 @@ export const ja = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "車種",
-      carmodel: "車種",
-      fueltype: "燃料タイプ",
-      maxkilometers: "最大距離",
-      pricemax: "最大価格",
-      pricemin: "最低価格",
-      yearmax: "最大年",
-      yearmin: "最小年"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const ja = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "車のメーカーを選択",
-      carmodel: "車種を選択",
-      carmodeldisabled: "まずは車のメーカーを選択してください",
-      fueltype: "燃料タイプを選択",
-      maxkilometers: "最大走行距離を入力してください",
-      pricemax: "最大価格を入力",
-      pricemin: "最低価格を入力",
-      yearmax: "最大年を入力",
-      yearmin: "最小年を入力してください"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "利用可能なモデルはありません"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const ja = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "車のブランドは必須です",
-      carmodel: "車種は必須です",
-      fueltype: "燃料タイプは必須です",
-      maxkilometers: "最大走行距離は数字で入力してください",
-      pricemax: "最大価格は数値で入力してください",
-      pricemin: "最低価格は数字で入力してください",
-      yearmax: "最大年は有効な年でなければなりません",
-      yearmin: "最小年は有効な年を入力してください"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "前へ",
@@ -444,17 +312,7 @@ export const ja = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Telegramを開いて「@BotFather」と検索してください",
-      botstep2: "コマンド /newbot を送信してください",
-      botstep3: "ボットを作成する手順に従ってください",
-      botstep4: "BotFatherから提供されたトークンをコピーしてください",
-      bottitle: "Telegramボットトークンの取得方法:",
-      chatstep1: "Telegramを開いて「@userinfobot」と検索してください",
-      chatstep2: "ボットにメッセージを送信してください",
-      chatstep3: "ボットがあなたの情報（Chat IDを含む）を返信します",
-      chatstep4: "チャットIDをコピーしてください（数字です）",
-      chattitle: "TelegramチャットIDの取得方法"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const ja = {
       token: "Telegramボットトークン",
       chatId: "Your Telegram Chat ID",
       language: "通知言語",
-      username: "Telegramユーザー名",
-      chatid: "あなたのTelegramチャットID"
+      username: "Telegramユーザー名"
     },
     placeholders: {
       token: "BotFatherからボットのトークンを入力してください",
       chatId: "Enter your Telegram chat ID",
       language: "Telegramメッセージの言語を選択",
-      username: "Telegramのユーザー名を入力してください",
-      chatid: "TelegramチャットIDを入力してください"
+      username: "Telegramのユーザー名を入力してください"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "例: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Telegramで@userinfobotにメッセージを送ると取得できます。"
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const ja = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const ja = {
       token: "Telegramボットのトークンが必要です",
       chatId: "Telegram chat ID is required",
       language: "通知言語は必須です",
-      username: "Telegramのユーザー名は必須です",
-      chatid: "TelegramチャットIDは必須です"
+      username: "Telegramのユーザー名は必須です"
     },
     actions: {
       previous: "前へ",
@@ -544,47 +398,7 @@ export const ja = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "例: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Telegramボットトークン",
-    bottokenplaceholder: "BotFatherからボットのトークンを入力してください",
-    caralerttitle: "🚗 新着車両！",
-    chatiddescription: "Telegramで@userinfobotにメッセージを送ると取得できます。",
-    chatidlabel: "あなたのTelegramチャットID",
-    chatidplaceholder: "TelegramチャットIDを入力してください",
-    chatidsteps: {
-      0: "Telegramを開いて「userinfobot」と検索してください",
-      1: "ボットにメッセージを送信してください",
-      2: "ボットがあなたの情報（Chat IDを含む）を返信します",
-      3: "チャットIDをコピー"
-    },
-    chatidtitle: "TelegramチャットIDの取得方法",
-    confirmcontact: "ボットとチャットを開始し、メッセージを送信しました",
-    contactbotinstruction: "下のリンクをクリックして、Telegramボットとチャットを始め、メッセージを送信してください。",
-    contactbotnote: "車の通知を受け取るために必要です。デスクトップをご利用の場合は、QRコードをスキャンできます。",
-    helpdescription: "下の動画で手順をわかりやすくご案内しています。",
-    helptitle: "TelegramボットのトークンとチャットIDの設定方法でお困りですか？",
-    kilometreslabel: "走行距離：{{kms}}",
-    languagelabel: "通知言語",
-    languageplaceholder: "Telegramメッセージの言語を選択",
-    locationlabel: "場所：{{location}}",
-    previewtitle: "Telegram通知をプレビュー",
-    pricelabel: "価格：{{price}}",
-    setupsteps: {
-      0: "Telegramを開いて「BotFather」を検索してください",
-      1: "「開始」をクリックしてBotFatherとチャットを始めましょう",
-      2: "/newbot と入力し、案内に従って新しいボットを作成してください",
-      3: "ボットの名前を選んでください",
-      4: "あなたのボットのユーザー名を選んでください（「bot」で終わる必要があります）",
-      5: "BotFatherから提供されたAPIトークンをコピーしてください",
-      6: "新しいボットにメッセージを送信してチャットを開始しましょう"
-    },
-    setuptitle: "セットアップ手順：",
-    subheading: "Telegramボットを設定する",
-    usernamedescription: "これはあなたのTelegramアカウントのユーザー名です（@マークなし）。",
-    videodescription: "下の動画で手順をわかりやすくご案内しています。",
-    videoprompt: "TelegramボットトークンとチャットIDの設定方法でお困りですか？",
-    viewlisting: "リスティングを見る →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "ご契約内容の確認",
@@ -598,9 +412,7 @@ export const ja = {
       title: "監視設定",
       websites: "ウェブサイト",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "FacebookのURL",
-      updatefrequency: "更新頻度"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "車の仕様",
@@ -609,9 +421,7 @@ export const ja = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "航続距離（km）",
-      price: "価格帯（€）",
-      fueltype: "燃料タイプ",
-      yearrange: "年範囲"
+      price: "価格帯（€）"
     },
     notification: {
       title: "通知設定",
@@ -623,9 +433,7 @@ export const ja = {
       base: "基本サブスクリプション",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "合計（月額）",
-      extrawebsites: "追加ウェブサイト",
-      frequencyupgrade: "周波数アップグレード"
+      total: "合計（月額）"
     },
     terms: {
       checkbox: "同意します",
@@ -669,9 +477,7 @@ export const ja = {
         answer: "ご契約の管理画面から、いつでもサブスクリプションを解約できます。「サブスクリプション」セクションに進み、解約したいサブスクリプションを選択して「サブスクリプションを解約」ボタンをクリックしてください。ご利用中の請求期間が終了するまでサービスは継続されます。",
         question: "サブスクリプションを解約するにはどうすればいいですか？"
       }
-    },
-    contactlink: "サポートチームにお問い合わせください",
-    contactprompt: "ご不明な点がありますか？"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const ja = {
     about: "私たちについて",
     blog: "ブログ",
     careers: "採用情報",
-    support: "サポート",
-    branddescription: "あなたにぴったりの中古車を、最適なタイミングで見つけるパーソナルアシスタント",
-    brandtitle: "Amiquus（アミクース）",
-    getstarted: "はじめる",
-    quicklinks: "クイックリンク"
+    support: "サポート"
   },
   login: {
     title: "アカウントにログイン",
@@ -716,21 +518,8 @@ export const ja = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "有効なメールアドレスを入力してください",
-      shortpassword: "パスワードは6文字以上で入力してください"
-    },
-    emaillabel: "メール",
-    errortitle: "ログインに失敗しました",
-    genericerror: "認証情報を確認して、もう一度お試しください。",
-    loggingin: "ログイン中...",
-    loginbutton: "ログイン",
-    loginwithgoogle: "Googleでログイン",
-    noaccount: "アカウントをお持ちでない方はこちら",
-    passwordlabel: "パスワード",
-    registerlink: "新規登録",
-    successmessage: "正常にログインしました。",
-    successtitle: "ログインに成功しました"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "アカウントを作成",
@@ -774,33 +563,8 @@ export const ja = {
       failure: {
         title: "登録に失敗しました",
         desc: "入力内容をご確認のうえ、再度お試しください。"
-      },
-      invalidusername: {
-        desc: "ユーザー名は英数字で3〜20文字で入力してください",
-        title: "無効なユーザー名"
-      },
-      missingfields: {
-        desc: "必須項目をすべてご入力ください",
-        title: "必須項目が未入力です"
-      },
-      passwordmismatch: {
-        desc: "パスワードが一致していることを確認してください",
-        title: "パスワードが一致しません"
-      },
-      termsnotaccepted: {
-        desc: "利用規約およびプライバシーポリシーに同意する必要があります",
-        title: "利用規約が承認されていません"
       }
-    },
-    alreadyhave: "すでにアカウントをお持ちですか？",
-    confirmpassword: "パスワードの確認",
-    createbtn: "アカウント作成",
-    firstname: "名（な）",
-    lastname: "姓",
-    orcontinue: "または別の方法でログイン",
-    privacypolicy: "プライバシーポリシー",
-    termsnotice: "同意します",
-    termsofservice: "利用規約"
+    }
   },
   verifyEmail: {
     title: "メールアドレスを確認してください",
@@ -821,20 +585,8 @@ export const ja = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "メールが更新されました",
-      entervalidemail: "有効なメールアドレスを入力してください",
-      invalidemail: "無効なメールアドレス",
-      sameemail: "同じメールアドレス",
-      sameemaildesc: "新しいメールアドレスが現在のメールアドレスと同じです"
-    },
-    codelabel: "認証コード",
-    footernote: "コードが届きませんか？迷惑メールフォルダをご確認ください。",
-    resendbutton: "認証コードを再送信",
-    resendcountdown: "{{seconds}}秒後にコードを再送できます",
-    updateemailbutton: "メールアドレスを更新",
-    updateemaillabel: "メールアドレスを更新",
-    verifybutton: "メールアドレスを確認"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "お支払い方法を追加",
@@ -845,12 +597,6 @@ export const ja = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "予期しないエラーが発生しました",
-    errortitle: "お支払い方法の追加中にエラーが発生しました",
-    initerror: {
-      description: "お支払い設定を初期化できません",
-      title: "エラー"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const ja = {
       methods: "お支払い方法",
       account: "アカウント設定",
       privacy: "プライバシーとセキュリティ",
-      logout: "ログアウト",
-      membersince: "登録日"
+      logout: "ログアウト"
     },
     account: {
       title: "アカウント設定",
@@ -955,14 +700,8 @@ export const ja = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "車の通知を受け取るには、Telegramボットとチャットを開始し、メッセージを送信する必要があります。下記の手順に従ってボットに連絡してください。",
-        title: "コンタクトボットが必要です"
       }
-    },
-    basetitle: "$79.99/月",
-    basicplan: "ベーシックプラン"
+    }
   },
   loginPrompt: {
     title: "ログインが必要です",
@@ -1005,15 +744,8 @@ export const ja = {
       },
       error: {
         title: "サブスクリプションの更新中にエラーが発生しました"
-      },
-      priceerror: {
-        description: "サブスクリプションの一時停止と価格の更新を同時に行うことはできません。どちらか一方のみ実行してください。",
-        title: "サブスクリプションを更新できません"
       }
-    },
-    notfound: "サブスクリプションが見つかりません",
-    notfoundsub: "ダッシュボードに戻る",
-    subtitle: "ご契約内容を以下で編集してください"
+    }
   },
   about: {
     title: "AMIQUUSについて",
@@ -1241,8 +973,7 @@ export const ja = {
           1: "当ウェブサイトの「お問い合わせ」ページをご覧いただくことで"
         }
       }
-    },
-    lastupdated: "最終更新日：2025年5月21日"
+    }
   },
   privacy: {
     metaTitle: "プライバシーポリシー | Amiquus",
@@ -1363,8 +1094,7 @@ export const ja = {
           1: "当ウェブサイトの「お問い合わせ」ページをご覧いただくことで"
         }
       }
-    },
-    lastupdated: "最終更新日：2025年5月21日"
+    }
   },
   faqs: {
     metaTitle: "よくある質問 | Amiquus",
@@ -1408,34 +1138,6 @@ export const ja = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "検索条件を設定します（メーカー、モデル、価格帯など）",
-          1: "監視したいウェブサイトを選択できます",
-          2: "通知を受け取るためにTelegramアカウントを連携します",
-          3: "当システムは、お選びいただいたウェブサイトを常に監視し、新しい掲載情報を見逃しません。",
-          4: "条件に合う車が見つかると、すぐにTelegramで全ての詳細と直接リンクを含む通知が届きます。"
-        },
-        question: "使い方"
-      },
-      whatis: {
-        answer: "AMIQUUSは、あなたの希望条件に合った車両を複数の自動車販売サイトから自動で探し出し、該当する車両が見つかるとすぐにTelegramで通知します。これにより、いち早く販売者に連絡し、お得な車を手に入れるチャンスを逃しません。",
-        question: "Amiquusとは？"
-      },
-      whichwebsites: {
-        answerintro: "現在、主要な自動車販売プラットフォームを監視しています。",
-        list: {
-          0: "オートトレーダー",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "トゥルーカー",
-          4: "Facebookマーケットプレイス（URL経由）",
-          5: "クレイグズリスト",
-          6: "eBayモータース"
-        },
-        outro: "私たちは、より包括的なカバレッジを提供するために、継続的に新しいプラットフォームを追加しています。",
-        question: "どの車販売サイトを監視していますか？"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const ja = {
           2: "「サブスクリプション」タブを選択",
           3: "解約したいサブスクリプションの横にある「サブスクリプションを解約」ボタンをクリックしてください"
         },
-        note: "ご利用中の請求期間が終了するまで、サブスクリプションは有効です。",
-        stepsintro: "ご契約の解約はアカウントのプロフィールページからいつでも行えます。"
+        note: "ご利用中の請求期間が終了するまで、サブスクリプションは有効です。"
       },
       multiple: {
         question: "異なる車種ごとに複数のサブスクリプションを契約できますか？",
@@ -1488,8 +1189,7 @@ export const ja = {
           4: "Amiquusのサブスクリプション設定でボットトークンとチャットIDを入力してください",
           5: "「テストメッセージ送信」ボタンで通知設定を確認できます"
         },
-        note: "サブスクリプション設定の手順中に、スクリーンショット付きの詳しいステップバイステップの説明をご案内しています。",
-        stepsintro: "Telegram通知を設定するには:"
+        note: "サブスクリプション設定の手順中に、スクリーンショット付きの詳しいステップバイステップの説明をご案内しています。"
       },
       frequency: {
         question: "通知はどのくらいの頻度で届きますか？",
@@ -1561,19 +1261,7 @@ export const ja = {
         description: "このメールアドレスは、空きが出た際にご連絡するために使用します。"
       },
       submit: "ウェイティングリストに参加",
-      submitting: "送信中...",
-      firstname: {
-        label: "名（めい）",
-        placeholder: "ジョン"
-      },
-      lastname: {
-        label: "姓",
-        placeholder: "ドウ"
-      }
-    },
-    cantjoin: {
-      description: "サブスクリプションの空きが出しだい、すぐにお知らせします。",
-      title: "ウェイトリストに参加"
+      submitting: "送信中..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const ja = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "メールでお問い合わせいただければ、24時間以内にご返信いたします。",
-      email: "support@amiquus.com",
-      title: "メールサポート"
-    },
-    faqheading: "よくある質問",
-    stillneedhelp: {
-      button: "サポートにお問い合わせ",
-      description: "ご質問の答えが見つからない場合は、どうぞお気軽にサポートチームまでご連絡ください。私たちがサポートいたします。",
-      heading: "まだお困りですか？"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const ja = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "キャンセル",
-    confirmremove: "カードを削除",
-    default: "デフォルト",
-    expires: "有効期限",
-    remove: "削除",
-    removedescription: "本当に{{last4}}で終わる{{brand}}カードを削除してもよろしいですか？",
-    removetitle: "お支払い方法を削除",
-    removewarning: "これはあなたのデフォルトのお支払い方法です。削除すると、現在ご利用中のサブスクリプションに影響が出る可能性があります。",
-    setasdefault: "デフォルトに設定",
-    setdefaultdescription: "{{brand}}カード（下4桁：{{last4}}）をデフォルトのお支払い方法として設定しますか？今後のサブスクリプション支払いにはこのカードが使用されます。",
-    setdefaulttitle: "デフォルトの支払い方法を設定"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "アラートをキャンセル",
-    canceldescription: "{{brand}} {{model}}のアラートをキャンセルしてもよろしいですか？すべての通知が停止され、再度この車を監視したい場合は新しくアラートを設定する必要があります。",
-    canceltitle: "車のアラートをキャンセル",
-    confirmcancel: "アラートをキャンセル",
-    edit: "編集",
-    keepmyalert: "アラートを保存",
-    language: "言語",
-    price: "価格",
-    pricerange: "価格",
-    updates: "更新情報",
-    websites: "ウェブサイト",
-    years: "年数"
-  },
-  signUp: {
-    cta: "今すぐ通知を受け取る",
-    heading: "マイカーアラートを作成",
-    subheading: "わずか数ステップであなた専用の車両掲載通知を設定しましょう。",
-    toast: {
-      error: {
-        description: "サブスクリプションの作成に失敗しました。しばらくしてからもう一度お試しください。",
-        title: "購読に失敗しました"
-      },
-      success: {
-        description: "ご登録が正常に完了しました",
-        title: "サブスクリプションが作成されました"
-      }
-    },
-    waitlist: {
-      cta: "ウェイティングリストに参加",
-      message: "現在、定員に達しています。空きが出た際にご案内できるよう、ウェイティングリストへのご登録をお願いします。"
     }
   }
 };

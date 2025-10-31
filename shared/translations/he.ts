@@ -24,16 +24,10 @@ export const he = {
     button1: "הגדר את ההתראות שלך",
     button2: "ראו איך זה עובד",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "ביטול בכל עת",
-      nosetup: "לא נדרש התקנה",
+      websites: "15+ אתרים במעקב",
       realtime: "התראות בזמן אמת",
-      websites: "מעקב אחרי יותר מ-15 אתרים"
+      noSetup: "אין צורך בהתקנה",
+      cancelAnytime: "בטל בכל עת"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const he = {
     heading: "למה לבחור ב-Amiquus?",
     subheading: "חסכו זמן ואל תפספסו את הרכב המושלם שלכם עם שירות המעקב האוטומטי שלנו.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "מעקב אתרים מרובים",
+      description: "עקוב אחר מספר אתרי מודעות מכוניות בו-זמנית מבלי לבדוק כל אחד ידנית."
     },
     notifications: {
       title: "התראות מיידיות",
@@ -73,61 +67,12 @@ export const he = {
       description: "בחרו באיזו תדירות נבדוק עבורכם מודעות חדשות, מעדכונים כל שעה ועד ניטור בזמן אמת."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "תמיכה בשפות מרובות",
+      description: "קבל התראות בשפה המועדפת עליך להבנה קלה יותר של המודעות."
     },
     account: {
       title: "ניהול חשבון בקלות",
       description: "נהלו מספר פרופילי חיפוש ושנו את הגדרות המנוי בכמה קליקים."
-    },
-    multisite: {
-      description: "עקוב אחרי מספר אתרי מודעות רכב בו-זמנית בלי לבדוק כל אחד ידנית.",
-      title: "מעקב באתרים מרובים"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const he = {
         description: "קבלו התראות ברגע שרכב שתואם לקריטריונים שלכם מופיע באחד מהאתרים המנוטרים שלנו."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "מצא את המכונית המושלמת שלך",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "היו הראשונים לדעת על נכסים חדשים ולתפוס את הדילים הכי טובים לפני כולם.",
-        title: "מצא את הרכב המושלם עבורך"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const he = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "ב.מ.וו סדרה 3, 2019, $32,500 - הרגע פורסם ב-AutoTrader",
-      title: "נמצא התאמה חדשה!"
-    },
-    notificationmockup2: {
-      description: "מרצדס C-קלאס, 2020, 30,000 מיילים - המחיר ירד ב-2,000$",
-      title: "התראה בטלגרם"
-    },
-    setalerts: "הגדר את ההתראות שלך",
-    whytitle: "למה לבחור ב-Amiquus?"
+    }
   },
   pricing: {
     title: "תמחור פשוט ושקוף",
@@ -218,17 +149,7 @@ export const he = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "התחל עכשיו",
-    addonstitle: "תוספים:",
-    basetitle: "חבילת בסיס: 79.99 $/לחודש",
-    footernote: "כל התוכניות כוללות הגדרות חיפוש ללא הגבלה וניהול מנוי פשוט.",
-    includedfeatures: {
-      0: "מעקב אתר אחד",
-      1: "עדכונים שעתיים",
-      2: "מסננים ללא הגבלה",
-      3: "התראות טלגרם"
-    },
-    includedtitle: "מה כלול"
+    button: "התחל עכשיו"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const he = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "חובה לבחור יצרן רכב",
-      carmodel: "יש להזין דגם רכב",
-      facebookmarketplaceurl: "יש להזין כתובת URL של Facebook Marketplace כאשר Facebook נבחר",
-      fueltype: "יש לבחור סוג דלק",
-      maxkilometers: "המספר המרבי של קילומטרים חייב להיות מספר",
-      notificationlanguage: "יש לבחור שפת התראות",
-      pricemax: "המחיר המקסימלי חייב להיות מספר",
-      pricemin: "המחיר המינימלי חייב להיות מספר",
-      telegramchatid: "נדרש להזין מזהה צ'אט של Telegram",
-      telegramtoken: "נדרש טוקן לבוט טלגרם",
-      telegramusername: "נדרש שם משתמש ב-Telegram",
-      websitesselected: "יש לבחור לפחות אתר אחד",
-      yearmax: "שנת מקסימום חייבת להיות שנה תקפה",
-      yearmin: "שנת מינימום חייבת להיות שנה תקפה"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const he = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "כתובת אימייל",
-      firstname: "שם פרטי",
-      lastname: "שם משפחה"
+      email: "כתובת אימייל"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "ג'ון",
-      lastname: "אייל"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "אנא הזן כתובת אימייל חוקית",
-      firstname: "יש להזין שם פרטי",
-      lastname: "שדה שם משפחה הוא שדה חובה"
+      email: "אנא הזן כתובת אימייל חוקית"
     },
     actions: {
       login: "התחברו או הירשמו כדי להמשיך",
@@ -332,9 +233,7 @@ export const he = {
     labels: {
       websites: "אתרים למעקב",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "קישור ל-Facebook Marketplace",
-      updatefrequency: "תדירות עדכון"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "בחר תדירות"
@@ -344,16 +243,11 @@ export const he = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "הדבק כאן את כתובת ה-URL של תוצאות החיפוש שלך ב-Facebook Marketplace.",
-      updatefrequency: "באיזו תדירות כדאי לבדוק מודעות חדשות? תדירות גבוהה יותר עלולה לעלות יותר.",
-      videodesc: "צפו בסרטון למטה להוראות שלב אחר שלב.",
-      videotitle: "צריכים עזרה במציאת קישור החיפוש שלכם ב-Facebook Marketplace?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "יש לבחור לפחות אתר אחד",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "נדרש קישור ל-Facebook Marketplace כאשר Facebook נבחר"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "הקודם",
@@ -371,15 +265,7 @@ export const he = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "מותג רכב",
-      carmodel: "דגם רכב",
-      fueltype: "סוג דלק",
-      maxkilometers: "קילומטרים מקסימליים",
-      pricemax: "מחיר מקסימלי",
-      pricemin: "מחיר מינימלי",
-      yearmax: "שנה מקסימלית",
-      yearmin: "שנה מינימלית"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const he = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "בחר מותג רכב",
-      carmodel: "בחר דגם רכב",
-      carmodeldisabled: "בחר קודם את מותג הרכב",
-      fueltype: "בחר סוג דלק",
-      maxkilometers: "הזן את מספר הקילומטרים המקסימלי",
-      pricemax: "הזן מחיר מקסימלי",
-      pricemin: "הזן מחיר מינימלי",
-      yearmax: "הזן את השנה המרבית",
-      yearmin: "הזן שנת מינימום"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "אין דגמים זמינים"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const he = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "יש לבחור יצרן רכב",
-      carmodel: "יש לבחור דגם רכב",
-      fueltype: "יש לבחור סוג דלק",
-      maxkilometers: "המספר המרבי של קילומטרים חייב להיות מספר",
-      pricemax: "המחיר המקסימלי חייב להיות מספר",
-      pricemin: "המחיר המינימלי חייב להיות מספר",
-      yearmax: "שנת מקסימום חייבת להיות שנה תקפה",
-      yearmin: "שנת מינימום חייבת להיות שנה תקפה"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "הקודם",
@@ -444,17 +312,7 @@ export const he = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "פתחו את טלגרם וחפשו את @BotFather",
-      botstep2: "שלח את הפקודה ‎/newbot",
-      botstep3: "עקוב אחר ההוראות ליצירת בוט",
-      botstep4: "העתק את הטוקן שסופק על ידי BotFather",
-      bottitle: "איך להשיג טוקן לבוט טלגרם:",
-      chatstep1: "פתחו את טלגרם וחפשו את @userinfobot",
-      chatstep2: "שלחו כל הודעה לבוט",
-      chatstep3: "הבוט ישיב עם המידע שלך כולל מזהה הצ'אט שלך",
-      chatstep4: "העתק את מזהה הצ'אט (זה מספר)",
-      chattitle: "איך לקבל את מזהה הצ'אט שלך בטלגרם:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const he = {
       token: "אסימון בוט טלגרם",
       chatId: "Your Telegram Chat ID",
       language: "שפת ההתראות",
-      username: "שם משתמש בטלגרם",
-      chatid: "מזהה הצ'אט שלך בטלגרם"
+      username: "שם משתמש בטלגרם"
     },
     placeholders: {
       token: "הזן את אסימון הבוט שלך מ-BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "בחר שפת הודעה לטלגרם",
-      username: "הזן את שם המשתמש שלך ב-Telegram",
-      chatid: "הזן את מזהה הצ'אט שלך בטלגרם"
+      username: "הזן את שם המשתמש שלך ב-Telegram"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "דוגמה: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "אפשר לקבל את זה על ידי שליחת הודעה ל-@userinfobot בטלגרם"
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const he = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const he = {
       token: "נדרש טוקן לבוט טלגרם",
       chatId: "Telegram chat ID is required",
       language: "יש לבחור שפת התראות",
-      username: "נדרש שם משתמש ב-Telegram",
-      chatid: "נדרש מזהה צ'אט טלגרם"
+      username: "נדרש שם משתמש ב-Telegram"
     },
     actions: {
       previous: "הקודם",
@@ -544,47 +398,7 @@ export const he = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "דוגמה: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "אסימון בוט טלגרם",
-    bottokenplaceholder: "הזן את אסימון הבוט שלך מ-BotFather",
-    caralerttitle: "🚗 רכב חדש!",
-    chatiddescription: "אפשר לקבל את זה על ידי שליחת הודעה ל-@userinfobot בטלגרם",
-    chatidlabel: "מזהה הצ'אט שלך בטלגרם",
-    chatidplaceholder: "הזן את מזהה הצ'אט שלך ב-Telegram",
-    chatidsteps: {
-      0: "פתחו את טלגרם וחפשו \"userinfobot\"",
-      1: "שלחו כל הודעה לבוט",
-      2: "הבוט ישיב עם הפרטים שלך כולל מזהה הצ'אט שלך",
-      3: "העתק את מזהה הצ'אט שלך"
-    },
-    chatidtitle: "איך לקבל את ה-Telegram Chat ID שלך:",
-    confirmcontact: "התחלתי שיחה עם הבוט ושלחתי הודעה",
-    contactbotinstruction: "התחילו שיחה עם הבוט שלנו ב-Telegram על ידי לחיצה על הקישור למטה ושליחת הודעה",
-    contactbotnote: "זה נדרש כדי לקבל התראות על רכבים. אם אתה במחשב, אפשר לסרוק את קוד ה-QR.",
-    helpdescription: "צפו בסרטון למטה למדריך שלב אחר שלב.",
-    helptitle: "צריך עזרה בהגדרת ה-Telegram Bot Token ו-Chat ID שלך?",
-    kilometreslabel: "קילומטרים: {{kms}}",
-    languagelabel: "שפת ההתראות",
-    languageplaceholder: "בחר את שפת ההודעה בטלגרם",
-    locationlabel: "מיקום: {{location}}",
-    previewtitle: "תצוגה מקדימה של התראות טלגרם",
-    pricelabel: "מחיר: {{price}}",
-    setupsteps: {
-      0: "פתחו את טלגרם וחפשו \"BotFather\"",
-      1: "התחל שיחה עם BotFather על ידי לחיצה על \"התחל\"",
-      2: "הקלידו ‎/newbot‎ ופעלו לפי ההוראות ליצירת בוט חדש",
-      3: "בחר שם לבוט שלך",
-      4: "בחר שם משתמש לבוט שלך (חייב להסתיים ב-'bot')",
-      5: "העתק את אסימון ה-API שסופק על ידי BotFather",
-      6: "שלחו הודעה לבוט החדש שלכם כדי להפעיל את הצ'אט"
-    },
-    setuptitle: "הוראות התקנה:",
-    subheading: "הגדר את הבוט שלך ב-Telegram",
-    usernamedescription: "זה שם המשתמש שלך בחשבון הטלגרם (ללא הסימן @).",
-    videodescription: "צפו בסרטון למטה למדריך שלב אחר שלב.",
-    videoprompt: "צריך עזרה בהגדרת ה-Telegram Bot Token ו-Chat ID שלך?",
-    viewlisting: "צפייה במודעה →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "סקור את המנוי שלך",
@@ -598,9 +412,7 @@ export const he = {
       title: "הגדרות ניטור",
       websites: "אתרי אינטרנט",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "קישור לפייסבוק",
-      updatefrequency: "תדירות עדכון"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "מפרט הרכב",
@@ -609,9 +421,7 @@ export const he = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "טווח נסיעה (ק\"מ)",
-      price: "טווח מחירים (€)",
-      fueltype: "סוג דלק",
-      yearrange: "טווח שנים"
+      price: "טווח מחירים (€)"
     },
     notification: {
       title: "הגדרות התראות",
@@ -623,9 +433,7 @@ export const he = {
       base: "מנוי בסיסי",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "סה״כ (חודשי)",
-      extrawebsites: "אתרים נוספים",
-      frequencyupgrade: "שדרוג תדר"
+      total: "סה״כ (חודשי)"
     },
     terms: {
       checkbox: "אני מסכים ל",
@@ -669,9 +477,7 @@ export const he = {
         answer: "תוכל לבטל את המנוי שלך בכל עת מלוח הבקרה של החשבון שלך. עבור לסעיף \"מנויים\", בחר את המנוי שברצונך לבטל ולחץ על כפתור \"בטל מנוי\". השירות שלך ימשיך לפעול עד לסיום תקופת החיוב הנוכחית.",
         question: "איך מבטלים את המנוי שלי?"
       }
-    },
-    contactlink: "צרו קשר עם צוות התמיכה שלנו",
-    contactprompt: "עדיין יש לכם שאלות?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const he = {
     about: "עלינו",
     blog: "בלוג",
     careers: "קריירה",
-    support: "תמיכה",
-    branddescription: "העוזר האישי שלך למציאת הדיל המושלם לרכב יד שנייה בזמן הנכון.",
-    brandtitle: "Amiquus",
-    getstarted: "התחל",
-    quicklinks: "קישורים מהירים"
+    support: "תמיכה"
   },
   login: {
     title: "התחבר לחשבון שלך",
@@ -716,21 +518,8 @@ export const he = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "אנא הזן כתובת אימייל חוקית",
-      shortpassword: "הסיסמה חייבת להכיל לפחות 6 תווים"
-    },
-    emaillabel: "אימייל",
-    errortitle: "התחברות נכשלה",
-    genericerror: "אנא בדוק את הפרטים שלך ונסה שוב.",
-    loggingin: "מתחבר...",
-    loginbutton: "התחברות",
-    loginwithgoogle: "התחבר עם Google",
-    noaccount: "אין לך חשבון?",
-    passwordlabel: "סיסמה",
-    registerlink: "הירשם",
-    successmessage: "התחברת בהצלחה.",
-    successtitle: "התחברת בהצלחה"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "צור חשבון",
@@ -774,33 +563,8 @@ export const he = {
       failure: {
         title: "ההרשמה נכשלה",
         desc: "אנא בדוק את המידע שלך ונסה שוב"
-      },
-      invalidusername: {
-        desc: "שם המשתמש חייב להיות אלפאנומרי ובין 3 ל-20 תווים",
-        title: "שם משתמש לא חוקי"
-      },
-      missingfields: {
-        desc: "אנא מלא את כל השדות הנדרשים",
-        title: "שדות חסרים"
-      },
-      passwordmismatch: {
-        desc: "אנא ודא שהסיסמאות תואמות",
-        title: "הסיסמאות לא תואמות"
-      },
-      termsnotaccepted: {
-        desc: "עליך לאשר את התנאים ומדיניות הפרטיות כדי להמשיך",
-        title: "התנאים לא התקבלו"
       }
-    },
-    alreadyhave: "כבר יש לך חשבון?",
-    confirmpassword: "אשר סיסמה",
-    createbtn: "צור חשבון",
-    firstname: "שם פרטי",
-    lastname: "שם משפחה",
-    orcontinue: "או המשך עם",
-    privacypolicy: "מדיניות פרטיות",
-    termsnotice: "אני מסכים ל",
-    termsofservice: "תנאי שימוש"
+    }
   },
   verifyEmail: {
     title: "אמת את כתובת האימייל שלך",
@@ -821,20 +585,8 @@ export const he = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "האימייל עודכן",
-      entervalidemail: "אנא הזן כתובת אימייל חוקית",
-      invalidemail: "אימייל לא חוקי",
-      sameemail: "אותו אימייל",
-      sameemaildesc: "האימייל החדש זהה לאימייל הנוכחי"
-    },
-    codelabel: "קוד אימות",
-    footernote: "לא קיבלת את הקוד? בדוק את תיקיית הספאם.",
-    resendbutton: "שלח קוד מחדש",
-    resendcountdown: "תוכל לשלוח את הקוד שוב בעוד {{seconds}} שניות",
-    updateemailbutton: "עדכן אימייל",
-    updateemaillabel: "עדכן אימייל",
-    verifybutton: "אמת את האימייל"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "הוסף אמצעי תשלום",
@@ -845,12 +597,6 @@ export const he = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "אירעה שגיאה בלתי צפויה",
-    errortitle: "שגיאה בהוספת אמצעי תשלום",
-    initerror: {
-      description: "לא ניתן להפעיל את הגדרת התשלום",
-      title: "שגיאה"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const he = {
       methods: "אמצעי תשלום",
       account: "הגדרות חשבון",
       privacy: "פרטיות ואבטחה",
-      logout: "התנתק",
-      membersince: "חבר מאז"
+      logout: "התנתק"
     },
     account: {
       title: "הגדרות חשבון",
@@ -955,14 +700,8 @@ export const he = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "כדי לקבל התראות על רכבים, יש להתחיל שיחה עם הבוט שלנו בטלגרם ולשלוח הודעה. אנא עקבו אחרי ההוראות למטה כדי ליצור קשר עם הבוט.",
-        title: "נדרש בוט יצירת קשר"
       }
-    },
-    basetitle: "‏$79.99 לחודש",
-    basicplan: "תוכנית בסיסית"
+    }
   },
   loginPrompt: {
     title: "נדרש להתחבר",
@@ -1005,15 +744,8 @@ export const he = {
       },
       error: {
         title: "שגיאה בעדכון המנוי"
-      },
-      priceerror: {
-        description: "אתה עוצר ומעדכן את מחיר המנוי בו זמנית. עליך או לעצור או לעדכן את המחיר.",
-        title: "לא ניתן לעדכן את המנוי"
       }
-    },
-    notfound: "המנוי לא נמצא",
-    notfoundsub: "חזרה ללוח הבקרה",
-    subtitle: "ערוך את פרטי המנוי שלך למטה"
+    }
   },
   about: {
     title: "על Amiquus",
@@ -1241,8 +973,7 @@ export const he = {
           1: "בביקור בדף יצירת הקשר באתר שלנו"
         }
       }
-    },
-    lastupdated: "עודכן לאחרונה: 21 במאי 2025"
+    }
   },
   privacy: {
     metaTitle: "מדיניות פרטיות | Amiquus",
@@ -1363,8 +1094,7 @@ export const he = {
           1: "בביקור בדף יצירת הקשר באתר שלנו"
         }
       }
-    },
-    lastupdated: "עודכן לאחרונה: 21 במאי 2025"
+    }
   },
   faqs: {
     metaTitle: "שאלות נפוצות | Amiquus",
@@ -1408,34 +1138,6 @@ export const he = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "אתה מגדיר את קריטריוני החיפוש שלך (יצרן, דגם, טווח מחירים וכו')",
-          1: "אתם בוחרים אילו אתרים לעקוב אחריהם",
-          2: "אתה מחבר את חשבון הטלגרם שלך לקבלת התראות",
-          3: "המערכת שלנו מנטרת באופן רציף את האתרים שבחרת לאיתור מודעות חדשות",
-          4: "כשהרכב המתאים מופיע, תקבל התראה מיידית בטלגרם עם כל הפרטים וקישור ישיר"
-        },
-        question: "איך זה עובד?"
-      },
-      whatis: {
-        answer: "AMIQUUS היא שירות שמנטר מספר אתרי אינטרנט של מודעות רכב כדי למצוא רכבים שמתאימים לקריטריונים הספציפיים שלך. כשמתפרסמת מודעה מתאימה, תקבל התראה מיידית בטלגרם, מה שיאפשר לך להיות בין הראשונים ליצור קשר עם המוכרים ולסגור דילים משתלמים.",
-        question: "?מה זה Amiquus"
-      },
-      whichwebsites: {
-        answerintro: "אנחנו עוקבים כרגע אחרי הפלטפורמות המרכזיות לפרסום רכבים:",
-        list: {
-          0: "אוטוטריידר",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (באמצעות קישור)",
-          5: "קרייגסליסט",
-          6: "eBay מוטורס"
-        },
-        outro: "אנחנו ממשיכים להוסיף פלטפורמות חדשות כדי לספק את הכיסוי המקיף ביותר האפשרי.",
-        question: "אילו אתרי רכב אתם עוקבים אחריהם?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const he = {
           2: "בחרו בלשונית \"מנויים\"",
           3: "לחץ על כפתור \"ביטול מנוי\" ליד המנוי שברצונך לבטל"
         },
-        note: "המנוי שלך יישאר פעיל עד לסיום מחזור החיוב הנוכחי שלך.",
-        stepsintro: "תוכל לבטל את המנוי שלך בכל עת מדף הפרופיל שלך בחשבון"
+        note: "המנוי שלך יישאר פעיל עד לסיום מחזור החיוב הנוכחי שלך."
       },
       multiple: {
         question: "האם אפשר להחזיק מספר מנויים לדגמי רכב שונים?",
@@ -1488,8 +1189,7 @@ export const he = {
           4: "הכניסו את טוקן הבוט ומספר הצ'אט שלכם בהגדרות המנוי ב-AMIQUUS",
           5: "בדקו את הגדרת ההתראות שלכם באמצעות כפתור `שלח הודעת בדיקה`"
         },
-        note: "הוראות מפורטות שלב אחר שלב עם צילומי מסך יופיעו במהלך תהליך ההרשמה למנוי.",
-        stepsintro: "כדי להגדיר התראות טלגרם:"
+        note: "הוראות מפורטות שלב אחר שלב עם צילומי מסך יופיעו במהלך תהליך ההרשמה למנוי."
       },
       frequency: {
         question: "באיזו תדירות אקבל התראות?",
@@ -1561,19 +1261,7 @@ export const he = {
         description: "נשתמש באימייל הזה כדי להודיע לך כשיתפנה מקום"
       },
       submit: "הצטרפו לרשימת ההמתנה",
-      submitting: "שולח...",
-      firstname: {
-        label: "שם פרטי",
-        placeholder: "יוחנן"
-      },
-      lastname: {
-        label: "שם משפחה",
-        placeholder: "אייל"
-      }
-    },
-    cantjoin: {
-      description: "נעדכן אותך ברגע שיתפנה מקום למנוי",
-      title: "הצטרפו לרשימת ההמתנה"
+      submitting: "שולח..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const he = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "שלחו לנו אימייל ונחזור אליכם תוך 24 שעות",
-      email: "support@amiquus.com",
-      title: "תמיכה במייל"
-    },
-    faqheading: "שאלות נפוצות",
-    stillneedhelp: {
-      button: "צור קשר עם התמיכה",
-      description: "אם לא מצאת תשובה לשאלה שלך, אתה מוזמן לפנות לצוות התמיכה שלנו. אנחנו כאן כדי לעזור!",
-      heading: "עדיין צריכים עזרה?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const he = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "ביטול",
-    confirmremove: "הסר כרטיס",
-    default: "ברירת מחדל",
-    expires: "פג תוקף",
-    remove: "הסר",
-    removedescription: "האם אתה בטוח שברצונך להסיר את כרטיס ה-{{brand}} שלך שמסתיים ב-{{last4}}?",
-    removetitle: "הסר אמצעי תשלום",
-    removewarning: "זו שיטת התשלום הראשית שלך והסרתה עלולה להשפיע על המנויים הפעילים שלך.",
-    setasdefault: "הגדר כברירת מחדל",
-    setdefaultdescription: "האם ברצונך להגדיר את כרטיס {{brand}} שמסתיים ב-{{last4}} כאמצעי התשלום הראשי שלך? כרטיס זה ישמש לכל תשלומי המנוי העתידיים.",
-    setdefaulttitle: "הגדר אמצעי תשלום ברירת מחדל"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "ביטול התראה",
-    canceldescription: "האם אתה בטוח שברצונך לבטל את ההתראה לרכב {{brand}} {{model}}? פעולה זו תפסיק את כל ההתראות ותצטרך להגדיר התראה חדשה אם תרצה לעקוב שוב אחרי הרכב הזה.",
-    canceltitle: "בטל התראת רכב",
-    confirmcancel: "ביטול התראה",
-    edit: "ערוך",
-    keepmyalert: "שמור את ההתראה שלי",
-    language: "שפה",
-    price: "מחיר",
-    pricerange: "מחיר",
-    updates: "עדכונים",
-    websites: "אתרי אינטרנט",
-    years: "שנים"
-  },
-  signUp: {
-    cta: "קבלו התראות עכשיו",
-    heading: "צור התראה לרכב שלך",
-    subheading: "הגדירו התראות מותאמות אישית לרכבים בכמה שלבים פשוטים",
-    toast: {
-      error: {
-        description: "לא הצלחנו ליצור את המנוי שלך. אנא נסה שוב מאוחר יותר.",
-        title: "המנוי נכשל"
-      },
-      success: {
-        description: "המנוי שלך נוצר בהצלחה",
-        title: "המנוי נוצר"
-      }
-    },
-    waitlist: {
-      cta: "הצטרפו לרשימת ההמתנה",
-      message: "אנחנו בתפוסה מלאה כרגע. הצטרפו לרשימת ההמתנה כדי לקבל עדכון כשיתפנה מקום."
     }
   }
 };

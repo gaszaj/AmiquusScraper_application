@@ -24,16 +24,10 @@ export const et = {
     button1: "Seadista oma teavitused",
     button2: "Vaata, kuidas see töötab",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Tühista igal ajal",
-      nosetup: "Seadistamine pole vajalik",
-      realtime: "Reaalajas teavitused",
-      websites: "Jälgitakse üle 15 veebilehe"
+      websites: "15+ veebisaiti jälgitakse",
+      realtime: "Reaalajas hoiatused",
+      noSetup: "Seadistamine pole vajalik",
+      cancelAnytime: "Tühista igal ajal"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const et = {
     heading: "Miks valida Amiquus?",
     subheading: "Säästa aega ja ära jää kunagi ilma oma ideaalautost tänu meie automaatsele jälgimisteenusele.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Mitme saidi jälgimine",
+      description: "Jälgige korraga mitut autokuulutuste veebisaiti ilma, et peaksite igaüht käsitsi kontrollima."
     },
     notifications: {
       title: "Kohesed teavitused",
@@ -73,61 +67,12 @@ export const et = {
       description: "Vali, kui tihti me uusi kuulutusi kontrollime – alates tunnipõhistest uuendustest kuni reaalajas jälgimiseni."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Mitme keele tugi",
+      description: "Saate teavitusi eelistatud keeles parema ülevaate saamiseks kuulutustest."
     },
     account: {
       title: "Lihtne konto haldamine",
       description: "Halda mitut otsinguprofiili ja muuda oma tellimuse seadeid vaid paari klikiga."
-    },
-    multisite: {
-      description: "Jälgi mitut auto kuulutuste veebilehte korraga, ilma et peaksid igaüht eraldi käsitsi kontrollima.",
-      title: "Mitme saidi jälgimine"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const et = {
         description: "Saad teavituse kohe, kui mõnel meie jälgitaval veebilehel ilmub sinu kriteeriumitele vastav auto."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Leia oma täiuslik auto",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Ole esimene, kes saab teada uutest kuulutustest ja kindlusta parimad pakkumised enne kõiki teisi.",
-        title: "Leia oma ideaalne auto"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const et = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3. seeria, 2019, $32,500 – Äsja lisatud AutoTraderisse",
-      title: "Leiti uus sobivus!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-klass, 2020, 30 000 miili – Hind langetatud 2 000 $ võrra",
-      title: "Telegrami teavitus"
-    },
-    setalerts: "Seadista oma teavitused",
-    whytitle: "Miks valida Amiquus?"
+    }
   },
   pricing: {
     title: "Lihtne ja läbipaistev hinnakujundus",
@@ -218,17 +149,7 @@ export const et = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Alusta kohe",
-    addonstitle: "Lisad:",
-    basetitle: "Põhipakett: 79,99 $/kuu",
-    footernote: "Kõik paketid sisaldavad piiramatuid otsinguseadeid ja lihtsat tellimuse haldamist.",
-    includedfeatures: {
-      0: "Ühe veebilehe jälgimine",
-      1: "Tunnipõhised uuendused",
-      2: "Piiramatud filtrid",
-      3: "Telegrami teavitused"
-    },
-    includedtitle: "Mis on hinna sees:"
+    button: "Alusta kohe"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const et = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Autobränd on kohustuslik",
-      carmodel: "Auto mudel on kohustuslik",
-      facebookmarketplaceurl: "Facebook Marketplace’i URL on kohustuslik, kui on valitud Facebook",
-      fueltype: "Kütuse tüüp on kohustuslik",
-      maxkilometers: "Maksimaalsed kilomeetrid peavad olema arv",
-      notificationlanguage: "Teavituse keel on kohustuslik",
-      pricemax: "Maksimaalne hind peab olema number",
-      pricemin: "Miinimumhind peab olema number",
-      telegramchatid: "Telegrami vestluse ID on vajalik",
-      telegramtoken: "Telegrami boti token on vajalik",
-      telegramusername: "Telegrami kasutajanimi on kohustuslik",
-      websitesselected: "Vähemalt üks veebileht peab olema valitud",
-      yearmax: "Maksimaalne aasta peab olema kehtiv aasta",
-      yearmin: "Minimaalne aasta peab olema kehtiv aasta"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const et = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "E-posti aadress",
-      firstname: "Eesnimi",
-      lastname: "Perekonnanimi"
+      email: "E-posti aadress"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Jaan",
-      lastname: "Hirv"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Palun sisestage kehtiv e-posti aadress",
-      firstname: "Eesnimi on kohustuslik",
-      lastname: "Perekonnanimi on kohustuslik"
+      email: "Palun sisestage kehtiv e-posti aadress"
     },
     actions: {
       login: "Logi sisse või loo konto, et jätkata",
@@ -332,9 +233,7 @@ export const et = {
     labels: {
       websites: "Jälgitavad veebilehed",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace’i URL",
-      updatefrequency: "Uuendamise sagedus"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Vali sagedus"
@@ -344,16 +243,11 @@ export const et = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Aseta siia oma Facebook Marketplace’i otsingutulemuste URL.",
-      updatefrequency: "Kui tihti peaksime uusi kuulutusi kontrollima? Suurem sagedus võib kaasa tuua kõrgemad kulud.",
-      videodesc: "Vaata allolevat videot samm-sammuliste juhiste saamiseks.",
-      videotitle: "Kas vajad abi oma Facebook Marketplace’i otselingi leidmisel?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Vähemalt üks veebisait tuleb valida",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace’i URL on kohustuslik, kui on valitud Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Eelmine",
@@ -371,15 +265,7 @@ export const et = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Autobränd",
-      carmodel: "Auto mudel",
-      fueltype: "Kütuse tüüp",
-      maxkilometers: "Maksimaalsed kilomeetrid",
-      pricemax: "Maksimaalne hind",
-      pricemin: "Minimaalne hind",
-      yearmax: "Maksimaalne aasta",
-      yearmin: "Minimaalne aasta"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const et = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Vali auto mark",
-      carmodel: "Vali automudelit",
-      carmodeldisabled: "Vali esmalt auto mark",
-      fueltype: "Vali kütuse tüüp",
-      maxkilometers: "Sisesta maksimaalne kilomeetrite arv",
-      pricemax: "Sisesta maksimaalne hind",
-      pricemin: "Sisesta minimaalne hind",
-      yearmax: "Sisesta maksimaalne aasta",
-      yearmin: "Sisesta minimaalne aasta"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Mudeleid pole saadaval"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const et = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Autobränd on kohustuslik",
-      carmodel: "Auto mudel on kohustuslik",
-      fueltype: "Kütuse tüüp on kohustuslik",
-      maxkilometers: "Maksimaalsed kilomeetrid peavad olema arv",
-      pricemax: "Maksimaalne hind peab olema number",
-      pricemin: "Miinimumhind peab olema number",
-      yearmax: "Maksimaalne aasta peab olema kehtiv aasta",
-      yearmin: "Minimaalne aasta peab olema kehtiv aasta"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Eelmine",
@@ -444,17 +312,7 @@ export const et = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Ava Telegram ja otsi @BotFather",
-      botstep2: "Sisesta käsk /newbot",
-      botstep3: "Järgi juhiseid, et luua bot",
-      botstep4: "Kopeeri BotFatheri antud token",
-      bottitle: "Kuidas saada Telegrami boti token?",
-      chatstep1: "Ava Telegram ja otsi @userinfobot",
-      chatstep2: "Saada botile suvaline sõnum",
-      chatstep3: "Bot vastab teie andmetega, sealhulgas teie Chat ID-ga",
-      chatstep4: "Kopeeri vestluse ID (see on number)",
-      chattitle: "Kuidas saada oma Telegrami vestluse ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const et = {
       token: "Telegrami boti token",
       chatId: "Your Telegram Chat ID",
       language: "Teavituse keel",
-      username: "Telegrami kasutajanimi",
-      chatid: "Sinu Telegrami vestluse ID"
+      username: "Telegrami kasutajanimi"
     },
     placeholders: {
       token: "Sisesta oma boti token BotFatherist",
       chatId: "Enter your Telegram chat ID",
       language: "Vali Telegrami sõnumi keel",
-      username: "Sisesta oma Telegrami kasutajanimi",
-      chatid: "Sisesta oma Telegrami vestluse ID"
+      username: "Sisesta oma Telegrami kasutajanimi"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Näide: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Selle saad, kui saadad sõnumi @userinfobot’ile Telegramis."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const et = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const et = {
       token: "Telegrami boti token on vajalik",
       chatId: "Telegram chat ID is required",
       language: "Teavituse keel on kohustuslik",
-      username: "Telegrami kasutajanimi on kohustuslik",
-      chatid: "Telegrami vestluse ID on kohustuslik"
+      username: "Telegrami kasutajanimi on kohustuslik"
     },
     actions: {
       previous: "Eelmine",
@@ -544,47 +398,7 @@ export const et = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Muidugi! Palun edasta tekst, mida soovid tõlkida eesti keelde.",
-    bottokenlabel: "Telegram Boti Token",
-    bottokenplaceholder: "Sisesta oma boti token BotFatherilt",
-    caralerttitle: "🚗 Uus auto!",
-    chatiddescription: "Selle saad, kui saadad sõnumi @userinfobot Telegramis.",
-    chatidlabel: "Sinu Telegrami vestluse ID",
-    chatidplaceholder: "Sisesta oma Telegrami vestluse ID",
-    chatidsteps: {
-      0: "Ava Telegram ja otsi \"userinfobot\"",
-      1: "Saada botile suvaline sõnum",
-      2: "Bot vastab sulle sinu andmetega, sealhulgas sinu Chat ID-ga",
-      3: "Kopeeri oma vestluse ID"
-    },
-    chatidtitle: "Kuidas saada oma Telegrami vestluse ID:",
-    confirmcontact: "Olen alustanud vestlust botiga ja saatnud sõnumi.",
-    contactbotinstruction: "Alusta vestlust meie Telegrami botiga, klõpsates alloleval lingil ja saates sellele sõnumi:",
-    contactbotnote: "See on vajalik autoalarmi teadete saamiseks. Kui oled arvutis, saad skaneerida QR-koodi.",
-    helpdescription: "Vaata allolevat videot, et saada samm-sammuline juhend.",
-    helptitle: "Kas vajad abi oma Telegrami boti tokeni ja Chat ID seadistamisel?",
-    kilometreslabel: "Kilomeetrid: {{kms}}",
-    languagelabel: "Teavituse keel",
-    languageplaceholder: "Vali Telegrami sõnumi keel",
-    locationlabel: "Asukoht: {{location}}",
-    previewtitle: "Telegrami teadete eelvaade",
-    pricelabel: "Hind: {{price}}",
-    setupsteps: {
-      0: "Ava Telegram ja otsi \"BotFather\"",
-      1: "Alusta vestlust BotFatheriga, klõpsates „Start“",
-      2: "Tippige /newbot ja järgige juhiseid, et luua uus bot",
-      3: "Vali oma botile nimi",
-      4: "Vali oma botile kasutajanimi (peab lõppema sõnaga 'bot')",
-      5: "Kopeeri BotFatheri poolt antud API token",
-      6: "Saada oma uuele botile sõnum, et vestlus aktiveerida"
-    },
-    setuptitle: "Seadistamise juhised:",
-    subheading: "Seadista oma Telegrami bot",
-    usernamedescription: "See on sinu Telegrami konto kasutajanimi (ilma @-märgita).",
-    videodescription: "Vaata allolevat videot samm-sammult juhiste saamiseks.",
-    videoprompt: "Kas vajad abi oma Telegrami boti tokeni ja Chat ID seadistamisel?",
-    viewlisting: "Vaata kuulutust →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Vaadake üle oma tellimus",
@@ -598,9 +412,7 @@ export const et = {
       title: "Jälgimise seaded",
       websites: "Veebilehed",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebooki URL",
-      updatefrequency: "Uuendamise sagedus"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Auto tehnilised andmed",
@@ -609,9 +421,7 @@ export const et = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Sõiduulatus (km)",
-      price: "Hinnavahemik (€)",
-      fueltype: "Kütuse tüüp",
-      yearrange: "Aastavahemik"
+      price: "Hinnavahemik (€)"
     },
     notification: {
       title: "Teavituste seaded",
@@ -623,9 +433,7 @@ export const et = {
       base: "Põhitellimus",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Kokku (kuus)",
-      extrawebsites: "Lisaveebilehed",
-      frequencyupgrade: "Sageduse uuendus"
+      total: "Kokku (kuus)"
     },
     terms: {
       checkbox: "Nõustun sellega,",
@@ -669,9 +477,7 @@ export const et = {
         answer: "Saad oma tellimuse igal ajal tühistada oma konto juhtpaneelil. Mine jaotisse „Tellimused“, vali tellimus, mida soovid tühistada, ja klõpsa nupul „Tühista tellimus“. Sinu teenus jääb aktiivseks kuni praeguse arveldusperioodi lõpuni.",
         question: "Kuidas saan oma tellimuse tühistada?"
       }
-    },
-    contactlink: "Võta ühendust meie klienditoega",
-    contactprompt: "Kas sul on veel küsimusi?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const et = {
     about: "Meist",
     blog: "Blogi",
     careers: "Karjäär",
-    support: "Tugi",
-    branddescription: "Sinu isiklik abiline, kes aitab leida ideaalse kasutatud auto pakkumise just õigel ajal.",
-    brandtitle: "Amiquus",
-    getstarted: "Alusta",
-    quicklinks: "Kiirlingid"
+    support: "Tugi"
   },
   login: {
     title: "Logi sisse oma kontole",
@@ -716,21 +518,8 @@ export const et = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Palun sisestage kehtiv e-posti aadress",
-      shortpassword: "Parool peab olema vähemalt 6 tähemärki"
-    },
-    emaillabel: "E-post",
-    errortitle: "Sisselogimine ebaõnnestus",
-    genericerror: "Palun kontrolli oma andmeid ja proovi uuesti.",
-    loggingin: "Sisselogimine...",
-    loginbutton: "Logi sisse",
-    loginwithgoogle: "Logi sisse Google’iga",
-    noaccount: "Kas sul pole kontot?",
-    passwordlabel: "Parool",
-    registerlink: "Registreeru",
-    successmessage: "Olete edukalt sisse logitud.",
-    successtitle: "Sisselogimine õnnestus"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Loo konto",
@@ -774,33 +563,8 @@ export const et = {
       failure: {
         title: "Registreerimine ebaõnnestus",
         desc: "Palun kontrolli oma andmeid ja proovi uuesti."
-      },
-      invalidusername: {
-        desc: "Kasutajanimi peab olema tähtede ja numbritega ning 3 kuni 20 tähemärki pikk.",
-        title: "Kehtetu kasutajanimi"
-      },
-      missingfields: {
-        desc: "Palun täitke kõik nõutud väljad",
-        title: "Puuduvad väljad"
-      },
-      passwordmismatch: {
-        desc: "Palun veendu, et sinu paroolid ühtivad",
-        title: "Paroolid ei ühti"
-      },
-      termsnotaccepted: {
-        desc: "Peate nõustuma tingimuste ja privaatsuspoliitikaga, et jätkata",
-        title: "Tingimusi ei ole aktsepteeritud"
       }
-    },
-    alreadyhave: "Kas sul on juba konto?",
-    confirmpassword: "Kinnita parool",
-    createbtn: "Loo konto",
-    firstname: "Eesnimi",
-    lastname: "Perekonnanimi",
-    orcontinue: "Või jätka sellega",
-    privacypolicy: "Privaatsuspoliitika",
-    termsnotice: "Nõustun sellega,",
-    termsofservice: "Kasutustingimused"
+    }
   },
   verifyEmail: {
     title: "Kinnita oma e-posti aadress",
@@ -821,20 +585,8 @@ export const et = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-post uuendatud",
-      entervalidemail: "Palun sisestage kehtiv e-posti aadress",
-      invalidemail: "Vigane e-posti aadress",
-      sameemail: "Sama e-post",
-      sameemaildesc: "Uus e-posti aadress on sama, mis praegune e-posti aadress."
-    },
-    codelabel: "Kinnituskood",
-    footernote: "Kas sa ei saanud koodi? Kontrolli rämpsposti kausta.",
-    resendbutton: "Saada kood uuesti",
-    resendcountdown: "Saate koodi uuesti saata {{seconds}} sekundi pärast",
-    updateemailbutton: "Uuenda e-posti aadress",
-    updateemaillabel: "Uuenda e-posti",
-    verifybutton: "Kinnita e-post"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Lisa makseviis",
@@ -845,12 +597,6 @@ export const et = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Tekkis ootamatu viga",
-    errortitle: "Viga makseviisi lisamisel",
-    initerror: {
-      description: "Makse seadistuse alustamine ebaõnnestus",
-      title: "Viga"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const et = {
       methods: "Makseviisid",
       account: "Konto seaded",
       privacy: "Privaatsus ja turvalisus",
-      logout: "Logi välja",
-      membersince: "Liige alates"
+      logout: "Logi välja"
     },
     account: {
       title: "Konto seaded",
@@ -955,14 +700,8 @@ export const et = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Autoteadete saamiseks pead alustama vestlust meie Telegrami botiga ja saatma sõnumi. Palun järgi allolevaid juhiseid, et botiga ühendust võtta.",
-        title: "Vajalik on kontaktbot"
       }
-    },
-    basetitle: "79,99 $/kuu",
-    basicplan: "Põhipakett"
+    }
   },
   loginPrompt: {
     title: "Sisselogimine vajalik",
@@ -1005,15 +744,8 @@ export const et = {
       },
       error: {
         title: "Tõrge tellimuse uuendamisel"
-      },
-      priceerror: {
-        description: "Sa peatad ja uuendad oma tellimuse hinda samaaegselt. Pead kas peatama või uuendama hinna.",
-        title: "Ei saa tellimust uuendada"
       }
-    },
-    notfound: "Telli­must ei leitud",
-    notfoundsub: "Tagasi juhtpaneelile",
-    subtitle: "Muuda oma tellimuse andmeid allpool"
+    }
   },
   about: {
     title: "Amiquusest",
@@ -1241,8 +973,7 @@ export const et = {
           1: "Külastades meie veebilehe kontaktlehte"
         }
       }
-    },
-    lastupdated: "Viimati uuendatud: 21. mai 2025"
+    }
   },
   privacy: {
     metaTitle: "Privaatsuspoliitika | Amiquus",
@@ -1363,8 +1094,7 @@ export const et = {
           1: "Külastades meie veebilehe kontaktlehte"
         }
       }
-    },
-    lastupdated: "Viimati uuendatud: 21. mai 2025"
+    }
   },
   faqs: {
     metaTitle: "Korduma kippuvad küsimused | Amiquus",
@@ -1408,34 +1138,6 @@ export const et = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Seadista oma otsingukriteeriumid (mark, mudel, hinnavahemik jne.)",
-          1: "Sina valid, milliseid veebisaite jälgida",
-          2: "Ühendad oma Telegrami konto teadete saamiseks",
-          3: "Meie süsteem jälgib pidevalt sinu valitud veebilehti uute kuulutuste jaoks",
-          4: "Kui ilmub sobiv auto, saad kohe Telegrami teavituse kõigi detailide ja otselingiga."
-        },
-        question: "Kuidas see töötab?"
-      },
-      whatis: {
-        answer: "AMIQUUS on teenus, mis jälgib mitut auto kuulutuste veebilehte, et leida sõidukeid, mis vastavad sinu konkreetsetele kriteeriumitele. Kui ilmub sobiv kuulutus, saad kohe teavituse Telegrami kaudu, võimaldades sul olla üks esimestest, kes müüjatega ühendust võtab ja häid diile kindlustab.",
-        question: "Mis on Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Praegu jälgime järgmisi peamisi auto kuulutuste platvorme:",
-        list: {
-          0: "AutoTrader",
-          1: "AMIQUUS",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (veebiaadressi kaudu)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Lisame pidevalt uusi platvorme, et tagada võimalikult lai ja põhjalik katvus.",
-        question: "Milliseid auto müügikuulutuste veebilehti te jälgite?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const et = {
           2: "Valige vahekaart „Tellijad“",
           3: "Klõpsa tellimuse kõrval nupule \"Tühista tellimus\", mida soovid lõpetada."
         },
-        note: "Sinu tellimus jääb aktiivseks kuni sinu praeguse arveldusperioodi lõpuni.",
-        stepsintro: "Saad oma tellimuse igal ajal tühistada oma konto profiililehel."
+        note: "Sinu tellimus jääb aktiivseks kuni sinu praeguse arveldusperioodi lõpuni."
       },
       multiple: {
         question: "Kas ma saan tellida mitu erinevate automudelite tellimust?",
@@ -1488,8 +1189,7 @@ export const et = {
           4: "Sisesta oma boti token ja vestluse ID AMIQUUS-i tellimuse seadetes",
           5: "Testi oma teavituste seadistust nupuga `Saada testteade`"
         },
-        note: "Üksikasjalikud samm-sammulised juhised koos ekraanipiltidega on saadaval tellimuse seadistamise protsessi käigus.",
-        stepsintro: "Telegrami teavituste seadistamiseks:"
+        note: "Üksikasjalikud samm-sammulised juhised koos ekraanipiltidega on saadaval tellimuse seadistamise protsessi käigus."
       },
       frequency: {
         question: "Kui tihti ma saan teavitusi?",
@@ -1561,19 +1261,7 @@ export const et = {
         description: "Kasutame seda e-posti aadressi, et teavitada sind, kui koht vabaneb."
       },
       submit: "Liitu ootenimekirjaga",
-      submitting: "Esitamine...",
-      firstname: {
-        label: "Eesnimi",
-        placeholder: "Jaan"
-      },
-      lastname: {
-        label: "Perekonnanimi",
-        placeholder: "Hirv"
-      }
-    },
-    cantjoin: {
-      description: "Anname teile teada, kui tellimiskohale avaneb vaba koht.",
-      title: "Liitu ootenimekirjaga"
+      submitting: "Esitamine..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const et = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Saatke meile e-kiri ja vastame teile 24 tunni jooksul",
-      email: "support@amiquus.com",
-      title: "E-posti tugi"
-    },
-    faqheading: "Korduma kippuvad küsimused",
-    stillneedhelp: {
-      button: "Võta ühendust klienditoega",
-      description: "Kui sa ei leidnud oma küsimusele vastust, võta julgelt ühendust meie tugitiimiga. Oleme siin, et sind aidata!",
-      heading: "Kas vajad veel abi?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const et = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Tühista",
-    confirmremove: "Eemalda kaart",
-    default: "Vaikimisi",
-    expires: "Aegub",
-    remove: "Eemalda",
-    removedescription: "Kas oled kindel, et soovid eemaldada oma {{brand}} kaardi, mille lõpus on {{last4}}?",
-    removetitle: "Eemalda makseviis",
-    removewarning: "See on sinu vaikimisi makseviis ja selle eemaldamine võib mõjutada sinu aktiivseid tellimusi.",
-    setasdefault: "Määra vaikimisi",
-    setdefaultdescription: "Kas soovite määrata {{brand}} kaardi, mille lõpus on {{last4}}, oma vaikimisi makseviisiks? Seda kaarti kasutatakse kõigi tulevaste tellimusmaksete jaoks.",
-    setdefaulttitle: "Määra vaikimisi makseviis"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Tühista hoiatus",
-    canceldescription: "Kas oled kindel, et soovid tühistada oma auto teavituse {{brand}} {{model}} jaoks? Sellega lõpetatakse kõik teavitused ja kui soovid seda autot uuesti jälgida, pead looma uue teavituse.",
-    canceltitle: "Tühista autohoiatus",
-    confirmcancel: "Tühista hoiatus",
-    edit: "Muuda",
-    keepmyalert: "Hoia minu märguanne",
-    language: "Keel",
-    price: "Hind",
-    pricerange: "Hind",
-    updates: "Uuendused",
-    websites: "Veebilehed",
-    years: "Aastad"
-  },
-  signUp: {
-    cta: "Saage teavitused kohe",
-    heading: "Loo oma autohoiatus",
-    subheading: "Seadista oma isikupärastatud autokuulutuste teavitused vaid mõne sammuga.",
-    toast: {
-      error: {
-        description: "Me ei saanud teie tellimust luua. Palun proovige hiljem uuesti.",
-        title: "Tellige ei õnnestunud"
-      },
-      success: {
-        description: "Teie tellimus on edukalt loodud",
-        title: "Tellige edukalt loodud"
-      }
-    },
-    waitlist: {
-      cta: "Liitu ootenimekirjaga",
-      message: "Hetkel on kõik kohad täis. Liitu ootenimekirjaga, et saada teavitus, kui koht vabaneb."
     }
   }
 };

@@ -24,16 +24,10 @@ export const lv = {
     button1: "Iestatiet savus brīdinājumus",
     button2: "Skatiet, kā tas darbojas",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Atcelt jebkurā laikā",
-      nosetup: "Nav nepieciešama uzstādīšana",
+      websites: "15+ vietnes tiek uzraudzītas",
       realtime: "Brīdinājumi reāllaikā",
-      websites: "Izseko vairāk nekā 15 tīmekļa vietnes"
+      noSetup: "Nav nepieciešama iestatīšana",
+      cancelAnytime: "Atcelt jebkurā laikā"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const lv = {
     heading: "Kāpēc izvēlēties Amiquus?",
     subheading: "Ietaupi laiku un nekad nepalaid garām savu ideālo auto ar mūsu automatizēto izsekošanas pakalpojumu.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Vairāku vietņu uzraudzība",
+      description: "Uzraugiet vairākas automašīnu sludinājumu vietnes vienlaicīgi, nepārbaudot katru manuāli."
     },
     notifications: {
       title: "Tūlītēji paziņojumi",
@@ -73,61 +67,12 @@ export const lv = {
       description: "Izvēlieties, cik bieži pārbaudām jaunos sludinājumus – no ikstundas atjauninājumiem līdz reāllaika uzraudzībai."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Vairāku valodu atbalsts",
+      description: "Saņemiet paziņojumus vēlamajā valodā, lai vieglāk saprastu sludinājumus."
     },
     account: {
       title: "Viegla konta pārvaldība",
       description: "Pārvaldiet vairākus meklēšanas profilus un mainiet abonementa iestatījumus ar dažiem klikšķiem."
-    },
-    multisite: {
-      description: "Vienlaikus pārraugi vairākas auto sludinājumu vietnes, bez nepieciešamības katru pārbaudīt manuāli.",
-      title: "Vairāku vietņu izsekošana"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const lv = {
         description: "Saņemiet paziņojumus, tiklīdz kāds jūsu kritērijiem atbilstošs auto parādās kādā no mūsu uzraudzītajām vietnēm."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Atrodiet savu ideālo automašīnu",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Esi pirmais, kurš uzzina par jaunajiem sludinājumiem un iegūsti labākos piedāvājumus pirms citiem.",
-        title: "Atrodi savu ideālo auto"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const lv = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3. sērija, 2019, $32,500 – Tikko ievietots AutoTrader",
-      title: "Atrasta jauna atbilstība!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-klase, 2020, 30 000 jūdzes – Cena samazināta par 2 000 $",
-      title: "Telegram brīdinājums"
-    },
-    setalerts: "Iestatiet savus brīdinājumus",
-    whytitle: "Kāpēc izvēlēties Amiquus?"
+    }
   },
   pricing: {
     title: "Vienkārša, caurspīdīga cenu politika",
@@ -218,17 +149,7 @@ export const lv = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Sāciet tagad",
-    addonstitle: "Papildinājumi:",
-    basetitle: "Pamata pakotne: 79,99 $/mēnesī",
-    footernote: "Visi plāni ietver neierobežotas meklēšanas konfigurācijas un vienkāršu abonementa pārvaldību.",
-    includedfeatures: {
-      0: "Viena vietnes uzraudzība",
-      1: "Atjauninājumi katru stundu",
-      2: "Neierobežoti filtri",
-      3: "Telegram paziņojumi"
-    },
-    includedtitle: "Kas iekļauts:"
+    button: "Sāciet tagad"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const lv = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Automašīnas marka ir obligāta",
-      carmodel: "Automašīnas modelis ir obligāts",
-      facebookmarketplaceurl: "Facebook Marketplace URL ir obligāts, ja ir izvēlēts Facebook",
-      fueltype: "Degvielas veids ir obligāts",
-      maxkilometers: "Maksimālais kilometru skaits jāievada kā skaitlis",
-      notificationlanguage: "Paziņojuma valoda ir obligāta",
-      pricemax: "Maksimālā cena ir jāievada kā skaitlis",
-      pricemin: "Minimālā cenai jābūt skaitlim",
-      telegramchatid: "Telegram tērzēšanas ID ir obligāts",
-      telegramtoken: "Nepieciešama Telegram bota pilnvara",
-      telegramusername: "Telegram lietotājvārds ir obligāts",
-      websitesselected: "Jāizvēlas vismaz viena vietne",
-      yearmax: "Maksimālajam gadam jābūt derīgam gadam",
-      yearmin: "Minimālais gads ir jābūt derīgam gadam"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const lv = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "E-pasta adrese",
-      firstname: "Vārds",
-      lastname: "Uzvārds"
+      email: "E-pasta adrese"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Jānis",
-      lastname: "Briedis"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Lūdzu, ievadiet derīgu e-pasta adresi",
-      firstname: "Vārds ir obligāts",
-      lastname: "Uzvārds ir obligāts"
+      email: "Lūdzu, ievadiet derīgu e-pasta adresi"
     },
     actions: {
       login: "Piesakieties vai reģistrējieties, lai turpinātu",
@@ -332,9 +233,7 @@ export const lv = {
     labels: {
       websites: "Vietnes uzraudzībai",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace URL",
-      updatefrequency: "Atjaunināšanas biežums"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Izvēlieties biežumu"
@@ -344,16 +243,11 @@ export const lv = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Ielīmējiet savu Facebook Marketplace meklēšanas rezultātu URL šeit.",
-      updatefrequency: "Cik bieži mums vajadzētu pārbaudīt jaunus sludinājumus? Augstāka pārbaudes biežuma gadījumā izmaksas var būt lielākas.",
-      videodesc: "Noskatieties zemāk esošo video, lai iegūtu soli pa solim instrukcijas.",
-      videotitle: "Vai nepieciešama palīdzība, lai atrastu savu Facebook Marketplace meklēšanas saiti?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Jāizvēlas vismaz viena vietne",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace URL ir obligāts, ja ir izvēlēts Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Iepriekšējais",
@@ -371,15 +265,7 @@ export const lv = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Auto zīmols",
-      carmodel: "Auto modelis",
-      fueltype: "Degvielas veids",
-      maxkilometers: "Maksimālie kilometri",
-      pricemax: "Maksimālā cena",
-      pricemin: "Minimālā cena",
-      yearmax: "Maksimālais gads",
-      yearmin: "Minimālais gads"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const lv = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Izvēlieties automašīnas marku",
-      carmodel: "Izvēlieties automašīnas modeli",
-      carmodeldisabled: "Vispirms izvēlieties automašīnas marku",
-      fueltype: "Izvēlieties degvielas veidu",
-      maxkilometers: "Ievadiet maksimālo kilometru skaitu",
-      pricemax: "Ievadiet maksimālo cenu",
-      pricemin: "Ievadiet minimālo cenu",
-      yearmax: "Ievadiet maksimālo gadu",
-      yearmin: "Ievadiet minimālo gadu"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nav pieejamu modeļu"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const lv = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Automašīnas marka ir obligāta",
-      carmodel: "Automašīnas modelis ir obligāts",
-      fueltype: "Degvielas veids ir obligāts",
-      maxkilometers: "Maksimālais kilometru skaits jāievada kā skaitlis",
-      pricemax: "Maksimālā cenai jābūt skaitlim",
-      pricemin: "Minimālā cena jābūt skaitlim",
-      yearmax: "Maksimālais gads ir jābūt derīgam gadam",
-      yearmin: "Minimālais gads ir jābūt derīgam gadam"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Iepriekš",
@@ -444,17 +312,7 @@ export const lv = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Atveriet Telegram un meklējiet @BotFather",
-      botstep2: "Ievadiet komandu /newbot",
-      botstep3: "Izpildiet norādījumus, lai izveidotu botu",
-      botstep4: "Nokopējiet BotFather sniegto tokenu",
-      bottitle: "Kā iegūt Telegram bota tokenu:",
-      chatstep1: "Atveriet Telegram un meklējiet @userinfobot",
-      chatstep2: "Nosūti jebkādu ziņu botam",
-      chatstep3: "Bots atbildēs ar jūsu informāciju, ieskaitot jūsu Chat ID",
-      chatstep4: "Nokopējiet tērzēšanas ID (tas ir skaitlis)",
-      chattitle: "Kā iegūt savu Telegram tērzēšanas ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const lv = {
       token: "Telegram bota tokens",
       chatId: "Your Telegram Chat ID",
       language: "Paziņojumu valoda",
-      username: "Telegram lietotājvārds",
-      chatid: "Jūsu Telegram tērzēšanas ID"
+      username: "Telegram lietotājvārds"
     },
     placeholders: {
       token: "Ievadiet savu bota tokenu no BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Izvēlieties Telegram ziņojuma valodu",
-      username: "Ievadiet savu Telegram lietotājvārdu",
-      chatid: "Ievadiet savu Telegram tērzēšanas ID"
+      username: "Ievadiet savu Telegram lietotājvārdu"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Lūdzu, ievadiet tekstu, kuru vēlaties tulkot.",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "To var iegūt, uzrakstot ziņu @userinfobot vietnē Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const lv = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const lv = {
       token: "Nepieciešams Telegram bota tokens",
       chatId: "Telegram chat ID is required",
       language: "Paziņojuma valoda ir obligāta",
-      username: "Telegram lietotājvārds ir obligāts",
-      chatid: "Telegram tērzēšanas ID ir obligāts"
+      username: "Telegram lietotājvārds ir obligāts"
     },
     actions: {
       previous: "Iepriekšējais",
@@ -544,47 +398,7 @@ export const lv = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Protams! Lūdzu, ievadiet tekstu, kuru vēlaties tulkot latviešu valodā.",
-    bottokenlabel: "Telegram Bota marķieris",
-    bottokenplaceholder: "Ievadiet savu bota tokenu no BotFather",
-    caralerttitle: "🚗 Jauns auto!",
-    chatiddescription: "To var iegūt, uzrakstot ziņu @userinfobot vietnē Telegram.",
-    chatidlabel: "Jūsu Telegram tērzēšanas ID",
-    chatidplaceholder: "Ievadiet savu Telegram tērzēšanas ID",
-    chatidsteps: {
-      0: "Atveriet Telegram un meklējiet \"userinfobot\"",
-      1: "Nosūti jebkādu ziņu botam",
-      2: "Bots atbildēs ar jūsu informāciju, ieskaitot jūsu Chat ID",
-      3: "Nokopē savu tērzēšanas ID"
-    },
-    chatidtitle: "Kā iegūt savu Telegram čata ID:",
-    confirmcontact: "Esmu sācis sarunu ar botu un nosūtījis ziņu.",
-    contactbotinstruction: "Sāciet sarunu ar mūsu Telegram botu, noklikšķinot uz zemāk esošās saites un nosūtot tam ziņu:",
-    contactbotnote: "Tas ir nepieciešams, lai saņemtu paziņojumus par automašīnām. Ja izmantojat datoru, varat noskenēt QR kodu.",
-    helpdescription: "Noskatieties zemāk esošo video, lai iegūtu soli pa solim ceļvedi.",
-    helptitle: "Vai nepieciešama palīdzība ar Telegram Bot Token un Chat ID iestatīšanu?",
-    kilometreslabel: "Kilometri: {{kms}}",
-    languagelabel: "Paziņojumu valoda",
-    languageplaceholder: "Izvēlieties Telegram ziņojuma valodu",
-    locationlabel: "Atrašanās vieta: {{location}}",
-    previewtitle: "Priekšskatīt Telegram paziņojumus",
-    pricelabel: "Cena: {{price}}",
-    setupsteps: {
-      0: "Atveriet Telegram un meklējiet \"BotFather\"",
-      1: "Sāciet sarunu ar BotFather, noklikšķinot uz \"Start\"",
-      2: "Ierakstiet /newbot un sekojiet norādēm, lai izveidotu jaunu botu",
-      3: "Izvēlies sava bota vārdu",
-      4: "Izvēlieties lietotājvārdu savam botam (tam jābeidzas ar 'bot')",
-      5: "Nokopējiet API pilnvaru, ko piešķīris BotFather",
-      6: "Nosūti ziņu savam jaunajam botam, lai aktivizētu čatu"
-    },
-    setuptitle: "Iestatīšanas instrukcijas:",
-    subheading: "Iestatiet savu Telegram bota",
-    usernamedescription: "Šis ir jūsu Telegram lietotājvārds (bez @ simbola).",
-    videodescription: "Noskatieties zemāk esošo video, lai soli pa solim uzzinātu, kā rīkoties.",
-    videoprompt: "Vai nepieciešama palīdzība ar sava Telegram Bot Token un Chat ID iestatīšanu?",
-    viewlisting: "Skatīt sludinājumu →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Pārskatiet savu abonementu",
@@ -598,9 +412,7 @@ export const lv = {
       title: "Uzraudzības iestatījumi",
       websites: "Mājaslapas",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook saite",
-      updatefrequency: "Atjaunināšanas biežums"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Automobiļa specifikācijas",
@@ -609,9 +421,7 @@ export const lv = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Nobraukuma diapazons (km)",
-      price: "Cenu diapazons (€)",
-      fueltype: "Degvielas veids",
-      yearrange: "Gadu diapazons"
+      price: "Cenu diapazons (€)"
     },
     notification: {
       title: "Paziņojumu iestatījumi",
@@ -623,9 +433,7 @@ export const lv = {
       base: "Pamata abonements",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Kopā (mēnesī)",
-      extrawebsites: "Papildu vietnes",
-      frequencyupgrade: "Frekvences uzlabošana"
+      total: "Kopā (mēnesī)"
     },
     terms: {
       checkbox: "Piekrītu",
@@ -669,9 +477,7 @@ export const lv = {
         answer: "Jūs jebkurā laikā varat atcelt savu abonementu savā konta pārvaldības panelī. Dodieties uz sadaļu “Abonementi”, izvēlieties abonementu, kuru vēlaties atcelt, un noklikšķiniet uz pogas “Atcelt abonementu”. Jūsu pakalpojums būs aktīvs līdz pašreizējā norēķinu perioda beigām.",
         question: "Kā atcelt savu abonementu?"
       }
-    },
-    contactlink: "Sazinieties ar mūsu atbalsta komandu",
-    contactprompt: "Joprojām ir jautājumi?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const lv = {
     about: "Par mums",
     blog: "Blogs",
     careers: "Karjera",
-    support: "Atbalsts",
-    branddescription: "Jūsu personīgais asistents, kas palīdz atrast ideālu lietota auto piedāvājumu īstajā brīdī.",
-    brandtitle: "Amiquus",
-    getstarted: "Sākt",
-    quicklinks: "Ātrās saites"
+    support: "Atbalsts"
   },
   login: {
     title: "Pieslēdzieties savam kontam",
@@ -716,21 +518,8 @@ export const lv = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Lūdzu, ievadiet derīgu e-pasta adresi",
-      shortpassword: "Parolei jābūt vismaz 6 rakstzīmes garai"
-    },
-    emaillabel: "E-pasts",
-    errortitle: "Pieteikšanās neizdevās",
-    genericerror: "Lūdzu, pārbaudiet savus akreditācijas datus un mēģiniet vēlreiz.",
-    loggingin: "Piesakās...",
-    loginbutton: "Pieslēgties",
-    loginwithgoogle: "Pieslēgties ar Google",
-    noaccount: "Nav konta?",
-    passwordlabel: "Parole",
-    registerlink: "Reģistrēties",
-    successmessage: "Jūs esat veiksmīgi pieteicies.",
-    successtitle: "Pieteikšanās veiksmīga"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Izveidot kontu",
@@ -774,33 +563,8 @@ export const lv = {
       failure: {
         title: "Reģistrācija neizdevās",
         desc: "Lūdzu, pārbaudiet savu informāciju un mēģiniet vēlreiz."
-      },
-      invalidusername: {
-        desc: "Lietotājvārdam jābūt ar burtiem un cipariem, un tam jābūt no 3 līdz 20 rakstzīmēm garam",
-        title: "Nederīgs lietotājvārds"
-      },
-      missingfields: {
-        desc: "Lūdzu, aizpildiet visus obligātos laukus",
-        title: "Trūkstošie lauki"
-      },
-      passwordmismatch: {
-        desc: "Lūdzu, pārliecinieties, vai jūsu paroles sakrīt.",
-        title: "Paroles nesakrīt"
-      },
-      termsnotaccepted: {
-        desc: "Jums jāpiekrīt noteikumiem un privātuma politikai, lai turpinātu",
-        title: "Noteikumi nav pieņemti"
       }
-    },
-    alreadyhave: "Jau ir konts?",
-    confirmpassword: "Apstipriniet paroli",
-    createbtn: "Izveidot kontu",
-    firstname: "Vārds",
-    lastname: "Uzvārds",
-    orcontinue: "Vai turpināt ar",
-    privacypolicy: "Privātuma politika",
-    termsnotice: "Piekrītu",
-    termsofservice: "Lietošanas noteikumi"
+    }
   },
   verifyEmail: {
     title: "Apstipriniet savu e-pastu",
@@ -821,20 +585,8 @@ export const lv = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-pasts atjaunināts",
-      entervalidemail: "Lūdzu, ievadiet derīgu e-pasta adresi",
-      invalidemail: "Nederīga e-pasta adrese",
-      sameemail: "Tā pati e-pasta adrese",
-      sameemaildesc: "Jaunā e-pasta adrese ir tāda pati kā pašreizējā e-pasta adrese."
-    },
-    codelabel: "Verifikācijas kods",
-    footernote: "Nesaņēmi kodu? Pārbaudi savu mēstuļu mapi.",
-    resendbutton: "Atkārtoti nosūtīt kodu",
-    resendcountdown: "Kodu varēsiet nosūtīt atkārtoti pēc {{seconds}}s.",
-    updateemailbutton: "Atjaunot e-pastu",
-    updateemaillabel: "Atjaunināt e-pastu",
-    verifybutton: "Apstipriniet e-pastu"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Pievienot maksājuma metodi",
@@ -845,12 +597,6 @@ export const lv = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Radās neparedzēta kļūda",
-    errortitle: "Kļūda, pievienojot maksājuma metodi",
-    initerror: {
-      description: "Neizdevās inicializēt maksājuma iestatīšanu",
-      title: "Kļūda"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const lv = {
       methods: "Apmaksas veidi",
       account: "Konta iestatījumi",
       privacy: "Privātums un drošība",
-      logout: "Izrakstīties",
-      membersince: "Kopš biedrs"
+      logout: "Izrakstīties"
     },
     account: {
       title: "Konta iestatījumi",
@@ -955,14 +700,8 @@ export const lv = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Lai saņemtu paziņojumus par automašīnām, jums jāsāk saruna ar mūsu Telegram botu un jānosūta ziņa. Lūdzu, sekojiet tālāk norādītajām instrukcijām, lai sazinātos ar botu.",
-        title: "Nepieciešams kontaktbota risinājums"
       }
-    },
-    basetitle: "79,99 $/mēnesī",
-    basicplan: "Pamata plāns"
+    }
   },
   loginPrompt: {
     title: "Nepieciešama pieteikšanās",
@@ -1005,15 +744,8 @@ export const lv = {
       },
       error: {
         title: "Kļūda, atjaunojot abonementu"
-      },
-      priceerror: {
-        description: "Jūs vienlaikus pauzējat un atjaunojat abonementa cenu. Jāizvēlas – vai nu pauzēt, vai atjaunot cenu.",
-        title: "Nevar atjaunināt abonementu"
       }
-    },
-    notfound: "Abonements nav atrasts",
-    notfoundsub: "Atgriezties uz informācijas paneli",
-    subtitle: "Rediģējiet savas abonementa detaļas zemāk"
+    }
   },
   about: {
     title: "Par Amiquus",
@@ -1241,8 +973,7 @@ export const lv = {
           1: "Apmeklējot kontaktu lapu mūsu mājaslapā"
         }
       }
-    },
-    lastupdated: "Pēdējoreiz atjaunināts: 2025. gada 21. maijā"
+    }
   },
   privacy: {
     metaTitle: "Privātuma politika | Amiquus",
@@ -1363,8 +1094,7 @@ export const lv = {
           1: "Apmeklējot kontaktu lapu mūsu mājaslapā"
         }
       }
-    },
-    lastupdated: "Pēdējoreiz atjaunināts: 2025. gada 21. maijā"
+    }
   },
   faqs: {
     metaTitle: "Biežāk uzdotie jautājumi | Amiquus",
@@ -1408,34 +1138,6 @@ export const lv = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Jūs iestatāt savus meklēšanas kritērijus (marka, modelis, cenu diapazons u.c.)",
-          1: "Jūs izvēlaties, kuras vietnes vēlaties uzraudzīt.",
-          2: "Jūs savienojat savu Telegram kontu paziņojumiem",
-          3: "Mūsu sistēma nepārtraukti uzrauga jūsu izvēlētās vietnes jauniem sludinājumiem",
-          4: "Kad parādās atbilstoša automašīna, jūs uzreiz saņemat paziņojumu Telegram ar visām detaļām un tiešo saiti."
-        },
-        question: "Kā tas darbojas?"
-      },
-      whatis: {
-        answer: "AMIQUUS ir pakalpojums, kas uzrauga vairākas auto sludinājumu vietnes, lai atrastu transportlīdzekļus, kas atbilst tieši taviem kritērijiem. Kad parādās atbilstošs sludinājums, tu uzreiz saņem paziņojumu Telegram, ļaujot tev būt vienam no pirmajiem, kas sazinās ar pārdevējiem un iegūst izdevīgākos piedāvājumus.",
-        question: "Kas ir Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Pašlaik mēs uzraugām šādas lielākās auto sludinājumu platformas:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (izmantojot URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Mēs nepārtraukti pievienojam jaunas platformas, lai nodrošinātu pēc iespējas visaptverošāku pārklājumu.",
-        question: "Kuras auto sludinājumu vietnes jūs pārraugāt?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const lv = {
           2: "Atlasiet cilni \"Abonementi\"",
           3: "Noklikšķiniet uz pogas \"Atcelt abonementu\" blakus abonementam, kuru vēlaties atcelt."
         },
-        note: "Jūsu abonements paliks aktīvs līdz jūsu pašreizējā norēķinu perioda beigām.",
-        stepsintro: "Jūs varat atcelt savu abonementu jebkurā laikā savā konta profila lapā:"
+        note: "Jūsu abonements paliks aktīvs līdz jūsu pašreizējā norēķinu perioda beigām."
       },
       multiple: {
         question: "Vai es varu iegādāties vairākus abonementus dažādiem automašīnu modeļiem?",
@@ -1488,8 +1189,7 @@ export const lv = {
           4: "Ievadiet sava bota tokenu un čata ID AMIQUUS abonementa iestatījumos",
           5: "Pārbaudiet savu paziņojumu iestatījumu, izmantojot pogu `Sūtīt testa ziņojumu`"
         },
-        note: "Detalizētas soli pa solim instrukcijas ar ekrānuzņēmumiem ir pieejamas abonēšanas iestatīšanas procesā.",
-        stepsintro: "Lai iestatītu Telegram paziņojumus:"
+        note: "Detalizētas soli pa solim instrukcijas ar ekrānuzņēmumiem ir pieejamas abonēšanas iestatīšanas procesā."
       },
       frequency: {
         question: "Cik bieži es saņemšu paziņojumus?",
@@ -1561,19 +1261,7 @@ export const lv = {
         description: "Šo e-pastu izmantosim, lai paziņotu, kad būs pieejama brīva vieta."
       },
       submit: "Pievienoties gaidīšanas sarakstam",
-      submitting: "Iesniedz...",
-      firstname: {
-        label: "Vārds",
-        placeholder: "Jānis"
-      },
-      lastname: {
-        label: "Uzvārds",
-        placeholder: "Briedis"
-      }
-    },
-    cantjoin: {
-      description: "Mēs jūs informēsim, tiklīdz būs pieejama abonēšanas vieta.",
-      title: "Pievienojies gaidīšanas sarakstam"
+      submitting: "Iesniedz..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const lv = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Sūtiet mums e-pastu, un mēs atbildēsim 24 stundu laikā.",
-      email: "support@amiquus.com",
-      title: "E-pasta atbalsts"
-    },
-    faqheading: "Biežāk uzdotie jautājumi",
-    stillneedhelp: {
-      button: "Sazināties ar atbalstu",
-      description: "Ja neatradi atbildi uz savu jautājumu, droši sazinies ar mūsu atbalsta komandu. Mēs esam šeit, lai palīdzētu!",
-      heading: "Vēl nepieciešama palīdzība?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const lv = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Atcelt",
-    confirmremove: "Noņemt karti",
-    default: "Noklusējums",
-    expires: "Beidzas",
-    remove: "Noņemt",
-    removedescription: "Vai tiešām vēlaties noņemt savu {{brand}} karti ar numuru, kas beidzas ar {{last4}}?",
-    removetitle: "Noņemt maksājuma metodi",
-    removewarning: "Šī ir jūsu noklusējuma maksājuma metode, un tās noņemšana var ietekmēt jūsu aktīvos abonementus.",
-    setasdefault: "Iestatīt kā noklusējumu",
-    setdefaultdescription: "Vai vēlaties iestatīt {{brand}} karti ar numura beigām {{last4}} kā savu noklusējuma maksājuma metodi? Šī karte tiks izmantota visiem turpmākajiem abonementa maksājumiem.",
-    setdefaulttitle: "Iestatīt noklusēto maksājuma metodi"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Atcelt brīdinājumu",
-    canceldescription: "Vai tiešām vēlaties atcelt automašīnas brīdinājumu par {{brand}} {{model}}? Tas apturēs visus paziņojumus, un, ja vēlēsieties atkal sekot šai automašīnai, būs jāizveido jauns brīdinājums.",
-    canceltitle: "Atcelt auto brīdinājumu",
-    confirmcancel: "Atcelt brīdinājumu",
-    edit: "Rediģēt",
-    keepmyalert: "Saglabāt manu brīdinājumu",
-    language: "Valoda",
-    price: "Cena",
-    pricerange: "Cena",
-    updates: "Atjauninājumi",
-    websites: "Mājaslapas",
-    years: "Gadi"
-  },
-  signUp: {
-    cta: "Saņemiet paziņojumus tūlīt",
-    heading: "Izveido savu auto brīdinājumu",
-    subheading: "Iestatiet savus personalizētos auto sludinājumu paziņojumus tikai dažos soļos.",
-    toast: {
-      error: {
-        description: "Neizdevās izveidot jūsu abonementu. Lūdzu, mēģiniet vēlāk vēlreiz.",
-        title: "Abonēšana neizdevās"
-      },
-      success: {
-        description: "Jūsu abonements ir veiksmīgi izveidots",
-        title: "Abonements izveidots"
-      }
-    },
-    waitlist: {
-      cta: "Pievienoties gaidīšanas sarakstam",
-      message: "Pašlaik visas vietas ir aizņemtas. Lūdzu, pievienojieties gaidīšanas sarakstam, lai saņemtu paziņojumu, kad atbrīvosies vieta."
     }
   }
 };

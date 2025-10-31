@@ -24,16 +24,10 @@ export const ms = {
     button1: "Tetapkan Makluman Anda",
     button2: "Lihat Cara Ia Berfungsi",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Batal bila-bila masa",
-      nosetup: "Tiada pemasangan diperlukan",
+      websites: "15+ laman web dijejaki",
       realtime: "Makluman masa nyata",
-      websites: "Lebih 15 laman web dipantau"
+      noSetup: "Tiada persediaan diperlukan",
+      cancelAnytime: "Batal bila-bila masa"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const ms = {
     heading: "Kenapa Pilih Amiquus?",
     subheading: "Jimat masa dan jangan terlepas kereta idaman anda dengan perkhidmatan penjejakan automatik kami.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Penjejakan Pelbagai Laman",
+      description: "Pantau berbilang laman web penyenaraian kereta serentak tanpa perlu memeriksa setiap satu secara manual."
     },
     notifications: {
       title: "Pemberitahuan Segera",
@@ -73,61 +67,12 @@ export const ms = {
       description: "Pilih kekerapan kami menyemak penyenaraian baru, dari kemas kini setiap jam hingga pemantauan masa nyata."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Sokongan Pelbagai Bahasa",
+      description: "Terima pemberitahuan dalam bahasa pilihan anda untuk pemahaman yang lebih mudah terhadap penyenaraian."
     },
     account: {
       title: "Pengurusan Akaun Mudah",
       description: "Urus pelbagai profil carian dan ubah tetapan langganan anda dengan beberapa klik sahaja."
-    },
-    multisite: {
-      description: "Pantau beberapa laman web senarai kereta serentak tanpa perlu semak satu per satu secara manual.",
-      title: "Penjejakan Berbilang Laman"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const ms = {
         description: "Terima makluman serta-merta apabila kereta yang menepati kriteria anda muncul di mana-mana laman web yang dipantau oleh AMIQUUS."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Cari Kereta Sempurna Anda",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Jadi yang pertama tahu tentang senarai baharu dan rebut tawaran terbaik sebelum orang lain.",
-        title: "Cari Kereta Idaman Anda"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const ms = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 Series, 2019, $32,500 - Baru disenaraikan di AutoTrader",
-      title: "Padanan Baharu Ditemui!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 30,000 batu - Harga turun sebanyak $2,000",
-      title: "Makluman Telegram"
-    },
-    setalerts: "Tetapkan Makluman Anda",
-    whytitle: "Kenapa Pilih Amiquus?"
+    }
   },
   pricing: {
     title: "Harga Mudah & Telus",
@@ -218,17 +149,7 @@ export const ms = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Mulakan Sekarang",
-    addonstitle: "Tambahan:",
-    basetitle: "Pakej Asas: RM79.99/sebulan",
-    footernote: "Semua pelan termasuk konfigurasi carian tanpa had dan pengurusan langganan yang mudah.",
-    includedfeatures: {
-      0: "Pemantauan satu laman web",
-      1: "Kemas kini setiap jam",
-      2: "Penapis tanpa had",
-      3: "Notifikasi Telegram"
-    },
-    includedtitle: "Apa Yang Disertakan:"
+    button: "Mulakan Sekarang"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const ms = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Jenama kereta diperlukan",
-      carmodel: "Model kereta diperlukan",
-      facebookmarketplaceurl: "URL Facebook Marketplace diperlukan apabila Facebook dipilih",
-      fueltype: "Jenis bahan api diperlukan",
-      maxkilometers: "Jumlah kilometer maksimum mesti dalam bentuk nombor",
-      notificationlanguage: "Bahasa notifikasi diperlukan",
-      pricemax: "Harga maksimum mesti nombor",
-      pricemin: "Harga minimum mesti nombor",
-      telegramchatid: "ID chat Telegram diperlukan",
-      telegramtoken: "Token bot Telegram diperlukan",
-      telegramusername: "Nama pengguna Telegram diperlukan",
-      websitesselected: "Sekurang-kurangnya satu laman web mesti dipilih",
-      yearmax: "Tahun maksimum mesti tahun yang sah",
-      yearmin: "Tahun minimum mesti tahun yang sah"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const ms = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Alamat Emel",
-      firstname: "Nama Pertama",
-      lastname: "Nama Akhir"
+      email: "Alamat Emel"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "John",
-      lastname: "Jelai"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Sila masukkan emel yang sah",
-      firstname: "Nama pertama diperlukan",
-      lastname: "Nama akhir diperlukan"
+      email: "Sila masukkan emel yang sah"
     },
     actions: {
       login: "Log masuk atau Daftar untuk Teruskan",
@@ -332,9 +233,7 @@ export const ms = {
     labels: {
       websites: "Laman web untuk dipantau",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Kekerapan Kemas Kini"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Pilih kekerapan"
@@ -344,16 +243,11 @@ export const ms = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Tampalkan URL hasil carian Facebook Marketplace anda di sini.",
-      updatefrequency: "Berapa kerap kita perlu semak penyenaraian baru? Kekerapan yang lebih tinggi mungkin akan menambah kos.",
-      videodesc: "Tonton video di bawah untuk arahan langkah demi langkah.",
-      videotitle: "Perlukan bantuan untuk cari pautan carian Facebook Marketplace anda?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Sekurang-kurangnya satu laman web mesti dipilih",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL Facebook Marketplace diperlukan apabila Facebook dipilih"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Sebelumnya",
@@ -371,15 +265,7 @@ export const ms = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Jenama Kereta",
-      carmodel: "Model Kereta",
-      fueltype: "Jenis Bahan Api",
-      maxkilometers: "Jarak Maksimum",
-      pricemax: "Harga Maksimum",
-      pricemin: "Harga Minimum",
-      yearmax: "Tahun Maksimum",
-      yearmin: "Tahun Minimum"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const ms = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Pilih Jenama Kereta",
-      carmodel: "Pilih Model Kereta",
-      carmodeldisabled: "Sila pilih jenama kereta terlebih dahulu",
-      fueltype: "Pilih Jenis Bahan Api",
-      maxkilometers: "Masukkan jarak maksimum (kilometer)",
-      pricemax: "Masukkan harga maksimum",
-      pricemin: "Masukkan harga minimum",
-      yearmax: "Masukkan tahun maksimum",
-      yearmin: "Masukkan tahun minimum"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Tiada model tersedia"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const ms = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Jenama kereta diperlukan",
-      carmodel: "Model kereta diperlukan",
-      fueltype: "Jenis bahan api diperlukan",
-      maxkilometers: "Jumlah kilometer maksimum mesti dalam bentuk nombor",
-      pricemax: "Harga maksimum mesti nombor",
-      pricemin: "Harga minimum mesti nombor",
-      yearmax: "Tahun maksimum mesti tahun yang sah",
-      yearmin: "Tahun minimum mesti tahun yang sah"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Sebelumnya",
@@ -444,17 +312,7 @@ export const ms = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Buka Telegram dan cari @BotFather",
-      botstep2: "Hantar arahan /newbot",
-      botstep3: "Ikuti arahan untuk mencipta bot",
-      botstep4: "Salin token yang diberikan oleh BotFather",
-      bottitle: "Cara mendapatkan Token Bot Telegram:",
-      chatstep1: "Buka Telegram dan cari @userinfobot",
-      chatstep2: "Hantar sebarang mesej kepada bot",
-      chatstep3: "Bot akan membalas dengan maklumat anda termasuk Chat ID anda",
-      chatstep4: "Salin ID Chat (ia adalah nombor)",
-      chattitle: "Cara untuk dapatkan ID Chat Telegram anda:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const ms = {
       token: "Token Bot Telegram",
       chatId: "Your Telegram Chat ID",
       language: "Bahasa Pemberitahuan",
-      username: "Nama Pengguna Telegram",
-      chatid: "ID Sembang Telegram Anda"
+      username: "Nama Pengguna Telegram"
     },
     placeholders: {
       token: "Masukkan token bot anda dari BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Pilih Bahasa Mesej Telegram",
-      username: "Masukkan nama pengguna Telegram anda",
-      chatid: "Masukkan ID Telegram chat anda"
+      username: "Masukkan nama pengguna Telegram anda"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Faham! Sila berikan teks yang anda ingin saya terjemahkan.",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Anda boleh dapatkan ini dengan menghantar mesej kepada @userinfobot di Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const ms = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const ms = {
       token: "Token bot Telegram diperlukan",
       chatId: "Telegram chat ID is required",
       language: "Bahasa notifikasi diperlukan",
-      username: "Nama pengguna Telegram diperlukan",
-      chatid: "ID chat Telegram diperlukan"
+      username: "Nama pengguna Telegram diperlukan"
     },
     actions: {
       previous: "Sebelumnya",
@@ -544,47 +398,7 @@ export const ms = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Contoh: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Token Bot Telegram",
-    bottokenplaceholder: "Masukkan token bot anda dari BotFather",
-    caralerttitle: "🚗 Kereta Baru Tiba!",
-    chatiddescription: "Anda boleh dapatkan ini dengan menghantar mesej kepada @userinfobot di Telegram.",
-    chatidlabel: "ID Chat Telegram Anda",
-    chatidplaceholder: "Masukkan ID chat Telegram anda",
-    chatidsteps: {
-      0: "Buka Telegram dan cari \"userinfobot\"",
-      1: "Hantar sebarang mesej kepada bot",
-      2: "Bot akan membalas dengan maklumat anda termasuk Chat ID anda",
-      3: "Salin ID Chat anda"
-    },
-    chatidtitle: "Cara untuk dapatkan ID Chat Telegram anda:",
-    confirmcontact: "Saya telah memulakan chat dengan bot dan menghantar mesej",
-    contactbotinstruction: "Mulakan chat dengan bot Telegram kami dengan klik pautan di bawah dan hantar mesej kepadanya:",
-    contactbotnote: "Ini diperlukan untuk menerima makluman kereta. Jika anda menggunakan komputer, anda boleh imbas kod QR.",
-    helpdescription: "Tonton video di bawah untuk panduan langkah demi langkah.",
-    helptitle: "Perlukan bantuan untuk tetapkan Telegram Bot Token dan Chat ID anda?",
-    kilometreslabel: "Kilometer: {{kms}}",
-    languagelabel: "Bahasa Pemberitahuan",
-    languageplaceholder: "Pilih Bahasa Mesej Telegram",
-    locationlabel: "Lokasi: {{location}}",
-    previewtitle: "Pratonton Pemberitahuan Telegram",
-    pricelabel: "Harga: {{price}}",
-    setupsteps: {
-      0: "Buka Telegram dan cari \"BotFather\"",
-      1: "Mulakan chat dengan BotFather dengan klik \"Start\"",
-      2: "Taip /newbot dan ikut arahan untuk cipta bot baru",
-      3: "Pilih nama untuk bot anda",
-      4: "Pilih nama pengguna untuk bot anda (mesti berakhir dengan 'bot')",
-      5: "Salin token API yang diberikan oleh BotFather",
-      6: "Hantar mesej kepada bot baru anda untuk mengaktifkan chat"
-    },
-    setuptitle: "Arahan Persediaan:",
-    subheading: "Sediakan Bot Telegram anda",
-    usernamedescription: "Ini ialah nama pengguna akaun Telegram anda (tanpa simbol @).",
-    videodescription: "Tonton video di bawah untuk panduan langkah demi langkah.",
-    videoprompt: "Perlukan bantuan untuk tetapkan Telegram Bot Token dan Chat ID anda?",
-    viewlisting: "Lihat Senarai →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Semak Langganan Anda",
@@ -598,9 +412,7 @@ export const ms = {
       title: "Tetapan Pemantauan",
       websites: "Laman web",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook",
-      updatefrequency: "Kekerapan Kemas Kini"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Spesifikasi Kereta",
@@ -609,9 +421,7 @@ export const ms = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Jarak Perbatuan (km)",
-      price: "Julat Harga (€)",
-      fueltype: "Jenis Bahan Api",
-      yearrange: "Julat Tahun"
+      price: "Julat Harga (€)"
     },
     notification: {
       title: "Tetapan Notifikasi",
@@ -623,9 +433,7 @@ export const ms = {
       base: "Langganan Asas",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Jumlah (Bulanan)",
-      extrawebsites: "Laman Web Tambahan",
-      frequencyupgrade: "Peningkatan Frekuensi"
+      total: "Jumlah (Bulanan)"
     },
     terms: {
       checkbox: "Saya bersetuju dengan",
@@ -669,9 +477,7 @@ export const ms = {
         answer: "Anda boleh membatalkan langganan anda pada bila-bila masa melalui papan pemuka akaun anda. Pergi ke bahagian \"Langganan\", pilih langganan yang ingin dibatalkan, dan klik butang \"Batalkan Langganan\". Perkhidmatan anda akan diteruskan sehingga tamat tempoh bil semasa anda.",
         question: "Bagaimana saya boleh batalkan langganan saya?"
       }
-    },
-    contactlink: "Hubungi pasukan sokongan kami",
-    contactprompt: "Masih ada soalan?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const ms = {
     about: "Tentang Kami",
     blog: "Blog",
     careers: "Kerjaya",
-    support: "Sokongan",
-    branddescription: "Pembantu peribadi anda untuk mencari tawaran kereta terpakai terbaik pada masa yang tepat.",
-    brandtitle: "Amiquus",
-    getstarted: "Mulakan",
-    quicklinks: "Pautan Pantas"
+    support: "Sokongan"
   },
   login: {
     title: "Log masuk ke akaun anda",
@@ -716,21 +518,8 @@ export const ms = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Sila masukkan alamat e-mel yang sah",
-      shortpassword: "Kata laluan mesti sekurang-kurangnya 6 aksara"
-    },
-    emaillabel: "E-mel",
-    errortitle: "Log masuk gagal",
-    genericerror: "Sila semak maklumat log masuk anda dan cuba lagi.",
-    loggingin: "Sedang log masuk...",
-    loginbutton: "Log masuk",
-    loginwithgoogle: "Log masuk dengan Google",
-    noaccount: "Tiada akaun?",
-    passwordlabel: "Kata Laluan",
-    registerlink: "Daftar",
-    successmessage: "Anda telah berjaya log masuk.",
-    successtitle: "Log masuk berjaya"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Daftar akaun",
@@ -774,33 +563,8 @@ export const ms = {
       failure: {
         title: "Pendaftaran gagal",
         desc: "Sila semak maklumat anda dan cuba lagi."
-      },
-      invalidusername: {
-        desc: "Nama pengguna mesti mengandungi huruf dan nombor sahaja serta antara 3 hingga 20 aksara",
-        title: "Nama pengguna tidak sah"
-      },
-      missingfields: {
-        desc: "Sila isi semua medan yang diperlukan",
-        title: "Medan yang hilang"
-      },
-      passwordmismatch: {
-        desc: "Sila pastikan kata laluan anda sepadan",
-        title: "Kata laluan tidak sepadan"
-      },
-      termsnotaccepted: {
-        desc: "Anda mesti menerima terma dan polisi privasi untuk meneruskan",
-        title: "Terma tidak diterima"
       }
-    },
-    alreadyhave: "Sudah ada akaun?",
-    confirmpassword: "Sahkan Kata Laluan",
-    createbtn: "Daftar Akaun",
-    firstname: "Nama Pertama",
-    lastname: "Nama Akhir",
-    orcontinue: "Atau teruskan dengan",
-    privacypolicy: "Dasar Privasi",
-    termsnotice: "Saya bersetuju dengan",
-    termsofservice: "Terma Perkhidmatan"
+    }
   },
   verifyEmail: {
     title: "Sahkan Emel Anda",
@@ -821,20 +585,8 @@ export const ms = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-mel dikemas kini",
-      entervalidemail: "Sila masukkan alamat emel yang sah",
-      invalidemail: "Emel tidak sah",
-      sameemail: "E-mel yang sama",
-      sameemaildesc: "Emel baru adalah sama dengan emel semasa"
-    },
-    codelabel: "Kod Pengesahan",
-    footernote: "Tak terima kod? Sila semak folder spam anda.",
-    resendbutton: "Hantar Semula Kod",
-    resendcountdown: "Anda boleh hantar semula kod dalam {{seconds}}s.",
-    updateemailbutton: "Kemas Kini Emel",
-    updateemaillabel: "Kemas Kini Emel",
-    verifybutton: "Sahkan Emel"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Tambah Kaedah Pembayaran",
@@ -845,12 +597,6 @@ export const ms = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Ralat yang tidak dijangka telah berlaku",
-    errortitle: "Ralat menambah kaedah pembayaran",
-    initerror: {
-      description: "Tidak dapat memulakan tetapan pembayaran",
-      title: "Ralat"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const ms = {
       methods: "Kaedah pembayaran",
       account: "Tetapan Akaun",
       privacy: "Privasi & keselamatan",
-      logout: "Log keluar",
-      membersince: "Ahli sejak"
+      logout: "Log keluar"
     },
     account: {
       title: "Tetapan Akaun",
@@ -955,14 +700,8 @@ export const ms = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Anda perlu memulakan chat dengan Telegram bot kami dan hantar mesej untuk menerima makluman kereta. Sila ikut arahan di bawah untuk menghubungi bot tersebut.",
-        title: "Bot Hubungi Diperlukan"
       }
-    },
-    basetitle: "$79.99/bulan",
-    basicplan: "Pelan Asas"
+    }
   },
   loginPrompt: {
     title: "Log Masuk Diperlukan",
@@ -1005,15 +744,8 @@ export const ms = {
       },
       error: {
         title: "Ralat mengemas kini langganan"
-      },
-      priceerror: {
-        description: "Anda jeda dan kemas kini harga langganan anda pada masa yang sama. Anda perlu sama ada jeda atau kemas kini harga.",
-        title: "Tidak Dapat Kemas Kini Langganan"
       }
-    },
-    notfound: "Langganan tidak dijumpai",
-    notfoundsub: "Kembali ke papan pemuka",
-    subtitle: "Edit butiran langganan anda di bawah"
+    }
   },
   about: {
     title: "Mengenai Amiquus",
@@ -1241,8 +973,7 @@ export const ms = {
           1: "Dengan melawat halaman hubungi kami di laman web kami"
         }
       }
-    },
-    lastupdated: "Kemas kini terakhir: 21 Mei 2025"
+    }
   },
   privacy: {
     metaTitle: "Dasar Privasi | Amiquus",
@@ -1363,8 +1094,7 @@ export const ms = {
           1: "Dengan melawat halaman hubungi kami di laman web kami"
         }
       }
-    },
-    lastupdated: "Kemas kini terakhir: 21 Mei 2025"
+    }
   },
   faqs: {
     metaTitle: "Soalan Lazim | Amiquus",
@@ -1408,34 +1138,6 @@ export const ms = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Anda tetapkan kriteria carian anda (jenama, model, julat harga, dan lain-lain)",
-          1: "Anda pilih laman web yang ingin dipantau",
-          2: "Anda sambungkan akaun Telegram anda untuk notifikasi",
-          3: "Sistem kami sentiasa memantau laman web pilihan anda untuk penyenaraian baru",
-          4: "Apabila kereta yang sepadan muncul, anda akan menerima notifikasi segera di Telegram dengan semua butiran dan pautan terus."
-        },
-        question: "Bagaimana ia berfungsi?"
-      },
-      whatis: {
-        answer: "AMIQUUS ialah perkhidmatan yang memantau pelbagai laman web senarai kereta untuk kenderaan yang menepati kriteria khusus anda. Apabila terdapat senarai yang sepadan, anda akan menerima notifikasi segera melalui Telegram, membolehkan anda menjadi antara yang terawal menghubungi penjual dan mendapatkan tawaran terbaik.",
-        question: "Apa itu Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Kami kini memantau platform utama penyenaraian kereta berikut:",
-        list: {
-          0: "AutoTrader",
-          1: "AMIQUUS",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (melalui URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Kami sentiasa menambah lebih banyak platform untuk memberikan liputan yang paling menyeluruh.",
-        question: "Laman web penyenaraian kereta mana yang anda pantau?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const ms = {
           2: "Pilih tab \"Langganan\"",
           3: "Klik butang \"Batalkan Langganan\" di sebelah langganan yang anda ingin batalkan"
         },
-        note: "Langganan anda akan kekal aktif sehingga tamat tempoh bil semasa anda.",
-        stepsintro: "Anda boleh membatalkan langganan anda pada bila-bila masa di halaman profil akaun anda:"
+        note: "Langganan anda akan kekal aktif sehingga tamat tempoh bil semasa anda."
       },
       multiple: {
         question: "Bolehkah saya mempunyai beberapa langganan untuk model kereta yang berbeza?",
@@ -1488,8 +1189,7 @@ export const ms = {
           4: "Masukkan token bot dan ID chat anda dalam tetapan langganan AMIQUUS",
           5: "Uji tetapan notifikasi anda dengan butang `Hantar Mesej Ujian`"
         },
-        note: "Arahan langkah demi langkah yang terperinci beserta tangkapan skrin disediakan semasa proses tetapan langganan.",
-        stepsintro: "Untuk tetapkan notifikasi Telegram:"
+        note: "Arahan langkah demi langkah yang terperinci beserta tangkapan skrin disediakan semasa proses tetapan langganan."
       },
       frequency: {
         question: "Berapa kerap saya akan menerima notifikasi?",
@@ -1561,19 +1261,7 @@ export const ms = {
         description: "Kami akan menggunakan emel ini untuk memaklumkan anda apabila tempat tersedia."
       },
       submit: "Sertai Senarai Menunggu",
-      submitting: "Menghantar...",
-      firstname: {
-        label: "Nama Pertama",
-        placeholder: "John"
-      },
-      lastname: {
-        label: "Nama Akhir",
-        placeholder: "Rusa"
-      }
-    },
-    cantjoin: {
-      description: "Kami akan maklumkan anda sebaik sahaja slot langganan tersedia.",
-      title: "Sertai Senarai Menunggu"
+      submitting: "Menghantar..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const ms = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Hantarkan emel kepada kami dan kami akan membalas anda dalam masa 24 jam",
-      email: "support@amiquus.com",
-      title: "Sokongan E-mel"
-    },
-    faqheading: "Soalan Lazim",
-    stillneedhelp: {
-      button: "Hubungi Sokongan",
-      description: "Jika anda tidak jumpa jawapan untuk soalan anda, sila hubungi pasukan sokongan kami. Kami sedia membantu anda!",
-      heading: "Masih perlukan bantuan?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const ms = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Batal",
-    confirmremove: "Buang Kad",
-    default: "Lalai",
-    expires: "Tamat",
-    remove: "Buang",
-    removedescription: "Adakah anda pasti mahu keluarkan kad {{brand}} anda yang berakhir dengan {{last4}}?",
-    removetitle: "Buang Kaedah Pembayaran",
-    removewarning: "Ini adalah kaedah pembayaran utama anda dan menghapuskannya mungkin menjejaskan langganan aktif anda.",
-    setasdefault: "Tetapkan sebagai Lalai",
-    setdefaultdescription: "Adakah anda ingin menetapkan kad {{brand}} yang berakhir dengan {{last4}} sebagai kaedah pembayaran utama anda? Kad ini akan digunakan untuk semua pembayaran langganan akan datang.",
-    setdefaulttitle: "Tetapkan Kaedah Pembayaran Lalai"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Batalkan Amaran",
-    canceldescription: "Adakah anda pasti mahu batalkan amaran kereta untuk {{brand}} {{model}}? Ini akan hentikan semua notifikasi dan anda perlu tetapkan amaran baru jika ingin pantau kereta ini semula.",
-    canceltitle: "Batalkan Amaran Kereta",
-    confirmcancel: "Batalkan Amaran",
-    edit: "Edit",
-    keepmyalert: "Simpan Amaran Saya",
-    language: "Bahasa",
-    price: "Harga",
-    pricerange: "Harga",
-    updates: "Kemaskini",
-    websites: "Laman web",
-    years: "Tahun"
-  },
-  signUp: {
-    cta: "Dapatkan Makluman Sekarang",
-    heading: "Cipta Amaran Kereta Anda",
-    subheading: "Sediakan notifikasi senarai kereta peribadi anda dalam beberapa langkah sahaja.",
-    toast: {
-      error: {
-        description: "Kami tidak dapat mencipta langganan anda. Sila cuba lagi nanti.",
-        title: "Langganan gagal"
-      },
-      success: {
-        description: "Langganan anda telah berjaya dibuat.",
-        title: "Langganan berjaya dibuat"
-      }
-    },
-    waitlist: {
-      cta: "Sertai Senarai Menunggu",
-      message: "Kami kini beroperasi pada kapasiti penuh. Sila sertai senarai menunggu kami untuk dimaklumkan apabila terdapat kekosongan."
     }
   }
 };

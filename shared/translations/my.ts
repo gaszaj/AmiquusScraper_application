@@ -24,16 +24,10 @@ export const my = {
     button1: "သတိပေးချက်များကို စတင်သတ်မှတ်ပါ",
     button2: "ဘယ်လိုအလုပ်လုပ်သလဲ ကြည့်ရှုပါ",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "အချိန်မရွေး ပယ်ဖျက်နိုင်သည်",
-      nosetup: "တပ်ဆင်ရန်မလိုအပ်ပါ",
-      realtime: "အချိန်နောက်ပြန်မီသတင်းအချက်အလက်များ",
-      websites: "ဝက်ဘ်ဆိုက် ၁၅ ခုကျော် စောင့်ကြည့်နေသည်"
+      websites: "ဝဘ်ဆိုက် ၁၅ ခုထက်ပိုမို ခြေရာခံနေသည်",
+      realtime: "အချိန်နှင့်တစ်ပြေးညီ သတိပေးချက်များ",
+      noSetup: "စနစ်ပြင်ဆင်ရန် မလိုအပ်ပါ",
+      cancelAnytime: "အချိန်မရွေး ပယ်ဖျက်ပါ"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const my = {
     heading: "ဘာကြောင့် Amiquus ကိုရွေးချယ်သင့်တာလဲ?",
     subheading: "အချိန်မဖြုန်းဘဲ သင့်အတွက်အကောင်းဆုံးကားကို AMIQUUS ၏ အလိုအလျောက်စောင့်ကြည့်ဝန်ဆောင်မှုနဲ့ လက်လွတ်မနေပါနဲ့။",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "ဘက်စုံဆိုက်များ ခြေရာခံခြင်း",
+      description: "အသီးသီး လက်ဖြင့် စစ်ဆေးစရာ မလိုဘဲ ကားကြော်ငြာဝဘ်ဆိုက်များစွာကို တစ်ပြိုင်တည်း စောင့်ကြည့်ပါ။"
     },
     notifications: {
       title: "ချက်ချင်းအသိပေးချက်များ",
@@ -73,61 +67,12 @@ export const my = {
       description: "သင့်လိုအပ်ချက်အရ AMIQUUS မှ နောက်ဆုံးထပ်မံတင်ထားသော အကြောင်းအရာများကို မိနစ်နှုန်းစီမှ တစ်နာရီတစ်ကြိမ်အထိ သို့မဟုတ် အချိန်နောက်တိုင်း စောင့်ကြည့်သည့်အထိ ဘယ်လောက်မြန်မြန်စွာ စစ်ဆေးပေးမလဲ ရွေးချယ်ပါ။"
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "ဘာသာစကားများစွာ အထောက်အပံ့",
+      description: "စာရင်းများကို ပိုမိုလွယ်ကူစွာ နားလည်နိုင်ရန် သင်နှစ်သက်သော ဘာသာစကားဖြင့် အသိပေးချက်များ လက်ခံရယူပါ။"
     },
     account: {
       title: "အကောင့်စီမံခန့်ခွဲမှုကိုလွယ်ကူစွာလုပ်နိုင်မှု",
       description: "ရှာဖွေရေးပရိုဖိုင်များစွာကို စီမံခန့်ခွဲပြီး သင့် subscription ဆက်တင်များကို အလွယ်တကူ ပြင်ဆင်နိုင်ပါသည်။"
-    },
-    multisite: {
-      description: "ကားအရောင်းဝက်ဘ်ဆိုက်များစွာကို တစ်ခါတည်းစောင့်ကြည့်နိုင်ပြီး တစ်ခုချင်းစီကိုလက်ဖြင့်စစ်ဆေးစရာမလိုတော့ပါ။",
-      title: "ဝက်ဘ်ဆိုက်များစွာတွင် ခြေရာခံခြင်း"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const my = {
         description: "သင့်စံနှုန်းနှင့်ကိုက်ညီသောကားတစ်စီးကို AMIQUUS စောင့်ကြည့်နေသောဝက်ဘ်ဆိုက်များတွင်ပေါ်လာသည့်အခါ ချက်ချင်းအသိပေးချက်များကိုလက်ခံရယူနိုင်ပါသည်။"
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "သင့်ရဲ့ ပြီးပြည့်စုံသော ကားကို ရှာပါ",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "အသစ်ထပ်မံတင်ထားသောအကြောင်းအရာများကို အရင်ဆုံးသိရှိပြီး၊ အကောင်းဆုံးအရောင်းအဝယ်အခွင့်အလမ်းများကို တစ်ဦးဦးထက် အရင်ဆုံးသိမ်းပိုက်လိုက်ပါ။",
-        title: "သင့်အတွက်အကောင်းဆုံးကားကိုရှာပါ"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const my = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 Series, 2019, $32,500 - AutoTrader တွင်အသစ်တင်ထားပါသည်",
-      title: "အသစ်တွေ့ရှိမှု!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, မိုင် ၃၀,၀၀၀ - စျေးနှုန်း $2,000 လျှော့ထားသည်",
-      title: "တယ်လီဂရမ်သတိပေးချက်"
-    },
-    setalerts: "သတိပေးချက်များကို စတင်သတ်မှတ်ပါ",
-    whytitle: "ဘာကြောင့် AMIQUUS ကိုရွေးချယ်သင့်သလဲ?"
+    }
   },
   pricing: {
     title: "ရိုးရှင်းပြီး ပွင့်လင်းသော စျေးနှုန်းများ",
@@ -218,17 +149,7 @@ export const my = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "ယခုစတင်လိုက်ပါ",
-    addonstitle: "အပိုဆောင်းများ:",
-    basetitle: "အခြေခံပက်ကေ့ချ် - လစဉ် $79.99",
-    footernote: "အားလုံးအတွက်အစီအစဉ်များတွင် ရှာဖွေရေးပြုပြင်မှုများကို အကန့်အသတ်မရှိအသုံးပြုနိုင်ပြီး subscription ကိုလွယ်ကူစွာစီမံခန့်ခွဲနိုင်ပါသည်။",
-    includedfeatures: {
-      0: "ဝက်ဘ်ဆိုက်တစ်ခုစောင့်ကြည့်မှု",
-      1: "နာရီတိုင်းအသစ်တင်ချက်များ",
-      2: "အကန့်အသတ်မရှိ စစ်ထုတ်မှုများ",
-      3: "တယ်လီဂရမ်အသိပေးချက်များ"
-    },
-    includedtitle: "ပါဝင်သောအရာများ:"
+    button: "ယခုစတင်လိုက်ပါ"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const my = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "ကားအမှတ်တံဆိပ် ဖြည့်ရန်လိုအပ်ပါသည်",
-      carmodel: "ကားမော်ဒယ် ဖြည့်ရန် လိုအပ်ပါသည်။",
-      facebookmarketplaceurl: "Facebook ကိုရွေးချယ်ထားသောအခါ Facebook Marketplace URL ထည့်သွင်းရန်လိုအပ်ပါသည်။",
-      fueltype: "လောင်စာအမျိုးအစား ဖြည့်ရန်လိုအပ်ပါသည်",
-      maxkilometers: "အမြင့်ဆုံး ကီလိုမီတာသည် နံပါတ်ဖြစ်ရမည်",
-      notificationlanguage: "အသိပေးဘာသာစကားရွေးချယ်ရန်လိုအပ်ပါသည်။",
-      pricemax: "အမြင့်ဆုံးဈေးနှုန်းသည် နံပါတ်ဖြစ်ရမည်",
-      pricemin: "အနိမ့်ဆုံးဈေးနှုန်းသည် နံပါတ်ဖြစ်ရမည်",
-      telegramchatid: "Telegram chat ID လိုအပ်ပါသည်။",
-      telegramtoken: "Telegram bot token လိုအပ်ပါသည်",
-      telegramusername: "Telegram အသုံးပြုသူအမည် ဖြည့်ရန်လိုအပ်ပါသည်။",
-      websitesselected: "အနည်းဆုံးဝက်ဘ်ဆိုက်တစ်ခုခုရွေးချယ်ရပါမည်",
-      yearmax: "အမြင့်ဆုံးနှစ်သည် မှန်ကန်သောနှစ်တစ်နှစ်ဖြစ်ရမည်",
-      yearmin: "အနိမ့်ဆုံးနှစ်သည် တရားဝင်နှစ်တစ်နှစ် ဖြစ်ရမည်"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const my = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "အီးမေးလ်လိပ်စာ",
-      firstname: "နာမည် (ပထမ)",
-      lastname: "နောက်ဆုံးအမည်"
+      email: "အီးမေးလ်လိပ်စာ"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "ဂျွန်",
-      lastname: "ဒိုး"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "ကျေးဇူးပြု၍ မှန်ကန်သော အီးမေးလ်လိပ်စာ ထည့်ပါ",
-      firstname: "နာမည်အကြောင်းအရာဖြည့်ရန်လိုအပ်ပါသည်",
-      lastname: "နောက်ဆုံးအမည် ဖြည့်ရန်လိုအပ်ပါသည်"
+      email: "ကျေးဇူးပြု၍ မှန်ကန်သော အီးမေးလ်လိပ်စာ ထည့်ပါ"
     },
     actions: {
       login: "ဆက်လက်အသုံးပြုရန် ဝင်ရောက်ရန် သို့မဟုတ် အကောင့်ဖွင့်ပါ",
@@ -332,9 +233,7 @@ export const my = {
     labels: {
       websites: "စောင့်ကြည့်ရန် ဝက်ဘ်ဆိုက်များ",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace လင့်ခ် URL",
-      updatefrequency: "အပ်ဒိတ်အကြိမ်အနည်းအများ"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "ကြိမ်နှုန်းရွေးချယ်ပါ"
@@ -344,16 +243,11 @@ export const my = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "သင့်ရဲ့ Facebook Marketplace ရှာဖွေမှုရလဒ်များရဲ့ URL ကို ဒီမှာ ပွားထည့်ပါ။",
-      updatefrequency: "အသစ်တင်ထားတဲ့စာရင်းတွေကို ဘယ်လောက်အကြိမ်ကြည့်စစ်သင့်လဲ? ကြိမ်နှုန်းမြင့်လာရင် ကုန်ကျစရိတ်လည်း မြင့်နိုင်ပါတယ်။",
-      videodesc: "အောက်ပါဗီဒီယိုကိုကြည့်ပြီး အဆင့်လိုက်လမ်းညွှန်ချက်များကို လေ့လာပါ။",
-      videotitle: "Facebook Marketplace ရှာဖွေရေးလင့်ခ်ကို ရှာဖွေရန် အကူအညီလိုပါသလား?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "အနည်းဆုံး ဝက်ဘ်ဆိုဒ်တစ်ခုတော့ ရွေးချယ်ရပါမည်",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook ကို ရွေးချယ်ထားပါက Facebook Marketplace URL ထည့်ရန် လိုအပ်ပါသည်။"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "ယခင်စာမျက်နှာ",
@@ -371,15 +265,7 @@ export const my = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "ကားအမှတ်တံဆိပ်",
-      carmodel: "ကားမော်ဒယ်",
-      fueltype: "လောင်စာအမျိုးအစား",
-      maxkilometers: "အများဆုံး ကီလိုမီတာ",
-      pricemax: "အမြင့်ဆုံးဈေးနှုန်း",
-      pricemin: "အနိမ့်ဆုံးဈေးနှုန်း",
-      yearmax: "အများဆုံးနှစ်",
-      yearmin: "အနိမ့်ဆုံးနှစ်"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const my = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "ကားအမှတ်တံဆိပ်ရွေးချယ်ပါ",
-      carmodel: "ကားမော်ဒယ်ရွေးပါ",
-      carmodeldisabled: "အရင်ဆုံးကားအမှတ်တံဆိပ်ကိုရွေးချယ်ပါ",
-      fueltype: "လောင်စာအမျိုးအစားရွေးပါ",
-      maxkilometers: "အများဆုံး ကီလိုမီတာ ထည့်ပါ",
-      pricemax: "အမြင့်ဆုံးဈေးနှုန်းထည့်ပါ",
-      pricemin: "အနိမ့်ဆုံးဈေးနှုန်းထည့်ပါ",
-      yearmax: "အများဆုံးနှစ်ကို ထည့်ပါ",
-      yearmin: "အနိမ့်ဆုံးနှစ်ကို ထည့်ပါ"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "မော်ဒယ်များ မရှိပါ"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const my = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "ကားအမှတ်တံဆိပ် ဖြည့်ရန်လိုအပ်ပါသည်",
-      carmodel: "ကားမော်ဒယ် ဖြည့်ရန် လိုအပ်ပါသည်",
-      fueltype: "လောင်စာအမျိုးအစား ဖြည့်ရန်လိုအပ်ပါသည်",
-      maxkilometers: "အများဆုံး ကီလိုမီတာသည် နံပါတ်ဖြစ်ရမည်",
-      pricemax: "အမြင့်ဆုံးဈေးနှုန်းသည် နံပါတ်ဖြစ်ရမည်",
-      pricemin: "အနိမ့်ဆုံးဈေးနှုန်းသည် နံပါတ်ဖြစ်ရမည်",
-      yearmax: "အများဆုံးနှစ်သည် တရားဝင်နှစ်တစ်နှစ် ဖြစ်ရမည်",
-      yearmin: "အနိမ့်ဆုံးနှစ်သည် မှန်ကန်သော နှစ်တစ်နှစ် ဖြစ်ရမည်"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "ယခင်",
@@ -444,17 +312,7 @@ export const my = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Telegram ကိုဖွင့်ပြီး @BotFather ကို ရှာပါ",
-      botstep2: "/newbot ကိုပို့ပါ",
-      botstep3: "ဘော့တစ်ခုဖန်တီးရန် လမ်းညွှန်ချက်များကို လိုက်နာပါ",
-      botstep4: "BotFather မှပေးထားသော token ကို ကူးယူပါ",
-      bottitle: "Telegram Bot Token ကိုဘယ်လိုရယူမလဲ:",
-      chatstep1: "Telegram ကိုဖွင့်ပြီး @userinfobot ကို ရှာပါ",
-      chatstep2: "ဘော့ကို မည်သည့်မက်ဆေ့ခ်ျမဆို ပို့ပါ",
-      chatstep3: "Bot က သင့်အချက်အလက်များနှင့် သင့် Chat ID ပါဝင်သည့် အကြောင်းအရာကို ပြန်လည်ဖြေကြားပေးပါမည်။",
-      chatstep4: "ချတ်အိုင်ဒီ (နံပါတ်ဖြစ်ပါတယ်) ကိုကူးယူပါ",
-      chattitle: "Telegram Chat ID ကိုဘယ်လိုရယူမလဲ။"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const my = {
       token: "တယ်လီဂရမ်ဘော့ထုတ်ကုဒ်",
       chatId: "Your Telegram Chat ID",
       language: "အသိပေးစာဘာသာစကား",
-      username: "Telegram အသုံးပြုသူအမည်",
-      chatid: "သင့် Telegram Chat ID"
+      username: "Telegram အသုံးပြုသူအမည်"
     },
     placeholders: {
       token: "BotFather မှာရရှိတဲ့ သင့် bot token ကို ထည့်ပါ",
       chatId: "Enter your Telegram chat ID",
       language: "Telegram မက်ဆေ့ချ်ဘာသာစကား ရွေးချယ်ပါ",
-      username: "သင့် Telegram အသုံးပြုသူအမည်ကို ထည့်ပါ",
-      chatid: "သင်၏ Telegram စကားပြော ID ကို ထည့်ပါ"
+      username: "သင့် Telegram အသုံးပြုသူအမည်ကို ထည့်ပါ"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "ဥပမာ - 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Telegram မှာ @userinfobot ကို မက်ဆေ့ခ်ျပို့ပြီး ယင်းကို ရယူနိုင်ပါတယ်။"
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const my = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const my = {
       token: "Telegram bot token လိုအပ်ပါသည်",
       chatId: "Telegram chat ID is required",
       language: "အသိပေးဘာသာစကားရွေးချယ်ရန်လိုအပ်ပါသည်။",
-      username: "Telegram အသုံးပြုသူအမည် ဖြည့်ရန်လိုအပ်ပါသည်",
-      chatid: "Telegram chat ID จำเป็นလိုအပ်သည်"
+      username: "Telegram အသုံးပြုသူအမည် ဖြည့်ရန်လိုအပ်ပါသည်"
     },
     actions: {
       previous: "ယခင်စာမျက်နှာ",
@@ -544,47 +398,7 @@ export const my = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "ဥပမာ - 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "တယ်လီဂရမ်ဘော့ထုတ်ကွန်",
-    bottokenplaceholder: "BotFather မှာရရှိတဲ့ သင့် bot token ကို ထည့်ပါ",
-    caralerttitle: "🚗 မော်တော်ကားအသစ်ရောက်ရှိပါပြီ!",
-    chatiddescription: "Telegram မှာ @userinfobot ကို မက်ဆေ့ခ်ျ ပို့ပြီး ဒီအချက်အလက်ကို ရနိုင်ပါတယ်။",
-    chatidlabel: "သင့် Telegram စကားပြော ID",
-    chatidplaceholder: "သင့် Telegram chat ID ကိုထည့်ပါ",
-    chatidsteps: {
-      0: "Telegram ကိုဖွင့်ပြီး \"userinfobot\" ကို ရှာပါ",
-      1: "ဘော့ကို မည်သည့်မက်ဆေ့ခ်ျမဆို ပို့နိုင်ပါသည်။",
-      2: "Bot က သင့်အချက်အလက်များ၊ အထူးသဖြင့် သင့် Chat ID ကို ဖြေပြန်ပေးပါမည်။",
-      3: "သင့် Chat ID ကိုကူးယူပါ"
-    },
-    chatidtitle: "Telegram Chat ID ကိုဘယ်လိုရယူမလဲ:",
-    confirmcontact: "ကျွန်တော် (သို့) ကျွန်မ AMIQUUS bot နဲ့ စကားပြောဖို့ စတင်ပြီး မက်ဆေ့ခ်ျ ပို့လိုက်ပါပြီ။",
-    contactbotinstruction: "အောက်ပါလင့်ခ်ကိုနှိပ်ပြီး AMIQUUS ရဲ့ Telegram bot နဲ့ စကားပြောချင်တာကို စတင်ပြီး မက်ဆေ့ခ်ျတစ်ခု ပို့ပေးပါ။",
-    contactbotnote: "ကားအကြောင်းသတင်းအချက်အလက်များကိုလက်ခံရန်အတွက် ဒီအချက်အလက်လိုအပ်ပါတယ်။ Desktop ကနေသုံးနေတယ်ဆိုရင် QR ကုဒ်ကို scan လုပ်နိုင်ပါတယ်။",
-    helpdescription: "အောက်ပါဗီဒီယိုကိုကြည့်ပြီး အဆင့်လိုက်လမ်းညွှန်ကို လေ့လာပါ။",
-    helptitle: "သင့်ရဲ့ Telegram Bot Token နဲ့ Chat ID ကို စတင်တပ်ဆင်ဖို့ အကူအညီလိုအပ်ပါသလား?",
-    kilometreslabel: "ကီလိုမီတာများ: {{kms}}",
-    languagelabel: "အသိပေးစာဘာသာစကား",
-    languageplaceholder: "Telegram မက်ဆေ့ခ်ျ ဘာသာစကား ရွေးချယ်ပါ",
-    locationlabel: "တည်နေရာ - {{location}}",
-    previewtitle: "တယ်လီဂရမ်အသိပေးချက်များကိုကြိုတင်ကြည့်ရှုရန်",
-    pricelabel: "ဈေးနှုန်း - {{price}}",
-    setupsteps: {
-      0: "Telegram ကိုဖွင့်ပြီး \"BotFather\" ကို ရှာပါ",
-      1: "BotFather နဲ့ စကားပြောဖို့ \"Start\" ကိုနှိပ်ပါ",
-      2: "/newbot ကိုရိုက်ထည့်ပြီး bot အသစ်တစ်ခုဖန်တီးရန် လမ်းညွှန်ချက်များကိုလိုက်နာပါ။",
-      3: "သင့်ရဲ့ဘော့အတွက် နာမည်ရွေးချယ်ပါ",
-      4: "သင့်ရဲ့ဘော့အတွက် အသုံးပြုသူအမည်ရွေးပါ (အမည်အဆုံးမှာ 'bot' ပါရမည်)",
-      5: "BotFather မှ ပေးထားသော API token ကို ကူးယူပါ",
-      6: "သင့်ရဲ့ bot အသစ်ကို စကားပို့ပြီး စကားပြောခန်းကို ဖွင့်ပါ"
-    },
-    setuptitle: "တပ်ဆင်ရန်ညွှန်ကြားချက်များ:",
-    subheading: "သင့် Telegram Bot ကိုတပ်ဆင်ပါ",
-    usernamedescription: "ဤသည်မှာ သင်၏ Telegram အကောင့်ရှိ အသုံးပြုသူအမည်ဖြစ်ပြီး (@ သင်္ကေတမပါဝင်ပါ)။",
-    videodescription: "အောက်ပါဗီဒီယိုကိုကြည့်ပြီး အဆင့်လိုက်လမ်းညွှန်ကို လေ့လာပါ။",
-    videoprompt: "သင့်ရဲ့ Telegram Bot Token နဲ့ Chat ID ကို စတင်တပ်ဆင်ဖို့ အကူအညီလိုပါသလား?",
-    viewlisting: "ကြော်ငြာကြည့်ရန် →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "သင့်စာရင်းသွင်းမှုကို ပြန်စစ်ပါ",
@@ -598,9 +412,7 @@ export const my = {
       title: "စောင့်ကြည့်မှု ဆက်တင်များ",
       websites: "ဝက်ဘ်ဆိုက်များ",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "ဖေ့စ်ဘုတ်လိပ်စာ",
-      updatefrequency: "အပ်ဒိတ်အကြိမ်နှုန်း"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "ကားအချက်အလက်များ",
@@ -609,9 +421,7 @@ export const my = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "မိုင်လျှေ့အကွာအဝေး (ကီလိုမီတာ)",
-      price: "စျေးနှုန်းအတန်း (€)",
-      fueltype: "လောင်စာအမျိုးအစား",
-      yearrange: "နှစ်အတန်း"
+      price: "စျေးနှုန်းအတန်း (€)"
     },
     notification: {
       title: "အသိပေးချက် ဆက်တင်များ",
@@ -623,9 +433,7 @@ export const my = {
       base: "အခြေခံ subscription",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "စုစုပေါင်း (လစဉ်)",
-      extrawebsites: "အပိုဝက်ဘ်ဆိုက်များ",
-      frequencyupgrade: "ကြိမ်နှုန်းမြှင့်တင်ခြင်း"
+      total: "စုစုပေါင်း (လစဉ်)"
     },
     terms: {
       checkbox: "ကျွန်ုပ် သဘောတူပါသည်",
@@ -669,9 +477,7 @@ export const my = {
         answer: "သင်၏ subscription ကို မည်သည့်အချိန်တွင်မဆို သင့်အကောင့် dashboard မှာပဲ ပယ်ဖျက်နိုင်ပါတယ်။ \"Subscriptions\" အပိုင်းကိုသွားပြီး ပယ်ဖျက်လိုသော subscription ကိုရွေးချယ်ပါ၊ ပြီးလျှင် \"Cancel Subscription\" ခလုတ်ကိုနှိပ်ပါ။ သင့်ဝန်ဆောင်မှုသည် လက်ရှိငွေတောင်းခံချိန်ကာလ ပြီးဆုံးသည်အထိ ဆက်လက်အသုံးပြုနိုင်ပါမည်။",
         question: "ငါ့ subscription ကို ဘယ်လို ပယ်ဖျက်ရမလဲ?"
       }
-    },
-    contactlink: "ကျွန်ုပ်တို့၏ ပံ့ပိုးမှုအဖွဲ့ကို ဆက်သွယ်ပါ",
-    contactprompt: "မေးခွန်းတွေရှိနေသေးပါသလား?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const my = {
     about: "အကြောင်းအရာ",
     blog: "ဘလော့",
     careers: "အလုပ်အကိုင်အခွင့်အလမ်းများ",
-    support: "ထောက်ခံမှု",
-    branddescription: "သင့်အတွက်အချိန်မှန်မှာ အကောင်းဆုံးအသုံးပြုကားအရောင်းအဝယ်ကို ရှာဖွေဖို့ AMIQUUS က ကိုယ်ပိုင်အကူအညီပေးသူပါ။",
-    brandtitle: "Amiquus",
-    getstarted: "စတင်ပါ",
-    quicklinks: "လျင်မြန်သောလင့်များ"
+    support: "ထောက်ခံမှု"
   },
   login: {
     title: "သင့်အကောင့်သို့ ဝင်ရောက်ပါ",
@@ -716,21 +518,8 @@ export const my = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "ကျေးဇူးပြု၍ မှန်ကန်သော အီးမေးလ်လိပ်စာ ထည့်ပါ။",
-      shortpassword: "စကားဝှက်မှာ အနည်းဆုံး အက္ခရာ ၆ လုံးရှိရပါမယ်"
-    },
-    emaillabel: "အီးမေးလ်",
-    errortitle: "လော့ဂ်အင် မအောင်မြင်ပါ",
-    genericerror: "ကျေးဇူးပြု၍ သင့်အကောင့်ဝင်ရန်အချက်အလက်များကို ပြန်စစ်ပြီး ထပ်မံကြိုးစားပါ။",
-    loggingin: "ဝင်ရောက်နေသည်...",
-    loginbutton: "လော့ဂ်အင်",
-    loginwithgoogle: "Google ဖြင့် ဝင်ရောက်ပါ",
-    noaccount: "အကောင့်မရှိဘူးလား?",
-    passwordlabel: "စကားဝှက်",
-    registerlink: "စာရင်းသွင်းရန်",
-    successmessage: "သင်အောင်မြင်စွာဝင်ရောက်ပြီးပါပြီ။",
-    successtitle: "လော့ဂ်အင်အောင်မြင်ပါသည်"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "အကောင့်ဖွင့်ရန်",
@@ -774,33 +563,8 @@ export const my = {
       failure: {
         title: "စာရင်းသွင်းမှု မအောင်မြင်ပါ",
         desc: "ကျေးဇူးပြု၍ သင့်အချက်အလက်များကို ပြန်စစ်ပြီး ထပ်မံကြိုးစားပါ။"
-      },
-      invalidusername: {
-        desc: "အသုံးပြုသူအမည်သည် အက္ခရာနှင့် နံပါတ်များသာ ပါဝင်ရမည်ဖြစ်ပြီး အနည်းဆုံး ၃ လုံးမှ အများဆုံး ၂၀ လုံးအတွင်း ရှိရမည်။",
-        title: "အသုံးပြုသူအမည် မမှန်ပါ"
-      },
-      missingfields: {
-        desc: "ကျေးဇူးပြုပြီး လိုအပ်သောအကွက်အားလုံး ဖြည့်ပါ",
-        title: "လိုအပ်သောအချက်အလက်များ"
-      },
-      passwordmismatch: {
-        desc: "ကျေးဇူးပြုပြီး သင့်စကားဝှက်နှစ်ခု တူညီကြောင်း သေချာပါစေ",
-        title: "စကားဝှက်တွေ မတူညီပါ"
-      },
-      termsnotaccepted: {
-        desc: "ဆက်လက်လုပ်ဆောင်ရန် AMIQUUS ၏ စည်းကမ်းနှင့် ကိုယ်ရေးအချက်အလက်ရေးရာ မူဝါဒကို သဘောတူရမည်။",
-        title: "သတ်မှတ်ချက်များကို လက်မခံပါ"
       }
-    },
-    alreadyhave: "အကောင့်ရှိပြီးသားလား?",
-    confirmpassword: "စကားဝှက်အတည်ပြုရန်",
-    createbtn: "အကောင့်ဖွင့်ရန်",
-    firstname: "နာမည် (ပထမ)",
-    lastname: "နောက်ဆုံးအမည်",
-    orcontinue: "သို့မဟုတ် ဆက်လက်ဝင်ရောက်ရန်",
-    privacypolicy: "ကိုယ်ရေးအချက်အလက် လုံခြုံရေးမူဝါဒ",
-    termsnotice: "ကျွန်ုပ် သဘောတူပါသည်",
-    termsofservice: "ဝန်ဆောင်မှုသတ်မှတ်ချက်များ"
+    }
   },
   verifyEmail: {
     title: "သင့်အီးမေးလ်ကိုအတည်ပြုပါ",
@@ -821,20 +585,8 @@ export const my = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "အီးမေးလ်ကိုအပ်ဒိတ်လုပ်ပြီးပါပြီ",
-      entervalidemail: "ကျေးဇူးပြု၍ မှန်ကန်သော အီးမေးလ်လိပ်စာ ထည့်ပါ",
-      invalidemail: "အီးမေးလ်လိပ်စာ မမှန်ပါ",
-      sameemail: "တူညီသောအီးမေးလ်",
-      sameemaildesc: "အသစ်ထည့်သွင်းသော အီးမေးလ်လိပ်စာသည် လက်ရှိအီးမေးလ်လိပ်စာနှင့် တူညီနေပါသည်။"
-    },
-    codelabel: "အတည်ပြုကုဒ်",
-    footernote: "ကုဒ်မရရှိသေးဘူးလား? Spam ဖိုလ်ဒါထဲကို စစ်ကြည့်ပါ။",
-    resendbutton: "ကုဒ်ကိုပြန်ပို့ပါ",
-    resendcountdown: "သင်ကုဒ်ကို {{seconds}} စက္ကန့်အတွင်း ပြန်လည်ပို့နိုင်ပါသည်။",
-    updateemailbutton: "အီးမေးလ်အသစ်ပြင်ရန်",
-    updateemaillabel: "အီးမေးလ်အသစ်ပြင်ရန်",
-    verifybutton: "အီးမေးလ်အတည်ပြုပါ"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "ငွေပေးချေမှုနည်းလမ်းထည့်ပါ",
@@ -845,12 +597,6 @@ export const my = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "မမျှော်လင့်ထားသောအမှားတစ်ခု ဖြစ်ပွားခဲ့သည်",
-    errortitle: "ငွေပေးချေမှုနည်းလမ်းထည့်သွင်းရာတွင် အမှား ဖြစ်ပွားခဲ့သည်",
-    initerror: {
-      description: "ငွေပေးချေမှု စတင်တပ်ဆင်မှု မအောင်မြင်ပါ",
-      title: "အမှား"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const my = {
       methods: "ငွေပေးချေမှုနည်းလမ်းများ",
       account: "အကောင့်ဆက်တင်များ",
       privacy: "ကိုယ်ရေးအချက်အလက်နှင့်လုံခြုံရေး",
-      logout: "ထွက်ခွာရန်",
-      membersince: "အဖွဲ့ဝင်ဖြစ်ပြီးစဉ်"
+      logout: "ထွက်ခွာရန်"
     },
     account: {
       title: "အကောင့်ဆက်တင်များ",
@@ -955,14 +700,8 @@ export const my = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "ကားအကြောင်းသတင်းအချက်အလက်များကို လက်ခံရရှိရန် AMIQUUS ၏ Telegram bot နှင့် စကားပြောခြင်းကို စတင်ပြီး မက်ဆေ့ခ်ျတစ်စောင် ပို့ရန် လိုအပ်ပါသည်။ Bot ကို ဆက်သွယ်ရန် အောက်ပါ လမ်းညွှန်ချက်များကို ကျေးဇူးပြု၍ လိုက်နာပါ။",
-        title: "အဆက်အသွယ် Bot လိုအပ်ပါသည်"
       }
-    },
-    basetitle: "လစဉ် $79.99",
-    basicplan: "အခြေခံအစီအစဉ်"
+    }
   },
   loginPrompt: {
     title: "လော့ဂ်အင် လိုအပ်ပါသည်",
@@ -1005,15 +744,8 @@ export const my = {
       },
       error: {
         title: "စာရင်းသွင်းမှုကို ပြင်ဆင်နေစဉ် အမှား ဖြစ်ပွားခဲ့သည်"
-      },
-      priceerror: {
-        description: "သင်သည် စာရင်းသွင်းဝန်ဆောင်မှုကို တစ်ပြိုင်နက်တည်း ရပ်နားပြီး စျေးနှုန်းကိုလည်း ပြင်ဆင်နေပါသည်။ တစ်ခုခုကိုသာ ရပ်နားမလား၊ စျေးနှုန်းကိုသာ ပြင်ဆင်မလား ဆုံးဖြတ်ရန် လိုအပ်ပါသည်။",
-        title: "Subscription ကိုအပ်ဒိတ်လုပ်၍မရနိုင်ပါ"
       }
-    },
-    notfound: "Subscription မတွေ့ရှိပါ",
-    notfoundsub: "ဒိုင်ရှ်ဘုတ်သို့ ပြန်သွားရန်",
-    subtitle: "သင့်စာရင်းသွင်းအသေးစိတ်ကို အောက်တွင် ပြင်ဆင်ပါ"
+    }
   },
   about: {
     title: "AMIQUUS အကြောင်း",
@@ -1241,8 +973,7 @@ export const my = {
           1: "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်ရှိ ဆက်သွယ်ရန်စာမျက်နှာသို့ ဝင်ရောက်ကြည့်ရှုခြင်းဖြင့်"
         }
       }
-    },
-    lastupdated: "နောက်ဆုံးအပ်ဒိတ်လုပ်သည့်နေ့: ၂၀၂၅ မေ ၂၁"
+    }
   },
   privacy: {
     metaTitle: "ကိုယ်ရေးအချက်အလက်လုံခြုံရေးမူဝါဒ | Amiquus",
@@ -1363,8 +1094,7 @@ export const my = {
           1: "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်ရှိ ဆက်သွယ်ရန်စာမျက်နှာသို့ သွားရောက်ကြည့်ရှုခြင်းဖြင့်"
         }
       }
-    },
-    lastupdated: "နောက်ဆုံးအပ်ဒိတ်လုပ်ခဲ့သောနေ့: ၂၀၂၅ မေ ၂၁"
+    }
   },
   faqs: {
     metaTitle: "မကြာခဏမေးလေ့ရှိသောမေးခွန်းများ | Amiquus",
@@ -1408,34 +1138,6 @@ export const my = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "သင်လိုချင်တဲ့ကားအမျိုးအစား၊ မော်ဒယ်၊ စျေးနှုန်းအတန်းစသဖြင့် ရှာဖွေရန်အချက်အလက်များကို သတ်မှတ်နိုင်ပါတယ်။",
-          1: "သင်ကြည့်ရှုလိုသော ဝဘ်ဆိုက်များကို ရွေးချယ်နိုင်သည်",
-          2: "သတင်းပို့ချက်များအတွက် သင့် Telegram အကောင့်ကို ချိတ်ဆက်ပါ",
-          3: "ကျွန်ုပ်တို့၏စနစ်သည် သင့်ရွေးချယ်ထားသောဝက်ဘ်ဆိုက်များတွင် အသစ်တင်ထားသောစာရင်းများကို အမြဲတမ်းစောင့်ကြည့်နေပါသည်။",
-          4: "သင့်လိုအပ်တဲ့ကားတစ်စီးကို တွေ့ရှိသည့်အခါ၊ အချက်အလက်အားလုံးနှင့် တိုက်ရိုက်လင့်ခ်ပါဝင်သော တစ်ချက်တည်း Telegram အသိပေးချက်ကို ချက်ချင်းလက်ခံရရှိပါမည်။"
-        },
-        question: "ဘယ်လိုအလုပ်လုပ်သလဲ?"
-      },
-      whatis: {
-        answer: "AMIQUUS သည် သင့်လိုအပ်ချက်များနှင့် ကိုက်ညီသောကားများကို ရှာဖွေရန်အတွက် ကားအကြောင်းကြော်ငြာဝက်ဘ်ဆိုက်များစွာကို စောင့်ကြည့်ပေးသော ဝန်ဆောင်မှုတစ်ခု ဖြစ်သည်။ သင့်လိုအပ်ချက်နှင့် ကိုက်ညီသောကြော်ငြာတစ်ခု ပေါ်လာသည့်အခါတွင် သင့်အား Telegram မှတစ်ဆင့် ချက်ချင်းအသိပေးသည့်အကြောင်းကြားချက်ကို လက်ခံရရှိမည်ဖြစ်ပြီး၊ အရောင်းသူများကို အရင်ဆုံး ဆက်သွယ်နိုင်ပြီး ကောင်းမွန်သောဈေးနှုန်းများကို ရယူနိုင်စေပါသည်။",
-        question: "Amiquus ဆိုတာဘာလဲ?"
-      },
-      whichwebsites: {
-        answerintro: "လက်ရှိတွင် ကျွန်ုပ်တို့သည် အောက်ပါ အဓိကကားအရောင်းဝက်ဘ်ဆိုက်များကို စောင့်ကြည့်နေပါသည်။",
-        list: {
-          0: "အော်တိုထရေဒါ",
-          1: "ကားများ.com",
-          2: "CarGurus",
-          3: "အမှန်တကယ်ကား",
-          4: "Facebook Marketplace (URL ဖြင့်)",
-          5: "ကြော်ငြာစာရင်း",
-          6: "eBay မော်တော်ယာဉ်များ"
-        },
-        outro: "ကျွန်ုပ်တို့သည် အပြည့်အဝ ဖော်ပြနိုင်ရန်အတွက် ပလက်ဖောင်းအသစ်များကို ဆက်လက်ထည့်သွင်းပေးနေပါသည်။",
-        question: "သင်စောင့်ကြည့်နေသောကားအရောင်းဝက်ဘ်ဆိုက်များမှာဘာတွေရှိပါသလဲ?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const my = {
           2: "\"Subscription\" တားဘ်ကို ရွေးပါ",
           3: "သင်ဖျက်လိုသော subscription အနားရှိ \"Cancel Subscription\" ခလုတ်ကိုနှိပ်ပါ။"
         },
-        note: "သင့်စာရင်းသွင်းခြင်းသည် လက်ရှိငွေတောင်းခံချိန်ကာလအဆုံးထိ ဆက်လက်အသုံးပြုနိုင်ပါမည်။",
-        stepsintro: "သင့်အကောင့်ပရိုဖိုင်စာမျက်နှာမှ သင့် subscription ကို မည်သည့်အချိန်တွင်မဆို ပယ်ဖျက်နိုင်ပါသည်။"
+        note: "သင့်စာရင်းသွင်းခြင်းသည် လက်ရှိငွေတောင်းခံချိန်ကာလအဆုံးထိ ဆက်လက်အသုံးပြုနိုင်ပါမည်။"
       },
       multiple: {
         question: "ကားမော်ဒယ်အမျိုးမျိုးအတွက် subscription များစွာယူနိုင်မလား?",
@@ -1488,8 +1189,7 @@ export const my = {
           4: "သင်၏ bot token နှင့် chat ID ကို AMIQUUS subscription settings တွင် ထည့်သွင်းပါ",
           5: "သင့်အကြောင်းကြားချက်စနစ်ကို `Send Test Message` ခလုတ်နဲ့ စမ်းသပ်ကြည့်ပါ"
         },
-        note: "စာရင်းသွင်းခြင်းလုပ်ငန်းစဉ်အတွင်း၊ အဆင့်လိုက်လမ်းညွှန်များနှင့် မျက်နှာပြင်ပုံများကို အသေးစိတ်ပြသပေးထားပါသည်။",
-        stepsintro: "Telegram အသိပေးချက်များကို စတင်အသုံးပြုရန်:"
+        note: "စာရင်းသွင်းခြင်းလုပ်ငန်းစဉ်အတွင်း၊ အဆင့်လိုက်လမ်းညွှန်များနှင့် မျက်နှာပြင်ပုံများကို အသေးစိတ်ပြသပေးထားပါသည်။"
       },
       frequency: {
         question: "ငါဘယ်နှစ်ကြိမ်အသိပေးချက်တွေခံစားရမလဲ?",
@@ -1561,19 +1261,7 @@ export const my = {
         description: "ဤအီးမေးလ်လိပ်စာကိုနေရာလွတ်လာသည့်အခါ သတင်းပို့ရန်အသုံးပြုပါမည်။"
       },
       submit: "စာရင်းဝင်ရန်",
-      submitting: "တင်သွင်းနေသည်...",
-      firstname: {
-        label: "နာမည် (ပထမ)",
-        placeholder: "ဂျွန်"
-      },
-      lastname: {
-        label: "နောက်ဆုံးအမည်",
-        placeholder: "ဒိုး"
-      }
-    },
-    cantjoin: {
-      description: "သင့်အတွက် subscription အခွင့်အလမ်းရရှိသည့်အခါ AMIQUUS မှ အသိပေးပါမည်။",
-      title: "စာရင်းဝင်ရန်"
+      submitting: "တင်သွင်းနေသည်..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const my = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "ကျွန်ုပ်တို့ကို အီးမေးလ်ပို့ပေးပါ၊ ၂၄ နာရီအတွင်း ပြန်လည်ဖြေကြားပေးပါမည်။",
-      email: "support@amiquus.com",
-      title: "အီးမေးလ်ပံ့ပိုးမှု"
-    },
-    faqheading: "မကြာခဏမေးလေ့ရှိသောမေးခွန်းများ",
-    stillneedhelp: {
-      button: "အထောက်အပံ့ဆက်သွယ်ရန်",
-      description: "သင်မေးချင်သောမေးခွန်းအတွက် ဖြေကြားချက်ကို မတွေ့ရင် AMIQUUS ၏ ပံ့ပိုးမှုအဖွဲ့ကို စိတ်သက်သာစွာ ဆက်သွယ်နိုင်ပါတယ်။ ကျွန်ုပ်တို့က အကူအညီပေးဖို့ အဆင်သင့်ရှိနေပါတယ်!",
-      heading: "ထပ်မံအကူအညီလိုအပ်ပါသလား?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const my = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "ပယ်ဖျက်ရန်",
-    confirmremove: "ကဒ်ဖယ်ရှားရန်",
-    default: "မူလအတိုင်း",
-    expires: "သက်တမ်းကုန်ဆုံးမည်",
-    remove: "ဖယ်ရှားရန်",
-    removedescription: "သင်၏ {{brand}} ကဒ် {{last4}} နောက်ဆုံးလေးလုံးနံပါတ်ဖြင့် အပြီးသတ်သော ကဒ်ကို ဖယ်ရှားချင်တာ သေချာပါသလား?",
-    removetitle: "ငွေပေးချေမှုနည်းလမ်း ဖယ်ရှားရန်",
-    removewarning: "ဤသည်မှာ သင့်ရဲ့ မူလ ငွေပေးချေမှု နည်းလမ်း ဖြစ်ပြီး၊ ၎င်းကို ဖယ်ရှားခြင်းသည် သင့်ရဲ့ လုပ်ဆောင်နေသည့် subscription များအပေါ် သက်ရောက်မှုရှိနိုင်ပါသည်။",
-    setasdefault: "မူရင်းအဖြစ်သတ်မှတ်ပါ",
-    setdefaultdescription: "သင်၏ ပုံမှန်ငွေပေးချေမှုနည်းလမ်းအဖြစ် {{brand}} ကဒ် (နောက်ဆုံးလေးလုံး {{last4}}) ကို သတ်မှတ်လိုပါသလား? ဤကဒ်ကို အနာဂတ်စာရင်းသွင်းငွေပေးချေမှုများအတွက် အသုံးပြုမည်ဖြစ်သည်။",
-    setdefaulttitle: "မူရင်းငွေပေးချေမှုနည်းလမ်းအဖြစ်သတ်မှတ်ပါ"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "သတိပေးချက် ပယ်ဖျက်ရန်",
-    canceldescription: "သင် {{brand}} {{model}} အတွက် သတိပေးချက်ကို ပယ်ဖျက်ချင်တာ သေချာပါသလား? ဒါကိုလုပ်လိုက်ရင် သတိပေးချက်အားလုံး ရပ်နားသွားမယ်၊ ဒီကားကို ထပ်မံစောင့်ကြည့်ချင်ရင် သတိပေးချက်အသစ် ပြန်တပ်ရပါမယ်။",
-    canceltitle: "ကားသတိပေးချက် ပယ်ဖျက်ရန်",
-    confirmcancel: "သတိပေးချက် ပယ်ဖျက်ရန်",
-    edit: "တည်းဖြတ်ရန်",
-    keepmyalert: "သတိပေးချက်ကို သိမ်းထားပါ",
-    language: "ဘာသာစကား",
-    price: "စျေးနှုန်း",
-    pricerange: "စျေးနှုန်း",
-    updates: "နောက်ဆုံးသတင်းများ",
-    websites: "ဝက်ဘ်ဆိုက်များ",
-    years: "နှစ်များ"
-  },
-  signUp: {
-    cta: "ယခုသတိပေးချက်များလက်ခံရန်",
-    heading: "သင့်ကားအကြောင်းသတိပေးချက်ဖန်တီးပါ",
-    subheading: "သင့်အတွက် ကိုယ်ပိုင်ကားကြော်ငြာ အသိပေးချက်များကို အဆင့်အနည်းငယ်သာဖြင့် AMIQUUS တွင် စတင်ပြုလုပ်နိုင်ပါသည်။",
-    toast: {
-      error: {
-        description: "သင့်စာရင်းသွင်းမှုကို ဖန်တီး၍မရပါ။ နောက်မှထပ်မံကြိုးစားပါ။",
-        title: "Subscription မအောင်မြင်ပါ"
-      },
-      success: {
-        description: "သင့်စာရင်းသွင်းမှုကို အောင်မြင်စွာ ဖန်တီးပြီးပါပြီ။",
-        title: "စာရင်းသွင်းခြင်း ပြီးဆုံးပါပြီ"
-      }
-    },
-    waitlist: {
-      cta: "စာရင်းဝင်ရန်",
-      message: "လက်ရှိမှာ နေရာပြည့်နေပါပြီ။ နေရာလွတ်လာသည့်အခါ အသိပေးရန် စောင့်ဆိုင်းသူစာရင်းတွင် အမည်ပေးသွင်းပါ။"
     }
   }
 };

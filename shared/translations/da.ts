@@ -24,16 +24,10 @@ export const da = {
     button1: "Opsæt dine advarsler",
     button2: "Se hvordan det fungerer",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Annuller når som helst",
-      nosetup: "Ingen opsætning nødvendig",
-      realtime: "Advarsler i realtid",
-      websites: "Over 15 hjemmesider overvåget"
+      websites: "15+ websites overvåges",
+      realtime: "Realtidsalarmer",
+      noSetup: "Ingen opsætning påkrævet",
+      cancelAnytime: "Annuller når som helst"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const da = {
     heading: "Hvorfor vælge Amiquus?",
     subheading: "Spar tid og gå aldrig glip af din perfekte bil med vores automatiserede overvågningstjeneste.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Multi-site overvågning",
+      description: "Overvåg flere bilannonce-websites samtidig uden at skulle tjekke hver enkelt manuelt."
     },
     notifications: {
       title: "Øjeblikkelige notifikationer",
@@ -73,61 +67,12 @@ export const da = {
       description: "Vælg hvor ofte vi skal tjekke for nye opslag, fra opdateringer hver time til overvågning i realtid."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Understøttelse af flere sprog",
+      description: "Modtag meddelelser på dit foretrukne sprog for lettere forståelse af annoncer."
     },
     account: {
       title: "Nem kontoadministration",
       description: "Administrér flere søgeprofiler og tilpas dine abonnementsindstillinger med få klik."
-    },
-    multisite: {
-      description: "Overvåg flere bilannonceringssites samtidig uden at skulle tjekke hver enkelt manuelt.",
-      title: "Sporing på tværs af sites"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const da = {
         description: "Få besked så snart en bil, der matcher dine kriterier, dukker op på en af vores overvågede hjemmesider."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Find din perfekte bil",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Vær den første til at få besked om nye annoncer og sikre dig de bedste tilbud før alle andre.",
-        title: "Find din perfekte bil"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const da = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3-serie, 2019, $32.500 - Netop oprettet på AutoTrader",
-      title: "Nyt match fundet!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Klasse, 2020, 30.000 miles – Prisen sat ned med 2.000 $",
-      title: "Telegram-advarsel"
-    },
-    setalerts: "Opsæt dine advarsler",
-    whytitle: "Hvorfor vælge Amiquus?"
+    }
   },
   pricing: {
     title: "Enkel og gennemsigtig prissætning",
@@ -218,17 +149,7 @@ export const da = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Kom i gang nu",
-    addonstitle: "Tilføjelser:",
-    basetitle: "Basispakke: 79,99 $/måned",
-    footernote: "Alle abonnementer inkluderer ubegrænsede søgekonfigurationer og nem administration af abonnement.",
-    includedfeatures: {
-      0: "Én hjemmesideovervågning",
-      1: "Opdateringer hver time",
-      2: "Ubegrænsede filtre",
-      3: "Telegram-notifikationer"
-    },
-    includedtitle: "Hvad er inkluderet:"
+    button: "Kom i gang nu"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const da = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Bilmærke er påkrævet",
-      carmodel: "Bilmodel er påkrævet",
-      facebookmarketplaceurl: "Facebook Marketplace-URL er påkrævet, når Facebook er valgt",
-      fueltype: "Brændstoftype er påkrævet",
-      maxkilometers: "Maksimalt antal kilometer skal være et tal",
-      notificationlanguage: "Notifikationssprog er påkrævet",
-      pricemax: "Maksimalpris skal være et tal",
-      pricemin: "Minimumprisen skal være et tal",
-      telegramchatid: "Telegram chat-ID er påkrævet",
-      telegramtoken: "Telegram bot-token er påkrævet",
-      telegramusername: "Telegram-brugernavn er påkrævet",
-      websitesselected: "Der skal vælges mindst ét website",
-      yearmax: "Maksimalt år skal være et gyldigt år",
-      yearmin: "Minimumår skal være et gyldigt år"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const da = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "E-mailadresse",
-      firstname: "Fornavn",
-      lastname: "Efternavn"
+      email: "E-mailadresse"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Jonas, sådan gør du",
-      lastname: "Hjort"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Indtast venligst en gyldig e-mailadresse",
-      firstname: "Fornavn er påkrævet",
-      lastname: "Efternavn er påkrævet"
+      email: "Indtast venligst en gyldig e-mailadresse"
     },
     actions: {
       login: "Log ind eller opret konto for at fortsætte",
@@ -332,9 +233,7 @@ export const da = {
     labels: {
       websites: "Websites at overvåge",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace URL",
-      updatefrequency: "Opdateringsfrekvens"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Vælg frekvens"
@@ -344,16 +243,11 @@ export const da = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Indsæt URL’en til dine Facebook Marketplace-søgeresultater her.",
-      updatefrequency: "Hvor ofte skal vi tjekke for nye opslag? Højere frekvenser kan medføre ekstra omkostninger.",
-      videodesc: "Se videoen nedenfor for trin-for-trin vejledning.",
-      videotitle: "Har du brug for hjælp til at finde dit Facebook Marketplace-søgelink?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Der skal vælges mindst ét website",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace-URL er påkrævet, når Facebook er valgt"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Forrige",
@@ -371,15 +265,7 @@ export const da = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Bilmærke",
-      carmodel: "Bilmodel",
-      fueltype: "Brændstoftype",
-      maxkilometers: "Maksimale kilometer",
-      pricemax: "Maksimalpris",
-      pricemin: "Mindste pris",
-      yearmax: "Maksimalt år",
-      yearmin: "Minimumsår"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const da = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Vælg bilmærke",
-      carmodel: "Vælg bilmodel",
-      carmodeldisabled: "Vælg først bilmærke",
-      fueltype: "Vælg brændstoftype",
-      maxkilometers: "Indtast maksimalt antal kilometer",
-      pricemax: "Indtast maksimale pris",
-      pricemin: "Indtast minimumspris",
-      yearmax: "Indtast maksimalt år",
-      yearmin: "Indtast minimumsår"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Ingen tilgængelige modeller"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const da = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Bilmærke er påkrævet",
-      carmodel: "Bilmodel er påkrævet",
-      fueltype: "Brændstoftype er påkrævet",
-      maxkilometers: "Maksimalt antal kilometer skal være et tal",
-      pricemax: "Maksimalpris skal være et tal",
-      pricemin: "Minimumpris skal være et tal",
-      yearmax: "Maksimum år skal være et gyldigt år",
-      yearmin: "Minimumår skal være et gyldigt år"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Forrige",
@@ -444,17 +312,7 @@ export const da = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Åbn Telegram og søg efter @BotFather",
-      botstep2: "Send kommandoen /newbot",
-      botstep3: "Følg vejledningen for at oprette en bot",
-      botstep4: "Kopiér tokenen, som er givet af BotFather",
-      bottitle: "Sådan får du en Telegram Bot Token:",
-      chatstep1: "Åbn Telegram og søg efter @userinfobot",
-      chatstep2: "Send en hvilken som helst besked til botten",
-      chatstep3: "Botten vil svare med dine oplysninger, inklusive dit Chat ID",
-      chatstep4: "Kopiér chat-ID'et (det er et tal)",
-      chattitle: "Sådan finder du dit Telegram Chat ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const da = {
       token: "Telegram Bot Token",
       chatId: "Your Telegram Chat ID",
       language: "Notifikationssprog",
-      username: "Telegram brugernavn",
-      chatid: "Dit Telegram Chat-ID"
+      username: "Telegram brugernavn"
     },
     placeholders: {
       token: "Indtast din bot-token fra BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Vælg sprog for Telegram-besked",
-      username: "Indtast dit Telegram-brugernavn",
-      chatid: "Indtast dit Telegram chat-ID"
+      username: "Indtast dit Telegram-brugernavn"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Eksempel: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Du kan få dette ved at skrive til @userinfobot på Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const da = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const da = {
       token: "Telegram bot-token er påkrævet",
       chatId: "Telegram chat ID is required",
       language: "Meddelelsessprog er påkrævet",
-      username: "Telegram-brugernavn er påkrævet",
-      chatid: "Telegram chat-ID er påkrævet"
+      username: "Telegram-brugernavn er påkrævet"
     },
     actions: {
       previous: "Forrige",
@@ -544,47 +398,7 @@ export const da = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Eksempel: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Telegram Bot Token",
-    bottokenplaceholder: "Indtast din bot-token fra BotFather",
-    caralerttitle: "🚗 Nyt køretøj!",
-    chatiddescription: "Du kan få dette ved at skrive til @userinfobot på Telegram.",
-    chatidlabel: "Dit Telegram Chat ID",
-    chatidplaceholder: "Indtast dit Telegram chat-ID",
-    chatidsteps: {
-      0: "Åbn Telegram og søg efter \"userinfobot\"",
-      1: "Send en hvilken som helst besked til botten",
-      2: "Botten vil svare med dine oplysninger, inklusive dit Chat ID",
-      3: "Kopiér dit Chat-ID"
-    },
-    chatidtitle: "Sådan finder du dit Telegram Chat ID:",
-    confirmcontact: "Jeg har startet en chat med botten og sendt en besked",
-    contactbotinstruction: "Start en chat med vores Telegram-bot ved at klikke på linket nedenfor og sende den en besked:",
-    contactbotnote: "Dette er nødvendigt for at modtage bilalarmer. Hvis du bruger en computer, kan du scanne QR-koden.",
-    helpdescription: "Se videoen nedenfor for en trin-for-trin guide.",
-    helptitle: "Brug for hjælp til at opsætte din Telegram Bot Token og Chat ID?",
-    kilometreslabel: "Kilometer: {{kms}}",
-    languagelabel: "Notifikationssprog",
-    languageplaceholder: "Vælg sprog for Telegram-besked",
-    locationlabel: "Placering: {{location}}",
-    previewtitle: "Forhåndsvis Telegram-notifikationer",
-    pricelabel: "Pris: {{price}}",
-    setupsteps: {
-      0: "Åbn Telegram og søg efter \"BotFather\"",
-      1: "Start en chat med BotFather ved at klikke på \"Start\"",
-      2: "Skriv /newbot og følg instruktionerne for at oprette en ny bot",
-      3: "Vælg et navn til din bot",
-      4: "Vælg et brugernavn til din bot (skal ende på 'bot')",
-      5: "Kopiér API-tokenet fra BotFather",
-      6: "Send en besked til din nye bot for at aktivere chatten"
-    },
-    setuptitle: "Opsætningsvejledning:",
-    subheading: "Opsæt din Telegram-bot",
-    usernamedescription: "Dette er brugernavnet på din Telegram-konto (uden @-symbolet).",
-    videodescription: "Se videoen nedenfor for en trin-for-trin guide.",
-    videoprompt: "Har du brug for hjælp til at opsætte din Telegram Bot Token og Chat ID?",
-    viewlisting: "Se opslag →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Gennemgå dit abonnement",
@@ -598,9 +412,7 @@ export const da = {
       title: "Overvågningsindstillinger",
       websites: "Hjemmesider",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook-URL",
-      updatefrequency: "Opdateringsfrekvens"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Bilspecifikationer",
@@ -609,9 +421,7 @@ export const da = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Rækkevidde (km)",
-      price: "Prisklasse (€)",
-      fueltype: "Brændstoftype",
-      yearrange: "Årsinterval"
+      price: "Prisklasse (€)"
     },
     notification: {
       title: "Notifikationsindstillinger",
@@ -623,9 +433,7 @@ export const da = {
       base: "Basisabonnement",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "I alt (månedligt)",
-      extrawebsites: "Flere hjemmesider",
-      frequencyupgrade: "Opgradering af frekvens"
+      total: "I alt (månedligt)"
     },
     terms: {
       checkbox: "Jeg accepterer",
@@ -669,9 +477,7 @@ export const da = {
         answer: "Du kan til enhver tid opsige dit abonnement via din kontooversigt. Gå til sektionen \"Abonnementer\", vælg det abonnement du ønsker at opsige, og klik på knappen \"Opsig abonnement\". Din service fortsætter indtil udgangen af din nuværende betalingsperiode.",
         question: "Hvordan opsiger jeg mit abonnement?"
       }
-    },
-    contactlink: "Kontakt vores supportteam",
-    contactprompt: "Har du stadig spørgsmål?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const da = {
     about: "Om os",
     blog: "Blog",
     careers: "Karriere",
-    support: "Support",
-    branddescription: "Din personlige assistent til at finde det perfekte brugtbils-tilbud på det helt rigtige tidspunkt.",
-    brandtitle: "Amiquus",
-    getstarted: "Kom i gang",
-    quicklinks: "Hurtige links"
+    support: "Support"
   },
   login: {
     title: "Log ind på din konto",
@@ -716,21 +518,8 @@ export const da = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Indtast venligst en gyldig e-mailadresse",
-      shortpassword: "Adgangskode skal være mindst 6 tegn"
-    },
-    emaillabel: "E-mail",
-    errortitle: "Login mislykkedes",
-    genericerror: "Tjek venligst dine oplysninger og prøv igen.",
-    loggingin: "Logger ind...",
-    loginbutton: "Log ind",
-    loginwithgoogle: "Log ind med Google",
-    noaccount: "Har du ikke en konto?",
-    passwordlabel: "Adgangskode",
-    registerlink: "Registrér dig",
-    successmessage: "Du er nu logget ind.",
-    successtitle: "Login lykkedes"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Opret en konto",
@@ -774,33 +563,8 @@ export const da = {
       failure: {
         title: "Registreringen mislykkedes",
         desc: "Tjek venligst dine oplysninger og prøv igen."
-      },
-      invalidusername: {
-        desc: "Brugernavn skal være alfanumerisk og mellem 3 og 20 tegn",
-        title: "Ugyldigt brugernavn"
-      },
-      missingfields: {
-        desc: "Udfyld venligst alle påkrævede felter",
-        title: "Manglende felter"
-      },
-      passwordmismatch: {
-        desc: "Sørg for, at dine adgangskoder matcher",
-        title: "Adgangskoderne matcher ikke"
-      },
-      termsnotaccepted: {
-        desc: "Du skal acceptere vilkår og privatlivspolitik for at fortsætte",
-        title: "Vilkår ikke accepteret"
       }
-    },
-    alreadyhave: "Har du allerede en konto?",
-    confirmpassword: "Bekræft adgangskode",
-    createbtn: "Opret konto",
-    firstname: "Fornavn",
-    lastname: "Efternavn",
-    orcontinue: "Eller fortsæt med",
-    privacypolicy: "Privatlivspolitik",
-    termsnotice: "Jeg accepterer",
-    termsofservice: "Vilkår for brug"
+    }
   },
   verifyEmail: {
     title: "Bekræft din e-mail",
@@ -821,20 +585,8 @@ export const da = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-mail opdateret",
-      entervalidemail: "Indtast venligst en gyldig e-mailadresse",
-      invalidemail: "Ugyldig e-mail",
-      sameemail: "Samme e-mail",
-      sameemaildesc: "Den nye e-mail er den samme som den nuværende e-mail."
-    },
-    codelabel: "Bekræftelseskode",
-    footernote: "Modtog du ikke koden? Tjek din spammappe.",
-    resendbutton: "Send koden igen",
-    resendcountdown: "Du kan gensende koden om {{seconds}}s",
-    updateemailbutton: "Opdater e-mail",
-    updateemaillabel: "Opdater e-mail",
-    verifybutton: "Bekræft e-mail"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Tilføj betalingsmetode",
@@ -845,12 +597,6 @@ export const da = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Der opstod en uventet fejl",
-    errortitle: "Fejl ved tilføjelse af betalingsmetode",
-    initerror: {
-      description: "Kan ikke initialisere betalingsopsætning",
-      title: "Fejl"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const da = {
       methods: "Betalingsmetoder",
       account: "Kontoindstillinger",
       privacy: "Privatliv og sikkerhed",
-      logout: "Log ud",
-      membersince: "Medlem siden"
+      logout: "Log ud"
     },
     account: {
       title: "Kontoindstillinger",
@@ -955,14 +700,8 @@ export const da = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "For at modtage bilalarmer skal du starte en chat med vores Telegram-bot og sende en besked. Følg venligst instruktionerne nedenfor for at kontakte botten.",
-        title: "Kontaktbot påkrævet"
       }
-    },
-    basetitle: "$79,99/md.",
-    basicplan: "Basisplan"
+    }
   },
   loginPrompt: {
     title: "Login påkrævet",
@@ -1005,15 +744,8 @@ export const da = {
       },
       error: {
         title: "Fejl ved opdatering af abonnement"
-      },
-      priceerror: {
-        description: "Du pauser og opdaterer din abonnementspris på samme tid. Du skal enten pause eller opdatere prisen.",
-        title: "Kan ikke opdatere abonnement"
       }
-    },
-    notfound: "Abonnement ikke fundet",
-    notfoundsub: "Gå tilbage til dashboard",
-    subtitle: "Redigér dine abonnementsoplysninger nedenfor"
+    }
   },
   about: {
     title: "Om Amiquus",
@@ -1241,8 +973,7 @@ export const da = {
           1: "Ved at besøge kontaktsiden på vores hjemmeside"
         }
       }
-    },
-    lastupdated: "Sidst opdateret: 21. maj 2025"
+    }
   },
   privacy: {
     metaTitle: "Privatlivspolitik | Amiquus",
@@ -1363,8 +1094,7 @@ export const da = {
           1: "Ved at besøge kontaktsiden på vores hjemmeside"
         }
       }
-    },
-    lastupdated: "Sidst opdateret: 21. maj 2025"
+    }
   },
   faqs: {
     metaTitle: "Ofte stillede spørgsmål | Amiquus",
@@ -1408,34 +1138,6 @@ export const da = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Du opstiller dine søgekriterier (mærke, model, prisklasse osv.)",
-          1: "Du vælger, hvilke hjemmesider du vil overvåge",
-          2: "Du forbinder din Telegram-konto for at modtage notifikationer",
-          3: "Vores system overvåger løbende dine valgte hjemmesider for nye opslag",
-          4: "Når der dukker en bil op, der matcher, får du straks en Telegram-besked med alle detaljer og et direkte link."
-        },
-        question: "Hvordan fungerer det?"
-      },
-      whatis: {
-        answer: "AMIQUUS er en tjeneste, der overvåger flere bilportaler for biler, der matcher dine specifikke kriterier. Når der dukker et relevant opslag op, får du straks en notifikation via Telegram, så du kan være blandt de første til at kontakte sælgerne og sikre dig de bedste tilbud.",
-        question: "Hvad er Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Vi overvåger i øjeblikket følgende større bilportaler:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "CarGurus",
-          3: "TrueCar",
-          4: "Facebook Marketplace (via URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Vi tilføjer løbende flere platforme for at sikre den mest omfattende dækning muligt.",
-        question: "Hvilke bilannonceringssites overvåger du?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const da = {
           2: "Vælg fanen \"Abonnementer\"",
           3: "Klik på knappen \"Annuller abonnement\" ved siden af det abonnement, du ønsker at annullere."
         },
-        note: "Dit abonnement forbliver aktivt indtil udgangen af din nuværende betalingsperiode.",
-        stepsintro: "Du kan til enhver tid opsige dit abonnement fra din konto-profilside:"
+        note: "Dit abonnement forbliver aktivt indtil udgangen af din nuværende betalingsperiode."
       },
       multiple: {
         question: "Kan jeg have flere abonnementer til forskellige bilmodeller?",
@@ -1488,8 +1189,7 @@ export const da = {
           4: "Indtast din bot-token og chat-ID i dine AMIQUUS-abonnementsindstillinger",
           5: "Test din notifikationsopsætning ved at bruge knappen `Send testbesked`"
         },
-        note: "Detaljerede trin-for-trin-vejledninger med skærmbilleder er tilgængelige under opsætningen af abonnementet.",
-        stepsintro: "Sådan opsætter du Telegram-notifikationer:"
+        note: "Detaljerede trin-for-trin-vejledninger med skærmbilleder er tilgængelige under opsætningen af abonnementet."
       },
       frequency: {
         question: "Hvor ofte vil jeg modtage notifikationer?",
@@ -1561,19 +1261,7 @@ export const da = {
         description: "Vi bruger denne e-mail til at give dig besked, når der bliver en ledig plads."
       },
       submit: "Tilmeld venteliste",
-      submitting: "Indsender...",
-      firstname: {
-        label: "Fornavn",
-        placeholder: "Jonas, sådan gør du"
-      },
-      lastname: {
-        label: "Efternavn",
-        placeholder: "Hjort"
-      }
-    },
-    cantjoin: {
-      description: "Vi giver dig besked, så snart der bliver en ledig abonnementsplads.",
-      title: "Skriv dig på ventelisten"
+      submitting: "Indsender..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const da = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Send os en e-mail, så vender vi tilbage inden for 24 timer.",
-      email: "support@amiquus.com",
-      title: "E-mail support"
-    },
-    faqheading: "Ofte stillede spørgsmål",
-    stillneedhelp: {
-      button: "Kontakt support",
-      description: "Hvis du ikke kunne finde svaret på dit spørgsmål, er du altid velkommen til at kontakte vores supportteam. Vi er her for at hjælpe dig!",
-      heading: "Har du stadig brug for hjælp?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const da = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Annuller",
-    confirmremove: "Fjern kort",
-    default: "Standard",
-    expires: "Udløber",
-    remove: "Fjern",
-    removedescription: "Er du sikker på, at du vil fjerne dit {{brand}}-kort med endetal {{last4}}?",
-    removetitle: "Fjern betalingsmetode",
-    removewarning: "Dette er din standard betalingsmetode, og fjernelse af den kan påvirke dine aktive abonnementer.",
-    setasdefault: "Sæt som standard",
-    setdefaultdescription: "Vil du sætte {{brand}}-kortet, der slutter på {{last4}}, som din foretrukne betalingsmetode? Dette kort vil blive brugt til alle fremtidige abonnementsbetalinger.",
-    setdefaulttitle: "Indstil standard betalingsmetode"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Annuller advarsel",
-    canceldescription: "Er du sikker på, at du vil afmelde din bilalarm for {{brand}} {{model}}? Dette stopper alle notifikationer, og du skal oprette en ny alarm, hvis du vil overvåge denne bil igen.",
-    canceltitle: "Annuller bilalarm",
-    confirmcancel: "Annuller advarsel",
-    edit: "Rediger",
-    keepmyalert: "Behold min alarm",
-    language: "Sprog",
-    price: "Pris",
-    pricerange: "Pris",
-    updates: "Opdateringer",
-    websites: "Hjemmesider",
-    years: "År"
-  },
-  signUp: {
-    cta: "Få besked nu",
-    heading: "Opret din bilalarm",
-    subheading: "Opsæt dine personlige bilnotifikationer på få trin.",
-    toast: {
-      error: {
-        description: "Vi kunne ikke oprette dit abonnement. Prøv igen senere.",
-        title: "Abonnement mislykkedes"
-      },
-      success: {
-        description: "Dit abonnement er blevet oprettet succesfuldt",
-        title: "Abonnement oprettet"
-      }
-    },
-    waitlist: {
-      cta: "Tilmeld venteliste",
-      message: "Vi har i øjeblikket fuld kapacitet. Tilmeld dig ventelisten for at få besked, når der bliver en ledig plads."
     }
   }
 };

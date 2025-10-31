@@ -24,16 +24,10 @@ export const fr = {
     button1: "Configurez vos alertes",
     button2: "Découvrez comment ça marche",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Annulez à tout moment",
-      nosetup: "Aucune configuration requise",
+      websites: "Plus de 15 sites web surveillés",
       realtime: "Alertes en temps réel",
-      websites: "Plus de 15 sites web suivis"
+      noSetup: "Aucune configuration requise",
+      cancelAnytime: "Annulez à tout moment"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const fr = {
     heading: "Pourquoi choisir Amiquus ?",
     subheading: "Gagnez du temps et ne ratez jamais la voiture idéale grâce à notre service de suivi automatisé.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Suivi multi-sites",
+      description: "Surveillez simultanément plusieurs sites d'annonces automobiles sans avoir à vérifier chacun manuellement."
     },
     notifications: {
       title: "Notifications instantanées",
@@ -73,61 +67,12 @@ export const fr = {
       description: "Choisissez la fréquence de vérification des nouvelles annonces, des mises à jour horaires à la surveillance en temps réel."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Prise en charge multilingue",
+      description: "Recevez des notifications dans votre langue préférée pour une meilleure compréhension des annonces."
     },
     account: {
       title: "Gestion facile du compte",
       description: "Gérez plusieurs profils de recherche et modifiez vos paramètres d’abonnement en quelques clics."
-    },
-    multisite: {
-      description: "Surveillez simultanément plusieurs sites d’annonces automobiles sans avoir à les vérifier manuellement un par un.",
-      title: "Suivi multi-sites"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const fr = {
         description: "Recevez une alerte dès qu’une voiture correspondant à vos critères apparaît sur l’un des sites surveillés par AMIQUUS."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Trouvez votre voiture parfaite",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Soyez le premier informé des nouvelles annonces et profitez des meilleures offres avant tout le monde.",
-        title: "Trouvez votre voiture idéale"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const fr = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW Série 3, 2019, 32 500 $ – Nouvellement publié sur AutoTrader",
-      title: "Nouvelle correspondance trouvée !"
-    },
-    notificationmockup2: {
-      description: "Mercedes Classe C, 2020, 30 000 miles – Prix réduit de 2 000 $",
-      title: "Alerte Telegram"
-    },
-    setalerts: "Configurez vos alertes",
-    whytitle: "Pourquoi choisir Amiquus ?"
+    }
   },
   pricing: {
     title: "Tarification simple et transparente",
@@ -218,17 +149,7 @@ export const fr = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Commencez maintenant",
-    addonstitle: "Extensions :",
-    basetitle: "Forfait de base : 79,99 $/mois",
-    footernote: "Tous les forfaits incluent des configurations de recherche illimitées et une gestion d’abonnement simplifiée.",
-    includedfeatures: {
-      0: "Surveillance d’un site web",
-      1: "Mises à jour toutes les heures",
-      2: "Filtres illimités",
-      3: "Notifications Telegram"
-    },
-    includedtitle: "Ce qui est inclus :"
+    button: "Commencez maintenant"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const fr = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "La marque de la voiture est requise",
-      carmodel: "Le modèle de voiture est requis",
-      facebookmarketplaceurl: "L’URL du Facebook Marketplace est requise lorsque Facebook est sélectionné",
-      fueltype: "Le type de carburant est requis",
-      maxkilometers: "Le nombre maximal de kilomètres doit être un nombre",
-      notificationlanguage: "La langue de notification est requise",
-      pricemax: "Le prix maximum doit être un nombre",
-      pricemin: "Le prix minimum doit être un nombre",
-      telegramchatid: "L’identifiant de chat Telegram est requis",
-      telegramtoken: "Le jeton du bot Telegram est requis",
-      telegramusername: "Le nom d’utilisateur Telegram est requis",
-      websitesselected: "Au moins un site web doit être sélectionné",
-      yearmax: "L’année maximale doit être une année valide",
-      yearmin: "L’année minimale doit être une année valide"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const fr = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Adresse e-mail",
-      firstname: "Prénom",
-      lastname: "Nom de famille"
+      email: "Adresse e-mail"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Jean, voici comment",
-      lastname: "Duc"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Veuillez saisir une adresse e-mail valide",
-      firstname: "Le prénom est requis",
-      lastname: "Le nom de famille est requis"
+      email: "Veuillez saisir une adresse e-mail valide"
     },
     actions: {
       login: "Connectez-vous ou inscrivez-vous pour continuer",
@@ -332,9 +233,7 @@ export const fr = {
     labels: {
       websites: "Sites web à surveiller",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Fréquence de mise à jour"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Sélectionnez la fréquence"
@@ -344,16 +243,11 @@ export const fr = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Collez l’URL de vos résultats de recherche Facebook Marketplace ici.",
-      updatefrequency: "À quelle fréquence devons-nous vérifier les nouvelles annonces ? Des fréquences plus élevées peuvent entraîner des coûts supplémentaires.",
-      videodesc: "Regardez la vidéo ci-dessous pour des instructions étape par étape.",
-      videotitle: "Besoin d’aide pour trouver votre lien de recherche Facebook Marketplace ?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Au moins un site web doit être sélectionné",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "L’URL du Facebook Marketplace est requise lorsque Facebook est sélectionné."
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Précédent",
@@ -371,15 +265,7 @@ export const fr = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Marque de voiture",
-      carmodel: "Modèle de voiture",
-      fueltype: "Type de carburant",
-      maxkilometers: "Kilométrage maximal",
-      pricemax: "Prix maximum",
-      pricemin: "Prix minimum",
-      yearmax: "Année maximale",
-      yearmin: "Année minimale"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const fr = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Sélectionnez la marque de voiture",
-      carmodel: "Sélectionnez le modèle de voiture",
-      carmodeldisabled: "Sélectionnez d’abord la marque de voiture",
-      fueltype: "Sélectionnez le type de carburant",
-      maxkilometers: "Entrez le nombre maximal de kilomètres",
-      pricemax: "Entrez le prix maximum",
-      pricemin: "Entrez le prix minimum",
-      yearmax: "Entrez l’année maximale",
-      yearmin: "Entrez l’année minimale"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Aucun modèle disponible"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const fr = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "La marque de la voiture est requise",
-      carmodel: "Le modèle de voiture est requis",
-      fueltype: "Le type de carburant est requis",
-      maxkilometers: "Le nombre maximal de kilomètres doit être un nombre",
-      pricemax: "Le prix maximum doit être un nombre",
-      pricemin: "Le prix minimum doit être un nombre",
-      yearmax: "L’année maximale doit être une année valide",
-      yearmin: "L’année minimale doit être une année valide"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Précédent",
@@ -444,17 +312,7 @@ export const fr = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Ouvrez Telegram et recherchez @BotFather",
-      botstep2: "Envoyez la commande /newbot",
-      botstep3: "Suivez les instructions pour créer un bot",
-      botstep4: "Copiez le jeton fourni par BotFather",
-      bottitle: "Comment obtenir un jeton pour un bot Telegram :",
-      chatstep1: "Ouvrez Telegram et recherchez @userinfobot",
-      chatstep2: "Envoyez un message au bot",
-      chatstep3: "Le bot vous répondra avec vos informations, y compris votre Chat ID",
-      chatstep4: "Copiez l’ID du chat (c’est un numéro)",
-      chattitle: "Comment obtenir votre identifiant de chat Telegram :"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const fr = {
       token: "Jeton du bot Telegram",
       chatId: "Your Telegram Chat ID",
       language: "Langue de notification",
-      username: "Nom d’utilisateur Telegram",
-      chatid: "Votre identifiant de chat Telegram"
+      username: "Nom d’utilisateur Telegram"
     },
     placeholders: {
       token: "Saisissez le jeton de votre bot depuis BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Sélectionnez la langue du message Telegram",
-      username: "Entrez votre nom d’utilisateur Telegram",
-      chatid: "Saisissez votre identifiant de chat Telegram"
+      username: "Entrez votre nom d’utilisateur Telegram"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Exemple : 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Vous pouvez obtenir cela en envoyant un message à @userinfobot sur Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const fr = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const fr = {
       token: "Le jeton du bot Telegram est requis",
       chatId: "Telegram chat ID is required",
       language: "La langue de notification est requise",
-      username: "Le nom d’utilisateur Telegram est requis",
-      chatid: "L’identifiant de chat Telegram est requis"
+      username: "Le nom d’utilisateur Telegram est requis"
     },
     actions: {
       previous: "Précédent",
@@ -544,47 +398,7 @@ export const fr = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Exemple : 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Jeton du bot Telegram",
-    bottokenplaceholder: "Saisissez le jeton de votre bot depuis BotFather",
-    caralerttitle: "🚗 Nouvelle voiture !",
-    chatiddescription: "Vous pouvez obtenir cela en envoyant un message à @userinfobot sur Telegram.",
-    chatidlabel: "Votre identifiant de chat Telegram",
-    chatidplaceholder: "Saisissez votre identifiant de chat Telegram",
-    chatidsteps: {
-      0: "Ouvrez Telegram et recherchez \"userinfobot\"",
-      1: "Envoyez n’importe quel message au bot",
-      2: "Le bot vous répondra avec vos informations, y compris votre identifiant de chat.",
-      3: "Copiez votre identifiant de chat"
-    },
-    chatidtitle: "Comment obtenir votre identifiant de chat Telegram :",
-    confirmcontact: "J’ai commencé une conversation avec le bot et envoyé un message.",
-    contactbotinstruction: "Démarrez une conversation avec notre bot Telegram en cliquant sur le lien ci-dessous et en lui envoyant un message :",
-    contactbotnote: "Ceci est nécessaire pour recevoir des alertes voiture. Si vous êtes sur ordinateur, vous pouvez scanner le code QR.",
-    helpdescription: "Regardez la vidéo ci-dessous pour un guide étape par étape.",
-    helptitle: "Besoin d’aide pour configurer votre Token Bot Telegram et votre ID de chat ?",
-    kilometreslabel: "Kilomètres : {{kms}}",
-    languagelabel: "Langue de notification",
-    languageplaceholder: "Sélectionnez la langue du message Telegram",
-    locationlabel: "Emplacement : {{location}}",
-    previewtitle: "Aperçu des notifications Telegram",
-    pricelabel: "Prix : {{price}}",
-    setupsteps: {
-      0: "Ouvrez Telegram et recherchez \"BotFather\"",
-      1: "Démarrez une conversation avec BotFather en cliquant sur « Démarrer »",
-      2: "Tapez /newbot et suivez les instructions pour créer un nouveau bot",
-      3: "Choisissez un nom pour votre bot",
-      4: "Choisissez un nom d’utilisateur pour votre bot (doit se terminer par « bot »)",
-      5: "Copiez le jeton API fourni par BotFather",
-      6: "Envoyez un message à votre nouveau bot pour activer la discussion"
-    },
-    setuptitle: "Instructions d’installation :",
-    subheading: "Configurez votre bot Telegram",
-    usernamedescription: "Il s’agit du nom d’utilisateur de votre compte Telegram (sans le symbole @).",
-    videodescription: "Regardez la vidéo ci-dessous pour un guide étape par étape.",
-    videoprompt: "Besoin d’aide pour configurer votre Token de Bot Telegram et votre ID de chat ?",
-    viewlisting: "Voir l’annonce →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Vérifiez votre abonnement",
@@ -598,9 +412,7 @@ export const fr = {
       title: "Paramètres de surveillance",
       websites: "Sites web",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook",
-      updatefrequency: "Fréquence de mise à jour"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Caractéristiques techniques",
@@ -609,9 +421,7 @@ export const fr = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Autonomie (km)",
-      price: "Fourchette de prix (€)",
-      fueltype: "Type de carburant",
-      yearrange: "Plage d’années"
+      price: "Fourchette de prix (€)"
     },
     notification: {
       title: "Paramètres de notification",
@@ -623,9 +433,7 @@ export const fr = {
       base: "Abonnement de base",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (mensuel)",
-      extrawebsites: "Sites web supplémentaires",
-      frequencyupgrade: "Mise à niveau de la fréquence"
+      total: "Total (mensuel)"
     },
     terms: {
       checkbox: "J’accepte les",
@@ -669,9 +477,7 @@ export const fr = {
         answer: "Vous pouvez annuler votre abonnement à tout moment depuis le tableau de bord de votre compte. Rendez-vous dans la section « Abonnements », sélectionnez l’abonnement que vous souhaitez annuler, puis cliquez sur le bouton « Annuler l’abonnement ». Votre service restera actif jusqu’à la fin de votre période de facturation en cours.",
         question: "Comment puis-je résilier mon abonnement ?"
       }
-    },
-    contactlink: "Contactez notre équipe d’assistance",
-    contactprompt: "Vous avez encore des questions ?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const fr = {
     about: "À propos de nous",
     blog: "Blog",
     careers: "Carrières",
-    support: "Assistance",
-    branddescription: "Votre assistant personnel pour trouver la meilleure offre de voiture d’occasion au bon moment.",
-    brandtitle: "Amiquus",
-    getstarted: "Commencer",
-    quicklinks: "Liens rapides"
+    support: "Assistance"
   },
   login: {
     title: "Connectez-vous à votre compte",
@@ -716,21 +518,8 @@ export const fr = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Veuillez saisir une adresse e-mail valide.",
-      shortpassword: "Le mot de passe doit contenir au moins 6 caractères"
-    },
-    emaillabel: "E-mail",
-    errortitle: "Échec de la connexion",
-    genericerror: "Veuillez vérifier vos identifiants et réessayer.",
-    loggingin: "Connexion...",
-    loginbutton: "Se connecter",
-    loginwithgoogle: "Se connecter avec Google",
-    noaccount: "Vous n’avez pas de compte ?",
-    passwordlabel: "Mot de passe",
-    registerlink: "S’inscrire",
-    successmessage: "Vous êtes connecté avec succès.",
-    successtitle: "Connexion réussie"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Créer un compte",
@@ -774,33 +563,8 @@ export const fr = {
       failure: {
         title: "L’inscription a échoué",
         desc: "Veuillez vérifier vos informations et réessayer."
-      },
-      invalidusername: {
-        desc: "Le nom d’utilisateur doit être alphanumérique et contenir entre 3 et 20 caractères.",
-        title: "Nom d’utilisateur invalide"
-      },
-      missingfields: {
-        desc: "Veuillez remplir tous les champs obligatoires",
-        title: "Champs manquants"
-      },
-      passwordmismatch: {
-        desc: "Veuillez vous assurer que vos mots de passe correspondent",
-        title: "Les mots de passe ne correspondent pas"
-      },
-      termsnotaccepted: {
-        desc: "Vous devez accepter les conditions générales et la politique de confidentialité pour continuer.",
-        title: "Conditions non acceptées"
       }
-    },
-    alreadyhave: "Vous avez déjà un compte ?",
-    confirmpassword: "Confirmez le mot de passe",
-    createbtn: "Créer un compte",
-    firstname: "Prénom",
-    lastname: "Nom de famille",
-    orcontinue: "Ou continuer avec",
-    privacypolicy: "Politique de confidentialité",
-    termsnotice: "J’accepte les",
-    termsofservice: "Conditions d’utilisation"
+    }
   },
   verifyEmail: {
     title: "Vérifiez votre adresse e-mail",
@@ -821,20 +585,8 @@ export const fr = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-mail mise à jour",
-      entervalidemail: "Veuillez saisir une adresse e-mail valide",
-      invalidemail: "Adresse e-mail invalide",
-      sameemail: "Même e-mail",
-      sameemaildesc: "La nouvelle adresse e-mail est identique à l’adresse e-mail actuelle."
-    },
-    codelabel: "Code de vérification",
-    footernote: "Vous n’avez pas reçu le code ? Vérifiez votre dossier de courriers indésirables.",
-    resendbutton: "Renvoyer le code",
-    resendcountdown: "Vous pourrez renvoyer le code dans {{seconds}}s",
-    updateemailbutton: "Mettre à jour l’e-mail",
-    updateemaillabel: "Mettre à jour l’e-mail",
-    verifybutton: "Vérifiez votre e-mail"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Ajouter un moyen de paiement",
@@ -845,12 +597,6 @@ export const fr = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Une erreur inattendue s’est produite",
-    errortitle: "Erreur lors de l’ajout du moyen de paiement",
-    initerror: {
-      description: "Impossible d'initialiser la configuration du paiement",
-      title: "Erreur"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const fr = {
       methods: "Moyens de paiement",
       account: "Paramètres du compte",
       privacy: "Confidentialité et sécurité",
-      logout: "Se déconnecter",
-      membersince: "Membre depuis"
+      logout: "Se déconnecter"
     },
     account: {
       title: "Paramètres du compte",
@@ -955,14 +700,8 @@ export const fr = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Pour recevoir des alertes sur les voitures, vous devez démarrer une conversation avec notre bot Telegram et lui envoyer un message. Veuillez suivre les instructions ci-dessous pour contacter le bot.",
-        title: "Bot de contact requis"
       }
-    },
-    basetitle: "79,99 $/mois",
-    basicplan: "Formule de base"
+    }
   },
   loginPrompt: {
     title: "Connexion requise",
@@ -1005,15 +744,8 @@ export const fr = {
       },
       error: {
         title: "Erreur lors de la mise à jour de l’abonnement"
-      },
-      priceerror: {
-        description: "Vous mettez en pause et modifiez le prix de votre abonnement en même temps. Vous devez soit mettre en pause, soit modifier le prix.",
-        title: "Impossible de mettre à jour l’abonnement"
       }
-    },
-    notfound: "Abonnement introuvable",
-    notfoundsub: "Retour au tableau de bord",
-    subtitle: "Modifiez les détails de votre abonnement ci-dessous"
+    }
   },
   about: {
     title: "À propos d’AMIQUUS",
@@ -1241,8 +973,7 @@ export const fr = {
           1: "En visitant la page de contact sur notre site web"
         }
       }
-    },
-    lastupdated: "Dernière mise à jour : 21 mai 2025"
+    }
   },
   privacy: {
     metaTitle: "Politique de confidentialité | Amiquus",
@@ -1363,8 +1094,7 @@ export const fr = {
           1: "En visitant la page de contact sur notre site web"
         }
       }
-    },
-    lastupdated: "Dernière mise à jour : 21 mai 2025"
+    }
   },
   faqs: {
     metaTitle: "Foire aux questions | Amiquus",
@@ -1408,34 +1138,6 @@ export const fr = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Définissez vos critères de recherche (marque, modèle, gamme de prix, etc.)",
-          1: "Vous choisissez quels sites web surveiller",
-          2: "Vous connectez votre compte Telegram pour recevoir des notifications",
-          3: "Notre système surveille en continu vos sites web sélectionnés pour détecter de nouvelles annonces",
-          4: "Lorsqu’une voiture correspondante apparaît, vous recevez instantanément une notification Telegram avec tous les détails et un lien direct."
-        },
-        question: "Comment ça marche ?"
-      },
-      whatis: {
-        answer: "AMIQUUS est un service qui surveille plusieurs sites d’annonces automobiles afin de trouver les véhicules correspondant à vos critères spécifiques. Lorsqu’une annonce correspondante apparaît, vous recevez une notification instantanée via Telegram, ce qui vous permet d’être parmi les premiers à contacter les vendeurs et à profiter des meilleures offres.",
-        question: "Qu’est-ce qu’Amiquus ?"
-      },
-      whichwebsites: {
-        answerintro: "Nous surveillons actuellement les principales plateformes d’annonces automobiles suivantes :",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (via URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Nous ajoutons continuellement de nouvelles plateformes afin d’offrir la couverture la plus complète possible.",
-        question: "Quels sites de petites annonces automobiles surveillez-vous ?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const fr = {
           2: "Sélectionnez l’onglet « Abonnements »",
           3: "Cliquez sur le bouton « Annuler l’abonnement » à côté de l’abonnement que vous souhaitez annuler."
         },
-        note: "Votre abonnement restera actif jusqu’à la fin de votre période de facturation en cours.",
-        stepsintro: "Vous pouvez annuler votre abonnement à tout moment depuis la page de profil de votre compte."
+        note: "Votre abonnement restera actif jusqu’à la fin de votre période de facturation en cours."
       },
       multiple: {
         question: "Puis-je avoir plusieurs abonnements pour différents modèles de voiture ?",
@@ -1488,8 +1189,7 @@ export const fr = {
           4: "Saisissez le jeton de votre bot et l’identifiant du chat dans les paramètres d’abonnement Amiquus.",
           5: "Testez la configuration de vos notifications avec le bouton `Envoyer un message test`"
         },
-        note: "Des instructions détaillées étape par étape avec captures d’écran sont fournies lors de la configuration de l’abonnement.",
-        stepsintro: "Pour configurer les notifications Telegram :"
+        note: "Des instructions détaillées étape par étape avec captures d’écran sont fournies lors de la configuration de l’abonnement."
       },
       frequency: {
         question: "À quelle fréquence vais-je recevoir des notifications ?",
@@ -1561,19 +1261,7 @@ export const fr = {
         description: "Nous utiliserons cet e-mail pour vous prévenir lorsqu’une place se libérera."
       },
       submit: "Rejoindre la liste d’attente",
-      submitting: "Envoi en cours...",
-      firstname: {
-        label: "Prénom",
-        placeholder: "Jean, voici comment"
-      },
-      lastname: {
-        label: "Nom de famille",
-        placeholder: "Dupont"
-      }
-    },
-    cantjoin: {
-      description: "Nous vous informerons dès qu’une place d’abonnement sera disponible.",
-      title: "Rejoindre la liste d’attente"
+      submitting: "Envoi en cours..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const fr = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Envoyez-nous un e-mail et nous vous répondrons sous 24 heures",
-      email: "support@amiquus.com",
-      title: "Assistance par e-mail"
-    },
-    faqheading: "Foire aux questions",
-    stillneedhelp: {
-      button: "Contacter le support",
-      description: "Si vous n’avez pas trouvé la réponse à votre question, n’hésitez pas à contacter notre équipe d’assistance. Nous sommes là pour vous aider !",
-      heading: "Vous avez encore besoin d’aide ?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const fr = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Annuler",
-    confirmremove: "Supprimer la carte",
-    default: "Par défaut",
-    expires: "Expire",
-    remove: "Supprimer",
-    removedescription: "Êtes-vous sûr de vouloir supprimer votre carte {{brand}} se terminant par {{last4}} ?",
-    removetitle: "Supprimer le moyen de paiement",
-    removewarning: "Ceci est votre mode de paiement par défaut et le supprimer pourrait affecter vos abonnements actifs.",
-    setasdefault: "Définir par défaut",
-    setdefaultdescription: "Souhaitez-vous définir la carte {{brand}} se terminant par {{last4}} comme votre moyen de paiement par défaut ? Cette carte sera utilisée pour tous les futurs paiements d’abonnement.",
-    setdefaulttitle: "Définir le mode de paiement par défaut"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Annuler l’alerte",
-    canceldescription: "Êtes-vous sûr de vouloir annuler votre alerte voiture pour {{brand}} {{model}} ? Cela arrêtera toutes les notifications et vous devrez créer une nouvelle alerte si vous souhaitez suivre à nouveau ce véhicule.",
-    canceltitle: "Annuler l’alerte voiture",
-    confirmcancel: "Annuler l’alerte",
-    edit: "Modifier",
-    keepmyalert: "Conserver mon alerte",
-    language: "Langue",
-    price: "Prix",
-    pricerange: "Prix",
-    updates: "Mises à jour",
-    websites: "Sites web",
-    years: "Années"
-  },
-  signUp: {
-    cta: "Recevez des alertes maintenant",
-    heading: "Créez votre alerte voiture",
-    subheading: "Configurez vos alertes personnalisées pour les annonces de voitures en quelques étapes seulement.",
-    toast: {
-      error: {
-        description: "Nous n'avons pas pu créer votre abonnement. Veuillez réessayer plus tard.",
-        title: "L’abonnement a échoué"
-      },
-      success: {
-        description: "Votre abonnement a été créé avec succès",
-        title: "Abonnement créé"
-      }
-    },
-    waitlist: {
-      cta: "Rejoindre la liste d’attente",
-      message: "Nous sommes actuellement complets. Veuillez rejoindre notre liste d’attente pour être informé dès qu’une place se libère."
     }
   }
 };

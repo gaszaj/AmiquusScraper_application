@@ -24,16 +24,10 @@ export const ka = {
     button1: "დააყენეთ თქვენი შეტყობინებები",
     button2: "ნახეთ, როგორ მუშაობს",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "შეგიძლიათ ნებისმიერ დროს გააუქმოთ",
-      nosetup: "დაყენება არ არის საჭირო",
-      realtime: "რეალურ დროში შეტყობინებები",
-      websites: "15+ ვებგვერდის მონიტორინგი"
+      websites: "15+ ვებსაიტი თვალყურთ ადევნება",
+      realtime: "რეალურ დროში გაფრთხილებები",
+      noSetup: "დაყენება არ არის საჭირო",
+      cancelAnytime: "გააუქმეთ ნებისმიერ დროს"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const ka = {
     heading: "რატომ აირჩიოთ AMIQUUS?",
     subheading: "დაზოგეთ დრო და არასდროს გამოტოვოთ თქვენი იდეალური ავტომობილი ჩვენი ავტომატური თვალთვალის სერვისით.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "მრავალსაიტიანი თვალთვალი",
+      description: "აკონტროლეთ რამდენიმე ავტომობილის განცხადების ვებსაიტი ერთდროულად, თითოეულის ხელით შემოწმების გარეშე."
     },
     notifications: {
       title: "მყისიერი შეტყობინებები",
@@ -73,61 +67,12 @@ export const ka = {
       description: "აირჩიეთ, რა სიხშირით შევამოწმოთ ახალი განცხადებები — საათობრივი განახლებიდან რეალურ დროში მონიტორინგამდე."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "მრავალენოვანი მხარდაჭერა",
+      description: "მიიღეთ შეტყობინებები თქვენი სასურველი ენით განცხადებების უკეთ გასაგებად."
     },
     account: {
       title: "მარტივი ანგარიშის მართვა",
       description: "მართეთ რამდენიმე საძიებო პროფილი და შეცვალეთ თქვენი გამოწერის პარამეტრები რამდენიმე დაწკაპებით."
-    },
-    multisite: {
-      description: "ერთდროულად დააკვირდით რამდენიმე ავტომობილების განცხადებების ვებგვერდს, ყოველ მათგანის ხელით გადამოწმების გარეშე.",
-      title: "მრავალსაიტიანი თვალთვალი"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const ka = {
         description: "მიიღეთ შეტყობინებები მაშინვე, როგორც კი თქვენს კრიტერიუმებს შესაბამისი ავტომობილი ჩვენს მონიტორინგულ ვებგვერდებზე გამოჩნდება."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "იპოვეთ თქვენი სრულყოფილი მანქანა",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "იყავით პირველები, გაიგეთ ახალი განცხადებების შესახებ და მიიღეთ საუკეთესო შეთავაზებები სხვებზე ადრე.",
-        title: "იპოვე შენი იდეალური ავტომობილი"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const ka = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 სერია, 2019, $32,500 - ახლად დამატებულია AutoTrader-ზე",
-      title: "ნაპოვნია ახალი დამთხვევა!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-კლასი, 2020, 30,000 მილი - ფასი შემცირდა 2,000 $-ით",
-      title: "Telegram შეტყობინება"
-    },
-    setalerts: "დააყენეთ თქვენი შეტყობინებები",
-    whytitle: "რატომ აირჩიოთ AMIQUUS?"
+    }
   },
   pricing: {
     title: "მარტივი და გამჭვირვალე ფასები",
@@ -218,17 +149,7 @@ export const ka = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "დაიწყე ახლავე",
-    addonstitle: "დამატებები:",
-    basetitle: "საბაზისო პაკეტი: 79.99 $/თვე",
-    footernote: "ყველა პაკეტი მოიცავს შეუზღუდავ საძიებო კონფიგურაციებს და მარტივ გამოწერის მართვას.",
-    includedfeatures: {
-      0: "ერთი ვებგვერდის მონიტორინგი",
-      1: "საათობრივი განახლებები",
-      2: "შეუზღუდავი ფილტრები",
-      3: "Telegram შეტყობინებები"
-    },
-    includedtitle: "რა შედის:"
+    button: "დაიწყე ახლავე"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const ka = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "ავტომობილის მარკის მითითება სავალდებულოა",
-      carmodel: "ავტომობილის მოდელის შეყვანა სავალდებულოა",
-      facebookmarketplaceurl: "Facebook Marketplace-ის URL აუცილებელია, როდესაც არჩეულია Facebook",
-      fueltype: "საწვავის ტიპის მითითება სავალდებულოა",
-      maxkilometers: "მაქსიმალური კილომეტრები უნდა იყოს რიცხვი",
-      notificationlanguage: "შეტყობინების ენის მითითება სავალდებულოა",
-      pricemax: "მაქსიმალური ფასი უნდა იყოს რიცხვი",
-      pricemin: "მინიმალური ფასი უნდა იყოს რიცხვი",
-      telegramchatid: "საჭიროა Telegram ჩატის ID",
-      telegramtoken: "საჭიროა Telegram ბოტის ტოკენი",
-      telegramusername: "საჭიროა Telegram-ის მომხმარებლის სახელი",
-      websitesselected: "აუცილებელია აირჩიოთ მინიმუმ ერთი ვებგვერდი",
-      yearmax: "მაქსიმალური წელი უნდა იყოს ვალიდური წელი",
-      yearmin: "მინიმალური წელი უნდა იყოს ვალიდური წელი"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const ka = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "ელფოსტის მისამართი",
-      firstname: "სახელი",
-      lastname: "გვარი"
+      email: "ელფოსტის მისამართი"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "ჯონი",
-      lastname: "დოე"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "გთხოვთ, შეიყვანოთ სწორი ელფოსტის მისამართი",
-      firstname: "სახელის შეყვანა სავალდებულოა",
-      lastname: "გვარის შეყვანა სავალდებულოა"
+      email: "გთხოვთ, შეიყვანოთ სწორი ელფოსტის მისამართი"
     },
     actions: {
       login: "შესვლა ან რეგისტრაცია გასაგრძელებლად",
@@ -332,9 +233,7 @@ export const ka = {
     labels: {
       websites: "საიტები მონიტორინგისთვის",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace-ის URL",
-      updatefrequency: "განახლების სიხშირე"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "აირჩიეთ სიხშირე"
@@ -344,16 +243,11 @@ export const ka = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "ჩასვით თქვენი Facebook Marketplace-ის საძიებო შედეგების ბმული აქ.",
-      updatefrequency: "რამდენად ხშირად უნდა შევამოწმოთ ახალი განცხადებები? უფრო მაღალი სიხშირეები შეიძლება მეტი დაგიჯდეთ.",
-      videodesc: "იხილეთ ქვემოთ მოცემული ვიდეო დეტალური ინსტრუქციებისთვის.",
-      videotitle: "გჭირდებათ დახმარება თქვენი Facebook Marketplace-ის საძიებო ბმულის პოვნაში?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "აუცილებელია აირჩიოთ მინიმუმ ერთი ვებგვერდი",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace-ის URL აუცილებელია, როდესაც არჩეულია Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "წინა",
@@ -371,15 +265,7 @@ export const ka = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "ავტომობილის ბრენდი",
-      carmodel: "ავტომობილის მოდელი",
-      fueltype: "საწვავის ტიპი",
-      maxkilometers: "მაქსიმალური კილომეტრები",
-      pricemax: "მაქსიმალური ფასი",
-      pricemin: "მინიმალური ფასი",
-      yearmax: "მაქსიმალური წელი",
-      yearmin: "მინიმალური წელი"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const ka = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "აირჩიეთ ავტომობილის ბრენდი",
-      carmodel: "აირჩიეთ ავტომობილის მოდელი",
-      carmodeldisabled: "ჯერ აირჩიეთ ავტომობილის ბრენდი",
-      fueltype: "აირჩიეთ საწვავის ტიპი",
-      maxkilometers: "შეიყვანეთ მაქსიმალური კილომეტრები",
-      pricemax: "შეიყვანეთ მაქსიმალური ფასი",
-      pricemin: "შეიყვანეთ მინიმალური ფასი",
-      yearmax: "შეიყვანეთ მაქსიმალური წელი",
-      yearmin: "შეიყვანეთ მინიმალური წელი"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "მოდელები არ არის ხელმისაწვდომი"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const ka = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "ავტომობილის მარკის მითითება სავალდებულოა",
-      carmodel: "ავტომობილის მოდელის მითითება სავალდებულოა",
-      fueltype: "საწვავის ტიპის მითითება სავალდებულოა",
-      maxkilometers: "მაქსიმალური კილომეტრები უნდა იყოს რიცხვი",
-      pricemax: "მაქსიმალური ფასი უნდა იყოს რიცხვი",
-      pricemin: "მინიმალური ფასი უნდა იყოს რიცხვი",
-      yearmax: "მაქსიმალური წელი უნდა იყოს ვალიდური წელი",
-      yearmin: "მინიმალური წელი უნდა იყოს ვალიდური წელი"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "წინა",
@@ -444,17 +312,7 @@ export const ka = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "გახსენით Telegram და მოძებნეთ @BotFather",
-      botstep2: "გააგზავნეთ ბრძანება /newbot",
-      botstep3: "მიჰყევით ინსტრუქციებს ბოტის შესაქმნელად",
-      botstep4: "დააკოპირეთ BotFather-ის მიერ მოწოდებული ტოკენი",
-      bottitle: "როგორ მივიღოთ Telegram Bot Token:",
-      chatstep1: "გახსენით Telegram და მოძებნეთ @userinfobot",
-      chatstep2: "გაგზავნეთ ნებისმიერი შეტყობინება ბოტისთვის",
-      chatstep3: "ბოტი გიპასუხებთ თქვენი ინფორმაციით, მათ შორის თქვენი ჩეთის ID-ით",
-      chatstep4: "დააკოპირეთ ჩატის ID (ეს არის რიცხვი)",
-      chattitle: "როგორ მიიღოთ თქვენი Telegram Chat ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const ka = {
       token: "ტელეგრამ ბოტის ტოკენი",
       chatId: "Your Telegram Chat ID",
       language: "შეტყობინების ენა",
-      username: "Telegram მომხმარებლის სახელი",
-      chatid: "თქვენი Telegram ჩატის ID"
+      username: "Telegram მომხმარებლის სახელი"
     },
     placeholders: {
       token: "შეიყვანეთ თქვენი ბოტის ტოკენი BotFather-დან",
       chatId: "Enter your Telegram chat ID",
       language: "აირჩიეთ Telegram-ის შეტყობინების ენა",
-      username: "შეიყვანეთ თქვენი Telegram-ის მომხმარებლის სახელი",
-      chatid: "შეიყვანეთ თქვენი Telegram ჩატის ID"
+      username: "შეიყვანეთ თქვენი Telegram-ის მომხმარებლის სახელი"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "მაგალითი: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "ამას მიიღებთ, თუ მისწერთ @userinfobot-ს Telegram-ზე."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const ka = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const ka = {
       token: "საჭიროა Telegram ბოტის ტოკენი",
       chatId: "Telegram chat ID is required",
       language: "შეტყობინების ენის არჩევა სავალდებულოა",
-      username: "საჭიროა Telegram-ის მომხმარებლის სახელი",
-      chatid: "საჭიროა Telegram ჩატის ID"
+      username: "საჭიროა Telegram-ის მომხმარებლის სახელი"
     },
     actions: {
       previous: "წინა",
@@ -544,47 +398,7 @@ export const ka = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "მაგალითი: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Telegram Bot-ის ტოკენი",
-    bottokenplaceholder: "შეიყვანეთ თქვენი ბოტის ტოკენი BotFather-დან",
-    caralerttitle: "🚗 ახალი ავტომობილი!",
-    chatiddescription: "ამის მიღება შეგიძლიათ, თუ მისწერთ @userinfobot-ს Telegram-ზე.",
-    chatidlabel: "თქვენი Telegram ჩატის ID",
-    chatidplaceholder: "შეიყვანეთ თქვენი Telegram ჩატის ID",
-    chatidsteps: {
-      0: "გახსენით Telegram და მოძებნეთ \"userinfobot\"",
-      1: "გაგზავნეთ ნებისმიერი შეტყობინება ბოტს",
-      2: "ბოტი გიპასუხებთ თქვენი ინფორმაციის ჩათვლით, მათ შორის თქვენი Chat ID-ით",
-      3: "დააკოპირე შენი ჩატის ID"
-    },
-    chatidtitle: "როგორ მიიღოთ თქვენი Telegram Chat ID:",
-    confirmcontact: "ჩავრთე ჩატი ბოტთან და გავაგზავნე შეტყობინება",
-    contactbotinstruction: "დაიწყეთ ჩატი ჩვენს Telegram ბოტთან ქვემოთ მოცემულ ბმულზე დაკლიკებით და შეტყობინების გაგზავნით:",
-    contactbotnote: "ეს აუცილებელია ავტომობილის შეტყობინებების მისაღებად. თუ კომპიუტერიდან შედიხართ, შეგიძლიათ დაასკანეროთ QR კოდი.",
-    helpdescription: "იხილეთ ქვემოთ მოცემული ვიდეო დეტალური ინსტრუქციისთვის.",
-    helptitle: "გჭირდებათ დახმარება თქვენი Telegram Bot Token-ის და Chat ID-ის დაყენებაში?",
-    kilometreslabel: "კილომეტრები: {{kms}}",
-    languagelabel: "შეტყობინების ენა",
-    languageplaceholder: "აირჩიეთ Telegram-ის შეტყობინების ენა",
-    locationlabel: "მდებარეობა: {{location}}",
-    previewtitle: "ტელეგრამის შეტყობინებების წინასწარი ნახვა",
-    pricelabel: "ფასი: {{price}}",
-    setupsteps: {
-      0: "გახსენით Telegram და მოძებნეთ \"BotFather\"",
-      1: "BotFather-თან ჩატის დასაწყებად დააჭირეთ „დაწყება“-ს",
-      2: "ჩაწერეთ /newbot და მიჰყევით ინსტრუქციებს ახალი ბოტის შესაქმნელად",
-      3: "აირჩიეთ სახელი თქვენი ბოტისთვის",
-      4: "აირჩიეთ თქვენი ბოტისთვის მომხმარებლის სახელი (უნდა მთავრდებოდეს 'bot'-ით)",
-      5: "დააკოპირეთ BotFather-ის მიერ მოწოდებული API ტოკენი",
-      6: "გაგზავნეთ შეტყობინება თქვენს ახალ ბოტს ჩატის გასააქტიურებლად"
-    },
-    setuptitle: "დაყენების ინსტრუქცია:",
-    subheading: "დააყენეთ თქვენი Telegram ბოტი",
-    usernamedescription: "ეს არის თქვენი მომხმარებლის სახელი Telegram-ზე (ilშეიყვანეთ @ სიმბოლოს გარეშე).",
-    videodescription: "იხილეთ ქვემოთ მოცემული ვიდეო დეტალური ინსტრუქციებისთვის.",
-    videoprompt: "გჭირდებათ დახმარება თქვენი Telegram Bot Token-ისა და Chat ID-ის დაყენებაში?",
-    viewlisting: "ნახე განცხადება →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "გადახედეთ თქვენს გამოწერას",
@@ -598,9 +412,7 @@ export const ka = {
       title: "მონიტორინგის პარამეტრები",
       websites: "ვებგვერდები",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook-ის ბმული",
-      updatefrequency: "განახლების სიხშირე"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "ავტომობილის მახასიათებლები",
@@ -609,9 +421,7 @@ export const ka = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "სავალის დიაპაზონი (კმ)",
-      price: "ფასების დიაპაზონი (€)",
-      fueltype: "საწვავის ტიპი",
-      yearrange: "წლების დიაპაზონი"
+      price: "ფასების დიაპაზონი (€)"
     },
     notification: {
       title: "შეტყობინებების პარამეტრები",
@@ -623,9 +433,7 @@ export const ka = {
       base: "საბაზისო გამოწერა",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "სულ (თვეში)",
-      extrawebsites: "დამატებითი ვებგვერდები",
-      frequencyupgrade: "სიხშირის განახლება"
+      total: "სულ (თვეში)"
     },
     terms: {
       checkbox: "ვეთანხმები",
@@ -669,9 +477,7 @@ export const ka = {
         answer: "თქვენ შეგიძლიათ ნებისმიერ დროს გააუქმოთ თქვენი გამოწერა ანგარიშის პანელიდან. გადადით \"გამოწერების\" განყოფილებაში, აირჩიეთ ის გამოწერა, რომლის გაუქმებაც გსურთ და დააწკაპუნეთ ღილაკზე \"გამოწერის გაუქმება\". თქვენი სერვისი გაგრძელდება მიმდინარე საგადახდო პერიოდის ბოლომდე.",
         question: "როგორ გავაუქმო ჩემი გამოწერა?"
       }
-    },
-    contactlink: "დაგვიკავშირდით მხარდაჭერის გუნდთან",
-    contactprompt: "გაქვთ კიდევ კითხვები?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const ka = {
     about: "ჩვენ შესახებ",
     blog: "ბლოგი",
     careers: "კარიერა",
-    support: "მხარდაჭერა",
-    branddescription: "შენი პირადი ასისტენტი, რომელიც დაგეხმარება იპოვო საუკეთესო შეთავაზება მეორად ავტომობილზე საუკეთესო დროს.",
-    brandtitle: "აი როგორ",
-    getstarted: "დაიწყე",
-    quicklinks: "სწრაფი ბმულები"
+    support: "მხარდაჭერა"
   },
   login: {
     title: "შესვლა თქვენს ანგარიშზე",
@@ -716,21 +518,8 @@ export const ka = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "გთხოვთ, შეიყვანოთ სწორი ელ. ფოსტის მისამართი",
-      shortpassword: "პაროლი უნდა შეიცავდეს მინიმუმ 6 სიმბოლოს"
-    },
-    emaillabel: "ელფოსტა",
-    errortitle: "შესვლა ვერ მოხერხდა",
-    genericerror: "გთხოვთ, გადაამოწმეთ თქვენი ავტორიზაციის მონაცემები და სცადეთ კიდევ ერთხელ.",
-    loggingin: "შესვლა...",
-    loginbutton: "შესვლა",
-    loginwithgoogle: "შესვლა Google-ით",
-    noaccount: "არ გაქვს ანგარიში?",
-    passwordlabel: "პაროლი",
-    registerlink: "რეგისტრაცია",
-    successmessage: "წარმატებით შეხვედი სისტემაში.",
-    successtitle: "შესვლა წარმატებით შესრულდა"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "შექმენი ანგარიში",
@@ -774,33 +563,8 @@ export const ka = {
       failure: {
         title: "რეგისტრაცია ვერ შესრულდა",
         desc: "გთხოვთ, გადაამოწმეთ თქვენი ინფორმაცია და სცადეთ კიდევ ერთხელ."
-      },
-      invalidusername: {
-        desc: "მომხმარებლის სახელი უნდა შეიცავდეს მხოლოდ ასოებსა და ციფრებს და იყოს 3-დან 20 სიმბოლომდე",
-        title: "არასწორი მომხმარებლის სახელი"
-      },
-      missingfields: {
-        desc: "გთხოვთ, შეავსოთ ყველა აუცილებელი ველი",
-        title: "აკლია ველები"
-      },
-      passwordmismatch: {
-        desc: "გთხოვთ, დარწმუნდეთ, რომ თქვენი პაროლები ემთხვევა",
-        title: "პაროლები არ ემთხვევა"
-      },
-      termsnotaccepted: {
-        desc: "თქვენ უნდა დაეთანხმოთ პირობებსა და კონფიდენციალურობის პოლიტიკას, რომ გააგრძელოთ",
-        title: "პირობები არ არის მიღებული"
       }
-    },
-    alreadyhave: "უკვე გაქვთ ანგარიში?",
-    confirmpassword: "დაადასტურეთ პაროლი",
-    createbtn: "შექმენი ანგარიში",
-    firstname: "სახელი",
-    lastname: "გვარი",
-    orcontinue: "ან გააგრძელეთ",
-    privacypolicy: "კონფიდენციალურობის პოლიტიკა",
-    termsnotice: "ვეთანხმები",
-    termsofservice: "მომსახურების პირობები"
+    }
   },
   verifyEmail: {
     title: "დაადასტურეთ თქვენი ელფოსტა",
@@ -821,20 +585,8 @@ export const ka = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "ელფოსტა განახლდა",
-      entervalidemail: "გთხოვთ, შეიყვანოთ სწორი ელფოსტის მისამართი",
-      invalidemail: "არასწორი ელფოსტა",
-      sameemail: "იგივე ელფოსტა",
-      sameemaildesc: "ახალი ელფოსტა იგივეა, რაც მიმდინარე ელფოსტა."
-    },
-    codelabel: "დადასტურების კოდი",
-    footernote: "არ მიგიღიათ კოდი? შეამოწმეთ სპამის საქაღალდე.",
-    resendbutton: "კოდის ხელახლა გაგზავნა",
-    resendcountdown: "კოდს ხელახლა გაგზავნით {{seconds}} წამში",
-    updateemailbutton: "განაახლე ელფოსტა",
-    updateemaillabel: "განაახლე ელფოსტა",
-    verifybutton: "დაადასტურეთ ელფოსტა"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "დაამატე გადახდის მეთოდი",
@@ -845,12 +597,6 @@ export const ka = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "მოულოდნელი შეცდომა მოხდა",
-    errortitle: "გადახდის მეთოდის დამატების შეცდომა",
-    initerror: {
-      description: "ვერ მოხერხდა გადახდის პარამეტრების ინიციალიზაცია",
-      title: "შეცდომა"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const ka = {
       methods: "გადახდის მეთოდები",
       account: "ანგარიშის პარამეტრები",
       privacy: "კონფიდენციალურობა და უსაფრთხოება",
-      logout: "გასვლა",
-      membersince: "წევრი მას შემდეგ"
+      logout: "გასვლა"
     },
     account: {
       title: "ანგარიშის პარამეტრები",
@@ -955,14 +700,8 @@ export const ka = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "ავტომობილის შეტყობინებების მისაღებად უნდა დაიწყოთ ჩატი ჩვენს Telegram ბოტთან და გაგზავნოთ შეტყობინება. გთხოვთ, მიჰყევით ქვემოთ მოცემულ ინსტრუქციებს ბოტთან დასაკავშირებლად.",
-        title: "საჭიროა საკონტაქტო ბოტი"
       }
-    },
-    basetitle: "79.99 $/თვეში",
-    basicplan: "საბაზისო პაკეტი"
+    }
   },
   loginPrompt: {
     title: "ავტორიზაცია აუცილებელია",
@@ -1005,15 +744,8 @@ export const ka = {
       },
       error: {
         title: "შეცდომა გამოწერის განახლებისას"
-      },
-      priceerror: {
-        description: "ერთდროულად აჩერებთ და ანახლებთ გამოწერის ფასს. საჭიროა ან შეჩერება ან ფასის განახლება.",
-        title: "ვერ მოხერხდა გამოწერის განახლება"
       }
-    },
-    notfound: "გამოწერა ვერ მოიძებნა",
-    notfoundsub: "დაბრუნდი დაფაზე",
-    subtitle: "დაარედაქტირეთ თქვენი გამოწერის დეტალები ქვემოთ"
+    }
   },
   about: {
     title: "AMIQUUS-ის შესახებ",
@@ -1241,8 +973,7 @@ export const ka = {
           1: "ჩვენი ვებგვერდის საკონტაქტო გვერდის მონახულებით"
         }
       }
-    },
-    lastupdated: "ბოლო განახლება: 2025 წლის 21 მაისი"
+    }
   },
   privacy: {
     metaTitle: "კონფიდენციალურობის პოლიტიკა | Amiquus",
@@ -1363,8 +1094,7 @@ export const ka = {
           1: "ჩვენი ვებგვერდის საკონტაქტო გვერდზე გადასვლით"
         }
       }
-    },
-    lastupdated: "ბოლო განახლება: 2025 წლის 21 მაისი"
+    }
   },
   faqs: {
     metaTitle: "ხშირად დასმული კითხვები | Amiquus",
@@ -1408,34 +1138,6 @@ export const ka = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "დააყენეთ თქვენი საძიებო კრიტერიუმები (მწარმოებელი, მოდელი, ფასის დიაპაზონი და სხვა)",
-          1: "თქვენ ირჩევთ, რომელი ვებგვერდების მონიტორინგი გსურთ",
-          2: "თქვენ აერთებთ თქვენს Telegram ანგარიშს შეტყობინებებისთვის",
-          3: "ჩვენი სისტემა მუდმივად აკონტროლებს თქვენს მიერ არჩეულ ვებგვერდებს ახალი განცხადებებისთვის",
-          4: "როდესაც გამოჩნდება შესაბამისი ავტომობილი, თქვენ მიიღებთ დაუყოვნებლივ შეტყობინებას Telegram-ზე ყველა დეტალით და პირდაპირი ბმულით."
-        },
-        question: "როგორ მუშაობს?"
-      },
-      whatis: {
-        answer: "AMIQUUS არის სერვისი, რომელიც აკონტროლებს რამდენიმე ავტომობილის განცხადებების ვებსაიტს და ეძებს თქვენს მოთხოვნებს შესაბამის მანქანებს. როგორც კი შესაბამისი განცხადება გამოჩნდება, მაშინვე მიიღებთ შეტყობინებას Telegram-ის საშუალებით, რაც გაძლევთ საშუალებას, იყოთ ერთ-ერთი პირველი, ვინც დაუკავშირდება გამყიდველს და მიიღებს საუკეთესო შეთავაზებებს.",
-        question: "რა არის Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "ამჟამად ვაკვირდებით შემდეგ მთავარ ავტომობილების განცხადებების პლატფორმებს:",
-        list: {
-          0: "ავტოტრეიდერი",
-          1: "Cars.com",
-          2: "CarGurus",
-          3: "TrueCar",
-          4: "Facebook Marketplace (ბმულის საშუალებით)",
-          5: "კრეიგსლისტი",
-          6: "eBay მოტორს"
-        },
-        outro: "ჩვენ მუდმივად ვამატებთ ახალ პლატფორმებს, რათა უზრუნველვყოთ მაქსიმალურად სრულყოფილი დაფარვა.",
-        question: "რომელი ავტომობილების განცხადებების ვებგვერდებს ადევნებთ თვალს?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const ka = {
           2: "აირჩიეთ ჩანართი \"გამოწერები\"",
           3: "დააწკაპუნეთ ღილაკზე „გამოწერის გაუქმება“ იმ გამოწერის გვერდით, რომლის გაუქმებაც გსურთ"
         },
-        note: "თქვენი გამოწერა აქტიური დარჩება თქვენი მიმდინარე საგადახდო პერიოდის დასრულებამდე.",
-        stepsintro: "თქვენ შეგიძლიათ ნებისმიერ დროს გააუქმოთ გამოწერა თქვენი ანგარიშის პროფილის გვერდიდან:"
+        note: "თქვენი გამოწერა აქტიური დარჩება თქვენი მიმდინარე საგადახდო პერიოდის დასრულებამდე."
       },
       multiple: {
         question: "შემიძლია თუ არა მქონდეს რამდენიმე გამოწერა სხვადასხვა ავტომობილის მოდელისთვის?",
@@ -1488,8 +1189,7 @@ export const ka = {
           4: "შეიყვანეთ თქვენი ბოტის ტოკენი და ჩეთის ID AMIQUUS-ის გამოწერის პარამეტრებში",
           5: "შეამოწმეთ თქვენი შეტყობინებების პარამეტრები ღილაკით `სატესტო შეტყობინების გაგზავნა`"
         },
-        note: "დეტალური ნაბიჯ-ნაბიჯ ინსტრუქციები ეკრანის სურათებით ხელმისაწვდომია გამოწერის დაყენების პროცესში.",
-        stepsintro: "ტელეგრამზე შეტყობინებების გასააქტიურებლად:"
+        note: "დეტალური ნაბიჯ-ნაბიჯ ინსტრუქციები ეკრანის სურათებით ხელმისაწვდომია გამოწერის დაყენების პროცესში."
       },
       frequency: {
         question: "რამდენად ხშირად მივიღებ შეტყობინებებს?",
@@ -1561,19 +1261,7 @@ export const ka = {
         description: "ამ ელფოსტას გამოვიყენებთ, რომ შეგატყობინოთ, როცა ადგილი გათავისუფლდება."
       },
       submit: "შემოუერთდი მოლოდინის სიას",
-      submitting: "გაგზავნა...",
-      firstname: {
-        label: "სახელი",
-        placeholder: "ჯონი"
-      },
-      lastname: {
-        label: "გვარი",
-        placeholder: "დოე"
-      }
-    },
-    cantjoin: {
-      description: "როგორც კი გამოწერის ადგილი გათავისუფლდება, შეგატყობინებთ.",
-      title: "დარეგისტრირდით მოლოდინის სიაში"
+      submitting: "გაგზავნა..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const ka = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "გამოგვიგზავნეთ ელფოსტა და 24 საათის განმავლობაში დაგიბრუნებთ პასუხს",
-      email: "support@amiquus.com",
-      title: "ელფოსტით მხარდაჭერა"
-    },
-    faqheading: "ხშირად დასმული კითხვები",
-    stillneedhelp: {
-      button: "დაუკავშირდით მხარდაჭერას",
-      description: "თუ ვერ იპოვეთ პასუხი თქვენს კითხვაზე, შეგიძლიათ დაუკავშირდეთ ჩვენს მხარდაჭერის გუნდს. ჩვენ აქ ვართ, რომ დაგეხმაროთ!",
-      heading: "ჯერ კიდევ გჭირდებათ დახმარება?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const ka = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "გაუქმება",
-    confirmremove: "ბარათის წაშლა",
-    default: "ნაგულისხმევი",
-    expires: "ვადა იწურება",
-    remove: "წაშლა",
-    removedescription: "დარწმუნებული ხართ, რომ გსურთ თქვენი {{brand}} ბარათის წაშლა, რომელიც მთავრდება {{last4}}-ზე?",
-    removetitle: "გადახდის მეთოდის წაშლა",
-    removewarning: "ეს არის თქვენი ნაგულისხმევი გადახდის მეთოდი და მისი წაშლა შეიძლება გავლენას მოახდენს თქვენს აქტიურ გამოწერებზე.",
-    setasdefault: "დაყენება ნაგულისხმევად",
-    setdefaultdescription: "გსურთ დააყენოთ {{brand}} ბარათი, რომელიც მთავრდება {{last4}}-ზე, როგორც თქვენი ნაგულისხმევი გადახდის მეთოდი? ეს ბარათი გამოყენებული იქნება ყველა მომავალი გამოწერის გადასახდელად.",
-    setdefaulttitle: "დააყენე ნაგულისხმევი გადახდის მეთოდი"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "გაფრთხილების გაუქმება",
-    canceldescription: "დარწმუნებული ხართ, რომ გსურთ გააუქმოთ თქვენი ავტომობილის შეტყობინება {{brand}} {{model}}-ზე? ეს შეწყვეტს ყველა შეტყობინებას და თუ კვლავ გსურთ ამ ავტომობილის მონიტორინგი, დაგჭირდებათ ახალი შეტყობინების დაყენება.",
-    canceltitle: "ავტომობილის გაფრთხილების გაუქმება",
-    confirmcancel: "გაფრთხილების გაუქმება",
-    edit: "რედაქტირება",
-    keepmyalert: "შეინახე ჩემი შეტყობინება",
-    language: "ენა",
-    price: "ფასი",
-    pricerange: "ფასი",
-    updates: "განახლებები",
-    websites: "ვებგვერდები",
-    years: "წლები"
-  },
-  signUp: {
-    cta: "მიიღეთ შეტყობინებები ახლავე",
-    heading: "შექმენი შენი ავტომობილის შეტყობინება",
-    subheading: "მოირგეთ თქვენი ავტომობილის განცხადებების შეტყობინებები სულ რამდენიმე ნაბიჯში.",
-    toast: {
-      error: {
-        description: "ვერ შევძელით თქვენი გამოწერის შექმნა. გთხოვთ, სცადეთ მოგვიანებით.",
-        title: "გამოწერა ვერ შესრულდა"
-      },
-      success: {
-        description: "თქვენი გამოწერა წარმატებით შეიქმნა",
-        title: "გამოწერა შექმნილია"
-      }
-    },
-    waitlist: {
-      cta: "შემოუერთდი რიგს",
-      message: "ამჟამად ყველა ადგილი შევსებულია. გთხოვთ, დარეგისტრირდეთ მოსაცდელ სიაში, რომ მიიღოთ შეტყობინება, როდესაც ადგილი გათავისუფლდება."
     }
   }
 };

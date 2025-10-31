@@ -24,16 +24,10 @@ export const ko = {
     button1: "알림 설정하기",
     button2: "작동 방식 보기",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "언제든지 취소 가능",
-      nosetup: "설정이 필요 없습니다",
+      websites: "15개 이상의 웹사이트 추적",
       realtime: "실시간 알림",
-      websites: "15개 이상의 웹사이트 추적"
+      noSetup: "설정 불필요",
+      cancelAnytime: "언제든지 취소"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const ko = {
     heading: "왜 AMIQUUS를 선택해야 하나요?",
     subheading: "시간을 절약하고 AMIQUUS의 자동 추적 서비스로 완벽한 차량을 절대 놓치지 마세요.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "다중 사이트 추적",
+      description: "각각을 수동으로 확인할 필요 없이 여러 자동차 리스팅 웹사이트를 동시에 모니터링하십시오."
     },
     notifications: {
       title: "즉시 알림",
@@ -73,61 +67,12 @@ export const ko = {
       description: "새로운 매물 확인 주기를 선택하세요. 시간 단위 업데이트부터 실시간 모니터링까지 가능합니다."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "다국어 지원",
+      description: "목록을 쉽게 이해하기 위해 선호하는 언어로 알림을 받으세요."
     },
     account: {
       title: "간편한 계정 관리",
       description: "여러 검색 프로필을 관리하고 구독 설정을 몇 번의 클릭으로 변경하세요."
-    },
-    multisite: {
-      description: "여러 자동차 매물 사이트를 한 번에 모니터링하여 일일이 직접 확인할 필요가 없습니다.",
-      title: "다중 사이트 추적"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const ko = {
         description: "원하는 조건에 맞는 차량이 저희가 모니터링하는 웹사이트에 등록되면 즉시 알림을 받아보세요."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "완벽한 자동차를 찾으세요",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "새로운 매물 소식을 가장 먼저 받아보고, 누구보다 빠르게 최고의 혜택을 누리세요.",
-        title: "내게 딱 맞는 자동차 찾기"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const ko = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3시리즈, 2019년식, $32,500 - AutoTrader에 새로 등록됨",
-      title: "새로운 매칭이 발견되었습니다!"
-    },
-    notificationmockup2: {
-      description: "메르세데스 C-클래스, 2020년식, 30,000마일 - 가격 2,000달러 인하",
-      title: "텔레그램 알림"
-    },
-    setalerts: "알림 설정하기",
-    whytitle: "왜 AMIQUUS를 선택해야 하나요?"
+    }
   },
   pricing: {
     title: "간단하고 투명한 요금제",
@@ -218,17 +149,7 @@ export const ko = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "지금 시작하기",
-    addonstitle: "추가 기능:",
-    basetitle: "기본 패키지: 월 $79.99",
-    footernote: "모든 요금제에는 무제한 검색 설정과 간편한 구독 관리가 포함되어 있습니다.",
-    includedfeatures: {
-      0: "웹사이트 모니터링 1개",
-      1: "매시간 업데이트",
-      2: "무제한 필터",
-      3: "텔레그램 알림"
-    },
-    includedtitle: "포함 내역"
+    button: "지금 시작하기"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const ko = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "자동차 브랜드는 필수 항목입니다",
-      carmodel: "차종 입력은 필수입니다",
-      facebookmarketplaceurl: "Facebook이 선택되면 Facebook Marketplace URL을 반드시 입력해야 합니다.",
-      fueltype: "연료 종류는 필수 항목입니다",
-      maxkilometers: "최대 주행거리는 숫자여야 합니다.",
-      notificationlanguage: "알림 언어를 선택해야 합니다.",
-      pricemax: "최대 가격은 숫자여야 합니다",
-      pricemin: "최소 가격은 숫자여야 합니다.",
-      telegramchatid: "텔레그램 채팅 ID가 필요합니다.",
-      telegramtoken: "텔레그램 봇 토큰이 필요합니다",
-      telegramusername: "텔레그램 사용자 이름은 필수입니다",
-      websitesselected: "최소한 하나의 웹사이트를 선택해야 합니다.",
-      yearmax: "최대 연도는 올바른 연도여야 합니다.",
-      yearmin: "최소 연도는 올바른 연도여야 합니다."
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const ko = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "이메일 주소",
-      firstname: "이름",
-      lastname: "성"
+      email: "이메일 주소"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "존, 방법은 다음과 같습니다",
-      lastname: "도"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "유효한 이메일 주소를 입력해 주세요.",
-      firstname: "이름은 필수 항목입니다.",
-      lastname: "성은 필수 항목입니다."
+      email: "유효한 이메일 주소를 입력해 주세요."
     },
     actions: {
       login: "계속하려면 로그인 또는 회원가입하세요",
@@ -332,9 +233,7 @@ export const ko = {
     labels: {
       websites: "모니터링할 웹사이트",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook 마켓플레이스 URL",
-      updatefrequency: "업데이트 빈도"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "빈도 선택"
@@ -344,16 +243,11 @@ export const ko = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "여기에 Facebook 마켓플레이스 검색 결과의 URL을 붙여넣어 주세요.",
-      updatefrequency: "새로운 매물은 얼마나 자주 확인할까요? 더 자주 확인하면 비용이 더 많이 들 수 있습니다.",
-      videodesc: "아래 영상을 보시고 단계별 안내를 따라주세요.",
-      videotitle: "Facebook 마켓플레이스 검색 링크 찾는 방법이 필요하신가요?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "최소한 하나의 웹사이트를 선택해야 합니다.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook이 선택된 경우 Facebook Marketplace URL을 반드시 입력해야 합니다."
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "이전",
@@ -371,15 +265,7 @@ export const ko = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "자동차 브랜드",
-      carmodel: "차종",
-      fueltype: "연료 종류",
-      maxkilometers: "최대 주행 거리",
-      pricemax: "최대 가격",
-      pricemin: "최소 가격",
-      yearmax: "최대 연도",
-      yearmin: "최소 연도"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const ko = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "자동차 브랜드 선택",
-      carmodel: "차종 선택",
-      carmodeldisabled: "먼저 자동차 브랜드를 선택하세요",
-      fueltype: "연료 종류 선택",
-      maxkilometers: "최대 주행 거리 입력",
-      pricemax: "최대 가격 입력",
-      pricemin: "최소 가격을 입력하세요",
-      yearmax: "최대 연도를 입력하세요",
-      yearmin: "최소 연도를 입력하세요"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "이용 가능한 모델이 없습니다"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const ko = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "자동차 브랜드는 필수 항목입니다",
-      carmodel: "자동차 모델을 입력해 주세요",
-      fueltype: "연료 종류는 필수 항목입니다.",
-      maxkilometers: "최대 주행거리는 숫자여야 합니다.",
-      pricemax: "최대 가격은 숫자여야 합니다",
-      pricemin: "최소 가격은 숫자여야 합니다",
-      yearmax: "최대 연도는 올바른 연도여야 합니다.",
-      yearmin: "최소 연도는 올바른 연도여야 합니다."
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "이전",
@@ -444,17 +312,7 @@ export const ko = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "텔레그램을 열고 @BotFather를 검색하세요",
-      botstep2: "/newbot 명령어를 보내세요",
-      botstep3: "봇을 만들려면 안내를 따라주세요",
-      botstep4: "BotFather가 제공한 토큰을 복사하세요",
-      bottitle: "텔레그램 봇 토큰 받는 방법:",
-      chatstep1: "텔레그램을 열고 @userinfobot을 검색하세요",
-      chatstep2: "봇에게 아무 메시지나 보내세요",
-      chatstep3: "봇이 회원님의 정보와 Chat ID를 포함해 답변해 드립니다.",
-      chatstep4: "채팅 ID를 복사하세요 (숫자입니다)",
-      chattitle: "텔레그램 채팅 ID 확인 방법:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const ko = {
       token: "텔레그램 봇 토큰",
       chatId: "Your Telegram Chat ID",
       language: "알림 언어",
-      username: "텔레그램 사용자 이름",
-      chatid: "텔레그램 채팅 ID"
+      username: "텔레그램 사용자 이름"
     },
     placeholders: {
       token: "BotFather에서 받은 봇 토큰을 입력하세요",
       chatId: "Enter your Telegram chat ID",
       language: "텔레그램 메시지 언어 선택",
-      username: "텔레그램 사용자 이름을 입력하세요",
-      chatid: "텔레그램 채팅 ID를 입력하세요"
+      username: "텔레그램 사용자 이름을 입력하세요"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "예시: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "텔레그램에서 @userinfobot에게 메시지를 보내면 받을 수 있습니다."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const ko = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const ko = {
       token: "텔레그램 봇 토큰이 필요합니다",
       chatId: "Telegram chat ID is required",
       language: "알림 언어는 필수입니다.",
-      username: "텔레그램 사용자 이름은 필수입니다",
-      chatid: "텔레그램 채팅 ID는 필수입니다"
+      username: "텔레그램 사용자 이름은 필수입니다"
     },
     actions: {
       previous: "이전",
@@ -544,47 +398,7 @@ export const ko = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "예시: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "텔레그램 봇 토큰",
-    bottokenplaceholder: "BotFather에서 발급받은 봇 토큰을 입력하세요",
-    caralerttitle: "🚗 신차 소식!",
-    chatiddescription: "텔레그램에서 @userinfobot에게 메시지를 보내면 확인할 수 있습니다.",
-    chatidlabel: "당신의 텔레그램 채팅 ID",
-    chatidplaceholder: "텔레그램 채팅 ID를 입력하세요",
-    chatidsteps: {
-      0: "텔레그램을 열고 \"userinfobot\"을 검색하세요",
-      1: "봇에게 아무 메시지나 보내보세요",
-      2: "봇이 회원님의 정보와 Chat ID를 포함하여 답변해 드립니다.",
-      3: "채팅 ID 복사"
-    },
-    chatidtitle: "텔레그램 채팅 ID 확인 방법:",
-    confirmcontact: "봇과 채팅을 시작하고 메시지를 보냈습니다",
-    contactbotinstruction: "아래 링크를 클릭하고 Telegram 봇에게 메시지를 보내 대화를 시작하세요:",
-    contactbotnote: "차량 알림을 받으려면 필수입니다. 데스크탑을 사용 중이라면 QR 코드를 스캔하실 수 있습니다.",
-    helpdescription: "아래 영상을 보며 단계별 안내를 확인하세요.",
-    helptitle: "Telegram Bot 토큰과 Chat ID 설정이 필요하신가요?",
-    kilometreslabel: "킬로미터: {{kms}}",
-    languagelabel: "알림 언어",
-    languageplaceholder: "텔레그램 메시지 언어 선택",
-    locationlabel: "위치: {{location}}",
-    previewtitle: "텔레그램 알림 미리보기",
-    pricelabel: "가격: {{price}}",
-    setupsteps: {
-      0: "텔레그램을 열고 \"BotFather\"를 검색하세요",
-      1: "BotFather와 채팅을 시작하려면 \"Start\"를 클릭하세요.",
-      2: "/newbot을 입력하고 안내에 따라 새 봇을 만들어보세요.",
-      3: "봇의 이름을 선택하세요",
-      4: "봇의 사용자 이름을 선택하세요 ('bot'으로 끝나야 합니다)",
-      5: "BotFather가 제공한 API 토큰을 복사하세요.",
-      6: "새로운 봇에게 메시지를 보내 채팅을 시작하세요"
-    },
-    setuptitle: "설치 안내",
-    subheading: "텔레그램 봇 설정하기",
-    usernamedescription: "이것은 당신의 Telegram 계정 사용자 이름입니다 (@ 기호 없이 입력하세요).",
-    videodescription: "아래 영상을 보시고 단계별 안내를 따라주세요.",
-    videoprompt: "Telegram Bot 토큰과 Chat ID 설정이 필요하신가요?",
-    viewlisting: "리스트 보기 →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "구독 내역 확인",
@@ -598,9 +412,7 @@ export const ko = {
       title: "모니터링 설정",
       websites: "웹사이트",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "페이스북 URL",
-      updatefrequency: "업데이트 빈도"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "자동차 제원",
@@ -609,9 +421,7 @@ export const ko = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "주행 가능 거리 (km)",
-      price: "가격대 (€)",
-      fueltype: "연료 종류",
-      yearrange: "연도 범위"
+      price: "가격대 (€)"
     },
     notification: {
       title: "알림 설정",
@@ -623,9 +433,7 @@ export const ko = {
       base: "기본 구독",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "총액(월별)",
-      extrawebsites: "추가 웹사이트",
-      frequencyupgrade: "주파수 업그레이드"
+      total: "총액(월별)"
     },
     terms: {
       checkbox: "동의합니다",
@@ -669,9 +477,7 @@ export const ko = {
         answer: "언제든지 계정 대시보드에서 구독을 취소하실 수 있습니다. \"구독\" 섹션으로 이동해 취소를 원하는 구독을 선택한 후, \"구독 취소\" 버튼을 클릭하세요. 현재 결제 주기 종료 시까지 서비스가 유지됩니다.",
         question: "구독을 어떻게 취소하나요?"
       }
-    },
-    contactlink: "고객 지원팀에 문의하세요",
-    contactprompt: "추가로 궁금한 점이 있으신가요?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const ko = {
     about: "회사 소개",
     blog: "블로그",
     careers: "채용",
-    support: "고객지원",
-    branddescription: "완벽한 중고차 딜을 가장 적절한 시기에 찾아주는 당신의 개인 어시스턴트",
-    brandtitle: "Amiquus",
-    getstarted: "시작하기",
-    quicklinks: "빠른 링크"
+    support: "고객지원"
   },
   login: {
     title: "내 계정에 로그인",
@@ -716,21 +518,8 @@ export const ko = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "유효한 이메일 주소를 입력해 주세요.",
-      shortpassword: "비밀번호는 최소 6자 이상이어야 합니다."
-    },
-    emaillabel: "이메일",
-    errortitle: "로그인에 실패했습니다",
-    genericerror: "자격 증명을 확인하고 다시 시도해 주세요.",
-    loggingin: "로그인 중...",
-    loginbutton: "로그인",
-    loginwithgoogle: "Google로 로그인",
-    noaccount: "계정이 없으신가요?",
-    passwordlabel: "비밀번호",
-    registerlink: "회원가입",
-    successmessage: "성공적으로 로그인되었습니다.",
-    successtitle: "로그인 성공"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "회원가입",
@@ -774,33 +563,8 @@ export const ko = {
       failure: {
         title: "회원가입에 실패했습니다",
         desc: "정보를 확인하고 다시 시도해 주세요."
-      },
-      invalidusername: {
-        desc: "사용자 이름은 영문자와 숫자만 사용할 수 있으며, 3자에서 20자 사이여야 합니다.",
-        title: "유효하지 않은 사용자 이름"
-      },
-      missingfields: {
-        desc: "모든 필수 항목을 입력해 주세요.",
-        title: "누락된 항목"
-      },
-      passwordmismatch: {
-        desc: "비밀번호가 일치하는지 확인해주세요.",
-        title: "비밀번호가 일치하지 않습니다"
-      },
-      termsnotaccepted: {
-        desc: "계속하려면 약관 및 개인정보 처리방침에 동의해야 합니다.",
-        title: "약관이 동의되지 않았습니다"
       }
-    },
-    alreadyhave: "이미 계정이 있으신가요?",
-    confirmpassword: "비밀번호 확인",
-    createbtn: "회원가입",
-    firstname: "이름",
-    lastname: "성씨",
-    orcontinue: "또는 다음으로 계속하기",
-    privacypolicy: "개인정보처리방침",
-    termsnotice: "동의합니다",
-    termsofservice: "이용약관"
+    }
   },
   verifyEmail: {
     title: "이메일을 인증하세요",
@@ -821,20 +585,8 @@ export const ko = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "이메일이 업데이트되었습니다",
-      entervalidemail: "유효한 이메일 주소를 입력해 주세요.",
-      invalidemail: "유효하지 않은 이메일",
-      sameemail: "같은 이메일",
-      sameemaildesc: "새 이메일이 현재 이메일과 동일합니다."
-    },
-    codelabel: "인증 코드",
-    footernote: "코드를 받지 못하셨나요? 스팸 메일함을 확인해보세요.",
-    resendbutton: "인증 코드 다시 보내기",
-    resendcountdown: "{{seconds}}초 후에 코드를 다시 보낼 수 있습니다.",
-    updateemailbutton: "이메일 업데이트",
-    updateemaillabel: "이메일 업데이트",
-    verifybutton: "이메일 인증"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "결제 수단 추가",
@@ -845,12 +597,6 @@ export const ko = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "예기치 않은 오류가 발생했습니다.",
-    errortitle: "결제 수단 추가 중 오류가 발생했습니다",
-    initerror: {
-      description: "결제 설정을 초기화할 수 없습니다",
-      title: "오류"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const ko = {
       methods: "결제 방법",
       account: "계정 설정",
       privacy: "개인정보 및 보안",
-      logout: "로그아웃",
-      membersince: "가입일"
+      logout: "로그아웃"
     },
     account: {
       title: "계정 설정",
@@ -955,14 +700,8 @@ export const ko = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "자동차 알림을 받으려면 Telegram 봇과 채팅을 시작하고 메시지를 보내야 합니다. 아래 안내를 따라 봇에게 연락해 주세요.",
-        title: "연락용 봇 필요"
       }
-    },
-    basetitle: "월 79.99달러",
-    basicplan: "기본 요금제"
+    }
   },
   loginPrompt: {
     title: "로그인이 필요합니다",
@@ -1005,15 +744,8 @@ export const ko = {
       },
       error: {
         title: "구독 업데이트 중 오류가 발생했습니다"
-      },
-      priceerror: {
-        description: "구독을 일시정지하고 가격을 동시에 변경할 수 없습니다. 구독을 일시정지하거나 가격을 변경해야 합니다.",
-        title: "구독을 업데이트할 수 없습니다"
       }
-    },
-    notfound: "구독을 찾을 수 없습니다",
-    notfoundsub: "대시보드로 돌아가기",
-    subtitle: "아래에서 구독 정보를 수정하세요"
+    }
   },
   about: {
     title: "Amiquus 소개",
@@ -1241,8 +973,7 @@ export const ko = {
           1: "저희 웹사이트의 문의 페이지를 방문하시면"
         }
       }
-    },
-    lastupdated: "최종 업데이트: 2025년 5월 21일"
+    }
   },
   privacy: {
     metaTitle: "개인정보처리방침 | Amiquus",
@@ -1363,8 +1094,7 @@ export const ko = {
           1: "저희 웹사이트의 문의 페이지를 방문하시면"
         }
       }
-    },
-    lastupdated: "최종 업데이트: 2025년 5월 21일"
+    }
   },
   faqs: {
     metaTitle: "자주 묻는 질문 | Amiquus",
@@ -1408,34 +1138,6 @@ export const ko = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "검색 조건을 설정하세요 (제조사, 모델, 가격대 등)",
-          1: "모니터링할 웹사이트를 직접 선택하세요",
-          2: "알림을 받으려면 Telegram 계정을 연결하세요",
-          3: "저희 시스템은 선택하신 웹사이트를 실시간으로 모니터링하여 새로운 게시물을 확인합니다.",
-          4: "조건에 맞는 차량이 나타나면, 모든 정보와 직접 연결 링크가 포함된 텔레그램 알림을 즉시 받아보실 수 있습니다."
-        },
-        question: "어떻게 작동하나요?"
-      },
-      whatis: {
-        answer: "AMIQUUS는 사용자의 특정 조건에 맞는 차량을 여러 자동차 매물 사이트에서 실시간으로 모니터링하는 서비스입니다. 조건에 맞는 매물이 등록되면 텔레그램을 통해 즉시 알림을 받아 누구보다 빠르게 판매자에게 연락하고 좋은 거래를 성사시킬 수 있습니다.",
-        question: "Amiquus란 무엇인가요?"
-      },
-      whichwebsites: {
-        answerintro: "현재 주요 자동차 매물 플랫폼을 모니터링하고 있습니다:",
-        list: {
-          0: "오토트레이더",
-          1: "Cars.com",
-          2: "카구루스",
-          3: "트루카",
-          4: "Facebook 마켓플레이스(URL 통해서)",
-          5: "크레이그리스트",
-          6: "이베이 모터스"
-        },
-        outro: "더 폭넓은 서비스를 제공하기 위해 지속적으로 새로운 플랫폼을 추가하고 있습니다.",
-        question: "어떤 자동차 매물 사이트를 모니터링하시나요?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const ko = {
           2: "\"구독\" 탭을 선택하세요",
           3: "취소하려는 구독 옆에 있는 \"구독 취소\" 버튼을 클릭하세요."
         },
-        note: "현재 결제 주기가 끝날 때까지 구독이 계속 유지됩니다.",
-        stepsintro: "언제든지 내 계정 프로필 페이지에서 구독을 취소하실 수 있습니다."
+        note: "현재 결제 주기가 끝날 때까지 구독이 계속 유지됩니다."
       },
       multiple: {
         question: "다른 자동차 모델에 대해 여러 개의 구독을 가질 수 있나요?",
@@ -1488,8 +1189,7 @@ export const ko = {
           4: "Amiquus 구독 설정에서 봇 토큰과 채팅 ID를 입력하세요.",
           5: "`테스트 메시지 보내기` 버튼을 사용해 알림 설정을 확인해보세요."
         },
-        note: "구독 설정 과정에서 스크린샷이 포함된 자세한 단계별 안내가 제공됩니다.",
-        stepsintro: "텔레그램 알림 설정 방법:"
+        note: "구독 설정 과정에서 스크린샷이 포함된 자세한 단계별 안내가 제공됩니다."
       },
       frequency: {
         question: "알림은 얼마나 자주 받게 되나요?",
@@ -1561,19 +1261,7 @@ export const ko = {
         description: "입장 가능 시 이 이메일로 안내해 드릴 예정입니다."
       },
       submit: "웨이팅리스트 신청",
-      submitting: "제출 중...",
-      firstname: {
-        label: "이름",
-        placeholder: "존, 방법은 이렇습니다"
-      },
-      lastname: {
-        label: "성",
-        placeholder: "도"
-      }
-    },
-    cantjoin: {
-      description: "구독 자리가 생기는 즉시 알려드리겠습니다.",
-      title: "웨이팅 리스트에 등록하기"
+      submitting: "제출 중..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const ko = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "이메일을 보내주시면 24시간 이내에 답변드리겠습니다.",
-      email: "support@amiquus.com 고객센터",
-      title: "이메일 지원"
-    },
-    faqheading: "자주 묻는 질문",
-    stillneedhelp: {
-      button: "고객 지원 문의",
-      description: "궁금하신 점에 대한 답변을 찾지 못하셨다면, 언제든지 AMIQUUS 고객지원팀에 문의해 주세요. 항상 도와드릴 준비가 되어 있습니다!",
-      heading: "아직 도움이 필요하신가요?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const ko = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "취소",
-    confirmremove: "카드 삭제",
-    default: "기본",
-    expires: "만료",
-    remove: "제거",
-    removedescription: "정말로 {{last4}}로 끝나는 {{brand}} 카드를 삭제하시겠습니까?",
-    removetitle: "결제 수단 삭제",
-    removewarning: "이것은 기본 결제 수단이며, 삭제하면 활성 구독에 영향을 줄 수 있습니다.",
-    setasdefault: "기본값으로 설정",
-    setdefaultdescription: "{{brand}} 카드({{last4}})를 기본 결제 수단으로 설정하시겠습니까? 이 카드는 앞으로 모든 구독 결제에 사용됩니다.",
-    setdefaulttitle: "기본 결제 수단 설정"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "알림 취소",
-    canceldescription: "정말로 {{brand}} {{model}} 차량 알림을 취소하시겠습니까? 모든 알림이 중지되며, 다시 이 차량을 모니터링하려면 새 알림을 설정해야 합니다.",
-    canceltitle: "자동차 알림 취소",
-    confirmcancel: "경고 취소",
-    edit: "수정",
-    keepmyalert: "내 알림 유지",
-    language: "언어",
-    price: "가격",
-    pricerange: "가격",
-    updates: "업데이트",
-    websites: "웹사이트",
-    years: "년"
-  },
-  signUp: {
-    cta: "지금 알림 받기",
-    heading: "내 차량 알림 만들기",
-    subheading: "몇 단계만에 맞춤형 자동차 매물 알림을 설정하세요.",
-    toast: {
-      error: {
-        description: "구독을 생성할 수 없습니다. 잠시 후 다시 시도해 주세요.",
-        title: "구독에 실패했습니다"
-      },
-      success: {
-        description: "구독이 성공적으로 생성되었습니다",
-        title: "구독이 생성되었습니다"
-      }
-    },
-    waitlist: {
-      cta: "웨이팅리스트 신청",
-      message: "현재 정원이 모두 찼습니다. 자리가 나면 안내해드릴 수 있도록 대기자 명단에 등록해 주세요."
     }
   }
 };

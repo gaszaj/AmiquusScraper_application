@@ -24,10 +24,10 @@ export const az = {
     button1: "Set Up Your Alerts",
     button2: "See How It Works",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
+      websites: "15+ sayt izlənilir",
+      realtime: "Real-vaxt bildirişləri",
+      noSetup: "Quraşdırma tələb olunmur",
+      cancelAnytime: "İstənilən vaxt ləğv edin"
     }
   },
   limited: {
@@ -51,8 +51,8 @@ export const az = {
     heading: "Why Choose Amiquus?",
     subheading: "Save time and never miss out on your perfect car with our automated tracking service.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Çox-sayt izləmə",
+      description: "Hər birini əl ilə yoxlamadan eyni anda bir neçə avtomobil elan saytını izləyin."
     },
     notifications: {
       title: "Instant Notifications",
@@ -67,8 +67,8 @@ export const az = {
       description: "Choose how often we check for new listings, from hourly updates to real-time monitoring."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings."
+      title: "Çoxdilli dəstək",
+      description: "Elanları daha asan başa düşmək üçün bildirişləri seçdiyiniz dildə alın."
     },
     account: {
       title: "Easy Account Management",
@@ -93,7 +93,7 @@ export const az = {
         description: "Receive alerts the moment a car matching your criteria appears on any of our monitored websites."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Mükəmməl avtomobilinizi tapın",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
       }
     },
@@ -338,9 +338,9 @@ export const az = {
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -356,7 +356,7 @@ export const az = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -675,7 +675,7 @@ export const az = {
     basicPlan: "Basic Plan",
     baseTitle: "$9.99/month",
     button: "Start My Car Alert Service",
-    cancel: "Cancel anytime",
+    cancel: "İstənilən vaxt ləğv edin",
     toasts: {
       terms: {
         title: "Terms not accepted",
@@ -1251,11 +1251,11 @@ export const az = {
 
           "Log in to your account",
 
-          "Navigate to the \"Profile\" page",
+          "Navigate to the \\\"Profile\\\" page",
 
-          "Select the \"Subscriptions\" tab",
+          "Select the \\\"Subscriptions\\\" tab",
 
-          "Click the \"Cancel Subscription\" button next to the subscription you wish to cancel"
+          "Click the \\\"Cancel Subscription\\\" button next to the subscription you wish to cancel"
 
         ],
         note: "Your subscription will remain active until the end of your current billing period."
@@ -1411,9 +1411,9 @@ export const az = {
 
           "Copy your API token and chat ID",
 
-          "Enter these details in your account settings under \"Notification Preferences\"",
+          "Enter these details in your account settings under \\\"Notification Preferences\\\"",
 
-          "Test your connection using the \"Send Test Message\" button"
+          "Test your connection using the \\\"Send Test Message\\\" button"
 
         ],
         outro: "If you need more help, our detailed guide is available in your dashboard."

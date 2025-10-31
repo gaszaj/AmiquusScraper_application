@@ -24,16 +24,10 @@ export const fi = {
     button1: "Aseta hälytyksesi",
     button2: "Katso, miten se toimii",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Peruuta milloin tahansa",
-      nosetup: "Ei asennusta tarvita",
-      realtime: "Hälytykset reaaliajassa",
-      websites: "Yli 15 verkkosivustoa seurannassa"
+      websites: "15+ sivustoa seurattavana",
+      realtime: "Reaaliaikaiset hälytykset",
+      noSetup: "Ei vaadi asetuksia",
+      cancelAnytime: "Peruuta milloin tahansa"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const fi = {
     heading: "Miksi valita Amiquus?",
     subheading: "Säästä aikaa ja löydä täydellinen autosi helposti AMIQUUSin automatisoidulla seurantapalvelulla – et jää mistään paitsi.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Monisivuston seuranta",
+      description: "Seuraa useita autoilmoitussivustoja samanaikaisesti ilman, että sinun tarvitsee tarkistaa jokainen erikseen manuaalisesti."
     },
     notifications: {
       title: "Välittömät ilmoitukset",
@@ -73,61 +67,12 @@ export const fi = {
       description: "Valitse, kuinka usein tarkistamme uudet ilmoitukset – tunneittaisista päivityksistä reaaliaikaiseen seurantaan."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Monikielinen tuki",
+      description: "Vastaanota ilmoitukset haluamallasi kielellä helpomman ymmärtämisen vuoksi."
     },
     account: {
       title: "Helppo tilinhallinta",
       description: "Hallitse useita hakuprofiileja ja muokkaa tilausasetuksia helposti muutamalla klikkauksella."
-    },
-    multisite: {
-      description: "Seuraa useita autolistauksia samanaikaisesti ilman, että sinun tarvitsee tarkistaa jokaista sivustoa erikseen.",
-      title: "Seuranta useilla sivustoilla"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const fi = {
         description: "Saat ilmoitukset heti, kun kriteereihisi sopiva auto ilmestyy mille tahansa seuraamistamme verkkosivustoista."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Löydä täydellinen autosi",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Ole ensimmäinen, joka saa tiedon uusista ilmoituksista ja varmista parhaat diilit ennen muita.",
-        title: "Löydä täydellinen autosi"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const fi = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3-sarja, 2019, $32,500 – Juuri listattu AutoTraderissa",
-      title: "Uusi ottelu löytyi!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-sarja, 2020, 30 000 mailia – Hinta laskenut 2 000 $",
-      title: "Telegram-ilmoitus"
-    },
-    setalerts: "Aseta hälytyksesi",
-    whytitle: "Miksi valita Amiquus?"
+    }
   },
   pricing: {
     title: "Selkeä ja läpinäkyvä hinnoittelu",
@@ -218,17 +149,7 @@ export const fi = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Aloita nyt",
-    addonstitle: "Lisäosat:",
-    basetitle: "Peruspaketti: 79,99 $/kk",
-    footernote: "Kaikkiin tilauksiin sisältyy rajattomat hakukonfiguraatiot ja helppo tilauksen hallinta.",
-    includedfeatures: {
-      0: "Yhden verkkosivuston valvonta",
-      1: "Tuntikohtaiset päivitykset",
-      2: "Rajoittamattomat suodattimet",
-      3: "Telegram-ilmoitukset"
-    },
-    includedtitle: "Mitä sisältyy:"
+    button: "Aloita nyt"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const fi = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Automerkin valinta on pakollinen",
-      carmodel: "Auton malli on pakollinen",
-      facebookmarketplaceurl: "Facebook Marketplace -osoite vaaditaan, kun Facebook on valittuna",
-      fueltype: "Polttoainetyyppi on pakollinen",
-      maxkilometers: "Maksimikilometrien on oltava numero",
-      notificationlanguage: "Ilmoituskieli on pakollinen",
-      pricemax: "Enimmäishinnan on oltava numero",
-      pricemin: "Vähimmäishinnan on oltava numero",
-      telegramchatid: "Telegram-keskustelun tunnus vaaditaan",
-      telegramtoken: "Telegram-botin tunnus vaaditaan",
-      telegramusername: "Telegram-käyttäjätunnus on pakollinen",
-      websitesselected: "Vähintään yksi verkkosivusto on valittava",
-      yearmax: "Maksimivuoden täytyy olla kelvollinen vuosi",
-      yearmin: "Vähimmäisvuoden on oltava kelvollinen vuosi"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const fi = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Sähköpostiosoite",
-      firstname: "Etunimi",
-      lastname: "Sukunimi"
+      email: "Sähköpostiosoite"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Juhani",
-      lastname: "Hirvi"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Anna kelvollinen sähköpostiosoite",
-      firstname: "Etunimi on pakollinen",
-      lastname: "Sukunimi on pakollinen"
+      email: "Anna kelvollinen sähköpostiosoite"
     },
     actions: {
       login: "Kirjaudu sisään tai rekisteröidy jatkaaksesi",
@@ -332,9 +233,7 @@ export const fi = {
     labels: {
       websites: "Verkkosivustot seurattavaksi",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace -osoite",
-      updatefrequency: "Päivitystiheys"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Valitse taajuus"
@@ -344,16 +243,11 @@ export const fi = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Liitä Facebook Marketplace -hakutulostesi URL tähän.",
-      updatefrequency: "Kuinka usein meidän tulisi tarkistaa uudet ilmoitukset? Korkeammat tarkistustiheydet voivat lisätä kustannuksia.",
-      videodesc: "Katso alla oleva video saadaksesi vaiheittaiset ohjeet.",
-      videotitle: "Tarvitsetko apua Facebook Marketplace -hakulinkkisi löytämisessä?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Vähintään yksi verkkosivusto on valittava.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace -osoite vaaditaan, kun Facebook on valittuna."
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Edellinen",
@@ -371,15 +265,7 @@ export const fi = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Auton merkki",
-      carmodel: "Auton malli",
-      fueltype: "Polttoainetyyppi",
-      maxkilometers: "Maksimikilometrit",
-      pricemax: "Enimmäishinta",
-      pricemin: "Vähimmäishinta",
-      yearmax: "Suurin vuosi",
-      yearmin: "Vähimmäisvuosi"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const fi = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Valitse auton merkki",
-      carmodel: "Valitse automalli",
-      carmodeldisabled: "Valitse ensin auton merkki",
-      fueltype: "Valitse polttoainetyyppi",
-      maxkilometers: "Syötä enimmäiskilometrit",
-      pricemax: "Syötä enimmäishinta",
-      pricemin: "Syötä vähimmäishinta",
-      yearmax: "Syötä enimmäisvuosi",
-      yearmin: "Syötä vähimmäisvuosi"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Ei malleja saatavilla"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const fi = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Automerkin valinta on pakollinen",
-      carmodel: "Auton malli on pakollinen",
-      fueltype: "Polttoainetyyppi on pakollinen",
-      maxkilometers: "Maksimikilometrien täytyy olla numero",
-      pricemax: "Enimmäishinnan täytyy olla numero",
-      pricemin: "Vähimmäishinnan on oltava numero",
-      yearmax: "Maksimivuoden täytyy olla kelvollinen vuosi",
-      yearmin: "Vähimmäisvuoden on oltava kelvollinen vuosi"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Edellinen",
@@ -444,17 +312,7 @@ export const fi = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Avaa Telegram ja etsi @BotFather",
-      botstep2: "Lähetä komento /newbot",
-      botstep3: "Seuraa ohjeita luodaksesi botin",
-      botstep4: "Kopioi BotFatherin antama token",
-      bottitle: "Miten saat Telegram-botin tunnuksen:",
-      chatstep1: "Avaa Telegram ja etsi @userinfobot",
-      chatstep2: "Lähetä mikä tahansa viesti botille",
-      chatstep3: "Botti vastaa tiedoillasi, mukaan lukien Chat ID:si",
-      chatstep4: "Kopioi keskustelun tunnus (se on numero)",
-      chattitle: "Näin saat Telegram Chat ID:si"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const fi = {
       token: "Telegram-bottitunnus",
       chatId: "Your Telegram Chat ID",
       language: "Ilmoituskieli",
-      username: "Telegram-käyttäjätunnus",
-      chatid: "Telegram-keskustelutunnuksesi"
+      username: "Telegram-käyttäjätunnus"
     },
     placeholders: {
       token: "Syötä bottisi token BotFatherilta",
       chatId: "Enter your Telegram chat ID",
       language: "Valitse Telegram-viestien kieli",
-      username: "Syötä Telegram-käyttäjätunnuksesi",
-      chatid: "Syötä Telegram-keskustelutunnuksesi"
+      username: "Syötä Telegram-käyttäjätunnuksesi"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Esimerkki: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Tämän saat lähettämällä viestin @userinfobot Telegramissa."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const fi = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const fi = {
       token: "Telegram-botin tunnus vaaditaan",
       chatId: "Telegram chat ID is required",
       language: "Ilmoituskieli on pakollinen",
-      username: "Telegram-käyttäjätunnus on pakollinen",
-      chatid: "Telegram-keskustelun tunnus vaaditaan"
+      username: "Telegram-käyttäjätunnus on pakollinen"
     },
     actions: {
       previous: "Edellinen",
@@ -544,47 +398,7 @@ export const fi = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Esimerkki: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Telegram-botin tunnus",
-    bottokenplaceholder: "Syötä bottisi token BotFatherilta",
-    caralerttitle: "🚗 Uusi auto!",
-    chatiddescription: "Saat tämän lähettämällä viestin @userinfobot Telegramissa.",
-    chatidlabel: "Telegram-keskustelutunnuksesi",
-    chatidplaceholder: "Syötä Telegram-keskustelutunnuksesi",
-    chatidsteps: {
-      0: "Avaa Telegram ja etsi \"userinfobot\"",
-      1: "Lähetä mikä tahansa viesti botille",
-      2: "Botti vastaa sinulle tiedoillasi, mukaan lukien Chat ID:si",
-      3: "Kopioi Chat-tunnuksesi"
-    },
-    chatidtitle: "Näin saat Telegram Chat ID:si",
-    confirmcontact: "Olen aloittanut keskustelun botin kanssa ja lähettänyt viestin.",
-    contactbotinstruction: "Aloita keskustelu Telegram-bottimme kanssa klikkaamalla alla olevaa linkkiä ja lähettämällä sille viesti.",
-    contactbotnote: "Tämä on tarpeen autohälytysten vastaanottamiseksi. Jos olet tietokoneella, voit skannata QR-koodin.",
-    helpdescription: "Katso alla oleva video vaihe vaiheelta etenevää opastusta varten.",
-    helptitle: "Tarvitsetko apua Telegram Bot Tokenin ja Chat ID:n asetuksissa?",
-    kilometreslabel: "Kilometrit: {{kms}}",
-    languagelabel: "Ilmoituskieli",
-    languageplaceholder: "Valitse Telegram-viestien kieli",
-    locationlabel: "Sijainti: {{location}}",
-    previewtitle: "Esikatsele Telegram-ilmoituksia",
-    pricelabel: "Hinta: {{price}}",
-    setupsteps: {
-      0: "Avaa Telegram ja etsi \"BotFather\"",
-      1: "Aloita keskustelu BotFatherin kanssa napsauttamalla \"Aloita\"",
-      2: "Kirjoita /newbot ja seuraa ohjeita luodaksesi uuden botin",
-      3: "Valitse nimi botillesi",
-      4: "Valitse botillesi käyttäjätunnus (tunnuksen tulee päättyä 'bot')",
-      5: "Kopioi BotFatherin antama API-tunnus",
-      6: "Lähetä viesti uudelle botillesi aktivoidaksesi keskustelun"
-    },
-    setuptitle: "Asennusohjeet:",
-    subheading: "Ota Telegram-bottisi käyttöön",
-    usernamedescription: "Tämä on käyttäjänimesi Telegram-tililläsi (ilman @-merkkiä).",
-    videodescription: "Katso alla oleva video vaihe vaiheelta etenevää opastusta varten.",
-    videoprompt: "Tarvitsetko apua Telegram Bot Tokenin ja Chat ID:n käyttöönotossa?",
-    viewlisting: "Näytä ilmoitus →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Tarkista tilauksesi",
@@ -598,9 +412,7 @@ export const fi = {
       title: "Valvonnan asetukset",
       websites: "Verkkosivut",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook-osoite",
-      updatefrequency: "Päivitystiheys"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Auton tekniset tiedot",
@@ -609,9 +421,7 @@ export const fi = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Toimintamatka (km)",
-      price: "Hintahaarukka (€)",
-      fueltype: "Polttoainetyyppi",
-      yearrange: "Vuosiväli"
+      price: "Hintahaarukka (€)"
     },
     notification: {
       title: "Ilmoitusasetukset",
@@ -623,9 +433,7 @@ export const fi = {
       base: "Perustilaus",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Yhteensä (kuukausittain)",
-      extrawebsites: "Lisäsivustot",
-      frequencyupgrade: "Taajuuspäivitys"
+      total: "Yhteensä (kuukausittain)"
     },
     terms: {
       checkbox: "Hyväksyn",
@@ -669,9 +477,7 @@ export const fi = {
         answer: "Voit peruuttaa tilauksesi milloin tahansa oman tilisi hallintapaneelista. Siirry kohtaan \"Tilaukset\", valitse peruutettava tilaus ja napsauta \"Peruuta tilaus\" -painiketta. Palvelusi on käytössä nykyisen laskutuskauden loppuun asti.",
         question: "Miten perun tilaukseni?"
       }
-    },
-    contactlink: "Ota yhteyttä tukitiimiimme",
-    contactprompt: "Onko vielä kysyttävää?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const fi = {
     about: "Meistä",
     blog: "Blogi",
     careers: "Urat",
-    support: "Tuki",
-    branddescription: "Henkilökohtainen apurisi täydellisen käytetyn auton löytämiseen juuri oikeaan aikaan.",
-    brandtitle: "Amiquus",
-    getstarted: "Aloita",
-    quicklinks: "Pikalinkit"
+    support: "Tuki"
   },
   login: {
     title: "Kirjaudu sisään tilillesi",
@@ -716,21 +518,8 @@ export const fi = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Anna kelvollinen sähköpostiosoite",
-      shortpassword: "Salasanan on oltava vähintään 6 merkkiä pitkä"
-    },
-    emaillabel: "Sähköposti",
-    errortitle: "Kirjautuminen epäonnistui",
-    genericerror: "Tarkista kirjautumistietosi ja yritä uudelleen.",
-    loggingin: "Kirjaudutaan sisään...",
-    loginbutton: "Kirjaudu sisään",
-    loginwithgoogle: "Kirjaudu sisään Google-tilillä",
-    noaccount: "Eikö sinulla ole tiliä?",
-    passwordlabel: "Salasana",
-    registerlink: "Rekisteröidy",
-    successmessage: "Olet kirjautunut sisään onnistuneesti.",
-    successtitle: "Kirjautuminen onnistui"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Luo tili",
@@ -774,33 +563,8 @@ export const fi = {
       failure: {
         title: "Rekisteröinti epäonnistui",
         desc: "Tarkista tietosi ja yritä uudelleen."
-      },
-      invalidusername: {
-        desc: "Käyttäjätunnuksen tulee olla aakkosnumeerinen ja 3–20 merkkiä pitkä",
-        title: "Virheellinen käyttäjätunnus"
-      },
-      missingfields: {
-        desc: "Täytäthän kaikki vaaditut kentät",
-        title: "Puuttuvat kentät"
-      },
-      passwordmismatch: {
-        desc: "Varmista, että salasanasi täsmäävät",
-        title: "Salasanat eivät täsmää"
-      },
-      termsnotaccepted: {
-        desc: "Sinun täytyy hyväksyä käyttöehdot ja tietosuojakäytäntö jatkaaksesi",
-        title: "Ehtoja ei hyväksytty"
       }
-    },
-    alreadyhave: "Onko sinulla jo tili?",
-    confirmpassword: "Vahvista salasana",
-    createbtn: "Luo tili",
-    firstname: "Etunimi",
-    lastname: "Sukunimi",
-    orcontinue: "Tai jatka seuraavilla",
-    privacypolicy: "Tietosuojakäytäntö",
-    termsnotice: "Hyväksyn",
-    termsofservice: "Käyttöehdot"
+    }
   },
   verifyEmail: {
     title: "Vahvista sähköpostiosoitteesi",
@@ -821,20 +585,8 @@ export const fi = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Sähköposti päivitetty",
-      entervalidemail: "Anna kelvollinen sähköpostiosoite",
-      invalidemail: "Virheellinen sähköpostiosoite",
-      sameemail: "Sama sähköposti",
-      sameemaildesc: "Uusi sähköpostiosoite on sama kuin nykyinen sähköpostiosoite."
-    },
-    codelabel: "Vahvistuskoodi",
-    footernote: "Etkö saanut koodia? Tarkista roskapostikansio.",
-    resendbutton: "Lähetä koodi uudelleen",
-    resendcountdown: "Voit lähettää koodin uudelleen {{seconds}}s kuluttua.",
-    updateemailbutton: "Päivitä sähköposti",
-    updateemaillabel: "Päivitä sähköposti",
-    verifybutton: "Vahvista sähköpostisi"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Lisää maksutapa",
@@ -845,12 +597,6 @@ export const fi = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Tapahtui odottamaton virhe",
-    errortitle: "Virhe maksutavan lisäämisessä",
-    initerror: {
-      description: "Maksun asetusten alustaminen epäonnistui",
-      title: "Virhe"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const fi = {
       methods: "Maksutavat",
       account: "Tiliasetukset",
       privacy: "Tietosuoja ja turvallisuus",
-      logout: "Kirjaudu ulos",
-      membersince: "Jäsen vuodesta"
+      logout: "Kirjaudu ulos"
     },
     account: {
       title: "Tiliasetukset",
@@ -955,14 +700,8 @@ export const fi = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Sinun täytyy aloittaa keskustelu Telegram-bottimme kanssa ja lähettää viesti saadaksesi autohälytykset. Seuraa alla olevia ohjeita ottaaksesi yhteyttä bottiin.",
-        title: "Yhteydenottobotti vaaditaan"
       }
-    },
-    basetitle: "79,99 $/kk",
-    basicplan: "Peruspaketti"
+    }
   },
   loginPrompt: {
     title: "Kirjautuminen vaaditaan",
@@ -1005,15 +744,8 @@ export const fi = {
       },
       error: {
         title: "Virhe tilauksen päivittämisessä"
-      },
-      priceerror: {
-        description: "Pysäytät ja päivität tilauksesi hinnan samanaikaisesti. Sinun täytyy joko pysäyttää tilaus tai päivittää hinta.",
-        title: "Tilausta ei voi päivittää"
       }
-    },
-    notfound: "Tilausta ei löytynyt",
-    notfoundsub: "Palaa takaisin hallintapaneeliin",
-    subtitle: "Muokkaa tilaustietojasi alla"
+    }
   },
   about: {
     title: "Tietoa Amiquusista",
@@ -1241,8 +973,7 @@ export const fi = {
           1: "Vierailemalla verkkosivustomme yhteyssivulla"
         }
       }
-    },
-    lastupdated: "Viimeksi päivitetty: 21. toukokuuta 2025"
+    }
   },
   privacy: {
     metaTitle: "Tietosuojakäytäntö | Amiquus",
@@ -1363,8 +1094,7 @@ export const fi = {
           1: "Vierailemalla verkkosivustomme yhteyssivulla"
         }
       }
-    },
-    lastupdated: "Viimeksi päivitetty: 21. toukokuuta 2025"
+    }
   },
   faqs: {
     metaTitle: "Usein kysytyt kysymykset | Amiquus",
@@ -1408,34 +1138,6 @@ export const fi = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Asetat hakukriteerisi (merkki, malli, hintahaarukka jne.)",
-          1: "Sinä valitset, mitä verkkosivustoja haluat seurata",
-          2: "Yhdistät Telegram-tilisi ilmoituksia varten",
-          3: "Järjestelmämme seuraa jatkuvasti valitsemiasi verkkosivustoja uusien ilmoitusten varalta",
-          4: "Kun sopiva auto löytyy, saat välittömästi Telegram-ilmoituksen kaikilla tiedoilla ja suoralla linkillä."
-        },
-        question: "Miten se toimii?"
-      },
-      whatis: {
-        answer: "Amiquus on palvelu, joka seuraa useita autolistauksia verkossa ja etsii ajoneuvoja, jotka vastaavat juuri sinun kriteerejäsi. Kun sopiva ilmoitus löytyy, saat välittömän ilmoituksen Telegramin kautta, jolloin voit olla ensimmäisten joukossa ottamassa yhteyttä myyjiin ja varmistamassa parhaat tarjoukset.",
-        question: "Mikä on Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Seuraamme tällä hetkellä seuraavia suuria autolistauksia tarjoavia alustoja:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "CarGurus",
-          3: "TrueCar",
-          4: "Facebook Marketplace (URL-osoitteen kautta)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Lisäämme jatkuvasti uusia alustoja tarjotaksemme mahdollisimman kattavan palvelun.",
-        question: "Mitä autolistauksia seuraavia sivustoja seuraat?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const fi = {
           2: "Valitse \"Tilaukset\"-välilehti",
           3: "Napsauta \"Peru tilaus\" -painiketta sen tilauksen vieressä, jonka haluat peruuttaa."
         },
-        note: "Tilauksesi pysyy aktiivisena nykyisen laskutuskauden loppuun asti.",
-        stepsintro: "Voit peruuttaa tilauksesi milloin tahansa oman tiliprofiilisi sivulta:"
+        note: "Tilauksesi pysyy aktiivisena nykyisen laskutuskauden loppuun asti."
       },
       multiple: {
         question: "Voinko ottaa useita tilauksia eri automalleille?",
@@ -1488,8 +1189,7 @@ export const fi = {
           4: "Syötä bottisi token ja chat-tunnus AMIQUUS-tilauksesi asetuksiin",
           5: "Testaa ilmoitusasetuksesi `Lähetä testiviesti` -painikkeella"
         },
-        note: "Yksityiskohtaiset vaiheittaiset ohjeet kuvakaappauksin ovat saatavilla tilauksen asennusprosessin aikana.",
-        stepsintro: "Telegram-ilmoitusten käyttöönotto:"
+        note: "Yksityiskohtaiset vaiheittaiset ohjeet kuvakaappauksin ovat saatavilla tilauksen asennusprosessin aikana."
       },
       frequency: {
         question: "Kuinka usein saan ilmoituksia?",
@@ -1561,19 +1261,7 @@ export const fi = {
         description: "Käytämme tätä sähköpostiosoitetta ilmoittaaksemme sinulle, kun paikka vapautuu."
       },
       submit: "Liity jonotuslistalle",
-      submitting: "Lähetetään...",
-      firstname: {
-        label: "Etunimi",
-        placeholder: "Juhani, tässä ohjeet"
-      },
-      lastname: {
-        label: "Sukunimi",
-        placeholder: "Valkohäntä"
-      }
-    },
-    cantjoin: {
-      description: "Ilmoitamme sinulle heti, kun tilauspaikka vapautuu.",
-      title: "Liity jonotuslistalle"
+      submitting: "Lähetetään..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const fi = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Lähetä meille sähköpostia, niin vastaamme sinulle 24 tunnin kuluessa.",
-      email: "support@amiquus.com",
-      title: "Sähköpostituki"
-    },
-    faqheading: "Usein kysytyt kysymykset",
-    stillneedhelp: {
-      button: "Ota yhteyttä tukeen",
-      description: "Jos et löytänyt vastausta kysymykseesi, voit aina ottaa yhteyttä tukitiimiimme. Olemme täällä auttamassa!",
-      heading: "Tarvitsetko vielä apua?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const fi = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Peruuta",
-    confirmremove: "Poista kortti",
-    default: "Oletus",
-    expires: "Vanhenee",
-    remove: "Poista",
-    removedescription: "Haluatko varmasti poistaa {{brand}}-korttisi, jonka numero päättyy {{last4}}?",
-    removetitle: "Poista maksutapa",
-    removewarning: "Tämä on oletusmaksutapasi, ja sen poistaminen voi vaikuttaa aktiivisiin tilauksiisi.",
-    setasdefault: "Aseta oletukseksi",
-    setdefaultdescription: "Haluatko asettaa {{brand}}-kortin, jonka numero päättyy {{last4}}, oletusmaksutavaksi? Tätä korttia käytetään kaikkiin tuleviin tilausmaksuihin.",
-    setdefaulttitle: "Aseta oletusmaksutapa"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Peruuta hälytys",
-    canceldescription: "Haluatko varmasti peruuttaa autohälytyksen mallille {{brand}} {{model}}? Tämä lopettaa kaikki ilmoitukset, ja jos haluat seurata tätä autoa uudelleen, sinun täytyy luoda uusi hälytys.",
-    canceltitle: "Peru auton hälytys",
-    confirmcancel: "Peruuta hälytys",
-    edit: "Muokkaa",
-    keepmyalert: "Pidä hälytykseni",
-    language: "Kieli",
-    price: "Hinta",
-    pricerange: "Hinta",
-    updates: "Päivitykset",
-    websites: "Verkkosivut",
-    years: "Vuodet"
-  },
-  signUp: {
-    cta: "Saat hälytykset nyt",
-    heading: "Luo autohälytys",
-    subheading: "Luo henkilökohtaiset ilmoitukset autolistauksista helposti muutamassa vaiheessa.",
-    toast: {
-      error: {
-        description: "Emme voineet luoda tilaustasi. Yritä myöhemmin uudelleen.",
-        title: "Tilauksen tekeminen epäonnistui"
-      },
-      success: {
-        description: "Tilauksesi on luotu onnistuneesti",
-        title: "Tilaus luotu"
-      }
-    },
-    waitlist: {
-      cta: "Liity jonotuslistalle",
-      message: "Olemme tällä hetkellä täynnä. Liity jonotuslistalle, niin saat ilmoituksen, kun paikka vapautuu."
     }
   }
 };

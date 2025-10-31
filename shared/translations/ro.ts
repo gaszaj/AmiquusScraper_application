@@ -24,16 +24,10 @@ export const ro = {
     button1: "Configurează-ți alertele",
     button2: "Vezi cum funcționează",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Anulează oricând",
-      nosetup: "Nu este necesară configurarea",
+      websites: "15+ site-uri urmărite",
       realtime: "Alerte în timp real",
-      websites: "Peste 15 site-uri monitorizate"
+      noSetup: "Nu necesită configurare",
+      cancelAnytime: "Anulează oricând"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const ro = {
     heading: "De ce să alegi AMIQUUS?",
     subheading: "Economisește timp și nu rata niciodată mașina perfectă cu serviciul nostru automatizat de monitorizare.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Urmărire multi-site",
+      description: "Monitorizați simultan mai multe site-uri de anunțuri auto fără a fi nevoie să verificați fiecare manual."
     },
     notifications: {
       title: "Notificări instant",
@@ -73,61 +67,12 @@ export const ro = {
       description: "Alege cât de des verificăm noile anunțuri, de la actualizări la oră până la monitorizare în timp real."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Suport pentru mai multe limbi",
+      description: "Primiți notificări în limba preferată pentru o înțelegere mai ușoară a anunțurilor."
     },
     account: {
       title: "Administrare ușoară a contului",
       description: "Gestionează mai multe profiluri de căutare și modifică setările abonamentului cu doar câteva clicuri."
-    },
-    multisite: {
-      description: "Monitorizează simultan mai multe site-uri cu anunțuri auto, fără să fie nevoie să le verifici manual pe fiecare în parte.",
-      title: "Monitorizare pe mai multe site-uri"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const ro = {
         description: "Primește alerte imediat ce apare o mașină care corespunde criteriilor tale pe oricare dintre site-urile monitorizate de noi."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Găsește-ți mașina perfectă",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Fii primul care află despre noile oferte și asigură-ți cele mai bune prețuri înaintea tuturor.",
-        title: "Găsește-ți mașina perfectă"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const ro = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW Seria 3, 2019, $32,500 - Tocmai a fost listat pe AutoTrader",
-      title: "A fost găsită o potrivire nouă!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 30.000 mile - Preț redus cu 2.000 $",
-      title: "Alertă Telegram"
-    },
-    setalerts: "Configurează-ți alertele",
-    whytitle: "De ce să alegi AMIQUUS?"
+    }
   },
   pricing: {
     title: "Prețuri simple și transparente",
@@ -218,17 +149,7 @@ export const ro = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Începe acum",
-    addonstitle: "Suplimente:",
-    basetitle: "Pachet de bază: 79,99 $/lună",
-    footernote: "Toate abonamentele includ configurații nelimitate de căutare și administrare ușoară a subscripției.",
-    includedfeatures: {
-      0: "Monitorizarea unui site web",
-      1: "Actualizări la oră",
-      2: "Filtre nelimitate",
-      3: "Notificări pe Telegram"
-    },
-    includedtitle: "Ce este inclus:"
+    button: "Începe acum"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const ro = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Marca automobilului este obligatorie",
-      carmodel: "Modelul automobilului este obligatoriu",
-      facebookmarketplaceurl: "URL-ul pentru Facebook Marketplace este necesar atunci când este selectat Facebook",
-      fueltype: "Tipul de combustibil este obligatoriu",
-      maxkilometers: "Numărul maxim de kilometri trebuie să fie un număr",
-      notificationlanguage: "Limba notificării este obligatorie.",
-      pricemax: "Prețul maxim trebuie să fie un număr",
-      pricemin: "Prețul minim trebuie să fie un număr",
-      telegramchatid: "ID-ul chatului Telegram este obligatoriu",
-      telegramtoken: "Este necesar un token pentru botul Telegram",
-      telegramusername: "Numele de utilizator Telegram este obligatoriu",
-      websitesselected: "Trebuie selectat cel puțin un site web",
-      yearmax: "Anul maxim trebuie să fie un an valid.",
-      yearmin: "Anul minim trebuie să fie un an valid"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const ro = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Adresă de email",
-      firstname: "Prenume",
-      lastname: "Nume de familie"
+      email: "Adresă de email"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Ion",
-      lastname: "Cerb"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Vă rugăm să introduceți un email valid",
-      firstname: "Prenumele este obligatoriu",
-      lastname: "Numele de familie este obligatoriu"
+      email: "Vă rugăm să introduceți un email valid"
     },
     actions: {
       login: "Autentifică-te sau înregistrează-te pentru a continua",
@@ -332,9 +233,7 @@ export const ro = {
     labels: {
       websites: "Site-uri de monitorizat",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Frecvența actualizărilor"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Selectează frecvența"
@@ -344,16 +243,11 @@ export const ro = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Inserează aici URL-ul rezultatelor căutării tale pe Facebook Marketplace.",
-      updatefrequency: "Cât de des ar trebui să verificăm noile anunțuri? Frecvențe mai mari pot implica costuri suplimentare.",
-      videodesc: "Urmărește videoclipul de mai jos pentru instrucțiuni pas cu pas.",
-      videotitle: "Ai nevoie de ajutor pentru a găsi linkul de căutare pe Facebook Marketplace?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Trebuie selectat cel puțin un site web",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL-ul Facebook Marketplace este necesar atunci când este selectat Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Anterior",
@@ -371,15 +265,7 @@ export const ro = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Marcă automobil",
-      carmodel: "Model automobil",
-      fueltype: "Tip combustibil",
-      maxkilometers: "Kilometri maximi",
-      pricemax: "Preț maxim",
-      pricemin: "Preț minim",
-      yearmax: "Anul maxim",
-      yearmin: "Anul minim"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const ro = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Selectează marca automobilului",
-      carmodel: "Selectează modelul automobilului",
-      carmodeldisabled: "Selectează mai întâi marca automobilului",
-      fueltype: "Selectează tipul de combustibil",
-      maxkilometers: "Introduceți numărul maxim de kilometri",
-      pricemax: "Introduceți prețul maxim",
-      pricemin: "Introduceți prețul minim",
-      yearmax: "Introduceți anul maxim",
-      yearmin: "Introduceți anul minim"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nu sunt modele disponibile"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const ro = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Marca automobilului este obligatorie",
-      carmodel: "Modelul automobilului este obligatoriu",
-      fueltype: "Tipul de combustibil este obligatoriu",
-      maxkilometers: "Numărul maxim de kilometri trebuie să fie un număr",
-      pricemax: "Prețul maxim trebuie să fie un număr",
-      pricemin: "Prețul minim trebuie să fie un număr",
-      yearmax: "Anul maxim trebuie să fie un an valid",
-      yearmin: "Anul minim trebuie să fie un an valid"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Anterior",
@@ -444,17 +312,7 @@ export const ro = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Deschide Telegram și caută @BotFather",
-      botstep2: "Trimite comanda /newbot",
-      botstep3: "Urmează instrucțiunile pentru a crea un bot",
-      botstep4: "Copiază tokenul furnizat de BotFather",
-      bottitle: "Cum obții un token pentru botul Telegram:",
-      chatstep1: "Deschide Telegram și caută @userinfobot",
-      chatstep2: "Trimite orice mesaj botului",
-      chatstep3: "Botul vă va răspunde cu informațiile dvs., inclusiv ID-ul dvs. de Chat",
-      chatstep4: "Copiază ID-ul chatului (este un număr)",
-      chattitle: "Cum să obții ID-ul Chatului tău Telegram:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const ro = {
       token: "Token Bot Telegram",
       chatId: "Your Telegram Chat ID",
       language: "Limba notificărilor",
-      username: "Nume de utilizator Telegram",
-      chatid: "ID-ul chatului tău Telegram"
+      username: "Nume de utilizator Telegram"
     },
     placeholders: {
       token: "Introduce tokenul botului de la BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Selectează limba mesajului Telegram",
-      username: "Introduceți numele de utilizator Telegram",
-      chatid: "Introduceți ID-ul dvs. de chat Telegram"
+      username: "Introduceți numele de utilizator Telegram"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Exemplu: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Poți obține acest lucru scriind un mesaj la @userinfobot pe Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const ro = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const ro = {
       token: "Este necesar tokenul pentru botul Telegram",
       chatId: "Telegram chat ID is required",
       language: "Limba notificării este obligatorie.",
-      username: "Numele de utilizator Telegram este obligatoriu",
-      chatid: "ID-ul chatului Telegram este obligatoriu"
+      username: "Numele de utilizator Telegram este obligatoriu"
     },
     actions: {
       previous: "Anterior",
@@ -544,47 +398,7 @@ export const ro = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Exemplu: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Token Bot Telegram",
-    bottokenplaceholder: "Introdu tokenul botului de la BotFather",
-    caralerttitle: "🚗 Alertă nouă mașină!",
-    chatiddescription: "Poți obține acest lucru trimițând un mesaj la @userinfobot pe Telegram.",
-    chatidlabel: "ID-ul tău de chat Telegram",
-    chatidplaceholder: "Introduceți ID-ul dvs. de chat Telegram",
-    chatidsteps: {
-      0: "Deschide Telegram și caută „userinfobot”",
-      1: "Trimite orice mesaj botului",
-      2: "Botul îți va răspunde cu informațiile tale, inclusiv Chat ID-ul tău.",
-      3: "Copiază ID-ul tău de chat"
-    },
-    chatidtitle: "Cum să obții ID-ul chatului tău Telegram:",
-    confirmcontact: "Am început o conversație cu botul și am trimis un mesaj.",
-    contactbotinstruction: "Pornește o conversație cu botul nostru de Telegram făcând clic pe linkul de mai jos și trimițându-i un mesaj:",
-    contactbotnote: "Acest lucru este necesar pentru a primi alerte despre mașini. Dacă ești pe desktop, poți scana codul QR.",
-    helpdescription: "Urmărește videoclipul de mai jos pentru un ghid pas cu pas.",
-    helptitle: "Ai nevoie de ajutor pentru configurarea Tokenului Bot Telegram și a Chat ID-ului?",
-    kilometreslabel: "Kilometri: {{kms}}",
-    languagelabel: "Limba notificărilor",
-    languageplaceholder: "Selectează limba mesajului Telegram",
-    locationlabel: "Locație: {{location}}",
-    previewtitle: "Previzualizează notificările Telegram",
-    pricelabel: "Preț: {{price}}",
-    setupsteps: {
-      0: "Deschide Telegram și caută „BotFather”",
-      1: "Începe un chat cu BotFather făcând clic pe „Start”",
-      2: "Tastează /newbot și urmează instrucțiunile pentru a crea un bot nou",
-      3: "Alege un nume pentru botul tău",
-      4: "Alege un nume de utilizator pentru botul tău (trebuie să se termine cu „bot”)",
-      5: "Copiază tokenul API furnizat de BotFather",
-      6: "Trimite un mesaj noului tău bot pentru a activa chatul"
-    },
-    setuptitle: "Instrucțiuni de configurare:",
-    subheading: "Configurează-ți botul Telegram",
-    usernamedescription: "Acesta este numele de utilizator de pe contul tău Telegram (fără simbolul @).",
-    videodescription: "Urmărește videoclipul de mai jos pentru un ghid pas cu pas.",
-    videoprompt: "Ai nevoie de ajutor pentru configurarea Tokenului Bot Telegram și a Chat ID-ului?",
-    viewlisting: "Vezi anunțul →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Revizuiește abonamentul tău",
@@ -598,9 +412,7 @@ export const ro = {
       title: "Setări de monitorizare",
       websites: "Site-uri web",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook",
-      updatefrequency: "Frecvența actualizărilor"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Specificații automobil",
@@ -609,9 +421,7 @@ export const ro = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Autonomie (km)",
-      price: "Interval de prețuri (€)",
-      fueltype: "Tip combustibil",
-      yearrange: "Interval de ani"
+      price: "Interval de prețuri (€)"
     },
     notification: {
       title: "Setări notificări",
@@ -623,9 +433,7 @@ export const ro = {
       base: "Abonament de bază",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Lunar)",
-      extrawebsites: "Site-uri web suplimentare",
-      frequencyupgrade: "Actualizare frecvență"
+      total: "Total (Lunar)"
     },
     terms: {
       checkbox: "Sunt de acord cu",
@@ -669,9 +477,7 @@ export const ro = {
         answer: "Poți anula abonamentul oricând din panoul de control al contului tău. Mergi la secțiunea „Abonamente”, selectează abonamentul pe care vrei să-l anulezi și apasă pe butonul „Anulează abonamentul”. Serviciul tău va rămâne activ până la sfârșitul perioadei curente de facturare.",
         question: "Cum îmi pot anula abonamentul?"
       }
-    },
-    contactlink: "Contactați echipa noastră de asistență",
-    contactprompt: "Mai ai întrebări?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const ro = {
     about: "Despre noi",
     blog: "Blog",
     careers: "Cariere",
-    support: "Suport",
-    branddescription: "Asistentul tău personal pentru a găsi cea mai bună ofertă la mașini rulate, la momentul potrivit.",
-    brandtitle: "Amiquus",
-    getstarted: "Începe",
-    quicklinks: "Linkuri rapide"
+    support: "Suport"
   },
   login: {
     title: "Autentifică-te în contul tău",
@@ -716,21 +518,8 @@ export const ro = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Vă rugăm să introduceți o adresă de email validă",
-      shortpassword: "Parola trebuie să aibă cel puțin 6 caractere"
-    },
-    emaillabel: "E-mail",
-    errortitle: "Autentificarea a eșuat",
-    genericerror: "Vă rugăm să verificați datele de autentificare și să încercați din nou.",
-    loggingin: "Autentificare...",
-    loginbutton: "Autentificare",
-    loginwithgoogle: "Autentifică-te cu Google",
-    noaccount: "Nu ai un cont?",
-    passwordlabel: "Parolă",
-    registerlink: "Înregistrează-te",
-    successmessage: "Ați fost autentificat cu succes.",
-    successtitle: "Autentificare reușită"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Creează un cont",
@@ -774,33 +563,8 @@ export const ro = {
       failure: {
         title: "Înregistrarea a eșuat",
         desc: "Vă rugăm să verificați informațiile și să încercați din nou."
-      },
-      invalidusername: {
-        desc: "Numele de utilizator trebuie să fie alfanumeric și să conțină între 3 și 20 de caractere.",
-        title: "Nume de utilizator invalid"
-      },
-      missingfields: {
-        desc: "Vă rugăm să completați toate câmpurile obligatorii",
-        title: "Câmpuri lipsă"
-      },
-      passwordmismatch: {
-        desc: "Vă rugăm să vă asigurați că parolele coincid",
-        title: "Parolele nu coincid"
-      },
-      termsnotaccepted: {
-        desc: "Trebuie să accepți termenii și politica de confidențialitate pentru a continua.",
-        title: "Termenii nu au fost acceptați"
       }
-    },
-    alreadyhave: "Ai deja un cont?",
-    confirmpassword: "Confirmă parola",
-    createbtn: "Creează cont",
-    firstname: "Prenume",
-    lastname: "Nume de familie",
-    orcontinue: "Sau continuă cu",
-    privacypolicy: "Politica de confidențialitate",
-    termsnotice: "Sunt de acord cu",
-    termsofservice: "Termeni și condiții"
+    }
   },
   verifyEmail: {
     title: "Verifică-ți adresa de email",
@@ -821,20 +585,8 @@ export const ro = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Email actualizat",
-      entervalidemail: "Vă rugăm să introduceți o adresă de email validă",
-      invalidemail: "Email invalid",
-      sameemail: "Același e-mail",
-      sameemaildesc: "Noul e-mail este același ca e-mailul actual."
-    },
-    codelabel: "Cod de verificare",
-    footernote: "Nu ai primit codul? Verifică folderul de spam.",
-    resendbutton: "Retrimite codul",
-    resendcountdown: "Poți retrimite codul în {{seconds}}s",
-    updateemailbutton: "Actualizează e-mailul",
-    updateemaillabel: "Actualizează e-mailul",
-    verifybutton: "Verifică emailul"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Adaugă metodă de plată",
@@ -845,12 +597,6 @@ export const ro = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "A apărut o eroare neașteptată",
-    errortitle: "Eroare la adăugarea metodei de plată",
-    initerror: {
-      description: "Nu se poate inițializa configurarea plății",
-      title: "Eroare"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const ro = {
       methods: "Metode de plată",
       account: "Setări cont",
       privacy: "Confidențialitate și securitate",
-      logout: "Deconectare",
-      membersince: "Membru din"
+      logout: "Deconectare"
     },
     account: {
       title: "Setări cont",
@@ -955,14 +700,8 @@ export const ro = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Pentru a primi alerte despre mașini, trebuie să începi o conversație cu botul nostru de Telegram și să trimiți un mesaj. Te rugăm să urmezi instrucțiunile de mai jos pentru a contacta botul.",
-        title: "Este necesar un bot de contact"
       }
-    },
-    basetitle: "79,99 $/lună",
-    basicplan: "Plan de bază"
+    }
   },
   loginPrompt: {
     title: "Autentificare necesară",
@@ -1005,15 +744,8 @@ export const ro = {
       },
       error: {
         title: "Eroare la actualizarea abonamentului"
-      },
-      priceerror: {
-        description: "Nu poți pune pe pauză și actualiza prețul abonamentului în același timp. Trebuie fie să pui pe pauză, fie să actualizezi prețul.",
-        title: "Nu se poate actualiza abonamentul"
       }
-    },
-    notfound: "Abonamentul nu a fost găsit",
-    notfoundsub: "Înapoi la panoul de control",
-    subtitle: "Editează detaliile abonamentului tău mai jos"
+    }
   },
   about: {
     title: "Despre AMIQUUS",
@@ -1241,8 +973,7 @@ export const ro = {
           1: "Accesând pagina de contact de pe site-ul nostru"
         }
       }
-    },
-    lastupdated: "Ultima actualizare: 21 mai 2025"
+    }
   },
   privacy: {
     metaTitle: "Politica de confidențialitate | Amiquus",
@@ -1363,8 +1094,7 @@ export const ro = {
           1: "Accesând pagina de contact de pe site-ul nostru"
         }
       }
-    },
-    lastupdated: "Ultima actualizare: 21 mai 2025"
+    }
   },
   faqs: {
     metaTitle: "Întrebări frecvente | Amiquus",
@@ -1408,34 +1138,6 @@ export const ro = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Setezi criteriile de căutare (marca, modelul, intervalul de preț etc.)",
-          1: "Tu alegi ce site-uri vrei să monitorizezi",
-          2: "Conectezi contul tău de Telegram pentru notificări",
-          3: "Sistemul nostru monitorizează continuu site-urile selectate de tine pentru anunțuri noi",
-          4: "Când apare o mașină potrivită, primești imediat o notificare pe Telegram cu toate detaliile și un link direct."
-        },
-        question: "Cum funcționează?"
-      },
-      whatis: {
-        answer: "AMIQUUS este un serviciu care monitorizează mai multe site-uri cu anunțuri auto pentru a găsi vehicule care corespund criteriilor tale specifice. Când apare un anunț potrivit, primești imediat o notificare prin Telegram, astfel încât să fii printre primii care contactează vânzătorii și să prinzi cele mai bune oferte.",
-        question: "Ce este AMIQUUS?"
-      },
-      whichwebsites: {
-        answerintro: "Monitorizăm în prezent următoarele platforme principale de anunțuri auto:",
-        list: {
-          0: "AutoTrader",
-          1: "AMIQUUS",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (prin URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Adăugăm mereu noi platforme pentru a oferi cea mai completă acoperire posibilă.",
-        question: "Pe care site-uri de anunțuri auto monitorizați?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const ro = {
           2: "Selectați fila „Abonamente”",
           3: "Apasă butonul „Anulează abonamentul” de lângă abonamentul pe care vrei să-l anulezi."
         },
-        note: "Abonamentul tău va rămâne activ până la sfârșitul perioadei tale curente de facturare.",
-        stepsintro: "Îți poți anula abonamentul oricând din pagina de profil a contului tău:"
+        note: "Abonamentul tău va rămâne activ până la sfârșitul perioadei tale curente de facturare."
       },
       multiple: {
         question: "Pot avea mai multe abonamente pentru diferite modele de mașini?",
@@ -1488,8 +1189,7 @@ export const ro = {
           4: "Introdu tokenul botului și ID-ul chatului în setările abonamentului AMIQUUS.",
           5: "Testează-ți setările de notificare folosind butonul `Trimite mesaj de test`"
         },
-        note: "Instrucțiuni detaliate pas cu pas, cu capturi de ecran, sunt oferite pe parcursul configurării abonamentului.",
-        stepsintro: "Pentru a activa notificările Telegram:"
+        note: "Instrucțiuni detaliate pas cu pas, cu capturi de ecran, sunt oferite pe parcursul configurării abonamentului."
       },
       frequency: {
         question: "Cât de des voi primi notificări?",
@@ -1561,19 +1261,7 @@ export const ro = {
         description: "Vom folosi acest e-mail ca să vă anunțăm când va fi disponibil un loc."
       },
       submit: "Înscrie-te pe lista de așteptare",
-      submitting: "Se trimite...",
-      firstname: {
-        label: "Prenume",
-        placeholder: "Ion"
-      },
-      lastname: {
-        label: "Nume de familie",
-        placeholder: "Cerb"
-      }
-    },
-    cantjoin: {
-      description: "Te vom anunța imediat ce va fi disponibil un loc pentru abonament.",
-      title: "Înscrie-te pe lista de așteptare"
+      submitting: "Se trimite..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const ro = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Trimiteți-ne un e-mail și vă vom răspunde în decurs de 24 de ore.",
-      email: "support@amiquus.com",
-      title: "Asistență prin e-mail"
-    },
-    faqheading: "Întrebări frecvente",
-    stillneedhelp: {
-      button: "Contactează suportul",
-      description: "Dacă nu ai găsit răspunsul la întrebarea ta, nu ezita să contactezi echipa noastră de suport. Suntem aici să te ajutăm!",
-      heading: "Mai ai nevoie de ajutor?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const ro = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Anulează",
-    confirmremove: "Șterge cardul",
-    default: "Implicit",
-    expires: "Expiră",
-    remove: "Elimină",
-    removedescription: "Ești sigur că vrei să ștergi cardul tău {{brand}} care se termină cu {{last4}}?",
-    removetitle: "Elimină metoda de plată",
-    removewarning: "Aceasta este metoda ta principală de plată, iar eliminarea ei poate afecta abonamentele tale active.",
-    setasdefault: "Setează ca implicit",
-    setdefaultdescription: "Doriți să setați cardul {{brand}} cu terminația {{last4}} ca metodă principală de plată? Acest card va fi folosit pentru toate plățile viitoare ale abonamentului.",
-    setdefaulttitle: "Setează metoda de plată implicită"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Anulează alerta",
-    canceldescription: "Ești sigur că vrei să anulezi alerta pentru mașina {{brand}} {{model}}? Toate notificările vor fi oprite și va trebui să setezi o alertă nouă dacă vrei să monitorizezi din nou această mașină.",
-    canceltitle: "Anulează alerta pentru mașină",
-    confirmcancel: "Anulează alerta",
-    edit: "Editează",
-    keepmyalert: "Păstrează alerta mea",
-    language: "Limbă",
-    price: "Preț",
-    pricerange: "Preț",
-    updates: "Noutăți",
-    websites: "Site-uri web",
-    years: "Ani"
-  },
-  signUp: {
-    cta: "Primește alerte acum",
-    heading: "Creează alerta ta pentru mașină",
-    subheading: "Configurează-ți notificările personalizate pentru anunțurile auto în doar câțiva pași.",
-    toast: {
-      error: {
-        description: "Nu am putut crea abonamentul tău. Te rugăm să încerci din nou mai târziu.",
-        title: "Abonarea a eșuat"
-      },
-      success: {
-        description: "Abonamentul tău a fost creat cu succes",
-        title: "Abonament creat"
-      }
-    },
-    waitlist: {
-      cta: "Înscrie-te pe lista de așteptare",
-      message: "Momentan suntem la capacitate maximă. Vă rugăm să vă înscrieți pe lista de așteptare pentru a fi anunțat(ă) când se eliberează un loc."
     }
   }
 };

@@ -24,16 +24,10 @@ export const sq = {
     button1: "Vendosni njoftimet tuaja",
     button2: "Shiko si funksionon",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Anulo kur të duash",
-      nosetup: "Nuk kërkohet konfigurim",
-      realtime: "Njoftime në kohë reale",
-      websites: "Mbi 15 faqe interneti të monitoruara"
+      websites: "15+ faqe interneti gjurmohen",
+      realtime: "Paralajmërime në kohë reale",
+      noSetup: "Nuk kërkohet konfigurimi",
+      cancelAnytime: "Anuloni në çdo kohë"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const sq = {
     heading: "Pse të zgjedhësh Amiquus?",
     subheading: "Kurseni kohë dhe mos humbisni kurrë makinën tuaj të përsosur me shërbimin tonë të automatizuar të ndjekjes.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Gjurmimi i shumë faqeve",
+      description: "Monitoroni njëkohësisht shumë faqe të reklamave të makinave pa pasur nevojë të kontrolloni secilën manualisht."
     },
     notifications: {
       title: "Njoftime të çastit",
@@ -73,61 +67,12 @@ export const sq = {
       description: "Zgjidh sa shpesh të kontrollojmë për njoftime të reja, nga përditësimet çdo orë deri te monitorimi në kohë reale."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Mbështetje për shumë gjuhë",
+      description: "Merrni njoftime në gjuhën tuaj të preferuar për një kuptim më të lehtë të reklamave."
     },
     account: {
       title: "Menaxhim i lehtë i llogarisë",
       description: "Menaxho profile të shumta kërkimi dhe ndrysho cilësimet e abonimit me disa klikime."
-    },
-    multisite: {
-      description: "Monitoroni disa faqe interneti me njoftime për makina njëkohësisht, pa pasur nevojë t’i kontrolloni secilën manualisht.",
-      title: "Ndjekja në disa faqe"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const sq = {
         description: "Merrni njoftime sapo të shfaqet një makinë që i përshtatet kritereve tuaja në cilëndo nga faqet tona të monitoruara."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Gjeni makinën tuaj të përsosur",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Jini të parët që merrni njoftime për listimet e reja dhe siguroni ofertat më të mira para të gjithëve të tjerëve.",
-        title: "Gjej makinën tënde perfekte"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const sq = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW Seria 3, 2019, $32,500 - Sapo u listua në AutoTrader",
-      title: "U gjet një ndeshje e re!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 48.000 km - Çmimi u ul me 2.000 $",
-      title: "Telegram njoftim"
-    },
-    setalerts: "Vendosni njoftimet tuaja",
-    whytitle: "Pse të zgjedhësh AMIQUUS?"
+    }
   },
   pricing: {
     title: "E thjeshtë, çmime të qarta",
@@ -218,17 +149,7 @@ export const sq = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Fillo Tani",
-    addonstitle: "Shtesat:",
-    basetitle: "Paketa Bazë: 79,99 $/muaj",
-    footernote: "Të gjitha planet përfshijnë konfigurime të pakufizuara kërkimi dhe menaxhim të lehtë të abonimit.",
-    includedfeatures: {
-      0: "Monitorim i vetëm i faqes së internetit",
-      1: "Përditësime çdo orë",
-      2: "Filtra të pakufizuar",
-      3: "Njoftime në Telegram"
-    },
-    includedtitle: "Çfarë përfshihet:"
+    button: "Fillo Tani"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const sq = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Marka e makinës është e detyrueshme",
-      carmodel: "Modeli i makinës është i detyrueshëm",
-      facebookmarketplaceurl: "URL-ja e Facebook Marketplace është e nevojshme kur zgjidhet Facebook",
-      fueltype: "Lloji i karburantit është i detyrueshëm",
-      maxkilometers: "Kilometrat maksimale duhet të jenë një numër",
-      notificationlanguage: "Gjuha e njoftimit është e detyrueshme",
-      pricemax: "Çmimi maksimal duhet të jetë një numër",
-      pricemin: "Çmimi minimal duhet të jetë një numër",
-      telegramchatid: "Kërkohet ID-ja e bisedës në Telegram",
-      telegramtoken: "Kërkohet token-i i botit të Telegram-it",
-      telegramusername: "Emri i përdoruesit në Telegram është i detyrueshëm",
-      websitesselected: "Duhet të zgjidhet të paktën një faqe interneti",
-      yearmax: "Viti maksimal duhet të jetë një vit i vlefshëm",
-      yearmin: "Viti minimal duhet të jetë një vit i vlefshëm"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const sq = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Adresa e email-it",
-      firstname: "Emri",
-      lastname: "Mbiemër"
+      email: "Adresa e email-it"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Gjon",
-      lastname: "Duka"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Ju lutem, shkruani një email të vlefshëm",
-      firstname: "Emri është i detyrueshëm",
-      lastname: "Mbiemri është i detyrueshëm"
+      email: "Ju lutem, shkruani një email të vlefshëm"
     },
     actions: {
       login: "Hyni ose regjistrohuni për të vazhduar",
@@ -332,9 +233,7 @@ export const sq = {
     labels: {
       websites: "Faqet për monitorim",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL e Facebook Marketplace",
-      updatefrequency: "Frekuenca e Përditësimeve"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Zgjidhni shpeshtësinë"
@@ -344,16 +243,11 @@ export const sq = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Ngjit këtu URL-në e rezultateve të kërkimit tënd në Facebook Marketplace.",
-      updatefrequency: "Sa shpesh duhet të kontrollojmë për njoftime të reja? Frekuenca më të larta mund të kenë kosto më të lartë.",
-      videodesc: "Shikoni videon më poshtë për udhëzime hap pas hapi.",
-      videotitle: "Keni nevojë për ndihmë për të gjetur linkun tuaj të kërkimit në Facebook Marketplace?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Duhet të zgjidhet të paktën një faqe interneti",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL i Facebook Marketplace është i detyrueshëm kur zgjidhet Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "E mëparshme",
@@ -371,15 +265,7 @@ export const sq = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Marka e makinës",
-      carmodel: "Modeli i makinës",
-      fueltype: "Lloji i karburantit",
-      maxkilometers: "Kilometra maksimale",
-      pricemax: "Çmimi maksimal",
-      pricemin: "Çmimi Minimal",
-      yearmax: "Viti Maksimal",
-      yearmin: "Viti Minimal"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const sq = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Zgjidh markën e makinës",
-      carmodel: "Zgjidh modelin e makinës",
-      carmodeldisabled: "Zgjidh fillimisht markën e makinës",
-      fueltype: "Zgjidh llojin e karburantit",
-      maxkilometers: "Shkruani numrin maksimal të kilometrave",
-      pricemax: "Vendos çmimin maksimal",
-      pricemin: "Shkruani çmimin minimal",
-      yearmax: "Shkruani vitin maksimal",
-      yearmin: "Shkruani vitin minimal"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nuk ka modele të disponueshme"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const sq = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Marka e makinës është e detyrueshme",
-      carmodel: "Modeli i makinës është i detyrueshëm",
-      fueltype: "Lloji i karburantit është i detyrueshëm",
-      maxkilometers: "Kilometrat maksimale duhet të jenë një numër",
-      pricemax: "Çmimi maksimal duhet të jetë një numër",
-      pricemin: "Çmimi minimal duhet të jetë një numër",
-      yearmax: "Viti maksimal duhet të jetë një vit i vlefshëm",
-      yearmin: "Viti minimal duhet të jetë një vit i vlefshëm"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "E mëparshme",
@@ -444,17 +312,7 @@ export const sq = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Hapni Telegram dhe kërkoni @BotFather",
-      botstep2: "Dërgo komandën /newbot",
-      botstep3: "Ndiq udhëzimet për të krijuar një bot",
-      botstep4: "Kopjoni tokenin e dhënë nga BotFather",
-      bottitle: "Si të marrësh një Token për Telegram Bot-in:",
-      chatstep1: "Hapni Telegram dhe kërkoni @userinfobot",
-      chatstep2: "Dërgo çdo mesazh te boti",
-      chatstep3: "Boti do të përgjigjet me informacionin tuaj, duke përfshirë edhe Chat ID-në tuaj",
-      chatstep4: "Kopjoni ID-në e bisedës (është një numër)",
-      chattitle: "Si të marrësh ID-në e Chat-it tënd në Telegram:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const sq = {
       token: "Tokeni i Botit Telegram",
       chatId: "Your Telegram Chat ID",
       language: "Gjuha e njoftimeve",
-      username: "Emri i përdoruesit në Telegram",
-      chatid: "ID-ja juaj e bisedës në Telegram"
+      username: "Emri i përdoruesit në Telegram"
     },
     placeholders: {
       token: "Shkruani tokenin e botit nga BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Zgjidh gjuhën e mesazhit në Telegram",
-      username: "Shkruani emrin tuaj të përdoruesit në Telegram",
-      chatid: "Shkruani ID-në tuaj të bisedës në Telegram"
+      username: "Shkruani emrin tuaj të përdoruesit në Telegram"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Shembull: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Mund ta merrni këtë duke i dërguar mesazh @userinfobot në Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const sq = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const sq = {
       token: "Kërkohet token-i i botit të Telegram-it",
       chatId: "Telegram chat ID is required",
       language: "Gjuha e njoftimit është e detyrueshme",
-      username: "Emri i përdoruesit në Telegram është i detyrueshëm",
-      chatid: "ID-ja e bisedës në Telegram është e detyrueshme"
+      username: "Emri i përdoruesit në Telegram është i detyrueshëm"
     },
     actions: {
       previous: "E mëparshme",
@@ -544,47 +398,7 @@ export const sq = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Shembull: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Tokeni i Botit Telegram",
-    bottokenplaceholder: "Shkruani tokenin e botit nga BotFather",
-    caralerttitle: "🚗 Njoftim për makinë të re!",
-    chatiddescription: "Mund ta merrni këtë duke i shkruar @userinfobot në Telegram.",
-    chatidlabel: "ID-ja juaj e bisedës në Telegram",
-    chatidplaceholder: "Shkruani ID-në tuaj të bisedës në Telegram",
-    chatidsteps: {
-      0: "Hapni Telegram dhe kërkoni \"userinfobot\"",
-      1: "Dërgo çdo mesazh te boti",
-      2: "Boti do të përgjigjet me informacionin tuaj, përfshirë Chat ID-në tuaj.",
-      3: "Kopjo ID-në tënde të bisedës"
-    },
-    chatidtitle: "Si të merrni Chat ID-në tuaj në Telegram:",
-    confirmcontact: "Kam filluar një bisedë me botin dhe kam dërguar një mesazh",
-    contactbotinstruction: "Filloni një bisedë me Telegram bot-in tonë duke klikuar lidhjen më poshtë dhe duke i dërguar një mesazh:",
-    contactbotnote: "Kjo është e nevojshme për të marrë njoftime për makinat. Nëse je në kompjuter, mund të skanosh kodin QR.",
-    helpdescription: "Shikoni videon më poshtë për një udhëzues hap pas hapi.",
-    helptitle: "Keni nevojë për ndihmë për të vendosur Token-in e Telegram Bot-it dhe Chat ID-në tuaj?",
-    kilometreslabel: "Kilometra: {{kms}}",
-    languagelabel: "Gjuha e njoftimeve",
-    languageplaceholder: "Zgjidh gjuhën e mesazhit në Telegram",
-    locationlabel: "Vendndodhja: {{location}}",
-    previewtitle: "Parapamje e njoftimeve në Telegram",
-    pricelabel: "Çmimi: {{price}}",
-    setupsteps: {
-      0: "Hapni Telegram dhe kërkoni \"BotFather\"",
-      1: "Nisni një bisedë me BotFather duke klikuar “Start”",
-      2: "Shkruani /newbot dhe ndiqni udhëzimet për të krijuar një bot të ri",
-      3: "Zgjidh një emër për bot-in tënd",
-      4: "Zgjidhni një emër përdoruesi për bot-in tuaj (duhet të përfundojë me 'bot')",
-      5: "Kopjoni tokenin API të dhënë nga BotFather",
-      6: "Dërgo një mesazh te boti yt i ri për të aktivizuar chat-in"
-    },
-    setuptitle: "Udhëzime për konfigurimin:",
-    subheading: "Konfiguro Bot-in tënd në Telegram",
-    usernamedescription: "Ky është emri i përdoruesit në llogarinë tuaj në Telegram (pa simbolin @).",
-    videodescription: "Shikoni videon më poshtë për një udhëzues hap pas hapi.",
-    videoprompt: "Keni nevojë për ndihmë për të vendosur Token-in dhe Chat ID-në e Telegram Bot-it tuaj?",
-    viewlisting: "Shiko njoftimin →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Rishiko abonimin tënd",
@@ -598,9 +412,7 @@ export const sq = {
       title: "Cilësimet e monitorimit",
       websites: "Faqe interneti",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL e Facebook",
-      updatefrequency: "Frekuenca e Përditësimit"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Specifikimet e makinës",
@@ -609,9 +421,7 @@ export const sq = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Autonomi (km)",
-      price: "Gama e çmimit (€)",
-      fueltype: "Lloji i karburantit",
-      yearrange: "Intervali i viteve"
+      price: "Gama e çmimit (€)"
     },
     notification: {
       title: "Cilësimet e njoftimeve",
@@ -623,9 +433,7 @@ export const sq = {
       base: "Abonimi Bazë",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Totali (Mujor)",
-      extrawebsites: "Faqe Shtesë",
-      frequencyupgrade: "Përmirësim i Frekuencës"
+      total: "Totali (Mujor)"
     },
     terms: {
       checkbox: "Pranoj kushtet",
@@ -669,9 +477,7 @@ export const sq = {
         answer: "Mund ta anuloni abonimin tuaj në çdo kohë nga paneli i llogarisë suaj. Shkoni te seksioni \"Abonimet\", zgjidhni abonimin që dëshironi të anuloni dhe klikoni butonin \"Anulo Abonimin\". Shërbimi juaj do të vazhdojë deri në fund të periudhës aktuale të faturimit.",
         question: "Si mund ta anuloj abonimin tim?"
       }
-    },
-    contactlink: "Kontaktoni ekipin tonë të suportit",
-    contactprompt: "Keni ende pyetje?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const sq = {
     about: "Rreth Nesh",
     blog: "Blog",
     careers: "Karriera",
-    support: "Mbështetje",
-    branddescription: "Asistenti juaj personal për të gjetur ofertën ideale për makinë të përdorur, në kohën e duhur.",
-    brandtitle: "Amiquus",
-    getstarted: "Fillo",
-    quicklinks: "Lidhje të Shpejta"
+    support: "Mbështetje"
   },
   login: {
     title: "Hyni në llogarinë tuaj",
@@ -716,21 +518,8 @@ export const sq = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Ju lutemi, shkruani një adresë emaili të vlefshme.",
-      shortpassword: "Fjalëkalimi duhet të ketë të paktën 6 karaktere"
-    },
-    emaillabel: "Email",
-    errortitle: "Identifikimi dështoi",
-    genericerror: "Ju lutemi kontrolloni të dhënat tuaja dhe provoni përsëri.",
-    loggingin: "Duke u identifikuar...",
-    loginbutton: "Hyrje",
-    loginwithgoogle: "Hyr me Google",
-    noaccount: "Nuk ke llogari?",
-    passwordlabel: "Fjalëkalimi",
-    registerlink: "Regjistrohu",
-    successmessage: "Jeni identifikuar me sukses.",
-    successtitle: "Hyrja u krye me sukses"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Krijo një llogari",
@@ -774,33 +563,8 @@ export const sq = {
       failure: {
         title: "Regjistrimi dështoi",
         desc: "Ju lutemi kontrolloni të dhënat tuaja dhe provoni përsëri."
-      },
-      invalidusername: {
-        desc: "Emri i përdoruesit duhet të jetë alfanumerik dhe të ketë nga 3 deri në 20 karaktere",
-        title: "Emër përdoruesi i pavlefshëm"
-      },
-      missingfields: {
-        desc: "Ju lutemi plotësoni të gjitha fushat e kërkuara",
-        title: "Fusha të munguara"
-      },
-      passwordmismatch: {
-        desc: "Ju lutemi sigurohuni që fjalëkalimet përputhen",
-        title: "Fjalëkalimet nuk përputhen"
-      },
-      termsnotaccepted: {
-        desc: "Duhet të pranoni kushtet dhe politikën e privatësisë për të vazhduar.",
-        title: "Termat nuk janë pranuar"
       }
-    },
-    alreadyhave: "Keni tashmë një llogari?",
-    confirmpassword: "Konfirmo Fjalëkalimin",
-    createbtn: "Krijo llogari",
-    firstname: "Emri",
-    lastname: "Mbiemër",
-    orcontinue: "Ose vazhdo me",
-    privacypolicy: "Politika e Privatësisë",
-    termsnotice: "Pranoj kushtet e",
-    termsofservice: "Kushtet e Shërbimit"
+    }
   },
   verifyEmail: {
     title: "Verifiko Email-in Tënd",
@@ -821,20 +585,8 @@ export const sq = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Emaili u përditësua",
-      entervalidemail: "Ju lutem, shkruani një adresë emaili të vlefshme",
-      invalidemail: "Email i pavlefshëm",
-      sameemail: "E njëjta email",
-      sameemaildesc: "Emaili i ri është i njëjtë me emailin aktual."
-    },
-    codelabel: "Kodi i verifikimit",
-    footernote: "Nuk morët kodin? Kontrolloni dosjen e postës së padëshiruar.",
-    resendbutton: "Dërgo sërish kodin",
-    resendcountdown: "Mund ta ridërgoni kodin pas {{seconds}}s.",
-    updateemailbutton: "Përditëso Email-in",
-    updateemaillabel: "Përditëso Email-in",
-    verifybutton: "Verifiko Email-in"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Shto Mënyrë Pagesë",
@@ -845,12 +597,6 @@ export const sq = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Ndodhi një gabim i papritur",
-    errortitle: "Gabim gjatë shtimit të metodës së pagesës",
-    initerror: {
-      description: "Nuk mund të inicializohet konfigurimi i pagesës",
-      title: "Gabim"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const sq = {
       methods: "Mënyrat e pagesës",
       account: "Cilësimet e llogarisë",
       privacy: "Privatësia dhe siguria",
-      logout: "Çkyçu",
-      membersince: "Anëtar që prej"
+      logout: "Çkyçu"
     },
     account: {
       title: "Cilësimet e llogarisë",
@@ -955,14 +700,8 @@ export const sq = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Për të marrë njoftime për makinat, duhet të filloni një bisedë me Telegram bot-in tonë dhe të dërgoni një mesazh. Ju lutemi ndiqni udhëzimet më poshtë për të kontaktuar bot-in.",
-        title: "Kërkohet Boti i Kontaktit"
       }
-    },
-    basetitle: "79,99 $/muaj",
-    basicplan: "Plani Bazë"
+    }
   },
   loginPrompt: {
     title: "Kërkohet hyrja",
@@ -1005,15 +744,8 @@ export const sq = {
       },
       error: {
         title: "Gabim gjatë përditësimit të abonimit"
-      },
-      priceerror: {
-        description: "Nuk mund të ndaloni dhe të ndryshoni çmimin e abonimit në të njëjtën kohë. Duhet ose ta ndaloni, ose ta ndryshoni çmimin.",
-        title: "Nuk mund të përditësohet abonimi"
       }
-    },
-    notfound: "Abonimi nuk u gjet",
-    notfoundsub: "Kthehu te paneli",
-    subtitle: "Përditësoni detajet e abonimit tuaj më poshtë"
+    }
   },
   about: {
     title: "Rreth AMIQUUS",
@@ -1241,8 +973,7 @@ export const sq = {
           1: "Duke vizituar faqen e kontaktit në faqen tonë të internetit"
         }
       }
-    },
-    lastupdated: "Përditësuar së fundmi: 21 maj 2025"
+    }
   },
   privacy: {
     metaTitle: "Politika e Privatësisë | Amiquus",
@@ -1363,8 +1094,7 @@ export const sq = {
           1: "Duke vizituar faqen e kontaktit në faqen tonë të internetit"
         }
       }
-    },
-    lastupdated: "Përditësuar së fundmi: 21 maj 2025"
+    }
   },
   faqs: {
     metaTitle: "Pyetjet e bëra shpesh | Amiquus",
@@ -1408,34 +1138,6 @@ export const sq = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Vendosni kriteret tuaja të kërkimit (markë, model, interval çmimi, etj.)",
-          1: "Ju zgjidhni cilat faqe interneti dëshironi të monitoroni",
-          2: "Lidhni llogarinë tuaj në Telegram për njoftime",
-          3: "Sistemi ynë monitoron vazhdimisht faqet tuaja të përzgjedhura për njoftime të reja",
-          4: "Kur shfaqet një makinë që përputhet, merrni menjëherë njoftim në Telegram me të gjitha detajet dhe një lidhje direkte."
-        },
-        question: "Si funksionon?"
-      },
-      whatis: {
-        answer: "Amiquus është një shërbim që monitoron disa faqe interneti me shpallje makinash për automjete që përputhen me kriteret tuaja specifike. Kur shfaqet një shpallje e përshtatshme, ju merrni menjëherë një njoftim në Telegram, duke ju mundësuar të jeni ndër të parët që kontaktoni shitësit dhe siguroni oferta të shkëlqyera.",
-        question: "Çfarë është Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Aktualisht monitorojmë platformat kryesore të shpalljeve të makinave:",
-        list: {
-          0: "AutoTregtar",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (nëpërmjet URL-së)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Ne vazhdimisht po shtojmë platforma të reja për të ofruar mbulim sa më gjithëpërfshirës.",
-        question: "Cilat faqe interneti për shitjen e makinave monitoroni?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const sq = {
           2: "Zgjidhni skedën \"Abonimet\"",
           3: "Kliko butonin \"Anulo Abonimin\" pranë abonimit që dëshiron të anulosh."
         },
-        note: "Abonimi juaj do të mbetet aktiv deri në fund të periudhës suaj aktuale të faturimit.",
-        stepsintro: "Abonimin tuaj mund ta anuloni në çdo kohë nga faqja e profilit të llogarisë suaj:"
+        note: "Abonimi juaj do të mbetet aktiv deri në fund të periudhës suaj aktuale të faturimit."
       },
       multiple: {
         question: "A mund të kem disa abonime për modele të ndryshme makinash?",
@@ -1488,8 +1189,7 @@ export const sq = {
           4: "Shkruani tokenin e botit dhe ID-në e bisedës në cilësimet e abonimit tuaj në AMIQUUS.",
           5: "Testoni konfigurimin e njoftimeve tuaja duke përdorur butonin `Dërgo Mesazh Testues`"
         },
-        note: "Udhëzime të detajuara hap pas hapi me pamje nga ekrani ofrohen gjatë procesit të konfigurimit të abonimit.",
-        stepsintro: "Për të vendosur njoftimet në Telegram:"
+        note: "Udhëzime të detajuara hap pas hapi me pamje nga ekrani ofrohen gjatë procesit të konfigurimit të abonimit."
       },
       frequency: {
         question: "Sa shpesh do të marr njoftime?",
@@ -1561,19 +1261,7 @@ export const sq = {
         description: "Do ta përdorim këtë email për t’ju njoftuar sapo të lirohet një vend."
       },
       submit: "Bashkohu në listën e pritjes",
-      submitting: "Duke dërguar...",
-      firstname: {
-        label: "Emri",
-        placeholder: "Gjon"
-      },
-      lastname: {
-        label: "Mbiemri",
-        placeholder: "Duka"
-      }
-    },
-    cantjoin: {
-      description: "Do të ju njoftojmë sapo të lirohet një vend për abonim.",
-      title: "Bëhu pjesë e listës së pritjes"
+      submitting: "Duke dërguar..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const sq = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Na dërgoni një email dhe do t’ju kthejmë përgjigje brenda 24 orëve.",
-      email: "support@amiquus.com",
-      title: "Mbështetje me email"
-    },
-    faqheading: "Pyetjet e bëra shpesh",
-    stillneedhelp: {
-      button: "Kontakto Mbështetjen",
-      description: "Nëse nuk e gjetët përgjigjen për pyetjen tuaj, mos hezitoni të kontaktoni ekipin tonë të suportit. Jemi këtu për t’ju ndihmuar!",
-      heading: "Ende keni nevojë për ndihmë?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const sq = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Anulo",
-    confirmremove: "Hiq Kartën",
-    default: "Parazgjedhur",
-    expires: "Skadon",
-    remove: "Hiq",
-    removedescription: "A jeni i sigurt që doni të hiqni kartën tuaj {{brand}} që përfundon me {{last4}}?",
-    removetitle: "Hiq Metodën e Pagesës",
-    removewarning: "Kjo është metoda juaj e parazgjedhur e pagesës dhe heqja e saj mund të ndikojë në abonimet tuaja aktive.",
-    setasdefault: "Cakto si parazgjedhje",
-    setdefaultdescription: "Dëshironi të vendosni kartën {{brand}} me numër që përfundon me {{last4}} si mënyrën tuaj të paracaktuar të pagesës? Kjo kartë do të përdoret për të gjitha pagesat e ardhshme të abonimit.",
-    setdefaulttitle: "Cakto Metodën e Pagesës si Parazgjedhje"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Anulo Alarmimin",
-    canceldescription: "A jeni i sigurt që doni të anuloni alarm-in për makinën {{brand}} {{model}}? Kjo do të ndalojë të gjitha njoftimet dhe do t’ju duhet të krijoni një alarm të ri nëse doni të monitoroni sërish këtë makinë.",
-    canceltitle: "Anulo njoftimin për makinën",
-    confirmcancel: "Anulo Alarmimin",
-    edit: "Përditëso",
-    keepmyalert: "Mbaj Njoftimin Tim",
-    language: "Gjuha",
-    price: "Çmimi",
-    pricerange: "Çmimi",
-    updates: "Përditësime",
-    websites: "Faqe interneti",
-    years: "Vite"
-  },
-  signUp: {
-    cta: "Merr njoftime tani",
-    heading: "Krijo Alarm për Makinën tënde",
-    subheading: "Vendos njoftimet tuaja të personalizuara për shpalljet e makinave në vetëm disa hapa.",
-    toast: {
-      error: {
-        description: "Nuk mundëm të krijojmë abonimin tuaj. Ju lutemi, provoni përsëri më vonë.",
-        title: "Dështoi abonimi"
-      },
-      success: {
-        description: "Abonimi juaj u krijua me sukses",
-        title: "Abonimi u krijua"
-      }
-    },
-    waitlist: {
-      cta: "Bashkohu në listën e pritjes",
-      message: "Aktualisht jemi në kapacitet të plotë. Ju lutemi regjistrohuni në listën e pritjes për t’u njoftuar sapo të hapet një vend."
     }
   }
 };

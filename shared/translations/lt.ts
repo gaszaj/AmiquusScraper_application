@@ -24,16 +24,10 @@ export const lt = {
     button1: "Nustatykite savo įspėjimus",
     button2: "Sužinokite, kaip tai veikia",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Atšaukite bet kada",
-      nosetup: "Nereikia diegti",
-      realtime: "Pranešimai realiuoju laiku",
-      websites: "Stebima daugiau nei 15 svetainių"
+      websites: "15+ svetainių stebima",
+      realtime: "Perspėjimai realiuoju laiku",
+      noSetup: "Nereikia sąrankos",
+      cancelAnytime: "Atšaukti bet kuriuo metu"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const lt = {
     heading: "Kodėl verta rinktis Amiquus?",
     subheading: "Taupykite laiką ir niekada nepraleiskite savo idealaus automobilio su mūsų automatizuota stebėjimo paslauga.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Kelių svetainių stebėjimas",
+      description: "Stebėkite kelias automobilių skelbimų svetaines vienu metu, nereikalaujant rankiniu būdu tikrinti kiekvienos."
     },
     notifications: {
       title: "Momentiniai pranešimai",
@@ -73,61 +67,12 @@ export const lt = {
       description: "Pasirinkite, kaip dažnai tikrinsime naujus skelbimus – nuo valandinių atnaujinimų iki stebėjimo realiuoju laiku."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Kelių kalbų palaikymas",
+      description: "Gaukite pranešimus savo pageidaujama kalba lengvesniam skelbimų supratimui."
     },
     account: {
       title: "Paprastas paskyros valdymas",
       description: "Tvarkykite kelis paieškos profilius ir keiskite prenumeratos nustatymus vos keliais paspaudimais."
-    },
-    multisite: {
-      description: "Stebėkite kelias automobilių skelbimų svetaines vienu metu, nereikėdami kiekvienos tikrinti rankiniu būdu.",
-      title: "Stebėjimas keliuose puslapiuose"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const lt = {
         description: "Gaukite pranešimus vos tik automobilis, atitinkantis jūsų kriterijus, pasirodo bet kurioje iš mūsų stebimų svetainių."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Raskite savo tobulą automobilį",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Sužinokite apie naujus pasiūlymus pirmieji ir užsitikrinkite geriausius pasiūlymus dar prieš visus kitus.",
-        title: "Raskite savo tobulą automobilį"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const lt = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 serija, 2019, $32,500 – Ką tik paskelbta AutoTrader",
-      title: "Rasta nauja pora!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-klasė, 2020, 30 000 mylių – Kaina sumažinta 2 000 $",
-      title: "Telegram įspėjimas"
-    },
-    setalerts: "Nustatykite savo įspėjimus",
-    whytitle: "Kodėl verta rinktis Amiquus?"
+    }
   },
   pricing: {
     title: "Paprastas, skaidrus kainodaros modelis",
@@ -218,17 +149,7 @@ export const lt = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Pradėkite dabar",
-    addonstitle: "Priedai:",
-    basetitle: "Pagrindinis paketas: 79,99 $/mėn.",
-    footernote: "Visuose planuose neribotos paieškos konfigūracijos ir paprastas prenumeratos valdymas.",
-    includedfeatures: {
-      0: "Vienos svetainės stebėjimas",
-      1: "Naujinama kas valandą",
-      2: "Neriboti filtrai",
-      3: "Pranešimai per Telegram"
-    },
-    includedtitle: "Kas įskaičiuota:"
+    button: "Pradėkite dabar"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const lt = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Automobilio markė yra privaloma",
-      carmodel: "Automobilio modelis yra privalomas",
-      facebookmarketplaceurl: "Facebook Marketplace nuoroda yra privaloma, kai pasirinktas Facebook",
-      fueltype: "Degalų tipas yra privalomas",
-      maxkilometers: "Didžiausias kilometrų skaičius turi būti skaičius",
-      notificationlanguage: "Pranešimo kalba yra privaloma",
-      pricemax: "Maksimali kaina turi būti skaičius",
-      pricemin: "Minimali kaina turi būti skaičius",
-      telegramchatid: "Reikalingas „Telegram“ pokalbio ID",
-      telegramtoken: "Reikalingas Telegram boto žetonas",
-      telegramusername: "Telegram vartotojo vardas yra privalomas",
-      websitesselected: "Reikia pasirinkti bent vieną svetainę",
-      yearmax: "Didžiausi metai turi būti galiojantis metai",
-      yearmin: "Minimalūs metai turi būti galiojantys metai"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const lt = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "El. pašto adresas",
-      firstname: "Vardas",
-      lastname: "Pavardė"
+      email: "El. pašto adresas"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Jonas",
-      lastname: "Elnias"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Įveskite galiojantį el. pašto adresą",
-      firstname: "Vardas yra privalomas",
-      lastname: "Pavardė yra privaloma"
+      email: "Įveskite galiojantį el. pašto adresą"
     },
     actions: {
       login: "Prisijunkite arba užsiregistruokite, kad galėtumėte tęsti",
@@ -332,9 +233,7 @@ export const lt = {
     labels: {
       websites: "Stebimos svetainės",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace nuoroda",
-      updatefrequency: "Atnaujinimo dažnis"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Pasirinkite dažnį"
@@ -344,16 +243,11 @@ export const lt = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Įklijuokite savo Facebook Marketplace paieškos rezultatų URL čia.",
-      updatefrequency: "Kaip dažnai turėtume tikrinti naujus skelbimus? Didesnis tikrinimo dažnis gali kainuoti daugiau.",
-      videodesc: "Peržiūrėkite žemiau esantį vaizdo įrašą su nuosekliomis instrukcijomis.",
-      videotitle: "Reikia pagalbos randant savo Facebook Marketplace paieškos nuorodą?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Reikia pasirinkti bent vieną svetainę",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace nuoroda yra privaloma, kai pasirinktas Facebook"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Ankstesnis",
@@ -371,15 +265,7 @@ export const lt = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Automobilio markė",
-      carmodel: "Automobilio modelis",
-      fueltype: "Kuro tipas",
-      maxkilometers: "Maksimalus atstumas",
-      pricemax: "Maksimali kaina",
-      pricemin: "Mažiausia kaina",
-      yearmax: "Didžiausi metai",
-      yearmin: "Minimalūs metai"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const lt = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Pasirinkite automobilio markę",
-      carmodel: "Pasirinkite automobilio modelį",
-      carmodeldisabled: "Pirmiausia pasirinkite automobilio markę",
-      fueltype: "Pasirinkite kuro tipą",
-      maxkilometers: "Įveskite maksimalų kilometrų skaičių",
-      pricemax: "Įveskite maksimalią kainą",
-      pricemin: "Įveskite minimalią kainą",
-      yearmax: "Įveskite didžiausius metus",
-      yearmin: "Įveskite minimalų metus"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nėra galimų modelių"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const lt = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Automobilio markė yra privaloma",
-      carmodel: "Automobilio modelis yra privalomas",
-      fueltype: "Degalų tipas yra privalomas",
-      maxkilometers: "Maksimalus kilometrų skaičius turi būti skaičius",
-      pricemax: "Maksimali kaina turi būti skaičius",
-      pricemin: "Minimali kaina turi būti skaičius",
-      yearmax: "Didžiausi metai turi būti galiojantys metai",
-      yearmin: "Minimalūs metai turi būti galiojantys metai"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Ankstesnis",
@@ -444,17 +312,7 @@ export const lt = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Atidarykite Telegram ir suraskite @BotFather",
-      botstep2: "Įveskite komandą /newbot",
-      botstep3: "Vadovaukitės instrukcijomis, kad sukurtumėte botą",
-      botstep4: "Nukopijuokite BotFather pateiktą raktą",
-      bottitle: "Kaip gauti „Telegram“ boto raktą:",
-      chatstep1: "Atidarykite Telegram ir suraskite @userinfobot",
-      chatstep2: "Išsiųskite bet kokią žinutę botui",
-      chatstep3: "Botas atsakys su jūsų informacija, įskaitant jūsų Chat ID",
-      chatstep4: "Nukopijuokite pokalbio ID (tai yra skaičius)",
-      chattitle: "Kaip gauti savo Telegram pokalbio ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const lt = {
       token: "Telegram boto raktas",
       chatId: "Your Telegram Chat ID",
       language: "Pranešimų kalba",
-      username: "Telegram naudotojo vardas",
-      chatid: "Jūsų Telegram pokalbio ID"
+      username: "Telegram naudotojo vardas"
     },
     placeholders: {
       token: "Įveskite savo boto raktą iš BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Pasirinkite „Telegram“ žinutės kalbą",
-      username: "Įveskite savo „Telegram“ naudotojo vardą",
-      chatid: "Įveskite savo Telegram pokalbio ID"
+      username: "Įveskite savo „Telegram“ naudotojo vardą"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Pavyzdys: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Tai galite gauti parašę žinutę @userinfobot per Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const lt = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const lt = {
       token: "Reikalingas Telegram boto prieigos raktas",
       chatId: "Telegram chat ID is required",
       language: "Pranešimo kalba yra privaloma",
-      username: "Telegram naudotojo vardas yra privalomas",
-      chatid: "Telegram pokalbio ID yra privalomas"
+      username: "Telegram naudotojo vardas yra privalomas"
     },
     actions: {
       previous: "Ankstesnis",
@@ -544,47 +398,7 @@ export const lt = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Žinoma! Prašome pateikti tekstą, kurį norite išversti į lietuvių kalbą.",
-    bottokenlabel: "Telegram Bot žetonas",
-    bottokenplaceholder: "Įveskite savo boto raktą iš BotFather",
-    caralerttitle: "🚗 Naujas automobilis!",
-    chatiddescription: "Tai galite gauti parašę žinutę @userinfobot per Telegram.",
-    chatidlabel: "Jūsų Telegram pokalbio ID",
-    chatidplaceholder: "Įveskite savo Telegram pokalbio ID",
-    chatidsteps: {
-      0: "Atidarykite Telegram ir ieškokite „userinfobot“",
-      1: "Parašyk bet kokią žinutę botui",
-      2: "Botas atsakys su jūsų informacija, įskaitant jūsų Chat ID",
-      3: "Nukopijuokite savo pokalbio ID"
-    },
-    chatidtitle: "Kaip sužinoti savo Telegram pokalbio ID:",
-    confirmcontact: "Pradėjau pokalbį su botu ir išsiunčiau žinutę.",
-    contactbotinstruction: "Pradėkite pokalbį su mūsų Telegram botu paspaudę žemiau esančią nuorodą ir išsiųsdami jam žinutę:",
-    contactbotnote: "Tai būtina norint gauti automobilių pranešimus. Jei naudojatės kompiuteriu, galite nuskenuoti QR kodą.",
-    helpdescription: "Peržiūrėkite žemiau esantį vaizdo įrašą, kuriame rasite nuoseklų vadovą.",
-    helptitle: "Reikia pagalbos nustatant savo Telegram Bot Token ir Chat ID?",
-    kilometreslabel: "Kilometrai: {{kms}}",
-    languagelabel: "Pranešimų kalba",
-    languageplaceholder: "Pasirinkite Telegram žinutės kalbą",
-    locationlabel: "Vieta: {{location}}",
-    previewtitle: "Peržiūrėti Telegram pranešimus",
-    pricelabel: "Kaina: {{price}}",
-    setupsteps: {
-      0: "Atidarykite Telegram ir suraskite „BotFather“",
-      1: "Pradėkite pokalbį su BotFather spustelėdami „Pradėti“",
-      2: "Įrašykite /newbot ir vykdykite instrukcijas, kad sukurtumėte naują botą.",
-      3: "Pasirinkite vardą savo botui",
-      4: "Pasirinkite vartotojo vardą savo botui (turi baigtis „bot“)",
-      5: "Nukopijuokite API raktą, kurį suteikė BotFather",
-      6: "Išsiųskite žinutę savo naujam botui, kad aktyvuotumėte pokalbį"
-    },
-    setuptitle: "Nustatymo instrukcijos:",
-    subheading: "Nustatykite savo Telegram botą",
-    usernamedescription: "Tai yra jūsų Telegram paskyros naudotojo vardas (be @ simbolio).",
-    videodescription: "Peržiūrėkite žemiau esantį vaizdo įrašą, kuriame rasite nuoseklų vadovą.",
-    videoprompt: "Reikia pagalbos nustatant savo Telegram Bot Token ir Chat ID?",
-    viewlisting: "Peržiūrėti skelbimą →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Peržiūrėkite savo prenumeratą",
@@ -598,9 +412,7 @@ export const lt = {
       title: "Stebėjimo nustatymai",
       websites: "Svetainės",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook nuoroda",
-      updatefrequency: "Atnaujinimo dažnis"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Automobilio specifikacijos",
@@ -609,9 +421,7 @@ export const lt = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Nuvažiuojamas atstumas (km)",
-      price: "Kainų diapazonas (€)",
-      fueltype: "Kuro tipas",
-      yearrange: "Laikotarpis"
+      price: "Kainų diapazonas (€)"
     },
     notification: {
       title: "Pranešimų nustatymai",
@@ -623,9 +433,7 @@ export const lt = {
       base: "Pagrindinė prenumerata",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Iš viso (mėnesiui)",
-      extrawebsites: "Papildomos svetainės",
-      frequencyupgrade: "Dažnio atnaujinimas"
+      total: "Iš viso (mėnesiui)"
     },
     terms: {
       checkbox: "Sutinku su",
@@ -669,9 +477,7 @@ export const lt = {
         answer: "Prenumeratą galite bet kada atšaukti savo paskyros valdymo skydelyje. Eikite į skyrių „Prenumeratos“, pasirinkite prenumeratą, kurią norite atšaukti, ir spustelėkite mygtuką „Atšaukti prenumeratą“. Jūsų paslauga liks aktyvi iki dabartinio atsiskaitymo laikotarpio pabaigos.",
         question: "Kaip atšaukti savo prenumeratą?"
       }
-    },
-    contactlink: "Susisiekite su mūsų pagalbos komanda",
-    contactprompt: "Vis dar turite klausimų?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const lt = {
     about: "Apie mus",
     blog: "Tinklaraštis",
     careers: "Karjera",
-    support: "Pagalba",
-    branddescription: "Jūsų asmeninis asistentas, padedantis rasti geriausią naudoto automobilio pasiūlymą tinkamiausiu metu.",
-    brandtitle: "Amiquus",
-    getstarted: "Pradėti",
-    quicklinks: "Greitos nuorodos"
+    support: "Pagalba"
   },
   login: {
     title: "Prisijunkite prie savo paskyros",
@@ -716,21 +518,8 @@ export const lt = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Įveskite galiojantį el. pašto adresą",
-      shortpassword: "Slaptažodis turi būti bent 6 simbolių"
-    },
-    emaillabel: "El. paštas",
-    errortitle: "Prisijungti nepavyko",
-    genericerror: "Patikrinkite savo prisijungimo duomenis ir bandykite dar kartą.",
-    loggingin: "Jungiamasi...",
-    loginbutton: "Prisijungti",
-    loginwithgoogle: "Prisijungti su Google",
-    noaccount: "Neturite paskyros?",
-    passwordlabel: "Slaptažodis",
-    registerlink: "Registruotis",
-    successmessage: "Sėkmingai prisijungėte.",
-    successtitle: "Prisijungimas sėkmingas"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Sukurti paskyrą",
@@ -774,33 +563,8 @@ export const lt = {
       failure: {
         title: "Registracija nepavyko",
         desc: "Patikrinkite savo duomenis ir bandykite dar kartą."
-      },
-      invalidusername: {
-        desc: "Naudotojo vardas turi būti sudarytas iš raidžių ir skaičių bei būti nuo 3 iki 20 simbolių ilgio",
-        title: "Neteisingas naudotojo vardas"
-      },
-      missingfields: {
-        desc: "Prašome užpildyti visus privalomus laukus",
-        title: "Trūkstami laukai"
-      },
-      passwordmismatch: {
-        desc: "Įsitikinkite, kad jūsų slaptažodžiai sutampa",
-        title: "Slaptažodžiai nesutampa"
-      },
-      termsnotaccepted: {
-        desc: "Turite sutikti su sąlygomis ir privatumo politika, kad galėtumėte tęsti.",
-        title: "Taisyklės nepriimtos"
       }
-    },
-    alreadyhave: "Jau turite paskyrą?",
-    confirmpassword: "Patvirtinkite slaptažodį",
-    createbtn: "Sukurti paskyrą",
-    firstname: "Vardas",
-    lastname: "Pavardė",
-    orcontinue: "Arba tęskite su",
-    privacypolicy: "Privatumo politika",
-    termsnotice: "Sutinku su",
-    termsofservice: "Paslaugų teikimo sąlygos"
+    }
   },
   verifyEmail: {
     title: "Patvirtinkite savo el. paštą",
@@ -821,20 +585,8 @@ export const lt = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "El. paštas atnaujintas",
-      entervalidemail: "Įveskite galiojantį el. pašto adresą",
-      invalidemail: "Neteisingas el. pašto adresas",
-      sameemail: "Tas pats el. paštas",
-      sameemaildesc: "Naujas el. pašto adresas yra toks pat kaip dabartinis el. pašto adresas."
-    },
-    codelabel: "Patvirtinimo kodas",
-    footernote: "Negavote kodo? Patikrinkite savo šlamšto aplanką.",
-    resendbutton: "Siųsti kodą dar kartą",
-    resendcountdown: "Galėsite pakartotinai siųsti kodą po {{seconds}} s",
-    updateemailbutton: "Atnaujinti el. paštą",
-    updateemaillabel: "Atnaujinti el. paštą",
-    verifybutton: "Patvirtinkite el. paštą"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Pridėti mokėjimo būdą",
@@ -845,12 +597,6 @@ export const lt = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Įvyko netikėta klaida",
-    errortitle: "Klaida pridedant mokėjimo metodą",
-    initerror: {
-      description: "Nepavyko inicijuoti mokėjimo nustatymų",
-      title: "Klaida"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const lt = {
       methods: "Apmokėjimo būdai",
       account: "Paskyros nustatymai",
       privacy: "Privatumas ir saugumas",
-      logout: "Atsijungti",
-      membersince: "Narys nuo"
+      logout: "Atsijungti"
     },
     account: {
       title: "Paskyros nustatymai",
@@ -955,14 +700,8 @@ export const lt = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Norėdami gauti pranešimus apie automobilius, turite pradėti pokalbį su mūsų Telegram botu ir išsiųsti žinutę. Prašome vadovautis žemiau pateiktomis instrukcijomis, kad susisiektumėte su botu.",
-        title: "Reikalingas kontaktinis botas"
       }
-    },
-    basetitle: "79,99 $/mėn.",
-    basicplan: "Pagrindinis planas"
+    }
   },
   loginPrompt: {
     title: "Prisijungimas būtinas",
@@ -1005,15 +744,8 @@ export const lt = {
       },
       error: {
         title: "Klaida atnaujinant prenumeratą"
-      },
-      priceerror: {
-        description: "Jūs vienu metu pristabdote ir atnaujinate prenumeratos kainą. Turite pasirinkti – arba pristabdyti, arba atnaujinti kainą.",
-        title: "Nepavyko atnaujinti prenumeratos"
       }
-    },
-    notfound: "Prenumerata nerasta",
-    notfoundsub: "Grįžti į valdymo skydelį",
-    subtitle: "Redaguokite savo prenumeratos duomenis žemiau"
+    }
   },
   about: {
     title: "Apie Amiquus",
@@ -1241,8 +973,7 @@ export const lt = {
           1: "Apsilankius kontaktų puslapyje mūsų svetainėje"
         }
       }
-    },
-    lastupdated: "Paskutinį kartą atnaujinta: 2025 m. gegužės 21 d."
+    }
   },
   privacy: {
     metaTitle: "Privatumo politika | Amiquus",
@@ -1363,8 +1094,7 @@ export const lt = {
           1: "Apsilankę kontaktų puslapyje mūsų svetainėje"
         }
       }
-    },
-    lastupdated: "Paskutinį kartą atnaujinta: 2025 m. gegužės 21 d."
+    }
   },
   faqs: {
     metaTitle: "Dažniausiai užduodami klausimai | Amiquus",
@@ -1408,34 +1138,6 @@ export const lt = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Nustatote savo paieškos kriterijus (markė, modelis, kainos intervalas ir kt.)",
-          1: "Jūs pasirenkate, kurias svetaines norite stebėti",
-          2: "Prijunkite savo Telegram paskyrą pranešimams gauti",
-          3: "Mūsų sistema nuolat stebi jūsų pasirinktus tinklalapius, ieškodama naujų skelbimų",
-          4: "Kai atsiranda tinkamas automobilis, iš karto gaunate pranešimą per Telegram su visomis detalėmis ir tiesiogine nuoroda."
-        },
-        question: "Kaip tai veikia?"
-      },
-      whatis: {
-        answer: "AMIQUUS yra paslauga, kuri stebi kelias automobilių skelbimų svetaines ir ieško transporto priemonių, atitinkančių jūsų konkrečius kriterijus. Atsiradus tinkamam skelbimui, iš karto gaunate pranešimą per Telegram, todėl galite būti vieni pirmųjų, susisiekiančių su pardavėjais ir užsitikrinti puikius pasiūlymus.",
-        question: "Kas yra Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Šiuo metu stebime šias pagrindines automobilių skelbimų platformas:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (per URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Nuolat pridedame naujų platformų, kad galėtume pasiūlyti kuo platesnį aprėptį.",
-        question: "Kuriuos automobilių skelbimų puslapius stebite?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const lt = {
           2: "Pasirinkite skirtuką „Prenumeratos“",
           3: "Spustelėkite mygtuką „Atšaukti prenumeratą“ šalia prenumeratos, kurią norite atšaukti."
         },
-        note: "Jūsų prenumerata liks aktyvi iki dabartinio atsiskaitymo laikotarpio pabaigos.",
-        stepsintro: "Prenumeratą galite bet kada atšaukti savo paskyros profilio puslapyje:"
+        note: "Jūsų prenumerata liks aktyvi iki dabartinio atsiskaitymo laikotarpio pabaigos."
       },
       multiple: {
         question: "Ar galiu turėti kelias prenumeratas skirtingiems automobilių modeliams?",
@@ -1488,8 +1189,7 @@ export const lt = {
           4: "Įveskite savo boto raktą ir pokalbio ID į savo AMIQUUS prenumeratos nustatymus",
           5: "Išbandykite savo pranešimų nustatymus naudodami mygtuką `Siųsti bandomąjį pranešimą`"
         },
-        note: "Išsamios nuoseklios instrukcijos su ekrano nuotraukomis pateikiamos prenumeratos nustatymo metu.",
-        stepsintro: "Norėdami nustatyti „Telegram“ pranešimus:"
+        note: "Išsamios nuoseklios instrukcijos su ekrano nuotraukomis pateikiamos prenumeratos nustatymo metu."
       },
       frequency: {
         question: "Kaip dažnai gausiu pranešimus?",
@@ -1561,19 +1261,7 @@ export const lt = {
         description: "Šiuo el. pašto adresu informuosime jus, kai atsiras laisva vieta."
       },
       submit: "Prisijunkite prie laukiančiųjų sąrašo",
-      submitting: "Siunčiama...",
-      firstname: {
-        label: "Vardas",
-        placeholder: "Jonas"
-      },
-      lastname: {
-        label: "Pavardė",
-        placeholder: "Elnis"
-      }
-    },
-    cantjoin: {
-      description: "Pranešime jums, kai tik atsiras laisva prenumeratos vieta.",
-      title: "Prisijunkite prie laukiančiųjų sąrašo"
+      submitting: "Siunčiama..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const lt = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Parašykite mums el. laišką ir atsakysime per 24 valandas",
-      email: "support@amiquus.com",
-      title: "Pagalba el. paštu"
-    },
-    faqheading: "Dažniausiai užduodami klausimai",
-    stillneedhelp: {
-      button: "Susisiekite su pagalba",
-      description: "Jei neradote atsakymo į savo klausimą, drąsiai kreipkitės į mūsų klientų aptarnavimo komandą. Esame čia, kad jums padėtume!",
-      heading: "Vis dar reikia pagalbos?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const lt = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Atšaukti",
-    confirmremove: "Pašalinti kortelę",
-    default: "Numatytasis",
-    expires: "Galioja iki",
-    remove: "Pašalinti",
-    removedescription: "Ar tikrai norite pašalinti savo {{brand}} kortelę, kurios paskutiniai skaitmenys yra {{last4}}?",
-    removetitle: "Pašalinti mokėjimo metodą",
-    removewarning: "Tai yra jūsų numatytasis mokėjimo būdas, o jį pašalinus gali būti paveiktos jūsų aktyvios prenumeratos.",
-    setasdefault: "Nustatyti kaip numatytąjį",
-    setdefaultdescription: "Ar norėtumėte nustatyti {{brand}} kortelę, kurios paskutiniai skaitmenys {{last4}}, kaip numatytąjį mokėjimo būdą? Ši kortelė bus naudojama visiems būsimiems prenumeratos mokėjimams.",
-    setdefaulttitle: "Nustatyti numatytąjį mokėjimo būdą"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Atšaukti įspėjimą",
-    canceldescription: "Ar tikrai norite atšaukti automobilio įspėjimą dėl {{brand}} {{model}}? Tai sustabdys visus pranešimus ir jei norėsite vėl stebėti šį automobilį, reikės sukurti naują įspėjimą.",
-    canceltitle: "Atšaukti automobilio įspėjimą",
-    confirmcancel: "Atšaukti įspėjimą",
-    edit: "Redaguoti",
-    keepmyalert: "Išsaugoti mano įspėjimą",
-    language: "Kalba",
-    price: "Kaina",
-    pricerange: "Kaina",
-    updates: "Atnaujinimai",
-    websites: "Svetainės",
-    years: "Metai"
-  },
-  signUp: {
-    cta: "Gaukite įspėjimus dabar",
-    heading: "Sukurkite savo automobilio įspėjimą",
-    subheading: "Nustatykite suasmenintus automobilių skelbimų pranešimus vos keliais žingsniais.",
-    toast: {
-      error: {
-        description: "Nepavyko sukurti jūsų prenumeratos. Bandykite dar kartą vėliau.",
-        title: "Prenumerata nepavyko"
-      },
-      success: {
-        description: "Jūsų prenumerata sėkmingai sukurta",
-        title: "Prenumerata sukurta"
-      }
-    },
-    waitlist: {
-      cta: "Prisijunkite prie laukiančiųjų sąrašo",
-      message: "Šiuo metu vietų nėra. Prisijunkite prie laukiančiųjų sąrašo, kad būtumėte informuoti, kai atsiras laisva vieta."
     }
   }
 };

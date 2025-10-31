@@ -24,16 +24,10 @@ export const nl = {
     button1: "Stel je meldingen in",
     button2: "Bekijk hoe het werkt",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Op ieder moment opzegbaar",
-      nosetup: "Geen installatie nodig",
-      realtime: "Meldingen in realtime",
-      websites: "Meer dan 15 websites gevolgd"
+      websites: "15+ websites gevolgd",
+      realtime: "Realtime meldingen",
+      noSetup: "Geen configuratie vereist",
+      cancelAnytime: "Annuleer op elk moment"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const nl = {
     heading: "Waarom kiezen voor Amiquus?",
     subheading: "Bespaar tijd en mis nooit jouw perfecte auto met onze geautomatiseerde volgservice.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Multi-site tracking",
+      description: "Bewaak meerdere auto-advertentiewebsites tegelijkertijd zonder elk afzonderlijk handmatig te hoeven controleren."
     },
     notifications: {
       title: "Directe meldingen",
@@ -73,61 +67,12 @@ export const nl = {
       description: "Kies hoe vaak we nieuwe aanbiedingen voor je controleren, van updates per uur tot monitoring in real-time."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Meertalige ondersteuning",
+      description: "Ontvang meldingen in uw voorkeurstaal voor een beter begrip van de vermeldingen."
     },
     account: {
       title: "Eenvoudig accountbeheer",
       description: "Beheer meerdere zoekprofielen en pas je abonnementsinstellingen eenvoudig aan met een paar klikken."
-    },
-    multisite: {
-      description: "Houd meerdere autosites tegelijk in de gaten zonder ze allemaal handmatig te hoeven controleren.",
-      title: "Tracking op meerdere sites"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const nl = {
         description: "Ontvang direct een melding zodra er een auto die aan jouw criteria voldoet verschijnt op een van onze gecontroleerde websites."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Vind uw perfecte auto",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Wees als eerste op de hoogte van nieuwe aanbiedingen en verzeker jezelf van de beste deals voordat anderen dat doen.",
-        title: "Vind jouw perfecte auto"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const nl = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 Serie, 2019, $32.500 - Net toegevoegd op AutoTrader",
-      title: "Nieuw match gevonden!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Klasse, 2020, 30.000 mijl - Prijs verlaagd met $2.000",
-      title: "Telegrammelding"
-    },
-    setalerts: "Stel je meldingen in",
-    whytitle: "Waarom kiezen voor Amiquus?"
+    }
   },
   pricing: {
     title: "Eerlijke, transparante prijzen",
@@ -218,17 +149,7 @@ export const nl = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Begin nu",
-    addonstitle: "Add-ons:",
-    basetitle: "Basispakket: €79,99/maand",
-    footernote: "Alle abonnementen bevatten onbeperkte zoekconfiguraties en eenvoudig beheer van je abonnement.",
-    includedfeatures: {
-      0: "Eén website monitoring",
-      1: "Elk uur updates",
-      2: "Onbeperkte filters",
-      3: "Telegram meldingen"
-    },
-    includedtitle: "Wat is inbegrepen:"
+    button: "Begin nu"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const nl = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Automerk is verplicht",
-      carmodel: "Automodel is verplicht",
-      facebookmarketplaceurl: "Facebook Marketplace-URL is verplicht wanneer Facebook is geselecteerd",
-      fueltype: "Brandstoftype is verplicht",
-      maxkilometers: "Maximaal aantal kilometers moet een getal zijn",
-      notificationlanguage: "Taal van de melding is verplicht",
-      pricemax: "Maximale prijs moet een getal zijn",
-      pricemin: "Minimale prijs moet een getal zijn",
-      telegramchatid: "Telegram chat-ID is verplicht",
-      telegramtoken: "Telegram-bottoken is vereist",
-      telegramusername: "Telegram gebruikersnaam is verplicht",
-      websitesselected: "Er moet minstens één website worden geselecteerd.",
-      yearmax: "Maximaal jaar moet een geldig jaar zijn",
-      yearmin: "Het minimumjaar moet een geldig jaar zijn"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const nl = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "E-mailadres",
-      firstname: "Voornaam",
-      lastname: "Achternaam"
+      email: "E-mailadres"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Jan, zo werkt het",
-      lastname: "Hert"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Voer een geldig e-mailadres in",
-      firstname: "Voornaam is verplicht",
-      lastname: "Achternaam is verplicht"
+      email: "Voer een geldig e-mailadres in"
     },
     actions: {
       login: "Inloggen of registreren om door te gaan",
@@ -332,9 +233,7 @@ export const nl = {
     labels: {
       websites: "Websites om te monitoren",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace-URL",
-      updatefrequency: "Updatefrequentie"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Selecteer frequentie"
@@ -344,16 +243,11 @@ export const nl = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Plak hier de URL van je Facebook Marketplace zoekresultaten.",
-      updatefrequency: "Hoe vaak moeten we controleren op nieuwe aanbiedingen? Hogere frequenties kunnen meer kosten.",
-      videodesc: "Bekijk de onderstaande video voor stapsgewijze instructies.",
-      videotitle: "Hulp nodig bij het vinden van je Facebook Marketplace-zoeklink?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Er moet minstens één website worden geselecteerd.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace-URL is verplicht wanneer Facebook is geselecteerd"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Vorige",
@@ -371,15 +265,7 @@ export const nl = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Automerk",
-      carmodel: "Automodel",
-      fueltype: "Brandstofsoort",
-      maxkilometers: "Maximale kilometers",
-      pricemax: "Maximale prijs",
-      pricemin: "Minimumprijs",
-      yearmax: "Maximaal jaar",
-      yearmin: "Minimumjaar"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const nl = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Selecteer automerk",
-      carmodel: "Selecteer automodel",
-      carmodeldisabled: "Selecteer eerst het automerk",
-      fueltype: "Selecteer brandstoftype",
-      maxkilometers: "Voer het maximaal aantal kilometers in",
-      pricemax: "Voer maximale prijs in",
-      pricemin: "Voer minimumprijs in",
-      yearmax: "Voer het maximale jaar in",
-      yearmin: "Voer het minimumjaar in"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Geen modellen beschikbaar"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const nl = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Automerk is verplicht",
-      carmodel: "Automodel is verplicht",
-      fueltype: "Brandstoftype is verplicht",
-      maxkilometers: "Maximale kilometers moet een getal zijn",
-      pricemax: "Maximale prijs moet een getal zijn",
-      pricemin: "Minimale prijs moet een getal zijn",
-      yearmax: "Het maximale jaar moet een geldig jaar zijn",
-      yearmin: "Het minimumjaar moet een geldig jaar zijn"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Vorige",
@@ -444,17 +312,7 @@ export const nl = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Open Telegram en zoek naar @BotFather",
-      botstep2: "Voer het commando /newbot uit",
-      botstep3: "Volg de instructies om een bot aan te maken",
-      botstep4: "Kopieer de token die je van BotFather hebt gekregen",
-      bottitle: "Hoe krijg je een Telegram Bot Token:",
-      chatstep1: "Open Telegram en zoek naar @userinfobot",
-      chatstep2: "Stuur een willekeurig bericht naar de bot",
-      chatstep3: "De bot zal reageren met jouw gegevens, inclusief je Chat ID",
-      chatstep4: "Kopieer de chat-ID (dit is een nummer)",
-      chattitle: "Hoe krijg je jouw Telegram Chat ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const nl = {
       token: "Telegram Bot Token",
       chatId: "Your Telegram Chat ID",
       language: "Meldingstaal",
-      username: "Telegram gebruikersnaam",
-      chatid: "Je Telegram Chat-ID"
+      username: "Telegram gebruikersnaam"
     },
     placeholders: {
       token: "Voer je bot-token van BotFather in",
       chatId: "Enter your Telegram chat ID",
       language: "Selecteer de taal van het Telegram-bericht",
-      username: "Voer je Telegram-gebruikersnaam in",
-      chatid: "Voer je Telegram-chat-ID in"
+      username: "Voer je Telegram-gebruikersnaam in"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Voorbeeld: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Je kunt dit krijgen door @userinfobot een bericht te sturen op Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const nl = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const nl = {
       token: "Telegram-bottoken is vereist",
       chatId: "Telegram chat ID is required",
       language: "Taal van de melding is verplicht",
-      username: "Telegram-gebruikersnaam is verplicht",
-      chatid: "Telegram chat-ID is verplicht"
+      username: "Telegram-gebruikersnaam is verplicht"
     },
     actions: {
       previous: "Vorige",
@@ -544,47 +398,7 @@ export const nl = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Begrepen! Geef alstublieft de tekst die u wilt laten vertalen.",
-    bottokenlabel: "Telegram Bot-token",
-    bottokenplaceholder: "Voer je bot-token van BotFather in",
-    caralerttitle: "🚗 Nieuwe auto gespot!",
-    chatiddescription: "Je kunt dit krijgen door @userinfobot een bericht te sturen op Telegram.",
-    chatidlabel: "Je Telegram Chat-ID",
-    chatidplaceholder: "Voer je Telegram-chat-ID in",
-    chatidsteps: {
-      0: "Open Telegram en zoek naar \"userinfobot\"",
-      1: "Stuur een bericht naar de bot",
-      2: "De bot zal reageren met jouw gegevens, inclusief je Chat ID",
-      3: "Kopieer je Chat-ID"
-    },
-    chatidtitle: "Hoe krijg je jouw Telegram Chat ID:",
-    confirmcontact: "Ik ben een chat met de bot gestart en heb een bericht gestuurd",
-    contactbotinstruction: "Begin een chat met onze Telegram-bot door op de onderstaande link te klikken en een bericht te sturen.",
-    contactbotnote: "Dit is nodig om autowaarschuwingen te ontvangen. Je kunt de QR-code scannen als je op een desktop zit.",
-    helpdescription: "Bekijk de video hieronder voor een stapsgewijze uitleg.",
-    helptitle: "Hulp nodig bij het instellen van je Telegram Bot Token en Chat ID?",
-    kilometreslabel: "Kilometers: {{kms}}",
-    languagelabel: "Meldingstaal",
-    languageplaceholder: "Selecteer de taal voor Telegram-berichten",
-    locationlabel: "Locatie: {{location}}",
-    previewtitle: "Voorbeeld van Telegram-meldingen",
-    pricelabel: "Prijs: {{price}}",
-    setupsteps: {
-      0: "Open Telegram en zoek naar \"BotFather\"",
-      1: "Begin een chat met BotFather door op \"Start\" te klikken",
-      2: "Typ /newbot en volg de instructies om een nieuwe bot aan te maken",
-      3: "Kies een naam voor je bot",
-      4: "Kies een gebruikersnaam voor je bot (moet eindigen op 'bot')",
-      5: "Kopieer de API-token die je van BotFather hebt gekregen",
-      6: "Stuur een bericht naar je nieuwe bot om de chat te activeren"
-    },
-    setuptitle: "Installatie-instructies:",
-    subheading: "Stel je Telegram-bot in",
-    usernamedescription: "Dit is de gebruikersnaam van je Telegram-account (zonder het @-symbool).",
-    videodescription: "Bekijk de video hieronder voor een stapsgewijze uitleg.",
-    videoprompt: "Hulp nodig bij het instellen van je Telegram Bot Token en Chat ID?",
-    viewlisting: "Bekijk advertentie →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Bekijk je abonnement",
@@ -598,9 +412,7 @@ export const nl = {
       title: "Monitoringsinstellingen",
       websites: "Websites",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook-link",
-      updatefrequency: "Updatefrequentie"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Autospecificaties",
@@ -609,9 +421,7 @@ export const nl = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Actieradius (km)",
-      price: "Prijsklasse (€)",
-      fueltype: "Brandstofsoort",
-      yearrange: "Jaarbereik"
+      price: "Prijsklasse (€)"
     },
     notification: {
       title: "Meldingsinstellingen",
@@ -623,9 +433,7 @@ export const nl = {
       base: "Basisabonnement",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Totaal (per maand)",
-      extrawebsites: "Aanvullende websites",
-      frequencyupgrade: "Frequentie-upgrade"
+      total: "Totaal (per maand)"
     },
     terms: {
       checkbox: "Ik ga akkoord met de",
@@ -669,9 +477,7 @@ export const nl = {
         answer: "Je kunt je abonnement op elk moment opzeggen via het dashboard van je account. Ga naar het gedeelte \"Abonnementen\", selecteer het abonnement dat je wilt opzeggen en klik op de knop \"Abonnement opzeggen\". Je dienst blijft actief tot het einde van je huidige factureringsperiode.",
         question: "Hoe zeg ik mijn abonnement op?"
       }
-    },
-    contactlink: "Neem contact op met ons ondersteuningsteam",
-    contactprompt: "Heb je nog vragen?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const nl = {
     about: "Over ons",
     blog: "Blog",
     careers: "Vacatures",
-    support: "Ondersteuning",
-    branddescription: "Jouw persoonlijke assistent voor het vinden van de perfecte deal voor een tweedehands auto, precies op het juiste moment.",
-    brandtitle: "Amiquus",
-    getstarted: "Aan de slag",
-    quicklinks: "Snelle links"
+    support: "Ondersteuning"
   },
   login: {
     title: "Log in op je account",
@@ -716,21 +518,8 @@ export const nl = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Voer een geldig e-mailadres in",
-      shortpassword: "Wachtwoord moet minimaal 6 tekens bevatten"
-    },
-    emaillabel: "E-mail",
-    errortitle: "Inloggen mislukt",
-    genericerror: "Controleer uw inloggegevens en probeer het opnieuw.",
-    loggingin: "Bezig met inloggen...",
-    loginbutton: "Inloggen",
-    loginwithgoogle: "Inloggen met Google",
-    noaccount: "Nog geen account?",
-    passwordlabel: "Wachtwoord",
-    registerlink: "Registreren",
-    successmessage: "Je bent succesvol ingelogd.",
-    successtitle: "Inloggen geslaagd"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Account aanmaken",
@@ -774,33 +563,8 @@ export const nl = {
       failure: {
         title: "Registratie mislukt",
         desc: "Controleer uw gegevens en probeer het opnieuw."
-      },
-      invalidusername: {
-        desc: "Gebruikersnaam moet uit letters en cijfers bestaan en tussen de 3 en 20 tekens lang zijn",
-        title: "Ongeldige gebruikersnaam"
-      },
-      missingfields: {
-        desc: "Vul alle verplichte velden in",
-        title: "Ontbrekende velden"
-      },
-      passwordmismatch: {
-        desc: "Zorg ervoor dat je wachtwoorden overeenkomen",
-        title: "Wachtwoorden komen niet overeen"
-      },
-      termsnotaccepted: {
-        desc: "U moet de voorwaarden en het privacybeleid accepteren om door te gaan.",
-        title: "Voorwaarden niet geaccepteerd"
       }
-    },
-    alreadyhave: "Heb je al een account?",
-    confirmpassword: "Bevestig wachtwoord",
-    createbtn: "Account aanmaken",
-    firstname: "Voornaam",
-    lastname: "Achternaam",
-    orcontinue: "Of ga verder met",
-    privacypolicy: "Privacyverklaring",
-    termsnotice: "Ik ga akkoord met de",
-    termsofservice: "Servicevoorwaarden"
+    }
   },
   verifyEmail: {
     title: "Bevestig je e-mailadres",
@@ -821,20 +585,8 @@ export const nl = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-mail bijgewerkt",
-      entervalidemail: "Voer een geldig e-mailadres in",
-      invalidemail: "Ongeldig e-mailadres",
-      sameemail: "Zelfde e-mail",
-      sameemaildesc: "Het nieuwe e-mailadres is hetzelfde als het huidige e-mailadres."
-    },
-    codelabel: "Verificatiecode",
-    footernote: "Code niet ontvangen? Controleer je spamfolder.",
-    resendbutton: "Code opnieuw verzenden",
-    resendcountdown: "Je kunt de code over {{seconds}}s opnieuw versturen.",
-    updateemailbutton: "E-mailadres bijwerken",
-    updateemaillabel: "E-mailadres bijwerken",
-    verifybutton: "Bevestig e-mail"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Betaalmethode toevoegen",
@@ -845,12 +597,6 @@ export const nl = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Er is een onverwachte fout opgetreden",
-    errortitle: "Fout bij het toevoegen van betaalmethode",
-    initerror: {
-      description: "Kan betalingsinstellingen niet initialiseren",
-      title: "Fout"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const nl = {
       methods: "Betaalmethoden",
       account: "Accountinstellingen",
       privacy: "Privacy & beveiliging",
-      logout: "Uitloggen",
-      membersince: "Lid sinds"
+      logout: "Uitloggen"
     },
     account: {
       title: "Accountinstellingen",
@@ -955,14 +700,8 @@ export const nl = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Om autowaarschuwingen te ontvangen, moet je een chat starten met onze Telegram-bot en een bericht sturen. Volg de onderstaande instructies om contact op te nemen met de bot.",
-        title: "Contactbot vereist"
       }
-    },
-    basetitle: "€79,99/maand",
-    basicplan: "Basispakket"
+    }
   },
   loginPrompt: {
     title: "Inloggen vereist",
@@ -1005,15 +744,8 @@ export const nl = {
       },
       error: {
         title: "Fout bij het bijwerken van het abonnement"
-      },
-      priceerror: {
-        description: "Je pauzeert en wijzigt tegelijkertijd de abonnementsprijs. Je moet óf pauzeren óf de prijs aanpassen.",
-        title: "Kan abonnement niet bijwerken"
       }
-    },
-    notfound: "Abonnement niet gevonden",
-    notfoundsub: "Terug naar dashboard",
-    subtitle: "Bewerk hieronder je abonnementsgegevens"
+    }
   },
   about: {
     title: "Over Amiquus",
@@ -1241,8 +973,7 @@ export const nl = {
           1: "Door de contactpagina op onze website te bezoeken"
         }
       }
-    },
-    lastupdated: "Laatst bijgewerkt: 21 mei 2025"
+    }
   },
   privacy: {
     metaTitle: "Privacybeleid | Amiquus",
@@ -1363,8 +1094,7 @@ export const nl = {
           1: "Door de contactpagina op onze website te bezoeken"
         }
       }
-    },
-    lastupdated: "Laatst bijgewerkt: 21 mei 2025"
+    }
   },
   faqs: {
     metaTitle: "Veelgestelde vragen | Amiquus",
@@ -1408,34 +1138,6 @@ export const nl = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Stel je zoekcriteria in (merk, model, prijsklasse, etc.)",
-          1: "Jij kiest welke websites je wilt monitoren",
-          2: "Je koppelt je Telegram-account voor meldingen",
-          3: "Ons systeem houdt jouw geselecteerde websites continu in de gaten voor nieuwe vermeldingen",
-          4: "Wanneer er een passende auto beschikbaar is, ontvang je direct een Telegram-melding met alle details en een directe link."
-        },
-        question: "Hoe werkt het?"
-      },
-      whatis: {
-        answer: "AMIQUUS is een dienst die meerdere autosites in de gaten houdt voor voertuigen die aan jouw specifieke wensen voldoen. Zodra er een passende advertentie verschijnt, ontvang je direct een melding via Telegram, zodat je als een van de eersten contact kunt opnemen met de verkoper en een mooie deal kunt sluiten.",
-        question: "Wat is Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "We houden momenteel de volgende grote autoverkoopplatforms in de gaten:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (via URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "We voegen voortdurend nieuwe platforms toe om de meest volledige dekking te bieden.",
-        question: "Welke autosites houdt u in de gaten?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const nl = {
           2: "Selecteer het tabblad \"Abonnementen\"",
           3: "Klik op de knop ‘Abonnement annuleren’ naast het abonnement dat je wilt opzeggen."
         },
-        note: "Je abonnement blijft actief tot het einde van je huidige factureringsperiode.",
-        stepsintro: "Je kunt je abonnement op elk moment opzeggen via de profielpagina van je account:"
+        note: "Je abonnement blijft actief tot het einde van je huidige factureringsperiode."
       },
       multiple: {
         question: "Kan ik meerdere abonnementen hebben voor verschillende automodellen?",
@@ -1488,8 +1189,7 @@ export const nl = {
           4: "Voer je bot-token en chat-ID in bij de abonnement-instellingen van AMIQUUS",
           5: "Test je notificatie-instellingen met de knop `Testbericht verzenden`"
         },
-        note: "Gedetailleerde stapsgewijze instructies met screenshots worden tijdens het instellen van het abonnement verstrekt.",
-        stepsintro: "Telegram-meldingen instellen:"
+        note: "Gedetailleerde stapsgewijze instructies met screenshots worden tijdens het instellen van het abonnement verstrekt."
       },
       frequency: {
         question: "Hoe vaak ontvang ik meldingen?",
@@ -1561,19 +1261,7 @@ export const nl = {
         description: "We gebruiken dit e-mailadres om je te laten weten wanneer er een plek vrijkomt."
       },
       submit: "Aanmelden voor wachtlijst",
-      submitting: "Indienen...",
-      firstname: {
-        label: "Voornaam",
-        placeholder: "Jan, zo werkt het"
-      },
-      lastname: {
-        label: "Achternaam",
-        placeholder: "Hert"
-      }
-    },
-    cantjoin: {
-      description: "We laten het je weten zodra er een plek voor een abonnement beschikbaar is.",
-      title: "Aanmelden voor de wachtlijst"
+      submitting: "Indienen..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const nl = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Stuur ons een e-mail en wij nemen binnen 24 uur contact met je op.",
-      email: "support@amiquus.com",
-      title: "E-mailondersteuning"
-    },
-    faqheading: "Veelgestelde vragen",
-    stillneedhelp: {
-      button: "Neem contact op met support",
-      description: "Kon je het antwoord op je vraag niet vinden? Neem gerust contact op met ons supportteam. We staan voor je klaar!",
-      heading: "Heb je nog hulp nodig?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const nl = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Annuleren",
-    confirmremove: "Kaart verwijderen",
-    default: "Standaard",
-    expires: "Verloopt",
-    remove: "Verwijderen",
-    removedescription: "Weet je zeker dat je je {{brand}}-kaart met eindcijfers {{last4}} wilt verwijderen?",
-    removetitle: "Betaalmethode verwijderen",
-    removewarning: "Dit is je standaard betaalmethode en het verwijderen hiervan kan invloed hebben op je actieve abonnementen.",
-    setasdefault: "Instellen als standaard",
-    setdefaultdescription: "Wil je de {{brand}}-kaart die eindigt op {{last4}} instellen als je standaard betaalmethode? Deze kaart wordt gebruikt voor alle toekomstige abonnementsbetalingen.",
-    setdefaulttitle: "Stel standaard betaalmethode in"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Waarschuwing annuleren",
-    canceldescription: "Weet je zeker dat je het auto-alarm voor {{brand}} {{model}} wilt annuleren? Hiermee stop je alle meldingen en moet je een nieuw alarm instellen als je deze auto opnieuw wilt volgen.",
-    canceltitle: "Auto-alert annuleren",
-    confirmcancel: "Waarschuwing annuleren",
-    edit: "Bewerken",
-    keepmyalert: "Bewaar mijn melding",
-    language: "Taal",
-    price: "Prijs",
-    pricerange: "Prijs",
-    updates: "Updates",
-    websites: "Websites",
-    years: "Jaren"
-  },
-  signUp: {
-    cta: "Ontvang nu meldingen",
-    heading: "Stel jouw auto-alert in",
-    subheading: "Stel je gepersonaliseerde meldingen voor autoadvertenties in met slechts een paar stappen.",
-    toast: {
-      error: {
-        description: "We konden je abonnement niet aanmaken. Probeer het later opnieuw.",
-        title: "Abonnement mislukt"
-      },
-      success: {
-        description: "Je abonnement is succesvol aangemaakt",
-        title: "Abonnement aangemaakt"
-      }
-    },
-    waitlist: {
-      cta: "Aanmelden voor wachtlijst",
-      message: "We zitten momenteel vol. Schrijf je in op onze wachtlijst om bericht te krijgen zodra er een plek vrijkomt."
     }
   }
 };

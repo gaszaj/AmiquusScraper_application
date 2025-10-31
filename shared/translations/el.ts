@@ -24,16 +24,10 @@ export const el = {
     button1: "Ρύθμισε τις ειδοποιήσεις σου",
     button2: "Δες πώς λειτουργεί",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Ακύρωση ανά πάσα στιγμή",
-      nosetup: "Δεν χρειάζεται ρύθμιση",
-      realtime: "Ειδοποιήσεις σε πρα �ματικό χρόνο",
-      websites: "Παρακολούθηση πάνω από 15 ιστοσελίδες"
+      websites: "15+ ιστοσελίδες παρακολουθούνται",
+      realtime: "Ειδοποιήσεις σε πραγματικό χρόνο",
+      noSetup: "Δεν απαιτείται ρύθμιση",
+      cancelAnytime: "Ακύρωση ανά πάσα στιγμή"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const el = {
     heading: "Γιατί να επιλέξεις το AMIQUUS;",
     subheading: "Εξοικονομήστε χρόνο και μην χάσετε ποτέ το τέλειο αυτοκίνητό σας με την αυτοματοποιημένη υπηρεσία παρακολούθησης της AMIQUUS.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Παρακολούθηση πολλαπλών ιστοσελίδων",
+      description: "Παρακολουθήστε πολλές ιστοσελίδες καταχωρήσεων αυτοκινήτων ταυτόχρονα χωρίς να χρειάζεται να ελέγχετε κάθε μία χειροκίνητα."
     },
     notifications: {
       title: "Άμεσες Ειδοποιήσεις",
@@ -73,61 +67,12 @@ export const el = {
       description: "Επίλεξε κάθε πότε να ελέγχουμε για νέες αγγελίες, από ωριαίες ενημερώσεις μέχρι παρακολούθηση σε πραγματικό χρόνο."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Υποστήριξη πολλών γλωσσών",
+      description: "Λαμβάνετε ειδοποιήσεις στη γλώσσα της προτίμησής σας για ευκολότερη κατανόηση των καταχωρήσεων."
     },
     account: {
       title: "Εύκολη διαχείριση λογαριασμού",
       description: "Διαχειρίσου πολλαπλά προφίλ αναζήτησης και άλλαξε τις ρυθμίσεις συνδρομής σου με λίγα μόνο κλικ."
-    },
-    multisite: {
-      description: "Παρακολούθησε ταυτόχρονα πολλές ιστοσελίδες με αγγελίες αυτοκινήτων χωρίς να χρειάζεται να τις ελέγχεις μία-μία.",
-      title: "Παρακολούθηση σε πολλαπλές ιστοσελίδες"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const el = {
         description: "Λάβε ειδοποιήσεις μόλις εμφανιστεί αυτοκίνητο που ταιριάζει στα κριτήριά σου σε οποιαδήποτε από τις ιστοσελίδες που παρακολουθούμε."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Βρείτε το τέλειο αυτοκίνητο σας",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Μάθε πρώτος για τις νέες καταχωρήσεις και εξασφάλισε τις καλύτερες προσφορές πριν από όλους τους άλλους.",
-        title: "Βρες το ιδανικό σου αυτοκίνητο"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const el = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW Σειρά 3, 2019, $32,500 - Μόλις καταχωρήθηκε στο AutoTrader",
-      title: "Βρέθηκε νέο ταίρι!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 30.000 μίλια - Η τιμή έπεσε κατά $2.000",
-      title: "Ειδοποίηση Telegram"
-    },
-    setalerts: "Ρύθμισε τις ειδοποιήσεις σου",
-    whytitle: "Γιατί να επιλέξεις το AMIQUUS;"
+    }
   },
   pricing: {
     title: "Απλές, διαφανείς τιμές",
@@ -218,17 +149,7 @@ export const el = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Ξεκίνα Τώρα",
-    addonstitle: "Πρόσθετα:",
-    basetitle: "Βασικό Πακέτο: 79,99 $/μήνα",
-    footernote: "Όλα τα πακέτα περιλαμβάνουν απεριόριστες ρυθμίσεις αναζήτησης και εύκολη διαχείριση συνδρομής.",
-    includedfeatures: {
-      0: "Παρακολούθηση μίας ιστοσελίδας",
-      1: "Ωριαίες ενημερώσεις",
-      2: "Απεριόριστα φίλτρα",
-      3: "Ειδοποιήσεις Telegram"
-    },
-    includedtitle: "Τι περιλαμβάνει;"
+    button: "Ξεκίνα Τώρα"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const el = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Η μάρκα αυτοκινήτου είναι απαραίτητη",
-      carmodel: "Απαιτείται μοντέλο αυτοκινήτου",
-      facebookmarketplaceurl: "Το URL του Facebook Marketplace είναι απαραίτητο όταν επιλέγεται το Facebook.",
-      fueltype: "Ο τύπος καυσίμου είναι απαραίτητος",
-      maxkilometers: "Ο μέγιστος αριθμός χιλιομέτρων πρέπει να είναι αριθμός",
-      notificationlanguage: "Η γλώσσα ειδοποίησης είναι υποχρεωτική",
-      pricemax: "Η μέγιστη τιμή πρέπει να είναι αριθμός",
-      pricemin: "Η ελάχιστη τιμή πρέπει να είναι αριθμός",
-      telegramchatid: "Απαιτείται το Telegram chat ID",
-      telegramtoken: "Απαιτείται το token του Telegram bot",
-      telegramusername: "Το όνομα χρήστη στο Telegram είναι απαραίτητο",
-      websitesselected: "Πρέπει να επιλεγεί τουλάχιστον μία ιστοσελίδα",
-      yearmax: "Το μέγιστο έτος πρέπει να είναι έγκυρο έτος",
-      yearmin: "Το ελάχιστο έτος πρέπει να είναι έγκυρο έτος"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const el = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Διεύθυνση ηλεκτρονικού ταχυδρομείου",
-      firstname: "Όνομα",
-      lastname: "Επώνυμο"
+      email: "Διεύθυνση ηλεκτρονικού ταχυδρομείου"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Γιάννης",
-      lastname: "Ελάφι"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Παρακαλώ εισάγετε έγκυρο email",
-      firstname: "Το όνομα είναι απαραίτητο",
-      lastname: "Το επώνυμο είναι υποχρεωτικό"
+      email: "Παρακαλώ εισάγετε έγκυρο email"
     },
     actions: {
       login: "Συνδεθείτε ή εγγραφείτε για να συνεχίσετε",
@@ -332,9 +233,7 @@ export const el = {
     labels: {
       websites: "Ιστοσελίδες για παρακολούθηση",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Σύνδεσμος Facebook Marketplace",
-      updatefrequency: "Συχνότητα ενημέρωσης"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Επιλέξτε συχνότητα"
@@ -344,16 +243,11 @@ export const el = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Επικόλλησε εδώ το URL των αποτελεσμάτων αναζήτησής σου στο Facebook Marketplace.",
-      updatefrequency: "Κάθε πότε να ελέγχουμε για νέες καταχωρήσεις; Πιο συχνοί έλεγχοι μπορεί να κοστίζουν παραπάνω.",
-      videodesc: "Δες το βίντεο πιο κάτω για οδηγίες βήμα προς βήμα.",
-      videotitle: "Χρειάζεσαι βοήθεια για να βρεις το σύνδεσμο αναζήτησης σου στο Facebook Marketplace;"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Πρέπει να επιλεγεί τουλάχιστον μία ιστοσελίδα",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Το URL του Facebook Marketplace είναι απαραίτητο όταν επιλέγεται το Facebook."
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Προηγούμενο",
@@ -371,15 +265,7 @@ export const el = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Μάρκα αυτοκινήτου",
-      carmodel: "Μοντέλο αυτοκινήτου",
-      fueltype: "Τύπος καυσίμου",
-      maxkilometers: "Μέγιστα χιλιόμετρα",
-      pricemax: "Μέγιστη Τιμή",
-      pricemin: "Ελάχιστη τιμή",
-      yearmax: "Μέγιστο Έτος",
-      yearmin: "Ελάχιστο Έτος"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const el = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Επιλέξτε μάρκα αυτοκινήτου",
-      carmodel: "Επιλέξτε μοντέλο αυτοκινήτου",
-      carmodeldisabled: "Επιλέξε πρώτα μάρκα αυτοκινήτου",
-      fueltype: "Επιλέξτε τύπο καυσίμου",
-      maxkilometers: "Εισάγετε μέγιστο αριθμό χιλιομέτρων",
-      pricemax: "Εισάγετε μέγιστη τιμή",
-      pricemin: "Εισάγετε ελάχιστη τιμή",
-      yearmax: "Εισάγετε μέγιστο έτος",
-      yearmin: "Εισάγετε το ελάχιστο έτος"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Δεν υπάρχουν διαθέσιμα μοντέλα"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const el = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Η μάρκα αυτοκινήτου είναι απαραίτητη",
-      carmodel: "Το μοντέλο αυτοκινήτου είναι απαραίτητο",
-      fueltype: "Ο τύπος καυσίμου είναι απαραίτητος",
-      maxkilometers: "Ο μέγιστος αριθμός χιλιομέτρων πρέπει να είναι αριθμός",
-      pricemax: "Η μέγιστη τιμή πρέπει να είναι αριθμός",
-      pricemin: "Η ελάχιστη τιμή πρέπει να είναι αριθμός",
-      yearmax: "Το μέγιστο έτος πρέπει να είναι έγκυρο έτος",
-      yearmin: "Το ελάχιστο έτος πρέπει να είναι έγκυρο έτος"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Προηγούμενο",
@@ -444,17 +312,7 @@ export const el = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Άνοιξε το Telegram και ψάξε για @BotFather",
-      botstep2: "Στείλε την εντολή /newbot",
-      botstep3: "Ακολούθησε τις οδηγίες για να δημιουργήσεις bot",
-      botstep4: "Αντέγραψε το token που σου έδωσε ο BotFather",
-      bottitle: "Πώς να πάρετε Token για Telegram Bot:",
-      chatstep1: "Άνοιξε το Telegram και ψάξε για @userinfobot",
-      chatstep2: "Στείλε οποιοδήποτε μήνυμα στο bot",
-      chatstep3: "Το bot θα απαντήσει με τα στοιχεία σου, συμπεριλαμβανομένου του Chat ID σου.",
-      chatstep4: "Αντιγράψε το ID συνομιλίας (είναι αριθμός)",
-      chattitle: "Πώς να βρεις το Telegram Chat ID σου:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const el = {
       token: "Κωδικός Bot Telegram",
       chatId: "Your Telegram Chat ID",
       language: "Γλώσσα Ειδοποιήσεων",
-      username: "Όνομα χρήστη Telegram",
-      chatid: "Το Telegram Chat ID σου"
+      username: "Όνομα χρήστη Telegram"
     },
     placeholders: {
       token: "Βάλε το bot token σου από το BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Επιλέξτε γλώσσα μηνύματος Telegram",
-      username: "Εισάγετε το όνομα χρήστη σας στο Telegram",
-      chatid: "Εισάγετε το Telegram chat ID σας"
+      username: "Εισάγετε το όνομα χρήστη σας στο Telegram"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Παράδειγμα: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Μπορείς να το πάρεις στέλνοντας μήνυμα στο @userinfobot στο Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const el = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const el = {
       token: "Απαιτείται το token του Telegram bot",
       chatId: "Telegram chat ID is required",
       language: "Η γλώσσα ειδοποίησης είναι απαραίτητη",
-      username: "Το όνομα χρήστη στο Telegram είναι απαραίτητο",
-      chatid: "Το Telegram chat ID είναι απαραίτητο"
+      username: "Το όνομα χρήστη στο Telegram είναι απαραίτητο"
     },
     actions: {
       previous: "Προηγούμενο",
@@ -544,47 +398,7 @@ export const el = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Παράδειγμα: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Κωδικός Telegram Bot",
-    bottokenplaceholder: "Εισάγετε το διακριτικό του bot σας από το BotFather",
-    caralerttitle: "🚗 Καινούριο αυτοκίνητο!",
-    chatiddescription: "Μπορείς να το πάρεις στέλνοντας μήνυμα στο @userinfobot στο Telegram.",
-    chatidlabel: "Το Telegram Chat ID σου",
-    chatidplaceholder: "Εισάγετε το Telegram chat ID σας",
-    chatidsteps: {
-      0: "Άνοιξε το Telegram και ψάξε για \"userinfobot\"",
-      1: "Στείλε οποιοδήποτε μήνυμα στο bot",
-      2: "Το bot θα απαντήσει με τα στοιχεία σου, συμπεριλαμβανομένου του Chat ID σου.",
-      3: "Αντιγράψε το Chat ID σου"
-    },
-    chatidtitle: "Πώς να βρεις το Telegram Chat ID σου:",
-    confirmcontact: "Ξεκίνησα συνομιλία με το bot και έστειλα μήνυμα",
-    contactbotinstruction: "Ξεκίνα συνομιλία με το Telegram bot μας πατώντας τον πιο κάτω σύνδεσμο και στέλνοντάς του μήνυμα:",
-    contactbotnote: "Αυτό είναι απαραίτητο για να λαμβάνεις ειδοποιήσεις για αυτοκίνητα. Αν είσαι σε υπολογιστή, μπορείς να σκανάρεις τον QR κωδικό.",
-    helpdescription: "Δες το βίντεο πιο κάτω για καθοδήγηση βήμα προς βήμα.",
-    helptitle: "Χρειάζεσαι βοήθεια για να ρυθμίσεις το Telegram Bot Token και το Chat ID σου;",
-    kilometreslabel: "Χιλιόμετρα: {{kms}}",
-    languagelabel: "Γλώσσα Ειδοποιήσεων",
-    languageplaceholder: "Επιλέξτε γλώσσα μηνύματος Telegram",
-    locationlabel: "Τοποθεσία: {{location}}",
-    previewtitle: "Προεπισκόπηση ειδοποιήσεων Telegram",
-    pricelabel: "Τιμή: {{price}}",
-    setupsteps: {
-      0: "Άνοιξε το Telegram και ψάξε για \"BotFather\"",
-      1: "Ξεκίνα συνομιλία με τον BotFather πατώντας «Έναρξη»",
-      2: "Πληκτρολόγησε /newbot και ακολούθα τις οδηγίες για να δημιουργήσεις νέο bot",
-      3: "Διάλεξε όνομα για το bot σου",
-      4: "Διάλεξε όνομα χρήστη για το bot σου (πρέπει να τελειώνει σε 'bot')",
-      5: "Αντέγραψε το API token που σου έδωσε ο BotFather",
-      6: "Στείλε μήνυμα στο νέο σου bot για να ενεργοποιήσεις τη συνομιλία"
-    },
-    setuptitle: "Οδηγίες Ρύθμισης:",
-    subheading: "Ρύθμισε το Telegram bot σου",
-    usernamedescription: "Αυτό είναι το όνομα χρήστη στον λογαριασμό σου στο Telegram (χωρίς το σύμβολο @).",
-    videodescription: "Δες το βίντεο πιο κάτω για αναλυτικές οδηγίες βήμα προς βήμα.",
-    videoprompt: "Χρειάζεσαι βοήθεια για να ρυθμίσεις το Telegram Bot Token και το Chat ID σου;",
-    viewlisting: "Δες την αγγελία →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Ελέγξτε τη συνδρομή σας",
@@ -598,9 +412,7 @@ export const el = {
       title: "Ρυθμίσεις παρακολούθησης",
       websites: "Ιστοσελίδες",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Σύνδεσμος Facebook",
-      updatefrequency: "Συχνότητα ενημέρωσης"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Προδιαγραφές αυτοκινήτου",
@@ -609,9 +421,7 @@ export const el = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Αυτονομία (χλμ)",
-      price: "Εύρος Τιμής (€)",
-      fueltype: "Τύπος καυσίμου",
-      yearrange: "Εύρος Χρονιάς"
+      price: "Εύρος Τιμής (€)"
     },
     notification: {
       title: "Ρυθμίσεις Ειδοποιήσεων",
@@ -623,9 +433,7 @@ export const el = {
       base: "Βασική συνδρομή",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Σύνολο (μηνιαία)",
-      extrawebsites: "Επιπλέον Ιστοσελίδες",
-      frequencyupgrade: "Αναβάθμιση συχνότητας"
+      total: "Σύνολο (μηνιαία)"
     },
     terms: {
       checkbox: "Συμφωνώ με",
@@ -669,9 +477,7 @@ export const el = {
         answer: "Μπορείς να ακυρώσεις τη συνδρομή σου οποιαδήποτε στιγμή από τον πίνακα ελέγχου του λογαριασμού σου. Πήγαινε στην ενότητα «Συνδρομές», επίλεξε τη συνδρομή που θέλεις να ακυρώσεις και πάτησε το κουμπί «Ακύρωση Συνδρομής». Η υπηρεσία σου θα παραμείνει ενεργή μέχρι το τέλος της τρέχουσας περιόδου χρέωσης.",
         question: "Πώς μπορώ να ακυρώσω τη συνδρομή μου;"
       }
-    },
-    contactlink: "Επικοινωνήστε με την ομάδα υποστήριξής μας",
-    contactprompt: "Έχετε ακόμα απορίες;"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const el = {
     about: "Σχετικά με εμάς",
     blog: "Ιστολόγιο",
     careers: "Καριέρα",
-    support: "Υποστήριξη",
-    branddescription: "Ο προσωπικός σου βοηθός για να βρεις την ιδανική προσφορά μεταχειρισμένου αυτοκινήτου την κατάλληλη στιγμή.",
-    brandtitle: "Amiquus",
-    getstarted: "Ξεκινήστε",
-    quicklinks: "Γρήγοροι Σύνδεσμοι"
+    support: "Υποστήριξη"
   },
   login: {
     title: "Συνδεθείτε στον λογαριασμό σας",
@@ -716,21 +518,8 @@ export const el = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Παρακαλώ εισάγετε έγκυρη διεύθυνση email",
-      shortpassword: "Ο κωδικός πρέπει να έχει τουλάχιστον 6 χαρακτήρες"
-    },
-    emaillabel: "Ηλεκτρονικό ταχυδρομείο",
-    errortitle: "Η σύνδεση απέτυχε",
-    genericerror: "Παρακαλώ ελέγξετε τα στοιχεία σας και προσπαθήστε ξανά.",
-    loggingin: "Σύνδεση...",
-    loginbutton: "Σύνδεση",
-    loginwithgoogle: "Σύνδεση με Google",
-    noaccount: "Δεν έχεις λογαριασμό;",
-    passwordlabel: "Κωδικός",
-    registerlink: "Εγγραφή",
-    successmessage: "Έχετε συνδεθεί επιτυχώς.",
-    successtitle: "Επιτυχής σύνδεση"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Δημιούργησε λογαριασμό",
@@ -774,33 +563,8 @@ export const el = {
       failure: {
         title: "Η εγγραφή απέτυχε",
         desc: "Παρακαλώ ελέγξετε τα στοιχεία σας και προσπαθήστε ξανά."
-      },
-      invalidusername: {
-        desc: "Το όνομα χρήστη πρέπει να είναι αλφαριθμητικό και να έχει από 3 μέχρι 20 χαρακτήρες",
-        title: "Μη έγκυρο όνομα χρήστη"
-      },
-      missingfields: {
-        desc: "Παρακαλώ συμπληρώστε όλα τα απαιτούμενα πεδία",
-        title: "Λείπουν πεδία"
-      },
-      passwordmismatch: {
-        desc: "Παρακαλώ βεβαιωθείτε ότι οι κωδικοί σας ταιριάζουν",
-        title: "Οι κωδικοί δεν ταιριάζουν"
-      },
-      termsnotaccepted: {
-        desc: "Πρέπει να αποδεχτείς τους όρους και την πολιτική απορρήτου για να συνεχίσεις",
-        title: "Οι όροι δεν έγιναν αποδεκτοί"
       }
-    },
-    alreadyhave: "Έχεις ήδη λογαριασμό;",
-    confirmpassword: "Επιβεβαίωση Κωδικού",
-    createbtn: "Δημιουργία λογαριασμού",
-    firstname: "Όνομα",
-    lastname: "Επώνυμο",
-    orcontinue: "Ή συνέχισε με",
-    privacypolicy: "Πολιτική Απορρήτου",
-    termsnotice: "Συμφωνώ με",
-    termsofservice: "Όροι Χρήσης"
+    }
   },
   verifyEmail: {
     title: "Επιβεβαίωσε το email σου",
@@ -821,20 +585,8 @@ export const el = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Το email ενημερώθηκε",
-      entervalidemail: "Παρακαλώ εισάγετε έγκυρη διεύθυνση email",
-      invalidemail: "Μη έγκυρο email",
-      sameemail: "Ίδιο email",
-      sameemaildesc: "Το νέο email είναι ίδιο με το τρέχον email."
-    },
-    codelabel: "Κωδικός Επαλήθευσης",
-    footernote: "Δεν έλαβες τον κωδικό; Έλεγξε τον φάκελο ανεπιθύμητης αλληλογραφίας σου.",
-    resendbutton: "Ξαναστείλε τον κωδικό",
-    resendcountdown: "Μπορείς να ξαναστείλεις τον κωδικό σε {{seconds}}δ",
-    updateemailbutton: "Ενημέρωση Email",
-    updateemaillabel: "Ενημέρωση Email",
-    verifybutton: "Επιβεβαίωσε το email"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Προσθήκη Τρόπου Πληρωμής",
@@ -845,12 +597,6 @@ export const el = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Παρουσιάστηκε ένα απρόσμενο σφάλμα",
-    errortitle: "Σφάλμα κατά την προσθήκη μεθόδου πληρωμής",
-    initerror: {
-      description: "Δεν ήταν δυνατή η αρχικοποίηση της ρύθμισης πληρωμής",
-      title: "Σφάλμα"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const el = {
       methods: "Τρόποι πληρωμής",
       account: "Ρυθμίσεις λογαριασμού",
       privacy: "Απόρρητο & ασφάλεια",
-      logout: "Αποσύνδεση",
-      membersince: "Μέλος από"
+      logout: "Αποσύνδεση"
     },
     account: {
       title: "Ρυθμίσεις λογαριασμού",
@@ -955,14 +700,8 @@ export const el = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Για να λαμβάνεις ειδοποιήσεις για αυτοκίνητα, πρέπει να ξεκινήσεις συνομιλία με το Telegram bot μας και να στείλεις μήνυμα. Ακολούθησε τις πιο κάτω οδηγίες για να επικοινωνήσεις με το bot.",
-        title: "Απαιτείται bot επικοινωνίας"
       }
-    },
-    basetitle: "$79,99/μήνα",
-    basicplan: "Βασικό πακέτο"
+    }
   },
   loginPrompt: {
     title: "Απαιτείται σύνδεση",
@@ -1005,15 +744,8 @@ export const el = {
       },
       error: {
         title: "Σφάλμα κατά την ενημέρωση της συνδρομής"
-      },
-      priceerror: {
-        description: "Δεν γίνεται να παγώσεις και να αλλάξεις την τιμή της συνδρομής ταυτόχρονα. Πρέπει είτε να παγώσεις είτε να αλλάξεις την τιμή.",
-        title: "Δεν είναι δυνατή η ενημέρωση της συνδρομής"
       }
-    },
-    notfound: "Η συνδρομή δεν βρέθηκε",
-    notfoundsub: "Επιστροφή στον πίνακα ελέγχου",
-    subtitle: "Επεξεργαστείτε τα στοιχεία της συνδρομής σας πιο κάτω"
+    }
   },
   about: {
     title: "Σχετικά με την Amiquus",
@@ -1241,8 +973,7 @@ export const el = {
           1: "Με το να επισκεφτείς τη σελίδα επικοινωνίας στην ιστοσελίδα μας"
         }
       }
-    },
-    lastupdated: "Τελευταία ενημέρωση: 21 Μαΐου 2025"
+    }
   },
   privacy: {
     metaTitle: "Πολιτική Απορρήτου | Amiquus",
@@ -1363,8 +1094,7 @@ export const el = {
           1: "Με επίσκεψη στη σελίδα επικοινωνίας στην ιστοσελίδα μας"
         }
       }
-    },
-    lastupdated: "Τελευταία ενημέρωση: 21 Μαΐου 2025"
+    }
   },
   faqs: {
     metaTitle: "Συχνές Ερωτήσεις | Amiquus",
@@ -1408,34 +1138,6 @@ export const el = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Ορίζεις τα κριτήρια αναζήτησής σου (μάρκα, μοντέλο, εύρος τιμής κλπ.)",
-          1: "Εσύ διαλέγεις ποιες ιστοσελίδες θέλεις να παρακολουθείς",
-          2: "Συνδέεις τον λογαριασμό σου στο Telegram για ειδοποιήσεις",
-          3: "Το σύστημά μας παρακολουθεί συνεχώς τις επιλεγμένες ιστοσελίδες σας για νέες καταχωρήσεις",
-          4: "Όταν εμφανιστεί αυτοκίνητο που ταιριάζει, λαμβάνεις άμεση ειδοποίηση στο Telegram με όλες τις λεπτομέρειες και απευθείας σύνδεσμο."
-        },
-        question: "Πώς λειτουργεί;"
-      },
-      whatis: {
-        answer: "Το AMIQUUS είναι μια υπηρεσία που παρακολουθεί πολλές ιστοσελίδες με αγγελίες αυτοκινήτων για οχήματα που ταιριάζουν στα δικά σου κριτήρια. Μόλις εμφανιστεί μια σχετική αγγελία, λαμβάνεις άμεση ειδοποίηση μέσω Telegram, ώστε να είσαι από τους πρώτους που θα επικοινωνήσουν με τους πωλητές και να εξασφαλίσεις καλές ευκαιρίες.",
-        question: "Τι είναι το Amiquus;"
-      },
-      whichwebsites: {
-        answerintro: "Αυτή τη στιγμή παρακολουθούμε τις ακόλουθες μεγάλες πλατφόρμες αγγελιών αυτοκινήτων:",
-        list: {
-          0: "AutoTrader",
-          1: "AMIQUUS",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (μέσω URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Συνεχώς προσθέτουμε νέες πλατφόρμες για να προσφέρουμε την πιο ολοκληρωμένη κάλυψη.",
-        question: "Ποιες ιστοσελίδες αγγελιών αυτοκινήτων παρακολουθείτε;"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const el = {
           2: "Επιλέξτε την καρτέλα «Συνδρομές»",
           3: "Πατήστε το κουμπί «Ακύρωση Συνδρομής» δίπλα από τη συνδρομή που θέλετε να ακυρώσετε"
         },
-        note: "Η συνδρομή σου θα παραμείνει ενεργή μέχρι το τέλος της τρέχουσας περιόδου χρέωσης.",
-        stepsintro: "Μπορείς να ακυρώσεις τη συνδρομή σου οποιαδήποτε στιγμή από τη σελίδα προφίλ του λογαριασμού σου:"
+        note: "Η συνδρομή σου θα παραμείνει ενεργή μέχρι το τέλος της τρέχουσας περιόδου χρέωσης."
       },
       multiple: {
         question: "Μπορώ να έχω περισσότερες από μία συνδρομές για διαφορετικά μοντέλα αυτοκινήτων;",
@@ -1488,8 +1189,7 @@ export const el = {
           4: "Βάλε το token του bot σου και το chat ID στις ρυθμίσεις συνδρομής του AMIQUUS",
           5: "Δοκίμασε τη ρύθμιση ειδοποιήσεων σου με το κουμπί `Αποστολή δοκιμαστικού μηνύματος`"
         },
-        note: "Αναλυτικές οδηγίες βήμα προς βήμα με στιγμιότυπα οθόνης παρέχονται κατά τη διαδικασία ρύθμισης της συνδρομής.",
-        stepsintro: "Για να ρυθμίσεις ειδοποιήσεις στο Telegram:"
+        note: "Αναλυτικές οδηγίες βήμα προς βήμα με στιγμιότυπα οθόνης παρέχονται κατά τη διαδικασία ρύθμισης της συνδρομής."
       },
       frequency: {
         question: "Κάθε πότε θα λαμβάνω ειδοποιήσεις;",
@@ -1561,19 +1261,7 @@ export const el = {
         description: "Θα χρησιμοποιήσουμε αυτό το email για να σας ειδοποιήσουμε όταν ελευθερωθεί θέση."
       },
       submit: "Γίνε μέλος στη λίστα αναμονής",
-      submitting: "Υποβάλλεται...",
-      firstname: {
-        label: "Όνομα",
-        placeholder: "Γιάννης"
-      },
-      lastname: {
-        label: "Επώνυμο",
-        placeholder: "Ντοε"
-      }
-    },
-    cantjoin: {
-      description: "Θα σε ενημερώσουμε μόλις ελευθερωθεί θέση για συνδρομή.",
-      title: "Γίνε μέλος στη λίστα αναμονής"
+      submitting: "Υποβάλλεται..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const el = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Στείλτε μας email και θα σας απαντήσουμε εντός 24 ωρών.",
-      email: "support@amiquus.com",
-      title: "Υποστήριξη μέσω email"
-    },
-    faqheading: "Συχνές Ερωτήσεις",
-    stillneedhelp: {
-      button: "Επικοινωνία με την υποστήριξη",
-      description: "Αν δεν βρήκες απάντηση στην ερώτησή σου, μη διστάσεις να επικοινωνήσεις με την ομάδα υποστήριξής μας. Είμαστε εδώ για να βοηθήσουμε!",
-      heading: "Χρειάζεσαι ακόμα βοήθεια;"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const el = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Ακύρωση",
-    confirmremove: "Αφαίρεση κάρτας",
-    default: "Προεπιλογή",
-    expires: "Λήγει",
-    remove: "Αφαίρεση",
-    removedescription: "Είσαι σίγουρος ότι θέλεις να αφαιρέσεις την κάρτα {{brand}} που τελειώνει σε {{last4}};",
-    removetitle: "Αφαίρεση μεθόδου πληρωμής",
-    removewarning: "Αυτή είναι η προεπιλεγμένη μέθοδος πληρωμής σου και η αφαίρεσή της μπορεί να επηρεάσει τις ενεργές σου συνδρομές.",
-    setasdefault: "Ορισμός ως προεπιλογή",
-    setdefaultdescription: "Θέλεις να ορίσεις την κάρτα {{brand}} που τελειώνει σε {{last4}} ως την προεπιλεγμένη μέθοδο πληρωμής σου; Αυτή η κάρτα θα χρησιμοποιείται για όλες τις μελλοντικές πληρωμές συνδρομής.",
-    setdefaulttitle: "Ορισμός προεπιλεγμένης μεθόδου πληρωμής"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Ακύρωση ειδοποίησης",
-    canceldescription: "Είσαι σίγουρος ότι θέλεις να ακυρώσεις την ειδοποίηση αυτοκινήτου για {{brand}} {{model}}; Αυτό θα σταματήσει όλες τις ειδοποιήσεις και θα χρειαστεί να δημιουργήσεις νέα ειδοποίηση αν θέλεις να παρακολουθήσεις ξανά αυτό το αυτοκίνητο.",
-    canceltitle: "Ακύρωση ειδοποίησης αυτοκινήτου",
-    confirmcancel: "Ακύρωση ειδοποίησης",
-    edit: "Επεξεργασία",
-    keepmyalert: "Κράτα την ειδοποίησή μου",
-    language: "Γλώσσα",
-    price: "Τιμή",
-    pricerange: "Τιμή",
-    updates: "Ενημερώσεις",
-    websites: "Ιστοσελίδες",
-    years: "Χρόνια"
-  },
-  signUp: {
-    cta: "Λάβε ειδοποιήσεις τώρα",
-    heading: "Δημιούργησε ειδοποίηση για το αυτοκίνητό σου",
-    subheading: "Ρύθμισε τις προσωπικές σου ειδοποιήσεις για αγγελίες αυτοκινήτων σε λίγα μόνο βήματα.",
-    toast: {
-      error: {
-        description: "Δεν ήταν δυνατό να δημιουργήσουμε τη συνδρομή σου. Παρακαλώ δοκίμασε ξανά αργότερα.",
-        title: "Η συνδρομή απέτυχε"
-      },
-      success: {
-        description: "Η συνδρομή σου δημιουργήθηκε με επιτυχία",
-        title: "Η συνδρομή δημιουργήθηκε"
-      }
-    },
-    waitlist: {
-      cta: "Εγγραφείτε στη λίστα αναμονής",
-      message: "Αυτή τη στιγμή είμαστε πλήρεις. Παρακαλούμε εγγραφείτε στη λίστα αναμονής μας για να ενημερωθείτε όταν ανοίξει θέση."
     }
   }
 };

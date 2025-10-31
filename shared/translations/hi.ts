@@ -24,16 +24,10 @@ export const hi = {
     button1: "Set Up Your Alerts",
     button2: "See Kaise Kaam Karta Hai",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Cancel anytime",
-      nosetup: "No setup needed",
-      realtime: "Instant updates",
-      websites: "Tracking 15+ websites"
+      websites: "15+ वेबसाइटें ट्रैक की गईं",
+      realtime: "रियल-टाइम अलर्ट",
+      noSetup: "कोई सेटअप आवश्यक नहीं",
+      cancelAnytime: "कभी भी रद्द करें"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const hi = {
     heading: "Why to Choose Amiquus?",
     subheading: "Save your time and never miss your perfect car with AMIQUUS automatic tracking service.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "मल्टी-साइट ट्रैकिंग",
+      description: "प्रत्येक को मैन्युअल रूप से जाँचे बिना एक साथ कई कार लिस्टिंग वेबसाइटों की निगरानी करें।"
     },
     notifications: {
       title: "Instant Alerts",
@@ -73,61 +67,12 @@ export const hi = {
       description: "Select how often you want us to check for new listings, from hourly updates to real-time tracking."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "एकाधिक भाषा समर्थन",
+      description: "लिस्टिंग की आसान समझ के लिए अपनी पसंदीदा भाषा में सूचनाएं प्राप्त करें।"
     },
     account: {
       title: "Simple Account Management",
       description: "Easily manage multiple search profiles and update your subscription settings in just a few clicks."
-    },
-    multisite: {
-      description: "Track multiple car listing websites at once on AMIQUUS, no need to check each site manually.",
-      title: "Track Multiple Websites"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const hi = {
         description: "Get instant alerts as soon as a car matching your needs shows up on any of the websites we track."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "अपनी परफेक्ट कार खोजें",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Be the first to know about new listings on AMIQUUS and grab the best deals before anyone else.",
-        title: "Find Your Perfect Car"
       }
     },
     features: {
@@ -171,17 +112,7 @@ export const hi = {
     notificationMockup2: {
       title: "Telegram Alert",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 Series, 2019, ₹32,500 - Just listed on AMIQUUS",
-      title: "Naya Match Mila Hai!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 30,000 km - Price reduced by ₹1,65,000",
-      title: "Telegram Alert"
-    },
-    setalerts: "Set Your Alerts",
-    whytitle: "Why to choose Amiquus?"
+    }
   },
   pricing: {
     title: "Simple aur Transparent Pricing",
@@ -218,17 +149,7 @@ export const hi = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Start Karein",
-    addonstitle: "Add-ons:",
-    basetitle: "Base Package: ₹799/month",
-    footernote: "Sabhi plans mein unlimited search configurations aur aasaan subscription management shamil hai.",
-    includedfeatures: {
-      0: "Ek website monitoring",
-      1: "Hourly updates",
-      2: "Unlimited filters",
-      3: "Telegram alerts"
-    },
-    includedtitle: "Kya Kya Shaamil Hai:"
+    button: "Start Karein"
   },
   signup: {
     heading: "Create Your Car Alert",
@@ -280,21 +201,7 @@ export const hi = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Car brand is required",
-      carmodel: "Car model is mandatory",
-      facebookmarketplaceurl: "Facebook Marketplace ka URL zaroori hai jab Facebook select kiya gaya ho",
-      fueltype: "Fuel type is mandatory",
-      maxkilometers: "Max kilometers should be a number",
-      notificationlanguage: "Notification language is mandatory",
-      pricemax: "Maximum price should be a number",
-      pricemin: "Minimum price should be a number",
-      telegramchatid: "Telegram chat ID dena zaroori hai",
-      telegramtoken: "Telegram bot token is needed",
-      telegramusername: "Telegram username dena zaroori hai",
-      websitesselected: "Kam se kam ek website chunni zaroori hai",
-      yearmax: "Maximum year should be a valid year",
-      yearmin: "Minimum year should be a valid year"
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const hi = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "Email ID",
-      firstname: "First Name",
-      lastname: "Surname"
+      email: "Email ID"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "John",
-      lastname: "Jain"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Please enter a valid email address",
-      firstname: "First name is mandatory",
-      lastname: "Last name is mandatory"
+      email: "Please enter a valid email address"
     },
     actions: {
       login: "Login ya Sign Up karke aage badhein",
@@ -332,9 +233,7 @@ export const hi = {
     labels: {
       websites: "Websites to monitor",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace URL",
-      updatefrequency: "Update Frequency"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Choose frequency"
@@ -344,16 +243,11 @@ export const hi = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Paste the URL of your Facebook Marketplace search results here.",
-      updatefrequency: "How often should we check for new listings? Checking more frequently might increase the cost.",
-      videodesc: "Please watch the video below for step-by-step guidance.",
-      videotitle: "Need help finding your Facebook Marketplace search link?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "Kam se kam ek website select karni zaroori hai",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace ka URL zaroori hai jab Facebook select kiya gaya ho"
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Previous",
@@ -371,15 +265,7 @@ export const hi = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Car Brand",
-      carmodel: "Car Model",
-      fueltype: "Fuel Type",
-      maxkilometers: "Maximum Kilometers",
-      pricemax: "Maximum Price",
-      pricemin: "Minimum Price",
-      yearmax: "Maximum Year",
-      yearmin: "Minimum Year"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const hi = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Select Car Brand",
-      carmodel: "Choose Car Model",
-      carmodeldisabled: "Please select car brand first",
-      fueltype: "Choose Fuel Type",
-      maxkilometers: "Enter maximum kilometers",
-      pricemax: "Enter maximum price",
-      pricemin: "Enter minimum price",
-      yearmax: "Please enter maximum year",
-      yearmin: "Please enter minimum year"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "No Models Available"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const hi = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Car brand is required",
-      carmodel: "Car model is mandatory",
-      fueltype: "Fuel type is mandatory",
-      maxkilometers: "Max kilometers should be a number",
-      pricemax: "Maximum price should be a number",
-      pricemin: "Minimum price should be a number",
-      yearmax: "Maximum year should be a valid year",
-      yearmin: "Minimum year should be a valid year"
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Previous",
@@ -444,17 +312,7 @@ export const hi = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Open Telegram and search for @BotFather",
-      botstep2: "Type the command /newbot",
-      botstep3: "Please follow the steps to create a bot",
-      botstep4: "Copy the token given by BotFather",
-      bottitle: "How to get a Telegram Bot Token:",
-      chatstep1: "Open Telegram and search for @userinfobot",
-      chatstep2: "Send any message to the bot",
-      chatstep3: "The bot will reply with your details including your Chat ID",
-      chatstep4: "Copy the Chat ID (yeh ek number hai)",
-      chattitle: "How to find your Telegram Chat ID:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const hi = {
       token: "Telegram Bot Token",
       chatId: "Your Telegram Chat ID",
       language: "Notification Language",
-      username: "Telegram Username",
-      chatid: "Your Telegram Chat ID"
+      username: "Telegram Username"
     },
     placeholders: {
       token: "Please enter your bot token from BotFather",
       chatId: "Enter your Telegram chat ID",
       language: "Select Telegram Message Language",
-      username: "Please enter your Telegram username",
-      chatid: "Please enter your Telegram chat ID"
+      username: "Please enter your Telegram username"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "You can get this by messaging @userinfobot on Telegram."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const hi = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const hi = {
       token: "Telegram bot token zaroori hai",
       chatId: "Telegram chat ID is required",
       language: "Notification language is mandatory",
-      username: "Telegram username dena zaroori hai",
-      chatid: "Telegram chat ID is mandatory"
+      username: "Telegram username dena zaroori hai"
     },
     actions: {
       previous: "Pichla",
@@ -544,47 +398,7 @@ export const hi = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Telegram Bot Token",
-    bottokenplaceholder: "Please enter your bot token from BotFather",
-    caralerttitle: "🚗 Nayi Gaadi Aayi Hai!",
-    chatiddescription: "You can get this by messaging @userinfobot on Telegram.",
-    chatidlabel: "Your Telegram Chat ID",
-    chatidplaceholder: "Please enter your Telegram chat ID",
-    chatidsteps: {
-      0: "Open Telegram and search for \"userinfobot\"",
-      1: "Send any message to the bot",
-      2: "The bot will reply with your details, including your Chat ID",
-      3: "Copy your Chat ID"
-    },
-    chatidtitle: "How to find your Telegram Chat ID:",
-    confirmcontact: "I have started a chat with the bot and sent a message",
-    contactbotinstruction: "Start a chat with our Telegram bot by clicking the link below and sending a message to it:",
-    contactbotnote: "This is needed to get car alerts. If you are using a computer, you can scan the QR code.",
-    helpdescription: "Watch the video below for a step-by-step guide.",
-    helptitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    kilometreslabel: "Kilometres: {{kms}}",
-    languagelabel: "Notification Language",
-    languageplaceholder: "Select Telegram Message Language",
-    locationlabel: "Location: {{location}}",
-    previewtitle: "Preview Telegram Notifications",
-    pricelabel: "Price: ₹{{price}}",
-    setupsteps: {
-      0: "Open Telegram and search for \"BotFather\"",
-      1: "Start a chat with BotFather by clicking on \"Start\"",
-      2: "Type /newbot and follow the steps to make a new bot",
-      3: "Please enter a name for your bot",
-      4: "Choose a username for your bot (it should end with 'bot')",
-      5: "Copy the API token given by BotFather",
-      6: "Send a message to your new bot on AMIQUUS to start the chat"
-    },
-    setuptitle: "How to set up:",
-    subheading: "Set Up Your Telegram Bot",
-    usernamedescription: "Yeh aapke Telegram account ka username hai (bina @ wale symbol ke).",
-    videodescription: "Watch the video below for a step-by-step guide.",
-    videoprompt: "Need help to set up your Telegram Bot Token and Chat ID?",
-    viewlisting: "See Listing →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Check Your Subscription",
@@ -598,9 +412,7 @@ export const hi = {
       title: "Monitoring Settings",
       websites: "Websites",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Profile Link",
-      updatefrequency: "Update Frequency"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Car Details",
@@ -609,9 +421,7 @@ export const hi = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Mileage Range (km)",
-      price: "Price Range (₹)",
-      fueltype: "Fuel Type",
-      yearrange: "Year Range"
+      price: "Price Range (₹)"
     },
     notification: {
       title: "Notification Settings",
@@ -623,9 +433,7 @@ export const hi = {
       base: "Basic Subscription",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Per Month)",
-      extrawebsites: "More Websites",
-      frequencyupgrade: "Frequency Upgrade"
+      total: "Total (Per Month)"
     },
     terms: {
       checkbox: "I agree to the",
@@ -669,9 +477,7 @@ export const hi = {
         answer: "You can cancel your subscription anytime from your account dashboard. Just go to the \"Subscriptions\" section, pick the subscription you want to cancel, and click on the \"Cancel Subscription\" button. Your service will stay active till the end of your current billing cycle.",
         question: "How can I cancel my AMIQUUS subscription?"
       }
-    },
-    contactlink: "Get in touch with our support team",
-    contactprompt: "Still have questions?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const hi = {
     about: "About Us",
     blog: "Blog",
     careers: "Jobs",
-    support: "Help",
-    branddescription: "Your personal assistant to help you find the best used car deal at just the right time.",
-    brandtitle: "Amiquus",
-    getstarted: "Get Started",
-    quicklinks: "Quick Links"
+    support: "Help"
   },
   login: {
     title: "Log in to your AMIQUUS account",
@@ -716,21 +518,8 @@ export const hi = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Please enter a valid email address",
-      shortpassword: "Password should have at least 6 characters"
-    },
-    emaillabel: "Email",
-    errortitle: "Login failed",
-    genericerror: "Please check your details and try again.",
-    loggingin: "Signing in...",
-    loginbutton: "Sign in",
-    loginwithgoogle: "Log in with Google",
-    noaccount: "Don’t have an account?",
-    passwordlabel: "Password",
-    registerlink: "Sign Up",
-    successmessage: "You have successfully logged in to AMIQUUS.",
-    successtitle: "Login successful"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Sign up",
@@ -774,33 +563,8 @@ export const hi = {
       failure: {
         title: "Registration unsuccessful",
         desc: "Please check your details and try again."
-      },
-      invalidusername: {
-        desc: "Username should be alphanumeric and have 3 to 20 characters",
-        title: "Invalid username"
-      },
-      missingfields: {
-        desc: "Please fill all the required fields",
-        title: "Required fields missing"
-      },
-      passwordmismatch: {
-        desc: "Please check if your passwords are matching",
-        title: "Passwords are not matching"
-      },
-      termsnotaccepted: {
-        desc: "You need to accept the terms and privacy policy to continue on AMIQUUS.",
-        title: "Terms not accepted"
       }
-    },
-    alreadyhave: "Already have an account?",
-    confirmpassword: "Re-enter Password",
-    createbtn: "Sign up",
-    firstname: "First Name",
-    lastname: "Surname",
-    orcontinue: "Ya phir continue karein",
-    privacypolicy: "Privacy Policy",
-    termsnotice: "I agree to the",
-    termsofservice: "Terms & Conditions"
+    }
   },
   verifyEmail: {
     title: "Please verify your email",
@@ -821,20 +585,8 @@ export const hi = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Email updated successfully",
-      entervalidemail: "Please enter a valid email address",
-      invalidemail: "Invalid email id",
-      sameemail: "Same email",
-      sameemaildesc: "The new email id is same as your current email id."
-    },
-    codelabel: "OTP Code",
-    footernote: "Didn’t get the code? Please check your spam or junk folder.",
-    resendbutton: "Send Code Again",
-    resendcountdown: "You can resend the code in {{seconds}} seconds",
-    updateemailbutton: "Update Email",
-    updateemaillabel: "Update Email",
-    verifybutton: "Verify Email"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Add Payment Method",
@@ -845,12 +597,6 @@ export const hi = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Some error happened, please try again.",
-    errortitle: "Problem adding payment method",
-    initerror: {
-      description: "Payment setup nahi ho pa raha hai",
-      title: "Galti"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const hi = {
       methods: "Payment options",
       account: "Account settings",
       privacy: "Privacy & Security",
-      logout: "Log out",
-      membersince: "Member since"
+      logout: "Log out"
     },
     account: {
       title: "Account Settings",
@@ -939,7 +684,7 @@ export const hi = {
     basicPlan: "Basic Plan",
     baseTitle: "$9.99/month",
     button: "Start My Car Alert Service",
-    cancel: "Cancel anytime",
+    cancel: "कभी भी रद्द करें",
     toasts: {
       terms: {
         title: "Terms not accepted",
@@ -955,14 +700,8 @@ export const hi = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "To get car alerts, you need to start a chat with our Telegram bot and send a message. Please follow the steps below to contact the bot.",
-        title: "Contact Bot Zaroori Hai"
       }
-    },
-    basetitle: "₹999/month",
-    basicplan: "Basic Plan"
+    }
   },
   loginPrompt: {
     title: "Login Needed",
@@ -1005,15 +744,8 @@ export const hi = {
       },
       error: {
         title: "Problem updating subscription"
-      },
-      priceerror: {
-        description: "You are trying to pause and update your subscription price together. Please either pause or update the price, not both at the same time.",
-        title: "Unable to Update Subscription"
       }
-    },
-    notfound: "Subscription not found",
-    notfoundsub: "Go back to dashboard",
-    subtitle: "Update your subscription details below"
+    }
   },
   about: {
     title: "About Amiquus",
@@ -1241,8 +973,7 @@ export const hi = {
           1: "By going to the contact page on our AMIQUUS website"
         }
       }
-    },
-    lastupdated: "Last updated: 21 May 2025"
+    }
   },
   privacy: {
     metaTitle: "Privacy Policy | Amiquus",
@@ -1363,8 +1094,7 @@ export const hi = {
           1: "By going to the contact page on our AMIQUUS website"
         }
       }
-    },
-    lastupdated: "Last updated on: 21 May 2025"
+    }
   },
   faqs: {
     metaTitle: "Frequently Asked Questions | Amiquus",
@@ -1408,34 +1138,6 @@ export const hi = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Set your search preferences (brand, model, price range, etc.)",
-          1: "You choose which websites you want to keep an eye on",
-          2: "You connect your Telegram account for getting notifications",
-          3: "Our system keeps checking your chosen websites for new listings all the time",
-          4: "Jab bhi matching car milti hai, turant hi aapko Telegram par notification mil jaata hai, saari details aur direct link ke saath."
-        },
-        question: "How does it work?"
-      },
-      whatis: {
-        answer: "Amiquus is a service that keeps an eye on multiple car selling websites for vehicles matching your exact needs. Whenever a suitable car is listed, you get an instant alert on Telegram, so you can be one of the first to contact the seller and grab the best deals.",
-        question: "Amiquus kya hai?"
-      },
-      whichwebsites: {
-        answerintro: "Right now, we are keeping an eye on these top car listing platforms:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (through URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "We are always adding new platforms so you get the most complete coverage on AMIQUUS.",
-        question: "Which car selling websites do you check?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const hi = {
           2: "Click on the \"Subscriptions\" tab",
           3: "Click on the \"Cancel Subscription\" button next to the subscription you want to cancel"
         },
-        note: "Your subscription will stay active till your current billing period ends.",
-        stepsintro: "You can cancel your subscription anytime from your account profile page."
+        note: "Your subscription will stay active till your current billing period ends."
       },
       multiple: {
         question: "Can I take multiple subscriptions for different car models?",
@@ -1488,8 +1189,7 @@ export const hi = {
           4: "Please enter your bot token and chat ID in your Amiquus subscription settings.",
           5: "Check your notification setup by clicking the `Send Test Message` button"
         },
-        note: "You will get easy step-by-step instructions with screenshots during the subscription setup process.",
-        stepsintro: "To enable Telegram notifications:"
+        note: "You will get easy step-by-step instructions with screenshots during the subscription setup process."
       },
       frequency: {
         question: "Kitni baar mujhe notifications milenge?",
@@ -1561,19 +1261,7 @@ export const hi = {
         description: "We’ll use this email to inform you when a spot is available."
       },
       submit: "Join Waitlist",
-      submitting: "Submitting...",
-      firstname: {
-        label: "First Name",
-        placeholder: "John"
-      },
-      lastname: {
-        label: "Surname",
-        placeholder: "Jaan"
-      }
-    },
-    cantjoin: {
-      description: "We’ll let you know as soon as a subscription spot opens up.",
-      title: "Join the Waitlist"
+      submitting: "Submitting..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const hi = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Drop us an email and we’ll reply to you within 24 hours",
-      email: "support@amiquus.com",
-      title: "Email Support"
-    },
-    faqheading: "Frequently Asked Questions",
-    stillneedhelp: {
-      button: "Contact Support",
-      description: "If you didn’t find the answer to your question, please contact our support team at AMIQUUS. We are always here to help you!",
-      heading: "Still need help?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const hi = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Cancel",
-    confirmremove: "Remove Card",
-    default: "Default",
-    expires: "Validity Ends",
-    remove: "Delete",
-    removedescription: "Are you sure you want to remove your {{brand}} card ending with {{last4}}?",
-    removetitle: "Remove Payment Option",
-    removewarning: "This is your default payment method and removing it may affect your active subscriptions.",
-    setasdefault: "Set as Default",
-    setdefaultdescription: "Do you want to set the AMIQUUS card ending with {{last4}} as your default payment method? This card will be used for all your future subscription payments.",
-    setdefaulttitle: "Set Default Payment Method"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Cancel Alert",
-    canceldescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? All notifications will stop and if you want to track this car again, you’ll have to set a new alert.",
-    canceltitle: "Cancel Car Alert",
-    confirmcancel: "Cancel Alert",
-    edit: "Edit",
-    keepmyalert: "Save My Alert",
-    language: "Bhasha",
-    price: "Price",
-    pricerange: "Price",
-    updates: "Latest Updates",
-    websites: "Websites",
-    years: "Years"
-  },
-  signUp: {
-    cta: "Get Alerts Instantly",
-    heading: "Set Your Car Alert",
-    subheading: "Set up your personalised car alerts on AMIQUUS in just a few easy steps.",
-    toast: {
-      error: {
-        description: "We couldn't create your subscription. Please try again later.",
-        title: "Subscription failed"
-      },
-      success: {
-        description: "Your subscription has been created successfully",
-        title: "Subscription has been created"
-      }
-    },
-    waitlist: {
-      cta: "Join Waitlist",
-      message: "Right now, we are full. Please join our waitlist and we’ll let you know as soon as a spot is available."
     }
   }
 };
