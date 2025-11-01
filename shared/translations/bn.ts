@@ -2,1501 +2,1443 @@ export const bn = {
   navigations: {
     features: "বৈশিষ্ট্য",
     how: "কীভাবে কাজ করে",
-    pricing: "মূল্য নির্ধারণ",
-    getAlerts: "সতর্কতা পান",
-    waitlist: "অপেক্ষা তালিকা",
-    faq: "সচরাচর জিজ্ঞাসিত প্রশ্নাবলী",
-    login: "প্রবেশ করুন",
+    pricing: "মূল্য",
+    getAlerts: "অ্যালার্ট নিন",
+    waitlist: "ওয়েটলিস্ট",
+    faq: "প্রশ্নোত্তর",
+    login: "লগ ইন",
     getStarted: "শুরু করুন",
-    subscribers: "গ্রাহক",
+    subscribers: "সাবস্ক্রাইবার",
     theme: "থিম",
     language: "ভাষা",
-    myAlerts: "আমার সতর্কতা",
+    myAlerts: "আমার অ্যালার্ট",
     profile: "প্রোফাইল",
     settings: "সেটিংস",
-    logout: "প্রস্থান",
-    signUp: "সাইন আপ করুন"
+    logout: "লগ আউট",
+    signUp: "সাইন আপ",
   },
   hero: {
-    label: "Track used car listings in real-time",
-    title: "Never Miss Your Perfect Car Deal Again",
-    subtitle: "Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.",
-    button1: "আপনার সতর্কতা সেট করুন",
-    button2: "See How It Works",
+    label: "রিয়েল-টাইমে ব্যবহৃত গাড়ির লিস্টিং ট্র্যাক করুন",
+    title: "আপনার পারফেক্ট কার ডিল আর হাতছাড়া হবে না",
+    subtitle:
+      "Amiquus আপনার পছন্দের গাড়ি বিভিন্ন সাইটে পাওয়া মাত্রই আপনাকে জানায়। মিল পাওয়া মাত্রই Telegram-এ নোটিফিকেশন পান।",
+    button1: "আপনার অ্যালার্ট সেট করুন",
+    button2: "কীভাবে কাজ করে দেখুন",
     trustIndicators: {
-      websites: "১৫+ ওয়েবসাইট ট্র্যাক করা হয়",
-      realtime: "রিয়েল-টাইম সতর্কতা",
-      noSetup: "কোন সেটআপের প্রয়োজন নেই",
-      cancelAnytime: "যেকোনো সময় বাতিল করুন"
-    }
+      websites: "১৫+ ওয়েবসাইট ট্র্যাকড",
+      realtime: "রিয়েল-টাইম অ্যালার্ট",
+      noSetup: "কোনো জটিল সেটআপ নেই",
+      cancelAnytime: "যেকোনো সময় বাতিল করুন",
+    },
   },
   limited: {
     full: {
-      title: "সাবস্ক্রিপশন সীমা পৌঁছেছে",
-      description: "We've reached our capacity of 30 active subscribers. Join our waitlist to be notified when a spot opens up.",
-      buttonText: "Join Waitlist"
+      title: "সাবস্ক্রিপশন সীমা পূর্ণ",
+      description:
+        "আমরা ৩০ জন সক্রিয় সাবস্ক্রাইবারের সক্ষমতায় পৌঁছেছি। জায়গা খালি হলে জানার জন্য ওয়েটলিস্টে যোগ দিন।",
+      buttonText: "ওয়েটলিস্টে যোগ দিন",
     },
     limited: {
-      title: "Limited Availability",
-      description: "Only {{remaining}} slots remaining out of {{capacity}}. Subscribe now before we reach capacity!",
-      buttonText: "Get Started Now"
+      title: "সীমিত সুযোগ",
+      description:
+        "{{capacity}}টির মধ্যে মাত্র {{remaining}}টি স্লট বাকি। সক্ষমতা পূর্ণ হওয়ার আগে সাবস্ক্রাইব করুন!",
+      buttonText: "এখনই শুরু করুন",
     },
     available: {
-      title: "Subscriptions Available",
-      description: "{{active}} of {{capacity}} subscriptions are currently active. Plenty of room for you to join!",
-      buttonText: "Get Started Now"
-    }
+      title: "সাবস্ক্রিপশন খালি আছে",
+      description:
+        "{{capacity}}টির মধ্যে {{active}}টি সাবস্ক্রিপশন বর্তমানে সক্রিয়। আপনার জন্য যথেষ্ট জায়গা আছে!",
+      buttonText: "এখনই শুরু করুন",
+    },
   },
   features: {
-    heading: "Why Choose Amiquus?",
-    subheading: "Save time and never miss out on your perfect car with our automated tracking service.",
+    heading: "কেন Amiquus?",
+    subheading:
+      "সময় বাঁচান এবং অটোমেটেড ট্র্যাকিংয়ের মাধ্যমে আপনার পছন্দের গাড়ি মিস করবেন না।",
     multiSite: {
       title: "মাল্টি-সাইট ট্র্যাকিং",
-      description: "প্রতিটি ম্যানুয়ালি চেক না করেই একইসাথে একাধিক গাড়ির তালিকা ওয়েবসাইট মনিটর করুন।"
+      description:
+        "একসাথে একাধিক গাড়ির ওয়েবসাইট মনিটর করুন—প্রতিটা সাইট আলাদা করে দেখার দরকার নেই।",
     },
     notifications: {
-      title: "Instant Notifications",
-      description: "Receive immediate alerts via Telegram when a car matching your criteria is listed for sale."
+      title: "তাত্ক্ষণিক নোটিফিকেশন",
+      description:
+        "আপনার মানদণ্ডে মিল থাকা গাড়ি লিস্ট হলে Telegram-এ সঙ্গে সঙ্গে অ্যালার্ট পান।",
     },
     filters: {
-      title: "Custom Filters",
-      description: "Set precise criteria including brand, model, year, mileage, and price range to find exactly what you want."
+      title: "কাস্টম ফিল্টার",
+      description:
+        "ব্র্যান্ড, মডেল, বছর, কিলোমিটার ও মূল্যের রেঞ্জ নির্ধারণ করে একদম টার্গেটেড ফলাফল পান।",
     },
     frequency: {
-      title: "Customizable Frequency",
-      description: "Choose how often we check for new listings, from hourly updates to real-time monitoring."
+      title: "কাস্টমাইজেবল ফ্রিকোয়েন্সি",
+      description:
+        "আপডেট কত ঘনঘন চান তা বেছে নিন—ঘণ্টাভিত্তিক থেকে রিয়েল-টাইম মনিটরিং পর্যন্ত।",
     },
     languages: {
-      title: "একাধিক ভাষা সমর্থন",
-      description: "তালিকাগুলির সহজ বোঝার জন্য আপনার পছন্দের ভাষায় বিজ্ঞপ্তি পান।"
+      title: "বহুভাষিক সমর্থন",
+      description:
+        "লিস্টিং সহজে বোঝার জন্য আপনার পছন্দের ভাষায় নোটিফিকেশন পান।",
     },
     account: {
-      title: "Easy Account Management",
-      description: "Manage multiple search profiles and modify your subscription settings with a few clicks."
-    }
+      title: "সহজ অ্যাকাউন্ট ম্যানেজমেন্ট",
+      description:
+        "একাধিক সার্চ প্রোফাইল ম্যানেজ করুন এবং কয়েকটি ক্লিকেই সাবস্ক্রিপশন সেটিংস বদলান।",
+    },
   },
   howItWorks: {
-    title: "How Amiquus Works",
-    subtitle: "Set up once and let our automated system find the perfect car deal for you",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Amiquus কীভাবে কাজ করে",
+    subtitle:
+      "একবার সেটআপ করুন—তারপর পারফেক্ট ডিল খোঁজা আমাদের অটোমেশন সিস্টেমের উপর ছেড়ে দিন",
+    whyTitle: "কেন Amiquus?",
     steps: {
       preferences: {
-        title: "Set Your Preferences",
-        description: "Select car brands, models, price range, and other criteria you're interested in monitoring."
+        title: "পছন্দ নির্ধারণ করুন",
+        description:
+          "যে ব্র্যান্ড, মডেল, মূল্য-পরিসর ও অন্যান্য মানদণ্ড ট্র্যাক করবেন তা নির্বাচন করুন।",
       },
       telegram: {
-        title: "Connect Telegram",
-        description: "Link your Telegram account to receive instant notifications about new listings."
+        title: "Telegram সংযুক্ত করুন",
+        description:
+          "নতুন লিস্টিং হলে সঙ্গে সঙ্গে নোটিফিকেশন পেতে Telegram-এ সংযুক্ত করুন।",
       },
       notifications: {
-        title: "Get Instant Notifications",
-        description: "Receive alerts the moment a car matching your criteria appears on any of our monitored websites."
+        title: "ইনস্ট্যান্ট নোটিফিকেশন পান",
+        description:
+          "আমাদের মনিটর করা যেকোনো সাইটে মিল পাওয়া মাত্রই অ্যালার্ট পেয়ে যান।",
       },
       findCar: {
-        title: "আপনার নিখুঁত গাড়ি খুঁজুন",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "পেয়ে যান আপনার পছন্দের গাড়ি",
+        description: "সবার আগে নতুন লিস্টিং জেনে নিন—সেরা ডিলটি নিশ্চিত করুন।",
+      },
     },
     features: [
-
-      "Track over 15 car listing websites simultaneously",
-
-      "Customizable search criteria with advanced filtering",
-
-      "Real-time notifications via Telegram",
-
-      "Automatic price drop and new listing alerts",
-
-      "Easy setup process that takes less than 5 minutes"
-
+      "একসাথে ১৫টির বেশি গাড়ির সাইট ট্র্যাক",
+      "অ্যাডভান্সড ফিল্টারসহ কাস্টম সার্চ",
+      "Telegram-এ রিয়েল-টাইম নোটিফিকেশন",
+      "প্রাইস ড্রপ ও নতুন লিস্টিংয়ের অটো অ্যালার্ট",
+      "৫ মিনিটেরও কম সময়ে সহজ সেটআপ",
     ],
-    setAlerts: "আপনার সতর্কতা সেট করুন",
+    setAlerts: "আপনার অ্যালার্ট সেট করুন",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "নতুন মিল পাওয়া গেছে!",
+      description: "BMW 3 Series, 2019, $32,500 — AutoTrader-এ নতুন",
     },
     notificationMockup2: {
-      title: "টেলিগ্রাম সতর্কতা",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "Telegram অ্যালার্ট",
+      description: "Mercedes C-Class, 2020, 30,000 মাইল — দামে $2,000 কমেছে",
+    },
   },
   pricing: {
-    title: "Simple, Transparent Pricing",
-    subtitle: "Our pricing is based on your specific needs. Start with a base package and customize it to fit your requirements.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "সহজ, স্বচ্ছ মূল্য",
+    subtitle:
+      "আপনার প্রয়োজন অনুযায়ী মূল্য নির্ধারিত। বেস প্যাকেজ দিয়ে শুরু করুন, প্রয়োজনমতো কাস্টমাইজ করুন।",
+    baseTitle: "বেস প্যাকেজ: $9.99/মাস",
+    includedTitle: "যা থাকছে:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "একটি ওয়েবসাইট মনিটরিং",
+      "প্রতি ঘণ্টায় আপডেট",
+      "আনলিমিটেড ফিল্টার",
+      "Telegram নোটিফিকেশন",
     ],
-    addonsTitle: "Add-ons:",
+    addonsTitle: "অ্যাড-অন:",
     addons: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
+      { name: "প্রতিটি অতিরিক্ত ওয়েবসাইট", price: 4.99 },
+      { name: "৩০ মিনিটে আপডেট", price: 2.99 },
+      { name: "১৫ মিনিটে আপডেট", price: 5.99 },
+      { name: "৫ মিনিটে আপডেট", price: 9.99 },
+      { name: "১ মিনিটে আপডেট", price: 14.99 },
     ],
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Get Started Now"
+    footerNote:
+      "সব প্ল্যানে আনলিমিটেড সার্চ কনফিগারেশন ও সহজ সাবস্ক্রিপশন ম্যানেজমেন্ট অন্তর্ভুক্ত।",
+    button: "এখনই শুরু করুন",
   },
   signup: {
-    heading: "আপনার গাড়ির সতর্কতা তৈরি করুন",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "আপনার কার অ্যালার্ট তৈরি করুন",
+    subheading: "কয়েকটি ধাপেই নিজের মতো গাড়ির লিস্টিং নোটিফিকেশন সেট করুন।",
+    cta: "এখনই অ্যালার্ট নিন",
     waitlist: {
-      message: "আমরা বর্তমানে সম্পূর্ণ ক্ষমতায় আছি। একটি স্থান খোলার সময় বিজ্ঞপ্ত হওয়ার জন্য আমাদের অপেক্ষা তালিকায় যোগ দিন।",
-      cta: "Join Waitlist"
+      message:
+        "বর্তমানে আমাদের সক্ষমতা পূর্ণ। জায়গা খালি হলে জানার জন্য ওয়েটলিস্টে যোগ দিন।",
+      cta: "ওয়েটলিস্টে যোগ দিন",
     },
     toast: {
       success: {
-        title: "সাবস্ক্রিপশন তৈরি করা হয়েছে",
-        description: "Your subscription has been created successfully"
+        title: "সাবস্ক্রিপশন তৈরি হয়েছে",
+        description: "আপনার সাবস্ক্রিপশন সফলভাবে তৈরি হয়েছে।",
       },
       error: {
-        title: "সাবস্ক্রিপশন ব্যর্থ হয়েছে",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "সাবস্ক্রিপশন ব্যর্থ",
+        description: "সাবস্ক্রিপশন তৈরি করা যায়নি। পরে আবার চেষ্টা করুন।",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
-        title: "Success",
-        description: "Your payment method has been successfully set up."
+        title: "সফল",
+        description: "আপনার পেমেন্ট মেথড সফলভাবে সেট হয়েছে।",
       },
       error: {
-        title: "Error",
-        fallback: "An unexpected error occurred. Please try again."
-      }
+        title: "ত্রুটি",
+        fallback: "অপ্রত্যাশিত ত্রুটি ঘটেছে। আবার চেষ্টা করুন।",
+      },
     },
     button: {
-      submit: "Set up payment method",
-      processing: "Processing..."
-    }
+      submit: "পেমেন্ট মেথড সেট করুন",
+      processing: "প্রসেসিং...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "কার ব্র্যান্ড আবশ্যক",
+      carModel: "কার মডেল আবশ্যক",
+      fuelType: "ফুয়েল টাইপ আবশ্যক",
+      priceMin: "ন্যূনতম মূল্য সংখ্যায় হতে হবে",
+      priceMax: "সর্বোচ্চ মূল্য সংখ্যায় হতে হবে",
+      yearMin: "ন্যূনতম বছর বৈধ হতে হবে",
+      yearMax: "সর্বোচ্চ বছর বৈধ হতে হবে",
+      maxKilometers: "সর্বোচ্চ কিলোমিটার সংখ্যায় হতে হবে",
+      telegramUsername: "Telegram ব্যবহারকারীর নাম আবশ্যক",
+      telegramToken: "Telegram বট টোকেন আবশ্যক",
+      telegramChatId: "Telegram চ্যাট আইডি আবশ্যক",
+      websitesSelected: "অন্তত একটি ওয়েবসাইট নির্বাচন করুন",
+      notificationLanguage: "নোটিফিকেশন ভাষা আবশ্যক",
+      facebookMarketplaceUrl:
+        "Facebook নির্বাচন করলে Facebook Marketplace URL আবশ্যক",
+    },
   },
   personalInfo: {
-    heading: "Personal Information",
-    description: "Please provide your personal details so we can set up your notifications correctly.",
+    heading: "ব্যক্তিগত তথ্য",
+    description: "নোটিফিকেশন সঠিকভাবে সেট করতে আপনার ব্যক্তিগত তথ্য দিন।",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Email Address"
+      firstName: "নামের প্রথম অংশ",
+      lastName: "নামের শেষ অংশ",
+      email: "ইমেইল ঠিকানা",
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com"
+      email: "john.doe@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Please enter a valid email"
+      firstName: "নামের প্রথম অংশ আবশ্যক",
+      lastName: "নামের শেষ অংশ আবশ্যক",
+      email: "একটি বৈধ ইমেইল দিন",
     },
     actions: {
-      login: "Login or Sign Up to Continue",
-      continue: "Continue"
-    }
+      login: "চালিয়ে যেতে লগ ইন বা সাইন আপ করুন",
+      continue: "চালিয়ে যান",
+    },
   },
   websiteSelection: {
-    heading: "Website Selection",
-    description: "Choose which websites you want to monitor and how frequently you want updates.",
+    heading: "ওয়েবসাইট নির্বাচন",
+    description:
+      "যে ওয়েবসাইটগুলো মনিটর করবেন ও আপডেটের ফ্রিকোয়েন্সি নির্ধারণ করুন।",
     labels: {
-      websites: "Websites to monitor",
+      websites: "মনিটর করার ওয়েবসাইট",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "আপডেট ফ্রিকোয়েন্সি",
     },
     placeholders: {
-      frequency: "Select frequency"
+      frequency: "ফ্রিকোয়েন্সি নির্বাচন করুন",
     },
     help: {
-      websites: "Select one or more websites to monitor for car listings.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites: "গাড়ির লিস্টিং মনিটরের জন্য একটি বা একাধিক সাইট বেছে নিন।",
+      facebookUrl:
+        "Facebook Marketplace-এ আপনার ফিল্টার করা সার্চ রেজাল্টের URL এখানে পেস্ট করুন।",
+      videoTitle: "Facebook Marketplace সার্চ লিংক কীভাবে পাবেন?",
+      videoDesc: "ধাপে ধাপে ভিডিওটি দেখুন।",
+      updateFrequency:
+        "কত ঘনঘন আমরা নতুন লিস্টিং চেক করব? বেশি ফ্রিকোয়েন্সিতে খরচ বেশি হতে পারে।",
     },
     errors: {
-      websites: "At least one website must be selected",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "অন্তত একটি ওয়েবসাইট নির্বাচন করুন",
+      facebookUrl: "Facebook নির্বাচন করলে Facebook Marketplace URL আবশ্যক",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "পেছনে",
+      continue: "এগোন",
+    },
   },
   carDetails: {
-    heading: "Car Details",
-    description: "Specify the car details you are looking for. All fields are optional - leave any blank to get a wider range of results.",
+    heading: "গাড়ির বিস্তারিত",
+    description:
+      "যে গাড়ি খুঁজছেন তার বিবরণ দিন। সব ক্ষেত্রই ঐচ্ছিক—বেশি ফলাফল পেতে ফাঁকা রাখতে পারেন।",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "ব্র্যান্ড",
+      carModel: "মডেল",
+      fuelType: "ফুয়েল টাইপ",
+      priceMin: "ন্যূনতম মূল্য",
+      priceMax: "সর্বোচ্চ মূল্য",
+      yearMin: "ন্যূনতম বছর",
+      yearMax: "সর্বোচ্চ বছর",
+      maxKilometers: "সর্বোচ্চ কিলোমিটার",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "কার ব্র্যান্ড নির্বাচন করুন",
+      carModel: "কার মডেল নির্বাচন করুন",
+      carModelDisabled: "আগে কার ব্র্যান্ড নির্বাচন করুন",
+      fuelType: "ফুয়েল টাইপ নির্বাচন করুন",
+      priceMin: "ন্যূনতম মূল্য লিখুন",
+      priceMax: "সর্বোচ্চ মূল্য লিখুন",
+      yearMin: "ন্যূনতম বছর লিখুন",
+      yearMax: "সর্বোচ্চ বছর লিখুন",
+      maxKilometers: "সর্বোচ্চ কিলোমিটার লিখুন",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "কোনো মডেল পাওয়া যায়নি",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "কার ব্র্যান্ড আবশ্যক",
+      carModel: "কার মডেল আবশ্যক",
+      fuelType: "ফুয়েল টাইপ আবশ্যক",
+      priceMin: "ন্যূনতম মূল্য সংখ্যায় হতে হবে",
+      priceMax: "সর্বোচ্চ মূল্য সংখ্যায় হতে হবে",
+      yearMin: "ন্যূনতম বছর বৈধ নয়",
+      yearMax: "সর্বোচ্চ বছর বৈধ নয়",
+      maxKilometers: "কিলোমিটার সংখ্যায় হতে হবে",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "পেছনে",
+      continue: "এগোন",
+    },
   },
   telegram: {
-    heading: "Telegram Setup",
-    description: "Set up Telegram notifications by providing your bot token and chat ID.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "If you have issues creating the telegram bot, contact us and we will call you and help you create one.",
-    contact: "Contact Us",
+    heading: "Telegram সেটআপ",
+    description: "বট টোকেন ও চ্যাট আইডি দিয়ে Telegram নোটিফিকেশন সেট করুন।",
+    subHeading: "আপনার Telegram বট সেট করুন",
+    info: "বট তৈরি করতে সমস্যা হলে আমাদের সাথে যোগাযোগ করুন—ফোনে সহায়তা করব।",
+    contact: "যোগাযোগ করুন",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Telegram Bot Token কীভাবে পাবেন:",
+      botStep1: "Telegram খুলে @BotFather সার্চ করুন",
+      botStep2: "/newbot কমান্ড পাঠান",
+      botStep3: "নির্দেশনা অনুসরণ করে বট তৈরি করুন",
+      botStep4: "BotFather দেওয়া টোকেন কপি করুন",
+
+      chatTitle: "আপনার Telegram Chat ID কীভাবে পাবেন:",
+      chatStep1: "Telegram-এ @userinfobot সার্চ করুন",
+      chatStep2: "বটকে যেকোনো বার্তা পাঠান",
+      chatStep3: "বট আপনার তথ্যসহ Chat ID দেখাবে",
+      chatStep4: "সে নম্বরটি কপি করুন",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Telegram Bot Token ও Chat ID সেটআপে সাহায্য দরকার?",
+    videoDescription: "ধাপে ধাপে গাইডের ভিডিওটি দেখুন।",
+
     labels: {
       token: "Telegram Bot Token",
-      chatId: "Your Telegram Chat ID",
-      language: "Notification Language",
-      username: "Telegram Username"
+      chatId: "আপনার Telegram Chat ID",
+      language: "নোটিফিকেশন ভাষা",
+      username: "Telegram ব্যবহারকারীর নাম",
     },
+
     placeholders: {
-      token: "Enter your bot token from BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Select Telegram Message Language",
-      username: "Enter your Telegram username"
+      token: "BotFather থেকে পাওয়া বট টোকেন লিখুন",
+      chatId: "আপনার Telegram Chat ID লিখুন",
+      language: "Telegram মেসেজের ভাষা নির্বাচন করুন",
+      username: "আপনার Telegram ইউজারনেম লিখুন",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription: "এটি আপনার Telegram-এর ইউজারনেম (@ ছাড়া)।",
     examples: {
-      token: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      token: "উদাহরণ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId: "Telegram-এ @userinfobot-এ বার্তা পাঠিয়ে পেতে পারেন",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "সেটআপ নির্দেশনা:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Telegram খুলে "BotFather" সার্চ করুন',
+      '"Start" চাপ দিয়ে চ্যাট শুরু করুন',
+      "/newbot লিখে নির্দেশনা অনুসরণ করুন",
+      "বটির জন্য নাম দিন",
+      "বটির ইউজারনেম দিন (শেষে 'bot' থাকতে হবে)",
+      "দেওয়া API টোকেন কপি করুন",
+      "চ্যাট অ্যাক্টিভ করতে আপনার বটকে একটি বার্তা পাঠান",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "আপনার Telegram Chat ID পাওয়ার উপায়:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      '"userinfobot" সার্চ করুন',
+      "যেকোনো বার্তা পাঠান",
+      "বট আপনার Chat ID পাঠাবে",
+      "সে আইডিটি কপি করুন",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
+    helpTitle: "Telegram Bot Token ও Chat ID-তে সাহায্য দরকার?",
+    helpDescription: "ধাপে ধাপে ভিডিও গাইডটি দেখুন।",
     botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    botTokenPlaceholder: "BotFather থেকে পাওয়া টোকেন লিখুন",
+    botTokenExample: "উদাহরণ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "আপনার Telegram Chat ID",
+    chatIdPlaceholder: "আপনার Chat ID লিখুন",
+    chatIdDescription: "@userinfobot-এ মেসেজ পাঠালে পেয়ে যাবেন",
+    languageLabel: "নোটিফিকেশন ভাষা",
+    languagePlaceholder: "Telegram মেসেজের ভাষা বেছে নিন",
     languages: {
       en: "English",
-      de: "Deutsch",
-      fr: "Français",
+      sl: "Slovenščina",
+      hr: "Hrvatski",
       es: "Español",
-      it: "Italiano"
+      fr: "Français",
+      de: "Deutsch",
+      ar: "العربية",
+      pt: "Português",
+      it: "Italiano",
+      nl: "Nederlands",
+      sv: "Svenska",
+      da: "Dansk",
+      nb: "Norsk",
+      fi: "Suomi",
+      hi: "हिन्दी",
+      ru: "Русский",
+      tr: "Türkçe",
+      cs: "Čeština",
+      pl: "Polski",
+      sk: "Slovenčina",
+      sq: "Shqip",
+      hy: "Հայերեն",
+      az: "Azərbaycan dili",
+      bn: "বাংলা",
+      be: "Беларуская",
+      bs: "Bosanski",
+      bg: "Български",
+      el: "Ελληνικά",
+      et: "Eesti",
+      ka: "ქართული",
+      hu: "Magyar",
+      he: "עברית",
+      ja: "日本語",
+      ko: "한국어",
+      lv: "Latviešu",
+      lt: "Lietuvių",
+      ms: "Bahasa Melayu",
+      ro: "Română",
+      mn: "Монгол",
+      sr: "Српски",
+      my: "မြန်မာစာ",
+      mk: "Македонски",
+      th: "ไทย",
+      uk: "Українська",
+      vi: "Tiếng Việt",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Telegram নোটিফিকেশন প্রিভিউ",
+    carAlertTitle: "🚗 নতুন কার অ্যালার্ট!",
+    priceLabel: "দাম: {{price}}",
+    kilometresLabel: "কিলোমিটার: {{kms}}",
+    locationLabel: "লোকেশন: {{location}}",
+    viewListing: "লিস্টিং দেখুন →",
     errors: {
-      token: "Telegram bot token is required",
-      chatId: "Telegram chat ID is required",
-      language: "Notification language is required",
-      username: "Telegram username is required"
+      token: "Telegram বট টোকেন আবশ্যক",
+      chatId: "Telegram চ্যাট আইডি আবশ্যক",
+      language: "নোটিফিকেশন ভাষা আবশ্যক",
+      username: "Telegram ব্যবহারকারীর নাম আবশ্যক",
     },
+
     actions: {
-      previous: "Previous",
-      continue: "Continue"
+      previous: "পেছনে",
+      continue: "এগোন",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "নিচের লিংকে ক্লিক করে আমাদের Telegram বট-এ চ্যাট শুরু করুন এবং একটি বার্তা পাঠান:",
+    contactBotNote:
+      "কার অ্যালার্ট পেতে এটি বাধ্যতামূলক। ডেস্কটপে থাকলে QR কোড স্ক্যান করতে পারেন।",
+    confirmContact: "আমি বট-এ চ্যাট শুরু করেছি এবং একটি বার্তা পাঠিয়েছি",
   },
   review: {
-    title: "Review Your Subscription",
-    description: "Please review your subscription details before proceeding to payment.",
+    title: "আপনার সাবস্ক্রিপশন রিভিউ করুন",
+    description: "পেমেন্টে যাওয়ার আগে সাবস্ক্রিপশনের বিস্তারিত দেখে নিন।",
+
     personal: {
-      title: "Personal Information",
-      name: "Name",
-      email: "Email"
+      title: "ব্যক্তিগত তথ্য",
+      name: "নাম",
+      email: "ইমেইল",
     },
+
     monitoring: {
-      title: "Monitoring Settings",
-      websites: "Websites",
+      title: "মনিটরিং সেটিংস",
+      websites: "ওয়েবসাইট",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "আপডেট ফ্রিকোয়েন্সি",
     },
+
     specs: {
-      title: "Car Specifications",
-      brand: "Brand",
-      model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Mileage Range (km)",
-      price: "Price Range (€)"
+      title: "গাড়ির স্পেসিফিকেশন",
+      brand: "ব্র্যান্ড",
+      model: "মডেল",
+      fuelType: "ফুয়েল টাইপ",
+      yearRange: "বছরের পরিসর",
+      mileage: "কিলোমিটার পরিসর (কিমি)",
+      price: "দামের পরিসর (€)",
     },
+
     notification: {
-      title: "Notification Settings",
-      telegram: "Telegram Bot",
-      language: "Notification Language"
+      title: "নোটিফিকেশন সেটিংস",
+      telegram: "Telegram বট",
+      language: "নোটিফিকেশন ভাষা",
     },
+
     summary: {
-      title: "Subscription Summary",
-      base: "Base Subscription",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Monthly)"
+      title: "সাবস্ক্রিপশন সারাংশ",
+      base: "বেস সাবস্ক্রিপশন",
+      extraWebsites: "অতিরিক্ত ওয়েবসাইট",
+      frequencyUpgrade: "ফ্রিকোয়েন্সি আপগ্রেড",
+      total: "মোট (মাসিক)",
     },
+
     terms: {
-      checkbox: "I agree to the",
-      tos: "Terms of Service",
-      privacy: "Privacy Policy",
-      note: "Your subscription will renew automatically each month. You can cancel anytime.",
-      error: "You must agree to the terms and conditions"
+      checkbox: "আমি সম্মত",
+      tos: "টার্মস অফ সার্ভিস",
+      privacy: "প্রাইভেসি পলিসি",
+      note: "আপনার সাবস্ক্রিপশন প্রতি মাসে স্বয়ংক্রিয়ভাবে রিনিউ হবে। যেকোনো সময় বাতিল করতে পারবেন।",
+      error: "টার্মস ও শর্তাবলীতে সম্মতি দিতে হবে",
     },
+
     actions: {
-      previous: "Previous",
-      submit: "Proceed to Payment"
-    }
+      previous: "পেছনে",
+      submit: "পেমেন্টে যান",
+    },
   },
   faq: {
-    title: "Frequently Asked Questions",
-    subtitle: "Find answers to the most common questions about our service.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
+    title: "প্রশ্নোত্তর",
+    subtitle: "আমাদের সেবা সম্পর্কে সবচেয়ে সাধারণ প্রশ্নগুলোর উত্তর",
+    contactPrompt: "এখনও প্রশ্ন আছে?",
+    contactLink: "সাপোর্ট টিমের সাথে যোগাযোগ করুন",
     questions: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
-    ]
+      {
+        question: "নতুন লিস্টিং হলে কত দ্রুত নোটিফিকেশন পাব?",
+        answer:
+          "আপনার বেছে নেওয়া আপডেট ফ্রিকোয়েন্সির উপর নির্ভর করে। ডিফল্ট ঘণ্টাভিত্তিক প্ল্যানে প্রকাশের এক ঘণ্টার মধ্যে পাবেন। মিনিটের ব্যবধানে পেতে চাইলে উচ্চ ফ্রিকোয়েন্সির প্ল্যানে আপগ্রেড করুন।",
+      },
+      {
+        question: "একসাথে বিভিন্ন ধরনের গাড়ি ট্র্যাক করতে পারি?",
+        answer:
+          "হ্যাঁ! আলাদা মানদণ্ডে একাধিক সার্চ প্রোফাইল তৈরি করতে পারেন। প্রতিটি প্রোফাইল পৃথক সাবস্ক্রিপশন হিসেবে গণ্য হবে, তবে সবকিছু এক অ্যাকাউন্ট থেকেই ম্যানেজ করতে পারবেন।",
+      },
+      {
+        question: "আপনারা কোন কোন ওয়েবসাইট সাপোর্ট করেন?",
+        answer:
+          "বর্তমানে AutoTrader, CarGurus, Cars.com ও Facebook Marketplaceসহ বড় প্ল্যাটফর্মগুলো সমর্থিত। ব্যবহারকারীর চাহিদা ও অঞ্চলের জনপ্রিয়তা অনুযায়ী আরও সাইট যুক্ত করা হচ্ছে।",
+      },
+      {
+        question: "Telegram বট ব্যবহার করতে টেকনিক্যাল জ্ঞান দরকার?",
+        answer:
+          "একদমই না! টেক্সট ও ভিডিও—দুই ধরনের ধাপে ধাপে গাইড দেওয়া আছে। বেশিরভাগ ব্যবহারকারী ৫ মিনিটেরও কম সময়ে সেটআপ করে ফেলেন।",
+      },
+      {
+        question: "সাবস্ক্রিপশন সেটআপের পর সার্চ মানদণ্ড বদলাতে পারি?",
+        answer:
+          "হ্যাঁ, যেকোনো সময় ড্যাশবোর্ড থেকে বদলাতে পারবেন। পরিবর্তন সঙ্গে সঙ্গে কার্যকর হবে।",
+      },
+      {
+        question: "সাবস্ক্রিপশন কীভাবে বাতিল করব?",
+        answer:
+          'ড্যাশবোর্ডের "Subscriptions" সেকশনে যান, যেটি বাতিল করতে চান সেটি সিলেক্ট করে "Cancel Subscription" বোতাম চাপুন। বর্তমান বিলিং পিরিয়ড শেষ না হওয়া পর্যন্ত সেবা চালু থাকবে।',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "Features",
-    pricing: "Pricing",
-    faq: "FAQ",
-    getStarted: "Get Started",
-    legal: "Legal",
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    cookies: "Cookie Policy",
-    gdpr: "GDPR Compliance",
-    contact: "Contact",
+    brandDescription:
+      "ঠিক সময়ে পারফেক্ট ব্যবহৃত গাড়ির ডিল খুঁজে পাওয়ার আপনার ব্যক্তিগত সহকারী।",
+    quickLinks: "কুইক লিংক",
+    features: "বৈশিষ্ট্য",
+    pricing: "মূল্য",
+    faq: "প্রশ্নোত্তর",
+    getStarted: "শুরু করুন",
+    legal: "লিগ্যাল",
+    terms: "টার্মস অফ সার্ভিস",
+    privacy: "প্রাইভেসি পলিসি",
+    cookies: "কুকি পলিসি",
+    gdpr: "GDPR কমপ্লায়েন্স",
+    contact: "যোগাযোগ",
     email: "support@amiquus.com",
-    telegram: "Contact us on Telegram",
-    copyright: "All rights reserved.",
-    about: "About Us",
-    blog: "Blog",
-    careers: "Careers",
-    support: "Support"
+    telegram: "Telegram-এ যোগাযোগ করুন",
+    copyright: "সর্বস্বত্ব সংরক্ষিত।",
+    about: "আমাদের সম্পর্কে",
+    blog: "ব্লগ",
+    careers: "ক্যারিয়ার",
+    support: "সাপোর্ট",
   },
   login: {
-    title: "Log in to your account",
-    description: "Enter your email and password to access your dashboard",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
-    or: "or",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    title: "অ্যাকাউন্টে লগ ইন করুন",
+    description: "ড্যাশবোর্ডে যেতে ইমেইল ও পাসওয়ার্ড দিন",
+    emailLabel: "ইমেইল",
+    passwordLabel: "পাসওয়ার্ড",
+    loginButton: "লগ ইন",
+    loggingIn: "লগ ইন হচ্ছে...",
+    loginWithGoogle: "Google দিয়ে লগ ইন",
+    or: "অথবা",
+    noAccount: "অ্যাকাউন্ট নেই?",
+    registerLink: "রেজিস্টার করুন",
+    successTitle: "লগ ইন সফল",
+    successMessage: "আপনি সফলভাবে লগ ইন করেছেন।",
+    errorTitle: "লগ ইন ব্যর্থ",
+    genericError: "তথ্য যাচাই করে আবার চেষ্টা করুন।",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "সঠিক ইমেইল ঠিকানা দিন",
+      shortPassword: "পাসওয়ার্ড কমপক্ষে ৬ অক্ষর হতে হবে",
+    },
   },
   register: {
-    title: "Create an account",
-    description: "Sign up to start tracking your dream car",
-    google: "Sign up with Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Username",
-    email: "Email",
-    password: "Password",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
-    login: "Log in",
-    and: "and",
+    title: "অ্যাকাউন্ট তৈরি করুন",
+    description: "আপনার স্বপ্নের গাড়ি ট্র্যাক করতে সাইন আপ করুন",
+    google: "Google দিয়ে সাইন আপ",
+    orContinue: "অথবা চালিয়ে যান",
+    firstName: "নামের প্রথম অংশ",
+    lastName: "নামের শেষ অংশ",
+    username: "ইউজারনেম",
+    email: "ইমেইল",
+    password: "পাসওয়ার্ড",
+    confirmPassword: "পাসওয়ার্ড নিশ্চিত করুন",
+    termsNotice: "আমি সম্মত",
+    termsOfService: "টার্মস অফ সার্ভিস",
+    privacyPolicy: "প্রাইভেসি পলিসি",
+    createBtn: "অ্যাকাউন্ট তৈরি করুন",
+    alreadyHave: "আগেই অ্যাকাউন্ট আছে?",
+    login: "লগ ইন",
+    and: "এবং",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "তথ্য অসম্পূর্ণ",
+        desc: "অনুগ্রহ করে সব আবশ্যক ক্ষেত্র পূরণ করুন",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "অবৈধ ইউজারনেম",
+        desc: "ইউজারনেম কেবল অ্যালফানিউমেরিক ও ৩–২০ অক্ষরের হতে হবে",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "পাসওয়ার্ড মেলেনি",
+        desc: "দুটি পাসওয়ার্ড এক কিনা নিশ্চিত করুন",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "টার্মসে সম্মতি নেই",
+        desc: "চালিয়ে যেতে টার্মস ও প্রাইভেসিতে সম্মতি দিতে হবে",
       },
       success: {
-        title: "Registration successful",
-        desc: "Welcome to Amiquus! You will be redirected to verify your email address."
+        title: "রেজিস্ট্রেশন সফল",
+        desc: "Amiquus-এ স্বাগতম! ইমেইল ভেরিফাই করতে রিডাইরেক্ট করা হবে।",
       },
       failure: {
-        title: "Registration failed",
-        desc: "Please check your information and try again"
-      }
-    }
+        title: "রেজিস্ট্রেশন ব্যর্থ",
+        desc: "তথ্য যাচাই করে আবার চেষ্টা করুন",
+      },
+    },
   },
   verifyEmail: {
-    title: "Verify Your Email",
-    description: "A verification code has been sent to your email.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "ইমেইল ভেরিফাই করুন",
+    description: "আপনার ইমেইলে একটি ভেরিফিকেশন কোড পাঠানো হয়েছে।",
+    codeLabel: "ভেরিফিকেশন কোড",
+    verifyButton: "ইমেইল ভেরিফাই করুন",
+    updateEmailLabel: "ইমেইল আপডেট",
+    updateEmailButton: "ইমেইল আপডেট করুন",
+    resendButton: "কোড পুনরায় পাঠান",
+    resendCountdown: "{{seconds}} সেকেন্ড পর কোড পুনরায় পাঠাতে পারবেন",
+    footerNote: "কোড পাননি? স্প্যাম ফোল্ডার দেখুন।",
     toast: {
-      verified: "Email verified",
-      failed: "Verification failed",
-      resent: "Verification code resent",
-      error: "Error",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      verified: "ইমেইল ভেরিফাই হয়েছে",
+      failed: "ভেরিফিকেশন ব্যর্থ",
+      resent: "ভেরিফিকেশন কোড পুনরায় পাঠানো হয়েছে",
+      error: "ত্রুটি",
+      invalidEmail: "অবৈধ ইমেইল",
+      enterValidEmail: "একটি বৈধ ইমেইল দিন",
+      sameEmail: "একই ইমেইল",
+      sameEmailDesc: "নতুন ইমেইল বর্তমান ইমেইলের মতই",
+      emailUpdated: "ইমেইল আপডেট হয়েছে",
+    },
   },
   dashboardPayment: {
-    add: "Add Payment Method",
-    description: "Add a new credit or debit card for your subscription payments.",
-    processing: "Processing...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "পেমেন্ট মেথড যোগ করুন",
+    description:
+      "সাবস্ক্রিপশন পেমেন্টের জন্য নতুন ডেবিট/ক্রেডিট কার্ড যোগ করুন।",
+    processing: "প্রসেসিং...",
+    errorTitle: "পেমেন্ট মেথড যোগ করতে ত্রুটি",
+    errorMessage: "অপ্রত্যাশিত ত্রুটি ঘটেছে",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "ত্রুটি",
+      description: "পেমেন্ট সেটআপ আরম্ভ করা যাচ্ছে না",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "বছর",
+      priceRange: "মূল্য",
+      websites: "ওয়েবসাইট",
+      updates: "আপডেট",
+      language: "ভাষা",
+      price: "দাম",
+      edit: "এডিট",
+      cancelAlert: "অ্যালার্ট বাতিল",
+      cancelTitle: "কার অ্যালার্ট বাতিল করুন",
+      cancelDescription:
+        "{{brand}} {{model}} এর অ্যালার্ট বাতিল করতে চান? এতে সব নোটিফিকেশন বন্ধ হবে, আবার মনিটর করতে নতুন অ্যালার্ট সেট করতে হবে।",
+      keepMyAlert: "অ্যালার্ট রাখুন",
+      confirmCancel: "অ্যালার্ট বাতিল",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "মেয়াদ",
+      default: "ডিফল্ট",
+      setAsDefault: "ডিফল্ট করুন",
+      remove: "রিমুভ",
+      setDefaultTitle: "ডিফল্ট পেমেন্ট মেথড দিন",
+      setDefaultDescription:
+        "{{last4}} দিয়ে শেষ {{brand}} কার্ডটিকে ডিফল্ট করতে চান? ভবিষ্যতের সব পেমেন্টে এটি ব্যবহার করা হবে।",
+      removeTitle: "পেমেন্ট মেথড রিমুভ",
+      removeDescription:
+        "{{last4}} দিয়ে শেষ {{brand}} কার্ডটি রিমুভ করতে নিশ্চিত?",
+      removeWarning:
+        "এটি আপনার ডিফল্ট কার্ড—রিমুভ করলে সক্রিয় সাবস্ক্রিপশনে প্রভাব পড়তে পারে।",
+      cancel: "বাতিল",
+      confirmRemove: "কার্ড রিমুভ",
+    },
   },
   profile: {
     tabs: {
-      alerts: "My Alerts",
-      payments: "Payment Methods"
+      alerts: "আমার অ্যালার্ট",
+      payments: "পেমেন্ট মেথড",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Subscriptions",
-      methods: "Payment methods",
-      account: "Account settings",
-      privacy: "Privacy & security",
-      logout: "Log out"
+      memberSince: "সদস্য হয়েছেন",
+      subscriptions: "সাবস্ক্রিপশন",
+      methods: "পেমেন্ট মেথড",
+      account: "অ্যাকাউন্ট সেটিংস",
+      privacy: "প্রাইভেসি ও সিকিউরিটি",
+      logout: "লগ আউট",
     },
     account: {
-      title: "Account Settings",
-      desc: "Update your account information and preferences.",
-      name: "Name",
-      email: "Email",
-      username: "Username",
-      cancel: "Cancel",
-      save: "Save Changes"
+      title: "অ্যাকাউন্ট সেটিংস",
+      desc: "আপনার তথ্য ও পছন্দ আপডেট করুন।",
+      name: "নাম",
+      email: "ইমেইল",
+      username: "ইউজারনেম",
+      cancel: "বাতিল",
+      save: "পরিবর্তন সংরক্ষণ",
     },
     security: {
-      title: "Privacy & Security",
-      desc: "Manage your security settings and privacy preferences.",
-      current: "Current Password",
-      new: "New Password",
-      confirm: "Confirm New Password",
-      update: "Update Password"
+      title: "প্রাইভেসি ও সিকিউরিটি",
+      desc: "সিকিউরিটি সেটিংস ও প্রাইভেসি পছন্দ ম্যানেজ করুন।",
+      current: "বর্তমান পাসওয়ার্ড",
+      new: "নতুন পাসওয়ার্ড",
+      confirm: "নতুন পাসওয়ার্ড নিশ্চিত",
+      update: "পাসওয়ার্ড আপডেট",
     },
     logout: {
-      title: "Log Out",
-      desc: "Are you sure you want to log out of your account?",
-      success: "You have been successfully logged out."
+      title: "লগ আউট",
+      desc: "অ্যাকাউন্ট থেকে লগ আউট করতে নিশ্চিত?",
+      success: "সফলভাবে লগ আউট হয়েছেন।",
     },
     alerts: {
-      title: "Car Alert Subscriptions",
-      desc: "Manage your car search alerts and notification preferences.",
-      add: "Add New Alert",
-      none: "You don't have any active car alerts.",
-      cta: "Create your first alert",
-      warning: "⚠️ Changes to your subscription will be applied in the next billing period, and only after a successful payment. If the payment fails, your current alert setup will remain unchanged."
+      title: "কার অ্যালার্ট সাবস্ক্রিপশন",
+      desc: "আপনার কার সার্চ অ্যালার্ট ও নোটিফিকেশন পছন্দ ম্যানেজ করুন।",
+      add: "নতুন অ্যালার্ট যোগ করুন",
+      none: "আপনার কোনো সক্রিয় কার অ্যালার্ট নেই।",
+      cta: "প্রথম অ্যালার্ট তৈরি করুন",
+      warning:
+        "⚠️ আপনার পরিবর্তনগুলি পরের বিলিং পর্যায়ে এবং সফল পেমেন্টের পর কার্যকর হবে। পেমেন্ট ব্যর্থ হলে বর্তমান সেটআপ অপরিবর্তিত থাকবে।",
     },
     payments: {
-      title: "Payment Methods",
-      desc: "Manage your payment methods for subscription billing.",
-      none: "You don't have any payment methods saved.",
-      encrypted: "Your payment information is encrypted and securely stored."
-    }
+      title: "পেমেন্ট মেথড",
+      desc: "সাবস্ক্রিপশন বিলিংয়ের জন্য পেমেন্ট মেথড ম্যানেজ করুন।",
+      none: "কোনো সংরক্ষিত পেমেন্ট মেথড নেই।",
+      encrypted: "আপনার পেমেন্ট তথ্য এনক্রিপ্টেড ও সুরক্ষিতভাবে সংরক্ষিত।",
+    },
   },
   setupAlerts: {
-    title: "Set Up Your Car Alerts",
-    subtitle: " Configure your Telegram bot to receive notifications about your dream car",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Start My Car Alert Service",
-    cancel: "যেকোনো সময় বাতিল করুন",
+    title: "আপনার কার অ্যালার্ট সেট করুন",
+    subtitle: " পছন্দের গাড়ির নোটিফিকেশন পেতে Telegram বট কনফিগার করুন",
+    basicPlan: "বেসিক প্ল্যান",
+    baseTitle: "$9.99/মাস",
+    button: "আমার কার অ্যালার্ট সার্ভিস শুরু করুন",
+    cancel: "যেকোনো সময় বাতিল",
     toasts: {
       terms: {
-        title: "Terms not accepted",
-        description: "You must agree to the terms of service to continue"
+        title: "টার্মসে সম্মতি নেই",
+        description: "চালিয়ে যেতে টার্মসে সম্মতি দিতে হবে",
       },
       success: {
-        title: "সাবস্ক্রিপশন তৈরি করা হয়েছে",
-        description: "Your subscription has been created successfully"
+        title: "সাবস্ক্রিপশন তৈরি হয়েছে",
+        description: "আপনার সাবস্ক্রিপশন সফলভাবে তৈরি হয়েছে",
       },
       error: {
-        title: "Error creating subscription"
+        title: "সাবস্ক্রিপশন তৈরিতে ত্রুটি",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "বট-এ যোগাযোগ প্রয়োজন",
+        description:
+          "কার অ্যালার্ট পেতে আমাদের Telegram বট-এ চ্যাট শুরু করে একটি বার্তা পাঠাতে হবে। নিচের নির্দেশনা অনুসরণ করুন।",
+      },
+    },
   },
   loginPrompt: {
-    title: "Login Required",
-    description: "You must be logged in to continue. Please log in or register.",
-    register: "Register",
-    login: "Login"
+    title: "লগ ইন প্রয়োজন",
+    description:
+      "চালিয়ে যেতে আপনাকে লগ ইন করতে হবে। অনুগ্রহ করে লগ ইন বা রেজিস্টার করুন।",
+    register: "রেজিস্টার",
+    login: "লগ ইন",
   },
   waitlistPrompt: {
-    title: "অপেক্ষা তালিকায় যোগ দিন",
-    description: "We're currently at full capacity. Join the waitlist to be notified when a slot becomes available.",
-    button: "Join Waitlist"
+    title: "ওয়েটলিস্টে যোগ দিন",
+    description:
+      "আমরা বর্তমানে পূর্ণ সক্ষমতায় আছি। স্লট খালি হলে জানানোর জন্য ওয়েটলিস্টে যোগ দিন।",
+    button: "ওয়েটলিস্টে যোগ দিন",
   },
   subscription: {
-    title: "Subscription Details",
-    subTitle: "Edit your subscription details below",
-    error: "Go back to dashboard",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "You can pause your subscription at any time. When you pause your subscription, your car alerts will stop until you resume them.",
+    title: "সাবস্ক্রিপশনের বিস্তারিত",
+    subTitle: "নিচে আপনার সাবস্ক্রিপশন সম্পাদনা করুন",
+    error: "ড্যাশবোর্ডে ফিরে যান",
+    notFound: "সাবস্ক্রিপশন পাওয়া যায়নি",
+    notFoundSub: "ড্যাশবোর্ডে ফিরে যান",
+    description:
+      "আপনি যেকোনো সময় সাবস্ক্রিপশন ‘পজ’ করতে পারেন। পজ অবস্থায় কার অ্যালার্ট বন্ধ থাকবে, পুনরায় চালু করলে আবার শুরু হবে।",
     form: {
       status: {
-        label: "Status",
-        placeholder: "Select Status",
-        active: "Active",
-        paused: "Paused"
-      }
+        label: "স্ট্যাটাস",
+        placeholder: "স্ট্যাটাস নির্বাচন করুন",
+        active: "সক্রিয়",
+        paused: "পজড",
+      },
     },
     actions: {
-      save: "Save Changes",
-      back: "Back"
+      save: "পরিবর্তন সংরক্ষণ",
+      back: "পেছনে",
     },
     toasts: {
       success: {
-        title: "Subscription Updated",
-        description: "Your subscription for {{brand}} {{model}} has been updated successfully"
+        title: "সাবস্ক্রিপশন আপডেট হয়েছে",
+        description: "{{brand}} {{model}} এর সাবস্ক্রিপশন সফলভাবে আপডেট হয়েছে",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "সাবস্ক্রিপশন আপডেট সম্ভব নয়",
+        description: "একসাথে পজ ও মূল্য বদল করা যাবে না। যেকোনো একটি বেছে নিন।",
       },
       error: {
-        title: "Error updating subscription"
-      }
-    }
+        title: "আপডেট করতে ত্রুটি",
+      },
+    },
   },
   about: {
-    title: "About Amiquus",
-    description: "We're revolutionizing how people find their perfect used car by bringing advanced monitoring technology to everyone",
+    title: "Amiquus সম্পর্কে",
+    description:
+      "ব্যবহৃত গাড়ি খোঁজার অভিজ্ঞতাকে সবার জন্য স্মার্ট মনিটরিং প্রযুক্তির মাধ্যমে বদলে দিচ্ছি",
     meta: {
-      title: "About Us | Amiquus - Car Listing Monitoring Service",
-      description: "Learn about Amiquus, our mission to revolutionize used car shopping, and the team behind our intelligent car listing monitoring service."
+      title: "আমাদের সম্পর্কে | Amiquus - কার লিস্টিং মনিটরিং সার্ভিস",
+      description:
+        "Amiquus, আমাদের মিশন এবং স্মার্ট কার লিস্টিং মনিটরিং সার্ভিসের পেছনের টিম সম্পর্কে জানুন।",
     },
     story: {
-      heading: "Our Story",
+      heading: "আমাদের গল্প",
       paragraphs: [
-
-        "Amiquus began in 2023 when our founder, Alex, spent months refreshing car listing websites trying to find a specific rare model at a good price. After missing several opportunities due to delayed notifications, he realized there had to be a better way.",
-
-        "Working with a small team of developers and car enthusiasts, Alex built a monitoring system that could track listings across multiple sites simultaneously and send instant notifications when matches appeared.",
-
-        "What started as a personal project quickly gained interest from friends and family, and by early 2025, Amiquus was born as a service available to everyone. Today, we help car buyers across the country save time and find better deals with our intelligent monitoring technology."
-
-      ]
+        "Amiquus শুরু ২০২৩-এ, যখন আমাদের ফাউন্ডার অ্যালেক্স একটি বিরল মডেল ভালো দামে খুঁজতে গিয়ে মাসের পর মাস বিভিন্ন সাইট রিফ্রেশ করতেন। দেরিতে নোটিফিকেশনের কারণে কয়েকটি সুযোগ হাতছাড়া হওয়ার পর তিনি বুঝলেন—ভালো সমাধান দরকার।",
+        "ডেভেলপার ও কার-উৎসাহীদের ছোট টিম নিয়ে এমন একটি সিস্টেম বানানো হলো যা একাধিক সাইট একসাথে মনিটর করে এবং মিল পেলেই ইনস্ট্যান্ট নোটিফিকেশন পাঠায়।",
+        "ব্যক্তিগত প্রজেক্ট থেকে শুরু হয়ে ২০২৫-এর শুরুতে Amiquus সবার জন্য উন্মুক্ত হয়। আজ আমরা স্মার্ট মনিটরিংয়ের মাধ্যমে সারা দেশের ক্রেতাদের সময় বাঁচাতে ও ভালো ডিল খুঁজতে সাহায্য করছি।",
+      ],
     },
     mission: {
-      heading: "Our Mission",
+      heading: "আমাদের লক্ষ্য",
       items: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          title: "সময় বাঁচান",
+          description:
+            "একাধিক সাইট বারবার রিফ্রেশ না করে অটোমেশনের উপর ভরসা করুন—সময়মতো নোটিফিকেশন পান।",
+        },
+        {
+          title: "সেরা ডিল খুঁজুন",
+          description:
+            "চমৎকার অফার আসামাত্রই জানুন—প্রতিযোগিতামূলক বাজারে টাইমিংই আসল।",
+        },
+        {
+          title: "আত্মবিশ্বাস নিয়ে কিনুন",
+          description:
+            "একাধিক বিশ্বস্ত প্ল্যাটফর্মে কমপ্রিহেনসিভ মনিটরিংয়ের মাধ্যমে তথ্যভিত্তিক সিদ্ধান্ত নিন।",
+        },
+      ],
     },
     team: {
-      heading: "Our Team",
+      heading: "আমাদের টিম",
       members: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          name: "Alex Morgan",
+          role: "Founder & CEO",
+          bio: "সাবেক সফটওয়্যার ইঞ্জিনিয়ার—কার ও নতুন সমাধানের প্রতি অনুরাগী।",
+        },
+        {
+          name: "Sarah Chen",
+          role: "CTO",
+          bio: "ওয়েব স্ক্র্যাপিং ও ইনফরমেশন রিট্রিভালে বিশেষজ্ঞ ডেটা সায়েন্টিস্ট।",
+        },
+        {
+          name: "Marcus Lee",
+          role: "লিড ডেভেলপার",
+          bio: "হাই-পারফরম্যান্স নোটিফিকেশন সিস্টেমে দক্ষ ফুল-স্ট্যাক ইঞ্জিনিয়ার।",
+        },
+        {
+          name: "Elena Rodriguez",
+          role: "কাস্টমার সাকসেস",
+          bio: "সাবেক কার সেলস প্রফেশনাল—গ্রাহক সফলতায় নিবেদিত।",
+        },
+      ],
     },
     join: {
-      heading: "Join Our Team",
-      description: "We're always looking for talented individuals who are passionate about technology and revolutionizing the car buying experience. Check out our current openings and join us on our mission.",
-      cta: "View Open Positions"
+      heading: "আমাদের টিমে যোগ দিন",
+      description:
+        "টেকনোলজি ও কার কেনাকাটার অভিজ্ঞতা বদলে দিতে আগ্রহী ট্যালেন্টদের আমরা সর্বদা খুঁজছি। খালি পজিশনগুলো দেখুন।",
+      cta: "ওপেন পজিশন দেখুন",
     },
     questions: {
-      heading: "Have Questions?",
-      description: "Learn more about how our service works, view pricing options, or get in touch with our support team.",
+      heading: "প্রশ্ন আছে?",
+      description:
+        "আমাদের সেবা কীভাবে কাজ করে জানুন, প্রাইসিং দেখুন বা সাপোর্টে যোগাযোগ করুন।",
       links: {
-        faq: "Visit FAQ",
-        pricing: "View Pricing",
-        support: "Contact Support"
-      }
-    }
+        faq: "FAQ দেখুন",
+        pricing: "প্রাইসিং দেখুন",
+        support: "সাপোর্টে যোগাযোগ",
+      },
+    },
   },
   terms: {
-    metaTitle: "Terms of Service | Amiquus",
-    metaDescription: "Read the Amiquus Terms of Service that govern your use of our car listing monitoring and notification service.",
-    title: "Terms of Service",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "টার্মস অফ সার্ভিস | Amiquus",
+    metaDescription:
+      "Amiquus-এর কার লিস্টিং মনিটরিং ও নোটিফিকেশন সার্ভিস ব্যবহারের শর্তাবলি পড়ুন।",
+    title: "টার্মস অফ সার্ভিস",
+    lastUpdated: "সর্বশেষ আপডেট: ২১ মে, ২০২৫",
     sections: {
-      1: {
+      "1": {
         id: "agreement",
-        heading: "Agreement to Terms",
+        heading: "টার্মসে সম্মতি",
         paragraphs: [
-
-          "These Terms of Service constitute a legally binding agreement made between you and Amiquus, concerning your access to and use of our website and services.",
-
-          "By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service."
-
+          "এই টার্মস আপনার Amiquus ওয়েবসাইট ও সার্ভিস ব্যবহারের আইনগত চুক্তি।",
+          "আমাদের সার্ভিস ব্যবহার করলে আপনি এই টার্মসে বাধ্য থাকবেন। সম্মত না হলে সার্ভিস ব্যবহার করবেন না।",
         ],
-        list: [
-        ]
+        list: [],
       },
-      2: {
+      "2": {
         id: "changes",
-        heading: "Changes to Terms",
+        heading: "পরিবর্তন",
         paragraphs: [
-          "  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.",
-          "By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service."
+          "আমরা যেকোনো সময় টার্মস বদলাতে পারি। বড় পরিবর্তনের ক্ষেত্রে কার্যকর হওয়ার অন্তত ৩০ দিন আগে জানাতে চেষ্টা করব।",
+          "পরিবর্তনের পর সার্ভিস ব্যবহার মানে নতুন টার্মস মেনে নেওয়া।",
         ],
-        list: [
-        ]
+        list: [],
       },
-      3: {
+      "3": {
         id: "account",
-        heading: "Account Terms",
-        paragraphs: [
-          "To use our services, you must:"
-        ],
+        heading: "অ্যাকাউন্ট শর্ত",
+        paragraphs: ["সার্ভিস ব্যবহার করতে হলে আপনাকে—"],
         list: [
-
-          "Be at least 18 years old",
-
-          "Complete the registration process",
-
-          "Provide accurate, complete, and up-to-date information",
-
-          "Be responsible for maintaining the security of your account and password",
-
-          "Be responsible for all activities that occur under your account",
-
-          "Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account"
-
-        ]
+          "অন্তত ১৮ বছর বয়সী হতে হবে",
+          "রেজিস্ট্রেশন সম্পন্ন করতে হবে",
+          "সঠিক, সম্পূর্ণ ও আপ-টু-ডেট তথ্য দিতে হবে",
+          "অ্যাকাউন্ট ও পাসওয়ার্ডের সিকিউরিটি বজায় রাখতে হবে",
+          "আপনার অ্যাকাউন্টের সব কার্যকলাপের জন্য দায়ী থাকতে হবে",
+          "সিকিউরিটি ভঙ্গের ঘটনা ঘটলে সঙ্গে সঙ্গে আমাদের জানাতে হবে",
+        ],
       },
-      4: {
+      "4": {
         id: "payment",
-        heading: "Payment Terms",
+        heading: "পেমেন্ট শর্ত",
         paragraphs: [
-
-          " Amiquus offers subscription-based services with the following terms:"
-
+          "Amiquus সাবস্ক্রিপশন-ভিত্তিক সার্ভিস প্রদান করে। শর্তাবলি:",
         ],
         list: [
-
-          "All fees are exclusive of taxes, which will be added when applicable",
-
-          "Subscription prices are subject to change with 30 days' notice",
-
-          "Subscriptions automatically renew unless canceled before the next billing cycle",
-
-          "Refunds are handled on a case-by-case basis according to our refund policy",
-
-          "We use Stripe for secure payment processing, and all payment information is stored by Stripe"
-
-        ]
+          "সমস্ত ফি ট্যাক্স ছাড়া দেখানো হয়; প্রযোজ্য ট্যাক্স যোগ হবে",
+          "সাবস্ক্রিপশন মূল্য ৩০ দিন আগে নোটিস দিয়ে পরিবর্তন হতে পারে",
+          "সাবস্ক্রিপশন স্বয়ংক্রিয়ভাবে রিনিউ হয়—বাতিল না করা পর্যন্ত",
+          "রিফান্ড নীতিমালা অনুযায়ী কেস-টু-কেস ভিত্তিতে বিবেচিত",
+          "Stripe-এর মাধ্যমে সিকিউর পেমেন্ট; কার্ড ডেটা Stripe-এ সংরক্ষিত",
+        ],
       },
-      5: {
+      "5": {
         id: "capacity",
-        heading: "Capacity Limits",
+        heading: "ক্ষমতা সীমা",
         paragraphs: [
-
-          "In order to maintain service quality and reliability, Amiquus limits the number of active subscriptions to 30. When this limit is reached:"
-
+          "সার্ভিস কোয়ালিটি বজায় রাখতে সক্রিয় সাবস্ক্রিপশন সর্বোচ্চ ৩০-এ সীমিত। সীমা পূর্ণ হলে:",
         ],
         list: [
-
-          "New users may join our waitlist",
-
-          "Waitlist position is determined on a first-come, first-served basis",
-
-          "When capacity becomes available, waitlisted users will be notified in order",
-
-          "We reserve the right to modify capacity limits at any time"
-
-        ]
+          "নতুন ব্যবহারকারীরা ওয়েটলিস্টে যোগ দিতে পারবেন",
+          "ওয়েটলিস্ট ‘ফার্স্ট-কম, ফার্স্ট-সার্ভড’ ভিত্তিতে",
+          "ক্ষমতা খালি হলে ক্রমানুসারে নোটিফাই করা হবে",
+          "আমরা যেকোনো সময় ক্ষমতা সীমা পরিবর্তন করতে পারি",
+        ],
       },
-      6: {
+      "6": {
         id: "scraping",
-        heading: "Web Scraping Limitations",
+        heading: "ওয়েব স্ক্র্যাপিং সীমাবদ্ধতা",
         paragraphs: [
-
-          "Our service accesses and processes data from multiple car listing websites. By using our service, you acknowledge that:"
-
+          "আমাদের সার্ভিস একাধিক কার লিস্টিং ওয়েবসাইটের ডেটা অ্যাক্সেস ও প্রোসেস করে। আপনি সম্মত যে:",
         ],
         list: [
-
-          "Amiquus respects the terms of service of the websites we monitor",
-
-          "We implement rate limiting and respectful crawling practices",
-
-          "The availability of certain websites may change based on their terms and technical measures",
-
-          "We make no guarantees regarding the completeness or timeliness of scraped data"
-
-        ]
+          "Amiquus মনিটর করা ওয়েবসাইটগুলোর টার্মস সম্মান করে",
+          "রেট-লিমিটিং ও দায়িত্বশীল ক্রলিং অনুসরণ করা হয়",
+          "কিছু ওয়েবসাইটের অ্যাভেইলেবিলিটি তাদের শর্ত ও টেকনিক্যাল ব্যবস্থার উপর নির্ভরশীল",
+          "স্ক্র্যাপড ডেটার পূর্ণতা বা সময়নিষ্ঠতা গ্যারান্টিযুক্ত নয়",
+        ],
       },
-      7: {
+      "7": {
         id: "intellectual",
-        heading: "Intellectual Property",
+        heading: "বুদ্ধিবৃত্তিক সম্পত্তি",
         paragraphs: [
-
-          "The Amiquus service, including its original content, features, and functionality, are and will remain the exclusive property of Amiquus. Our service is protected by copyright, trademark, and other laws of both the United States and foreign countries.",
-
-          "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Amiquus."
-
+          "Amiquus সার্ভিস, কনটেন্ট, ফিচার ও ফাংশনালিটি কপিরাইট/ট্রেডমার্কসহ প্রযোজ্য আইনে সুরক্ষিত।",
+          "আমাদের ট্রেডমার্ক ও ট্রেড ড্রেস অনুমতি ছাড়া ব্যবহারযোগ্য নয়।",
         ],
-        list: [
-        ]
+        list: [],
       },
-      8: {
+      "8": {
         id: "termination",
-        heading: "Termination",
+        heading: "সার্ভিস বন্ধ",
         paragraphs: [
-          "   We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including, without limitation, if you breach the Terms.",
-          " Upon termination, your right to use the service will immediately cease. If you wish to terminate your account, you may simply discontinue using the service or contact us to request account deletion."
+          "টার্মস ভঙ্গসহ যে কোনো কারণে পূর্ব নোটিস ছাড়া আপনার অ্যাকাউন্ট তাৎক্ষণিকভাবে বন্ধ করা হতে পারে।",
+          "বন্ধ হলে সার্ভিস ব্যবহার অবিলম্বে বন্ধ হবে। অ্যাকাউন্ট বন্ধ করতে ব্যবহার বন্ধ করুন বা আমাদের সাথে যোগাযোগ করুন।",
         ],
-        list: [
-        ]
+        list: [],
       },
-      9: {
+      "9": {
         id: "limitations",
-        heading: "Limitation of Liability",
+        heading: "দায়-সীমা",
         paragraphs: [
-          "In no event shall Amiquus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:"
+          "কোনো পরোক্ষ/বিশেষ/আনুষঙ্গিক ক্ষতির জন্য Amiquus বা তার অংশীদাররা দায়ী নয়, যেমন:",
         ],
         list: [
-
-          "Your access to or use of or inability to access or use the service",
-
-          "Any conduct or content of any third party on the service",
-
-          "Any content obtained from the service",
-
-          "Unauthorized access, use, or alteration of your transmissions or content"
-
-        ]
+          "সার্ভিসে প্রবেশ বা প্রবেশ-অক্ষমতা",
+          "তৃতীয় পক্ষের আচরণ বা কনটেন্ট",
+          "সার্ভিস থেকে প্রাপ্ত কনটেন্ট",
+          "আপনার ডেটায় অননুমোদিত প্রবেশ/ব্যবহার/পরিবর্তন",
+        ],
       },
-      10: {
+      "10": {
         id: "disclaimer",
-        heading: "Disclaimer",
+        heading: "দাবিত্যাগ",
         paragraphs: [
-
-          " Your use of the service is at your sole risk. The service is provided on an `AS IS` and `AS AVAILABLE` basis. The service is provided without warranties of any kind, whether express or implied.",
-
-          "Amiquus does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that the results that may be obtained from the use of the service will be accurate or reliable."
-
+          "সার্ভিস ‘যেমন আছে’ ও ‘যেমন পাওয়া যায়’ ভিত্তিতে—কোনো প্রকার প্রকাশ্য/অপ্রকাশ্য গ্যারান্টি নেই।",
+          "নিরবচ্ছিন্ন, সময়মতো, সিকিউর বা ত্রুটিহীন সার্ভিস বা ফলাফলের নির্ভুলতা সম্পর্কে কোনো নিশ্চয়তা নেই।",
         ],
-        list: [
-        ]
+        list: [],
       },
-      11: {
+      "11": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "কুকি পলিসি",
         paragraphs: [
-          "Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our service, your choices regarding cookies, and further information about cookies. Please refer to the Cookies section in our Privacy Policy."
+          "কুকি কী, আমরা কীভাবে ব্যবহার করি, তৃতীয় পক্ষ কীভাবে ব্যবহার করতে পারে, আপনার পছন্দ—সবই প্রাইভেসি পলিসির কুকিজ সেকশনে বর্ণিত।",
         ],
-        list: [
-        ]
+        list: [],
       },
-      12: {
+      "12": {
         id: "governing-law",
-        heading: "Governing Law",
+        heading: "প্রযোজ্য আইন",
         paragraphs: [
-          "    These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.",
-          " Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
+          "এই টার্মস যুক্তরাষ্ট্রের আইনে পরিচালিত হবে (কনফ্লিক্ট অফ ল’স উপেক্ষিত)।",
+          "কোনো ধারার অকার্যকারিতায় অবশিষ্ট ধারা বহাল থাকবে।",
         ],
-        list: [
-        ]
+        list: [],
       },
-      13: {
+      "13": {
         id: "contact",
-        heading: "Contact Us",
+        heading: "যোগাযোগ",
         paragraphs: [
-          "  If you have any questions about these Terms, please contact us:"
+          "এই টার্মস সম্পর্কে প্রশ্ন থাকলে আমাদের সাথে যোগাযোগ করুন:",
         ],
-        list: [
-
-          "By email: legal@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+        list: ["ইমেইল: legal@amiquus.com", "আমাদের ওয়েবসাইটের কন্টাক্ট পেজে"],
+      },
+    },
   },
   privacy: {
-    metaTitle: "Privacy Policy | Amiquus",
-    metaDescription: "Learn about how Amiquus handles your personal data, privacy rights, and data collection practices.",
-    title: "Privacy Policy",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "প্রাইভেসি পলিসি | Amiquus",
+    metaDescription:
+      "Amiquus কীভাবে আপনার ব্যক্তিগত ডেটা সংগ্রহ, ব্যবহার ও সুরক্ষিত করে তা জানুন।",
+    title: "প্রাইভেসি পলিসি",
+    lastUpdated: "সর্বশেষ আপডেট: ২১ মে, ২০২৫",
     sections: {
-      0: {
+      "0": {
         id: "introduction",
-        heading: "Introduction",
+        heading: "ভূমিকা",
         paragraphs: [
-
-          "Welcome to Amiquus. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you."
-
-        ]
+          "Amiquus-এ স্বাগতম। আমরা আপনার প্রাইভেসিকে সম্মান করি এবং ব্যক্তিগত ডেটা সুরক্ষায় প্রতিশ্রুতিবদ্ধ। এই নীতিতে আমরা কী তথ্য সংগ্রহ করি, কীভাবে ব্যবহার করি এবং আপনার অধিকারগুলি ব্যাখ্যা করা হয়েছে।",
+        ],
       },
-      1: {
+      "1": {
         id: "data-we-collect",
-        heading: "Information We Collect",
+        heading: "আমরা যে তথ্য সংগ্রহ করি",
         paragraphs: [
-
-          "We collect several different types of information for various purposes to provide and improve our service to you:"
-
+          "আপনাকে সেবা দিতে ও উন্নত করতে আমরা কয়েক ধরনের তথ্য সংগ্রহ করি:",
         ],
         list: [
-
-          "Personal Data: Email address, first name, last name, and profile picture (if provided through third-party authentication).",
-
-          "Account Data: Your login credentials and account preferences.",
-
-          "Usage Data: Information on how you use our website and services.",
-
-          "Car Search Preferences: The vehicle criteria you set for monitoring (brand, model, price range, etc.).",
-
-          "Telegram Information: If you choose to receive notifications via Telegram, we store your Telegram chat ID and bot token.",
-
-          "Payment Information: When you make a purchase, our payment processor collects payment details necessary to process your transaction. Amiquus does not store your full credit card information."
-
-        ]
+          "ব্যক্তিগত ডেটা: ইমেইল, নাম, পদবি, (তৃতীয় পক্ষ দিয়ে লগইন করলে) প্রোফাইল ছবি।",
+          "অ্যাকাউন্ট ডেটা: লগইন তথ্য ও পছন্দ।",
+          "ব্যবহার ডেটা: আপনি আমাদের সাইট/সার্ভিস কীভাবে ব্যবহার করেন।",
+          "কার সার্চ পছন্দ: আপনি যে মানদণ্ড সেট করেন (ব্র্যান্ড, মডেল, মূল্য ইত্যাদি)।",
+          "Telegram তথ্য: নোটিফিকেশন বেছে নিলে আপনার চ্যাট আইডি ও বট টোকেন।",
+          "পেমেন্ট তথ্য: পেমেন্ট প্রসেসর প্রয়োজনীয় তথ্য সংগ্রহ করে; সম্পূর্ণ কার্ড ডেটা Amiquus সংরক্ষণ করে না।",
+        ],
       },
-      2: {
+      "2": {
         id: "how-we-use-data",
-        heading: "How We Use Your Data",
-        paragraphs: [
-
-          "We use your personal data for the following purposes:"
-
-        ],
+        heading: "ডেটা আমরা কীভাবে ব্যবহার করি",
+        paragraphs: ["আমরা আপনার ডেটা ব্যবহার করি—"],
         list: [
-
-          "To provide and maintain our service",
-
-          "To notify you about changes to our service",
-
-          "To allow you to participate in interactive features of our service",
-
-          "To provide customer support",
-
-          "To gather analysis or valuable information so that we can improve our service",
-
-          "To monitor the usage of our service",
-
-          "To detect, prevent and address technical issues",
-
-          "To process payments and prevent fraudulent transactions",
-
-          "To send car listings that match your preferences via your chosen notification method"
-
-        ]
+          "সার্ভিস প্রদান ও রক্ষণাবেক্ষণে",
+          "সার্ভিস পরিবর্তনের নোটিশ দিতে",
+          "ইন্টারঅ্যাকটিভ ফিচার দিতে",
+          "কাস্টমার সাপোর্টে",
+          "বিশ্লেষণ/ইনসাইট সংগ্রহে",
+          "ব্যবহার মনিটরে",
+          "টেকনিক্যাল সমস্যা প্রতিরোধ/সমাধানে",
+          "পেমেন্ট প্রসেস ও জালিয়াতি প্রতিরোধে",
+          "আপনার পছন্দমতো লিস্টিং পাঠাতে",
+        ],
       },
-      3: {
+      "3": {
         id: "data-storage",
-        heading: "Data Storage and Security",
+        heading: "ডেটা সঞ্চয় ও সিকিউরিটি",
         paragraphs: [
-
-          "We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. All data is stored on secure servers with encryption in transit and at rest.",
-
-          "We retain your personal data only for as long as necessary for the purposes set out in this privacy policy, including for the purposes of satisfying any legal, regulatory, tax, accounting, or reporting requirements."
-
-        ]
+          "ডেটায় অননুমোদিত প্রবেশ/পরিবর্তন/উন্মোচন রোধে উপযুক্ত সিকিউরিটি ব্যবস্থা গ্রহণ করি। ট্রানজিট ও রেস্ট—উভয় অবস্থায় এনক্রিপশন প্রযোজ্য।",
+          "এই নীতিতে বর্ণিত উদ্দেশ্য ও আইনগত প্রয়োজন মেটাতে যতদিন দরকার ততদিন ডেটা রাখা হয়।",
+        ],
       },
-      4: {
+      "4": {
         id: "gdpr",
-        heading: "Your GDPR Rights",
+        heading: "আপনার GDPR অধিকার",
         paragraphs: [
-
-          "If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Amiquus aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your personal data.",
-
-          "You have the following data protection rights:"
-
+          "আপনি যদি EEA বাসিন্দা হন, আপনার কয়েকটি ডেটা সুরক্ষা অধিকার আছে। আমরা যুক্তিসঙ্গত পদক্ষেপ নিই যেন আপনি ডেটা সংশোধন/মুছতে/সীমিত করতে পারেন।",
+          "আপনার অধিকারসমূহ:",
         ],
         list: [
-
-          "The right to access, update or delete the information we have on you",
-
-          "The right of rectification",
-
-          "The right to object",
-
-          "The right of restriction",
-
-          "The right to data portability",
-
-          "The right to withdraw consent"
-
-        ]
+          "অ্যাক্সেস/আপডেট/ডিলিট করার অধিকার",
+          "সংশোধনের অধিকার",
+          "আপত্তির অধিকার",
+          "সীমাবদ্ধ করার অধিকার",
+          "ডেটা পোর্টেবিলিটির অধিকার",
+          "সম্মতি প্রত্যাহারের অধিকার",
+        ],
       },
-      5: {
+      "5": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "কুকিজ পলিসি",
         paragraphs: [
-
-          "Cookies are small pieces of data stored on your device. We use cookies to:"
-
+          "কুকিজ হলো আপনার ডিভাইসে সংরক্ষিত ছোট ডেটা। আমরা কুকিজ ব্যবহার করি—",
         ],
         list: [
-
-          "Keep you signed in",
-
-          "Understand how you use our website",
-
-          "Remember your preferences",
-
-          "Customize your experience"
-
-        ]
+          "আপনাকে সাইন-ইন অবস্থায় রাখতে",
+          "ব্যবহার বোঝার জন্য",
+          "পছন্দ মনে রাখতে",
+          "আপনার অভিজ্ঞতা কাস্টমাইজ করতে",
+        ],
       },
-      6: {
+      "6": {
         id: "third-party",
-        heading: "Third-Party Services",
+        heading: "তৃতীয়-পক্ষ সেবা",
         paragraphs: [
-
-          "We may employ third-party companies and individuals to facilitate our service, provide the service on our behalf, perform service-related tasks, or assist us in analyzing how our service is used.",
-
-          "These third parties include:"
-
+          "আমরা তৃতীয়-পক্ষ কোম্পানি নিযুক্ত করতে পারি—সার্ভিসে সহায়তা, আমাদের হয়ে সেবা প্রদান, সেবা-সম্পর্কিত টাস্ক, বা ব্যবহার বিশ্লেষণে।",
+          "এদের মধ্যে থাকতে পারে:",
         ],
         list: [
-
-          "Payment processors (Stripe)",
-
-          "Analytics providers",
-
-          "Customer support services",
-
-          "Hosting and cloud infrastructure providers"
-
+          "পেমেন্ট প্রসেসর (Stripe)",
+          "অ্যানালিটিক্স প্রদানকারী",
+          "কাস্টমার সাপোর্ট সেবা",
+          "হোস্টিং/ক্লাউড ইনফ্রা প্রদানকারী",
         ],
         paragraphs2: [
-
-          "These third parties have access to your personal data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
-
-        ]
-      },
-      7: {
-        id: "changes",
-        heading: "Changes to This Privacy Policy",
-        paragraphs: [
-
-          "We may update our privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the 'Last updated' date.",
-
-          "You are advised to review this privacy policy periodically for any changes. Changes to this privacy policy are effective when they are posted on this page."
-
-        ]
-      },
-      8: {
-        id: "contact",
-        heading: "Contact Us",
-        paragraphs: [
-
-          "If you have any questions about this privacy policy, please contact us:"
-
+          "তৃতীয়-পক্ষ কেবল আমাদের হয়ে নির্ধারিত কাজের জন্য ডেটায় প্রবেশ পায়—অন্য কোনো কাজে ব্যবহার/উন্মোচন নিষিদ্ধ।",
         ],
-        list: [
-
-          "By email: privacy@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+      },
+      "7": {
+        id: "changes",
+        heading: "নীতির পরিবর্তন",
+        paragraphs: [
+          "আমরা সময় সময় এই নীতি আপডেট করতে পারি। আপডেটেড নীতি এই পেজে পোস্ট করি ও ‘সর্বশেষ আপডেট’ তারিখ বদলাই।",
+          "আপনাকে নিয়মিত নীতি পর্যালোচনা করতে উৎসাহিত করছি। পোস্ট হলেই পরিবর্তন কার্যকর।",
+        ],
+      },
+      "8": {
+        id: "contact",
+        heading: "যোগাযোগ",
+        paragraphs: [
+          "এই প্রাইভেসি নীতি নিয়ে প্রশ্ন থাকলে আমাদের সাথে যোগাযোগ করুন:",
+        ],
+        list: ["ইমেইল: privacy@amiquus.com", "আমাদের ওয়েবসাইটের কন্টাক্ট পেজে"],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Frequently Asked Questions | Amiquus",
-    metaDescription: "Find answers to the most common questions about Amiquus car listing monitoring service, subscriptions, notification setup, and more.",
-    title: "Frequently Asked Questions",
-    subtitle: "Find quick answers to common questions about our car listing monitoring service",
+    metaTitle: "প্রশ্নোত্তর | Amiquus",
+    metaDescription:
+      "Amiquus-এর কার লিস্টিং মনিটরিং, সাবস্ক্রিপশন, নোটিফিকেশন সেটআপ ইত্যাদি বিষয়ে সাধারণ প্রশ্নের উত্তর পান।",
+    title: "প্রশ্নোত্তর",
+    subtitle: "আমাদের কার লিস্টিং মনিটরিং সার্ভিস সম্পর্কে দ্রুত উত্তর",
     general: {
-      heading: "General Questions",
+      heading: "সাধারণ প্রশ্ন",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Amiquus কী?",
+        answer:
+          "Amiquus এমন একটি সার্ভিস যা আপনার নির্ধারিত মানদণ্ডে মিল থাকা গাড়ির লিস্টিং একাধিক সাইটে মনিটর করে। মিল পেলেই Telegram-এ ইনস্ট্যান্ট নোটিফিকেশন পান—ফলে সবার আগে যোগাযোগ করতে পারেন ও ভালো ডিল নিশ্চিত করতে পারেন।",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "এটি কীভাবে কাজ করে?",
         answer: [
-
-          "You set up your search criteria (make, model, price range, etc.)",
-
-          "You select which websites to monitor",
-
-          "You connect your Telegram account for notifications",
-
-          "Our system continuously monitors your selected websites for new listings",
-
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-
-        ]
+          "আপনি আপনার সার্চ মানদণ্ড সেট করেন (ব্র্যান্ড, মডেল, মূল্য ইত্যাদি)",
+          "যে ওয়েবসাইট মনিটর করবেন তা নির্বাচন করেন",
+          "Telegram-এ নোটিফিকেশন সংযুক্ত করেন",
+          "আমাদের সিস্টেম নির্বাচিত সাইটগুলোতে নতুন লিস্টিং অবিরত মনিটর করে",
+          "মিল পাওয়া মাত্রই বিস্তারিতসহ সরাসরি লিংক দিয়ে নোটিফিকেশন পান",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "আপনারা কোন কার লিস্টিং ওয়েবসাইট মনিটর করেন?",
+        answerIntro: "আমরা বর্তমানে যে প্রধান প্ল্যাটফর্মগুলো মনিটর করি:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (URL দিয়ে)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro: "সম্ভব সর্বাধিক কভারেজ দিতে আমরা নিয়মিত প্ল্যাটফর্ম যুক্ত করছি।",
+      },
     },
     subscription: {
-      heading: "Subscription Questions",
+      heading: "সাবস্ক্রিপশন সম্পর্কিত",
       cost: {
-        question: "How much does a subscription cost?",
+        question: "সাবস্ক্রিপশনের খরচ কত?",
         answer: [
-
-          "Our pricing starts at $9.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
-
-          "For specific pricing details, please view our pricing section on the homepage."
-
-        ]
+          "একটি সাইট ৬ ঘণ্টা অন্তর আপডেটসহ মনিটর করতে মাসিক $9.99 থেকে শুরু। অতিরিক্ত প্রতিটি সাইট $4.99/মাস। আরও দ্রুত অ্যালার্টের জন্য আপডেট ফ্রিকোয়েন্সি আপগ্রেড করতে পারবেন।",
+          "বিস্তারিত মূল্য জানতে হোমপেজের প্রাইসিং সেকশন দেখুন।",
+        ],
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
+        question: "সাবস্ক্রিপশন কীভাবে বাতিল করব?",
+        stepsIntro: "অ্যাকাউন্ট প্রোফাইল থেকে যেকোনো সময় বাতিল করতে পারেন:",
         steps: [
-
-          "Log in to your account",
-
-          "Navigate to the \\\"Profile\\\" page",
-
-          "Select the \\\"Subscriptions\\\" tab",
-
-          "Click the \\\"Cancel Subscription\\\" button next to the subscription you wish to cancel"
-
+          "অ্যাকাউন্টে লগ ইন করুন",
+          '"Profile" পেজে যান',
+          '"Subscriptions" ট্যাব নির্বাচন করুন',
+          '"Cancel Subscription" বোতাম চাপুন',
         ],
-        note: "Your subscription will remain active until the end of your current billing period."
+        note: "বর্তমান বিলিং পিরিয়ড শেষ হওয়া পর্যন্ত সেবা চলবে।",
       },
       multiple: {
-        question: "Can I have multiple subscriptions for different car models?",
-        answer: "Yes, you can create multiple subscriptions under a single account. Each subscription can track different car models, brands, or price ranges. This is particularly useful if you're searching for multiple vehicles or helping friends and family with their car search."
+        question: "ভিন্ন মডেলের জন্য একাধিক সাবস্ক্রিপশন রাখতে পারি?",
+        answer:
+          "হ্যাঁ, এক অ্যাকাউন্টে একাধিক সাবস্ক্রিপশন রাখতে পারেন—বিভিন্ন ব্র্যান্ড/মডেল/দামের জন্য আলাদা করে।",
       },
       limit: {
-        question: "Why is there a limit on the number of subscribers?",
-        intro: "We limit our service to 30 active subscribers to ensure:",
+        question: "সাবস্ক্রাইবার সীমা কেন আছে?",
+        intro:
+          "সার্ভিস কোয়ালিটি বজায় রাখতে ৩০ সক্রিয় সাবস্ক্রিপশনে সীমাবদ্ধ রাখি, যাতে—",
         list: [
-
-          "The highest quality of service and data accuracy",
-
-          "Personalized support for each subscriber",
-
-          "Faster notification delivery during peak listing times",
-
-          "Ethical scraping that doesn't overload the target websites"
-
+          "ডেটার মান ও নির্ভুলতা বজায় থাকে",
+          "প্রতিজনের জন্য ব্যক্তিগত সাপোর্ট দেওয়া যায়",
+          "পিক সময়ে দ্রুত নোটিফিকেশন দেওয়া যায়",
+          "টার্গেট সাইটে নৈতিক লোড বজায় থাকে",
         ],
-        outro: "If we've reached capacity, you can join our waitlist to be notified when a spot becomes available."
-      }
+        outro: "সীমা পূর্ণ হলে ওয়েটলিস্টে যোগ দিন—খালি হলেই জানানো হবে।",
+      },
     },
     technical: {
-      heading: "Technical Questions",
+      heading: "টেকনিক্যাল",
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        stepsIntro: "To set up Telegram notifications:",
+        question: "Telegram নোটিফিকেশন কীভাবে সেট করব?",
+        stepsIntro: "এই ধাপগুলো অনুসরণ করুন:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions provided during setup)",
-
-          "Copy your bot token from BotFather",
-
-          "Start a conversation with your bot",
-
-          "Get your chat ID (instructions provided during setup)",
-
-          "Enter your bot token and chat ID in your Amiquus subscription settings",
-
-          "Test your notification setup using the `Send Test Message` button"
-
+          "BotFather দিয়ে বট তৈরি করুন (ড্যাশবোর্ডে নির্দেশনা আছে)",
+          "বট টোকেন কপি করুন",
+          "আপনার বটের সাথে চ্যাট শুরু করুন",
+          "Chat ID সংগ্রহ করুন (ড্যাশবোর্ডে নির্দেশনা আছে)",
+          "Amiquus সেটিংসে টোকেন ও Chat ID দিন",
+          "`Send Test Message` দিয়ে টেস্ট করুন",
         ],
-        note: "Detailed step-by-step instructions with screenshots are provided during the subscription setup process."
+        note: "সেটআপ চলাকালীন স্ক্রিনশটসহ বিস্তারিত গাইড দেওয়া আছে।",
       },
       frequency: {
-        question: "How often will I receive notifications?",
-        intro: "The frequency of notifications depends on:",
+        question: "কত ঘনঘন নোটিফিকেশন পাব?",
+        intro: "এগুলো নির্ভর করে—",
         list: [
-
-          "Your chosen update frequency package (from every 6 hours to every 30 minutes)",
-
-          "How many new listings match your criteria",
-
-          "How active the market is for your selected make/model"
-
+          "আপনার নির্বাচিত আপডেট ফ্রিকোয়েন্সি (৬ ঘণ্টা থেকে ৩০ মিনিট পর্যন্ত)",
+          "আপনার মানদণ্ডে মিল পাওয়া নতুন লিস্টিংয়ের ওপর",
+          "আপনার নির্বাচিত ব্র্যান্ড/মডেলের বাজার-সক্রিয়তার ওপর",
         ],
-        outro: "You'll only receive notifications when new listings that match your criteria are found."
+        outro:
+          "শুধু তখনই নোটিফিকেশন পাবেন যখন নতুন মিল পাওয়া লিস্টিং পাওয়া যাবে।",
       },
       privacy: {
-        question: "How is my personal data protected?",
-        intro: "We take data privacy seriously and apply these measures:",
+        question: "আমার ব্যক্তিগত তথ্য কীভাবে সুরক্ষিত?",
+        intro: "আমরা প্রাইভেসিকে গুরুত্ব দিই:",
         list: [
-
-          "Encrypted data in transit and at rest",
-
-          "Secure payments via Stripe",
-
-          "No third-party data sharing",
-
-          "You can request or delete your data anytime"
-
+          "ট্রানজিট ও রেস্ট—উভয় অবস্থায় এনক্রিপশন",
+          "Stripe-এর মাধ্যমে নিরাপদ পেমেন্ট",
+          "তৃতীয়-পক্ষের সাথে কোনো অননুমোদিত শেয়ারিং নয়",
+          "আপনি চাইলে ডেটা রিকোয়েস্ট/ডিলিট করতে পারবেন",
         ],
-        outro: "Read our full Privacy Policy for more."
-      }
+        outro: "বিস্তারিত জানতে আমাদের প্রাইভেসি পলিসি দেখুন।",
+      },
     },
     support: {
-      heading: "Still have questions?",
-      description: "If you couldn't find the answer to your question, our support team is here to help!",
-      button: "Contact Support"
-    }
+      heading: "আরও সাহায্য দরকার?",
+      description:
+        "আপনার প্রশ্নের উত্তর না পেলে আমাদের সাপোর্ট টিম সাহায্য করতে প্রস্তুত!",
+      button: "সাপোর্টে যোগাযোগ",
+    },
   },
   waitlist: {
-    metaTitle: "Join the Waitlist - Amiquus",
-    metaDescription: "Join the Amiquus waitlist to be notified when subscriptions become available.",
-    title: "Join Our Waitlist",
-    subtitle: "Due to high demand, we limit the number of active subscriptions to ensure the best service quality for all users.",
+    metaTitle: "ওয়েটলিস্টে যোগ দিন - Amiquus",
+    metaDescription:
+      "সাবস্ক্রিপশন খালি হলে জানানোর জন্য Amiquus ওয়েটলিস্টে যোগ দিন।",
+    title: "আমাদের ওয়েটলিস্টে যোগ দিন",
+    subtitle:
+      "সবার জন্য সেরা সার্ভিস কোয়ালিটি বজায় রাখতে আমরা সক্রিয় সাবস্ক্রিপশনের সংখ্যা সীমিত রাখি।",
     limited: {
-      heading: "Limited Availability",
-      description: "We limit our system to only 30 active subscribers to ensure:",
+      heading: "সীমিত সুযোগ",
+      description:
+        "আমরা সর্বোচ্চ ৩০টি সক্রিয় সাবস্ক্রিপশনে সীমাবদ্ধ রাখি যাতে:",
       points: [
-
-        "Exceptional scraping reliability and speed for all users",
-
-        "Reduced chances of being blocked by car listing websites",
-
-        "Personalized support for each subscriber",
-
-        "Fair distribution of server resources"
-
+        "সব ব্যবহারকারীর জন্য নির্ভরযোগ্য ও দ্রুত স্ক্র্যাপিং",
+        "কার লিস্টিং ওয়েবসাইটে ব্লক হওয়ার সম্ভাবনা কমে",
+        "প্রতিজনের জন্য ব্যক্তিগত সাপোর্ট",
+        "সার্ভার রিসোর্সের ন্যায্য বণ্টন",
       ],
-      available: "{{remaining}} subscription spots out of {{capacity}} currently available.",
-      full: "All subscription spots are currently filled. Join the waitlist to be notified when a spot becomes available."
+      available:
+        "বর্তমানে {{capacity}}টির মধ্যে {{remaining}}টি সাবস্ক্রিপশন স্পট খালি।",
+      full: "সব সাবস্ক্রিপশন স্পট পূর্ণ। খালি হলে জানার জন্য ওয়েটলিস্টে যোগ দিন।",
     },
     success: {
-      title: "You're on the waitlist!",
-      description: "We'll notify you as soon as a subscription spot becomes available",
-      message: "Thank you for your interest in Amiquus! We've added you to our waitlist and will contact you as soon as we have an opening.",
-      button: "Return to Homepage"
+      title: "আপনি ওয়েটলিস্টে যুক্ত হয়েছেন!",
+      description: "স্লট খালি হলেই আপনাকে জানানো হবে",
+      message:
+        "Amiquus-এ আগ্রহের জন্য ধন্যবাদ! আপনাকে ওয়েটলিস্টে যোগ করা হয়েছে—জায়গা খালি হলেই যোগাযোগ করা হবে।",
+      button: "হোমপেজে ফিরে যান",
     },
     cantJoin: {
-      title: "অপেক্ষা তালিকায় যোগ দিন",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "ওয়েটলিস্টে যোগ দিন",
+      description: " জায়গা খালি হলেই আপনাকে জানানো হবে",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "নামের প্রথম অংশ",
+        placeholder: "John",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "নামের শেষ অংশ",
+        placeholder: "Doe",
       },
       email: {
-        label: "Email",
+        label: "ইমেইল",
         placeholder: "john.doe@example.com",
-        description: "We'll use this email to notify you when a spot becomes available"
+        description: "জায়গা খালি হলে এই ঠিকানায় জানানো হবে",
       },
-      submit: "Join Waitlist",
-      submitting: "Submitting..."
-    }
+      submit: "ওয়েটলিস্টে যোগ দিন",
+      submitting: "জমা হচ্ছে...",
+    },
   },
   support: {
-    metaTitle: "Support | Amiquus - Help Center",
-    metaDescription: "Get help with your Amiquus account, subscription, or car alerts. Browse our help center or contact our support team for assistance.",
-    title: "Support Center",
-    subtitle: "Find answers to common questions or get in touch with our support team",
+    metaTitle: "সাপোর্ট | Amiquus - হেল্প সেন্টার",
+    metaDescription:
+      "Amiquus অ্যাকাউন্ট, সাবস্ক্রিপশন বা কার অ্যালার্ট নিয়ে সাহায্য নিন। হেল্প সেন্টার ব্রাউজ করুন বা সাপোর্ট টিমে লিখুন।",
+    title: "সাপোর্ট সেন্টার",
+    subtitle: "সাধারণ প্রশ্নের দ্রুত উত্তর বা সরাসরি যোগাযোগ",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "ইমেইল সাপোর্ট",
+      description: "আমাদের লিখুন—২৪ ঘণ্টার মধ্যে উত্তর দেব",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "প্রশ্নোত্তর",
     faqs: {
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        intro: "To set up Telegram notifications, follow these steps:",
+        question: "Telegram নোটিফিকেশন কীভাবে সেট করব?",
+        intro: "ধাপগুলো অনুসরণ করুন:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions in our dashboard)",
-
-          "Copy your API token and chat ID",
-
-          "Enter these details in your account settings under \\\"Notification Preferences\\\"",
-
-          "Test your connection using the \\\"Send Test Message\\\" button"
-
+          "ড্যাশবোর্ডে দেওয়া নির্দেশনা অনুযায়ী BotFather দিয়ে বট তৈরি করুন",
+          "API টোকেন ও Chat ID কপি করুন",
+          "“Notification Preferences”-এ দিন",
+          "“Send Test Message” দিয়ে পরীক্ষা করুন",
         ],
-        outro: "If you need more help, our detailed guide is available in your dashboard."
+        outro: "আরও সাহায্য প্রয়োজন হলে ড্যাশবোর্ডে ডিটেইলড গাইড আছে।",
       },
       updates: {
-        question: "How often are car listings updated?",
-        answer: "The update frequency depends on your subscription plan. Basic plans receive updates every 6 hours, while Premium plans can get updates as frequently as every 30 minutes. You can view and modify your current update frequency in your subscription settings."
+        question: "কত ঘনঘন লিস্টিং আপডেট হয়?",
+        answer:
+          "আপনার প্ল্যানের উপর নির্ভর করে। বেসিক প্ল্যানে ৬ ঘণ্টা পরপর, প্রিমিয়ামে ৩০ মিনিট পর্যন্ত। সাবস্ক্রিপশন সেটিংসে বর্তমান ফ্রিকোয়েন্সি দেখুন/বদলান।",
       },
       facebook: {
-        question: "Can I monitor Facebook Marketplace?",
-        answer: "Yes, we support Facebook Marketplace monitoring. To set this up, you'll need to provide the URL to the Facebook Marketplace search results page with your desired filters applied. Our system will then monitor that specific search for new listings that match your criteria."
+        question: "Facebook Marketplace মনিটর করা যাবে?",
+        answer:
+          "হ্যাঁ। Facebook Marketplace-এ ফিল্টার করা সার্চ রেজাল্টের URL দিলে আমরা সেটি মনিটর করব।",
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        answer: "You can cancel your subscription at any time from your account profile page. Click on the \"Subscriptions\" tab, locate the subscription you wish to cancel, and click the \"Cancel Subscription\" button. Your service will continue until the end of your current billing period."
+        question: "সাবস্ক্রিপশন কীভাবে বাতিল করব?",
+        answer:
+          "প্রোফাইলে “Subscriptions” ট্যাবে গিয়ে সংশ্লিষ্ট সাবস্ক্রিপশনে “Cancel Subscription” চাপুন। বর্তমান বিলিং পিরিয়ড পর্যন্ত সেবা চলবে।",
       },
       full: {
-        question: "What happens if all subscription slots are full?",
-        answer: "To maintain our high quality of service, we limit the number of active subscriptions. If all slots are full, you can join our waitlist. We'll notify you as soon as a slot becomes available, and you'll have priority to claim it before we open it to the general public."
-      }
+        question: "সব স্লট পূর্ণ থাকলে কী হবে?",
+        answer:
+          "কোয়ালিটি বজায় রাখতে সক্রিয় সাবস্ক্রিপশন সীমিত। স্লট পূর্ণ হলে ওয়েটলিস্টে যোগ দিন—খালি হলেই অগ্রাধিকার ভিত্তিতে জানানো হবে।",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "এখনও সাহায্য দরকার?",
+      description:
+        "প্রয়োজনীয় উত্তর না পেলে আমাদের সাপোর্ট টিমে লিখুন—আমরা সাহায্য করতে প্রস্তুত!",
+      button: "সাপোর্টে যোগাযোগ",
+    },
   },
   notFound: {
-    title: "404 Page Not Found",
-    message: "Did you forget to add the page to the router?"
+    title: "৪০৪ পেজ পাওয়া যায়নি",
+    message: "আপনি কি রাউটারে পেজটি যুক্ত করতে ভুলে গেছেন?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "আপনার Amiquus ইমেইল ভেরিফিকেশন কোড",
+      greeting: "হ্যালো,",
+      message: "সাইন-আপ সম্পূর্ণ করতে নিচের কোড ব্যবহার করুন:",
+      expiration: "এই কোড ১০ মিনিট পর এক্সপায়ার হবে।",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "আপনার Amiquus পেমেন্ট রিসিপ্ট – ইনভয়েস #",
+        h2Message: "Amiquus সাবস্ক্রিপশন পেমেন্ট সফল হয়েছে!",
+        greeting: "হ্যালো,",
+        paymentMessage: "আমরা আপনার পেমেন্ট পেয়েছি:",
+        downloadMessage: "নিচের লিংকে ইনভয়েস দেখুন বা ডাউনলোড করুন:",
+        viewInvoice: "ইনভয়েস দেখুন",
+        invoiceNumber: "ইনভয়েস #:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "পেমেন্ট পেন্ডিং – ইনভয়েস",
+        subjectB: "আপনার Amiquus সাবস্ক্রিপশনের জন্য",
+        h2Message:
+          "অ্যাকশন প্রয়োজন: Amiquus সাবস্ক্রিপশনের পেমেন্ট সম্পূর্ণ করুন",
+        greeting: "হ্যালো,",
+        messageA: "আপনার ইনভয়েস",
+        messageB:
+          "এখনও অনাদায়ী। সাবস্ক্রিপশন সক্রিয় করতে নিচের পরিমাণটি পরিশোধ করুন:",
+        paymentMessage: "সিকিউর পেমেন্ট লিংক:",
+        payInvoice: "ইনভয়েস পরিশোধ করুন",
+        ignoreEmail: "ইতোমধ্যে পেমেন্ট করে থাকলে এই ইমেইল উপেক্ষা করুন।",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "পেমেন্ট ব্যর্থ – ইনভয়েস",
+        message: "আপনার সাম্প্রতিক পেমেন্ট প্রসেস করা যায়নি (চেষ্টা",
+        attemptsA:
+          "শীঘ্রই আবার চেষ্টা করব—এ মুহূর্তে কোনো পদক্ষেপ প্রয়োজন নেই।",
+        attemptsB: "আমরা ৩ বার চেষ্টা করেছি কিন্তু প্রতিবারই ব্যর্থ হয়েছে।",
+        attemptsC:
+          "ফলস্বরূপ আপনার সাবস্ক্রিপশন <strong>পজ</strong> করা হয়েছে। পুনরায় রিজিউম না করা পর্যন্ত আপডেট পাবেন না।",
+        attemptsD:
+          "দয়া করে পেমেন্ট মেথড আপডেট করে প্রোফাইল থেকে সাবস্ক্রিপশন রিজিউম করুন:",
+        viewInvoice: "ইনভয়েস দেখুন",
+        managePayment: "পেমেন্ট মেথড ম্যানেজ",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "আপনি Amiquus ওয়েটলিস্টে যুক্ত হয়েছেন!",
+      h2Message: "আপনি তালিকায় আছেন!",
+      hi: "হাই",
+      message:
+        "Amiquus ওয়েটলিস্টে যোগ দেওয়ার জন্য ধন্যবাদ। জায়গা খালি হলেই জানানো হবে।",
+      anyQuestions: "প্রশ্ন থাকলে এই ইমেইলে রিপ্লাই করতে পারেন।",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Amiquus বেছে নেওয়ার জন্য ধন্যবাদ!",
+      signature: "শুভেচ্ছান্তে,<br/>Amiquus টিম",
+      team: "— Amiquus টিম",
+      needHelp: "সাহায্য দরকার?",
+      hello: "হ্যালো",
+    },
+  },
 };

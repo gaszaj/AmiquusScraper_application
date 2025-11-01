@@ -18,7 +18,7 @@ export const en = {
     signUp: "Sign Up",
   },
   hero: {
-    label: "Track used car listings in real-time",
+    label: "Track used car listings in real-time!",
     title: "Never Miss Your Perfect Car Deal Again",
     subtitle:
       "Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.",

@@ -1,13 +1,13 @@
 export const bg = {
   navigations: {
-    features: "Характеристики",
+    features: "Възможности",
     how: "Как работи",
-    pricing: "Ценообразуване",
-    getAlerts: "Получете известия",
-    waitlist: "Списък на изчакване",
-    faq: "Често задавани въпроси",
+    pricing: "Цени",
+    getAlerts: "Включи известия",
+    waitlist: "Списък с чакащи",
+    faq: "ЧЗВ",
     login: "Вход",
-    getStarted: "Започнете",
+    getStarted: "Започни",
     subscribers: "Абонати",
     theme: "Тема",
     language: "Език",
@@ -15,1488 +15,1444 @@ export const bg = {
     profile: "Профил",
     settings: "Настройки",
     logout: "Изход",
-    signUp: "Регистрация"
+    signUp: "Регистрация",
   },
   hero: {
-    label: "Track used car listings in real-time",
-    title: "Never Miss Your Perfect Car Deal Again",
-    subtitle: "Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.",
-    button1: "Настройте вашите сигнали",
-    button2: "See How It Works",
+    label: "Следи обяви за употребявани автомобили в реално време",
+    title: "Повече никога не изпускай изгодната оферта за кола",
+    subtitle:
+      "Amiquus те предупреждава мигновено, щом мечтаната ти кола се появи в някой от автомобилните сайтове. Получаваш известие в Telegram в момента, в който има съвпадение.",
+    button1: "Настрой моите известия",
+    button2: "Виж как работи",
     trustIndicators: {
-      websites: "Проследявани 15+ уебсайта",
+      websites: "15+ сайта се следят",
       realtime: "Известия в реално време",
-      noSetup: "Не се изисква настройка",
-      cancelAnytime: "Откажете по всяко време"
-    }
+      noSetup: "Без сложна настройка",
+      cancelAnytime: "Отказ по всяко време",
+    },
   },
   limited: {
     full: {
       title: "Достигнат лимит на абонаменти",
-      description: "We've reached our capacity of 30 active subscribers. Join our waitlist to be notified when a spot opens up.",
-      buttonText: "Join Waitlist"
+      description:
+        "Достигнахме капацитет от 30 активни абоната. Присъедини се към списъка с чакащи и ще те уведомим, когато се освободи място.",
+      buttonText: "Запиши се",
     },
     limited: {
-      title: "Limited Availability",
-      description: "Only {{remaining}} slots remaining out of {{capacity}}. Subscribe now before we reach capacity!",
-      buttonText: "Get Started Now"
+      title: "Ограничена наличност",
+      description:
+        "Остават само {{remaining}} от общо {{capacity}} места. Абонирай се сега, преди да запълним капацитета!",
+      buttonText: "Започни сега",
     },
     available: {
-      title: "Subscriptions Available",
-      description: "{{active}} of {{capacity}} subscriptions are currently active. Plenty of room for you to join!",
-      buttonText: "Get Started Now"
-    }
+      title: "Налични абонаменти",
+      description:
+        "Активни са {{active}} от {{capacity}} абонамента. Има достатъчно място да се присъединиш!",
+      buttonText: "Започни сега",
+    },
   },
   features: {
-    heading: "Why Choose Amiquus?",
-    subheading: "Save time and never miss out on your perfect car with our automated tracking service.",
+    heading: "Защо да избереш Amiquus?",
+    subheading:
+      "Спести време и не изпускай идеалната кола с нашето автоматизирано проследяване.",
     multiSite: {
-      title: "Проследяване на множество сайтове",
-      description: "Следете множество уебсайтове за обяви за автомобили едновременно, без да е необходимо да проверявате всеки един ръчно."
+      title: "Проследяване на много сайтове",
+      description:
+        "Наблюдавай едновременно няколко портала за автомобили, без да ги проверяваш ръчно.",
     },
     notifications: {
-      title: "Instant Notifications",
-      description: "Receive immediate alerts via Telegram when a car matching your criteria is listed for sale."
+      title: "Мигновени известия",
+      description:
+        "Получавай незабавни известия в Telegram, когато се появи обява по твои критерии.",
     },
     filters: {
-      title: "Custom Filters",
-      description: "Set precise criteria including brand, model, year, mileage, and price range to find exactly what you want."
+      title: "Персонализирани филтри",
+      description:
+        "Задай точни критерии: марка, модел, година, пробег и ценови диапазон, за да намериш точно каквото търсиш.",
     },
     frequency: {
-      title: "Customizable Frequency",
-      description: "Choose how often we check for new listings, from hourly updates to real-time monitoring."
+      title: "Регулируема честота",
+      description:
+        "Избирай колко често да проверяваме за нови обяви — от почасово до почти в реално време.",
     },
     languages: {
-      title: "Поддръжка на множество езици",
-      description: "Получавайте известия на предпочитания от вас език за по-лесно разбиране на обявите."
+      title: "Многоезична поддръжка",
+      description:
+        "Получавай известия на предпочитания от теб език, за по-лесно разбиране на обявите.",
     },
     account: {
-      title: "Easy Account Management",
-      description: "Manage multiple search profiles and modify your subscription settings with a few clicks."
-    }
+      title: "Лесно управление на акаунт",
+      description:
+        "Управлявай няколко профила за търсене и настрой абонамента си с няколко клика.",
+    },
   },
   howItWorks: {
-    title: "How Amiquus Works",
-    subtitle: "Set up once and let our automated system find the perfect car deal for you",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Как работи Amiquus",
+    subtitle:
+      "Настрой веднъж и остави системата да намира най-добрите оферти вместо теб",
+    whyTitle: "Защо да избереш Amiquus?",
     steps: {
       preferences: {
-        title: "Set Your Preferences",
-        description: "Select car brands, models, price range, and other criteria you're interested in monitoring."
+        title: "Задай предпочитания",
+        description:
+          "Избери марки, модели, ценови диапазон и други критерии, които искаш да следим.",
       },
       telegram: {
-        title: "Connect Telegram",
-        description: "Link your Telegram account to receive instant notifications about new listings."
+        title: "Свържи Telegram",
+        description:
+          "Свържи своя Telegram, за да получаваш моментални известия за нови обяви.",
       },
       notifications: {
-        title: "Get Instant Notifications",
-        description: "Receive alerts the moment a car matching your criteria appears on any of our monitored websites."
+        title: "Получавай мигновени известия",
+        description:
+          "Ще те уведомим веднага щом се появи съвпадение в някой от наблюдаваните сайтове.",
       },
       findCar: {
-        title: "Намерете вашия перфектен автомобил",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "Намери идеалната кола",
+        description:
+          "Бъди пръв при новите обяви и вземи най-добрите сделки преди другите.",
+      },
     },
     features: [
-
-      "Track over 15 car listing websites simultaneously",
-
-      "Customizable search criteria with advanced filtering",
-
-      "Real-time notifications via Telegram",
-
-      "Automatic price drop and new listing alerts",
-
-      "Easy setup process that takes less than 5 minutes"
-
+      "Следене на над 15 сайта за автомобили едновременно",
+      "Разширени филтри и прецизни критерии за търсене",
+      "Известия в реално време чрез Telegram",
+      "Автоматични сигнали за поевтиняване и нови обяви",
+      "Лесна настройка за под 5 минути",
     ],
-    setAlerts: "Настройте вашите сигнали",
+    setAlerts: "Настрой моите известия",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Ново съвпадение!",
+      description: "BMW 3 Series, 2019, $32,500 – Току-що в AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram предупреждение",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "Telegram известие",
+      description:
+        "Mercedes C-Class, 2020, 30 000 miles – Цената падна с $2,000",
+    },
   },
   pricing: {
-    title: "Simple, Transparent Pricing",
-    subtitle: "Our pricing is based on your specific needs. Start with a base package and customize it to fit your requirements.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Прости и прозрачни цени",
+    subtitle:
+      "Цената зависи от твоите нужди. Започни с базов пакет и го надгради според изискванията си.",
+    baseTitle: "Базов пакет: $9.99/месец",
+    includedTitle: "Какво включва:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Проследяване на един сайт",
+      "Почасови обновявания",
+      "Неограничени филтри",
+      "Известия в Telegram",
     ],
-    addonsTitle: "Add-ons:",
+    addonsTitle: "Добавки:",
     addons: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
+      { name: "Всеки допълнителен сайт", price: 4.99 },
+      { name: "Обновяване на 30 минути", price: 2.99 },
+      { name: "Обновяване на 15 минути", price: 5.99 },
+      { name: "Обновяване на 5 минути", price: 9.99 },
+      { name: "Обновяване на 1 минута", price: 14.99 },
     ],
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Get Started Now"
+    footerNote:
+      "Всички планове включват неограничени конфигурации за търсене и лесно управление на абонамента.",
+    button: "Започни сега",
   },
   signup: {
-    heading: "Създайте вашето автомобилно предупреждение",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Създай известие за кола",
+    subheading:
+      "Настрой персонализирани известия за обяви само в няколко стъпки.",
+    cta: "Включи известия",
     waitlist: {
-      message: "В момента сме с пълен капацитет. Присъединете се към нашия списък за изчакване, за да бъдете уведомени, когато се освободи място.",
-      cta: "Join Waitlist"
+      message:
+        "В момента капацитетът е запълнен. Присъедини се към списъка с чакащи, за да получиш известие при освобождаване на място.",
+      cta: "Запиши се",
     },
     toast: {
       success: {
         title: "Абонаментът е създаден",
-        description: "Your subscription has been created successfully"
+        description: "Абонаментът ти беше създаден успешно.",
       },
       error: {
-        title: "Абонаментът е неуспешен",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Неуспешен абонамент",
+        description:
+          "Не успяхме да създадем абонамент. Опитай отново по-късно.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
-        title: "Success",
-        description: "Your payment method has been successfully set up."
+        title: "Успех",
+        description: "Начинът на плащане е добавен успешно.",
       },
       error: {
-        title: "Error",
-        fallback: "An unexpected error occurred. Please try again."
-      }
+        title: "Грешка",
+        fallback: "Възникна неочаквана грешка. Опитай отново.",
+      },
     },
     button: {
-      submit: "Set up payment method",
-      processing: "Processing..."
-    }
+      submit: "Добави начин на плащане",
+      processing: "Обработва се...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "Задължителна е марка автомобил",
+      carModel: "Задължителен е модел автомобил",
+      fuelType: "Задължително е гориво",
+      priceMin: "Минималната цена трябва да е число",
+      priceMax: "Максималната цена трябва да е число",
+      yearMin: "Минималната година трябва да е валидна",
+      yearMax: "Максималната година трябва да е валидна",
+      maxKilometers: "Максималните километри трябва да са число",
+      telegramUsername: "Потребителско име в Telegram е задължително",
+      telegramToken: "Необходим е токен на Telegram бота",
+      telegramChatId: "Необходим е Telegram chat ID",
+      websitesSelected: "Избери поне един сайт",
+      notificationLanguage: "Избери език за известията",
+      facebookMarketplaceUrl:
+        "URL към Facebook Marketplace е задължителен, когато е избран Facebook",
+    },
   },
   personalInfo: {
-    heading: "Personal Information",
-    description: "Please provide your personal details so we can set up your notifications correctly.",
+    heading: "Лична информация",
+    description:
+      "Моля, въведи личните си данни, за да настроим правилно известията.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Email Address"
+      firstName: "Име",
+      lastName: "Фамилия",
+      email: "Имейл адрес",
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com"
+      email: "john.doe@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Please enter a valid email"
+      firstName: "Името е задължително",
+      lastName: "Фамилията е задължителна",
+      email: "Моля, въведи валиден имейл",
     },
     actions: {
-      login: "Login or Sign Up to Continue",
-      continue: "Continue"
-    }
+      login: "Влез или се регистрирай, за да продължиш",
+      continue: "Продължи",
+    },
   },
   websiteSelection: {
-    heading: "Website Selection",
-    description: "Choose which websites you want to monitor and how frequently you want updates.",
+    heading: "Избор на сайтове",
+    description:
+      "Избери кои сайтове да наблюдаваме и колко често да обновяваме.",
     labels: {
-      websites: "Websites to monitor",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      websites: "Сайтове за наблюдение",
+      facebookUrl: "URL на Facebook Marketplace",
+      updateFrequency: "Честота на обновяване",
     },
     placeholders: {
-      frequency: "Select frequency"
+      frequency: "Избери честота",
     },
     help: {
-      websites: "Select one or more websites to monitor for car listings.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites:
+        "Избери един или повече сайтове, които да наблюдаваме за обяви.",
+      facebookUrl:
+        "Постави тук URL на резултатите от търсене във Facebook Marketplace.",
+      videoTitle:
+        "Нужна помощ за откриване на линка към търсенето във Facebook?",
+      videoDesc: "Гледай видеото по-долу за инструкции стъпка по стъпка.",
+      updateFrequency:
+        "Колко често да проверяваме за нови обяви? По-високата честота може да струва повече.",
     },
     errors: {
-      websites: "At least one website must be selected",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "Избери поне един сайт",
+      facebookUrl:
+        "URL към Facebook Marketplace е задължителен, когато е избран Facebook",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "Назад",
+      continue: "Продължи",
+    },
   },
   carDetails: {
-    heading: "Car Details",
-    description: "Specify the car details you are looking for. All fields are optional - leave any blank to get a wider range of results.",
+    heading: "Детайли за автомобила",
+    description:
+      "Опиши каква кола търсиш. Всички полета са по избор — остави празно за по-широки резултати.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "Марка",
+      carModel: "Модел",
+      fuelType: "Гориво",
+      priceMin: "Минимална цена",
+      priceMax: "Максимална цена",
+      yearMin: "Минимална година",
+      yearMax: "Максимална година",
+      maxKilometers: "Максимални километри",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "Избери марка",
+      carModel: "Избери модел",
+      carModelDisabled: "Първо избери марка",
+      fuelType: "Избери гориво",
+      priceMin: "Въведи минимална цена",
+      priceMax: "Въведи максимална цена",
+      yearMin: "Въведи минимална година",
+      yearMax: "Въведи максимална година",
+      maxKilometers: "Въведи максимални километри",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "Няма налични модели",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "Задължителна е марка",
+      carModel: "Задължителен е модел",
+      fuelType: "Задължително е гориво",
+      priceMin: "Минималната цена трябва да е число",
+      priceMax: "Максималната цена трябва да е число",
+      yearMin: "Минималната година трябва да е валидна",
+      yearMax: "Максималната година трябва да е валидна",
+      maxKilometers: "Максималните километри трябва да са число",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "Назад",
+      continue: "Продължи",
+    },
   },
   telegram: {
-    heading: "Telegram Setup",
-    description: "Set up Telegram notifications by providing your bot token and chat ID.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "If you have issues creating the telegram bot, contact us and we will call you and help you create one.",
-    contact: "Contact Us",
+    heading: "Настройка на Telegram",
+    description:
+      "Настрой известия в Telegram, като въведеш токена на бота и своя Chat ID.",
+    subHeading: "Настрой своя Telegram бот",
+    info: "Ако имаш затруднения с бота, свържи се с нас — ще ти помогнем по телефон.",
+    contact: "Свържи се с нас",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Как да вземеш токен за Telegram бот:",
+      botStep1: "Отвори Telegram и потърси @BotFather",
+      botStep2: "Изпрати командата /newbot",
+      botStep3: "Следвай инструкциите, за да създадеш бот",
+      botStep4: "Копирай токена, който дава BotFather",
+
+      chatTitle: "Как да намериш своя Telegram Chat ID:",
+      chatStep1: "Отвори Telegram и потърси @userinfobot",
+      chatStep2: "Изпрати произволно съобщение на бота",
+      chatStep3: "Ботът ще отговори с информация, включително твоя Chat ID",
+      chatStep4: "Копирай Chat ID (това е число)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Нуждаеш се от помощ за Telegram Bot Token и Chat ID?",
+    videoDescription: "Гледай видеото по-долу с ръководство стъпка по стъпка.",
+
     labels: {
       token: "Telegram Bot Token",
-      chatId: "Your Telegram Chat ID",
-      language: "Notification Language",
-      username: "Telegram Username"
+      chatId: "Твоят Telegram Chat ID",
+      language: "Език на известията",
+      username: "Потребителско име в Telegram",
     },
+
     placeholders: {
-      token: "Enter your bot token from BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Select Telegram Message Language",
-      username: "Enter your Telegram username"
+      token: "Въведи токена от BotFather",
+      chatId: "Въведи своя Telegram Chat ID",
+      language: "Избери език на съобщенията",
+      username: "Въведи потребителско име в Telegram",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Това е потребителското ти име в Telegram (без символа @).",
     examples: {
-      token: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      token: "Пример: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId: "Вземи го, като пишеш на @userinfobot в Telegram",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Инструкции за настройка:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Отвори Telegram и потърси "BotFather"',
+      'Стартирай чат с BotFather с бутона "Start"',
+      "Напиши /newbot и следвай инструкциите",
+      "Избери име за бота си",
+      "Избери потребителско име (трябва да завършва на 'bot')",
+      "Копирай дадения API токен",
+      "Изпрати съобщение на новия си бот, за да активираш чата",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Как да намериш своя Telegram Chat ID:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Отвори Telegram и потърси "userinfobot"',
+      "Изпрати произволно съобщение",
+      "Ботът ще върне информация с твоя Chat ID",
+      "Копирай своя Chat ID",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
+    helpTitle: "Нуждаеш се от помощ за Telegram Bot Token и Chat ID?",
+    helpDescription: "Гледай видеото по-долу с ръководство стъпка по стъпка.",
     botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    botTokenPlaceholder: "Въведи токена от BotFather",
+    botTokenExample: "Пример: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Твоят Telegram Chat ID",
+    chatIdPlaceholder: "Въведи своя Telegram Chat ID",
+    chatIdDescription:
+      "Можеш да го вземеш, като пишеш на @userinfobot в Telegram",
+    languageLabel: "Език на известията",
+    languagePlaceholder: "Избери език на съобщенията",
     languages: {
       en: "English",
-      de: "Deutsch",
-      fr: "Français",
+      sl: "Slovenščina",
+      hr: "Hrvatski",
       es: "Español",
-      it: "Italiano"
+      fr: "Français",
+      de: "Deutsch",
+      ar: "العربية",
+      pt: "Português",
+      it: "Italiano",
+      nl: "Nederlands",
+      sv: "Svenska",
+      da: "Dansk",
+      nb: "Norsk",
+      fi: "Suomi",
+      hi: "हिन्दी",
+      ru: "Русский",
+      tr: "Türkçe",
+      cs: "Čeština",
+      pl: "Polski",
+      sk: "Slovenčina",
+      sq: "Shqip",
+      hy: "Հայերեն",
+      az: "Azərbaycan dili",
+      bn: "বাংলা",
+      be: "Беларуская",
+      bs: "Bosanski",
+      bg: "Български",
+      el: "Ελληνικά",
+      et: "Eesti",
+      ka: "ქართული",
+      hu: "Magyar",
+      he: "עברית",
+      ja: "日本語",
+      ko: "한국어",
+      lv: "Latviešu",
+      lt: "Lietuvių",
+      ms: "Bahasa Melayu",
+      ro: "Română",
+      mn: "Монгол",
+      sr: "Српски",
+      my: "မြန်မာစာ",
+      mk: "Македонски",
+      th: "ไทย",
+      uk: "Українська",
+      vi: "Tiếng Việt",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Преглед на Telegram известия",
+    carAlertTitle: "🚗 Нова обява за кола!",
+    priceLabel: "Цена: {{price}}",
+    kilometresLabel: "Километри: {{kms}}",
+    locationLabel: "Локация: {{location}}",
+    viewListing: "Виж обявата →",
     errors: {
-      token: "Telegram bot token is required",
-      chatId: "Telegram chat ID is required",
-      language: "Notification language is required",
-      username: "Telegram username is required"
+      token: "Необходим е токен на Telegram бота",
+      chatId: "Необходим е Telegram chat ID",
+      language: "Избери език на известията",
+      username: "Необходимо е потребителско име в Telegram",
     },
+
     actions: {
-      previous: "Previous",
-      continue: "Continue"
+      previous: "Назад",
+      continue: "Продължи",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "Стартирай чат с нашия Telegram бот от линка по-долу и му изпрати съобщение:",
+    contactBotNote:
+      "Това е необходимо, за да получаваш известия. Ако си на компютър, можеш да сканираш QR кода.",
+    confirmContact: "Стартирах чат с бота и му изпратих съобщение",
   },
   review: {
-    title: "Review Your Subscription",
-    description: "Please review your subscription details before proceeding to payment.",
+    title: "Преглед на абонамента",
+    description: "Моля, прегледай детайлите, преди да продължиш към плащане.",
+
     personal: {
-      title: "Personal Information",
-      name: "Name",
-      email: "Email"
+      title: "Лична информация",
+      name: "Име",
+      email: "Имейл",
     },
+
     monitoring: {
-      title: "Monitoring Settings",
-      websites: "Websites",
+      title: "Настройки за наблюдение",
+      websites: "Сайтове",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Честота на обновяване",
     },
+
     specs: {
-      title: "Car Specifications",
-      brand: "Brand",
-      model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Mileage Range (km)",
-      price: "Price Range (€)"
+      title: "Характеристики на колата",
+      brand: "Марка",
+      model: "Модел",
+      fuelType: "Гориво",
+      yearRange: "Години",
+      mileage: "Пробег (км)",
+      price: "Цена (€)",
     },
+
     notification: {
-      title: "Notification Settings",
-      telegram: "Telegram Bot",
-      language: "Notification Language"
+      title: "Настройки за известяване",
+      telegram: "Telegram бот",
+      language: "Език на известията",
     },
+
     summary: {
-      title: "Subscription Summary",
-      base: "Base Subscription",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Monthly)"
+      title: "Резюме на абонамента",
+      base: "Базов абонамент",
+      extraWebsites: "Допълнителни сайтове",
+      frequencyUpgrade: "Надградена честота",
+      total: "Общо (месечно)",
     },
+
     terms: {
-      checkbox: "I agree to the",
-      tos: "Terms of Service",
-      privacy: "Privacy Policy",
-      note: "Your subscription will renew automatically each month. You can cancel anytime.",
-      error: "You must agree to the terms and conditions"
+      checkbox: "Съгласен/на съм с",
+      tos: "Условията за ползване",
+      privacy: "Политиката за поверителност",
+      note: "Абонаментът се подновява автоматично всеки месец. Можеш да прекратиш по всяко време.",
+      error: "Трябва да приемеш условията",
     },
+
     actions: {
-      previous: "Previous",
-      submit: "Proceed to Payment"
-    }
+      previous: "Назад",
+      submit: "Към плащане",
+    },
   },
   faq: {
-    title: "Frequently Asked Questions",
-    subtitle: "Find answers to the most common questions about our service.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
+    title: "Често задавани въпроси",
+    subtitle: "Отговори на най-често задаваните въпроси за услугата.",
+    contactPrompt: "Имаш още въпроси?",
+    contactLink: "Свържи се с екипа ни",
     questions: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
-    ]
+      {
+        question:
+          "Колко бързо ще получа известие след публикуване на нова обява?",
+        answer:
+          "Зависи от избраната честота. При стандартния почасов план ще получиш известие до час след публикуването. За почти реално време (в рамките на минути) избери по-чести обновявания.",
+      },
+      {
+        question: "Мога ли да следя различни видове автомобили едновременно?",
+        answer:
+          "Да! Можеш да създадеш няколко профила за търсене с различни критерии. Всеки профил е отделен абонамент, но ги управляваш от един акаунт. Идеално, ако търсиш различни типове автомобили паралелно.",
+      },
+      {
+        question: "Кои сайтове поддържате в момента?",
+        answer:
+          "В момента поддържаме основни платформи като AutoTrader, CarGurus, Cars.com и Facebook Marketplace. Постоянно добавяме нови сайтове според търсенето и регионалната популярност.",
+      },
+      {
+        question: "Нужни ли са технически знания за Telegram бота?",
+        answer:
+          "Не! Даваме инструкции стъпка по стъпка с текст и видео. Повечето потребители се справят за под 5 минути — без технически опит.",
+      },
+      {
+        question:
+          "Мога ли да променям критериите след като настроя абонамента?",
+        answer:
+          "Да, можеш да ги променяш по всяко време от таблото си. Промените влизат в сила веднага, без прекъсване на услугата.",
+      },
+      {
+        question: "Как да прекратя абонамента?",
+        answer:
+          'Можеш да прекратиш по всяко време от профила си. Отиди в раздел "Абонаменти", избери желания и натисни "Прекрати абонамента". Услугата ще продължи до края на текущия платен период.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "Features",
-    pricing: "Pricing",
-    faq: "FAQ",
-    getStarted: "Get Started",
-    legal: "Legal",
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    cookies: "Cookie Policy",
-    gdpr: "GDPR Compliance",
-    contact: "Contact",
+    brandDescription:
+      "Твоят помощник за намиране на най-добрите оферти за употребявани автомобили в точния момент.",
+    quickLinks: "Бързи връзки",
+    features: "Възможности",
+    pricing: "Цени",
+    faq: "ЧЗВ",
+    getStarted: "Започни",
+    legal: "Правна информация",
+    terms: "Условия за ползване",
+    privacy: "Поверителност",
+    cookies: "Политика за бисквитки",
+    gdpr: "Съответствие с GDPR",
+    contact: "Контакт",
     email: "support@amiquus.com",
-    telegram: "Contact us on Telegram",
-    copyright: "All rights reserved.",
-    about: "About Us",
-    blog: "Blog",
-    careers: "Careers",
-    support: "Support"
+    telegram: "Пишете ни в Telegram",
+    copyright: "Всички права запазени.",
+    about: "За нас",
+    blog: "Блог",
+    careers: "Кариери",
+    support: "Поддръжка",
   },
   login: {
-    title: "Log in to your account",
-    description: "Enter your email and password to access your dashboard",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
-    or: "or",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    title: "Вход в акаунта",
+    description: "Въведи имейл и парола, за да отвориш таблото си",
+    emailLabel: "Имейл",
+    passwordLabel: "Парола",
+    loginButton: "Вход",
+    loggingIn: "Влизане...",
+    loginWithGoogle: "Вход с Google",
+    or: "или",
+    noAccount: "Нямаш акаунт?",
+    registerLink: "Регистрация",
+    successTitle: "Успешен вход",
+    successMessage: "Влезе успешно.",
+    errorTitle: "Неуспешен вход",
+    genericError: "Провери данните и опитай отново.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "Въведи валиден имейл адрес",
+      shortPassword: "Паролата трябва да е поне 6 символа",
+    },
   },
   register: {
-    title: "Create an account",
-    description: "Sign up to start tracking your dream car",
-    google: "Sign up with Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Username",
-    email: "Email",
-    password: "Password",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
-    login: "Log in",
-    and: "and",
+    title: "Създай акаунт",
+    description: "Регистрирай се, за да започнеш да следиш мечтаната си кола",
+    google: "Регистрация с Google",
+    orContinue: "Или продължи с",
+    firstName: "Име",
+    lastName: "Фамилия",
+    username: "Потребителско име",
+    email: "Имейл",
+    password: "Парола",
+    confirmPassword: "Потвърди паролата",
+    termsNotice: "Съгласявам се с",
+    termsOfService: "Условията за ползване",
+    privacyPolicy: "Политиката за поверителност",
+    createBtn: "Създай акаунт",
+    alreadyHave: "Вече имаш акаунт?",
+    login: "Вход",
+    and: "и",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Липсваща информация",
+        desc: "Моля, попълни всички задължителни полета",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Невалидно потребителско име",
+        desc: "Трябва да е букви/цифри и между 3 и 20 символа",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Паролите не съвпадат",
+        desc: "Увери се, че паролите са еднакви",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Не са приети условията",
+        desc: "Трябва да приемеш условията и поверителността, за да продължиш",
       },
       success: {
-        title: "Registration successful",
-        desc: "Welcome to Amiquus! You will be redirected to verify your email address."
+        title: "Успешна регистрация",
+        desc: "Добре дошъл/дошла в Amiquus! Ще бъдеш пренасочен/а за верификация на имейла.",
       },
       failure: {
-        title: "Registration failed",
-        desc: "Please check your information and try again"
-      }
-    }
+        title: "Неуспешна регистрация",
+        desc: "Провери данните и опитай отново",
+      },
+    },
   },
   verifyEmail: {
-    title: "Verify Your Email",
-    description: "A verification code has been sent to your email.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "Потвърди имейла",
+    description: "Изпратихме код за верификация на твоя имейл.",
+    codeLabel: "Код за потвърждение",
+    verifyButton: "Потвърди имейл",
+    updateEmailLabel: "Смени имейл",
+    updateEmailButton: "Обнови имейл",
+    resendButton: "Изпрати код отново",
+    resendCountdown: "Можеш да изпратиш отново след {{seconds}} сек.",
+    footerNote: "Не получи кода? Провери в Spam/Нежелана поща.",
     toast: {
-      verified: "Email verified",
-      failed: "Verification failed",
-      resent: "Verification code resent",
-      error: "Error",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      verified: "Имейлът е потвърден",
+      failed: "Неуспешна верификация",
+      resent: "Кодът е изпратен отново",
+      error: "Грешка",
+      invalidEmail: "Невалиден имейл",
+      enterValidEmail: "Въведи валиден имейл адрес",
+      sameEmail: "Същият имейл",
+      sameEmailDesc: "Новият имейл съвпада с текущия",
+      emailUpdated: "Имейлът е обновен",
+    },
   },
   dashboardPayment: {
-    add: "Add Payment Method",
-    description: "Add a new credit or debit card for your subscription payments.",
-    processing: "Processing...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "Добави начин на плащане",
+    description:
+      "Добави нова дебитна/кредитна карта за плащанията по абонамента.",
+    processing: "Обработва се...",
+    errorTitle: "Грешка при добавяне на плащане",
+    errorMessage: "Възникна неочаквана грешка",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "Грешка",
+      description: "Не можем да инициализираме настройката за плащане",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Години",
+      priceRange: "Цена",
+      websites: "Сайтове",
+      updates: "Обновявания",
+      language: "Език",
+      price: "Цена",
+      edit: "Редактирай",
+      cancelAlert: "Откажи известието",
+      cancelTitle: "Отказ на известие за кола",
+      cancelDescription:
+        "Сигурен/на ли си, че искаш да спреш известието за {{brand}} {{model}}? Нотификациите ще спрат и ще трябва да създадеш ново известие, ако искаш да следиш отново.",
+      keepMyAlert: "Запази известието",
+      confirmCancel: "Откажи",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Валидна до",
+      default: "По подразбиране",
+      setAsDefault: "Задай по подразбиране",
+      remove: "Премахни",
+      setDefaultTitle: "Задай карта по подразбиране",
+      setDefaultDescription:
+        "Да зададем ли {{brand}} карта, за��ършваща на {{last4}}, като основна? Тя ще се използва за бъдещи плащания.",
+      removeTitle: "Премахване на карта",
+      removeDescription:
+        "Сигурен/на ли си, че искаш да премахнеш карта {{brand}} с последни {{last4}}?",
+      removeWarning:
+        "Това е картата по подразбиране и премахването ѝ може да повлияе на активните абонаменти.",
+      cancel: "Отказ",
+      confirmRemove: "Премахни картата",
+    },
   },
   profile: {
     tabs: {
-      alerts: "My Alerts",
-      payments: "Payment Methods"
+      alerts: "Моите известия",
+      payments: "Методи на плащане",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Subscriptions",
-      methods: "Payment methods",
-      account: "Account settings",
-      privacy: "Privacy & security",
-      logout: "Log out"
+      memberSince: "Член от",
+      subscriptions: "Абонаменти",
+      methods: "Методи на плащане",
+      account: "Настройки на акаунт",
+      privacy: "Поверителност и сигурност",
+      logout: "Изход",
     },
     account: {
-      title: "Account Settings",
-      desc: "Update your account information and preferences.",
-      name: "Name",
-      email: "Email",
-      username: "Username",
-      cancel: "Cancel",
-      save: "Save Changes"
+      title: "Настройки на акаунта",
+      desc: "Обнови информацията и предпочитанията си.",
+      name: "Име",
+      email: "Имейл",
+      username: "Потребителско име",
+      cancel: "Отказ",
+      save: "Запази промените",
     },
     security: {
-      title: "Privacy & Security",
-      desc: "Manage your security settings and privacy preferences.",
-      current: "Current Password",
-      new: "New Password",
-      confirm: "Confirm New Password",
-      update: "Update Password"
+      title: "Поверителност и сигурност",
+      desc: "Управлявай настройките за сигурност и поверителност.",
+      current: "Текуща парола",
+      new: "Нова парола",
+      confirm: "Потвърди новата парола",
+      update: "Обнови паролата",
     },
     logout: {
-      title: "Log Out",
-      desc: "Are you sure you want to log out of your account?",
-      success: "You have been successfully logged out."
+      title: "Изход",
+      desc: "Сигурен/на ли си, че искаш да излезеш?",
+      success: "Излезе успешно.",
     },
     alerts: {
-      title: "Car Alert Subscriptions",
-      desc: "Manage your car search alerts and notification preferences.",
-      add: "Add New Alert",
-      none: "You don't have any active car alerts.",
-      cta: "Create your first alert",
-      warning: "⚠️ Changes to your subscription will be applied in the next billing period, and only after a successful payment. If the payment fails, your current alert setup will remain unchanged."
+      title: "Абонаменти за известия",
+      desc: "Управлявай известията и предпочитанията си.",
+      add: "Добави ново известие",
+      none: "Нямаш активни известия.",
+      cta: "Създай първо известие",
+      warning:
+        "⚠️ Промените ще се приложат в следващия биллинг период и само след успешно плащане. При неуспешно плащане текущата конфигурация остава.",
     },
     payments: {
-      title: "Payment Methods",
-      desc: "Manage your payment methods for subscription billing.",
-      none: "You don't have any payment methods saved.",
-      encrypted: "Your payment information is encrypted and securely stored."
-    }
+      title: "Методи на плащане",
+      desc: "Управлявай методите за плащане на абонамента.",
+      none: "Нямаш запазени методи на плащане.",
+      encrypted: "Данните ти за плащане се съхраняват криптирано и защитено.",
+    },
   },
   setupAlerts: {
-    title: "Set Up Your Car Alerts",
-    subtitle: " Configure your Telegram bot to receive notifications about your dream car",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Start My Car Alert Service",
-    cancel: "Откажете по всяко време",
+    title: "Настрой известията си",
+    subtitle:
+      " Конфигурирай своя Telegram бот, за да получаваш известия за мечтаната кола",
+    basicPlan: "Базов план",
+    baseTitle: "$9.99/месец",
+    button: "Стартирай услугата за известия",
+    cancel: "Отказ по всяко време",
     toasts: {
       terms: {
-        title: "Terms not accepted",
-        description: "You must agree to the terms of service to continue"
+        title: "Не са приети условията",
+        description: "Трябва да приемеш условията за ползване, за да продължиш",
       },
       success: {
         title: "Абонаментът е създаден",
-        description: "Your subscription has been created successfully"
+        description: "Абонаментът ти беше създаден успешно",
       },
       error: {
-        title: "Error creating subscription"
+        title: "Грешка при създаване на абонамент",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "Необходим е контакт с бота",
+        description:
+          "Трябва да стартираш чат с нашия Telegram бот и да му изпратиш съобщение. Моля, следвай инструкциите по-долу.",
+      },
+    },
   },
   loginPrompt: {
-    title: "Login Required",
-    description: "You must be logged in to continue. Please log in or register.",
-    register: "Register",
-    login: "Login"
+    title: "Изисква се вход",
+    description: "За да продължиш, влез или се регистрирай.",
+    register: "Регистрация",
+    login: "Вход",
   },
   waitlistPrompt: {
-    title: "Присъединете се към списъка за изчакване",
-    description: "We're currently at full capacity. Join the waitlist to be notified when a slot becomes available.",
-    button: "Join Waitlist"
+    title: "Присъедини се към списъка с чакащи",
+    description:
+      "В момента сме на пълен капацитет. Запиши се, за да получиш известие, когато се освободи място.",
+    button: "Запиши се",
   },
   subscription: {
-    title: "Subscription Details",
-    subTitle: "Edit your subscription details below",
-    error: "Go back to dashboard",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "You can pause your subscription at any time. When you pause your subscription, your car alerts will stop until you resume them.",
+    title: "Детайли за абонамента",
+    subTitle: "Редактирай детайлите си по-долу",
+    error: "Назад към таблото",
+    notFound: "Абонаментът не е намерен",
+    notFoundSub: "Назад към таблото",
+    description:
+      "Можеш да поставиш абонамента на пауза по всяко време. Докато е на пауза, известията ще спрат, докато не го подновиш.",
     form: {
       status: {
-        label: "Status",
-        placeholder: "Select Status",
-        active: "Active",
-        paused: "Paused"
-      }
+        label: "Статус",
+        placeholder: "Избери статус",
+        active: "Активен",
+        paused: "На пауза",
+      },
     },
     actions: {
-      save: "Save Changes",
-      back: "Back"
+      save: "Запази промените",
+      back: "Назад",
     },
     toasts: {
       success: {
-        title: "Subscription Updated",
-        description: "Your subscription for {{brand}} {{model}} has been updated successfully"
+        title: "Абонаментът е обновен",
+        description:
+          "Абонаментът ти за {{brand}} {{model}} беше обновен успешно",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Не може да се обнови",
+        description:
+          "Не можеш едновременно да поставиш пауза и да промениш цената. Избери едно от двете.",
       },
       error: {
-        title: "Error updating subscription"
-      }
-    }
+        title: "Грешка при обновяване",
+      },
+    },
   },
   about: {
-    title: "About Amiquus",
-    description: "We're revolutionizing how people find their perfect used car by bringing advanced monitoring technology to everyone",
+    title: "За Amiquus",
+    description:
+      "Революционизираме начина, по който хората намират идеалната употребявана кола, с достъпна технология за мониторинг",
     meta: {
-      title: "About Us | Amiquus - Car Listing Monitoring Service",
-      description: "Learn about Amiquus, our mission to revolutionize used car shopping, and the team behind our intelligent car listing monitoring service."
+      title: "За нас | Amiquus – Мониторинг на обяви за автомобили",
+      description:
+        "Научи повече за Amiquus, нашата мисия и екипа зад интелигентната услуга за следене на автомобилни обяви.",
     },
     story: {
-      heading: "Our Story",
+      heading: "Нашата история",
       paragraphs: [
-
-        "Amiquus began in 2023 when our founder, Alex, spent months refreshing car listing websites trying to find a specific rare model at a good price. After missing several opportunities due to delayed notifications, he realized there had to be a better way.",
-
-        "Working with a small team of developers and car enthusiasts, Alex built a monitoring system that could track listings across multiple sites simultaneously and send instant notifications when matches appeared.",
-
-        "What started as a personal project quickly gained interest from friends and family, and by early 2025, Amiquus was born as a service available to everyone. Today, we help car buyers across the country save time and find better deals with our intelligent monitoring technology."
-
-      ]
+        "Amiquus започна през 2023 г., когато нашият основател Алекс прекара месеци в обновяване на сайтове за обяви, търсейки рядък модел на добра цена. След като изпусна няколко възможности заради забавени известия, осъзна, че има по-добър начин.",
+        "Заедно с малък екип от разработчици и автомобилни ентусиасти Алекс изгради система, която следи няколко сайта едновременно и праща мигновени известия при съвпадение.",
+        "Започнало като личен проект, до началото на 2025 г. Amiquus се превърна в услуга за всички. Днес помагаме на купувачи в цялата страна да спестят време и да намират по-добри сделки с интелигентен мониторинг.",
+      ],
     },
     mission: {
-      heading: "Our Mission",
+      heading: "Нашата мисия",
       items: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          title: "Спести време",
+          description:
+            "Премахваме нуждата да презареждаш множество сайтове — автоматизираме търсенето и изпращаме навременни известия.",
+        },
+        {
+          title: "Намери по-добра сделка",
+          description:
+            "Бъди пръв при изгодните обяви — таймингът е всичко на този пазар.",
+        },
+        {
+          title: "Купувай уверено",
+          description:
+            "Вземай решения с цялостен мониторинг в няколко доверени платформи.",
+        },
+      ],
     },
     team: {
-      heading: "Our Team",
+      heading: "Екипът ни",
       members: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          name: "Alex Morgan",
+          role: "Основател и CEO",
+          bio: "Бивш софтуерен инженер с страст към колите и иновациите.",
+        },
+        {
+          name: "Sarah Chen",
+          role: "CTO",
+          bio: "Експерт по наука за данните, специализирана в уеб скрейпинг.",
+        },
+        {
+          name: "Marcus Lee",
+          role: "Тийм лид, разработка",
+          bio: "Фулстек инженер с опит във високопроизводителни системи за известяване.",
+        },
+        {
+          name: "Elena Rodriguez",
+          role: "Customer Success",
+          bio: "Бивш консултант продажби на автомобили, отдаден на успеха на клиентите.",
+        },
+      ],
     },
     join: {
-      heading: "Join Our Team",
-      description: "We're always looking for talented individuals who are passionate about technology and revolutionizing the car buying experience. Check out our current openings and join us on our mission.",
-      cta: "View Open Positions"
+      heading: "Присъедини се към екипа",
+      description:
+        "Винаги търсим таланти, запалени по технологиите и промяната в начина на купуване на автомобили. Виж отворените позиции.",
+      cta: "Свободни позиции",
     },
     questions: {
-      heading: "Have Questions?",
-      description: "Learn more about how our service works, view pricing options, or get in touch with our support team.",
+      heading: "Имаш въпроси?",
+      description: "Научи как работим, виж цените или се свържи с поддръжка.",
       links: {
-        faq: "Visit FAQ",
-        pricing: "View Pricing",
-        support: "Contact Support"
-      }
-    }
+        faq: "Към ЧЗВ",
+        pricing: "Виж цени",
+        support: "Контакт с поддръжка",
+      },
+    },
   },
   terms: {
-    metaTitle: "Terms of Service | Amiquus",
-    metaDescription: "Read the Amiquus Terms of Service that govern your use of our car listing monitoring and notification service.",
-    title: "Terms of Service",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Условия за ползване | Amiquus",
+    metaDescription:
+      "Прочети условията за ползване на Amiquus относно мониторинга и известяването за обяви.",
+    title: "Условия за ползване",
+    lastUpdated: "Последна актуализация: 21 май 2025 г.",
     sections: {
-      1: {
+      "1": {
         id: "agreement",
-        heading: "Agreement to Terms",
+        heading: "Съгласие с условията",
         paragraphs: [
-
-          "These Terms of Service constitute a legally binding agreement made between you and Amiquus, concerning your access to and use of our website and services.",
-
-          "By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service."
-
+          "Тези Условия представляват правнообвързващо споразумение между теб и Amiquus за достъп и ползване на уебсайта и услугите ни.",
+          "С достъпа или ползването на услугите приемаш тези Условия. Ако не си съгласен/на, не използвай услугата.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      2: {
+      "2": {
         id: "changes",
-        heading: "Changes to Terms",
+        heading: "Промени в условията",
         paragraphs: [
-          "  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.",
-          "By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service."
+          "Запазваме си правото да променяме Условията по всяко време. При съществени промени ще положим разумни усилия да уведомим поне 30 дни предварително.",
+          "Продължавайки да използваш услугата след влизане в сила на измененията, приемаш новите условия. Ако не си съгласен/на, прекрати ползването.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      3: {
+      "3": {
         id: "account",
-        heading: "Account Terms",
-        paragraphs: [
-          "To use our services, you must:"
-        ],
+        heading: "Акаунт",
+        paragraphs: ["За да използваш нашите услуги, трябва да:"],
         list: [
-
-          "Be at least 18 years old",
-
-          "Complete the registration process",
-
-          "Provide accurate, complete, and up-to-date information",
-
-          "Be responsible for maintaining the security of your account and password",
-
-          "Be responsible for all activities that occur under your account",
-
-          "Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account"
-
-        ]
+          "Си навършил/а 18 години",
+          "Завършиш регистрацията",
+          "Предоставиш точна и актуална информация",
+          "Пазиш сигурността на акаунта и паролата",
+          "Отговаряш за всички действия през акаунта",
+          "Ни уведомиш незабавно при пробив или неоторизиран достъп",
+        ],
       },
-      4: {
+      "4": {
         id: "payment",
-        heading: "Payment Terms",
+        heading: "Плащания",
         paragraphs: [
-
-          " Amiquus offers subscription-based services with the following terms:"
-
+          "Amiquus предлага абонаментни услуги със следните условия:",
         ],
         list: [
-
-          "All fees are exclusive of taxes, which will be added when applicable",
-
-          "Subscription prices are subject to change with 30 days' notice",
-
-          "Subscriptions automatically renew unless canceled before the next billing cycle",
-
-          "Refunds are handled on a case-by-case basis according to our refund policy",
-
-          "We use Stripe for secure payment processing, and all payment information is stored by Stripe"
-
-        ]
+          "Всички такси са без включени данъци; начисляват се при необходимост",
+          "Цените могат да се променят с 30 дни предизвестие",
+          "Абонаментите се подновяват автоматично, освен ако не бъдат прекратени преди следващия цикъл",
+          "Възстановявания се разглеждат индивидуално според нашата политика",
+          "Използваме Stripe за сигурни плащания; данните за карти се съхраняват от Stripe",
+        ],
       },
-      5: {
+      "5": {
         id: "capacity",
-        heading: "Capacity Limits",
+        heading: "Капацитет",
         paragraphs: [
-
-          "In order to maintain service quality and reliability, Amiquus limits the number of active subscriptions to 30. When this limit is reached:"
-
+          "За да поддържаме качество и надеждност, ограничаваме активните абонаменти до 30. Когато лимитът е достигнат:",
         ],
         list: [
-
-          "New users may join our waitlist",
-
-          "Waitlist position is determined on a first-come, first-served basis",
-
-          "When capacity becomes available, waitlisted users will be notified in order",
-
-          "We reserve the right to modify capacity limits at any time"
-
-        ]
+          "Новите потребители могат да се запишат в списък с чакащи",
+          "Редът е според момента на записване",
+          "При освобождаване уведомяваме по ред на списъка",
+          "Запазваме право да променяме капацитета по всяко време",
+        ],
       },
-      6: {
+      "6": {
         id: "scraping",
-        heading: "Web Scraping Limitations",
+        heading: "Ограничения при скрейпинг",
         paragraphs: [
-
-          "Our service accesses and processes data from multiple car listing websites. By using our service, you acknowledge that:"
-
+          "Услугата ни достъпва и обработва данни от няколко сайта за обяви. С използването ѝ приемаш, че:",
         ],
         list: [
-
-          "Amiquus respects the terms of service of the websites we monitor",
-
-          "We implement rate limiting and respectful crawling practices",
-
-          "The availability of certain websites may change based on their terms and technical measures",
-
-          "We make no guarantees regarding the completeness or timeliness of scraped data"
-
-        ]
+          "Amiquus спазва условията на сайтовете, които наблюдаваме",
+          "Прилагаме ограничаване на заявки и коректно обхождане",
+          "Наличността на сайтове може да се променя според условия и технически мерки",
+          "Не гарантираме пълнота или навременност на данните",
+        ],
       },
-      7: {
+      "7": {
         id: "intellectual",
-        heading: "Intellectual Property",
+        heading: "Интелектуална собственост",
         paragraphs: [
-
-          "The Amiquus service, including its original content, features, and functionality, are and will remain the exclusive property of Amiquus. Our service is protected by copyright, trademark, and other laws of both the United States and foreign countries.",
-
-          "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Amiquus."
-
+          "Услугата на Amiquus, съдържанието, функциите и функционалностите са наша изключителна собственост и са защитени от приложимите закони.",
+          "Нашите търговски марки и дизайн не могат да се използват без писмено съгласие.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      8: {
+      "8": {
         id: "termination",
-        heading: "Termination",
+        heading: "Прекратяване",
         paragraphs: [
-          "   We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including, without limitation, if you breach the Terms.",
-          " Upon termination, your right to use the service will immediately cease. If you wish to terminate your account, you may simply discontinue using the service or contact us to request account deletion."
+          "Можем да прекратим или спрем акаунта незабавно и без предизвестие при нарушаване на Условията.",
+          "При прекратяване правото ти на ползване спира незабавно. За закриване просто спри да използваш услугата или се свържи с нас.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      9: {
+      "9": {
         id: "limitations",
-        heading: "Limitation of Liability",
+        heading: "Ограничаване на отговорността",
         paragraphs: [
-          "In no event shall Amiquus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:"
+          "Amiquus и свързаните лица не носят отговорност за косвени, специални, последващи или наказателни вреди, включително загуби на печалба, данни, ползи и др., произтичащи от:",
         ],
         list: [
-
-          "Your access to or use of or inability to access or use the service",
-
-          "Any conduct or content of any third party on the service",
-
-          "Any content obtained from the service",
-
-          "Unauthorized access, use, or alteration of your transmissions or content"
-
-        ]
+          "Достъп или невъзможност за достъп до услугата",
+          "Действия/съдържание на трети страни",
+          "Съдържание, получено чрез услугата",
+          "Неоторизиран достъп/употреба/промяна на предавания или съдържание",
+        ],
       },
-      10: {
+      "10": {
         id: "disclaimer",
-        heading: "Disclaimer",
+        heading: "Отказ от гаранции",
         paragraphs: [
-
-          " Your use of the service is at your sole risk. The service is provided on an `AS IS` and `AS AVAILABLE` basis. The service is provided without warranties of any kind, whether express or implied.",
-
-          "Amiquus does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that the results that may be obtained from the use of the service will be accurate or reliable."
-
+          "Ползваш услугата на собствен риск. Предоставя се „КАКТО Е“ и „СПОРЕД НАЛИЧНОТО“. Без изрични или подразбиращи се гаранции.",
+          "Не гарантираме, че услугата ще е непрекъсната, навременна, сигурна или без грешки, нито че резултатите ще са точни или надеждни.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      11: {
+      "11": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "Политика за бисквитки",
         paragraphs: [
-          "Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our service, your choices regarding cookies, and further information about cookies. Please refer to the Cookies section in our Privacy Policy."
+          "Политиката ни за бисквитки обяснява какво са бисквитките, как ги използваме, как трети страни могат да ги използват, твоите избори и допълнителна информация. Виж раздела за бисквитки в Политиката за поверителност.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      12: {
+      "12": {
         id: "governing-law",
-        heading: "Governing Law",
+        heading: "Приложимо право",
         paragraphs: [
-          "    These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.",
-          " Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
+          "Тези Условия се уреждат от законите на САЩ, без отчитане на колизионни норми.",
+          "Неупражняването на право не означава отказ от него. Ако клауза е недействителна, останалите остават в сила.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      13: {
+      "13": {
         id: "contact",
-        heading: "Contact Us",
-        paragraphs: [
-          "  If you have any questions about these Terms, please contact us:"
-        ],
+        heading: "Контакт",
+        paragraphs: ["Ако имаш въпроси относно тези Условия, свържи се с нас:"],
         list: [
-
-          "By email: legal@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "По имейл: legal@amiquus.com",
+          "Чрез страницата за контакт на сайта ни",
+        ],
+      },
+    },
   },
   privacy: {
-    metaTitle: "Privacy Policy | Amiquus",
-    metaDescription: "Learn about how Amiquus handles your personal data, privacy rights, and data collection practices.",
-    title: "Privacy Policy",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Политика за поверителност | Amiquus",
+    metaDescription:
+      "Разбери как Amiquus обработва твоите лични данни, правата ти и практиките ни за събиране на данни.",
+    title: "Политика за поверителност",
+    lastUpdated: "Последна актуализация: 21 май 2025 г.",
     sections: {
-      0: {
+      "0": {
         id: "introduction",
-        heading: "Introduction",
+        heading: "Въведение",
         paragraphs: [
-
-          "Welcome to Amiquus. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you."
-
-        ]
+          "Добре дошъл/дошла в Amiquus. Уважаваме поверителността ти и се ангажираме да защитаваме личните ти данни. Тази политика описва как се грижим за тях, когато посещаваш сайта ни, какви са правата ти и как законът те защитава.",
+        ],
       },
-      1: {
+      "1": {
         id: "data-we-collect",
-        heading: "Information We Collect",
+        heading: "Каква информация събираме",
         paragraphs: [
-
-          "We collect several different types of information for various purposes to provide and improve our service to you:"
-
+          "Събираме няколко вида данни за различни цели, за да предоставяме и подобряваме услугата:",
         ],
         list: [
-
-          "Personal Data: Email address, first name, last name, and profile picture (if provided through third-party authentication).",
-
-          "Account Data: Your login credentials and account preferences.",
-
-          "Usage Data: Information on how you use our website and services.",
-
-          "Car Search Preferences: The vehicle criteria you set for monitoring (brand, model, price range, etc.).",
-
-          "Telegram Information: If you choose to receive notifications via Telegram, we store your Telegram chat ID and bot token.",
-
-          "Payment Information: When you make a purchase, our payment processor collects payment details necessary to process your transaction. Amiquus does not store your full credit card information."
-
-        ]
+          "Лични данни: имейл адрес, име, фамилия, профилна снимка (ако е предоставена чрез външна автентикация).",
+          "Данни за акаунта: данни за вход и предпочитания.",
+          "Данни за ползване: как използваш сайта и услугите.",
+          "Предпочитания за търсене на автомобил: критерии (марка, модел, ценови диапазон и др.).",
+          "Данни за Telegram: chat ID и токен на бот, ако избереш този канал.",
+          "Платежни данни: нашият процесор събира необходимите данни за плащане. Amiquus не съхранява пълни данни за карти.",
+        ],
       },
-      2: {
+      "2": {
         id: "how-we-use-data",
-        heading: "How We Use Your Data",
-        paragraphs: [
-
-          "We use your personal data for the following purposes:"
-
-        ],
+        heading: "Как използваме данните",
+        paragraphs: ["Използваме личните ти данни, за да:"],
         list: [
-
-          "To provide and maintain our service",
-
-          "To notify you about changes to our service",
-
-          "To allow you to participate in interactive features of our service",
-
-          "To provide customer support",
-
-          "To gather analysis or valuable information so that we can improve our service",
-
-          "To monitor the usage of our service",
-
-          "To detect, prevent and address technical issues",
-
-          "To process payments and prevent fraudulent transactions",
-
-          "To send car listings that match your preferences via your chosen notification method"
-
-        ]
+          "Предоставяме и поддържаме услугата",
+          "Те уведомяваме за промени",
+          "Позволяваме интерактивни функционалности",
+          "Предоставяме поддръжка",
+          "Събираме анализи за подобрение на услугата",
+          "Наблюдаваме употребата",
+          "Откриваме, предотвратяваме и адресираме технически проблеми",
+          "Обработваме плащания и предотвратяваме измами",
+          "Изпращаме обяви, които съвпадат с предпочитанията ти",
+        ],
       },
-      3: {
+      "3": {
         id: "data-storage",
-        heading: "Data Storage and Security",
+        heading: "Съхранение и сигурност",
         paragraphs: [
-
-          "We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. All data is stored on secure servers with encryption in transit and at rest.",
-
-          "We retain your personal data only for as long as necessary for the purposes set out in this privacy policy, including for the purposes of satisfying any legal, regulatory, tax, accounting, or reporting requirements."
-
-        ]
+          "Прилагаме подходящи мерки за защита от неоторизиран достъп, промяна, разкриване или унищожаване. Данните се съхраняват на защитени сървъри, с шифроване при пренос и в покой.",
+          "Съхраняваме личните данни толкова, колкото е необходимо според целите и изискванията на закона (данъчни, отчетни и др.).",
+        ],
       },
-      4: {
+      "4": {
         id: "gdpr",
-        heading: "Your GDPR Rights",
+        heading: "Правата ти по GDPR",
         paragraphs: [
-
-          "If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Amiquus aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your personal data.",
-
-          "You have the following data protection rights:"
-
+          "Ако живееш в ЕИП, имаш определени права за защита на данните. Amiquus се стреми да ти позволи да коригираш, изтриваш или ограничиш използването на личните си данни.",
+          "Имаш следните права:",
         ],
         list: [
-
-          "The right to access, update or delete the information we have on you",
-
-          "The right of rectification",
-
-          "The right to object",
-
-          "The right of restriction",
-
-          "The right to data portability",
-
-          "The right to withdraw consent"
-
-        ]
+          "Право на достъп, актуализация или изтриване",
+          "Право на поправка",
+          "Право на възражение",
+          "Право на ограничаване",
+          "Право на преносимост",
+          "Право да оттеглиш съгласие",
+        ],
       },
-      5: {
+      "5": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "Бисквитки",
         paragraphs: [
-
-          "Cookies are small pieces of data stored on your device. We use cookies to:"
-
+          "Бисквитките са малки файлове на устройството ти. Използваме ги, за да:",
         ],
         list: [
-
-          "Keep you signed in",
-
-          "Understand how you use our website",
-
-          "Remember your preferences",
-
-          "Customize your experience"
-
-        ]
+          "Те държим вписан/а",
+          "Разбираме как използваш сайта",
+          "Помним предпочитанията ти",
+          "Персонализираме изживяването",
+        ],
       },
-      6: {
+      "6": {
         id: "third-party",
-        heading: "Third-Party Services",
+        heading: "Трети страни",
         paragraphs: [
-
-          "We may employ third-party companies and individuals to facilitate our service, provide the service on our behalf, perform service-related tasks, or assist us in analyzing how our service is used.",
-
-          "These third parties include:"
-
+          "Може да ползваме компании/лица трети страни за предоставяне на услугата от наше име, за анализ или поддръжка.",
+          "Те включват:",
         ],
         list: [
-
-          "Payment processors (Stripe)",
-
-          "Analytics providers",
-
-          "Customer support services",
-
-          "Hosting and cloud infrastructure providers"
-
+          "Платежни процесори (Stripe)",
+          "Доставчици на аналитика",
+          "Клиентска поддръжка",
+          "Хостинг и облачна инфраструктура",
         ],
         paragraphs2: [
-
-          "These third parties have access to your personal data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
-
-        ]
+          "Тези страни имат достъп до лични данни само за изпълнение на задачите и нямат право да ги използват за други цели.",
+        ],
       },
-      7: {
+      "7": {
         id: "changes",
-        heading: "Changes to This Privacy Policy",
+        heading: "Промени в Политиката",
         paragraphs: [
-
-          "We may update our privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the 'Last updated' date.",
-
-          "You are advised to review this privacy policy periodically for any changes. Changes to this privacy policy are effective when they are posted on this page."
-
-        ]
+          "Периодично обновяваме тази политика. Ще публикуваме новата версия тук и ще обновим датата „Последна актуализация“.",
+          "Препоръчваме периодична проверка. Промените влизат в сила при публикуване.",
+        ],
       },
-      8: {
+      "8": {
         id: "contact",
-        heading: "Contact Us",
+        heading: "Контакт",
         paragraphs: [
-
-          "If you have any questions about this privacy policy, please contact us:"
-
+          "Ако имаш въпроси относно тази политика, свържи се с нас:",
         ],
         list: [
-
-          "By email: privacy@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "По имейл: privacy@amiquus.com",
+          "Чрез страницата за контакт на сайта ни",
+        ],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Frequently Asked Questions | Amiquus",
-    metaDescription: "Find answers to the most common questions about Amiquus car listing monitoring service, subscriptions, notification setup, and more.",
-    title: "Frequently Asked Questions",
-    subtitle: "Find quick answers to common questions about our car listing monitoring service",
+    metaTitle: "Често задавани въпроси | Amiquus",
+    metaDescription:
+      "Отговори на най-често задаваните въпроси за услугата Amiquus, абонаменти, известия и настройки.",
+    title: "Често задавани въпроси",
+    subtitle: "Бързи отговори за услугата ни за мониторинг на обяви",
     general: {
-      heading: "General Questions",
+      heading: "Общи въпроси",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Какво е Amiquus?",
+        answer:
+          "Amiquus е услуга, която следи множество сайтове за автомобили по зададени от теб критерии. При съвпадение получаваш мигновено известие в Telegram, за да си сред първите, които контактуват продавача.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Как работи?",
         answer: [
-
-          "You set up your search criteria (make, model, price range, etc.)",
-
-          "You select which websites to monitor",
-
-          "You connect your Telegram account for notifications",
-
-          "Our system continuously monitors your selected websites for new listings",
-
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-
-        ]
+          "Задаваш критерии (марка, модел, цена и др.)",
+          "Избираш кои сайтове да следим",
+          "Свързваш своя Telegram за известия",
+          "Системата следи непрекъснато избраните сайтове",
+          "При съвпадение получаваш известие с детайли и директен линк",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Кои сайтове наблюдавате?",
+        answerIntro: "В момента наблюдаваме следните основни платформи:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (чрез URL)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro: "Постоянно добавяме нови платформи за максимално покритие.",
+      },
     },
     subscription: {
-      heading: "Subscription Questions",
+      heading: "Абонамент",
       cost: {
-        question: "How much does a subscription cost?",
+        question: "Каква е цената?",
         answer: [
-
-          "Our pricing starts at $9.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
-
-          "For specific pricing details, please view our pricing section on the homepage."
-
-        ]
+          "Цените започват от $9.99/месец за следене на един сайт с обновяване на всеки 6 часа. Всеки допълнителен сайт е $4.99/месец. Можеш да надградиш и честотата на обновяване.",
+          "За подробности виж секцията с цени на началната страница.",
+        ],
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
+        question: "Как да прекратя абонамента?",
+        stepsIntro: "Можеш да прекратиш по всяко време от профила си:",
         steps: [
-
-          "Log in to your account",
-
-          "Navigate to the \\\"Profile\\\" page",
-
-          "Select the \\\"Subscriptions\\\" tab",
-
-          "Click the \\\"Cancel Subscription\\\" button next to the subscription you wish to cancel"
-
+          "Влез в акаунта си",
+          'Отиди в страницата "Профил"',
+          'Избери раздел "Абонаменти"',
+          'Натисни "Прекрати абонамента" до съответния абонамент',
         ],
-        note: "Your subscription will remain active until the end of your current billing period."
+        note: "Абонаментът остава активен до края на текущия платен период.",
       },
       multiple: {
-        question: "Can I have multiple subscriptions for different car models?",
-        answer: "Yes, you can create multiple subscriptions under a single account. Each subscription can track different car models, brands, or price ranges. This is particularly useful if you're searching for multiple vehicles or helping friends and family with their car search."
+        question: "Мога ли да имам няколко абонамента за различни модели?",
+        answer:
+          "Да, можеш да създадеш няколко абонамента под един акаунт — за различни марки/модели/цени. Полезно, ако търсиш няколко коли или помагаш на близки.",
       },
       limit: {
-        question: "Why is there a limit on the number of subscribers?",
-        intro: "We limit our service to 30 active subscribers to ensure:",
+        question: "Защо има лимит на абонати?",
+        intro: "Ограничаваме до 30 активни абоната, за да осигурим:",
         list: [
-
-          "The highest quality of service and data accuracy",
-
-          "Personalized support for each subscriber",
-
-          "Faster notification delivery during peak listing times",
-
-          "Ethical scraping that doesn't overload the target websites"
-
+          "Най-високо качество и точност на данните",
+          "Персонализирана поддръжка",
+          "По-бързи известия в пикови моменти",
+          "Етичен скрейпинг без претоварване на сайтовете",
         ],
-        outro: "If we've reached capacity, you can join our waitlist to be notified when a spot becomes available."
-      }
+        outro:
+          "Ако капацитетът е пълен, запиши се в списъка с чакащи и ще те уведомим.",
+      },
     },
     technical: {
-      heading: "Technical Questions",
+      heading: "Технически",
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        stepsIntro: "To set up Telegram notifications:",
+        question: "Как да настроя Telegram известия?",
+        stepsIntro: "Следвай стъпките:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions provided during setup)",
-
-          "Copy your bot token from BotFather",
-
-          "Start a conversation with your bot",
-
-          "Get your chat ID (instructions provided during setup)",
-
-          "Enter your bot token and chat ID in your Amiquus subscription settings",
-
-          "Test your notification setup using the `Send Test Message` button"
-
+          "Създай Telegram бот чрез BotFather (инструкции в таблото)",
+          "Копирай токена от BotFather",
+          "Стартирай разговор с бота си",
+          "Вземи своя chat ID (инструкции в таблото)",
+          "Въведи токена и chat ID в настройките на абонамента",
+          "Тествай връзката с бутона „Изпрати тестово съобщение“",
         ],
-        note: "Detailed step-by-step instructions with screenshots are provided during the subscription setup process."
+        note: "Даваме подробни инструкции с екранни снимки по време на настройката.",
       },
       frequency: {
-        question: "How often will I receive notifications?",
-        intro: "The frequency of notifications depends on:",
+        question: "Колко често ще получавам известия?",
+        intro: "Зависи от:",
         list: [
-
-          "Your chosen update frequency package (from every 6 hours to every 30 minutes)",
-
-          "How many new listings match your criteria",
-
-          "How active the market is for your selected make/model"
-
+          "Избраната честота (от 6 часа до 30 мин.)",
+          "Колко обяви съвпадат с критериите ти",
+          "Активността на пазара за избрания модел",
         ],
-        outro: "You'll only receive notifications when new listings that match your criteria are found."
+        outro: "Получаваш известия само при нови съвпадения.",
       },
       privacy: {
-        question: "How is my personal data protected?",
-        intro: "We take data privacy seriously and apply these measures:",
+        question: "Как защитавате личните ми данни?",
+        intro: "Вземаме поверителността сериозно:",
         list: [
-
-          "Encrypted data in transit and at rest",
-
-          "Secure payments via Stripe",
-
-          "No third-party data sharing",
-
-          "You can request or delete your data anytime"
-
+          "Шифроване при пренос и в покой",
+          "Сигурни плащания чрез Stripe",
+          "Без споделяне с трети страни без основание",
+          "Можеш да заявиш достъп/изтриване по всяко време",
         ],
-        outro: "Read our full Privacy Policy for more."
-      }
+        outro: "Прочети пълната Политика за поверителност.",
+      },
     },
     support: {
-      heading: "Still have questions?",
-      description: "If you couldn't find the answer to your question, our support team is here to help!",
-      button: "Contact Support"
-    }
+      heading: "Още помощ?",
+      description: "Ако не откри отговор, екипът ни е насреща!",
+      button: "Свържи се с поддръжка",
+    },
   },
   waitlist: {
-    metaTitle: "Join the Waitlist - Amiquus",
-    metaDescription: "Join the Amiquus waitlist to be notified when subscriptions become available.",
-    title: "Join Our Waitlist",
-    subtitle: "Due to high demand, we limit the number of active subscriptions to ensure the best service quality for all users.",
+    metaTitle: "Списък с чакащи – Amiquus",
+    metaDescription:
+      "Запиши се в списъка с чакащи и ще те уведомим, когато има места.",
+    title: "Присъедини се към списъка с чакащи",
+    subtitle:
+      "Заради високото търсене ограничаваме активните абонаменти, за да гарантираме качество за всички.",
     limited: {
-      heading: "Limited Availability",
-      description: "We limit our system to only 30 active subscribers to ensure:",
+      heading: "Ограничена наличност",
+      description:
+        "Ограничаваме системата до 30 активни абоната, за да осигурим:",
       points: [
-
-        "Exceptional scraping reliability and speed for all users",
-
-        "Reduced chances of being blocked by car listing websites",
-
-        "Personalized support for each subscriber",
-
-        "Fair distribution of server resources"
-
+        "Отлична надеждност и скорост на скрейпинга",
+        "По-малък риск от блокиране от сайтовете",
+        "Персонализирана поддръжка",
+        "Справедливо разпределение на ресурси",
       ],
-      available: "{{remaining}} subscription spots out of {{capacity}} currently available.",
-      full: "All subscription spots are currently filled. Join the waitlist to be notified when a spot becomes available."
+      available: "В момента са свободни {{remaining}} от {{capacity}} места.",
+      full: "Всички места са запълнени. Запиши се, за да получиш известие при освобождаване.",
     },
     success: {
-      title: "You're on the waitlist!",
-      description: "We'll notify you as soon as a subscription spot becomes available",
-      message: "Thank you for your interest in Amiquus! We've added you to our waitlist and will contact you as soon as we have an opening.",
-      button: "Return to Homepage"
+      title: "Вече си в списъка!",
+      description: "Ще ти пишем веднага щом се освободи място",
+      message:
+        "Благодарим за интереса към Amiquus! Добавихме те в списъка и ще се свържем при първа възможност.",
+      button: "Към началната страница",
     },
     cantJoin: {
-      title: "Присъединете се към списъка за изчакване",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Присъедини се към списъка",
+      description: " Ще те уведомим, щом се освободи място",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Име",
+        placeholder: "John",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Фамилия",
+        placeholder: "Doe",
       },
       email: {
-        label: "Email",
+        label: "Имейл",
         placeholder: "john.doe@example.com",
-        description: "We'll use this email to notify you when a spot becomes available"
+        description:
+          "Ще използваме този имейл, за да те уведомим при свободно място",
       },
-      submit: "Join Waitlist",
-      submitting: "Submitting..."
-    }
+      submit: "Запиши ме",
+      submitting: "Изпращане...",
+    },
   },
   support: {
-    metaTitle: "Support | Amiquus - Help Center",
-    metaDescription: "Get help with your Amiquus account, subscription, or car alerts. Browse our help center or contact our support team for assistance.",
-    title: "Support Center",
-    subtitle: "Find answers to common questions or get in touch with our support team",
+    metaTitle: "Поддръжка | Amiquus – Помощен център",
+    metaDescription:
+      "Нуждаеш се от помощ с акаунта, абонамента или известията? Виж помощния център или се свържи с нас.",
+    title: "Помощен център",
+    subtitle: "Намери отговори или се свържи с екипа ни",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "Имейл поддръжка",
+      description: "Пиши ни и ще отговорим до 24 часа",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Често задавани въпроси",
     faqs: {
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        intro: "To set up Telegram notifications, follow these steps:",
+        question: "Как да настроя Telegram известия?",
+        intro: "Следвай тези стъпки:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions in our dashboard)",
-
-          "Copy your API token and chat ID",
-
-          "Enter these details in your account settings under \\\"Notification Preferences\\\"",
-
-          "Test your connection using the \\\"Send Test Message\\\" button"
-
+          "Създай бот с BotFather (инструкции в таблото)",
+          "Копирай API токена и chat ID",
+          "Въведи данните в „Предпочитания за известия“",
+          "Тествай връзката с „Изпрати тестово съобщение“",
         ],
-        outro: "If you need more help, our detailed guide is available in your dashboard."
+        outro: "За повече помощ има подробно ръководство в таблото.",
       },
       updates: {
-        question: "How often are car listings updated?",
-        answer: "The update frequency depends on your subscription plan. Basic plans receive updates every 6 hours, while Premium plans can get updates as frequently as every 30 minutes. You can view and modify your current update frequency in your subscription settings."
+        question: "Колко често се обновяват обявите?",
+        answer:
+          "Зависи от плана. Базовият план обновява на 6 часа; Премиум — до на всеки 30 минути. Можеш да видиш/промениш честотата в настройките на абонамента.",
       },
       facebook: {
-        question: "Can I monitor Facebook Marketplace?",
-        answer: "Yes, we support Facebook Marketplace monitoring. To set this up, you'll need to provide the URL to the Facebook Marketplace search results page with your desired filters applied. Our system will then monitor that specific search for new listings that match your criteria."
+        question: "Мога ли да следя Facebook Marketplace?",
+        answer:
+          "Да. Трябва да предоставиш URL на търсенето си във Facebook Marketplace с приложени филтри. Ще наблюдаваме точно този резултат за нови обяви.",
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        answer: "You can cancel your subscription at any time from your account profile page. Click on the \"Subscriptions\" tab, locate the subscription you wish to cancel, and click the \"Cancel Subscription\" button. Your service will continue until the end of your current billing period."
+        question: "Как да прекратя абонамента?",
+        answer:
+          "От профила: раздел „Абонаменти“, намери желания и натисни „Прекрати абонамента“. Услугата продължава до края на платения период.",
       },
       full: {
-        question: "What happens if all subscription slots are full?",
-        answer: "To maintain our high quality of service, we limit the number of active subscriptions. If all slots are full, you can join our waitlist. We'll notify you as soon as a slot becomes available, and you'll have priority to claim it before we open it to the general public."
-      }
+        question: "Какво става, ако няма свободни места?",
+        answer:
+          "За да пазим качеството, ограничаваме активните абонаменти. Ако няма места, запиши се в списъка с чакащи — ще те уведомим с приоритет.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "Имаш нужда от още помощ?",
+      description: "Ако не откри отговор, пиши ни — тук сме, за да помогнем!",
+      button: "Свържи се с поддръжка",
+    },
   },
   notFound: {
-    title: "404 Page Not Found",
-    message: "Did you forget to add the page to the router?"
+    title: "404 Страницата не е намерена",
+    message: "Да не си забравил/а да добавиш страницата в рутера?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Твоят код за верификация в Amiquus",
+      greeting: "Здравей,",
+      message: "Използвай кода по-долу, за да завършиш регистрацията:",
+      expiration: "Кодът изтича след 10 минути.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Разписка за плащане Amiquus – Фактура №",
+        h2Message: "Плащането по абонамента ти за Amiquus е успешно!",
+        greeting: "Здравей,",
+        paymentMessage: "Получихме плащането ти на",
+        downloadMessage: "Можеш да видиш/свалиш фактурата от линка по-долу:",
+        viewInvoice: "Виж фактурата",
+        invoiceNumber: "Фактура №:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Чакащо плащане – Фактура",
+        subjectB: "за твоя абонамент в Amiquus",
+        h2Message:
+          "Необходимо действие: завърши плащането за абонамента в Amiquus",
+        greeting: "Здравей,",
+        messageA: "Твоята фактура",
+        messageB:
+          "все още не е платена. За да активираме абонамента, плати сумата от",
+        paymentMessage: "Сигурно плащане от линка:",
+        payInvoice: "Плати фактурата",
+        ignoreEmail: "Ако вече плати, игнорирай това писмо.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Неуспешно плащане – Фактура",
+        message: "Не успяхме да обработим последното ти плащане (опит",
+        attemptsA: "Ще опитаме отново скоро. Не е нужно действие сега.",
+        attemptsB: "Опитахме 3 пъти, но всички бяха неуспешни.",
+        attemptsC:
+          "В резултат абонаментът е <strong>поставен на пауза</strong>. Няма да получаваш известия, докато не го активираш.",
+        attemptsD:
+          "Моля, обнови метода на плащане и поднови абонамента от профила:",
+        viewInvoice: "Виж фактурата",
+        managePayment: "Управлявай методите на плащане",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Вече си в списъка с чакащи на Amiquus!",
+      h2Message: "Ти си в списъка!",
+      hi: "Здравей",
+      message:
+        "Благодарим, че се записа в списъка с чакащи. Ще те уведомим веднага щом има свободно място.",
+      anyQuestions: "Ако имаш въпроси, просто отговори на това писмо.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Благодарим, че избра Amiquus!",
+      signature: "С уважение,<br/>Екипът на Amiquus",
+      team: "— Екипът на Amiquus",
+      needHelp: "Нужда от помощ?",
+      hello: "Здравей",
+    },
+  },
 };

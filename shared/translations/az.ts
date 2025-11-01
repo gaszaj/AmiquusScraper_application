@@ -3,1500 +3,1444 @@ export const az = {
     features: "Xüsusiyyətlər",
     how: "Necə işləyir",
     pricing: "Qiymətlər",
-    getAlerts: "Bildirişlər alın",
+    getAlerts: "Bildirişləri aktiv et",
     waitlist: "Gözləmə siyahısı",
     faq: "Tez-tez verilən suallar",
-    login: "Daxil olun",
-    getStarted: "Başlayın",
+    login: "Daxil ol",
+    getStarted: "Başla",
     subscribers: "Abunəçilər",
     theme: "Mövzu",
     language: "Dil",
-    myAlerts: "Mənim bildirişlərim",
+    myAlerts: "Bildirişlərim",
     profile: "Profil",
-    settings: "Parametrlər",
+    settings: "Ayarlar",
     logout: "Çıxış",
-    signUp: "Qeydiyyatdan keçin"
+    signUp: "Qeydiyyat",
   },
   hero: {
-    label: "Track used car listings in real-time",
-    title: "Never Miss Your Perfect Car Deal Again",
-    subtitle: "Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.",
-    button1: "Bildirişlərinizi qurun",
-    button2: "See How It Works",
+    label: "İkinci əl avtomobil elanlarını real vaxtda izlə",
+    title: "Mükəmməl avtomobil fürsətini bir daha qaçırma",
+    subtitle:
+      "Amiquus arzuladığın avtomobil müxtəlif saytlarda görünən kimi səni dərhal xəbərdar edir. Uyğun elan tapılan anda Telegram vasitəsilə bildiriş al.",
+    button1: "Bildirişlərini qur",
+    button2: "Necə işlədiyini gör",
     trustIndicators: {
       websites: "15+ sayt izlənilir",
-      realtime: "Real-vaxt bildirişləri",
-      noSetup: "Quraşdırma tələb olunmur",
-      cancelAnytime: "İstənilən vaxt ləğv edin"
-    }
+      realtime: "Real vaxt bildirişləri",
+      noSetup: "Qarışıq qurulum yoxdur",
+      cancelAnytime: "İstənilən vaxt ləğv et",
+    },
   },
   limited: {
     full: {
-      title: "Abunəlik limiti çatdı",
-      description: "We've reached our capacity of 30 active subscribers. Join our waitlist to be notified when a spot opens up.",
-      buttonText: "Join Waitlist"
+      title: "Abunə limiti dolub",
+      description:
+        "30 aktiv abunəçi limitimizə çatmışıq. Yer açılan kimi xəbərdar olmaq üçün gözləmə siyahısına qoşul.",
+      buttonText: "Gözləmə siyahısına yazıl",
     },
     limited: {
-      title: "Limited Availability",
-      description: "Only {{remaining}} slots remaining out of {{capacity}}. Subscribe now before we reach capacity!",
-      buttonText: "Get Started Now"
+      title: "Məhdud yerlər",
+      description:
+        "Cəmi {{capacity}} yerdən {{remaining}} yer qalıb. Limit dolmadan indi abunə ol!",
+      buttonText: "Elə indi başla",
     },
     available: {
-      title: "Subscriptions Available",
-      description: "{{active}} of {{capacity}} subscriptions are currently active. Plenty of room for you to join!",
-      buttonText: "Get Started Now"
-    }
+      title: "Abunələr mövcuddur",
+      description:
+        "Hazırda {{capacity}} abunədən {{active}} aktivdir. Sənə də yer var!",
+      buttonText: "Elə indi başla",
+    },
   },
   features: {
-    heading: "Why Choose Amiquus?",
-    subheading: "Save time and never miss out on your perfect car with our automated tracking service.",
+    heading: "Niyə Amiquus?",
+    subheading:
+      "Vaxtına qənaət et və avtomatik izləmə ilə istədiyin avtomobili qaçırma.",
     multiSite: {
-      title: "Çox-sayt izləmə",
-      description: "Hər birini əl ilə yoxlamadan eyni anda bir neçə avtomobil elan saytını izləyin."
+      title: "Çoxsaytlı izləmə",
+      description:
+        "Bir neçə avtomobil saytını eyni vaxtda, əl ilə yoxlamadan izlə.",
     },
     notifications: {
-      title: "Instant Notifications",
-      description: "Receive immediate alerts via Telegram when a car matching your criteria is listed for sale."
+      title: "Ani bildirişlər",
+      description:
+        "Kriteriyalarına uyğun elan dərc olunan kimi Telegram-da dərhal xəbər al.",
     },
     filters: {
-      title: "Custom Filters",
-      description: "Set precise criteria including brand, model, year, mileage, and price range to find exactly what you want."
+      title: "Fərdiləşdirilən filtrlər",
+      description:
+        "Marka, model, il, yürüş və qiymət aralığını dəqiq seçərək istədiyini tap.",
     },
     frequency: {
-      title: "Customizable Frequency",
-      description: "Choose how often we check for new listings, from hourly updates to real-time monitoring."
+      title: "Təkrarlama tezliyi",
+      description:
+        "Yeniləmələrin tezliyini seç: saatbası yoxlamadan real vaxta qədər.",
     },
     languages: {
       title: "Çoxdilli dəstək",
-      description: "Elanları daha asan başa düşmək üçün bildirişləri seçdiyiniz dildə alın."
+      description:
+        "Elanları daha rahat başa düşmək üçün bildirişləri seçdiyin dildə al.",
     },
     account: {
-      title: "Easy Account Management",
-      description: "Manage multiple search profiles and modify your subscription settings with a few clicks."
-    }
+      title: "Asan hesab idarəetməsi",
+      description:
+        "Bir neçə axtarış profili yarat və abunə ayarlarını bir neçə kliklə dəyiş.",
+    },
   },
   howItWorks: {
-    title: "How Amiquus Works",
-    subtitle: "Set up once and let our automated system find the perfect car deal for you",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Amiquus necə işləyir",
+    subtitle:
+      "Bir dəfə qur, qalanını sistemimiz sənin üçün ən yaxşı fürsəti tapmaqla etsin",
+    whyTitle: "Niyə Amiquus?",
     steps: {
       preferences: {
-        title: "Set Your Preferences",
-        description: "Select car brands, models, price range, and other criteria you're interested in monitoring."
+        title: "Seçimlərini təyin et",
+        description:
+          "İzləmək istədiyin marka, model, qiymət aralığı və digər meyarları seç.",
       },
       telegram: {
-        title: "Connect Telegram",
-        description: "Link your Telegram account to receive instant notifications about new listings."
+        title: "Telegram-u bağla",
+        description:
+          "Yeni elanlar üçün ani bildirişlər almaq üçün Telegram hesabını əlaqələndir.",
       },
       notifications: {
-        title: "Get Instant Notifications",
-        description: "Receive alerts the moment a car matching your criteria appears on any of our monitored websites."
+        title: "Ani bildirişlər al",
+        description:
+          "İzlənən saytlardan hər hansı birində uyğun elan çıxan kimi xəbərdar ol.",
       },
       findCar: {
-        title: "Mükəmməl avtomobilinizi tapın",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "Mükəmməl avtomobili tap",
+        description:
+          "Yeni elanlardan birinci xəbər tut və ən sərfəli sövdələşməni əldə et.",
+      },
     },
     features: [
-
-      "Track over 15 car listing websites simultaneously",
-
-      "Customizable search criteria with advanced filtering",
-
-      "Real-time notifications via Telegram",
-
-      "Automatic price drop and new listing alerts",
-
-      "Easy setup process that takes less than 5 minutes"
-
+      "Eyni anda 15-dən çox avtomobil saytının izlənməsi",
+      "Geniş və dəqiq axtarış filtrləri",
+      "Telegram vasitəsilə real vaxt bildirişləri",
+      "Qiymət enişi və yeni elanlara avtomatik siqnallar",
+      "5 dəqiqədən az qurulum",
     ],
-    setAlerts: "Bildirişlərinizi qurun",
+    setAlerts: "Bildirişlərini qur",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Yeni uyğunluq tapıldı!",
+      description: "BMW 3 Series, 2019, $32,500 – AutoTrader-də dərc olunub",
     },
     notificationMockup2: {
       title: "Telegram bildirişi",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      description:
+        "Mercedes C-Class, 2020, 30,000 mil – Qiymət $2,000 azaldıldı",
+    },
   },
   pricing: {
-    title: "Simple, Transparent Pricing",
-    subtitle: "Our pricing is based on your specific needs. Start with a base package and customize it to fit your requirements.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Sadə və şəffaf qiymətlər",
+    subtitle:
+      "Qiymət ehtiyaclarına görə formalaşır. Baza paketlə başla və tələblərinə görə genişləndir.",
+    baseTitle: "Baza paket: $9.99/ay",
+    includedTitle: "Daxildir:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Bir saytın izlənməsi",
+      "Saatbası yeniləmə",
+      "Limitsiz filtr",
+      "Telegram bildirişləri",
     ],
-    addonsTitle: "Add-ons:",
+    addonsTitle: "Əlavələr:",
     addons: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
+      { name: "Hər əlavə sayt", price: 4.99 },
+      { name: "30 dəqiqədən bir yeniləmə", price: 2.99 },
+      { name: "15 dəqiqədən bir yeniləmə", price: 5.99 },
+      { name: "5 dəqiqədən bir yeniləmə", price: 9.99 },
+      { name: "1 dəqiqədən bir yeniləmə", price: 14.99 },
     ],
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Get Started Now"
+    footerNote:
+      "Bütün planlarda limitsiz axtarış konfiqurasiyası və asan abunə idarəetməsi var.",
+    button: "Elə indi başla",
   },
   signup: {
-    heading: "Avtomobil bildirişinizi yaradın",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Avtomobil bildirişini yarat",
+    subheading: "Fərdiləşdirilmiş elan bildirişlərini bir neçə addımda qur.",
+    cta: "Bildirişləri aktiv et",
     waitlist: {
-      message: "Hazırda tam tutumluq. Yer açılanda məlumatlandırılmaq üçün gözləmə siyahımıza qoşulun.",
-      cta: "Join Waitlist"
+      message:
+        "Hazırda tam tutumluyuq. Yer açılanda xəbərdar olmaq üçün gözləmə siyahısına qoşul.",
+      cta: "Gözləmə siyahısına yazıl",
     },
     toast: {
       success: {
-        title: "Abunəlik yaradıldı",
-        description: "Your subscription has been created successfully"
+        title: "Abunə yaradıldı",
+        description: "Abunən uğurla yaradıldı.",
       },
       error: {
-        title: "Abunəlik uğursuz oldu",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Abunə alınmadı",
+        description:
+          "Abunəni yaratmaq mümkün olmadı. Bir az sonra yenidən cəhd et.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
-        title: "Success",
-        description: "Your payment method has been successfully set up."
+        title: "Uğurlu",
+        description: "Ödəniş üsulu uğurla quruldu.",
       },
       error: {
-        title: "Error",
-        fallback: "An unexpected error occurred. Please try again."
-      }
+        title: "Xəta",
+        fallback: "Gözlənilməz xəta baş verdi. Yenidən cəhd et.",
+      },
     },
     button: {
-      submit: "Set up payment method",
-      processing: "Processing..."
-    }
+      submit: "Ödəniş üsulunu qur",
+      processing: "Emal olunur...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "Avtomobil markası tələb olunur",
+      carModel: "Avtomobil modeli tələb olunur",
+      fuelType: "Yanacaq növü tələb olunur",
+      priceMin: "Minimum qiymət rəqəm olmalıdır",
+      priceMax: "Maksimum qiymət rəqəm olmalıdır",
+      yearMin: "Minimum il düzgün deyil",
+      yearMax: "Maksimum il düzgün deyil",
+      maxKilometers: "Maksimum yürüş rəqəm olmalıdır",
+      telegramUsername: "Telegram istifadəçi adı tələb olunur",
+      telegramToken: "Telegram bot tokeni tələb olunur",
+      telegramChatId: "Telegram chat ID tələb olunur",
+      websitesSelected: "Ən azı bir sayt seçilməlidir",
+      notificationLanguage: "Bildiriş dili tələb olunur",
+      facebookMarketplaceUrl:
+        "Facebook seçildikdə Facebook Marketplace URL-i məcburidir",
+    },
   },
   personalInfo: {
-    heading: "Personal Information",
-    description: "Please provide your personal details so we can set up your notifications correctly.",
+    heading: "Şəxsi məlumatlar",
+    description:
+      "Bildirişləri düzgün qurmaq üçün şəxsi məlumatlarını daxil et.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Email Address"
+      firstName: "Ad",
+      lastName: "Soyad",
+      email: "E-poçt ünvanı",
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com"
+      email: "john.doe@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Please enter a valid email"
+      firstName: "Ad tələb olunur",
+      lastName: "Soyad tələb olunur",
+      email: "Zəhmət olmasa düzgün e-poçt daxil et",
     },
     actions: {
-      login: "Login or Sign Up to Continue",
-      continue: "Continue"
-    }
+      login: "Davam etmək üçün daxil ol və ya qeydiyyatdan keç",
+      continue: "Davam et",
+    },
   },
   websiteSelection: {
-    heading: "Website Selection",
-    description: "Choose which websites you want to monitor and how frequently you want updates.",
+    heading: "Sayt seçimi",
+    description: "İzləmək istədiyin saytları və yeniləmə tezliyini seç.",
     labels: {
-      websites: "Websites to monitor",
+      websites: "İzlənəcək saytlar",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Yenilənmə tezliyi",
     },
     placeholders: {
-      frequency: "Select frequency"
+      frequency: "Tezliyi seç",
     },
     help: {
-      websites: "Select one or more websites to monitor for car listings.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites:
+        "Avtomobil elanlarını izləmək üçün bir və ya bir neçə sayt seç.",
+      facebookUrl:
+        "Facebook Marketplace-də filtrli axtarış nəticələrinin URL-ni buraya yapışdır.",
+      videoTitle:
+        "Facebook Marketplace axtarış linkini necə tapacağını bilmirsən?",
+      videoDesc: "Addım-addım video təlimata bax.",
+      updateFrequency:
+        "Nə qədər tez-tez yoxlayaq? Daha tez-tez yenilənmələr əlavə xərc tuta bilər.",
     },
     errors: {
-      websites: "At least one website must be selected",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "Ən azı bir sayt seçilməlidir",
+      facebookUrl:
+        "Facebook seçildikdə Facebook Marketplace URL-i tələb olunur",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "Geri",
+      continue: "İrəli",
+    },
   },
   carDetails: {
-    heading: "Car Details",
-    description: "Specify the car details you are looking for. All fields are optional - leave any blank to get a wider range of results.",
+    heading: "Avtomobil detalları",
+    description:
+      "Axtardığın avtomobili dəqiqləşdir. Bütün sahələr ixtiyaridir — daha geniş nəticələr üçün boş buraxa bilərsən.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "Marka",
+      carModel: "Model",
+      fuelType: "Yanacaq növü",
+      priceMin: "Minimum qiymət",
+      priceMax: "Maksimum qiymət",
+      yearMin: "Minimum il",
+      yearMax: "Maksimum il",
+      maxKilometers: "Maksimum yürüş",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "Markanı seç",
+      carModel: "Modeli seç",
+      carModelDisabled: "Öncə markanı seç",
+      fuelType: "Yanacaq növünü seç",
+      priceMin: "Minimum qiyməti daxil et",
+      priceMax: "Maksimum qiyməti daxil et",
+      yearMin: "Minimum ili daxil et",
+      yearMax: "Maksimum ili daxil et",
+      maxKilometers: "Maksimum yürüşü daxil et",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "Model yoxdur",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "Marka tələb olunur",
+      carModel: "Model tələb olunur",
+      fuelType: "Yanacaq növü tələb olunur",
+      priceMin: "Minimum qiymət rəqəm olmalıdır",
+      priceMax: "Maksimum qiymət rəqəm olmalıdır",
+      yearMin: "Minimum il düzgün deyil",
+      yearMax: "Maksimum il düzgün deyil",
+      maxKilometers: "Maksimum yürüş rəqəm olmalıdır",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "Geri",
+      continue: "İrəli",
+    },
   },
   telegram: {
-    heading: "Telegram Setup",
-    description: "Set up Telegram notifications by providing your bot token and chat ID.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "If you have issues creating the telegram bot, contact us and we will call you and help you create one.",
-    contact: "Contact Us",
+    heading: "Telegram quraşdırılması",
+    description:
+      "Telegram bildirişlərini bot tokenini və chat ID-ni daxil edərək qur.",
+    subHeading: "Telegram botunu hazırla",
+    info: "Bot yaratmaqda çətinlik varsa, bizimlə əlaqə saxla — kömək edəcəyik.",
+    contact: "Əlaqə",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Telegram bot tokeni necə alınır:",
+      botStep1: "Telegram-ı aç və @BotFather axtar",
+      botStep2: "/newbot əmrini göndər",
+      botStep3: "Bot yaratmaq üçün təlimatları izlə",
+      botStep4: "BotFather verdiyi tokeni köçür",
+      chatTitle: "Telegram Chat ID necə tapılır:",
+      chatStep1: "Telegram-da @userinfobot axtar",
+      chatStep2: "Bota istənilən mesaj göndər",
+      chatStep3: "Bot məlumatlarını, o cümlədən Chat ID-ni qaytaracaq",
+      chatStep4: "Chat ID-ni köçür (rəqəmdir)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Telegram Bot Token və Chat ID qurulmasına kömək lazımdır?",
+    videoDescription: "Addım-addım izah üçün videoya bax.",
+
     labels: {
       token: "Telegram Bot Token",
-      chatId: "Your Telegram Chat ID",
-      language: "Notification Language",
-      username: "Telegram Username"
+      chatId: "Telegram Chat ID",
+      language: "Bildiriş dili",
+      username: "Telegram istifadəçi adı",
     },
+
     placeholders: {
-      token: "Enter your bot token from BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Select Telegram Message Language",
-      username: "Enter your Telegram username"
+      token: "BotFather-dən tokeni daxil et",
+      chatId: "Telegram Chat ID-ni daxil et",
+      language: "Telegram mesaj dili",
+      username: "Telegram istifadəçi adını daxil et",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Bu, Telegram hesabındakı istifadəçi adındır (@ işarəsi olmadan).",
     examples: {
-      token: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      token: "Nümunə: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId: "@userinfobot-a mesaj göndərərək əldə edə bilərsən",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Quraşdırma addımları:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Telegram-ı aç və "BotFather" axtar',
+      '"Start" düyməsi ilə söhbəti başlat',
+      "/newbot yaz və təlimatları izlə",
+      "Bot üçün ad seç",
+      "Bot üçün istifadəçi adı seç (mütləq 'bot' ilə bitsin)",
+      "Verilən API tokeni köçür",
+      "Söhbəti aktivləşdirmək üçün botuna mesaj yaz",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Telegram Chat ID tapmaq üçün:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      '"userinfobot" axtar',
+      "İstənilən mesaj göndər",
+      "Bot Chat ID-ni geri göndərəcək",
+      "Chat ID-ni köçür",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
+    helpTitle: "Telegram Bot Token və Chat ID üçün kömək lazımdır?",
+    helpDescription: "Addım-addım video təlimata bax.",
     botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    botTokenPlaceholder: "BotFather tokenini daxil et",
+    botTokenExample: "Nümunə: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Telegram Chat ID",
+    chatIdPlaceholder: "Chat ID-ni daxil et",
+    chatIdDescription: "@userinfobot-a yazaraq əldə edə bilərsən",
+    languageLabel: "Bildiriş dili",
+    languagePlaceholder: "Mesaj dilini seç",
     languages: {
       en: "English",
-      de: "Deutsch",
-      fr: "Français",
+      sl: "Slovenščina",
+      hr: "Hrvatski",
       es: "Español",
-      it: "Italiano"
+      fr: "Français",
+      de: "Deutsch",
+      ar: "العربية",
+      pt: "Português",
+      it: "Italiano",
+      nl: "Nederlands",
+      sv: "Svenska",
+      da: "Dansk",
+      nb: "Norsk",
+      fi: "Suomi",
+      hi: "हिन्दी",
+      ru: "Русский",
+      tr: "Türkçe",
+      cs: "Čeština",
+      pl: "Polski",
+      sk: "Slovenčina",
+      sq: "Shqip",
+      hy: "Հայերեն",
+      az: "Azərbaycan dili",
+      bn: "বাংলা",
+      be: "Беларуская",
+      bs: "Bosanski",
+      bg: "Български",
+      el: "Ελληνικά",
+      et: "Eesti",
+      ka: "ქართული",
+      hu: "Magyar",
+      he: "עברית",
+      ja: "日本語",
+      ko: "한국어",
+      lv: "Latviešu",
+      lt: "Lietuvių",
+      ms: "Bahasa Melayu",
+      ro: "Română",
+      mn: "Монгол",
+      sr: "Српски",
+      my: "မြန်မာစာ",
+      mk: "Македонски",
+      th: "ไทย",
+      uk: "Українська",
+      vi: "Tiếng Việt",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Telegram bildirişlərinə baxış",
+    carAlertTitle: "🚗 Yeni avtomobil bildirişi!",
+    priceLabel: "Qiymət: {{price}}",
+    kilometresLabel: "Yürüş: {{kms}}",
+    locationLabel: "Məkan: {{location}}",
+    viewListing: "Elana bax →",
     errors: {
-      token: "Telegram bot token is required",
-      chatId: "Telegram chat ID is required",
-      language: "Notification language is required",
-      username: "Telegram username is required"
+      token: "Telegram bot tokeni tələb olunur",
+      chatId: "Telegram chat ID tələb olunur",
+      language: "Bildiriş dili tələb olunur",
+      username: "Telegram istifadəçi adı tələb olunur",
     },
+
     actions: {
-      previous: "Previous",
-      continue: "Continue"
+      previous: "Geri",
+      continue: "İrəli",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "Aşağıdakı linklə Telegram botumuzla söhbətə başla və ona mesaj göndər:",
+    contactBotNote:
+      "Avtomobil bildirişlərini almaq üçün zəruridir. Kompüterdənsənsə, QR kodu skan edə bilərsən.",
+    confirmContact: "Botla söhbətə başlamışam və ona mesaj göndərmişəm",
   },
   review: {
-    title: "Review Your Subscription",
-    description: "Please review your subscription details before proceeding to payment.",
+    title: "Abunəni yoxla",
+    description: "Ödənişə keçməzdən əvvəl abunə detalları ilə tanış ol.",
     personal: {
-      title: "Personal Information",
-      name: "Name",
-      email: "Email"
+      title: "Şəxsi məlumatlar",
+      name: "Ad",
+      email: "E-poçt",
     },
     monitoring: {
-      title: "Monitoring Settings",
-      websites: "Websites",
+      title: "İzləmə ayarları",
+      websites: "Saytlar",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Yenilənmə tezliyi",
     },
     specs: {
-      title: "Car Specifications",
-      brand: "Brand",
+      title: "Avtomobil xüsusiyyətləri",
+      brand: "Marka",
       model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Mileage Range (km)",
-      price: "Price Range (€)"
+      fuelType: "Yanacaq növü",
+      yearRange: "İl aralığı",
+      mileage: "Yürüş aralığı (km)",
+      price: "Qiymət aralığı (€)",
     },
     notification: {
-      title: "Notification Settings",
-      telegram: "Telegram Bot",
-      language: "Notification Language"
+      title: "Bildiriş ayarları",
+      telegram: "Telegram bot",
+      language: "Bildiriş dili",
     },
     summary: {
-      title: "Subscription Summary",
-      base: "Base Subscription",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Monthly)"
+      title: "Abunənin xülasəsi",
+      base: "Baza abunə",
+      extraWebsites: "Əlavə saytlar",
+      frequencyUpgrade: "Tezlik yüksəldilməsi",
+      total: "Cəmi (aylıq)",
     },
     terms: {
-      checkbox: "I agree to the",
-      tos: "Terms of Service",
-      privacy: "Privacy Policy",
-      note: "Your subscription will renew automatically each month. You can cancel anytime.",
-      error: "You must agree to the terms and conditions"
+      checkbox: "Razıyam",
+      tos: "Xidmət Şərtləri",
+      privacy: "Məxfilik Siyasəti",
+      note: "Abunə hər ay avtomatik yenilənir. İstənilən vaxt ləğv edə bilərsən.",
+      error: "Şərtləri qəbul etməlisən",
     },
     actions: {
-      previous: "Previous",
-      submit: "Proceed to Payment"
-    }
+      previous: "Geri",
+      submit: "Ödənişə keç",
+    },
   },
   faq: {
-    title: "Frequently Asked Questions",
-    subtitle: "Find answers to the most common questions about our service.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
+    title: "Tez-tez verilən suallar",
+    subtitle: "Xidmətimizlə bağlı ən çox verilən sualların cavabları",
+    contactPrompt: "Hələ də sualın var?",
+    contactLink: "Dəstək komandamızla əlaqə",
     questions: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
-    ]
+      {
+        question: "Yeni elan dərc olunandan nə qədər sonra bildiriş alacağam?",
+        answer:
+          "Bu, seçdiyin yenilənmə tezliyindən asılıdır. Saatbası planda elan dərcindən bir saat içində xəbər alırsan. Daha sürətli bildirişlər üçün tezliyi yüksəldə bilərsən.",
+      },
+      {
+        question: "Eyni anda bir neçə fərqli avtomobili izləyə bilərəm?",
+        answer:
+          "Bəli! Müxtəlif kriteriyalarla bir neçə axtarış profili yarada bilərsən. Hər profil ayrıca abunə sayılır, amma hamısını bir hesabdan idarə edirsən.",
+      },
+      {
+        question: "Hal-hazırda hansı saytları dəstəkləyirsiniz?",
+        answer:
+          "Hazırda AutoTrader, CarGurus, Cars.com və Facebook Marketplace kimi əsas platformaları dəstəkləyirik. Tələbat və regiona görə siyahını genişləndiririk.",
+      },
+      {
+        question: "Telegram botundan istifadə üçün texniki bilik lazımdır?",
+        answer:
+          "Xeyr! Mətni və videonu olan addım-addım təlimat veririk. İstifadəçilərin çoxu 5 dəqiqədən az müddətdə qurur.",
+      },
+      {
+        question: "Abunəni qurduqdan sonra kriteriyaları dəyişə bilərəm?",
+        answer:
+          "Bəli, istənilən vaxt idarə panelindən dəyişə bilərsən. Dəyişikliklər dərhal qüvvəyə minir.",
+      },
+      {
+        question: "Abunəni necə ləğv edim?",
+        answer:
+          'İdarə panelində "Abunələr" bölməsinə keç, müvafiq abunəni seç və "Abunəni ləğv et" düyməsini bas. Xidmət mövcud ödəniş dövrünün sonunadək davam edəcək.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "Features",
-    pricing: "Pricing",
-    faq: "FAQ",
-    getStarted: "Get Started",
-    legal: "Legal",
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    cookies: "Cookie Policy",
-    gdpr: "GDPR Compliance",
-    contact: "Contact",
+    brandDescription:
+      "Düz vaxtda ən sərfəli ikinci əl avtomobil fürsətini tapmağında şəxsi köməkçin.",
+    quickLinks: "Sürətli keçidlər",
+    features: "Xüsusiyyətlər",
+    pricing: "Qiymətlər",
+    faq: "Tez-tez verilən suallar",
+    getStarted: "Başla",
+    legal: "Hüquqi",
+    terms: "Xidmət şərtləri",
+    privacy: "Məxfilik siyasəti",
+    cookies: "Kukilər siyasəti",
+    gdpr: "GDPR uyğunluğu",
+    contact: "Əlaqə",
     email: "support@amiquus.com",
-    telegram: "Contact us on Telegram",
-    copyright: "All rights reserved.",
-    about: "About Us",
-    blog: "Blog",
-    careers: "Careers",
-    support: "Support"
+    telegram: "Telegram-da yaz",
+    copyright: "Bütün hüquqlar qorunur.",
+    about: "Haqqımızda",
+    blog: "Bloq",
+    careers: "Karyera",
+    support: "Dəstək",
   },
   login: {
-    title: "Log in to your account",
-    description: "Enter your email and password to access your dashboard",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
-    or: "or",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    title: "Hesabına daxil ol",
+    description: "Panelə keçmək üçün e-poçt və şifrənı daxil et",
+    emailLabel: "E-poçt",
+    passwordLabel: "Şifrə",
+    loginButton: "Daxil ol",
+    loggingIn: "Daxil olunur...",
+    loginWithGoogle: "Google ilə daxil ol",
+    or: "və ya",
+    noAccount: "Hesabın yoxdur?",
+    registerLink: "Qeydiyyat",
+    successTitle: "Uğurlu giriş",
+    successMessage: "Uğurla daxil oldun.",
+    errorTitle: "Giriş alınmadı",
+    genericError: "Məlumatları yoxlayıb yenidən cəhd et.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "Düzgün e-poçt ünvanı daxil et",
+      shortPassword: "Şifrə minimum 6 simvol olmalıdır",
+    },
   },
   register: {
-    title: "Create an account",
-    description: "Sign up to start tracking your dream car",
-    google: "Sign up with Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Username",
-    email: "Email",
-    password: "Password",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
-    login: "Log in",
-    and: "and",
+    title: "Hesab yarat",
+    description:
+      "Arzuladığın avtomobili izləməyə başlamaq üçün qeydiyyatdan keç",
+    google: "Google ilə qeydiyyat",
+    orContinue: "Və ya davam et",
+    firstName: "Ad",
+    lastName: "Soyad",
+    username: "İstifadəçi adı",
+    email: "E-poçt",
+    password: "Şifrə",
+    confirmPassword: "Şifrəni təsdiqlə",
+    termsNotice: "Mən razıyam",
+    termsOfService: "Xidmət şərtləri",
+    privacyPolicy: "Məxfilik siyasəti",
+    createBtn: "Hesab yarat",
+    alreadyHave: "Hesabın var?",
+    login: "Daxil ol",
+    and: "və",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Məlumat çatmır",
+        desc: "Zəhmət olmasa bütün tələb olunan sahələri doldur",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Yanlış istifadəçi adı",
+        desc: "Yalnız hərf/rəqəm və 3–20 simvol arası olmalıdır",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Şifrələr eyni deyil",
+        desc: "Şifrələrin uyğun olduğuna əmin ol",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Şərtlər qəbul edilməyib",
+        desc: "Davam etmək üçün şərtləri və məxfiliyi qəbul etməlisən",
       },
       success: {
-        title: "Registration successful",
-        desc: "Welcome to Amiquus! You will be redirected to verify your email address."
+        title: "Qeydiyyat uğurlu",
+        desc: "Amiquus-a xoş gəldin! E-poçt təsdiqləməsinə yönləndiriləcəksən.",
       },
       failure: {
-        title: "Registration failed",
-        desc: "Please check your information and try again"
-      }
-    }
+        title: "Qeydiyyat alınmadı",
+        desc: "Məlumatları yoxlayıb yenidən cəhd et",
+      },
+    },
   },
   verifyEmail: {
-    title: "Verify Your Email",
-    description: "A verification code has been sent to your email.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "E-poçtu təsdiqlə",
+    description: "Təsdiq kodu e-poçtuna göndərildi.",
+    codeLabel: "Təsdiq kodu",
+    verifyButton: "E-poçtu təsdiqlə",
+    updateEmailLabel: "E-poçtu dəyiş",
+    updateEmailButton: "E-poçtu yenilə",
+    resendButton: "Kodu yenidən göndər",
+    resendCountdown:
+      "Kodu {{seconds}} saniyədən sonra yenidən göndərə bilərsən",
+    footerNote: "Kodu almadın? Spam qovluğunu yoxla.",
     toast: {
-      verified: "Email verified",
-      failed: "Verification failed",
-      resent: "Verification code resent",
-      error: "Error",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      verified: "E-poçt təsdiqləndi",
+      failed: "Təsdiqləmə alınmadı",
+      resent: "Təsdiq kodu yenidən göndərildi",
+      error: "Xəta",
+      invalidEmail: "Yanlış e-poçt",
+      enterValidEmail: "Düzgün e-poçt ünvanı daxil et",
+      sameEmail: "Eyni e-poçt",
+      sameEmailDesc: "Yeni e-poçt mövcud e-poçtla eynidir",
+      emailUpdated: "E-poçt yeniləndi",
+    },
   },
   dashboardPayment: {
-    add: "Add Payment Method",
-    description: "Add a new credit or debit card for your subscription payments.",
-    processing: "Processing...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "Ödəniş üsulu əlavə et",
+    description: "Abunə ödənişlərin üçün yeni debit/kredit kartı əlavə et.",
+    processing: "Emal olunur...",
+    errorTitle: "Ödəniş üsulu əlavə edilə bilmədi",
+    errorMessage: "Gözlənilməz xəta baş verdi",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "Xəta",
+      description: "Ödəniş quraşdırılmasını başlatmaq mümkün deyil",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "İllər",
+      priceRange: "Qiymət",
+      websites: "Saytlar",
+      updates: "Yeniləmələr",
+      language: "Dil",
+      price: "Qiymət",
+      edit: "Redaktə et",
+      cancelAlert: "Bildirişi ləğv et",
+      cancelTitle: "Avtomobil bildirişini ləğv et",
+      cancelDescription:
+        "{{brand}} {{model}} üçün bildirişi ləğv etmək istədiyinə əminsən? Bildirişlər dayandırılacaq və yenidən izləmək üçün yeni bildiriş yaratmalısan.",
+      keepMyAlert: "Bildirişi saxla",
+      confirmCancel: "Ləğv et",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Bitmə tarixi",
+      default: "Standart",
+      setAsDefault: "Standart et",
+      remove: "Sil",
+      setDefaultTitle: "Standart ödəniş üsulu",
+      setDefaultDescription:
+        "{{last4}} ilə bitən {{brand}} kartını standart kimi təyin etmək istəyirsən? Gələcək ödənişlər üçün bu kart istifadə olunacaq.",
+      removeTitle: "Ödəniş üsulunu sil",
+      removeDescription:
+        "{{last4}} ilə bitən {{brand}} kartını silmək istədiyinə əminsən?",
+      removeWarning:
+        "Bu, standart kartındır və silinməsi aktiv abunələrə təsir edə bilər.",
+      cancel: "Ləğv et",
+      confirmRemove: "Kartanı sil",
+    },
   },
   profile: {
     tabs: {
-      alerts: "My Alerts",
-      payments: "Payment Methods"
+      alerts: "Bildirişlərim",
+      payments: "Ödəniş üsulları",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Subscriptions",
-      methods: "Payment methods",
-      account: "Account settings",
-      privacy: "Privacy & security",
-      logout: "Log out"
+      memberSince: "Üzv olduğun tarix",
+      subscriptions: "Abunələr",
+      methods: "Ödəniş üsulları",
+      account: "Hesab ayarları",
+      privacy: "Məxfilik və təhlükəsizlik",
+      logout: "Çıxış",
     },
     account: {
-      title: "Account Settings",
-      desc: "Update your account information and preferences.",
-      name: "Name",
-      email: "Email",
-      username: "Username",
-      cancel: "Cancel",
-      save: "Save Changes"
+      title: "Hesab ayarları",
+      desc: "Məlumat və üstünlüklərini yenilə.",
+      name: "Ad",
+      email: "E-poçt",
+      username: "İstifadəçi adı",
+      cancel: "Ləğv et",
+      save: "Dəyişiklikləri saxla",
     },
     security: {
-      title: "Privacy & Security",
-      desc: "Manage your security settings and privacy preferences.",
-      current: "Current Password",
-      new: "New Password",
-      confirm: "Confirm New Password",
-      update: "Update Password"
+      title: "Məxfilik və təhlükəsizlik",
+      desc: "Təhlükəsizlik və məxfilik ayarlarını idarə et.",
+      current: "Cari şifrə",
+      new: "Yeni şifrə",
+      confirm: "Yeni şifrəni təsdiqlə",
+      update: "Şifrəni yenilə",
     },
     logout: {
-      title: "Log Out",
-      desc: "Are you sure you want to log out of your account?",
-      success: "You have been successfully logged out."
+      title: "Çıxış",
+      desc: "Hesabdan çıxmaq istədiyinə əminsən?",
+      success: "Uğurla çıxış edildi.",
     },
     alerts: {
-      title: "Car Alert Subscriptions",
-      desc: "Manage your car search alerts and notification preferences.",
-      add: "Add New Alert",
-      none: "You don't have any active car alerts.",
-      cta: "Create your first alert",
-      warning: "⚠️ Changes to your subscription will be applied in the next billing period, and only after a successful payment. If the payment fails, your current alert setup will remain unchanged."
+      title: "Avtomobil bildirişləri",
+      desc: "Axtarış bildirişlərini və üstünlüklərini idarə et.",
+      add: "Yeni bildiriş əlavə et",
+      none: "Aktiv bildirişin yoxdur.",
+      cta: "İlk bildirişini yarat",
+      warning:
+        "⚠️ Dəyişikliklər növbəti ödəniş dövründə və yalnız uğurlu ödənişdən sonra tətbiq ediləcək. Ödəniş uğursuz olarsa, cari qurulum qalacaq.",
     },
     payments: {
-      title: "Payment Methods",
-      desc: "Manage your payment methods for subscription billing.",
-      none: "You don't have any payment methods saved.",
-      encrypted: "Your payment information is encrypted and securely stored."
-    }
+      title: "Ödəniş üsulları",
+      desc: "Abunə ödənişlərin üçün üsulları idarə et.",
+      none: "Saxlanmış ödəniş üsulu yoxdur.",
+      encrypted: "Ödəniş məlumatların şifrəli və təhlükəsiz saxlanılır.",
+    },
   },
   setupAlerts: {
-    title: "Set Up Your Car Alerts",
-    subtitle: " Configure your Telegram bot to receive notifications about your dream car",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Start My Car Alert Service",
-    cancel: "İstənilən vaxt ləğv edin",
+    title: "Avtomobil bildirişlərini qur",
+    subtitle: " Arzuladığın avtomobil üçün Telegram botunu konfiqurasiya et",
+    basicPlan: "Baza plan",
+    baseTitle: "$9.99/ay",
+    button: "Bildiriş xidmətini başlat",
+    cancel: "İstənilən vaxt ləğv et",
     toasts: {
       terms: {
-        title: "Terms not accepted",
-        description: "You must agree to the terms of service to continue"
+        title: "Şərtlər qəbul edilməyib",
+        description: "Davam etmək üçün xidmət şərtlərini qəbul etməlisən",
       },
       success: {
-        title: "Abunəlik yaradıldı",
-        description: "Your subscription has been created successfully"
+        title: "Abunə yaradıldı",
+        description: "Abunən uğurla yaradıldı",
       },
       error: {
-        title: "Error creating subscription"
+        title: "Abunə yaradılarkən xəta",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "Bot ilə əlaqə tələb olunur",
+        description:
+          "Telegram botumuzla söhbətə başlamalı və ona mesaj göndərməlisən. Zəhmət olmasa aşağıdakı təlimatlara əməl et.",
+      },
+    },
   },
   loginPrompt: {
-    title: "Login Required",
-    description: "You must be logged in to continue. Please log in or register.",
-    register: "Register",
-    login: "Login"
+    title: "Giriş tələb olunur",
+    description:
+      "Davam etmək üçün daxil olmalısan. Zəhmət olmasa daxil ol və ya qeydiyyatdan keç.",
+    register: "Qeydiyyat",
+    login: "Daxil ol",
   },
   waitlistPrompt: {
-    title: "Gözləmə siyahısına qoşulun",
-    description: "We're currently at full capacity. Join the waitlist to be notified when a slot becomes available.",
-    button: "Join Waitlist"
+    title: "Gözləmə siyahısına qoşul",
+    description:
+      "Hazırda tam tutumluyuq. Yer açılan kimi xəbərdar olmaq üçün yazıl.",
+    button: "Gözləmə siyahısı",
   },
   subscription: {
-    title: "Subscription Details",
-    subTitle: "Edit your subscription details below",
-    error: "Go back to dashboard",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "You can pause your subscription at any time. When you pause your subscription, your car alerts will stop until you resume them.",
+    title: "Abunə detalları",
+    subTitle: "Aşağıdakı sahələri redaktə et",
+    error: "Panelə qayıt",
+    notFound: "Abunə tapılmadı",
+    notFoundSub: "Panelə qayıt",
+    description:
+      "Abunəni istənilən vaxt pauzaya qoya bilərsən. Pauza rejimində bildirişlər dayandırılacaq.",
     form: {
       status: {
         label: "Status",
-        placeholder: "Select Status",
-        active: "Active",
-        paused: "Paused"
-      }
+        placeholder: "Status seç",
+        active: "Aktiv",
+        paused: "Pauzada",
+      },
     },
     actions: {
-      save: "Save Changes",
-      back: "Back"
+      save: "Dəyişiklikləri saxla",
+      back: "Geri",
     },
     toasts: {
       success: {
-        title: "Subscription Updated",
-        description: "Your subscription for {{brand}} {{model}} has been updated successfully"
+        title: "Abunə yeniləndi",
+        description: "{{brand}} {{model}} üçün abunə uğurla yeniləndi",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Abunə yenilənmədi",
+        description:
+          "Eyni vaxtda pauza və qiymət dəyişikliyi edilə bilməz. Biri seçilməlidir.",
       },
       error: {
-        title: "Error updating subscription"
-      }
-    }
+        title: "Yeniləmə xətası",
+      },
+    },
   },
   about: {
-    title: "About Amiquus",
-    description: "We're revolutionizing how people find their perfect used car by bringing advanced monitoring technology to everyone",
+    title: "Amiquus haqqında",
+    description:
+      "İnsanların ideal ikinci əl avtomobili tapmasını ağıllı izləmə texnologiyası ilə dəyişirik",
     meta: {
-      title: "About Us | Amiquus - Car Listing Monitoring Service",
-      description: "Learn about Amiquus, our mission to revolutionize used car shopping, and the team behind our intelligent car listing monitoring service."
+      title: "Haqqımızda | Amiquus - Avtomobil elanlarının monitorinqi",
+      description:
+        "Amiquus, missiyamız və ağıllı izləmə xidmətinin arxasındakı komanda haqqında daha çox öyrən.",
     },
     story: {
-      heading: "Our Story",
+      heading: "Hekayəmiz",
       paragraphs: [
-
-        "Amiquus began in 2023 when our founder, Alex, spent months refreshing car listing websites trying to find a specific rare model at a good price. After missing several opportunities due to delayed notifications, he realized there had to be a better way.",
-
-        "Working with a small team of developers and car enthusiasts, Alex built a monitoring system that could track listings across multiple sites simultaneously and send instant notifications when matches appeared.",
-
-        "What started as a personal project quickly gained interest from friends and family, and by early 2025, Amiquus was born as a service available to everyone. Today, we help car buyers across the country save time and find better deals with our intelligent monitoring technology."
-
-      ]
+        "Amiquus 2023-cü ildə yarandı: təsisçimiz Aleks nadir bir modeli münasib qiymətə tapmaq üçün aylarla elan saytlarını yeniləyirdi. Gecikən bildirişlər səbəbindən bir neçə fürsəti qaçırdıqdan sonra daha yaxşı yol tapmaq lazım olduğunu anladı.",
+        "Kiçik bir komanda ilə bir neçə saytı eyni vaxtda izləyən və uyğunluq olduqda ani bildiriş göndərən sistem quruldu.",
+        "Şəxsi layihə kimi başlayan iş 2025-ci ilin əvvəlində hamı üçün əlçatan oldu. Bu gün ağıllı izləmə ilə alıcılara vaxt və pul qazandırırıq.",
+      ],
     },
     mission: {
-      heading: "Our Mission",
+      heading: "Missiyamız",
       items: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          title: "Vaxtına qənaət et",
+          description:
+            "Onlarla saytı əl ilə yeniləmək əvəzinə, axtarışı avtomatlaşdırıb vaxtında bildiriş göndəririk.",
+        },
+        {
+          title: "Daha yaxşı sövdələşmə tap",
+          description:
+            "Möhtəşəm fürsətlər görünən kimi birinci xəbər tut — vaxtlama hər şeydir.",
+        },
+        {
+          title: "Əminliklə al",
+          description:
+            "Bir neçə etibarlı platformada geniş monitorinq ilə qərar ver.",
+        },
+      ],
     },
     team: {
-      heading: "Our Team",
+      heading: "Komandamız",
       members: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          name: "Alex Morgan",
+          role: "Təsisçi və CEO",
+          bio: "Keçmiş proqramçı, avtomobillərə və innovasiyalara həvəsli.",
+        },
+        {
+          name: "Sarah Chen",
+          role: "CTO",
+          bio: "Veb skreypinq və məlumat axtarışı üzrə data elmi mütəxəssisi.",
+        },
+        {
+          name: "Marcus Lee",
+          role: "Baş developer",
+          bio: "Yüksək performanslı bildiriş sistemləri üzrə full-stack mühəndis.",
+        },
+        {
+          name: "Elena Rodriguez",
+          role: "Müştəri Uğuru",
+          bio: "Keçmiş avtomobil satış məsləhətçisi, müştəri uğuruna fokuslanıb.",
+        },
+      ],
     },
     join: {
-      heading: "Join Our Team",
-      description: "We're always looking for talented individuals who are passionate about technology and revolutionizing the car buying experience. Check out our current openings and join us on our mission.",
-      cta: "View Open Positions"
+      heading: "Komandamıza qoşul",
+      description:
+        "Texnologiyanı sevən istedadları həmişə axtarırıq. Açıq vakansiyalara bax.",
+      cta: "Vakansiyalar",
     },
     questions: {
-      heading: "Have Questions?",
-      description: "Learn more about how our service works, view pricing options, or get in touch with our support team.",
+      heading: "Sualların var?",
+      description:
+        "Xidmətin işləmə qaydasını öyrən, qiymətlərə bax və ya dəstəyə yaz.",
       links: {
-        faq: "Visit FAQ",
-        pricing: "View Pricing",
-        support: "Contact Support"
-      }
-    }
+        faq: "ÇVK-ya keç",
+        pricing: "Qiymətlərə bax",
+        support: "Dəstəklə əlaqə",
+      },
+    },
   },
   terms: {
-    metaTitle: "Terms of Service | Amiquus",
-    metaDescription: "Read the Amiquus Terms of Service that govern your use of our car listing monitoring and notification service.",
-    title: "Terms of Service",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Xidmət Şərtləri | Amiquus",
+    metaDescription:
+      "Amiquus-un avtomobil elanlarının monitorinqi və bildiriş xidmətindən istifadəyə dair şərtləri oxu.",
+    title: "Xidmət Şərtləri",
+    lastUpdated: "Son yenilənmə: 21 may 2025",
     sections: {
-      1: {
+      "1": {
         id: "agreement",
-        heading: "Agreement to Terms",
+        heading: "Şərtlərlə razılaşma",
         paragraphs: [
-
-          "These Terms of Service constitute a legally binding agreement made between you and Amiquus, concerning your access to and use of our website and services.",
-
-          "By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service."
-
+          "Bu Şərtlər Amiquus xidmətinə girişin və istifadənin qaydalarını müəyyən edən hüquqi razılaşmadır.",
+          "Xidmətlərimizdən istifadə etməklə bu Şərtləri qəbul edirsən. Razı deyilsənsə, xidmətdən istifadə etmə.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      2: {
+      "2": {
         id: "changes",
-        heading: "Changes to Terms",
+        heading: "Dəyişikliklər",
         paragraphs: [
-          "  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.",
-          "By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service."
+          "Şərtləri istənilən vaxt dəyişmək hüququmuzu saxlayırıq. Əhəmiyyətli dəyişikliklərdən ən az 30 gün əvvəl xəbər verməyə çalışacağıq.",
+          "Dəyişikliklər qüvvəyə mindikdən sonra xidmətdən istifadəni davam etdirməyin yeni şərtləri qəbul etdiyin deməkdir.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      3: {
+      "3": {
         id: "account",
-        heading: "Account Terms",
-        paragraphs: [
-          "To use our services, you must:"
-        ],
+        heading: "Hesab şərtləri",
+        paragraphs: ["Xidmətlərdən istifadə üçün gərək:"],
         list: [
-
-          "Be at least 18 years old",
-
-          "Complete the registration process",
-
-          "Provide accurate, complete, and up-to-date information",
-
-          "Be responsible for maintaining the security of your account and password",
-
-          "Be responsible for all activities that occur under your account",
-
-          "Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account"
-
-        ]
+          "18 yaşını tamamlamış olasan",
+          "Qeydiyyatı başa vurasan",
+          "Dəqiq və aktual məlumat verəsən",
+          "Hesab və şifrənin təhlükəsizliyinə cavabdeh olasan",
+          "Hesabından edilən bütün fəaliyyətlərə görə cavabdeh olasan",
+          "Təhlükəsizlik pozuntusu olduqda dərhal bizi xəbərdar edəsən",
+        ],
       },
-      4: {
+      "4": {
         id: "payment",
-        heading: "Payment Terms",
-        paragraphs: [
-
-          " Amiquus offers subscription-based services with the following terms:"
-
-        ],
+        heading: "Ödəniş qaydaları",
+        paragraphs: ["Amiquus abunə əsaslı xidmət təklif edir. Şərtlər:"],
         list: [
-
-          "All fees are exclusive of taxes, which will be added when applicable",
-
-          "Subscription prices are subject to change with 30 days' notice",
-
-          "Subscriptions automatically renew unless canceled before the next billing cycle",
-
-          "Refunds are handled on a case-by-case basis according to our refund policy",
-
-          "We use Stripe for secure payment processing, and all payment information is stored by Stripe"
-
-        ]
+          "Bütün ödənişlər vergilərsiz göstərilir; lazım gəldikdə əlavə olunur",
+          "Abunə qiymətləri 30 gün öncədən xəbərdarlıqla dəyişə bilər",
+          "Abunələr avtomatik yenilənir, ləğv etmədikcə",
+          "Geri ödənişlər siyasətimizə uyğun olaraq fərdi qaydada qiymətləndirilir",
+          "Təhlükəsiz ödəniş üçün Stripe istifadə olunur; kart məlumatları Stripe-da saxlanılır",
+        ],
       },
-      5: {
+      "5": {
         id: "capacity",
-        heading: "Capacity Limits",
+        heading: "Kapasite limitləri",
         paragraphs: [
-
-          "In order to maintain service quality and reliability, Amiquus limits the number of active subscriptions to 30. When this limit is reached:"
-
+          "Keyfiyyət və etibarlılığı qorumaq üçün aktiv abunəçi sayını 30-la məhdudlaşdırırıq. Limit dolduqda:",
         ],
         list: [
-
-          "New users may join our waitlist",
-
-          "Waitlist position is determined on a first-come, first-served basis",
-
-          "When capacity becomes available, waitlisted users will be notified in order",
-
-          "We reserve the right to modify capacity limits at any time"
-
-        ]
+          "Yeni istifadəçilər gözləmə siyahısına yazıla bilər",
+          "Sıra ilk müraciət edənə əsasən müəyyən olunur",
+          "Yer açıldıqda siyahı sırası ilə xəbər verilir",
+          "Kapasite limitlərini dəyişmək hüququmuzu saxlayırıq",
+        ],
       },
-      6: {
+      "6": {
         id: "scraping",
-        heading: "Web Scraping Limitations",
+        heading: "Veb skreypinq məhdudiyyətləri",
         paragraphs: [
-
-          "Our service accesses and processes data from multiple car listing websites. By using our service, you acknowledge that:"
-
+          "Xidmətimiz bir neçə elan saytından məlumat alır və emal edir. Bununla razılaşırsan ki:",
         ],
         list: [
-
-          "Amiquus respects the terms of service of the websites we monitor",
-
-          "We implement rate limiting and respectful crawling practices",
-
-          "The availability of certain websites may change based on their terms and technical measures",
-
-          "We make no guarantees regarding the completeness or timeliness of scraped data"
-
-        ]
+          "Amiquus izlənən saytların istifadə şərtlərinə hörmət edir",
+          "Səmərəli sorğu məhdudiyyəti və etik tarama tətbiq edirik",
+          "Bəzi saytların əlçatanlığı şərtlərə və texniki tədbirlərə görə dəyişə bilər",
+          "Məlumatların tamlığına və vaxtında olmasına zəmanət verilmir",
+        ],
       },
-      7: {
+      "7": {
         id: "intellectual",
-        heading: "Intellectual Property",
+        heading: "İntellektual mülkiyyət",
         paragraphs: [
-
-          "The Amiquus service, including its original content, features, and functionality, are and will remain the exclusive property of Amiquus. Our service is protected by copyright, trademark, and other laws of both the United States and foreign countries.",
-
-          "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Amiquus."
-
+          "Xidmət, məzmun və funksionallıq Amiquus-a məxsusdur və müvafiq qanunlarla qorunur.",
+          "Ticarət nişanlarımız və dizayn razılıq olmadan istifadə edilə bilməz.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      8: {
+      "8": {
         id: "termination",
-        heading: "Termination",
+        heading: "Dayandırma",
         paragraphs: [
-          "   We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including, without limitation, if you breach the Terms.",
-          " Upon termination, your right to use the service will immediately cease. If you wish to terminate your account, you may simply discontinue using the service or contact us to request account deletion."
+          "Şərtlərin pozulması daxil olmaqla istənilən səbəbdən hesabı dərhal və xəbərdarlıq etmədən dayandıra bilərik.",
+          "Dayandırıldıqdan sonra xidmətə giriş dərhal kəsilir. Hesabı bağlamaq üçün xidmətdən istifadəni dayandır və ya bizimlə əlaqə saxla.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      9: {
+      "9": {
         id: "limitations",
-        heading: "Limitation of Liability",
+        heading: "Məsuliyyətin məhdudlaşdırılması",
         paragraphs: [
-          "In no event shall Amiquus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:"
+          "Amiquus və tərəfdaşları dolayı, xüsusi və digər nəticəvi zərərlərə görə məsuliyyət daşımır, o cümlədən:",
         ],
         list: [
-
-          "Your access to or use of or inability to access or use the service",
-
-          "Any conduct or content of any third party on the service",
-
-          "Any content obtained from the service",
-
-          "Unauthorized access, use, or alteration of your transmissions or content"
-
-        ]
+          "Xidmətə çıxış və ya çıxışsızlıq",
+          "Xidmətdə üçüncü tərəflərin davranışı və məzmunu",
+          "Xidmət vasitəsilə əldə olunan məzmun",
+          "Məlumatlara icazəsiz giriş, istifadə və ya dəyişiklik",
+        ],
       },
-      10: {
+      "10": {
         id: "disclaimer",
-        heading: "Disclaimer",
+        heading: "Zəmanətlərdən imtina",
         paragraphs: [
-
-          " Your use of the service is at your sole risk. The service is provided on an `AS IS` and `AS AVAILABLE` basis. The service is provided without warranties of any kind, whether express or implied.",
-
-          "Amiquus does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that the results that may be obtained from the use of the service will be accurate or reliable."
-
+          'Xidmət "OLDUĞU KİMİ" və "MÖVCUD OLDUĞU KİMİ" təqdim olunur. Hər hansı açıq və ya dolayı zəmanət verilmir.',
+          "Xidmətin fasiləsiz, vaxtında, təhlükəsiz və ya xətasız olacağına zəmanət verilmir; nəticələrin dəqiqliyinə zəmanət yoxdur.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      11: {
+      "11": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "Kukilər siyasəti",
         paragraphs: [
-          "Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our service, your choices regarding cookies, and further information about cookies. Please refer to the Cookies section in our Privacy Policy."
+          "Kukilər nədir, necə istifadə edirik, üçüncü tərəflər necə istifadə edə bilər və seçimlərin nələrdir — bütün bunlar Məxfilik Siyasətində izah olunur.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      12: {
+      "12": {
         id: "governing-law",
-        heading: "Governing Law",
+        heading: "Tətbiq olunan qanun",
         paragraphs: [
-          "    These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.",
-          " Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
+          "Bu Şərtlər ABŞ qanunları ilə tənzimlənir (koliziya normaları nəzərə alınmadan).",
+          "Hər hansı bənd etibarsız olarsa, qalan bəndlər qüvvədə qalır.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      13: {
+      "13": {
         id: "contact",
-        heading: "Contact Us",
-        paragraphs: [
-          "  If you have any questions about these Terms, please contact us:"
-        ],
+        heading: "Əlaqə",
+        paragraphs: ["Sualların varsa, bizimlə əlaqə saxla:"],
         list: [
-
-          "By email: legal@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "E-poçt: legal@amiquus.com",
+          "Saytdakı əlaqə səhifəsi vasitəsilə",
+        ],
+      },
+    },
   },
   privacy: {
-    metaTitle: "Privacy Policy | Amiquus",
-    metaDescription: "Learn about how Amiquus handles your personal data, privacy rights, and data collection practices.",
-    title: "Privacy Policy",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Məxfilik Siyasəti | Amiquus",
+    metaDescription:
+      "Amiquus-un şəxsi məlumatlarını necə topladığı, istifadə etdiyi və qoruduğu barədə məlumat al.",
+    title: "Məxfilik Siyasəti",
+    lastUpdated: "Son yenilənmə: 21 may 2025",
     sections: {
-      0: {
+      "0": {
         id: "introduction",
-        heading: "Introduction",
+        heading: "Giriş",
         paragraphs: [
-
-          "Welcome to Amiquus. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you."
-
-        ]
+          "Amiquus-a xoş gəlmisən. Məxfiliyinə hörmət edir və şəxsi məlumatlarını qorumağa sadiqik. Bu siyasət, sayta daxil olarkən məlumatlarının necə emal olunduğunu və hüquqlarını izah edir.",
+        ],
       },
-      1: {
+      "1": {
         id: "data-we-collect",
-        heading: "Information We Collect",
+        heading: "Topladığımız məlumatlar",
         paragraphs: [
-
-          "We collect several different types of information for various purposes to provide and improve our service to you:"
-
+          "Xidməti göstərmək və yaxşılaşdırmaq üçün müxtəlif məlumatlar toplayırıq:",
         ],
         list: [
-
-          "Personal Data: Email address, first name, last name, and profile picture (if provided through third-party authentication).",
-
-          "Account Data: Your login credentials and account preferences.",
-
-          "Usage Data: Information on how you use our website and services.",
-
-          "Car Search Preferences: The vehicle criteria you set for monitoring (brand, model, price range, etc.).",
-
-          "Telegram Information: If you choose to receive notifications via Telegram, we store your Telegram chat ID and bot token.",
-
-          "Payment Information: When you make a purchase, our payment processor collects payment details necessary to process your transaction. Amiquus does not store your full credit card information."
-
-        ]
+          "Şəxsi məlumatlar: e-poçt, ad, soyad, (üçüncü tərəf ilə daxil olduqda) profil şəkli.",
+          "Hesab məlumatları: giriş məlumatları və üstünlüklər.",
+          "İstifadə məlumatları: vebsaytdan necə istifadə etdiyin.",
+          "Axtarış üstünlükləri: izləmək istədiyin avtomobil meyarları.",
+          "Telegram məlumatları: bot tokeni və chat ID (seçdikdə).",
+          "Ödəniş məlumatları: ödəniş prosessoru tərəfindən toplanır; kart məlumatlarının tamı bizdə saxlanmır.",
+        ],
       },
-      2: {
+      "2": {
         id: "how-we-use-data",
-        heading: "How We Use Your Data",
-        paragraphs: [
-
-          "We use your personal data for the following purposes:"
-
-        ],
+        heading: "Məlumatlardan istifadə",
+        paragraphs: ["Məlumatlarını aşağıdakı məqsədlər üçün istifadə edirik:"],
         list: [
-
-          "To provide and maintain our service",
-
-          "To notify you about changes to our service",
-
-          "To allow you to participate in interactive features of our service",
-
-          "To provide customer support",
-
-          "To gather analysis or valuable information so that we can improve our service",
-
-          "To monitor the usage of our service",
-
-          "To detect, prevent and address technical issues",
-
-          "To process payments and prevent fraudulent transactions",
-
-          "To send car listings that match your preferences via your chosen notification method"
-
-        ]
+          "Xidməti göstərmək və dəstəkləmək",
+          "Dəyişikliklər barədə bildirmək",
+          "İnteraktiv xüsusiyyətlər təqdim etmək",
+          "Müştəri dəstəyi göstərmək",
+          "Xidməti yaxşılaşdırmaq üçün analiz toplamaq",
+          "İstifadəni izləmək",
+          "Texniki problemlərin qarşısını almaq və həll etmək",
+          "Ödənişləri emal etmək və fırıldaqçılığın qarşısını almaq",
+          "Seçimlərinə uyğun elanları göndərmək",
+        ],
       },
-      3: {
+      "3": {
         id: "data-storage",
-        heading: "Data Storage and Security",
+        heading: "Saxlama və təhlükəsizlik",
         paragraphs: [
-
-          "We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. All data is stored on secure servers with encryption in transit and at rest.",
-
-          "We retain your personal data only for as long as necessary for the purposes set out in this privacy policy, including for the purposes of satisfying any legal, regulatory, tax, accounting, or reporting requirements."
-
-        ]
+          "Məlumatları icazəsiz girişdən, dəyişiklikdən və sızmadan qorumaq üçün uyğun təhlükəsizlik tədbirləri tətbiq edirik. Məlumatlar tranzitdə və saxlanmada şifrələnir.",
+          "Məlumatları yalnız məqsədlər və hüquqi tələblər üçün zəruri olduğu müddətdə saxlayırıq.",
+        ],
       },
-      4: {
+      "4": {
         id: "gdpr",
-        heading: "Your GDPR Rights",
+        heading: "GDPR hüquqların",
         paragraphs: [
-
-          "If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Amiquus aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your personal data.",
-
-          "You have the following data protection rights:"
-
+          "EEA sakinisənsə, məlumatlarının qorunmasına dair müəyyən hüquqlara maliksən. Düzəltmə, silmə və ya istifadənin məhdudlaşdırılması hüquqlarını həyata keçirməyə çalışırıq.",
+          "Səlahiyyətlərin:",
         ],
         list: [
-
-          "The right to access, update or delete the information we have on you",
-
-          "The right of rectification",
-
-          "The right to object",
-
-          "The right of restriction",
-
-          "The right to data portability",
-
-          "The right to withdraw consent"
-
-        ]
+          "Giriş, yeniləmə və ya silmə hüququ",
+          "Düzəliş hüququ",
+          "Etiraz hüququ",
+          "Məhdudlaşdırma hüququ",
+          "Daşınma hüququ",
+          "Razılığı geri çəkmə hüququ",
+        ],
       },
-      5: {
+      "5": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "Kukilər",
         paragraphs: [
-
-          "Cookies are small pieces of data stored on your device. We use cookies to:"
-
+          "Kukilər cihazında saxlanılan kiçik fayllardır. Onlardan istifadə edirik ki:",
         ],
         list: [
-
-          "Keep you signed in",
-
-          "Understand how you use our website",
-
-          "Remember your preferences",
-
-          "Customize your experience"
-
-        ]
+          "Hesabda qalasan",
+          "Saytdan istifadəni anlayaq",
+          "Üstünlüklərini xatırlayaq",
+          "Təcrübəni fərdiləşdirək",
+        ],
       },
-      6: {
+      "6": {
         id: "third-party",
-        heading: "Third-Party Services",
+        heading: "Üçüncü tərəflər",
         paragraphs: [
-
-          "We may employ third-party companies and individuals to facilitate our service, provide the service on our behalf, perform service-related tasks, or assist us in analyzing how our service is used.",
-
-          "These third parties include:"
-
+          "Xidməti təmin etmək, analiz aparmaq və dəstək göstərmək üçün üçüncü tərəflərlə işləyə bilərik.",
+          "Bunlara daxildir:",
         ],
         list: [
-
-          "Payment processors (Stripe)",
-
-          "Analytics providers",
-
-          "Customer support services",
-
-          "Hosting and cloud infrastructure providers"
-
+          "Ödəniş prosessorları (Stripe)",
+          "Analitika təminatçıları",
+          "Müştəri dəstəyi xidmətləri",
+          "Xostinq və bulud infrastrukturu təminatçıları",
         ],
         paragraphs2: [
-
-          "These third parties have access to your personal data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
-
-        ]
-      },
-      7: {
-        id: "changes",
-        heading: "Changes to This Privacy Policy",
-        paragraphs: [
-
-          "We may update our privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the 'Last updated' date.",
-
-          "You are advised to review this privacy policy periodically for any changes. Changes to this privacy policy are effective when they are posted on this page."
-
-        ]
-      },
-      8: {
-        id: "contact",
-        heading: "Contact Us",
-        paragraphs: [
-
-          "If you have any questions about this privacy policy, please contact us:"
-
+          "Bu tərəflər məlumatlardan yalnız bizim adımızdan tapşırığı yerinə yetirmək üçün istifadə edir və başqa məqsədlə paylaşa bilməz.",
         ],
+      },
+      "7": {
+        id: "changes",
+        heading: "Bu siyasətdə dəyişikliklər",
+        paragraphs: [
+          'Məxfilik siyasətini vaxtaşırı yeniləyə bilərik. Yenilənmiş versiyanı bu səhifədə yerləşdirir və "Son yenilənmə" tarixini dəyişirik.',
+          "Siyasəti dövri olaraq nəzərdən keçirməyini tövsiyə edirik. Dəyişikliklər dərc edildiyi andan qüvvədədir.",
+        ],
+      },
+      "8": {
+        id: "contact",
+        heading: "Əlaqə",
+        paragraphs: ["Bu siyasətlə bağlı sualların üçün bizimlə əlaqə saxla:"],
         list: [
-
-          "By email: privacy@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "E-poçt: privacy@amiquus.com",
+          "Saytdakı əlaqə səhifəsi vasitəsilə",
+        ],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Frequently Asked Questions | Amiquus",
-    metaDescription: "Find answers to the most common questions about Amiquus car listing monitoring service, subscriptions, notification setup, and more.",
-    title: "Frequently Asked Questions",
-    subtitle: "Find quick answers to common questions about our car listing monitoring service",
+    metaTitle: "Tez-tez verilən suallar | Amiquus",
+    metaDescription:
+      "Amiquus-un avtomobil elanlarının monitorinqi, abunələr, bildiriş qurulumu və daha çoxu ilə bağlı sualların cavablarını tap.",
+    title: "Tez-tez verilən suallar",
+    subtitle:
+      "Avtomobil elanlarının monitorinqi xidmətimiz haqqında qısa cavablar",
     general: {
-      heading: "General Questions",
+      heading: "Ümumi suallar",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Amiquus nədir?",
+        answer:
+          "Amiquus, seçdiyin meyarlara uyğun avtomobil elanlarını bir neçə saytda izləyən xidmətdir. Uyğun elan tapılan kimi Telegram-da ani bildiriş alırsan və satıcı ilə ilk əlaqə quranlardan olursan.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Necə işləyir?",
         answer: [
-
-          "You set up your search criteria (make, model, price range, etc.)",
-
-          "You select which websites to monitor",
-
-          "You connect your Telegram account for notifications",
-
-          "Our system continuously monitors your selected websites for new listings",
-
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-
-        ]
+          "Meyarları (marka, model, qiymət və s.) təyin edirsən",
+          "İzlənəcək saytları seçirsən",
+          "Telegram bildirişlərini qoşursan",
+          "Sistem seçilmiş saytlarda yeni elanları fasiləsiz izləyir",
+          "Uyğun elan olduqda, detallarla birlikdə birbaşa linklə bildiriş alırsan",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Hansı saytları izləyirsiniz?",
+        answerIntro: "Hazırda aşağıdakı əsas platformaları izləyirik:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (URL ilə)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro:
+          "Mümkün qədər geniş əhatə üçün siyahını davamlı genişləndiririk.",
+      },
     },
     subscription: {
-      heading: "Subscription Questions",
+      heading: "Abunə sualları",
       cost: {
-        question: "How much does a subscription cost?",
+        question: "Abunənin qiyməti nə qədərdir?",
         answer: [
-
-          "Our pricing starts at $9.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
-
-          "For specific pricing details, please view our pricing section on the homepage."
-
-        ]
+          "Bir saytı 6 saatdan bir yeniləmə ilə izləmək üçün aylıq $9.99-dan başlayır. Hər əlavə sayt $4.99/aydır. Daha sürətli bildiriş üçün yenilənmə tezliyini də artıra bilərsən.",
+          "Dəqiq məlumat üçün ana səhifədəki qiymətlər bölməsinə bax.",
+        ],
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
+        question: "Abunəni necə ləğv edim?",
+        stepsIntro: "Hesab profilindən istənilən vaxt ləğv edə bilərsən:",
         steps: [
-
-          "Log in to your account",
-
-          "Navigate to the \\\"Profile\\\" page",
-
-          "Select the \\\"Subscriptions\\\" tab",
-
-          "Click the \\\"Cancel Subscription\\\" button next to the subscription you wish to cancel"
-
+          "Hesabına daxil ol",
+          '"Profil" səhifəsinə keç',
+          '"Abunələr" sekmesini seç',
+          '"Abunəni ləğv et" düyməsinə kliklə',
         ],
-        note: "Your subscription will remain active until the end of your current billing period."
+        note: "Abunə mövcud ödəniş dövrünün sonunadək aktiv qalacaq.",
       },
       multiple: {
-        question: "Can I have multiple subscriptions for different car models?",
-        answer: "Yes, you can create multiple subscriptions under a single account. Each subscription can track different car models, brands, or price ranges. This is particularly useful if you're searching for multiple vehicles or helping friends and family with their car search."
+        question: "Müxtəlif modellər üçün bir neçə abunə yarada bilərəm?",
+        answer:
+          "Bəli. Eyni hesab altında bir neçə abunən ola bilər — müxtəlif marka, model və qiymətlər üçün.",
       },
       limit: {
-        question: "Why is there a limit on the number of subscribers?",
-        intro: "We limit our service to 30 active subscribers to ensure:",
+        question: "Niyə abunəçi limiti var?",
+        intro:
+          "Xidməti yüksək keyfiyyətdə saxlamaq üçün 30 aktiv abunə ilə məhdudlaşdırırıq:",
         list: [
-
-          "The highest quality of service and data accuracy",
-
-          "Personalized support for each subscriber",
-
-          "Faster notification delivery during peak listing times",
-
-          "Ethical scraping that doesn't overload the target websites"
-
+          "Daha dəqiq və etibarlı məlumat",
+          "Hər abunəçiyə daha personal dəstək",
+          "Pik vaxtlarda daha sürətli bildirişlər",
+          "İzlənən saytlara etik yük",
         ],
-        outro: "If we've reached capacity, you can join our waitlist to be notified when a spot becomes available."
-      }
+        outro:
+          "Limit doludursa, gözləmə siyahısına yazıl və yer açılarkən xəbər al.",
+      },
     },
     technical: {
-      heading: "Technical Questions",
+      heading: "Texniki suallar",
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        stepsIntro: "To set up Telegram notifications:",
+        question: "Telegram bildirişlərini necə quraşdırım?",
+        stepsIntro: "Aşağıdakı addımları izlə:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions provided during setup)",
-
-          "Copy your bot token from BotFather",
-
-          "Start a conversation with your bot",
-
-          "Get your chat ID (instructions provided during setup)",
-
-          "Enter your bot token and chat ID in your Amiquus subscription settings",
-
-          "Test your notification setup using the `Send Test Message` button"
-
+          "BotFather ilə bot yarat (təlimat paneldə var)",
+          "Bot tokenini köçür",
+          "Botunla söhbətə başla",
+          "Chat ID-ni əldə et (təlimat paneldədir)",
+          "Token və Chat ID-ni Amiquus ayarlarına daxil et",
+          "`Test mesajı` düyməsi ilə yoxla",
         ],
-        note: "Detailed step-by-step instructions with screenshots are provided during the subscription setup process."
+        note: "Qurulum zamanı ekran görüntüləri ilə detallı izah veririk.",
       },
       frequency: {
-        question: "How often will I receive notifications?",
-        intro: "The frequency of notifications depends on:",
+        question: "Bildirişləri nə qədər tez-tez alacağam?",
+        intro: "Bu amillərdən asılıdır:",
         list: [
-
-          "Your chosen update frequency package (from every 6 hours to every 30 minutes)",
-
-          "How many new listings match your criteria",
-
-          "How active the market is for your selected make/model"
-
+          "Seçilmiş yenilənmə tezliyi (6 saatdan 30 dəqiqəyədək)",
+          "Kriteriyalarına uyğun yeni elanların sayı",
+          "Seçilmiş model üzrə bazarın aktivliyi",
         ],
-        outro: "You'll only receive notifications when new listings that match your criteria are found."
+        outro: "Yalnız meyarlarına uyğun yeni elan olduqda bildiriş alacaqsan.",
       },
       privacy: {
-        question: "How is my personal data protected?",
-        intro: "We take data privacy seriously and apply these measures:",
+        question: "Şəxsi məlumatlarım necə qorunur?",
+        intro: "Məxfiliyinə ciddi yanaşırıq:",
         list: [
-
-          "Encrypted data in transit and at rest",
-
-          "Secure payments via Stripe",
-
-          "No third-party data sharing",
-
-          "You can request or delete your data anytime"
-
+          "Tranzitdə və saxlanmada şifrələmə",
+          "Stripe vasitəsilə təhlükəsiz ödəniş",
+          "Üçüncü tərəflərlə iznsiz paylaşım yoxdur",
+          "Məlumatlarına çıxış və silmə tələbi verə bilərsən",
         ],
-        outro: "Read our full Privacy Policy for more."
-      }
+        outro: "Ətraflı məlumat üçün Məxfilik Siyasətini oxu.",
+      },
     },
     support: {
-      heading: "Still have questions?",
-      description: "If you couldn't find the answer to your question, our support team is here to help!",
-      button: "Contact Support"
-    }
+      heading: "Hələ sualın var?",
+      description:
+        "Cavab tapa bilmədinsə, dəstək komandamız kömək etməyə hazırdır!",
+      button: "Dəstəyə yaz",
+    },
   },
   waitlist: {
-    metaTitle: "Join the Waitlist - Amiquus",
-    metaDescription: "Join the Amiquus waitlist to be notified when subscriptions become available.",
-    title: "Join Our Waitlist",
-    subtitle: "Due to high demand, we limit the number of active subscriptions to ensure the best service quality for all users.",
+    metaTitle: "Gözləmə siyahısı - Amiquus",
+    metaDescription:
+      "Abunələr açıldıqda xəbərdar olmaq üçün gözləmə siyahısına yazıl.",
+    title: "Gözləmə siyahısına qoşul",
+    subtitle:
+      "Hamıya ən yaxşı keyfiyyət təmin etmək üçün aktiv abunə sayını məhdudlaşdırırıq.",
     limited: {
-      heading: "Limited Availability",
-      description: "We limit our system to only 30 active subscribers to ensure:",
+      heading: "Məhdud yerlər",
+      description: "Sistemi cəmi 30 aktiv abunəçi ilə məhdudlaşdırırıq ki:",
       points: [
-
-        "Exceptional scraping reliability and speed for all users",
-
-        "Reduced chances of being blocked by car listing websites",
-
-        "Personalized support for each subscriber",
-
-        "Fair distribution of server resources"
-
+        "Bütün istifadəçilər üçün sabit və sürətli skreypinq",
+        "Elan saytları tərəfindən bloklanma riskinin azalması",
+        "Hər kəsə daha çox fərdi dəstək",
+        "Server resurslarının ədalətli bölüşdürülməsi",
       ],
-      available: "{{remaining}} subscription spots out of {{capacity}} currently available.",
-      full: "All subscription spots are currently filled. Join the waitlist to be notified when a spot becomes available."
+      available: "Hazırda {{capacity}} yerdən {{remaining}} yer boşdur.",
+      full: "Bütün yerlər doludur. Yer açıldıqda xəbər almaq üçün yazıl.",
     },
     success: {
-      title: "You're on the waitlist!",
-      description: "We'll notify you as soon as a subscription spot becomes available",
-      message: "Thank you for your interest in Amiquus! We've added you to our waitlist and will contact you as soon as we have an opening.",
-      button: "Return to Homepage"
+      title: "Gözləmə siyahısındasan!",
+      description: "Yer açılan kimi sənə xəbər verəcəyik",
+      message:
+        "Amiquus-a marağına görə təşəkkürlər! Səni siyahıya əlavə etdik və yer açılan kimi əlaqə saxlayacağıq.",
+      button: "Ana səhifəyə qayıt",
     },
     cantJoin: {
-      title: "Gözləmə siyahısına qoşulun",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Gözləmə siyahısı",
+      description: " Yer açıldıqda dərhal xəbər verəcəyik",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Ad",
+        placeholder: "John",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Soyad",
+        placeholder: "Doe",
       },
       email: {
-        label: "Email",
+        label: "E-poçt",
         placeholder: "john.doe@example.com",
-        description: "We'll use this email to notify you when a spot becomes available"
+        description: "Yer açıldıqda bu ünvana xəbər göndərəcəyik",
       },
-      submit: "Join Waitlist",
-      submitting: "Submitting..."
-    }
+      submit: "Yazıl",
+      submitting: "Göndərilir...",
+    },
   },
   support: {
-    metaTitle: "Support | Amiquus - Help Center",
-    metaDescription: "Get help with your Amiquus account, subscription, or car alerts. Browse our help center or contact our support team for assistance.",
-    title: "Support Center",
-    subtitle: "Find answers to common questions or get in touch with our support team",
+    metaTitle: "Dəstək | Amiquus - Kömək mərkəzi",
+    metaDescription:
+      "Hesabın, abunən və ya bildirişlərlə bağlı kömək al. Kömək mərkəzinə bax və ya komandamızla əlaqə saxla.",
+    title: "Kömək mərkəzi",
+    subtitle: "Tez cavablar tap və ya bizimlə əlaqə saxla",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "E-poçt dəstəyi",
+      description: "Bizə yaz və 24 saat ərzində cavab al",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Tez-tez verilən suallar",
     faqs: {
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        intro: "To set up Telegram notifications, follow these steps:",
+        question: "Telegram bildirişlərini necə qurum?",
+        intro: "Bu addımları izləyin:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions in our dashboard)",
-
-          "Copy your API token and chat ID",
-
-          "Enter these details in your account settings under \\\"Notification Preferences\\\"",
-
-          "Test your connection using the \\\"Send Test Message\\\" button"
-
+          "BotFather ilə bot yaradın (təlimat paneldədir)",
+          "API token və Chat ID-ni köçürün",
+          "“Bildiriş üstünlükləri” bölməsinə daxil edin",
+          "“Test mesajı göndər” düyməsi ilə yoxlayın",
         ],
-        outro: "If you need more help, our detailed guide is available in your dashboard."
+        outro: "Daha çox kömək üçün paneldə ətraflı bələdçi var.",
       },
       updates: {
-        question: "How often are car listings updated?",
-        answer: "The update frequency depends on your subscription plan. Basic plans receive updates every 6 hours, while Premium plans can get updates as frequently as every 30 minutes. You can view and modify your current update frequency in your subscription settings."
+        question: "Elanlar nə qədər tez-tez yenilənir?",
+        answer:
+          "Planından asılıdır. Baza plan 6 saatdan bir, Premium plan 30 dəqiqəyədək tezliklə yeniləyir. Tezliyi abunə ayarlarında görə və dəyişə bilərsən.",
       },
       facebook: {
-        question: "Can I monitor Facebook Marketplace?",
-        answer: "Yes, we support Facebook Marketplace monitoring. To set this up, you'll need to provide the URL to the Facebook Marketplace search results page with your desired filters applied. Our system will then monitor that specific search for new listings that match your criteria."
+        question: "Facebook Marketplace-i izləyə bilərəm?",
+        answer:
+          "Bəli. Facebook Marketplace-də filtrlənmiş axtarış nəticələrinin URL-ni təqdim etməlisən — sistem həmin linki izləyəcək.",
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        answer: "You can cancel your subscription at any time from your account profile page. Click on the \"Subscriptions\" tab, locate the subscription you wish to cancel, and click the \"Cancel Subscription\" button. Your service will continue until the end of your current billing period."
+        question: "Abunəni necə ləğv edim?",
+        answer:
+          'Profilindən "Abunələr" bölməsinə keç, abunəni seç və "Abunəni ləğv et" düyməsini sıx.',
       },
       full: {
-        question: "What happens if all subscription slots are full?",
-        answer: "To maintain our high quality of service, we limit the number of active subscriptions. If all slots are full, you can join our waitlist. We'll notify you as soon as a slot becomes available, and you'll have priority to claim it before we open it to the general public."
-      }
+        question: "Bütün yerlər doludursa nə olur?",
+        answer:
+          "Keyfiyyəti qorumaq üçün aktiv abunələri məhdudlaşdırırıq. Yerlər doludursa, gözləmə siyahısına yazıl — yer açıldıqda prioritetlə xəbər alacaqsan.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "Hələ də köməyə ehtiyacın var?",
+      description:
+        "Cavab tapmadınsa, bizimlə əlaqə saxla — kömək etməyə hazırıq!",
+      button: "Dəstəyə yaz",
+    },
   },
   notFound: {
-    title: "404 Page Not Found",
-    message: "Did you forget to add the page to the router?"
+    title: "404 Səhifə tapılmadı",
+    message: "Bəlkə də səhifəni marşruta əlavə etməyi unutmusan?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Amiquus e-poçt təsdiq kodun",
+      greeting: "Salam,",
+      message: "Qeydiyyatı tamamlamaq üçün aşağıdakı koddan istifadə et:",
+      expiration: "Kod 10 dəqiqədən sonra etibarsız olacaq.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Amiquus ödəniş qəbzi – Faktura №",
+        h2Message: "Amiquus abunə ödənişin uğurla həyata keçirildi!",
+        greeting: "Salam,",
+        paymentMessage: "Aşağıdakı məbləği aldıq:",
+        downloadMessage:
+          "Fakturanı aşağıdakı linklə görüntüləyə və endirə bilərsən:",
+        viewInvoice: "Fakturanı aç",
+        invoiceNumber: "Faktura №:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Gözləyən ödəniş – Faktura",
+        subjectB: "Amiquus abunən üçün",
+        h2Message: "Fəaliyyət tələb olunur: Amiquus abunə ödənişini tamamla",
+        greeting: "Salam,",
+        messageA: "Fakturan",
+        messageB:
+          "hələ ödənilməyib. Abunəni aktivləşdirmək üçün aşağıdakı məbləği ödə:",
+        paymentMessage: "Təhlükəsiz ödəniş linki:",
+        payInvoice: "Fakturanı ödə",
+        ignoreEmail: "Artıq ödəmisənsə, bu məktubu görməzlikdən gəl.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Ödəniş uğursuz oldu – Faktura",
+        message: "Son ödənişini emal etmək mümkün olmadı (cəhd",
+        attemptsA:
+          "Tezliklə yenidən cəhd edəcəyik. Hələ ki, hərəkət tələb olunmur.",
+        attemptsB: "3 cəhd etdik, amma hamısı uğursuz oldu.",
+        attemptsC:
+          "Nəticədə abunən <strong>pauzaya qoyuldu</strong>. Aktivləşdirməyincə bildiriş almayacaqsan.",
+        attemptsD:
+          "Zəhmət olmasa, ödəniş üsulunu yenilə və abunəni profilindən bərpa et:",
+        viewInvoice: "Fakturanı aç",
+        managePayment: "Ödəniş üsullarını idarə et",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Amiquus gözləmə siyahısındasan!",
+      h2Message: "Siyahıdasan!",
+      hi: "Salam",
+      message:
+        "Amiquus gözləmə siyahısına qoşulduğun üçün təşəkkürlər. Yer açılan kimi xəbər verəcəyik.",
+      anyQuestions: "Sualın varsa, bu e-poçta cavab yaza bilərsən.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Amiquus-u seçdiyin üçün təşəkkürlər!",
+      signature: "Hörmətlə,<br/>Amiquus komandası",
+      team: "— Amiquus komandası",
+      needHelp: "Kömək lazımdır?",
+      hello: "Salam",
+    },
+  },
 };
