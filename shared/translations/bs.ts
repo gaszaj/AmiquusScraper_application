@@ -1,1502 +1,1425 @@
 export const bs = {
   navigations: {
-    features: "Karakteristike",
+    features: "Funkcionalnosti",
     how: "Kako funkcionira",
     pricing: "Cijene",
-    getAlerts: "Primi obavještenja",
+    getAlerts: "Primi obavijesti",
     waitlist: "Lista čekanja",
-    faq: "Često postavljana pitanja",
-    login: "Prijavi se",
+    faq: "ČPP",
+    login: "Prijava",
     getStarted: "Započni",
     subscribers: "Pretplatnici",
     theme: "Tema",
     language: "Jezik",
-    myAlerts: "Moja obavještenja",
+    myAlerts: "Moje obavijesti",
     profile: "Profil",
     settings: "Postavke",
-    logout: "Odjavi se",
-    signUp: "Registruj se"
+    logout: "Odjava",
+    signUp: "Registracija",
   },
   hero: {
-    label: "Track used car listings in real-time",
-    title: "Never Miss Your Perfect Car Deal Again",
-    subtitle: "Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.",
-    button1: "Podesite svoja upozorenja",
-    button2: "See How It Works",
+    label: "Prati objave polovnih vozila u stvarnom vremenu!",
+    title: "Nikad više ne propusti idealnu ponudu za auto",
+    subtitle:
+      "Amiquus te odmah obavještava kada se tvoj željeni automobil pojavi na nekoj od praćenih stranica s oglasima. Dobij obavijest putem Telegrama čim se pronađe podudaranje.",
+    button1: "Postavi svoja upozorenja",
+    button2: "Pogledaj kako funkcionira",
     trustIndicators: {
-      websites: "15+ web stranica praćeno",
-      realtime: "Obavještenja u realnom vremenu",
-      noSetup: "Nije potrebno podešavanje",
-      cancelAnytime: "Otkažite bilo kada"
-    }
+      websites: "15+ web-stranica pod nadzorom",
+      realtime: "Obavijesti u stvarnom vremenu",
+      noSetup: "Bez dodatnog podešavanja",
+      cancelAnytime: "Otkaži u bilo kojem trenutku",
+    },
   },
   limited: {
     full: {
-      title: "Limit pretplate dostignut",
-      description: "We've reached our capacity of 30 active subscribers. Join our waitlist to be notified when a spot opens up.",
-      buttonText: "Join Waitlist"
+      title: "Dosegnut limit pretplata",
+      description:
+        "Dosegli smo kapacitet od 30 aktivnih pretplatnika. Pridruži se listi čekanja kako bismo te obavijestili kada se oslobodi mjesto.",
+      buttonText: "Pridruži se listi čekanja",
     },
     limited: {
-      title: "Limited Availability",
-      description: "Only {{remaining}} slots remaining out of {{capacity}}. Subscribe now before we reach capacity!",
-      buttonText: "Get Started Now"
+      title: "Ograničena dostupnost",
+      description:
+        "Preostalo je samo {{remaining}} mjesta od {{capacity}}. Pretplati se sada prije nego što popunimo kapacitet!",
+      buttonText: "Kreni odmah",
     },
     available: {
-      title: "Subscriptions Available",
-      description: "{{active}} of {{capacity}} subscriptions are currently active. Plenty of room for you to join!",
-      buttonText: "Get Started Now"
-    }
+      title: "Pretplate dostupne",
+      description:
+        "Trenutno je aktivno {{active}} od {{capacity}} pretplata. Dovoljno prostora da nam se pridružiš!",
+      buttonText: "Kreni odmah",
+    },
   },
   features: {
-    heading: "Why Choose Amiquus?",
-    subheading: "Save time and never miss out on your perfect car with our automated tracking service.",
+    heading: "Zašto odabrati Amiquus?",
+    subheading:
+      "Uštedi vrijeme i više nikada ne propusti savršen auto uz našu automatiziranu uslugu praćenja.",
     multiSite: {
-      title: "Praćenje više web stranica",
-      description: "Pratite više web stranica sa oglasima automobila istovremeno bez potrebe da svaku provjeravate ručno."
+      title: "Praćenje više web-stranica",
+      description:
+        "Istovremeno nadgledaj više portala s oglasima bez ručnog provjeravanja svake stranice.",
     },
     notifications: {
-      title: "Instant Notifications",
-      description: "Receive immediate alerts via Telegram when a car matching your criteria is listed for sale."
+      title: "Trenutne obavijesti",
+      description:
+        "Dobij odmah obavijest putem Telegrama kada se pojavi oglas koji odgovara tvojim kriterijima.",
     },
     filters: {
-      title: "Custom Filters",
-      description: "Set precise criteria including brand, model, year, mileage, and price range to find exactly what you want."
+      title: "Prilagođeni filteri",
+      description:
+        "Postavi precizne kriterije poput marke, modela, godine, kilometraže i raspona cijene kako bi našao upravo ono što želiš.",
     },
     frequency: {
-      title: "Customizable Frequency",
-      description: "Choose how often we check for new listings, from hourly updates to real-time monitoring."
+      title: "Prilagodljiva učestalost",
+      description:
+        "Odaberi koliko često provjeravamo nove oglase — od satnih ažuriranja do praćenja u stvarnom vremenu.",
     },
     languages: {
       title: "Podrška za više jezika",
-      description: "Primajte obavještenja na željenom jeziku za lakše razumijevanje oglasa."
+      description:
+        "Primaj obavijesti na jeziku koji ti najviše odgovara radi lakšeg razumijevanja oglasa.",
     },
     account: {
-      title: "Easy Account Management",
-      description: "Manage multiple search profiles and modify your subscription settings with a few clicks."
-    }
+      title: "Jednostavno upravljanje računom",
+      description:
+        "Upravljaj više profila pretrage i mijenjaj postavke pretplate u nekoliko klikova.",
+    },
   },
   howItWorks: {
-    title: "How Amiquus Works",
-    subtitle: "Set up once and let our automated system find the perfect car deal for you",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Kako Amiquus funkcionira",
+    subtitle:
+      "Postavi jednom i prepusti našem sustavu da pronađe savršenu ponudu za tebe",
+    whyTitle: "Zašto odabrati Amiquus?",
     steps: {
       preferences: {
-        title: "Set Your Preferences",
-        description: "Select car brands, models, price range, and other criteria you're interested in monitoring."
+        title: "Postavi svoje preferencije",
+        description:
+          "Odaberi marke, modele, raspon cijena i ostale kriterije koje želiš pratiti.",
       },
       telegram: {
-        title: "Connect Telegram",
-        description: "Link your Telegram account to receive instant notifications about new listings."
+        title: "Poveži Telegram",
+        description:
+          "Poveži svoj Telegram račun kako bi primao trenutne obavijesti o novim oglasima.",
       },
       notifications: {
-        title: "Get Instant Notifications",
-        description: "Receive alerts the moment a car matching your criteria appears on any of our monitored websites."
+        title: "Primaj trenutne obavijesti",
+        description:
+          "Dobij upozorenja čim se na bilo kojoj od praćenih stranica pojavi oglas koji ti odgovara.",
       },
       findCar: {
-        title: "Pronađite svoj savršen automobil",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "Pronađi savršen auto",
+        description:
+          "Budi prvi koji će saznati za novi oglas i osiguraj najbolju ponudu prije drugih.",
+      },
     },
     features: [
-
-      "Track over 15 car listing websites simultaneously",
-
-      "Customizable search criteria with advanced filtering",
-
-      "Real-time notifications via Telegram",
-
-      "Automatic price drop and new listing alerts",
-
-      "Easy setup process that takes less than 5 minutes"
-
+      "Istovremeno prati više od 15 portala s oglasima",
+      "Prilagodljivi kriteriji pretraživanja s naprednim filtriranjem",
+      "Obavijesti u stvarnom vremenu preko Telegrama",
+      "Automatska upozorenja na sniženje cijene i nove oglase",
+      "Jednostavna postavka koja traje manje od 5 minuta",
     ],
-    setAlerts: "Podesite svoja upozorenja",
+    setAlerts: "Postavi svoja upozorenja",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Pronađeno novo podudaranje!",
+      description:
+        "BMW 3 Series, 2019, 32.500 $ – Upravo objavljeno na AutoTraderu",
     },
     notificationMockup2: {
-      title: "Telegram obavještenje",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "Telegram obavijest",
+      description:
+        "Mercedes C-Class, 2020, 30.000 milja – Cijena snižena za 2.000 $",
+    },
   },
   pricing: {
-    title: "Simple, Transparent Pricing",
-    subtitle: "Our pricing is based on your specific needs. Start with a base package and customize it to fit your requirements.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Jednostavne, transparentne cijene",
+    subtitle:
+      "Cijena se temelji na tvojim potrebama. Kreni s osnovnim paketom i prilagodi ga po želji.",
+    baseTitle: "Osnovni paket: 9,99 $/mj",
+    includedTitle: "Što je uključeno:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Praćenje jedne web-stranice",
+      "Satna ažuriranja",
+      "Neograničeni filteri",
+      "Telegram obavijesti",
     ],
-    addonsTitle: "Add-ons:",
+    addonsTitle: "Dodaci:",
     addons: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
+      { name: "Svaka dodatna web-stranica", price: 4.99 },
+      { name: "Ažuriranja svakih 30 minuta", price: 2.99 },
+      { name: "Ažuriranja svakih 15 minuta", price: 5.99 },
+      { name: "Ažuriranja svakih 5 minuta", price: 9.99 },
+      { name: "Ažuriranja svake 1 minute", price: 14.99 },
     ],
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Get Started Now"
+    footerNote:
+      "Svi planovi uključuju neograničene konfiguracije pretraga i jednostavno upravljanje pretplatom.",
+    button: "Kreni odmah",
   },
   signup: {
-    heading: "Kreirajte upozorenje za automobil",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Kreiraj svoje upozorenje za auto",
+    subheading:
+      "Postavi personalizirane obavijesti o oglasima u nekoliko jednostavnih koraka.",
+    cta: "Primi obavijesti sada",
     waitlist: {
-      message: "Trenutno smo popunjeni. Pridružite se našoj listi čekanja da budete obaviješteni kada se oslobodi mjesto.",
-      cta: "Join Waitlist"
+      message:
+        "Trenutno smo na punom kapacitetu. Pridruži se listi čekanja i obavijestit ćemo te kad se oslobodi mjesto.",
+      cta: "Pridruži se listi čekanja",
     },
     toast: {
       success: {
         title: "Pretplata kreirana",
-        description: "Your subscription has been created successfully"
+        description: "Tvoja pretplata je uspješno kreirana.",
       },
       error: {
-        title: "Pretplata nije uspjela",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Neuspjela pretplata",
+        description:
+          "Nismo uspjeli kreirati tvoju pretplatu. Pokušaj ponovo kasnije.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
-        title: "Success",
-        description: "Your payment method has been successfully set up."
+        title: "Uspjeh",
+        description: "Način plaćanja je uspješno postavljen.",
       },
       error: {
-        title: "Error",
-        fallback: "An unexpected error occurred. Please try again."
-      }
+        title: "Greška",
+        fallback: "Došlo je do neočekivane greške. Pokušaj ponovo.",
+      },
     },
     button: {
-      submit: "Set up payment method",
-      processing: "Processing..."
-    }
+      submit: "Postavi način plaćanja",
+      processing: "Obrada...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "Marka vozila je obavezna",
+      carModel: "Model vozila je obavezan",
+      fuelType: "Vrsta goriva je obavezna",
+      priceMin: "Minimalna cijena mora biti broj",
+      priceMax: "Maksimalna cijena mora biti broj",
+      yearMin: "Minimalna godina mora biti važeća",
+      yearMax: "Maksimalna godina mora biti važeća",
+      maxKilometers: "Maksimalna kilometraža mora biti broj",
+      telegramUsername: "Telegram korisničko ime je obavezno",
+      telegramToken: "Telegram bot token je obavezan",
+      telegramChatId: "Telegram chat ID je obavezan",
+      websitesSelected: "Potrebno je odabrati barem jednu web-stranicu",
+      notificationLanguage: "Jezik obavijesti je obavezan",
+      facebookMarketplaceUrl:
+        "URL za Facebook Marketplace je obavezan kada je Facebook odabran",
+    },
   },
   personalInfo: {
-    heading: "Personal Information",
-    description: "Please provide your personal details so we can set up your notifications correctly.",
+    heading: "Lični podaci",
+    description:
+      "Unesi svoje podatke kako bismo ispravno postavili obavijesti.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Email Address"
+      firstName: "Ime",
+      lastName: "Prezime",
+      email: "Email adresa",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com"
+      firstName: "Ivan",
+      lastName: "Ivić",
+      email: "ivan.ivic@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Please enter a valid email"
+      firstName: "Ime je obavezno",
+      lastName: "Prezime je obavezno",
+      email: "Unesi važeću email adresu",
     },
     actions: {
-      login: "Login or Sign Up to Continue",
-      continue: "Continue"
-    }
+      login: "Prijavi se ili registruj da nastaviš",
+      continue: "Nastavi",
+    },
   },
   websiteSelection: {
-    heading: "Website Selection",
-    description: "Choose which websites you want to monitor and how frequently you want updates.",
+    heading: "Odabir web-stranica",
+    description:
+      "Odaberi koje web-stranice želiš pratiti i koliko često želiš ažuriranja.",
     labels: {
-      websites: "Websites to monitor",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      websites: "Web-stranice za praćenje",
+      facebookUrl: "URL Facebook Marketplace pretrage",
+      updateFrequency: "Učestalost ažuriranja",
     },
     placeholders: {
-      frequency: "Select frequency"
+      frequency: "Odaberi učestalost",
     },
     help: {
-      websites: "Select one or more websites to monitor for car listings.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites: "Odaberi jednu ili više web-stranica za praćenje oglasa.",
+      facebookUrl:
+        "Zalijepi URL stranice s rezultatima pretrage na Facebook Marketplaceu s primijenjenim filterima.",
+      videoTitle: "Trebaš pomoć pronaći link za Facebook Marketplace pretragu?",
+      videoDesc: "Pogledaj video s uputama korak po korak.",
+      updateFrequency:
+        "Koliko često da provjeravamo nove oglase? Veća učestalost može imati dodatnu cijenu.",
     },
     errors: {
-      websites: "At least one website must be selected",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "Potrebno je odabrati barem jednu web-stranicu",
+      facebookUrl:
+        "URL Facebook Marketplacea je obavezan kada je Facebook odabran",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "Nazad",
+      continue: "Nastavi",
+    },
   },
   carDetails: {
-    heading: "Car Details",
-    description: "Specify the car details you are looking for. All fields are optional - leave any blank to get a wider range of results.",
+    heading: "Detalji o vozilu",
+    description:
+      "Navedeni podaci nisu obavezni — ostavi prazno za širi raspon rezultata.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "Marka",
+      carModel: "Model",
+      fuelType: "Vrsta goriva",
+      priceMin: "Minimalna cijena",
+      priceMax: "Maksimalna cijena",
+      yearMin: "Minimalna godina",
+      yearMax: "Maksimalna godina",
+      maxKilometers: "Maksimalna kilometraža",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "Odaberi marku",
+      carModel: "Odaberi model",
+      carModelDisabled: "Prvo odaberi marku",
+      fuelType: "Odaberi vrstu goriva",
+      priceMin: "Unesi minimalnu cijenu",
+      priceMax: "Unesi maksimalnu cijenu",
+      yearMin: "Unesi minimalnu godinu",
+      yearMax: "Unesi maksimalnu godinu",
+      maxKilometers: "Unesi maksimalnu kilometražu",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "Nema dostupnih modela",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "Marka vozila je obavezna",
+      carModel: "Model vozila je obavezan",
+      fuelType: "Vrsta goriva je obavezna",
+      priceMin: "Minimalna cijena mora biti broj",
+      priceMax: "Maksimalna cijena mora biti broj",
+      yearMin: "Minimalna godina mora biti važeća",
+      yearMax: "Maksimalna godina mora biti važeća",
+      maxKilometers: "Maksimalna kilometraža mora biti broj",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "Nazad",
+      continue: "Nastavi",
+    },
   },
   telegram: {
-    heading: "Telegram Setup",
-    description: "Set up Telegram notifications by providing your bot token and chat ID.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "If you have issues creating the telegram bot, contact us and we will call you and help you create one.",
-    contact: "Contact Us",
+    heading: "Telegram postavke",
+    description:
+      "Postavi Telegram obavijesti unosom tokena tvog bota i chat ID-a.",
+    subHeading: "Postavi svog Telegram bota",
+    info: "Ako imaš poteškoća s kreiranjem bota, kontaktiraj nas — pozvat ćemo te i pomoći postaviti sve.",
+    contact: "Kontaktiraj nas",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Kako dobiti Telegram Bot Token:",
+      botStep1: "Otvori Telegram i potraži @BotFather",
+      botStep2: "Pošalji komandu /newbot",
+      botStep3: "Slijedi upute za kreiranje bota",
+      botStep4: "Kopiraj token koji ti je dao BotFather",
+
+      chatTitle: "Kako dobiti svoj Telegram Chat ID:",
+      chatStep1: "Otvori Telegram i potraži @userinfobot",
+      chatStep2: "Pošalji bilo koju poruku botu",
+      chatStep3: "Bot će odgovoriti tvojim podacima, uključujući tvoj Chat ID",
+      chatStep4: "Kopiraj Chat ID (to je broj)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Trebaš pomoć s postavkom Bot Tokena i Chat ID-a?",
+    videoDescription: "Pogledaj video vodič korak po korak.",
+
     labels: {
       token: "Telegram Bot Token",
-      chatId: "Your Telegram Chat ID",
-      language: "Notification Language",
-      username: "Telegram Username"
+      chatId: "Tvoj Telegram Chat ID",
+      language: "Jezik obavijesti",
+      username: "Telegram korisničko ime",
     },
+
     placeholders: {
-      token: "Enter your bot token from BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Select Telegram Message Language",
-      username: "Enter your Telegram username"
+      token: "Unesi token bota od BotFather-a",
+      chatId: "Unesi svoj Telegram Chat ID",
+      language: "Odaberi jezik poruka na Telegramu",
+      username: "Unesi svoje Telegram korisničko ime",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "To je korisničko ime tvog Telegram računa (bez znaka @).",
     examples: {
-      token: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      token: "Primjer: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId: "Možeš ga dobiti slanjem poruke @userinfobot-u na Telegramu",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Upute za postavku:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Otvori Telegram i potraži "BotFather"',
+      'Započni razgovor klikom na "Start"',
+      "Upiši /newbot i slijedi upute za kreiranje novog bota",
+      "Odaberi ime za svog bota",
+      "Odaberi korisničko ime (mora završavati na 'bot')",
+      "Kopiraj API token koji ti BotFather prikaže",
+      "Pošalji poruku svom novom botu da aktiviraš razgovor",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Kako dobiti svoj Telegram Chat ID:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Otvori Telegram i potraži "userinfobot"',
+      "Pošalji bilo koju poruku botu",
+      "Bot će ti odgovoriti s podacima, uključujući tvoj Chat ID",
+      "Kopiraj svoj Chat ID",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
+    helpTitle: "Trebaš pomoć s postavkom Bot Tokena i Chat ID-a?",
+    helpDescription: "Pogledaj video vodič u nastavku.",
     botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    botTokenPlaceholder: "Unesi token bota od BotFather-a",
+    botTokenExample: "Primjer: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Tvoj Telegram Chat ID",
+    chatIdPlaceholder: "Unesi svoj Telegram Chat ID",
+    chatIdDescription:
+      "Možeš ga dobiti tako što pošalješ poruku @userinfobot-u",
+    languageLabel: "Jezik obavijesti",
+    languagePlaceholder: "Odaberi jezik poruka na Telegramu",
     languages: {
       en: "English",
       de: "Deutsch",
       fr: "Français",
       es: "Español",
-      it: "Italiano"
+      it: "Italiano",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Pregled Telegram obavijesti",
+    carAlertTitle: "🚗 Novi oglas za auto!",
+    priceLabel: "Cijena: {{price}}",
+    kilometresLabel: "Kilometraža: {{kms}}",
+    locationLabel: "Lokacija: {{location}}",
+    viewListing: "Pogledaj oglas →",
     errors: {
-      token: "Telegram bot token is required",
-      chatId: "Telegram chat ID is required",
-      language: "Notification language is required",
-      username: "Telegram username is required"
+      token: "Potreban je Telegram bot token",
+      chatId: "Potreban je Telegram chat ID",
+      language: "Potrebno je odabrati jezik obavijesti",
+      username: "Potrebno je unijeti Telegram korisničko ime",
     },
+
     actions: {
-      previous: "Previous",
-      continue: "Continue"
+      previous: "Nazad",
+      continue: "Nastavi",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "Započni razgovor s našim Telegram botom klikom na link ispod i pošalji mu poruku:",
+    contactBotNote:
+      "Ovo je potrebno kako bi mogao primati obavijesti. Ako si na računaru, možeš skenirati i QR kod.",
+    confirmContact: "Započeo/la sam razgovor s botom i poslao/la poruku",
   },
   review: {
-    title: "Review Your Subscription",
-    description: "Please review your subscription details before proceeding to payment.",
+    title: "Pregled tvoje pretplate",
+    description:
+      "Pregledaj detalje pretplate prije nego što nastaviš na plaćanje.",
+
     personal: {
-      title: "Personal Information",
-      name: "Name",
-      email: "Email"
+      title: "Lični podaci",
+      name: "Ime i prezime",
+      email: "Email",
     },
+
     monitoring: {
-      title: "Monitoring Settings",
-      websites: "Websites",
+      title: "Postavke praćenja",
+      websites: "Web-stranice",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Učestalost ažuriranja",
     },
+
     specs: {
-      title: "Car Specifications",
-      brand: "Brand",
+      title: "Specifikacije vozila",
+      brand: "Marka",
       model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Mileage Range (km)",
-      price: "Price Range (€)"
+      fuelType: "Vrsta goriva",
+      yearRange: "Raspon godina",
+      mileage: "Raspon kilometraže (km)",
+      price: "Raspon cijene (€)",
     },
+
     notification: {
-      title: "Notification Settings",
-      telegram: "Telegram Bot",
-      language: "Notification Language"
+      title: "Postavke obavijesti",
+      telegram: "Telegram bot",
+      language: "Jezik obavijesti",
     },
+
     summary: {
-      title: "Subscription Summary",
-      base: "Base Subscription",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Monthly)"
+      title: "Sažetak pretplate",
+      base: "Osnovna pretplata",
+      extraWebsites: "Dodatne web-stranice",
+      frequencyUpgrade: "Nadogradnja učestalosti",
+      total: "Ukupno (mjesečno)",
     },
+
     terms: {
-      checkbox: "I agree to the",
-      tos: "Terms of Service",
-      privacy: "Privacy Policy",
-      note: "Your subscription will renew automatically each month. You can cancel anytime.",
-      error: "You must agree to the terms and conditions"
+      checkbox: "Slažem se sa",
+      tos: "Uslugama korištenja",
+      privacy: "Politikom privatnosti",
+      note: "Pretplata se automatski obnavlja mjesečno. Možeš je otkazati u bilo kojem trenutku.",
+      error: "Moraš prihvatiti uslove korištenja i privatnosti",
     },
+
     actions: {
-      previous: "Previous",
-      submit: "Proceed to Payment"
-    }
+      previous: "Nazad",
+      submit: "Nastavi na plaćanje",
+    },
   },
   faq: {
-    title: "Frequently Asked Questions",
-    subtitle: "Find answers to the most common questions about our service.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
+    title: "Često postavljena pitanja",
+    subtitle: "Pronađi odgovore na najčešća pitanja o našoj usluzi.",
+    contactPrompt: "I dalje imaš pitanja?",
+    contactLink: "Kontaktiraj naš tim podrške",
     questions: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
-    ]
+      {
+        question: "Koliko brzo ću dobiti obavijest nakon objave novog oglasa?",
+        answer:
+          "Brzina obavijesti ovisi o odabranoj učestalosti ažuriranja. Uz zadani satni plan, obavijest stiže unutar jednog sata od objave. Za gotovo real-time obavijesti (u roku od nekoliko minuta) možeš nadograditi plan na češća ažuriranja.",
+      },
+      {
+        question: "Mogu li istovremeno pratiti različite vrste vozila?",
+        answer:
+          "Da! Možeš kreirati više profila pretrage s različitim kriterijima. Svaki profil je zasebna pretplata, ali svima upravljaš s jednog računa. Savršeno ako tražiš više tipova vozila odjednom.",
+      },
+      {
+        question: "Koje web-stranice trenutno podržavate?",
+        answer:
+          "Podržavamo glavne portale za oglase, uključujući AutoTrader, CarGurus, Cars.com i Facebook Marketplace. Stalno širimo pokrivenost na temelju potreba korisnika i popularnosti po regijama.",
+      },
+      {
+        question: "Trebam li tehničko znanje za Telegram bota?",
+        answer:
+          "Ne! Osiguravamo detaljne upute i video vodiče. Većina korisnika sve postavi za manje od 5 minuta, bez tehničke pozadine.",
+      },
+      {
+        question:
+          "Mogu li promijeniti kriterije pretrage nakon postavljanja pretplate?",
+        answer:
+          "Da, kriterije možeš mijenjati u bilo kojem trenutku na nadzornoj ploči. Promjene stupaju na snagu odmah i obavijesti se prilagođavaju bez prekida usluge.",
+      },
+      {
+        question: "Kako da otkažem pretplatu?",
+        answer:
+          'Pretplatu možeš otkazati u bilo kojem trenutku na svom profilu. Idi u odjeljak "Pretplate", odaberi pretplatu i klikni "Otkaži pretplatu". Usluga traje do kraja tekućeg obračunskog perioda.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "Features",
-    pricing: "Pricing",
-    faq: "FAQ",
-    getStarted: "Get Started",
-    legal: "Legal",
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    cookies: "Cookie Policy",
-    gdpr: "GDPR Compliance",
-    contact: "Contact",
+    brandDescription:
+      "Tvoj lični asistent za pronalazak savršene ponude polovnog automobila u pravo vrijeme.",
+    quickLinks: "Brzi linkovi",
+    features: "Funkcionalnosti",
+    pricing: "Cijene",
+    faq: "ČPP",
+    getStarted: "Započni",
+    legal: "Pravno",
+    terms: "Uslovi korištenja",
+    privacy: "Politika privatnosti",
+    cookies: "Politika kolačića",
+    gdpr: "GDPR usklađenost",
+    contact: "Kontakt",
     email: "support@amiquus.com",
-    telegram: "Contact us on Telegram",
-    copyright: "All rights reserved.",
-    about: "About Us",
+    telegram: "Kontaktiraj nas na Telegramu",
+    copyright: "Sva prava zadržana.",
+    about: "O nama",
     blog: "Blog",
-    careers: "Careers",
-    support: "Support"
+    careers: "Karijere",
+    support: "Podrška",
   },
   login: {
-    title: "Log in to your account",
-    description: "Enter your email and password to access your dashboard",
+    title: "Prijavi se na svoj račun",
+    description: "Unesi email i lozinku za pristup nadzornoj ploči",
     emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
-    or: "or",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    passwordLabel: "Lozinka",
+    loginButton: "Prijava",
+    loggingIn: "Prijavljivanje...",
+    loginWithGoogle: "Prijava putem Google-a",
+    or: "ili",
+    noAccount: "Nemaš račun?",
+    registerLink: "Registruj se",
+    successTitle: "Uspješna prijava",
+    successMessage: "Uspješno si prijavljen/a.",
+    errorTitle: "Neuspjela prijava",
+    genericError: "Provjeri podatke i pokušaj ponovo.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "Unesi važeću email adresu",
+      shortPassword: "Lozinka mora imati najmanje 6 znakova",
+    },
   },
   register: {
-    title: "Create an account",
-    description: "Sign up to start tracking your dream car",
-    google: "Sign up with Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Username",
+    title: "Kreiraj račun",
+    description: "Registruj se i počni pratiti svoj auto iz snova",
+    google: "Registruj se putem Google-a",
+    orContinue: "Ili nastavi sa",
+    firstName: "Ime",
+    lastName: "Prezime",
+    username: "Korisničko ime",
     email: "Email",
-    password: "Password",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
-    login: "Log in",
-    and: "and",
+    password: "Lozinka",
+    confirmPassword: "Potvrdi lozinku",
+    termsNotice: "Slažem se sa",
+    termsOfService: "Uslovima korištenja",
+    privacyPolicy: "Politikom privatnosti",
+    createBtn: "Kreiraj račun",
+    alreadyHave: "Već imaš račun?",
+    login: "Prijava",
+    and: "i",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Nedostaju polja",
+        desc: "Popuni sva obavezna polja",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Nevažeće korisničko ime",
+        desc: "Korisničko ime mora biti alfanumeričko, 3–20 znakova",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Lozinke se ne podudaraju",
+        desc: "Provjeri da su lozinke iste",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Uslovi nisu prihvaćeni",
+        desc: "Moraš prihvatiti uslove i politiku privatnosti za nastavak",
       },
       success: {
-        title: "Registration successful",
-        desc: "Welcome to Amiquus! You will be redirected to verify your email address."
+        title: "Uspješna registracija",
+        desc: "Dobrodošao/la u Amiquus! Bićeš preusmjeren/a na verifikaciju emaila.",
       },
       failure: {
-        title: "Registration failed",
-        desc: "Please check your information and try again"
-      }
-    }
+        title: "Neuspjela registracija",
+        desc: "Provjeri podatke i pokušaj ponovo",
+      },
+    },
   },
   verifyEmail: {
-    title: "Verify Your Email",
-    description: "A verification code has been sent to your email.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "Verificiraj svoj email",
+    description: "Verifikacijski kod je poslan na tvoj email.",
+    codeLabel: "Verifikacijski kod",
+    verifyButton: "Verificiraj email",
+    updateEmailLabel: "Ažuriraj email",
+    updateEmailButton: "Ažuriraj email",
+    resendButton: "Pošalji kod ponovo",
+    resendCountdown: "Možeš ponovo poslati za {{seconds}} s",
+    footerNote: "Nisi primio/la kod? Provjeri spam mapu.",
     toast: {
-      verified: "Email verified",
-      failed: "Verification failed",
-      resent: "Verification code resent",
-      error: "Error",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      verified: "Email verificiran",
+      failed: "Verifikacija nije uspjela",
+      resent: "Kod ponovo poslan",
+      error: "Greška",
+      invalidEmail: "Nevažeći email",
+      enterValidEmail: "Unesi važeću email adresu",
+      sameEmail: "Isti email",
+      sameEmailDesc: "Novi email je isti kao trenutni",
+      emailUpdated: "Email ažuriran",
+    },
   },
   dashboardPayment: {
-    add: "Add Payment Method",
-    description: "Add a new credit or debit card for your subscription payments.",
-    processing: "Processing...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "Dodaj način plaćanja",
+    description:
+      "Dodaj novu kreditnu ili debitnu karticu za plaćanje pretplate.",
+    processing: "Obrada...",
+    errorTitle: "Greška pri dodavanju načina plaćanja",
+    errorMessage: "Došlo je do neočekivane greške",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "Greška",
+      description: "Nije moguće inicijalizirati postavku plaćanja",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Godine",
+      priceRange: "Cijena",
+      websites: "Web-stranice",
+      updates: "Ažuriranja",
+      language: "Jezik",
+      price: "Cijena",
+      edit: "Uredi",
+      cancelAlert: "Otkaži upozorenje",
+      cancelTitle: "Otkaži upozorenje za auto",
+      cancelDescription:
+        "Jesi li siguran/na da želiš otkazati upozorenje za {{brand}} {{model}}? Ovo će zaustaviti sve obavijesti i morat ćeš ponovo postaviti novo upozorenje ako želiš nastaviti praćenje.",
+      keepMyAlert: "Zadrži moje upozorenje",
+      confirmCancel: "Otkaži upozorenje",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Istječe",
+      default: "Zadano",
+      setAsDefault: "Postavi kao zadano",
+      remove: "Ukloni",
+      setDefaultTitle: "Postavi zadani način plaćanja",
+      setDefaultDescription:
+        "Želiš li karticu {{brand}} koja završava na {{last4}} postaviti kao zadanu? Koristit će se za sva buduća plaćanja.",
+      removeTitle: "Ukloni način plaćanja",
+      removeDescription:
+        "Jesi li siguran/na da želiš ukloniti karticu {{brand}} koja završava na {{last4}}?",
+      removeWarning:
+        "Ovo je tvoja zadana kartica — uklanjanje može uticati na aktivne pretplate.",
+      cancel: "Odustani",
+      confirmRemove: "Ukloni karticu",
+    },
   },
   profile: {
     tabs: {
-      alerts: "My Alerts",
-      payments: "Payment Methods"
+      alerts: "Moja upozorenja",
+      payments: "Načini plaćanja",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Subscriptions",
-      methods: "Payment methods",
-      account: "Account settings",
-      privacy: "Privacy & security",
-      logout: "Log out"
+      memberSince: "Član od",
+      subscriptions: "Pretplate",
+      methods: "Načini plaćanja",
+      account: "Postavke računa",
+      privacy: "Privatnost i sigurnost",
+      logout: "Odjava",
     },
     account: {
-      title: "Account Settings",
-      desc: "Update your account information and preferences.",
-      name: "Name",
+      title: "Postavke računa",
+      desc: "Ažuriraj podatke i preferencije.",
+      name: "Ime i prezime",
       email: "Email",
-      username: "Username",
-      cancel: "Cancel",
-      save: "Save Changes"
+      username: "Korisničko ime",
+      cancel: "Otkaži",
+      save: "Sačuvaj izmjene",
     },
     security: {
-      title: "Privacy & Security",
-      desc: "Manage your security settings and privacy preferences.",
-      current: "Current Password",
-      new: "New Password",
-      confirm: "Confirm New Password",
-      update: "Update Password"
+      title: "Privatnost i sigurnost",
+      desc: "Upravljaj sigurnosnim postavkama i privatnošću.",
+      current: "Trenutna lozinka",
+      new: "Nova lozinka",
+      confirm: "Potvrdi novu lozinku",
+      update: "Ažuriraj lozinku",
     },
     logout: {
-      title: "Log Out",
-      desc: "Are you sure you want to log out of your account?",
-      success: "You have been successfully logged out."
+      title: "Odjava",
+      desc: "Jesi li siguran/na da se želiš odjaviti?",
+      success: "Uspješno si odjavljen/a.",
     },
     alerts: {
-      title: "Car Alert Subscriptions",
-      desc: "Manage your car search alerts and notification preferences.",
-      add: "Add New Alert",
-      none: "You don't have any active car alerts.",
-      cta: "Create your first alert",
-      warning: "⚠️ Changes to your subscription will be applied in the next billing period, and only after a successful payment. If the payment fails, your current alert setup will remain unchanged."
+      title: "Pretplate na upozorenja za vozila",
+      desc: "Upravljaj pretragama i postavkama obavijesti.",
+      add: "Dodaj novo upozorenje",
+      none: "Nemaš aktivnih upozorenja.",
+      cta: "Kreiraj prvo upozorenje",
+      warning:
+        "⚠️ Promjene pretplate primjenjuju se u sljedećem obračunskom razdoblju i tek nakon uspješnog plaćanja. Ako plaćanje ne uspije, trenutne postavke ostaju na snazi.",
     },
     payments: {
-      title: "Payment Methods",
-      desc: "Manage your payment methods for subscription billing.",
-      none: "You don't have any payment methods saved.",
-      encrypted: "Your payment information is encrypted and securely stored."
-    }
+      title: "Načini plaćanja",
+      desc: "Upravljaj načinima plaćanja za pretplate.",
+      none: "Nemaš sačuvanih načina plaćanja.",
+      encrypted: "Tvoji podaci o plaćanju su šifrirani i sigurno pohranjeni.",
+    },
   },
   setupAlerts: {
-    title: "Set Up Your Car Alerts",
-    subtitle: " Configure your Telegram bot to receive notifications about your dream car",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Start My Car Alert Service",
-    cancel: "Otkažite bilo kada",
+    title: "Postavi svoja upozorenja",
+    subtitle:
+      " Podesi Telegram bota kako bi primao obavijesti o svom željenom vozilu",
+    basicPlan: "Osnovni plan",
+    baseTitle: "9,99 $/mj",
+    button: "Pokreni uslugu upozorenja",
+    cancel: "Otkaži u bilo kojem trenutku",
     toasts: {
       terms: {
-        title: "Terms not accepted",
-        description: "You must agree to the terms of service to continue"
+        title: "Uslovi nisu prihvaćeni",
+        description: "Moraš prihvatiti uslove korištenja za nastavak",
       },
       success: {
         title: "Pretplata kreirana",
-        description: "Your subscription has been created successfully"
+        description: "Tvoja pretplata je uspješno kreirana",
       },
       error: {
-        title: "Error creating subscription"
+        title: "Greška pri kreiranju pretplate",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "Potreban kontakt s botom",
+        description:
+          "Moraš započeti razgovor s našim Telegram botom i poslati poruku kako bi primao obavijesti. Slijedi upute ispod.",
+      },
+    },
   },
   loginPrompt: {
-    title: "Login Required",
-    description: "You must be logged in to continue. Please log in or register.",
-    register: "Register",
-    login: "Login"
+    title: "Potrebna prijava",
+    description:
+      "Za nastavak je potrebna prijava. Prijavi se ili se registruj.",
+    register: "Registracija",
+    login: "Prijava",
   },
   waitlistPrompt: {
-    title: "Pridružite se listi čekanja",
-    description: "We're currently at full capacity. Join the waitlist to be notified when a slot becomes available.",
-    button: "Join Waitlist"
+    title: "Pridruži se listi čekanja",
+    description:
+      "Trenutno smo na punom kapacitetu. Pridruži se listi čekanja i obavijestit ćemo te kada se oslobodi mjesto.",
+    button: "Pridruži se listi čekanja",
   },
   subscription: {
-    title: "Subscription Details",
-    subTitle: "Edit your subscription details below",
-    error: "Go back to dashboard",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "You can pause your subscription at any time. When you pause your subscription, your car alerts will stop until you resume them.",
+    title: "Detalji pretplate",
+    subTitle: "Uredi detalje svoje pretplate",
+    error: "Nazad na nadzornu ploču",
+    notFound: "Pretplata nije pronađena",
+    notFoundSub: "Nazad na nadzornu ploču",
+    description:
+      "Pretplatu možeš pauzirati u bilo kojem trenutku. Dok je pauzirana, obavijesti neće stizati sve dok je ne nastaviš.",
     form: {
       status: {
         label: "Status",
-        placeholder: "Select Status",
-        active: "Active",
-        paused: "Paused"
-      }
+        placeholder: "Odaberi status",
+        active: "Aktivna",
+        paused: "Pauzirana",
+      },
     },
     actions: {
-      save: "Save Changes",
-      back: "Back"
+      save: "Sačuvaj promjene",
+      back: "Nazad",
     },
     toasts: {
       success: {
-        title: "Subscription Updated",
-        description: "Your subscription for {{brand}} {{model}} has been updated successfully"
+        title: "Pretplata ažurirana",
+        description:
+          "Tvoja pretplata za {{brand}} {{model}} je uspješno ažurirana",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Nije moguće ažurirati",
+        description:
+          "Ne možeš istovremeno pauzirati i mijenjati cijenu pretplate. Odaberi jedno.",
       },
       error: {
-        title: "Error updating subscription"
-      }
-    }
+        title: "Greška pri ažuriranju pretplate",
+      },
+    },
   },
   about: {
-    title: "About Amiquus",
-    description: "We're revolutionizing how people find their perfect used car by bringing advanced monitoring technology to everyone",
+    title: "O Amiquusu",
+    description:
+      "Mijenjamo način na koji ljudi pronalaze savršene polovne automobile — donosimo naprednu tehnologiju praćenja svima.",
     meta: {
-      title: "About Us | Amiquus - Car Listing Monitoring Service",
-      description: "Learn about Amiquus, our mission to revolutionize used car shopping, and the team behind our intelligent car listing monitoring service."
+      title: "O nama | Amiquus – Praćenje oglasa za vozila",
+      description:
+        "Saznaj više o Amiquusu, našoj misiji i timu koji stoji iza inteligentnog praćenja oglasa za vozila.",
     },
     story: {
-      heading: "Our Story",
+      heading: "Naša priča",
       paragraphs: [
-
-        "Amiquus began in 2023 when our founder, Alex, spent months refreshing car listing websites trying to find a specific rare model at a good price. After missing several opportunities due to delayed notifications, he realized there had to be a better way.",
-
-        "Working with a small team of developers and car enthusiasts, Alex built a monitoring system that could track listings across multiple sites simultaneously and send instant notifications when matches appeared.",
-
-        "What started as a personal project quickly gained interest from friends and family, and by early 2025, Amiquus was born as a service available to everyone. Today, we help car buyers across the country save time and find better deals with our intelligent monitoring technology."
-
-      ]
+        "Amiquus je nastao 2023. kada je naš osnivač, Alex, mjesece provodio osvježavajući stranice s oglasima tražeći rijedak model po dobroj cijeni. Nakon što je propustio nekoliko prilika zbog zakašnjelih obavijesti, shvatio je da mora postojati bolje rješenje.",
+        "S malim timom programera i auto-entuzijasta, Alex je izgradio sistem koji istovremeno prati više stranica i šalje trenutne obavijesti kada se pojavi podudaranje.",
+        "Ono što je počelo kao lični projekat brzo je pobudilo interes okoline i početkom 2025. Amiquus postaje usluga dostupna svima. Danas kupcima širom zemlje pomažemo uštedjeti vrijeme i pronaći bolje ponude uz našu inteligentnu tehnologiju praćenja.",
+      ],
     },
     mission: {
-      heading: "Our Mission",
+      heading: "Naša misija",
       items: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          title: "Uštedi vrijeme",
+          description:
+            "Automatizuj potragu i primaj pravovremene obavijesti umjesto stalnog osvježavanja stranica.",
+        },
+        {
+          title: "Pronađi bolje ponude",
+          description:
+            "Saznaj prvi kada se pojavi odlična ponuda i stekni prednost kada je vrijeme presudno.",
+        },
+        {
+          title: "Kupi s povjerenjem",
+          description:
+            "Donosi odluke informirano, uz praćenje više provjerenih platformi.",
+        },
+      ],
     },
     team: {
-      heading: "Our Team",
+      heading: "Naš tim",
       members: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          name: "Alex Morgan",
+          role: "Osnivač i CEO",
+          bio: "Bivši softverski inženjer, zaljubljenik u automobile i inovativna rješenja.",
+        },
+        {
+          name: "Sarah Chen",
+          role: "CTO",
+          bio: "Stručnjakinja za nauku o podacima i web scraping.",
+        },
+        {
+          name: "Marcus Lee",
+          role: "Lead Developer",
+          bio: "Full-stack inženjer specijaliziran za sisteme obavijesti visokih performansi.",
+        },
+        {
+          name: "Elena Rodriguez",
+          role: "Korisnička podrška",
+          bio: "Bivša prodajna savjetnica za vozila, posvećena korisničkom uspjehu.",
+        },
+      ],
     },
     join: {
-      heading: "Join Our Team",
-      description: "We're always looking for talented individuals who are passionate about technology and revolutionizing the car buying experience. Check out our current openings and join us on our mission.",
-      cta: "View Open Positions"
+      heading: "Pridruži nam se",
+      description:
+        "Uvijek tražimo talentovane ljude koji vole tehnologiju i žele promijeniti iskustvo kupovine polovnih vozila.",
+      cta: "Pogledaj otvorene pozicije",
     },
     questions: {
-      heading: "Have Questions?",
-      description: "Learn more about how our service works, view pricing options, or get in touch with our support team.",
+      heading: "Imaš pitanja?",
+      description:
+        "Saznaj više o funkcioniranju usluge, pogledaj cijene ili stupi u kontakt s podrškom.",
       links: {
-        faq: "Visit FAQ",
-        pricing: "View Pricing",
-        support: "Contact Support"
-      }
-    }
+        faq: "Posjeti ČPP",
+        pricing: "Pogledaj cijene",
+        support: "Kontakt podrška",
+      },
+    },
   },
   terms: {
-    metaTitle: "Terms of Service | Amiquus",
-    metaDescription: "Read the Amiquus Terms of Service that govern your use of our car listing monitoring and notification service.",
-    title: "Terms of Service",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Uslovi korištenja | Amiquus",
+    metaDescription:
+      "Pročitaj uslove korištenja Amiquus usluge praćenja oglasa i obavještavanja.",
+    title: "Uslovi korištenja",
+    lastUpdated: "Posljednje ažuriranje: 21. maj 2025.",
     sections: {
-      1: {
+      "1": {
         id: "agreement",
-        heading: "Agreement to Terms",
+        heading: "Sporazum o uslovima",
         paragraphs: [
-
-          "These Terms of Service constitute a legally binding agreement made between you and Amiquus, concerning your access to and use of our website and services.",
-
-          "By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service."
-
+          "Ovi Uslovi korištenja predstavljaju pravno obavezujući sporazum između tebe i Amiquusa u vezi s pristupom i korištenjem naše web-stranice i usluga.",
+          "Pristupom ili upotrebom usluga prihvataš ove Uslove. Ako se ne slažeš s bilo kojim dijelom, ne koristi uslugu.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      2: {
+      "2": {
         id: "changes",
-        heading: "Changes to Terms",
+        heading: "Izmjene uslova",
         paragraphs: [
-          "  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.",
-          "By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service."
+          " Zadržavamo pravo da po vlastitom nahođenju izmijenimo ili zamijenimo ove Uslove u bilo kojem trenutku. Ako je izmjena značajna, uložit ćemo razumne napore da najmanje 30 dana unaprijed obavijestimo prije stupanja novih uslova na snagu.",
+          "Nastavkom korištenja usluge nakon što izmjene stupe na snagu, saglasan/na si s revidiranim uslovima.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      3: {
+      "3": {
         id: "account",
-        heading: "Account Terms",
-        paragraphs: [
-          "To use our services, you must:"
-        ],
+        heading: "Uslovi za račun",
+        paragraphs: ["Da bi koristio/la naše usluge, potrebno je:"],
         list: [
-
-          "Be at least 18 years old",
-
-          "Complete the registration process",
-
-          "Provide accurate, complete, and up-to-date information",
-
-          "Be responsible for maintaining the security of your account and password",
-
-          "Be responsible for all activities that occur under your account",
-
-          "Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account"
-
-        ]
+          "Imati najmanje 18 godina",
+          "Dovršiti proces registracije",
+          "Navedene podatke držati tačnim i ažurnim",
+          "Čuvati sigurnost svog računa i lozinke",
+          "Biti odgovoran/na za sve aktivnosti na svom računu",
+          "Odmah nas obavijestiti o narušavanju sigurnosti ili neovlaštenoj upotrebi",
+        ],
       },
-      4: {
+      "4": {
         id: "payment",
-        heading: "Payment Terms",
-        paragraphs: [
-
-          " Amiquus offers subscription-based services with the following terms:"
-
-        ],
+        heading: "Uslovi plaćanja",
+        paragraphs: [" Amiquus nudi usluge pretplate pod sljedećim uslovima:"],
         list: [
-
-          "All fees are exclusive of taxes, which will be added when applicable",
-
-          "Subscription prices are subject to change with 30 days' notice",
-
-          "Subscriptions automatically renew unless canceled before the next billing cycle",
-
-          "Refunds are handled on a case-by-case basis according to our refund policy",
-
-          "We use Stripe for secure payment processing, and all payment information is stored by Stripe"
-
-        ]
+          "Sve naknade su bez poreza, koji se dodaje kada je primjenjivo",
+          "Cijene pretplate mogu se promijeniti uz 30 dana najave",
+          "Pretplate se automatski obnavljaju osim ako se ne otkažu prije sljedećeg ciklusa",
+          "Povrati sredstava rješavaju se od slučaja do slučaja prema našoj politici",
+          "Plaćanja obrađuje Stripe; Amiquus ne pohranjuje podatke o karticama",
+        ],
       },
-      5: {
+      "5": {
         id: "capacity",
-        heading: "Capacity Limits",
+        heading: "Ograničenja kapaciteta",
         paragraphs: [
-
-          "In order to maintain service quality and reliability, Amiquus limits the number of active subscriptions to 30. When this limit is reached:"
-
+          "Radi održavanja kvaliteta usluge, Amiquus ograničava broj aktivnih pretplata na 30. Kada je limit dosegnut:",
         ],
         list: [
-
-          "New users may join our waitlist",
-
-          "Waitlist position is determined on a first-come, first-served basis",
-
-          "When capacity becomes available, waitlisted users will be notified in order",
-
-          "We reserve the right to modify capacity limits at any time"
-
-        ]
+          "Novi korisnici mogu se pridružiti listi čekanja",
+          "Redoslijed na listi je po principu prvo došao, prvo uslužen",
+          "Kada se oslobodi mjesto, obavještavamo korisnike po redu",
+          "Zadržavamo pravo izmjene limita u bilo kojem trenutku",
+        ],
       },
-      6: {
+      "6": {
         id: "scraping",
-        heading: "Web Scraping Limitations",
+        heading: "Ograničenja web scrapanja",
         paragraphs: [
-
-          "Our service accesses and processes data from multiple car listing websites. By using our service, you acknowledge that:"
-
+          "Naša usluga pristupa i obrađuje podatke s više portala s oglasima. Korištenjem usluge prihvataš da:",
         ],
         list: [
-
-          "Amiquus respects the terms of service of the websites we monitor",
-
-          "We implement rate limiting and respectful crawling practices",
-
-          "The availability of certain websites may change based on their terms and technical measures",
-
-          "We make no guarantees regarding the completeness or timeliness of scraped data"
-
-        ]
+          "Amiquus poštuje uslove korištenja praćenih web-stranica",
+          "Primjenjujemo ograničenje brzine i pažljivo indeksiranje",
+          "Dostupnost pojedinih stranica može se mijenjati",
+          "Ne garantujemo potpunost niti pravovremenost svih podataka",
+        ],
       },
-      7: {
+      "7": {
         id: "intellectual",
-        heading: "Intellectual Property",
+        heading: "Intelektualno vlasništvo",
         paragraphs: [
-
-          "The Amiquus service, including its original content, features, and functionality, are and will remain the exclusive property of Amiquus. Our service is protected by copyright, trademark, and other laws of both the United States and foreign countries.",
-
-          "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Amiquus."
-
+          "Amiquusova usluga, uključujući izvorni sadržaj, funkcionalnosti i obilježja, ostaje isključivo vlasništvo Amiquusa i zaštićena je zakonima o autorskim pravima i žigovima.",
+          "Naše žigove i vizuelni identitet nije dozvoljeno koristiti bez prethodne pisane saglasnosti.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      8: {
+      "8": {
         id: "termination",
-        heading: "Termination",
+        heading: "Raskid",
         paragraphs: [
-          "   We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including, without limitation, if you breach the Terms.",
-          " Upon termination, your right to use the service will immediately cease. If you wish to terminate your account, you may simply discontinue using the service or contact us to request account deletion."
+          "   Možemo odmah, bez prethodne najave, ukinuti ili suspendovati tvoj račun iz bilo kojeg razloga, uključujući kršenje Uslova.",
+          " Po raskidu, pravo korištenja usluge prestaje odmah. Ako želiš zatvoriti račun, prestani koristiti uslugu ili nas kontaktiraj.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      9: {
+      "9": {
         id: "limitations",
-        heading: "Limitation of Liability",
+        heading: "Ograničenje odgovornosti",
         paragraphs: [
-          "In no event shall Amiquus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:"
+          "Ni pod kojim uslovima Amiquus ili njegovi saradnici ne odgovaraju za indirektne, posebne ili posljedične štete, uključujući gubitak dobiti, podataka, upotrebe, ugleda ili druge nematerijalne gubitke koji proističu iz:",
         ],
         list: [
-
-          "Your access to or use of or inability to access or use the service",
-
-          "Any conduct or content of any third party on the service",
-
-          "Any content obtained from the service",
-
-          "Unauthorized access, use, or alteration of your transmissions or content"
-
-        ]
+          "Pristupa ili nemogućnosti pristupa/uslovnog korištenja usluge",
+          "Ponašanja ili sadržaja trećih strana na usluzi",
+          "Sadržaja dobijenog putem usluge",
+          "Neovlaštenog pristupa ili izmjene tvojih prijenosa ili sadržaja",
+        ],
       },
-      10: {
+      "10": {
         id: "disclaimer",
-        heading: "Disclaimer",
+        heading: "Odricanje od odgovornosti",
         paragraphs: [
-
-          " Your use of the service is at your sole risk. The service is provided on an `AS IS` and `AS AVAILABLE` basis. The service is provided without warranties of any kind, whether express or implied.",
-
-          "Amiquus does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that the results that may be obtained from the use of the service will be accurate or reliable."
-
+          " Uslugu koristiš na vlastitu odgovornost. Usluga je pružena „KAKVA JESTE“ i „KAKO JE DOSTUPNA“, bez ikakvih garancija.",
+          "Ne garantujemo da će usluga biti neprekidna, pravovremena, sigurna ili bez grešaka, niti tačnost rezultata korištenja.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      11: {
+      "11": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "Politika kolačića",
         paragraphs: [
-          "Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our service, your choices regarding cookies, and further information about cookies. Please refer to the Cookies section in our Privacy Policy."
+          "Naša Politika kolačića objašnjava šta su kolačići, kako ih koristimo, koje treće strane mogu koristiti kolačiće na našoj usluzi i tvoje izbore u vezi s kolačićima. Pogledaj odjeljak o kolačićima u Politici privatnosti.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      12: {
+      "12": {
         id: "governing-law",
-        heading: "Governing Law",
+        heading: "Mjerodavno pravo",
         paragraphs: [
-          "    These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.",
-          " Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
+          "    Ovi Uslovi tumače se u skladu s važećim zakonima, bez obzira na koliziona pravila.",
+          " Naš propust da provedemo neko pravo ne predstavlja odricanje od istog. Ako je neka odredba nevažeća, preostale ostaju na snazi.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      13: {
+      "13": {
         id: "contact",
-        heading: "Contact Us",
+        heading: "Kontakt",
         paragraphs: [
-          "  If you have any questions about these Terms, please contact us:"
+          "  Ako imaš pitanja u vezi s ovim Uslovima, kontaktiraj nas:",
         ],
         list: [
-
-          "By email: legal@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "E-poštom: legal@amiquus.com",
+          "Putem kontakt stranice na našem webu",
+        ],
+      },
+    },
   },
   privacy: {
-    metaTitle: "Privacy Policy | Amiquus",
-    metaDescription: "Learn about how Amiquus handles your personal data, privacy rights, and data collection practices.",
-    title: "Privacy Policy",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Politika privatnosti | Amiquus",
+    metaDescription:
+      "Saznaj kako Amiquus obrađuje tvoje lične podatke, tvoja prava i naše prakse prikupljanja podataka.",
+    title: "Politika privatnosti",
+    lastUpdated: "Posljednje ažuriranje: 21. maj 2025.",
     sections: {
-      0: {
+      "0": {
         id: "introduction",
-        heading: "Introduction",
+        heading: "Uvod",
         paragraphs: [
-
-          "Welcome to Amiquus. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you."
-
-        ]
+          "Poštujemo tvoju privatnost i posvećeni smo zaštiti ličnih podataka. Ova politika objašnjava kako čuvamo tvoje podatke i tvoja prava.",
+        ],
       },
-      1: {
+      "1": {
         id: "data-we-collect",
-        heading: "Information We Collect",
+        heading: "Koje podatke prikupljamo",
         paragraphs: [
-
-          "We collect several different types of information for various purposes to provide and improve our service to you:"
-
+          "Prikupljamo različite tipove podataka kako bismo pružili i unaprijedili uslugu:",
         ],
         list: [
-
-          "Personal Data: Email address, first name, last name, and profile picture (if provided through third-party authentication).",
-
-          "Account Data: Your login credentials and account preferences.",
-
-          "Usage Data: Information on how you use our website and services.",
-
-          "Car Search Preferences: The vehicle criteria you set for monitoring (brand, model, price range, etc.).",
-
-          "Telegram Information: If you choose to receive notifications via Telegram, we store your Telegram chat ID and bot token.",
-
-          "Payment Information: When you make a purchase, our payment processor collects payment details necessary to process your transaction. Amiquus does not store your full credit card information."
-
-        ]
+          "Lični podaci: email adresa, ime, prezime, profilna slika (ako je dostavljena preko treće strane)",
+          "Podaci o računu: tvoji pristupni podaci i preferencije",
+          "Podaci o korištenju: informacije o načinu upotrebe sajta i usluge",
+          "Preferencije pretrage vozila: kriteriji koje postaviš (marka, model, cijena, itd.)",
+          "Telegram podaci: chat ID i bot token ako odabereš Telegram obavijesti",
+          "Podaci o plaćanju: naš procesor plaćanja prikuplja potrebne podatke; Amiquus ne pohranjuje pune podatke o karticama",
+        ],
       },
-      2: {
+      "2": {
         id: "how-we-use-data",
-        heading: "How We Use Your Data",
-        paragraphs: [
-
-          "We use your personal data for the following purposes:"
-
-        ],
+        heading: "Kako koristimo tvoje podatke",
+        paragraphs: ["Podatke koristimo za sljedeće svrhe:"],
         list: [
-
-          "To provide and maintain our service",
-
-          "To notify you about changes to our service",
-
-          "To allow you to participate in interactive features of our service",
-
-          "To provide customer support",
-
-          "To gather analysis or valuable information so that we can improve our service",
-
-          "To monitor the usage of our service",
-
-          "To detect, prevent and address technical issues",
-
-          "To process payments and prevent fraudulent transactions",
-
-          "To send car listings that match your preferences via your chosen notification method"
-
-        ]
+          "Pružanje i održavanje usluge",
+          "Obavještavanje o promjenama usluge",
+          "Omogućavanje interaktivnih funkcija",
+          "Korisnička podrška",
+          "Analizu i poboljšanje usluge",
+          "Praćenje korištenja",
+          "Otkrivanje i sprječavanje tehničkih problema",
+          "Obradu plaćanja i prevenciju prevara",
+          "Slanje oglasa koji odgovaraju tvojim kriterijima kroz odabrani kanal",
+        ],
       },
-      3: {
+      "3": {
         id: "data-storage",
-        heading: "Data Storage and Security",
+        heading: "Pohrana i sigurnost podataka",
         paragraphs: [
-
-          "We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. All data is stored on secure servers with encryption in transit and at rest.",
-
-          "We retain your personal data only for as long as necessary for the purposes set out in this privacy policy, including for the purposes of satisfying any legal, regulatory, tax, accounting, or reporting requirements."
-
-        ]
+          "Primjenjujemo odgovarajuće sigurnosne mjere i šifriranje u prijenosu i mirovanju.",
+          "Lične podatke čuvamo onoliko dugo koliko je potrebno radi pružanja usluge i zakonskih obaveza.",
+        ],
       },
-      4: {
+      "4": {
         id: "gdpr",
-        heading: "Your GDPR Rights",
+        heading: "Tvoja GDPR prava",
         paragraphs: [
-
-          "If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Amiquus aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your personal data.",
-
-          "You have the following data protection rights:"
-
+          "Ako si stanovnik EEA, imaš određena prava. Amiquus omogućava ispravku, brisanje i ograničavanje obrade u razumnim okvirima.",
+          "Imaš sljedeća prava:",
         ],
         list: [
-
-          "The right to access, update or delete the information we have on you",
-
-          "The right of rectification",
-
-          "The right to object",
-
-          "The right of restriction",
-
-          "The right to data portability",
-
-          "The right to withdraw consent"
-
-        ]
+          "Pristup, ažuriranje ili brisanje podataka",
+          "Ispravku netačnih podataka",
+          "Prigovor na obradu",
+          "Ograničenje obrade",
+          "Prenosivost podataka",
+          "Povlačenje pristanka",
+        ],
       },
-      5: {
+      "5": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "Kolačići",
         paragraphs: [
-
-          "Cookies are small pieces of data stored on your device. We use cookies to:"
-
+          "Kolačići su male datoteke na tvom uređaju. Koristimo ih da:",
         ],
         list: [
-
-          "Keep you signed in",
-
-          "Understand how you use our website",
-
-          "Remember your preferences",
-
-          "Customize your experience"
-
-        ]
+          "Održe tvoju prijavu",
+          "Razumijemo kako koristiš sajt",
+          "Zapamtimo tvoje preferencije",
+          "Prilagodimo iskustvo",
+        ],
       },
-      6: {
+      "6": {
         id: "third-party",
-        heading: "Third-Party Services",
+        heading: "Usluge trećih strana",
         paragraphs: [
-
-          "We may employ third-party companies and individuals to facilitate our service, provide the service on our behalf, perform service-related tasks, or assist us in analyzing how our service is used.",
-
-          "These third parties include:"
-
+          "Angažujemo treće strane za pomoć u pružanju usluge, analitici i hostingu.",
+          "To uključuje:",
         ],
         list: [
-
-          "Payment processors (Stripe)",
-
-          "Analytics providers",
-
-          "Customer support services",
-
-          "Hosting and cloud infrastructure providers"
-
+          "Procesore plaćanja (Stripe)",
+          "Pružaoce analitike",
+          "Korisničku podršku",
+          "Hosting i cloud infrastrukturu",
         ],
         paragraphs2: [
-
-          "These third parties have access to your personal data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
-
-        ]
+          "Treće strane imaju pristup samo onim podacima koji su im potrebni i obavezane su čuvanjem povjerljivosti.",
+        ],
       },
-      7: {
+      "7": {
         id: "changes",
-        heading: "Changes to This Privacy Policy",
+        heading: "Izmjene ove politike",
         paragraphs: [
-
-          "We may update our privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the 'Last updated' date.",
-
-          "You are advised to review this privacy policy periodically for any changes. Changes to this privacy policy are effective when they are posted on this page."
-
-        ]
+          "Politiku povremeno ažuriramo. O promjenama obavještavamo objavom na ovoj stranici i ažuriranjem datuma.",
+          "Preporučujemo periodično pregledanje ove Politike.",
+        ],
       },
-      8: {
+      "8": {
         id: "contact",
-        heading: "Contact Us",
+        heading: "Kontakt",
         paragraphs: [
-
-          "If you have any questions about this privacy policy, please contact us:"
-
+          "Za sva pitanja o ovoj Politici privatnosti kontaktiraj nas:",
         ],
         list: [
-
-          "By email: privacy@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "E-poštom: privacy@amiquus.com",
+          "Putem kontakt stranice na našem webu",
+        ],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Frequently Asked Questions | Amiquus",
-    metaDescription: "Find answers to the most common questions about Amiquus car listing monitoring service, subscriptions, notification setup, and more.",
-    title: "Frequently Asked Questions",
-    subtitle: "Find quick answers to common questions about our car listing monitoring service",
+    metaTitle: "Često postavljena pitanja | Amiquus",
+    metaDescription:
+      "Odgovori na najčešća pitanja o Amiquus usluzi praćenja oglasa, pretplatama, postavkama obavijesti i više.",
+    title: "Često postavljena pitanja",
+    subtitle:
+      "Brzi odgovori na uobičajena pitanja o našoj usluzi praćenja oglasa",
     general: {
-      heading: "General Questions",
+      heading: "Opća pitanja",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Šta je Amiquus?",
+        answer:
+          "Amiquus je usluga koja prati više portala s oglasima za vozila koja odgovaraju tvojim kriterijima. Kada se pojavi podudaranje, dobijaš trenutnu Telegram obavijest s detaljima i linkom.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Kako funkcionira?",
         answer: [
-
-          "You set up your search criteria (make, model, price range, etc.)",
-
-          "You select which websites to monitor",
-
-          "You connect your Telegram account for notifications",
-
-          "Our system continuously monitors your selected websites for new listings",
-
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-
-        ]
+          "Postavi kriterije pretrage (marka, model, cijena itd.)",
+          "Odaberi koje web-stranice želiš pratiti",
+          "Poveži svoj Telegram za obavijesti",
+          "Naš sistem kontinuirano nadgleda odabrane portale",
+          "Kada se pojavi podudaranje, dobijaš trenutnu obavijest s detaljima i direktnim linkom",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Koje portale pratite?",
+        answerIntro: "Trenutno pratimo sljedeće glavne platforme:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (preko URL-a)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro:
+          "Neprestano dodajemo nove platforme kako bismo osigurali što širu pokrivenost.",
+      },
     },
     subscription: {
-      heading: "Subscription Questions",
+      heading: "Pitanja o pretplati",
       cost: {
-        question: "How much does a subscription cost?",
+        question: "Koliko košta pretplata?",
         answer: [
-
-          "Our pricing starts at $9.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
-
-          "For specific pricing details, please view our pricing section on the homepage."
-
-        ]
+          "Cijene počinju od 9,99 $ mjesečno za praćenje jedne web-stranice s ažuriranjem svaka 4–6 sati. Dodatne stranice su 4,99 $ mjesečno. Možeš i nadograditi učestalost za brže obavijesti.",
+          "Za detalje posjeti odjeljak s cijenama na početnoj stranici.",
+        ],
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
+        question: "Kako da otkažem pretplatu?",
+        stepsIntro:
+          "Pretplatu možeš otkazati u bilo kojem trenutku iz profila:",
         steps: [
-
-          "Log in to your account",
-
-          "Navigate to the \\\"Profile\\\" page",
-
-          "Select the \\\"Subscriptions\\\" tab",
-
-          "Click the \\\"Cancel Subscription\\\" button next to the subscription you wish to cancel"
-
+          "Prijavi se na svoj račun",
+          'Idi na stranicu "Profil"',
+          'Otvorii karticu "Pretplate"',
+          'Klikni "Otkaži pretplatu" pored željene pretplate',
         ],
-        note: "Your subscription will remain active until the end of your current billing period."
+        note: "Pretplata ostaje aktivna do kraja tekućeg obračunskog perioda.",
       },
       multiple: {
-        question: "Can I have multiple subscriptions for different car models?",
-        answer: "Yes, you can create multiple subscriptions under a single account. Each subscription can track different car models, brands, or price ranges. This is particularly useful if you're searching for multiple vehicles or helping friends and family with their car search."
+        question: "Mogu li imati više pretplata za različite modele?",
+        answer:
+          "Da. Možeš kreirati više pretplata pod jednim računom — svaka može ciljati različite modele, marke ili cjenovne rangove.",
       },
       limit: {
-        question: "Why is there a limit on the number of subscribers?",
-        intro: "We limit our service to 30 active subscribers to ensure:",
+        question: "Zašto je broj pretplata ograničen?",
+        intro: "Limitiramo broj aktivnih pretplata radi:",
         list: [
-
-          "The highest quality of service and data accuracy",
-
-          "Personalized support for each subscriber",
-
-          "Faster notification delivery during peak listing times",
-
-          "Ethical scraping that doesn't overload the target websites"
-
+          "Najvišeg kvaliteta i tačnosti podataka",
+          "Personalizovane podrške",
+          "Bržih obavijesti u vršnim terminima",
+          "Etičnog scrapinga bez preopterećenja ciljnih sajtova",
         ],
-        outro: "If we've reached capacity, you can join our waitlist to be notified when a spot becomes available."
-      }
+        outro:
+          "Ako su sva mjesta popunjena, pridruži se listi čekanja — obavijestit ćemo te kada se oslobodi mjesto.",
+      },
     },
     technical: {
-      heading: "Technical Questions",
+      heading: "Tehnička pitanja",
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        stepsIntro: "To set up Telegram notifications:",
+        question: "Kako postaviti Telegram obavijesti?",
+        stepsIntro: "Za postavku Telegram obavijesti:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions provided during setup)",
-
-          "Copy your bot token from BotFather",
-
-          "Start a conversation with your bot",
-
-          "Get your chat ID (instructions provided during setup)",
-
-          "Enter your bot token and chat ID in your Amiquus subscription settings",
-
-          "Test your notification setup using the `Send Test Message` button"
-
+          "Kreiraj Telegram bota (BotFather — upute u našem sučelju)",
+          "Kopiraj token bota od BotFather-a",
+          "Započni razgovor sa svojim botom",
+          "Preuzmi svoj chat ID (upute su u sučelju)",
+          "Unesi token i chat ID u postavke pretplate",
+          "Pošalji test poruku pomoću dugmeta „Pošalji test“",
         ],
-        note: "Detailed step-by-step instructions with screenshots are provided during the subscription setup process."
+        note: "Detaljne upute sa slikama dostupne su tokom postavke pretplate.",
       },
       frequency: {
-        question: "How often will I receive notifications?",
-        intro: "The frequency of notifications depends on:",
+        question: "Koliko često primam obavijesti?",
+        intro: "Učestalost ovisi o:",
         list: [
-
-          "Your chosen update frequency package (from every 6 hours to every 30 minutes)",
-
-          "How many new listings match your criteria",
-
-          "How active the market is for your selected make/model"
-
+          "Odabranom paketu (od nekoliko sati do svake minute)",
+          "Broju novih oglasa koji odgovaraju kriterijima",
+          "Aktivnosti tržišta za odabrani model/marku",
         ],
-        outro: "You'll only receive notifications when new listings that match your criteria are found."
+        outro:
+          "Obavijesti šaljemo samo kada nađemo oglase koji se podudaraju s tvojim kriterijima.",
       },
       privacy: {
-        question: "How is my personal data protected?",
-        intro: "We take data privacy seriously and apply these measures:",
+        question: "Kako štitite moje podatke?",
+        intro: "Privatnost nam je prioritet, primjenjujemo:",
         list: [
-
-          "Encrypted data in transit and at rest",
-
-          "Secure payments via Stripe",
-
-          "No third-party data sharing",
-
-          "You can request or delete your data anytime"
-
+          "Šifriranje podataka u prijenosu i mirovanju",
+          "Sigurna plaćanja putem Stripe-a",
+          "Bez dijeljenja s trećim stranama bez osnove",
+          "Mogućnost uvida i brisanja podataka",
         ],
-        outro: "Read our full Privacy Policy for more."
-      }
+        outro: "Detalje potraži u našoj Politici privatnosti.",
+      },
     },
     support: {
-      heading: "Still have questions?",
-      description: "If you couldn't find the answer to your question, our support team is here to help!",
-      button: "Contact Support"
-    }
+      heading: "Trebaš dodatnu pomoć?",
+      description: "Ako nisi našao/la odgovor, naš tim podrške je tu za tebe!",
+      button: "Kontakt podrška",
+    },
   },
   waitlist: {
-    metaTitle: "Join the Waitlist - Amiquus",
-    metaDescription: "Join the Amiquus waitlist to be notified when subscriptions become available.",
-    title: "Join Our Waitlist",
-    subtitle: "Due to high demand, we limit the number of active subscriptions to ensure the best service quality for all users.",
+    metaTitle: "Pridruži se listi čekanja – Amiquus",
+    metaDescription:
+      "Pridruži se listi čekanja i primi obavijest kada se oslobodi pretplata.",
+    title: "Pridruži se listi čekanja",
+    subtitle:
+      "Zbog velike potražnje, ograničavamo broj aktivnih pretplata radi vrhunskog kvaliteta usluge.",
     limited: {
-      heading: "Limited Availability",
-      description: "We limit our system to only 30 active subscribers to ensure:",
+      heading: "Ograničena dostupnost",
+      description:
+        "Sistem ograničavamo na 30 aktivnih pretplata kako bismo osigurali:",
       points: [
-
-        "Exceptional scraping reliability and speed for all users",
-
-        "Reduced chances of being blocked by car listing websites",
-
-        "Personalized support for each subscriber",
-
-        "Fair distribution of server resources"
-
+        "Izuzetnu pouzdanost i brzinu scrapinga za sve korisnike",
+        "Manji rizik blokiranja od strane portala",
+        "Personalizovanu podršku za svakog pretplatnika",
+        "Pravednu raspodjelu serverskih resursa",
       ],
-      available: "{{remaining}} subscription spots out of {{capacity}} currently available.",
-      full: "All subscription spots are currently filled. Join the waitlist to be notified when a spot becomes available."
+      available: "Dostupno {{remaining}} mjesta od ukupno {{capacity}}.",
+      full: "Sva mjesta su trenutno popunjena. Pridruži se listi čekanja i dobićeš obavijest kada se oslobodi mjesto.",
     },
     success: {
-      title: "You're on the waitlist!",
-      description: "We'll notify you as soon as a subscription spot becomes available",
-      message: "Thank you for your interest in Amiquus! We've added you to our waitlist and will contact you as soon as we have an opening.",
-      button: "Return to Homepage"
+      title: "Na listi si!",
+      description: "Obavijestit ćemo te čim se oslobodi pretplatničko mjesto.",
+      message:
+        "Hvala na interesu za Amiquus! Dodali smo te na listu čekanja i kontaktirat ćemo te čim bude otvoreno mjesto.",
+      button: "Povratak na početnu",
     },
     cantJoin: {
-      title: "Pridružite se listi čekanja",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Pridruži se listi čekanja",
+      description: " Obavijestit ćemo te čim se oslobodi mjesto",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Ime",
+        placeholder: "Ivan",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Prezime",
+        placeholder: "Ivić",
       },
       email: {
         label: "Email",
-        placeholder: "john.doe@example.com",
-        description: "We'll use this email to notify you when a spot becomes available"
+        placeholder: "ivan.ivic@example.com",
+        description:
+          "Ovu adresu koristimo da te obavijestimo kada bude dostupno mjesto",
       },
-      submit: "Join Waitlist",
-      submitting: "Submitting..."
-    }
+      submit: "Pridruži se listi",
+      submitting: "Slanje...",
+    },
   },
   support: {
-    metaTitle: "Support | Amiquus - Help Center",
-    metaDescription: "Get help with your Amiquus account, subscription, or car alerts. Browse our help center or contact our support team for assistance.",
-    title: "Support Center",
-    subtitle: "Find answers to common questions or get in touch with our support team",
+    metaTitle: "Podrška | Amiquus – Centar pomoći",
+    metaDescription:
+      "Pomoć za račun, pretplatu ili obavijesti. Pregledaj centar pomoći ili kontaktiraj podršku.",
+    title: "Centar podrške",
+    subtitle: "Pronađi odgovore ili stupi u kontakt s našim timom",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "Email podrška",
+      description: "Pošalji nam email — odgovaramo unutar 24 sata",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Često postavljena pitanja",
     faqs: {
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        intro: "To set up Telegram notifications, follow these steps:",
+        question: "Kako postaviti Telegram obavijesti?",
+        intro: "Slijedi ove korake:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions in our dashboard)",
-
-          "Copy your API token and chat ID",
-
-          "Enter these details in your account settings under \\\"Notification Preferences\\\"",
-
-          "Test your connection using the \\\"Send Test Message\\\" button"
-
+          "Kreiraj Telegram bota (upute su u našem dashboardu)",
+          "Kopiraj API token i chat ID",
+          'Unesi ih u "Postavke obavijesti" u svom računu',
+          'Testiraj vezu putem dugmeta "Pošalji test poruku"',
         ],
-        outro: "If you need more help, our detailed guide is available in your dashboard."
+        outro: "Za detalje pogledaj naš vodič unutar dashboarda.",
       },
       updates: {
-        question: "How often are car listings updated?",
-        answer: "The update frequency depends on your subscription plan. Basic plans receive updates every 6 hours, while Premium plans can get updates as frequently as every 30 minutes. You can view and modify your current update frequency in your subscription settings."
+        question: "Koliko često se oglasi ažuriraju?",
+        answer:
+          "Ovisi o planu. Osnovni plan osvježava svakih nekoliko sati, Premium i češće. U postavkama pretplate možeš vidjeti i promijeniti učestalost.",
       },
       facebook: {
-        question: "Can I monitor Facebook Marketplace?",
-        answer: "Yes, we support Facebook Marketplace monitoring. To set this up, you'll need to provide the URL to the Facebook Marketplace search results page with your desired filters applied. Our system will then monitor that specific search for new listings that match your criteria."
+        question: "Mogu li pratiti Facebook Marketplace?",
+        answer:
+          "Da. Podržavamo praćenje putem URL-a rezultata pretrage s primijenjenim filterima.",
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        answer: "You can cancel your subscription at any time from your account profile page. Click on the \"Subscriptions\" tab, locate the subscription you wish to cancel, and click the \"Cancel Subscription\" button. Your service will continue until the end of your current billing period."
+        question: "Kako otkazati pretplatu?",
+        answer:
+          'U profilu, kartica "Pretplate" — klikni "Otkaži pretplatu". Usluga traje do kraja tekućeg perioda naplate.',
       },
       full: {
-        question: "What happens if all subscription slots are full?",
-        answer: "To maintain our high quality of service, we limit the number of active subscriptions. If all slots are full, you can join our waitlist. We'll notify you as soon as a slot becomes available, and you'll have priority to claim it before we open it to the general public."
-      }
+        question: "Šta ako su sva mjesta popunjena?",
+        answer:
+          "Pridruži se listi čekanja. Obavijestit ćemo te čim se oslobodi mjesto i imaćeš prioritet.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "Trebaš još pomoći?",
+      description:
+        "Ako ne nalaziš odgovor, javi se našem timu podrške. Tu smo!",
+      button: "Kontakt podrška",
+    },
   },
   notFound: {
-    title: "404 Page Not Found",
-    message: "Did you forget to add the page to the router?"
+    title: "404 Stranica nije pronađena",
+    message: "Da li si zaboravio/la dodati stranicu u ruter?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Tvoj Amiquus verifikacijski kod",
+      greeting: "Zdravo,",
+      message: "Upotrijebi donji kod da dovršiš registraciju:",
+      expiration: "Kod vrijedi 10 minuta.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Potvrda uplate – Račun #",
+        h2Message: "Tvoja Amiquus pretplata je uspješno naplaćena!",
+        greeting: "Zdravo,",
+        paymentMessage: "Primili smo tvoju uplatu od",
+        downloadMessage: "Račun možeš pogledati ili preuzeti putem linka:",
+        viewInvoice: "Pogledaj račun",
+        invoiceNumber: "Broj računa:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Plaćanje na čekanju – Račun",
+        subjectB: "za tvoju Amiquus pretplatu",
+        h2Message: "Potrebna akcija: Dovrši plaćanje pretplate",
+        greeting: "Zdravo,",
+        messageA: "Tvoj račun",
+        messageB:
+          "još nije plaćen. Za aktivaciju pretplate potrebno je uplatiti",
+        paymentMessage: "Sigurno plati putem linka ispod:",
+        payInvoice: "Plati račun",
+        ignoreEmail: "Ako si već platio/la, zanemari ovu poruku.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Neuspjelo plaćanje – Račun",
+        message: "Nismo uspjeli obraditi tvoju nedavnu uplatu (pokušaj",
+        attemptsA:
+          "Uskoro ćemo ponovo pokušati naplatu. Nije potrebna akcija za sada.",
+        attemptsB:
+          "Pokušali smo naplatiti 3 puta, ali svi pokušaji su neuspješni.",
+        attemptsC:
+          "Zbog toga je tvoja pretplata <strong>pauzirana</strong>. Nećeš primati obavijesti dok je ne aktiviraš.",
+        attemptsD:
+          "Ažuriraj način plaćanja i nastavi pretplatu iz svog profila:",
+        viewInvoice: "Pogledaj račun",
+        managePayment: "Upravljaj načinima plaćanja",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Na Amiquus listi čekanja si!",
+      h2Message: "Na listi si!",
+      hi: "Zdravo",
+      message:
+        "Hvala što si se pridružio/la listi čekanja. Javit ćemo se čim se oslobodi mjesto.",
+      anyQuestions: "Ako imaš pitanja, odgovori na ovaj email.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Hvala što koristiš Amiquus!",
+      signature: "Srdačan pozdrav,<br/>Amiquus tim",
+      team: "— Amiquus tim",
+      needHelp: "Trebaš pomoć?",
+      hello: "Zdravo",
+    },
+  },
 };
