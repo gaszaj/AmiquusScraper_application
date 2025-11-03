@@ -22,6 +22,7 @@ import {
 } from "./libs/utils";
 import { emailService } from "./email-service";
 import Stripe from "stripe";
+import { sendTestEmail } from "./emailit-setup";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   console.warn(
@@ -609,6 +610,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.status(500).json({ message: "Failed to update profile." });
     }
   });
+
+  app.get("/api/test-email", async (req, res) => {
+    try {
+      await sendTestEmail();
+      res.status(200).json({ message: "Email sent successfully" });
+    } catch (error) {
+      console.error("Error sending test email:", error);
+    }
+  });
+
 
   app.post("/api/waitlist", async (req, res) => {
     try {

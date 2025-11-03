@@ -1,5 +1,5 @@
+import * as brevo from "@getbrevo/brevo";
 import { t } from "./utils/serverI18n";
-import { transporter, SENDER_EMAIL } from "./emailit-setup";
 
 // Interface for email service
 interface IEmailService {
@@ -9,6 +9,13 @@ interface IEmailService {
     language: string | undefined,
   ) => Promise<void>;
 }
+
+// Initialize Brevo API
+const apiInstance = new brevo.TransactionalEmailsApi();
+apiInstance.setApiKey(
+  brevo.TransactionalEmailsApiApiKeys.apiKey,
+  process.env.BREVO_API_KEY as string,
+);
 
 // Implementation of the email service
 class EmailService implements IEmailService {
@@ -36,18 +43,15 @@ class EmailService implements IEmailService {
         </div>
       `;
 
-      const mailOptions = {
-        from: `"Amiquus" <${SENDER_EMAIL}>`,
-        to: email,
-        subject: subject,
-        html: htmlContent,
+      const sendEmail: brevo.SendSmtpEmail = {
+        subject,
+        htmlContent,
+        sender: { name: "Amiquus", email: "info@amiquus.com" },
+        to: [{ email }],
       };
 
-      const fullResponse = await transporter.sendMail(mailOptions);
-      console.log(
-        `[EMAIL] Verification code sent to ${email}:`,
-        fullResponse.response,
-      );
+      const response = await apiInstance.sendTransacEmail(sendEmail);
+      console.log(`[EMAIL] Verification code sent to ${email}:`, response);
     } catch (error) {
       console.error("❌ Error sending verification email:", error);
     }
@@ -92,18 +96,21 @@ class EmailService implements IEmailService {
         </div>
       `;
 
-      const mailOptions = {
-        from: `"Amiquus" <${SENDER_EMAIL}>`,
-        to: email,
+      const sendEmail: brevo.SendSmtpEmail = {
         subject: `${subject} #${invoiceId}`,
-        html: htmlContent,
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [{ email }],
+        headers: {
+          "X-Mailin-custom": "invoice_email",
+        },
       };
 
-      const fullResponse = await transporter.sendMail(mailOptions);
-      console.log(
-        `[EMAIL] Invoice email sent to ${email}:`,
-        fullResponse.response,
-      );
+      const response = await apiInstance.sendTransacEmail(sendEmail);
+      console.log(`[EMAIL] Invoice email sent to ${email}:`, response);
     } catch (error) {
       console.error("❌ Error sending invoice email:", error);
     }
@@ -145,15 +152,21 @@ class EmailService implements IEmailService {
         </div>
       `;
 
-      const mailOptions = {
-        from: `"Amiquus" <${SENDER_EMAIL}>`,
-        to: email,
+      const sendEmail: brevo.SendSmtpEmail = {
         subject: `${subjectA} #${invoiceId} f${subjectB}`,
-        html: htmlContent,
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [{ email }],
+        headers: {
+          "X-Mailin-custom": "pending_invoice_email",
+        },
       };
 
-      const fullResponse = await transporter.sendMail(mailOptions);
-      console.log(`[EMAIL] Pending invoice email sent to ${email}:`, fullResponse.response);
+      const response = await apiInstance.sendTransacEmail(sendEmail);
+      console.log(`[EMAIL] Pending invoice email sent to ${email}:`, response);
     } catch (error) {
       console.error("❌ Error sending pending invoice email:", error);
     }
@@ -174,17 +187,28 @@ class EmailService implements IEmailService {
         </div>
       `;
 
-      const mailOptions = {
-        from: `"Amiquus" <${SENDER_EMAIL}>`,
-        to: `Gasper <gasper.zajc@gmail.com>`,
+      const sendEmail: brevo.SendSmtpEmail = {
         subject: `🚀 New Subscription - ${userEmail}`,
-        html: htmlContent,
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [
+          {
+            email: "gasper.zajc@gmail.com",
+            name: "Gasper",
+          },
+        ],
+        headers: {
+          "X-Mailin-custom": "admin_subscription_alert",
+        },
       };
 
-       const fullResponse = await transporter.sendMail(mailOptions);
+      const response = await apiInstance.sendTransacEmail(sendEmail);
       console.log(
         `[EMAIL] Admin notified of new subscription from ${userEmail}`,
-        fullResponse.response,
+        response,
       );
     } catch (error) {
       console.error("❌ Error sending admin subscription alert:", error);
@@ -208,17 +232,28 @@ class EmailService implements IEmailService {
         </div>
       `;
 
-      const mailOptions = {
-        from: `"Amiquus" <${SENDER_EMAIL}>`,
-        to: `Gasper <gasper.zajc@gmail.com>`,
+      const sendEmail: brevo.SendSmtpEmail = {
         subject: `🚀 New Waitlist Entry – ${userName}`,
-        html: htmlContent,
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [
+          {
+            email: "gasper.zajc@gmail.com",
+            name: "Gasper",
+          },
+        ],
+        headers: {
+          "X-Mailin-custom": "admin_waitlist_alert",
+        },
       };
 
-      const fullResponse = await transporter.sendMail(mailOptions);
+      const response = await apiInstance.sendTransacEmail(sendEmail);
       console.log(
         `[EMAIL] Admin notified of new waitlist signup: ${userEmail}`,
-        fullResponse.response,
+        response,
       );
     } catch (error) {
       console.error("❌ Error sending admin waitlist email:", error);
@@ -226,21 +261,20 @@ class EmailService implements IEmailService {
   }
 
   async sendCustomEmail(email: string, subject: string, htmlContent: string) {
-
-    const mailOptions = {
-      from: `"Amiquus" <${SENDER_EMAIL}>`,
-      to: email,
-      subject: subject,
-      html: htmlContent,
+    const sendEmail: brevo.SendSmtpEmail = {
+      subject,
+      htmlContent,
+      sender: { name: "Amiquus", email: "info@amiquus.com" },
+      to: [{ email }],
     };
 
-    await transporter.sendMail(mailOptions);
+    await apiInstance.sendTransacEmail(sendEmail);
   }
 
   async sendUserWaitlistConfirmation(
     userEmail: string,
     userName: string,
-    language: string | undefined,
+    language: string | undefined
   ): Promise<void> {
     try {
       const subject = t("emails.waitlist.subject", language);
@@ -261,17 +295,27 @@ class EmailService implements IEmailService {
         </div>
       `;
 
-      const mailOptions = {
-        from: `"Amiquus" <${SENDER_EMAIL}>`,
-        to: `${userName} <${userEmail}>`,
+      const sendEmail: brevo.SendSmtpEmail = {
         subject: subject,
-        html: htmlContent,
+        htmlContent,
+        sender: {
+          name: "Amiquus",
+          email: "info@amiquus.com",
+        },
+        to: [
+          {
+            email: userEmail,
+          },
+        ],
+        headers: {
+          "X-Mailin-custom": "user_waitlist_confirmation",
+        },
       };
-      
-       const fullResponse = await transporter.sendMail(mailOptions);
+
+      const response = await apiInstance.sendTransacEmail(sendEmail);
       console.log(
         `[EMAIL] Waitlist confirmation sent to ${userEmail}`,
-        fullResponse.response,
+        response,
       );
     } catch (error) {
       console.error("❌ Error sending user waitlist confirmation:", error);
