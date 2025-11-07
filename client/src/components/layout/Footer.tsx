@@ -110,7 +110,7 @@ export default function Footer() {
         
         <div className="border-t border-neutral-200 dark:border-neutral-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Amiquus. {t("footer.copyright")}</p>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <ScrollToTopLink href="/about" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
               {t("footer.about")}
             </ScrollToTopLink>
@@ -123,7 +123,7 @@ export default function Footer() {
             <ScrollToTopLink href="/support" className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors text-sm">
               {t("footer.support")}
             </ScrollToTopLink>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

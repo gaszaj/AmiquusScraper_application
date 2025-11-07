@@ -86,9 +86,8 @@ export default function Waitlist() {
       if (response.ok) {
         setSuccess(true);
         toast({
-          title: "You're on the list!",
-          description:
-            "Thanks for joining our waitlist. We'll notify you when a spot becomes available.",
+          title: t("waitlist.success.title"),
+          description: t("waitlist.success.message"),
         });
       } else {
         const error = await response.json();

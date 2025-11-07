@@ -675,6 +675,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
     });
   });
 
+  app.get("/api/customers", async (req, res) => {
+    if (!stripe) {
+      return res.status(500).json({ message: "Stripe is not configured" });
+    }
+
+    try {
+      const customers = await stripe.customers.list({
+        limit: 100, // max 100 per request
+      });
+
+      // You can format it if needed:
+      const simplified = customers.data.map((cust) => ({
+        id: cust.id,
+        name: cust.name,
+        email: cust.email,
+        created: cust.created,
+        metadata: cust.metadata,
+      }));
+
+      res.json({ customers: simplified });
+    } catch (error: any) {
+      console.error("Error fetching Stripe customers:", error);
+      res.status(500).json({ message: "Failed to retrieve customers" });
+    }
+  });
+
   app.post("/api/set-alerts-intent", async (req, res) => {
     try {
       if (!req.isAuthenticated()) {

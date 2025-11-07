@@ -22,6 +22,7 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   updateUser(id: number, data: Partial<InsertUser>): Promise<User>;
   updateUserGoogleId(userId: number, googleId: string): Promise<User>;
+  getUserByStripeCustomerId(stripeCustomerId: string): Promise<User | undefined>;
   updateUserStripeCustomerId(userId: number, customerId: string): Promise<User>;
 
   // Subscription operations
@@ -126,6 +127,15 @@ export class DrizzleStorage implements IStorage {
       .where(eq(users.id, userId))
       .returning();
     return updated;
+  }
+
+  async getUserByStripeCustomerId(stripeCustomerId: string): Promise<User | undefined> {
+    const result = await db
+      .select()
+      .from(users)
+      .where(eq(users.stripeCustomerId, stripeCustomerId))
+      .limit(1);
+    return result[0];
   }
 
   async updateUserStripeCustomerId(

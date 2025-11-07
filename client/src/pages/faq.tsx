@@ -2,10 +2,40 @@
 import { Helmet } from "react-helmet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/language-provider";
+import { useEffect, useState } from "react";
+import { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
+import { newcomerDefault } from "@/data/newcomer-default";
 
 
 export default function FAQ() {
   const { t } = useLanguage();
+
+  const [data, setData] = useState<NewComerResponse | null>(null);
+  const [loading, setLoading] = useState(true);
+   const [carBrands, setCarBrands] = useState<string[]>([]);
+
+  useEffect(() => {
+    fetch("/api/newcommer")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching data:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      if (data) {
+        setCarBrands(Object.keys(data.brands_and_models));
+      } else {
+    setCarBrands(Object.keys(newcomerDefault.brands_and_models));
+      }
+    }
+  }, [data, loading]);
 
   const renderList = (items: string[]) =>
     items.map((item, idx) => <li key={idx}>{item}</li>);
@@ -51,7 +81,9 @@ export default function FAQ() {
                  <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                   <p>{t("faqs.general.whichWebsites.answerIntro")}</p>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1">
-                    {renderList(t("faqs.general.whichWebsites.list", { returnObjects: true }))}
+                    {carBrands.map((brand, idx) => (
+                      <li key={idx}>{brand}</li>
+                    ))}
                   </ul>
                   <p className="mt-2">{t("faqs.general.whichWebsites.outro")}</p>
                 </AccordionContent>
