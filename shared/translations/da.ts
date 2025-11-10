@@ -1,9 +1,10 @@
+// === da.ts === Dansk
 export const da = {
   navigations: {
     features: "Funktioner",
-    how: "Sådan fungerer det",
+    how: "Hvordan det fungerer",
     pricing: "Priser",
-    getAlerts: "Få advarsler",
+    getAlerts: "Få alarmer",
     waitlist: "Venteliste",
     faq: "FAQ",
     login: "Log ind",
@@ -11,183 +12,176 @@ export const da = {
     subscribers: "Abonnenter",
     theme: "Tema",
     language: "Sprog",
-    myAlerts: "Mine advarsler",
+    myAlerts: "Mine alarmer",
     profile: "Profil",
     settings: "Indstillinger",
     logout: "Log ud",
     signUp: "Tilmeld dig",
   },
-
   hero: {
-    label: "Følg brugtbilsannoncer i realtid!",
-    title: "Gå aldrig glip af det perfekte biltilbud igen",
+    label: "Overvåg brugte bilannoncer i realtid!",
+    title: "Gå aldrig glip af det perfekte tilbud på din bil",
     subtitle:
-      "Amiquus giver dig straks besked, når din drømmebil dukker op på et af de mange bilsites, vi overvåger. Få notifikationer via Telegram i samme øjeblik, vi finder et match.",
-    button1: "Opret dine advarsler",
+      "Amiquus giver dig besked med det samme, når drømmebilen dukker op på flere sider. Få alarmer via Telegram, så snart der er et match.",
+    button1: "Opsæt alarmer",
     button2: "Se hvordan det fungerer",
     trustIndicators: {
-      websites: "15+ websites overvåges",
-      realtime: "Advarsler i realtid",
-      noSetup: "Ingen opsætning krævet",
-      cancelAnytime: "Afbestil når som helst",
+      websites: "Over 15 sider",
+      realtime: "Realtidsalarmer",
+      noSetup: "Ingen installation",
+      cancelAnytime: "Opsig når som helst",
     },
   },
-
   limited: {
     full: {
-      title: "Abonnementsgrænsen er nået",
+      title: "Abonnementsgrænse nået",
       description:
-        "Vi har nået kapaciteten på 30 aktive abonnenter. Tilmeld dig ventelisten for at få besked, når en plads bliver ledig.",
-      buttonText: "Tilmeld dig ventelisten",
+        "Vi har nået kapaciteten på 30 aktive abonnenter. Tilmeld dig ventelisten for at blive underrettet, når en plads bliver ledig.",
+      buttonText: "Tilmeld venteliste",
     },
     limited: {
       title: "Begrænset tilgængelighed",
       description:
-        "Kun {{remaining}} pladser tilbage ud af {{capacity}}. Tilmeld dig nu, før vi rammer loftet!",
-      buttonText: "Kom i gang nu",
+        "Kun {{remaining}} af {{capacity}} pladser tilbage. Abonnér nu, før de er væk!",
+      buttonText: "Start nu",
     },
     available: {
       title: "Abonnementer tilgængelige",
       description:
-        "{{active}} af {{capacity}} abonnementer er i brug. Der er god plads til dig!",
-      buttonText: "Kom i gang nu",
+        "{{active}} af {{capacity}} abonnementer er i øjeblikket aktive. Masser af plads til dig!",
+      buttonText: "Start nu",
     },
   },
-
   features: {
     heading: "Hvorfor vælge Amiquus?",
     subheading:
-      "Spar tid og gå aldrig glip af din perfekte bil med vores automatiske overvågning.",
+      "Spar tid og gå aldrig glip af den perfekte bil med vores automatiserede service.",
     multiSite: {
-      title: "Overvågning af flere sites",
+      title: "Multi-site overvågning",
       description:
-        "Hold øje med flere bilsites samtidigt uden at skulle tjekke hver enkelt manuelt.",
+        "Overvåg flere bilsider samtidigt uden at skulle tjekke hver enkelt manuelt.",
     },
     notifications: {
-      title: "Øjeblikkelige notifikationer",
+      title: "Øjeblikkelige alarmer",
       description:
-        "Modtag straks besked via Telegram, når en bil, der matcher dine kriterier, bliver sat til salg.",
+        "Få øjeblikkelige alarmer via Telegram, når en bil matcher dine kriterier.",
     },
     filters: {
-      title: "Tilpassede filtre",
+      title: "Tilpasselige filtre",
       description:
-        "Angiv præcise kriterier som mærke, model, årgang, kilometerstand og prisinterval for at finde det, du vil have.",
+        "Indstil præcise kriterier: mærke, model, årgang, kilometerstand, pris – find præcis, hvad du vil have.",
     },
     frequency: {
       title: "Justerbar frekvens",
       description:
-        "Vælg, hvor ofte vi skal tjekke for nye annoncer – fra timeopdateringer til overvågning i realtid.",
+        "Vælg, hvor ofte nye annoncer tjekkes – fra hver time til realtid.",
     },
     languages: {
-      title: "Understøttelse af flere sprog",
+      title: "Flersproget understøttelse",
       description:
-        "Modtag notifikationer på dit foretrukne sprog for nemmere forståelse af annoncer.",
+        "Få alarmer på dit foretrukne sprog for bedre forståelse af annoncer.",
     },
     account: {
-      title: "Nem kontoadministration",
+      title: "Nem kontohåndtering",
       description:
-        "Administrer flere søgeprofiler og opdater abonnementsindstillinger med få klik.",
+        "Håndter flere søgeprofiler og ændr dit abonnement med få klik.",
     },
   },
-
   howItWorks: {
-    title: "Sådan fungerer Amiquus",
+    title: "Hvordan Amiquus fungerer",
     subtitle:
-      "Opsæt én gang – lad vores automatiske system finde det bedste biltilbud til dig",
+      "Opsæt én gang og lad vores system finde det perfekte tilbud til dig",
     whyTitle: "Hvorfor vælge Amiquus?",
     steps: {
       preferences: {
-        title: "Angiv dine præferencer",
+        title: "Indstil dine præferencer",
         description:
-          "Vælg bilmærker, modeller, prisinterval og andre kriterier, du vil overvåge.",
+          "Vælg mærker, modeller, prisklasser og andre kriterier, der interesserer dig.",
       },
       telegram: {
         title: "Forbind Telegram",
         description:
-          "Link din Telegram-konto for at modtage øjeblikkelige notifikationer om nye annoncer.",
+          "Forbind din Telegram-konto for at få øjeblikkelige alarmer om nye annoncer.",
       },
       notifications: {
-        title: "Få notifikationer med det samme",
+        title: "Få øjeblikkelige alarmer",
         description:
-          "Modtag beskeder i samme øjeblik en bil, der matcher dine kriterier, dukker op på et af de sites, vi overvåger.",
+          "Få besked med det samme, når en matchende bil dukker op på en side.",
       },
       findCar: {
         title: "Find din perfekte bil",
         description:
-          "Vær den første, der ser nye annoncer – og sikre dig de bedste tilbud før andre.",
+          "Vær den første til at vide om nye annoncer og sikre de bedste tilbud.",
       },
     },
     features: [
-      "Overvåg mere end 15 bilsites samtidigt",
-      "Tilpas søgekriterier med avancerede filtre",
-      "Notifikationer i realtid via Telegram",
-      "Automatiske prisfalds- og nyhedsalarmer",
-      "Nem opsætning på under 5 minutter",
+      "Overvåg over 15 sider samtidigt",
+      "Tilpasselige søgekriterier med avanceret filtrering",
+      "Realtidsalarmer via Telegram",
+      "Automatiske alarmer for prisfald og nye annoncer",
+      "Nem opsætningsproces på under 5 minutter",
     ],
-    setAlerts: "Opret dine advarsler",
+    setAlerts: "Opsæt alarmer",
     notificationMockup1: {
-      title: "Nyt match fundet!",
-      description: "BMW 3-serie, 2019, $32.500 – Netop listet på AutoTrader",
+      title: "Ny match fundet!",
+      description:
+        "BMW 3-serie, 2019, 32.500 € – For nylig offentliggjort på AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram-advarsel",
+      title: "Telegram-alarm",
       description:
-        "Mercedes C-Klasse, 2020, 30.000 miles – Prisen faldt med $2.000",
+        "Mercedes C-klasse, 2020, 30.000 km – Pris sænket med 2.000 €",
     },
   },
-
   pricing: {
-    title: "Enkel og gennemsigtig pris",
+    title: "Enkle og gennemsigtige priser",
     subtitle:
-      "Vores priser tilpasses dine behov. Start med en basispakke og byg videre efter ønske.",
-    baseTitle: "Basispakke: $9.99/md.",
-    includedTitle: "Dette får du:",
+      "Vores priser er baseret på dine behov. Start med basisplanen og tilpas.",
+    baseTitle: "Basisplan: 79,99 €/måned",
+    includedTitle: "Inkluderet:",
     includedFeatures: [
-      "Overvågning af ét website",
-      "Timeopdateringer",
+      "Overvågning af én side",
+      "Opdateringer hver time",
       "Ubegrænsede filtre",
-      "Telegram-notifikationer",
+      "Alarmer via Telegram",
     ],
-    addonsTitle: "Tilvalg:",
+    addonsTitle: "Tilføjelser:",
     addons: [
-      { name: "Hvert ekstra website", price: 4.99 },
-      { name: "Opdatering hver 30. minut", price: 2.99 },
-      { name: "Opdatering hver 15. minut", price: 5.99 },
-      { name: "Opdatering hver 5. minut", price: 9.99 },
-      { name: "Opdatering hvert minut", price: 14.99 },
+      { name: "Hver ekstra side", price: 4.99 },
+      { name: "Opdateringer hver 30. minut", price: 2.99 },
+      { name: "Opdateringer hver 15. minut", price: 5.99 },
+      { name: "Opdateringer hver 5. minut", price: 9.99 },
+      { name: "Opdateringer hvert minut", price: 14.99 },
     ],
     footerNote:
-      "Alle planer inkluderer ubegrænsede søgekonfigurationer og nem abonnementsstyring.",
-    button: "Kom i gang nu",
+      "Alle planer inkluderer ubegrænsede søgeindstillinger og nem abonnementshåndtering.",
+    button: "Start nu",
   },
-
   signup: {
-    heading: "Opret din bilalarm",
-    subheading:
-      "Opsæt dine personlige notifikationer for brugtbilsannoncer på få trin.",
-    cta: "Få advarsler nu",
+    heading: "Opret bilalarm",
+    subheading: "Opsæt personlige alarmer for bilannoncer i få enkle trin.",
+    cta: "Få alarmer nu",
     waitlist: {
       message:
-        "Vi er i øjeblikket på fuld kapacitet. Tilmeld dig ventelisten for at få besked, når en plads bliver ledig.",
-      cta: "Tilmeld dig ventelisten",
+        "Vi er i øjeblikket fuldt booket. Tilmeld dig ventelisten for at blive underrettet, når en plads bliver ledig.",
+      cta: "Tilmeld venteliste",
     },
     toast: {
       success: {
         title: "Abonnement oprettet",
-        description: "Dit abonnement er oprettet.",
+        description: "Dit abonnement er blevet oprettet succesfuldt",
       },
       error: {
-        title: "Oprettelse mislykkedes",
-        description: "Vi kunne ikke oprette dit abonnement. Prøv igen senere.",
+        title: "Oprettelse af abonnement mislykkedes",
+        description: "Kunne ikke oprette abonnementet. Prøv igen senere.",
       },
     },
   },
-
   payment: {
     toast: {
       success: {
-        title: "Gennemført",
-        description: "Din betalingsmetode er sat op.",
+        title: "Succes",
+        description: "Din betalingsmetode er blevet opsat succesfuldt.",
       },
       error: {
         title: "Fejl",
@@ -199,109 +193,104 @@ export const da = {
       processing: "Behandler...",
     },
   },
-
   alertSchema: {
     errors: {
-      carBrand: "Bilmærke er påkrævet",
-      carModel: "Bilmodel er påkrævet",
+      carBrand: "Bilens mærke er påkrævet",
+      carModel: "Bilens model er påkrævet",
       fuelType: "Brændstoftype er påkrævet",
-      priceMin: "Mindstepris skal være et tal",
-      priceMax: "Højestepris skal være et tal",
-      yearMin: "Mindste år skal være gyldigt",
-      yearMax: "Højeste år skal være gyldigt",
-      maxKilometers: "Maks. kilometer skal være et tal",
+      priceMin: "Minimumspris skal være et tal",
+      priceMax: "Maksimumspris skal være et tal",
+      yearMin: "Minimum årgang skal være gyldig",
+      yearMax: "Maksimum årgang skal være gyldig",
+      maxKilometers: "Maksimum kilometerstand skal være et tal",
       telegramUsername: "Telegram-brugernavn er påkrævet",
-      telegramToken: "Telegram-bottoken er påkrævet",
-      telegramChatId: "Telegram chat-ID er påkrævet",
-      websitesSelected: "Mindst ét website skal vælges",
-      notificationLanguage: "Notifikationssprog er påkrævet",
+      telegramToken: "Telegram-bot-token er påkrævet",
+      telegramChatId: "Telegram-chat-ID er påkrævet",
+      websitesSelected: "Du skal vælge mindst én side",
+      notificationLanguage: "Alarm sprog er påkrævet",
       facebookMarketplaceUrl:
-        "Facebook Marketplace-URL er påkrævet, når Facebook er valgt",
+        "Facebook Marketplace URL er påkrævet, hvis Facebook er valgt",
     },
   },
-
   personalInfo: {
     heading: "Personlige oplysninger",
     description:
-      "Angiv dine oplysninger, så vi kan opsætte dine notifikationer korrekt.",
+      "Indtast dine personlige oplysninger for at opsætte dine alarmer korrekt.",
     labels: {
       firstName: "Fornavn",
       lastName: "Efternavn",
       email: "E-mailadresse",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com",
+      firstName: "Jens",
+      lastName: "Hansen",
+      email: "jens.hansen@eksempel.dk",
     },
     errors: {
       firstName: "Fornavn er påkrævet",
       lastName: "Efternavn er påkrævet",
-      email: "Indtast en gyldig e-mail",
+      email: "Indtast en gyldig e-mailadresse",
     },
     actions: {
-      login: "Log ind eller opret konto for at fortsætte",
+      login: "Log ind eller tilmeld dig for at fortsætte",
       continue: "Fortsæt",
     },
   },
-
   websiteSelection: {
-    heading: "Valg af websites",
-    description:
-      "Vælg de websites, du vil overvåge, og hvor ofte du vil have opdateringer.",
+    heading: "Sidevalg",
+    description: "Vælg siderne at overvåge og den ønskede opdateringsfrekvens.",
     labels: {
-      websites: "Websites der overvåges",
-      facebookUrl: "Facebook Marketplace-URL",
+      websites: "Sider at overvåge",
+      facebookUrl: "Facebook Marketplace URL",
       updateFrequency: "Opdateringsfrekvens",
     },
     placeholders: {
       frequency: "Vælg frekvens",
     },
     help: {
-      websites:
-        "Vælg et eller flere websites, der skal overvåges for bilannoncer.",
+      websites: "Vælg en eller flere sider til at overvåge bilannoncer.",
       facebookUrl:
-        "Indsæt URL’en til dine søgeresultater på Facebook Marketplace.",
-      videoTitle: "Brug for hjælp til at finde din Marketplace-søge-URL?",
-      videoDesc: "Se videoen for trin-for-trin vejledning.",
+        "Indsæt URL'en til dine søgeresultater på Facebook Marketplace.",
+      videoTitle:
+        "Har du brug for hjælp til at finde Facebook Marketplace-linket?",
+      videoDesc: "Se videoen nedenfor for trin-for-trin-instruktioner.",
       updateFrequency:
-        "Hvor ofte skal vi tjekke efter nye annoncer? Højere frekvens kan koste mere.",
+        "Hvor ofte tjekker vi nye annoncer? Højere frekvenser kan koste mere.",
     },
     errors: {
-      websites: "Mindst ét website skal vælges",
+      websites: "Du skal vælge mindst én side",
       facebookUrl:
-        "Facebook Marketplace-URL er påkrævet, når Facebook er valgt",
+        "Facebook Marketplace URL er påkrævet, hvis Facebook er valgt",
     },
     actions: {
-      previous: "Tilbage",
+      previous: "Forrige",
       continue: "Fortsæt",
     },
   },
-
   carDetails: {
     heading: "Bildetaljer",
     description:
-      "Angiv de detaljer, du leder efter. Alle felter er valgfrie – lad dem være tomme for bredere resultater.",
+      "Angiv detaljerne for den bil, du søger. Alle felter er valgfrie – lad være tomme for bredere resultater.",
     labels: {
       carBrand: "Bilmærke",
       carModel: "Bilmodel",
       fuelType: "Brændstoftype",
-      priceMin: "Mindstepris",
-      priceMax: "Højestepris",
-      yearMin: "Mindste år",
-      yearMax: "Højeste år",
-      maxKilometers: "Maks. kilometer",
+      priceMin: "Minimumspris",
+      priceMax: "Maksimumspris",
+      yearMin: "Minimum årgang",
+      yearMax: "Maksimum årgang",
+      maxKilometers: "Maksimum kilometerstand",
     },
     placeholders: {
-      carBrand: "Vælg bilmærke",
-      carModel: "Vælg bilmodel",
-      carModelDisabled: "Vælg først bilmærke",
+      carBrand: "Vælg mærke",
+      carModel: "Vælg model",
+      carModelDisabled: "Vælg mærke først",
       fuelType: "Vælg brændstoftype",
-      priceMin: "Indtast mindstepris",
-      priceMax: "Indtast højestepris",
-      yearMin: "Indtast mindste år",
-      yearMax: "Indtast højeste år",
-      maxKilometers: "Indtast maks. kilometer",
+      priceMin: "Indtast minimumspris",
+      priceMax: "Indtast maksimumspris",
+      yearMin: "Indtast minimum årgang",
+      yearMax: "Indtast maksimum årgang",
+      maxKilometers: "Indtast maksimum kilometerstand",
     },
     options: {
       noModelsAvailable: "Ingen modeller tilgængelige",
@@ -310,127 +299,124 @@ export const da = {
       carBrand: "Bilmærke er påkrævet",
       carModel: "Bilmodel er påkrævet",
       fuelType: "Brændstoftype er påkrævet",
-      priceMin: "Mindstepris skal være et tal",
-      priceMax: "Højestepris skal være et tal",
-      yearMin: "Mindste år skal være gyldigt",
-      yearMax: "Højeste år skal være gyldigt",
-      maxKilometers: "Maks. kilometer skal være et tal",
+      priceMin: "Minimumspris skal være et tal",
+      priceMax: "Maksimumspris skal være et tal",
+      yearMin: "Minimum årgang skal være gyldig",
+      yearMax: "Maksimum årgang skal være gyldig",
+      maxKilometers: "Maksimum kilometerstand skal være et tal",
     },
     actions: {
-      previous: "Tilbage",
+      previous: "Forrige",
       continue: "Fortsæt",
     },
   },
-
   telegram: {
-    heading: "Telegram-opsætning",
-    description:
-      "Opsæt Telegram-notifikationer ved at angive din bottoken og chat-ID.",
+    heading: "Telegram-konfiguration",
+    description: "Opsæt Telegram-alarmer ved at indtaste bot-token og chat-ID.",
     subHeading: "Opsæt din Telegram-bot",
-    info: "Hvis du har problemer med at oprette en bot, så kontakt os – vi ringer til dig og hjælper.",
+    info: "Problemer med at oprette en Telegram-bot? Kontakt os, så hjælper vi dig.",
     contact: "Kontakt os",
     instructions: {
-      botTitle: "Sådan får du en Telegram-bottoken:",
+      botTitle: "Hvordan du får Telegram-bot-token:",
       botStep1: "Åbn Telegram og søg efter @BotFather",
       botStep2: "Send kommandoen /newbot",
-      botStep3: "Følg instruktionerne for at oprette en bot",
-      botStep4: "Kopiér tokenen fra BotFather",
+      botStep3: "Følg instruktionerne for at oprette botten",
+      botStep4: "Kopier token, som BotFather giver dig",
 
-      chatTitle: "Sådan finder du dit Telegram chat-ID:",
+      chatTitle: "Hvordan du får dit Telegram-chat-ID:",
       chatStep1: "Åbn Telegram og søg efter @userinfobot",
       chatStep2: "Send en vilkårlig besked til botten",
-      chatStep3: "Botten svarer med dine oplysninger, inkl. dit chat-ID",
-      chatStep4: "Kopiér chat-ID’et (det er et tal)",
+      chatStep3: "Botten svarer med dine oplysninger, inklusive chat-ID",
+      chatStep4: "Kopier chat-ID (et tal)",
     },
 
-    videoPrompt:
-      "Brug for hjælp til at opsætte din Telegram-bottoken og dit chat-ID?",
-    videoDescription: "Se videoen herunder for en trin-for-trin guide.",
+    videoPrompt: "Har du brug for hjælp til at opsætte bot-token og chat-ID?",
+    videoDescription: "Se videoen nedenfor for trin-for-trin-instruktioner.",
 
     labels: {
-      token: "Telegram-bottoken",
-      chatId: "Dit Telegram chat-ID",
-      language: "Notifikationssprog",
+      token: "Telegram-bot-token",
+      chatId: "Dit Telegram-chat-ID",
+      language: "Alarm sprog",
       username: "Telegram-brugernavn",
     },
 
     placeholders: {
-      token: "Indtast din bottoken fra BotFather",
-      chatId: "Indtast dit Telegram chat-ID",
-      language: "Vælg sprog til beskeder",
+      token: "Indtast din bot-token fra BotFather",
+      chatId: "Indtast dit Telegram-chat-ID",
+      language: "Vælg sprog for Telegram-beskeder",
       username: "Indtast dit Telegram-brugernavn",
     },
     usernameDescription:
-      "Dette er brugernavnet på din Telegram-konto (uden @).",
+      "Dette er brugernavnet på din Telegram-konto (uden @-tegnet).",
     examples: {
       token: "Eksempel: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "Du kan finde dette ved at skrive til @userinfobot på Telegram",
+      chatId: "Få dette ved at sende en besked til @userinfobot på Telegram",
     },
-    setupTitle: "Opsætningsvejledning:",
+    setupTitle: "Opsætningsinstruktioner:",
     setupSteps: [
       'Åbn Telegram og søg efter "BotFather"',
-      'Start en chat med BotFather ved at klikke "Start"',
-      "Skriv /newbot og følg instruktionerne for at oprette en ny bot",
+      'Start en samtale med BotFather ved at klikke på "Start"',
+      "Indtast /newbot og følg instruktionerne for at oprette en ny bot",
       "Vælg et navn til din bot",
-      "Vælg et brugernavn til din bot (skal ende på 'bot')",
-      "Kopiér API-tokenen, du får af BotFather",
-      "Send en besked til din nye bot for at aktivere chatten",
+      "Vælg et brugernavn til botten (skal ende med 'bot')",
+      "Kopier API-token, som BotFather giver dig",
+      "Send en besked til din nye bot for at aktivere samtalen",
     ],
-    chatIdTitle: "Sådan finder du dit Telegram chat-ID:",
+    chatIdTitle: "Hvordan du får dit Telegram-chat-ID:",
     chatIdSteps: [
       'Åbn Telegram og søg efter "userinfobot"',
       "Send en vilkårlig besked til botten",
-      "Botten svarer med dine oplysninger inklusive chat-ID",
-      "Kopiér dit chat-ID",
+      "Botten svarer med dine oplysninger, inklusive chat-ID",
+      "Kopier dit chat-ID",
     ],
-    helpTitle:
-      "Brug for hjælp til at opsætte din Telegram-bottoken og dit chat-ID?",
-    helpDescription: "Se videoen herunder for en trin-for-trin guide.",
-    botTokenLabel: "Telegram-bottoken",
-    botTokenPlaceholder: "Indsæt token fra BotFather",
+    helpTitle: "Har du brug for hjælp til at opsætte bot-token og chat-ID?",
+    helpDescription: "Se videoen nedenfor for trin-for-trin-instruktioner.",
+    botTokenLabel: "Telegram-bot-token",
+    botTokenPlaceholder: "Indtast din bot-token fra BotFather",
     botTokenExample:
       "Eksempel: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Dit Telegram chat-ID",
-    chatIdPlaceholder: "Indtast dit Telegram chat-ID",
+    chatIdLabel: "Dit Telegram-chat-ID",
+    chatIdPlaceholder: "Indtast dit Telegram-chat-ID",
     chatIdDescription:
-      "Du kan få det ved at skrive til @userinfobot på Telegram",
-    languageLabel: "Notifikationssprog",
-    languagePlaceholder: "Vælg sprog til beskeder",
+      "Få dette ved at sende en besked til @userinfobot på Telegram",
+    languageLabel: "Alarm sprog",
+    languagePlaceholder: "Vælg sprog for Telegram-beskeder",
     languages: {
-      en: "English",
-      de: "Deutsch",
-      fr: "Français",
-      es: "Español",
-      it: "Italiano",
+      en: "Engelsk",
+      de: "Tysk",
+      fr: "Fransk",
+      es: "Spansk",
+      it: "Italiensk",
+      nl: "Nederlandsk",
+      sv: "Svensk",
+      da: "Dansk",
     },
-    previewTitle: "Forhåndsvis Telegram-beskeder",
-    carAlertTitle: "🚗 Ny bilalarm!",
+    previewTitle: "Forhåndsvisning af Telegram-alarm",
+    carAlertTitle: "Ny bilalarm!",
     priceLabel: "Pris: {{price}}",
     kilometresLabel: "Kilometer: {{kms}}",
-    locationLabel: "Lokation: {{location}}",
-    viewListing: "Se annoncen →",
+    locationLabel: "Placering: {{location}}",
+    viewListing: "Se annonce →",
     errors: {
-      token: "Telegram-bottoken er påkrævet",
-      chatId: "Telegram chat-ID er påkrævet",
-      language: "Notifikationssprog er påkrævet",
+      token: "Telegram-bot-token er påkrævet",
+      chatId: "Telegram-chat-ID er påkrævet",
+      language: "Alarm sprog er påkrævet",
       username: "Telegram-brugernavn er påkrævet",
     },
 
     actions: {
-      previous: "Tilbage",
+      previous: "Forrige",
       continue: "Fortsæt",
     },
     contactBotInstruction:
-      "Start en chat med vores Telegram-bot via linket herunder og send en besked:",
+      "Start en samtale med vores Telegram-bot ved at klikke på linket nedenfor og sende en besked:",
     contactBotNote:
-      "Dette er nødvendigt for at modtage bilalarmer. Du kan scanne QR-koden, hvis du er på desktop.",
-    confirmContact: "Jeg har startet en chat med botten og sendt en besked",
+      "Dette er påkrævet for at modtage bilalarmer. Hvis du er på computeren, scan QR-koden.",
+    confirmContact: "Jeg har startet en samtale med botten og sendt en besked",
   },
-
   review: {
-    title: "Gennemse dit abonnement",
-    description:
-      "Tjek dine abonnementsdetaljer, før du går videre til betaling.",
+    title: "Oversigt over dit abonnement",
+    description: "Gennemgå abonnementsdetaljer før betaling.",
 
     personal: {
       title: "Personlige oplysninger",
@@ -440,100 +426,99 @@ export const da = {
 
     monitoring: {
       title: "Overvågningsindstillinger",
-      websites: "Websites",
-      facebookUrl: "Facebook-URL",
+      websites: "Sider",
+      facebookUrl: "Facebook URL",
       updateFrequency: "Opdateringsfrekvens",
     },
 
     specs: {
-      title: "Bildata",
+      title: "Bilspecifikationer",
       brand: "Mærke",
       model: "Model",
       fuelType: "Brændstoftype",
       yearRange: "Årgang",
-      mileage: "Kilometertal (km)",
-      price: "Prisinterval (€)",
+      mileage: "Kilometer (km)",
+      price: "Pris (€)",
     },
 
     notification: {
-      title: "Notifikationsindstillinger",
+      title: "Alarmindstillinger",
       telegram: "Telegram-bot",
-      language: "Sprog for notifikationer",
+      language: "Alarm sprog",
     },
 
     summary: {
       title: "Abonnementsoversigt",
       base: "Basisabonnement",
-      extraWebsites: "Ekstra websites",
-      frequencyUpgrade: "Frekvens-opgradering",
+      extraWebsites: "Ekstra sider",
+      frequencyUpgrade: "Frekvensopgradering",
       total: "Total (månedligt)",
     },
 
     terms: {
       checkbox: "Jeg accepterer",
-      tos: "Vilkår og betingelser",
+      tos: "Brugervilkår",
       privacy: "Privatlivspolitik",
-      note: "Dit abonnement fornyes automatisk hver måned. Du kan afbestille når som helst.",
-      error: "Du skal acceptere vilkår og betingelser",
+      note: "Dit abonnement fornyes automatisk hver måned. Du kan opsige når som helst.",
+      error: "Du skal acceptere brugervilkårene",
     },
 
     actions: {
-      previous: "Tilbage",
-      submit: "Fortsæt til betaling",
+      previous: "Forrige",
+      submit: "Gå til bet Cervaling",
     },
   },
-
   faq: {
     title: "Ofte stillede spørgsmål",
-    subtitle: "Find svar på de mest almindelige spørgsmål om vores tjeneste.",
+    subtitle: "Find svar på de mest almindelige spørgsmål om vores service.",
     contactPrompt: "Har du stadig spørgsmål?",
-    contactLink: "Kontakt vores supportteam",
+    contactLink: "Kontakt vores support",
     questions: [
       {
         question:
-          "Hvor hurtigt får jeg notifikationer efter en ny annonce er lagt op?",
+          "Hvor hurtigt får jeg alarmer efter, at en ny annonce er offentliggjort?",
         answer:
-          "Hastigheden afhænger af din valgte opdateringsfrekvens. Med standardplanen (hver time) modtager du notifikationer inden for en time. For næsten realtid kan du opgradere til hyppigere opdateringer.",
+          "Alarmhastigheden afhænger af den valgte opdateringsfrekvens. Med timeplanen får du alarmer inden for en time efter offentliggørelse. For næsten øjeblikkelige alarmer (inden for få minutter), opgrader til hyppigere planer.",
       },
       {
-        question: "Kan jeg spore flere typer biler på samme tid?",
+        question: "Kan jeg overvåge flere forskellige biltyper samtidigt?",
         answer:
-          "Ja! Du kan oprette flere søgeprofiler med forskellige kriterier. Hver profil tæller som et separat abonnement, men du kan administrere dem alle fra én konto.",
+          "Ja! Du kan oprette flere søgeprofiler med forskellige kriterier. Hver profil tæller som et separat abonnement, men du håndterer dem alle fra én konto.",
       },
       {
-        question: "Hvilke websites understøtter I?",
+        question: "Hvilke sider understøtter I i øjeblikket?",
         answer:
-          "Vi understøtter i øjeblikket større platforme som AutoTrader, CarGurus, Cars.com og Facebook Marketplace. Vi udvider løbende dækningen baseret på efterspørgsel og popularitet.",
+          "Vi understøtter i øjeblikket de store platforme, herunder AutoTrader, CarGurus, Cars.com og Facebook Marketplace. Vi tilføjer løbende nye sider på anmodning.",
       },
       {
-        question: "Kræver Telegram-botten teknisk kunnen?",
+        question: "Har jeg brug for tekniske færdigheder til Telegram-botten?",
         answer:
-          "Slet ikke! Vi har trin-for-trin vejledninger med både tekst og video. De fleste er færdige på under 5 minutter – uden teknisk baggrund.",
+          "Nej! Vi giver detaljerede instruktioner med tekst og video. De fleste brugere opsætter botten på under 5 minutter.",
       },
       {
-        question: "Kan jeg ændre mine søgekriterier efter opsætning?",
+        question:
+          "Kan jeg ændre søgekriterierne efter opsætning af abonnementet?",
         answer:
-          "Ja, du kan til enhver tid ændre kriterier fra dit dashboard. Ændringer træder i kraft med det samme.",
+          "Ja, du kan ændre kriterierne når som helst i dashboardet. Ændringerne træder i kraft med det samme.",
       },
       {
-        question: "Hvordan annullerer jeg mit abonnement?",
+        question: "Hvordan opsiger jeg abonnementet?",
         answer:
-          'Du kan annullere når som helst fra dit dashboard. Gå til "Abonnementer", vælg det relevante abonnement og klik "Annullér". Tjenesten fortsætter til udgangen af den aktuelle betalingsperiode.',
+          'Du kan opsige abonnementet når som helst i afsnittet "Abonnementer" i dashboardet. Tjenesten forbliver aktiv indtil udgangen af faktureringsperioden.',
       },
     ],
   },
-
   footer: {
     brandTitle: "Amiquus",
     brandDescription:
-      "Din personlige assistent til at finde det rette brugtbilstilbud på det rette tidspunkt.",
+      "Din personlige assistent til at finde det perfekte brugte biltilbud på det rigtige tidspunkt.",
     quickLinks: "Hurtige links",
     features: "Funktioner",
     pricing: "Priser",
     faq: "FAQ",
     getStarted: "Kom i gang",
     legal: "Juridisk",
-    terms: "Vilkår og betingelser",
+    terms: "Brugervilkår",
     privacy: "Privatlivspolitik",
     cookies: "Cookiepolitik",
     gdpr: "GDPR-overholdelse",
@@ -543,36 +528,34 @@ export const da = {
     copyright: "Alle rettigheder forbeholdes.",
     about: "Om os",
     blog: "Blog",
-    careers: "Karriere",
+    careers: "Karrierer",
     support: "Support",
   },
-
   login: {
-    title: "Log ind på din konto",
+    title: "Log ind på konto",
     description:
-      "Indtast din e-mail og adgangskode for at få adgang til dit dashboard",
+      "Indtast e-mail og adgangskode for at få adgang til dashboardet",
     emailLabel: "E-mail",
     passwordLabel: "Adgangskode",
     loginButton: "Log ind",
     loggingIn: "Logger ind...",
     loginWithGoogle: "Log ind med Google",
     or: "eller",
-    noAccount: "Har du ikke en konto?",
-    registerLink: "Registrér",
-    successTitle: "Login lykkedes",
-    successMessage: "Du er logget ind.",
-    errorTitle: "Login mislykkedes",
+    noAccount: "Har du ingen konto?",
+    registerLink: "Tilmeld dig",
+    successTitle: "Logget ind succesfuldt",
+    successMessage: "Du er blevet logget ind succesfuldt.",
+    errorTitle: "Log ind mislykkedes",
     genericError: "Tjek dine oplysninger og prøv igen.",
     errors: {
       invalidEmail: "Indtast en gyldig e-mailadresse",
-      shortPassword: "Adgangskoden skal være mindst 6 tegn",
+      shortPassword: "Adgangskoden skal have mindst 6 tegn",
     },
   },
-
   register: {
-    title: "Opret en konto",
-    description: "Tilmeld dig og begynd at spore din drømmebil",
-    google: "Tilmeld med Google",
+    title: "Opret konto",
+    description: "Tilmeld dig og begynd at søge efter drømmebilen",
+    google: "Tilmeld dig med Google",
     orContinue: "Eller fortsæt med",
     firstName: "Fornavn",
     lastName: "Efternavn",
@@ -581,7 +564,7 @@ export const da = {
     password: "Adgangskode",
     confirmPassword: "Bekræft adgangskode",
     termsNotice: "Jeg accepterer",
-    termsOfService: "Vilkår og betingelser",
+    termsOfService: "Brugervilkår",
     privacyPolicy: "Privatlivspolitik",
     createBtn: "Opret konto",
     alreadyHave: "Har du allerede en konto?",
@@ -590,41 +573,40 @@ export const da = {
     toast: {
       missingFields: {
         title: "Manglende felter",
-        desc: "Udfyld venligst alle påkrævede felter",
+        desc: "Udfyld alle påkrævede felter",
       },
       invalidUsername: {
         title: "Ugyldigt brugernavn",
-        desc: "Brugernavn skal være alfanumerisk og 3–20 tegn",
+        desc: "Brugernavnet skal være alfanumerisk og mellem 3 og 20 tegn",
       },
       passwordMismatch: {
         title: "Adgangskoder matcher ikke",
-        desc: "Sørg for, at adgangskoderne er ens",
+        desc: "Sørg for, at adgangskoderne matcher",
       },
       termsNotAccepted: {
         title: "Vilkår ikke accepteret",
-        desc: "Du skal acceptere vilkår og privatlivspolitik for at fortsætte",
+        desc: "Du skal acceptere brugervilkårene og privatlivspolitikken for at fortsætte",
       },
       success: {
-        title: "Registrering lykkedes",
-        desc: "Velkommen til Amiquus! Du viderestilles for e-mailbekræftelse.",
+        title: "Tilmelding lykkedes",
+        desc: "Velkommen til Amiquus! Du omdirigeres til e-mailbekræftelse.",
       },
       failure: {
-        title: "Registrering mislykkedes",
+        title: "Tilmelding mislykkedes",
         desc: "Tjek dine oplysninger og prøv igen",
       },
     },
   },
-
   verifyEmail: {
-    title: "Bekræft din e-mail",
-    description: "En bekræftelseskode er sendt til din e-mail.",
+    title: "Bekræft e-mail",
+    description: "Vi har sendt en bekræftelseskode til din e-mailadresse.",
     codeLabel: "Bekræftelseskode",
     verifyButton: "Bekræft e-mail",
     updateEmailLabel: "Opdater e-mail",
     updateEmailButton: "Opdater e-mail",
-    resendButton: "Gensend kode",
-    resendCountdown: "Du kan gensende koden om {{seconds}} s",
-    footerNote: "Modtog du ikke koden? Tjek din spammappe.",
+    resendButton: "Send kode igen",
+    resendCountdown: "Du kan sende koden igen om {{seconds}}s",
+    footerNote: "Fik du ingen kode? Tjek din spam-mappe.",
     toast: {
       verified: "E-mail bekræftet",
       failed: "Bekræftelse mislykkedes",
@@ -633,61 +615,58 @@ export const da = {
       invalidEmail: "Ugyldig e-mail",
       enterValidEmail: "Indtast en gyldig e-mailadresse",
       sameEmail: "Samme e-mail",
-      sameEmailDesc: "Den nye e-mail er den samme som den nuværende",
+      sameEmailDesc: "Den nye e-mail er identisk med den nuværende",
       emailUpdated: "E-mail opdateret",
     },
   },
-
   dashboardPayment: {
     add: "Tilføj betalingsmetode",
     description:
-      "Tilføj et nyt kredit- eller debetkort til dine abonnementsbetalinger.",
+      "Tilføj et nyt kredit- eller debetkort til abonnementsbetalinger.",
     processing: "Behandler...",
     errorTitle: "Fejl ved tilføjelse af betalingsmetode",
     errorMessage: "Der opstod en uventet fejl",
     initError: {
       title: "Fejl",
-      description: "Kunne ikke initialisere betalingsopsætning",
+      description: "Kunne ikke initialisere betalingsindstillinger",
     },
   },
-
   dashboard: {
     subscriptionCard: {
-      years: "År",
+      years: "Årgange",
       priceRange: "Pris",
-      websites: "Websites",
+      websites: "Sider",
       updates: "Opdateringer",
       language: "Sprog",
       price: "Pris",
       edit: "Rediger",
-      cancelAlert: "Annullér alarm",
-      cancelTitle: "Annullér bilalarm",
+      cancelAlert: "Annuller alarm",
+      cancelTitle: "Annuller bilalarm",
       cancelDescription:
-        "Er du sikker på, at du vil annullere din bilalarm for {{brand}} {{model}}? Dette stopper alle notifikationer, og du skal oprette en ny alarm for at overvåge denne bil igen.",
-      keepMyAlert: "Behold min alarm",
-      confirmCancel: "Annullér alarm",
+        "Er du sikker på, at du vil annullere alarmen for {{brand}} {{model}}? Dette stopper alle alarmer, og du skal opsætte alarmen igen.",
+      keepMyAlert: "Behold alarm",
+      confirmCancel: "Annuller alarm",
     },
     paymentMethodCard: {
       expires: "Udløber",
       default: "Standard",
-      setAsDefault: "Sæt som standard",
+      setAsDefault: "Angiv som standard",
       remove: "Fjern",
-      setDefaultTitle: "Sæt som standardbetalingsmetode",
+      setDefaultTitle: "Angiv standard betalingsmetode",
       setDefaultDescription:
-        "Vil du sætte {{brand}}-kortet med endecifre {{last4}} som standard? Dette kort bruges til fremtidige betalinger.",
+        "Vil du angive kortet {{brand}}, der slutter på {{last4}}, som standard betalingsmetode? Dette kort vil blive brugt til alle fremtidige betalinger.",
       removeTitle: "Fjern betalingsmetode",
       removeDescription:
-        "Er du sikker på, at du vil fjerne dit {{brand}}-kort med endecifre {{last4}}?",
+        "Er du sikker på, at du vil fjerne kortet {{brand}}, der slutter på {{last4}}?",
       removeWarning:
-        "Dette er din standardmetode – fjernelse kan påvirke aktive abonnementer.",
-      cancel: "Annullér",
+        "Dette er din standard betalingsmetode, og fjernelse kan påvirke aktive abonnementer.",
+      cancel: "Annuller",
       confirmRemove: "Fjern kort",
     },
   },
-
   profile: {
     tabs: {
-      alerts: "Mine advarsler",
+      alerts: "Mine alarmer",
       payments: "Betalingsmetoder",
     },
     sidebar: {
@@ -695,21 +674,21 @@ export const da = {
       subscriptions: "Abonnementer",
       methods: "Betalingsmetoder",
       account: "Kontoindstillinger",
-      privacy: "Privatliv & sikkerhed",
+      privacy: "Privatliv og sikkerhed",
       logout: "Log ud",
     },
     account: {
       title: "Kontoindstillinger",
-      desc: "Opdater dine konto-oplysninger og præferencer.",
+      desc: "Opdater dine kontooplysninger og indstillinger.",
       name: "Navn",
       email: "E-mail",
       username: "Brugernavn",
-      cancel: "Annullér",
+      cancel: "Annuller",
       save: "Gem ændringer",
     },
     security: {
-      title: "Privatliv & sikkerhed",
-      desc: "Administrer sikkerhedsindstillinger og privatlivspræferencer.",
+      title: "Privatliv og sikkerhed",
+      desc: "Håndter sikkerheds- og privatlivsindstillinger.",
       current: "Nuværende adgangskode",
       new: "Ny adgangskode",
       confirm: "Bekræft ny adgangskode",
@@ -718,77 +697,71 @@ export const da = {
     logout: {
       title: "Log ud",
       desc: "Er du sikker på, at du vil logge ud?",
-      success: "Du er logget ud.",
+      success: "Du er blevet logget ud succesfuldt.",
     },
     alerts: {
-      title: "Abonnementer på bilalarmer",
-      desc: "Administrer dine bilalarmer og notifikationspræferencer.",
+      title: "Bilalarmsabonnementer",
+      desc: "Håndter dine alarmer og alarmindstillinger.",
       add: "Tilføj ny alarm",
       none: "Du har ingen aktive bilalarmer.",
       cta: "Opret din første alarm",
       warning:
-        "⚠️ Ændringer i dit abonnement gælder fra næste faktureringsperiode og først efter en gennemført betaling. Ved mislykket betaling forbliver den nuværende opsætning uændret.",
+        "⚠️ Ændringer i abonnementet træder i kraft i næste faktureringscyklus og kun efter en succesfuld betaling. Ved mislykket betaling bevares den nuværende konfiguration.",
     },
     payments: {
       title: "Betalingsmetoder",
-      desc: "Administrer betalingsmetoder til abonnementer.",
+      desc: "Håndter betalingsmetoder til abonnementer.",
       none: "Du har ingen gemte betalingsmetoder.",
-      encrypted:
-        "Dine betalingsoplysninger er krypterede og opbevares sikkert.",
+      encrypted: "Dine betalingsoplysninger er krypteret og sikkert lagret.",
     },
   },
-
   setupAlerts: {
-    title: "Opsæt dine bilalarmer",
-    subtitle:
-      " Konfigurer din Telegram-bot for at modtage notifikationer om din drømmebil",
+    title: "Opsæt bilalarmer",
+    subtitle: "Opsæt din Telegram-bot for at få alarmer om drømmebilen",
     basicPlan: "Basisplan",
-    baseTitle: "$9.99/md.",
-    button: "Start min bilalarmtjeneste",
-    cancel: "Afbestil når som helst",
+    baseTitle: "79,99 €/måned",
+    button: "Start bilalarmstjeneste",
+    cancel: "Opsig når som helst",
     toasts: {
       terms: {
         title: "Vilkår ikke accepteret",
-        description: "Du skal acceptere vilkårene for at fortsætte",
+        description: "Du skal acceptere brugervilkårene for at fortsætte",
       },
       success: {
         title: "Abonnement oprettet",
-        description: "Dit abonnement er oprettet.",
+        description: "Dit abonnement er blevet oprettet succesfuldt",
       },
       error: {
-        title: "Fejl ved oprettelse",
+        title: "Fejl ved oprettelse af abonnement",
       },
       contactBot: {
-        title: "Kontakt bot påkrævet",
+        title: "Botkontakt påkrævet",
         description:
-          "Du skal starte en chat med vores Telegram-bot og sende en besked for at modtage bilalarmer. Følg instruktionerne nedenfor.",
+          "For at modtage bilalarmer skal du starte en samtale med vores Telegram-bot og sende en besked. Følg instruktionerne nedenfor.",
       },
     },
   },
-
   loginPrompt: {
-    title: "Login påkrævet",
+    title: "Log ind påkrævet",
     description:
-      "Du skal være logget ind for at fortsætte. Log ind eller registrér dig.",
-    register: "Registrér",
+      "Du skal være logget ind for at fortsætte. Log ind eller tilmeld dig.",
+    register: "Tilmeld dig",
     login: "Log ind",
   },
-
   waitlistPrompt: {
-    title: "Tilmeld dig ventelisten",
+    title: "Tilmeld venteliste",
     description:
-      "Vi er i øjeblikket på fuld kapacitet. Tilmeld dig for at få besked, når en plads er ledig.",
+      "Vi er i øjeblikket fuldt booket. Tilmeld dig ventelisten for at blive underrettet, når en plads bliver ledig.",
     button: "Tilmeld venteliste",
   },
-
   subscription: {
     title: "Abonnementsdetaljer",
-    subTitle: "Redigér dine abonnementsoplysninger herunder",
+    subTitle: "Rediger abonnementsdetaljer nedenfor",
     error: "Tilbage til dashboard",
     notFound: "Abonnement ikke fundet",
     notFoundSub: "Tilbage til dashboard",
     description:
-      "Du kan sætte dit abonnement på pause når som helst. Når det er pauseret, stopper dine bilalarmer, indtil du genaktiverer.",
+      "Du kan sætte abonnementet på pause når som helst. Når det er på pause, stopper alarmerne indtil genaktivering.",
     form: {
       status: {
         label: "Status",
@@ -804,34 +777,34 @@ export const da = {
     toasts: {
       success: {
         title: "Abonnement opdateret",
-        description: "Dit abonnement for {{brand}} {{model}} er opdateret",
+        description:
+          "Dit abonnement for {{brand}} {{model}} er blevet opdateret succesfuldt",
       },
       priceError: {
         title: "Kan ikke opdatere abonnement",
         description:
-          "Du kan ikke både sætte på pause og ændre prisen samtidig. Vælg én handling.",
+          "Du kan ikke sætte på pause og opdatere prisen på abonnementet samtidigt. Vælg én af delene.",
       },
       error: {
         title: "Fejl ved opdatering af abonnement",
       },
     },
   },
-
   about: {
     title: "Om Amiquus",
     description:
-      "Vi revolutionerer, hvordan man finder den perfekte brugte bil, ved at gøre avanceret overvågning tilgængelig for alle",
+      "Vi revolutionerer søgningen efter den perfekte brugte bil med avanceret overvågningsteknologi",
     meta: {
-      title: "Om os | Amiquus - Overvågning af bilannoncer",
+      title: "Om os | Amiquus - Bilannonceovervågningstjeneste",
       description:
-        "Læs om Amiquus, vores mission og teamet bag vores intelligente overvågningstjeneste.",
+        "Lær mere om Amiquus, vores mission og teamet bag den smarte bilannonceovervågningstjeneste.",
     },
     story: {
       heading: "Vores historie",
       paragraphs: [
-        "Amiquus begyndte i 2023, da vores stifter, Alex, brugte måneder på at opdatere bilsites i jagten på en sjælden model til en god pris. Efter at have misset flere muligheder pga. forsinkede beskeder besluttede han, at der måtte være en bedre løsning.",
-        "Sammen med et lille team af udviklere og bilentusiaster byggede Alex et system, der kunne overvåge flere sites samtidigt og sende øjeblikkelige notifikationer, når der dukkede matches op.",
-        "Det, der startede som et hobbyprojekt, fik hurtigt interesse fra omgangskredsen, og i begyndelsen af 2025 blev Amiquus en tjeneste for alle. I dag hjælper vi bilkøbere med at spare tid og finde bedre tilbud med intelligent overvågning.",
+        "Amiquus startede i 2023, da vores grundlægger Alex brugte måneder på at opdatere sider på jagt efter en sjælden model til en god pris. Efter missede muligheder indså han, at der måtte være en bedre måde.",
+        "Med et lille team af udviklere og bilentusiaster byggede Alex et system til at overvåge flere sider samtidigt og sende øjeblikkelige alarmer.",
+        "Projektet voksede hurtigt, og i begyndelsen af 2025 blev Amiquus en tjeneste for alle. I dag hjælper vi købere over hele landet med at spare tid og finde bedre tilbud.",
       ],
     },
     mission: {
@@ -840,55 +813,55 @@ export const da = {
         {
           title: "Spar tid",
           description:
-            "Slip for at opdatere flere websites konstant – automatisér søgningen og få besked i tide.",
+            "Eliminer behovet for konstant at opdatere flere sider med automatiseret søgning og rettidige alarmer.",
         },
         {
           title: "Find bedre tilbud",
           description:
-            "Vær først på nye annoncer og få en fordel i et konkurrencepræget marked, hvor timing er alt.",
+            "Vær den første til at vide om fantastiske tilbud og få et forspring i et konkurrencepræget marked.",
         },
         {
-          title: "Køb med ro i maven",
+          title: "Køb med tillid",
           description:
-            "Tag informerede valg med bred overvågning af flere troværdige platforme.",
+            "Tag informerede beslutninger med fuldt overblik over flere pålidelige platforme.",
         },
       ],
     },
     team: {
-      heading: "Teamet",
+      heading: "Vores team",
       members: [
         {
           name: "Alex Morgan",
-          role: "Grundlægger & CEO",
-          bio: "Tidligere softwareingeniør med passion for biler og innovative løsninger.",
+          role: "Grundlægger og CEO",
+          bio: "Tidligere programmør med passion for biler og innovative løsninger.",
         },
         {
           name: "Sarah Chen",
-          role: "CTO",
-          bio: "Dataspecialist med fokus på web scraping og informationshentning.",
+          role: "Teknisk direktør",
+          bio: "Data science-ekspert, specialiseret i web scraping.",
         },
         {
           name: "Marcus Lee",
-          role: "Lead Developer",
-          bio: "Full-stack-ingeniør med erfaring i højtydende notifikationssystemer.",
+          role: "Udviklingsleder",
+          bio: "Full-stack ingeniør med erfaring i højtydende alarmsystemer.",
         },
         {
           name: "Elena Rodriguez",
-          role: "Customer Success",
-          bio: "Tidligere bilsælger dedikeret til at hjælpe kunder med at finde den rette bil.",
+          role: "Kundesupport",
+          bio: "Tidligere bilforhandler, dedikeret til at hjælpe med at finde det perfekte køretøj.",
         },
       ],
     },
     join: {
       heading: "Bliv en del af teamet",
       description:
-        "Vi leder altid efter dygtige folk, der brænder for teknologi og den bedste bilkøbsoplevelse. Se vores åbne stillinger.",
-      cta: "Se ledige stillinger",
+        "Vi søger altid passionerede talenter inden for teknologi og revolutionering af bilkøb.",
+      cta: "Se åbne stillinger",
     },
     questions: {
       heading: "Har du spørgsmål?",
       description:
-        "Lær mere om hvordan vi virker, se priser, eller kontakt support.",
+        "Lær mere om, hvordan tjenesten fungerer, priser eller kontakt support.",
       links: {
         faq: "Besøg FAQ",
         pricing: "Se priser",
@@ -896,91 +869,90 @@ export const da = {
       },
     },
   },
-
   terms: {
-    metaTitle: "Vilkår og betingelser | Amiquus",
+    metaTitle: "Brugervilkår | Amiquus",
     metaDescription:
-      "Læs Amiquus’ vilkår og betingelser for brug af vores overvågnings- og notifikationstjeneste.",
-    title: "Vilkår og betingelser",
-    lastUpdated: "Senest opdateret: 21. maj 2025",
+      "Læs Amiquus brugervilkår, der regulerer brugen af bilannonceovervågningstjenesten.",
+    title: "Brugervilkår",
+    lastUpdated: "Sidst opdateret: 21. maj 2025.",
     sections: {
       "1": {
         id: "agreement",
-        heading: "Aftale om vilkår",
+        heading: "Accept af vilkår",
         paragraphs: [
-          "Disse vilkår udgør en juridisk bindende aftale mellem dig og Amiquus om brug af vores website og tjenester.",
-          "Ved at bruge vores tjenester accepterer du at være bundet af vilkårene. Hvis du er uenig, må du ikke bruge tjenesten.",
+          "Disse brugervilkår udgør en juridisk bindende aftale mellem dig og Amiquus vedrørende adgang til og brug af vores side og tjenester.",
+          "Ved at få adgang til eller bruge vores tjenester accepterer du disse vilkår. Hvis du ikke accepterer nogen del, må du ikke bruge tjenesterne.",
         ],
         list: [],
       },
       "2": {
         id: "changes",
-        heading: "Ændringer i vilkår",
+        heading: "Ændringer i vilkårene",
         paragraphs: [
-          "Vi kan efter eget skøn ændre eller erstatte disse vilkår. Ved væsentlige ændringer tilstræber vi at give 30 dages varsel før ikrafttræden.",
-          "Fortsætter du med at bruge tjenesten efter ændringerne, accepterer du de nye vilkår. Ellers skal du stoppe brugen.",
+          "Vi forbeholder os retten til at ændre eller erstatte disse vilkår efter eget skøn. Hvis en ændring er væsentlig, giver vi mindst 30 dages forudgående varsel, før de nye vilkår træder i kraft.",
+          "Ved at fortsætte med at bruge tjenesten efter ændringerne træder i kraft, accepterer du de reviderede vilkår. Hvis du ikke accepterer de nye vilkår, skal du stoppe med at bruge tjenesten.",
         ],
         list: [],
       },
       "3": {
         id: "account",
-        heading: "Konto",
+        heading: "Kontoforhold",
         paragraphs: ["For at bruge vores tjenester skal du:"],
         list: [
-          "Være mindst 18 år",
-          "Gennemføre registreringen",
-          "Angive korrekte og opdaterede oplysninger",
-          "Holde din konto og adgangskode sikre",
-          "Være ansvarlig for aktivitet på din konto",
-          "Informere os straks om sikkerhedsbrud eller uautoriseret brug",
+          "Være over 18 år",
+          "Fuldføre registreringsprocessen",
+          "Give nøjagtige, fuldstændige og aktuelle oplysninger",
+          "Være ansvarlig for sikkerheden af din konto og adgangskode",
+          "Være ansvarlig for al aktivitet på din konto",
+          "Med det samme rapportere uautoriseret brug eller misbrug af kontoen",
         ],
       },
       "4": {
         id: "payment",
-        heading: "Betaling",
+        heading: "Betalingsvilkår",
         paragraphs: [
-          "Amiquus tilbyder abonnementsbaserede tjenester med følgende vilkår:",
+          "Amiquus tilbyder abonnementsbaserede tjenester med disse vilkår:",
         ],
         list: [
-          "Alle priser er ekskl. gældende skatter og afgifter",
-          "Abonnementspriser kan ændres med 30 dages varsel",
-          "Abonnementer fornyes automatisk med mindre de opsiges før næste periode",
-          "Refunderinger håndteres fra sag til sag iht. vores politik",
-          "Vi bruger Stripe til sikker betaling; betalingsdata lagres hos Stripe",
+          "Alle priser er eksklusive skatter, som tilføjes, hvis relevant",
+          "Abonnementspriser kan ændres med 30 dages forudgående varsel",
+          "Abonnementer fornyes automatisk, medmindre opsagt før næste faktureringscyklus",
+          "Refusioner håndteres fra sag til sag i henhold til refusionspolitikken",
+          "Vi bruger Stripe til sikker betalingsbehandling, alle betalingsoplysninger lagres hos Stripe",
         ],
       },
       "5": {
         id: "capacity",
-        heading: "Kapasitetsgrænser",
+        heading: "Kapacitetsbegrænsninger",
         paragraphs: [
-          "For at sikre kvalitet og stabilitet begrænser vi antallet af aktive abonnementer til 30. Når grænsen er nået:",
+          "For at sikre tjenestekvalitet begrænser vi antallet af aktive abonnementer til 30. Når grænsen er nået:",
         ],
         list: [
           "Nye brugere kan tilmelde sig ventelisten",
-          "Plads på ventelisten tildeles efter først-til-mølle",
-          "Når der frigøres kapacitet, informeres ventelisten i rækkefølge",
-          "Vi kan til enhver tid ændre kapacitetsgrænsen",
+          "Plads på ventelisten bestemmes efter ankomstrækkefølge",
+          "Når en plads bliver ledig, underretter vi brugere i rækkefølge",
+          "Vi forbeholder os retten til at ændre kapacitetsgrænser",
         ],
       },
       "6": {
         id: "scraping",
-        heading: "Begrænsninger for web scraping",
+        heading: "Web scraping-begrænsninger",
         paragraphs: [
-          "Vores tjeneste henter og behandler data fra flere bilsites. Ved brug accepterer du, at:",
+          "Vores tjeneste henter og behandler data fra flere sider. Ved at bruge tjenesten anerkender du:",
         ],
         list: [
-          "Amiquus respekterer de overvågede websiters vilkår",
-          "Vi anvender rate-limiting og hensynsfuld crawling",
-          "Tilgængeligheden af enkelte sites kan ændres pga. deres vilkår og tekniske foranstaltninger",
-          "Vi kan ikke garantere fuldstændighed eller aktualitet af data",
+          "Amiquus respekterer brugervilkårene for de overvågede sider",
+          "Vi bruger rate limiting og etiske dataindsamlingsmetoder",
+          "Tilgængeligheden af visse sider kan ændres",
+          "Vi garanterer ikke fuldstændighed eller aktualitet af indsamlede data",
         ],
       },
       "7": {
         id: "intellectual",
-        heading: "Intellektuelle rettigheder",
+        heading: "Intellektuel ejendom",
         paragraphs: [
-          "Amiquus’ tjeneste, indhold, funktioner og design er vores eksklusive ejendom og beskyttet af ophavsret og varemærkelovgivning.",
-          "Vores varemærker må ikke bruges uden forudgående skriftlig tilladelse.",
+          "Amiquus-tjenesten, inklusive originalt indhold, funktioner og funktionalitet, er og forbliver eksklusiv ejendom af Amiquus. Tjenesten er beskyttet af ophavsret, varemærker og andre love.",
+          "Du må ikke bruge vores varemærker og designs uden forudgående skriftlig tilladelse fra Amiquus.",
         ],
         list: [],
       },
@@ -988,8 +960,8 @@ export const da = {
         id: "termination",
         heading: "Opsigelse",
         paragraphs: [
-          "Vi kan opsige eller suspendere din konto uden varsel ved brud på vilkår.",
-          "Ved opsigelse ophører din ret til at bruge tjenesten straks. Kontakt os for kontosletning, hvis du ønsker det.",
+          "Vi kan opsige eller suspendere kontoen øjeblikkeligt, uden forudgående varsel, af enhver grund, inklusive brud på vilkårene.",
+          "Ved opsigelse ophører retten til at bruge tjenesten øjeblikkeligt. Hvis du ønsker at opsige kontoen, skal du stoppe med at bruge tjenesten eller kontakte os for fjernelse.",
         ],
         list: [],
       },
@@ -997,197 +969,199 @@ export const da = {
         id: "limitations",
         heading: "Ansvarsbegrænsning",
         paragraphs: [
-          "Amiquus og tilknyttede parter hæfter ikke for indirekte eller følgeskader, herunder tab af data, profit, goodwill m.v., som følge af:",
+          "Amiquus, dets direktører, medarbejdere, partnere eller leverandører er ikke ansvarlige for indirekte, tilfældige, særlige eller strafbare skader, inklusive tab af fortjeneste, data eller andre immaterielle tab, der opstår fra:",
         ],
         list: [
-          "Din adgang til eller brug af – eller manglende adgang til/brug af – tjenesten",
-          "Tredjeparters adfærd eller indhold på tjenesten",
-          "Indhold opnået via tjenesten",
-          "Uautoriseret adgang til eller ændring af dine transmissioner eller indhold",
+          "Adgang til eller manglende evne til at få adgang til tjenesten",
+          "Indhold eller adfærd fra tredjeparter på tjenesten",
+          "Indhold opnået fra tjenesten",
+          "Uautoriseret adgang til eller ændring af dine data",
         ],
       },
       "10": {
         id: "disclaimer",
         heading: "Ansvarsfraskrivelse",
         paragraphs: [
-          "Brug sker på eget ansvar. Tjenesten leveres “SOM DEN ER” og “SOM TILGÆNGELIG” uden garantier af nogen art.",
-          "Vi garanterer ikke, at tjenesten er uafbrudt, rettidig, sikker eller fejlfri, eller at resultater er nøjagtige.",
+          'Brug af tjenesten sker på egen risiko. Tjenesten leveres "SOM DEN ER" og "SOM TILGÆNGELIG". Vi garanterer ikke, at tjenesten vil være uafbrudt, rettidig, sikker eller fejlfrí.',
+          "Vi garanterer ikke, at resultaterne af brugen af tjenesten vil være nøjagtige eller pålidelige.",
         ],
         list: [],
       },
       "11": {
         id: "cookies",
-        heading: "Cookies",
+        heading: "Cookiepolitik",
         paragraphs: [
-          "Vores cookiepolitik forklarer, hvad cookies er, hvordan vi bruger dem, og dine valg. Se afsnittet om cookies i vores privatlivspolitik.",
+          "Vores cookiepolitik forklarer, hvad cookies er, hvordan vi bruger dem, hvordan tredjeparter bruger dem og dine valg. Se cookie-afsnittet i vores privatlivspolitik.",
         ],
         list: [],
       },
       "12": {
         id: "governing-law",
-        heading: "Lovvalg",
+        heading: "Gældende lov",
         paragraphs: [
-          "Disse vilkår er underlagt USA’s lov uden hensyn til lovvalgsregler.",
-          "Manglende håndhævelse af en rettighed er ikke afkald. Er en bestemmelse ugyldig, forbliver resten gældende.",
+          "Disse vilkår styres af og fortolkes i overensstemmelse med lovene i Amerikas Forenede Stater, uden hensyn til lovkonflikter.",
+          "Hvis vi ikke udøver en rettighed eller bestemmelse, udgør det ikke en fraskrivelse. Hvis en domstol erklærer en bestemmelse ugyldig, forbliver de resterende bestemmelser i kraft.",
         ],
         list: [],
       },
       "13": {
         id: "contact",
-        heading: "Kontakt",
-        paragraphs: ["Hvis du har spørgsmål til vilkårene, kontakt os:"],
+        heading: "Kontakt os",
+        paragraphs: ["Hvis du har spørgsmål om vilkårene, kontakt os:"],
         list: [
           "Via e-mail: legal@amiquus.com",
-          "Via kontaktformularen på websitet",
+          "Via kontaktsiden på vores side",
         ],
       },
     },
   },
-
   privacy: {
     metaTitle: "Privatlivspolitik | Amiquus",
     metaDescription:
-      "Læs hvordan Amiquus behandler persondata, dine rettigheder og vores datapraksis.",
+      "Lær, hvordan Amiquus håndterer dine personoplysninger, rettigheder og dataindsamlingspraksis.",
     title: "Privatlivspolitik",
-    lastUpdated: "Senest opdateret: 21. maj 2025",
+    lastUpdated: "Sidst opdateret: 21. maj 2025.",
     sections: {
       "0": {
         id: "introduction",
         heading: "Introduktion",
         paragraphs: [
-          "Vi respekterer dit privatliv og beskytter dine persondata. Denne politik forklarer, hvordan vi håndterer data, når du besøger vores website, og hvilke rettigheder du har.",
+          "Velkommen til Amiquus. Vi respekterer dit privatliv og er forpligtet til at beskytte dine personoplysninger. Denne privatlivspolitik forklarer, hvordan vi håndterer dine data, dine rettigheder og hvordan loven beskytter dig.",
         ],
       },
       "1": {
         id: "data-we-collect",
-        heading: "Hvilke oplysninger vi indsamler",
+        heading: "Data vi indsamler",
         paragraphs: [
-          "Vi indsamler forskellige typer oplysninger for at levere og forbedre tjenesten:",
+          "Vi indsamler forskellige typer data til forskellige formål for at levere og forbedre tjenesten:",
         ],
         list: [
-          "Persondata: E-mailadresse, fornavn, efternavn, profilbillede (ved tredjepartslogin).",
-          "Kontodata: Loginoplysninger og præferencer.",
-          "Brugsdata: Hvordan du bruger websitet og tjenesten.",
-          "Søgepræferencer for biler: Kriterier du angiver (mærke, model, pris osv.).",
-          "Telegram-oplysninger: Chat-ID og bottoken, hvis du vælger Telegram-notifikationer.",
-          "Betalingsoplysninger: Håndteres af vores betalingsudbyder; Amiquus gemmer ikke dine fulde kortoplysninger.",
+          "Personoplysninger: e-mailadresse, fornavn, efternavn og profilbillede (hvis leveret via tredjepart).",
+          "Kontooplysninger: loginoplysninger og kontoindstillinger.",
+          "Brugsdata: information om, hvordan du bruger siden og tjenesterne.",
+          "Søgekriterier: køretøjskriterier, du indstiller til overvågning (mærke, model, pris osv.).",
+          "Telegram-data: hvis du vælger Telegram-alarmer, gemmer vi dit chat-ID og bot-token.",
+          "Betalingsdata: ved køb indsamler vores betalingsbehandler de nødvendige data. Amiquus gemmer ikke fulde kreditkortdata.",
         ],
       },
       "2": {
         id: "how-we-use-data",
-        heading: "Sådan bruger vi dine data",
-        paragraphs: ["Vi bruger persondata til følgende formål:"],
+        heading: "Hvordan vi bruger dine data",
+        paragraphs: ["Vi bruger dine personoplysninger til at:"],
         list: [
-          "At levere og vedligeholde vores tjeneste",
-          "At give besked om ændringer",
-          "At muliggøre interaktive funktioner",
-          "At yde kundesupport",
-          "At udføre analyser for at forbedre tjenesten",
-          "At overvåge brugen af tjenesten",
-          "At opdage, forhindre og løse tekniske problemer",
-          "At behandle betalinger og forhindre svindel",
-          "At sende bilannoncer, der matcher dine præferencer",
+          "Levere og vedligeholde tjenesten",
+          "Underrette om ændringer i tjenesten",
+          "Tillade interaktive funktioner",
+          "Levere kundesupport",
+          "Indsamle analyse for at forbedre tjenesten",
+          "Overvåge brugen af tjenesten",
+          "Opdage, forhindre og løse tekniske problemer",
+          "Behandle betalinger og forhindre svindel",
+          "Sende annoncer, der matcher dine kriterier",
         ],
       },
       "3": {
         id: "data-storage",
-        heading: "Opbevaring og sikkerhed",
+        heading: "Datalagring og sikkerhed",
         paragraphs: [
-          "Vi anvender passende sikkerhedsforanstaltninger mod uautoriseret adgang, ændring, offentliggørelse eller destruktion. Data er krypteret under overførsel og i hvile.",
-          "Vi opbevarer kun persondata, så længe det er nødvendigt til de beskrevne formål eller lovkrav.",
+          "Vi anvender passende sikkerhedsforanstaltninger for at beskytte mod uautoriseret adgang, ændring eller ødelæggelse af data. Alle data gemmes på sikre servere med kryptering i transit og i hvile.",
+          "Vi opbevarer dine personoplysninger kun så længe som nødvendigt for formålene i denne politik, inklusive for at overholde juridiske, regulatoriske eller regnskabsmæssige krav.",
         ],
       },
       "4": {
         id: "gdpr",
-        heading: "Dine GDPR-rettigheder",
+        heading: "Dine rettigheder under GDPR",
         paragraphs: [
-          "Hvis du er bosiddende i EØS, har du særlige databeskyttelsesrettigheder. Amiquus bestræber sig på at give dig adgang til at rette, slette eller begrænse brugen af dine data.",
-          "Du har bl.a. ret til:",
+          "Hvis du er bosiddende i Det Europæiske Økonomiske Samarbejdsområde (EØS), har du visse databeskyttelsesrettigheder. Amiquus bestræber sig på at tillade rettelse, ændring, sletning eller begrænsning af brugen af dine data.",
+          "Du har følgende rettigheder:",
         ],
         list: [
-          "Adgang, opdatering eller sletning af oplysninger",
-          "Berigtigelse",
-          "Indsigelse",
-          "Begrænsning",
-          "Dataportabilitet",
-          "Tilbagetrækning af samtykke",
+          "Ret til adgang, opdatering eller sletning af data",
+          "Ret til rettelse",
+          "Ret til indsigelse",
+          "Ret til begrænsning",
+          "Ret til dataportabilitet",
+          "Ret til at tilbagekalde samtykke",
         ],
       },
       "5": {
         id: "cookies",
-        heading: "Cookies",
+        heading: "Cookiepolitik",
         paragraphs: [
-          "Cookies er små datafiler på din enhed. Vi bruger dem til at:",
+          "Cookies er små data, der gemmes på din enhed. Vi bruger dem til at:",
         ],
         list: [
-          "Holde dig logget ind",
-          "Forstå brug af websitet",
-          "Huske præferencer",
-          "Tilpasse oplevelsen",
+          "Holde sessionen logget ind",
+          "Forstå sidens brug",
+          "Gemme præferencer",
+          "Personliggøre oplevelsen",
         ],
       },
       "6": {
         id: "third-party",
         heading: "Tredjeparter",
         paragraphs: [
-          "Vi kan bruge tredjeparter til at levere tjenesten, udføre serviceopgaver eller analysere brugen.",
-          "Disse parter kan omfatte:",
+          "Vi kan engagere tredjeparter til at udføre tjenesten, udføre opgaver eller analysere brug.",
+          "Disse tredjeparter inkluderer:",
         ],
         list: [
-          "Betalingsudbydere (Stripe)",
+          "Betalingsbehandlere (Stripe)",
           "Analyseleverandører",
           "Kundesupporttjenester",
-          "Hosting og cloud-infrastruktur",
+          "Hosting- og cloudleverandører",
         ],
         paragraphs2: [
-          "De har kun adgang til data for at udføre opgaven på vores vegne og må ikke bruge dem til andre formål.",
+          "Disse tredjeparter har kun adgang til dine data for at udføre opgaver og må ikke videregive eller bruge dem til andre formål.",
         ],
       },
       "7": {
         id: "changes",
-        heading: "Ændringer i politikken",
+        heading: "Ændringer i privatlivspolitikken",
         paragraphs: [
-          "Vi kan opdatere denne politik fra tid til anden og ændrer datoen “Senest opdateret”.",
-          "Gennemgå politikken jævnligt. Ændringer gælder, når de offentliggøres.",
+          "Vi kan opdatere privatlivspolitikken fra tid til anden. Vi underretter dig ved at offentliggøre den nye politik på denne side og opdatere datoen 'Sidst opdateret'.",
+          "Vi anbefaler, at du regelmæssigt gennemgår politikken. Ændringer træder i kraft ved offentliggørelse.",
         ],
       },
       "8": {
         id: "contact",
-        heading: "Kontakt",
+        heading: "Kontakt os",
         paragraphs: [
-          "Har du spørgsmål til privatlivspolitikken, så kontakt os:",
+          "Hvis du har spørgsmål om privatlivspolitikken, kontakt os:",
         ],
-        list: ["Via e-mail: privacy@amiquus.com", "På vores kontaktside"],
+        list: [
+          "Via e-mail: privacy@amiquus.com",
+          "Via kontaktsiden på vores side",
+        ],
       },
     },
   },
-
   faqs: {
-    metaTitle: "Ofte stillede spørgsmål | Amiquus",
+    metaTitle: "FAQ | Amiquus",
     metaDescription:
-      "Få svar på de mest almindelige spørgsmål om Amiquus, abonnementer, opsætning af notifikationer og mere.",
+      "Find svar på de mest almindelige spørgsmål om Amiquus bilannonceovervågningstjeneste.",
     title: "Ofte stillede spørgsmål",
-    subtitle: "Hurtige svar på typiske spørgsmål om vores overvågningstjeneste",
+    subtitle:
+      "Hurtige svar på almindelige spørgsmål om vores bilannonceovervågningstjeneste",
     general: {
       heading: "Generelle spørgsmål",
       whatIs: {
         question: "Hvad er Amiquus?",
         answer:
-          "Amiquus overvåger flere bilsites for annoncer, der matcher dine kriterier. Når en relevant annonce dukker op, får du straks en Telegram-notifikation med alle detaljer.",
+          "Amiquus er en tjeneste, der overvåger flere køretøjssider, der matcher dine kriterier. Når der er et match, får du en øjeblikkelig alarm via Telegram.",
       },
       howItWorks: {
         question: "Hvordan fungerer det?",
         answer: [
-          "Du angiver søgekriterier (mærke, model, pris osv.)",
-          "Du vælger websites at overvåge",
-          "Du forbinder din Telegram-konto",
-          "Vores system overvåger løbende dine valgte websites",
-          "Når der dukker et match op, får du en Telegram-notifikation med link",
+          "Indstil søgekriterier (mærke, model, pris osv.)",
+          "Vælg sider at overvåge",
+          "Forbind Telegram for alarmer",
+          "Vores system overvåger kontinuerligt de valgte sider",
+          "Ved match får du en øjeblikkelig Telegram-alarm med detaljer og link",
         ],
       },
       whichWebsites: {
-        question: "Hvilke websites overvåger I?",
-        answerIntro: "Vi overvåger bl.a. følgende platforme:",
+        question: "Hvilke sider overvåger I?",
+        answerIntro: "Vi overvåger i øjeblikket følgende store platforme:",
         list: [
           "AutoTrader",
           "Cars.com",
@@ -1197,258 +1171,259 @@ export const da = {
           "Craigslist",
           "eBay Motors",
         ],
-        outro: "Vi tilføjer løbende flere platforme for bredest mulig dækning.",
+        outro: "Vi tilføjer løbende nye platforme for bredere dækning.",
       },
     },
     subscription: {
-      heading: "Abonnement",
+      heading: "Spørgsmål om abonnement",
       cost: {
-        question: "Hvad koster det?",
+        question: "Hvor meget koster abonnementet?",
         answer: [
-          "Priser starter ved $9.99/md. for overvågning af ét website med opdateringer hver 6. time. Ekstra websites koster $4.99/md. Du kan opgradere opdateringsfrekvensen for hurtigere beskeder.",
-          "Se prisafsnittet på forsiden for detaljer.",
+          "Priser starter ved 79,99 €/måned for at overvåge én side med opdateringer hver 6. time. Ekstra sider koster 4,99 € pr. måned. Opgrader for hurtigere alarmer.",
+          "For prisdetaljer, se prisafsnittet på forsiden.",
         ],
       },
       cancel: {
-        question: "Hvordan opsiger jeg?",
-        stepsIntro: "Du kan opsige når som helst fra din profil:",
+        question: "Hvordan opsiger jeg abonnementet?",
+        stepsIntro: "Du kan opsige abonnementet når som helst via profilsiden:",
         steps: [
-          "Log ind",
-          'Gå til "Profil"',
+          "Log ind på din konto",
+          'Gå til siden "Profil"',
           'Vælg fanen "Abonnementer"',
-          'Klik "Annullér abonnement" ud for det relevante abonnement',
+          'Klik på "Opsig abonnement" ved siden af det abonnement, du vil opsige',
         ],
-        note: "Abonnementet fortsætter til udgangen af den aktuelle periode.",
+        note: "Abonnementet forbliver aktivt indtil udgangen af den nuværende faktureringsperiode.",
       },
       multiple: {
-        question: "Kan jeg have flere abonnementer?",
+        question: "Kan jeg have flere abonnementer til forskellige modeller?",
         answer:
-          "Ja, du kan oprette flere abonnementer for forskellige biler eller kriterier – alle styres fra samme konto.",
+          "Ja, du kan oprette flere abonnementer under én konto. Hver kan overvåge forskellige modeller eller mærker. Perfekt, hvis du søger flere køretøjer eller hjælper venner.",
       },
       limit: {
-        question: "Hvorfor er der et loft på abonnenter?",
-        intro: "Vi begrænser til 30 aktive abonnementer for at sikre:",
+        question: "Hvorfor er der en grænse for abonnenter?",
+        intro: "Vi begrænser tjenesten til 30 aktive abonnenter for at:",
         list: [
-          "Høj datakvalitet og nøjagtighed",
-          "Personlig support",
-          "Hurtige notifikationer i travle perioder",
-          "Etisk scraping uden at belaste websites",
+          "Højeste tjenestekvalitet og datanøjagtighed",
+          "Personlig support til hver abonnent",
+          "Hurtigere alarmlevering under spidsbelastningstider",
+          "Etisk scraping, der ikke overbelaster målsider",
         ],
         outro:
-          "Er der fuldt, kan du tilmelde dig ventelisten og få besked ved ledige pladser.",
+          "Hvis vi er fuldt booket, tilmeld dig ventelisten, så underretter vi dig, når en plads bliver ledig.",
       },
     },
     technical: {
-      heading: "Teknisk",
+      heading: "Tekniske spørgsmål",
       telegram: {
-        question: "Hvordan opsætter jeg Telegram-notifikationer?",
-        stepsIntro: "Gør sådan:",
+        question: "Hvordan opsætter jeg Telegram-alarmer?",
+        stepsIntro: "For at opsætte Telegram-alarmer:",
         steps: [
-          "Opret en bot via BotFather (vejledning i dashboardet)",
-          "Kopiér din bottoken fra BotFather",
-          "Start en samtale med din bot",
-          "Find dit chat-ID (vejledning i opsætningen)",
-          "Indtast token og chat-ID i dine abonnementindstillinger",
-          "Test opsætningen med knappen “Send testbesked”",
+          "Opret en Telegram-bot via BotFather (instruktioner i dashboardet)",
+          "Kopier bot-token og chat-ID",
+          'Indtast oplysningerne i kontoindstillingerne under "Alarmindstillinger"',
+          'Test forbindelsen med knappen "Send testbesked"',
         ],
-        note: "Vi viser detaljerede trin med skærmbilleder i opsætningen.",
+        note: "Detaljerede instruktioner med skærmbilleder tilgængelige under abonnementsopsætning.",
       },
       frequency: {
-        question: "Hvor ofte får jeg notifikationer?",
-        intro: "Det afhænger af:",
+        question: "Hvor ofte får jeg alarmer?",
+        intro: "Alarmfrekvensen afhænger af:",
         list: [
-          "Din valgte opdateringsfrekvens (30 min. til 6 timer)",
-          "Hvor mange nye annoncer matcher dine kriterier",
-          "Aktiviteten for netop dit mærke/model",
+          "Det valgte frekvenspakke (fra hver time til hvert minut)",
+          "Antallet af nye annoncer, der matcher dine kriterier",
+          "Markedsaktiviteten for det valgte mærke/model",
         ],
-        outro:
-          "Du får kun besked, når vi finder nye annoncer, der passer til dine filtre.",
+        outro: "Du får kun alarmer, når nye annoncer matcher dine kriterier.",
       },
       privacy: {
-        question: "Hvordan beskytter I mine data?",
-        intro: "Vi tager databeskyttelse alvorligt og anvender:",
+        question: "Hvordan beskyttes mit privatliv?",
+        intro: "Vi tager privatliv alvorligt og bruger:",
         list: [
-          "Kryptering under overførsel og i hvile",
+          "Datakryptering i transit og i hvile",
           "Sikre betalinger via Stripe",
-          "Ingen deling med tredjepart uden formål",
-          "Mulighed for indsigt og sletning",
+          "Ingen datadeling med tredjeparter",
+          "Du kan anmode om eller slette dine data når som helst",
         ],
-        outro: "Læs mere i vores privatlivspolitik.",
+        outro: "Mere information i vores fulde privatlivspolitik.",
       },
     },
     support: {
-      heading: "Fandt du ikke svar?",
-      description:
-        "Vores supportteam hjælper gerne, hvis du stadig har spørgsmål.",
+      heading: "Har du stadig spørgsmål?",
+      description: "Hvis du ikke fandt svaret, står vores support klar!",
       button: "Kontakt support",
     },
   },
-
   waitlist: {
-    metaTitle: "Tilmeld ventelisten - Amiquus",
+    metaTitle: "Tilmeld venteliste - Amiquus",
     metaDescription:
-      "Tilmeld Amiquus’ venteliste for at få besked, når abonnementer bliver ledige.",
-    title: "Tilmeld vores venteliste",
-    subtitle: "For at sikre høj kvalitet begrænser vi aktive abonnementer.",
+      "Tilmeld dig Amiquus venteliste og bliv underrettet, når abonnementer er tilgængelige.",
+    title: "Tilmeld dig vores venteliste",
+    subtitle:
+      "På grund af høj efterspørgsel begrænser vi antallet af aktive abonnementer for at garantere den bedste kvalitet.",
     limited: {
       heading: "Begrænset tilgængelighed",
-      description:
-        "Vi begrænser systemet til 30 aktive abonnenter for at sikre:",
+      description: "Vi begrænser systemet til kun 30 aktive abonnenter for at:",
       points: [
-        "Pålidelig og hurtig scraping for alle",
-        "Mindre risiko for blokering på websites",
-        "Personlig support",
-        "Retfærdig fordeling af serverressourcer",
+        "Exceptionel pålidelighed og scraping-hastighed for alle brugere",
+        "Mindre risiko for blokering fra sider",
+        "Personlig support til hver abonnent",
+        "Retfærdig serverressourcefordeling期货",
       ],
-      available: "{{remaining}} pladser ledige ud af {{capacity}}.",
-      full: "Alle pladser er optaget. Tilmeld ventelisten for at få besked, når der bliver ledigt.",
+      available:
+        "{{remaining}} abonnementspladser af {{capacity}} er i øjeblikket tilgængelige.",
+      full: "Alle abonnementspladser er i øjeblikket optaget. Tilmeld dig ventelisten for at blive underrettet, når en plads bliver ledig.",
     },
     success: {
       title: "Du er på ventelisten!",
-      description: "Vi informerer dig, så snart en plads bliver ledig",
+      description:
+        "Vi underretter dig, så snart en abonnementsplads bliver ledig",
       message:
-        "Tak for din interesse i Amiquus! Vi giver besked, så snart vi har en åbning.",
+        "Tak for din interesse i Amiquus! Vi har tilføjet dig til ventelisten og kontakter dig, så snart en plads er tilgængelig.",
       button: "Tilbage til forsiden",
     },
     cantJoin: {
-      title: "Tilmeld ventelisten",
-      description: " Vi giver dig besked, så snart en plads bliver ledig",
+      title: "Tilmeld venteliste",
+      description:
+        "Vi underretter dig, så snart en abonnementsplads bliver ledig",
     },
     form: {
       firstName: {
         label: "Fornavn",
-        placeholder: "John",
+        placeholder: "Jens",
       },
       lastName: {
         label: "Efternavn",
-        placeholder: "Doe",
+        placeholder: "Hansen",
       },
       email: {
         label: "E-mail",
-        placeholder: "john.doe@example.com",
+        placeholder: "jens.hansen@eksempel.dk",
         description:
-          "Vi bruger denne e-mail til at informere dig, når der er plads",
+          "Vi bruger denne e-mailadresse til at underrette dig, når en plads bliver ledig",
       },
-      submit: "Tilmeld",
+      submit: "Tilmeld venteliste",
       submitting: "Sender...",
     },
   },
-
   support: {
-    metaTitle: "Support | Amiquus - Hjælp",
+    metaTitle: "Support | Amiquus - Hjælpecenter",
     metaDescription:
-      "Få hjælp til konto, abonnement eller bilalarmer. Gennemse hjælpecenteret eller kontakt support.",
+      "Få hjælp til din Amiquus-konto, abonnement eller alarmer. Udforsk hjælpecentret eller kontakt support.",
     title: "Supportcenter",
-    subtitle: "Find svar på almindelige spørgsmål eller kontakt os",
+    subtitle:
+      "Find svar på almindelige spørgsmål eller kontakt vores supportteam",
     emailSupport: {
-      title: "E-mail-support",
-      description: "Skriv til os – vi svarer normalt inden for 24 timer",
+      title: "E-mail support",
+      description: "Send os en e-mail, og vi svarer inden for 24 timer",
       email: "support@amiquus.com",
     },
     faqHeading: "Ofte stillede spørgsmål",
     faqs: {
       telegram: {
-        question: "Hvordan opsætter jeg Telegram-notifikationer?",
-        intro: "Følg disse trin:",
+        question: "Hvordan opsætter jeg Telegram-alarmer?",
+        intro: "For at opsætte Telegram-alarmer følg disse trin:",
         steps: [
-          "Opret en bot via BotFather (vejledning i dashboardet)",
-          "Kopiér API-token og chat-ID",
-          'Indsæt dem under "Notifikationspræferencer" i din konto',
-          'Test forbindelsen med "Send testbesked"',
+          "Opret en Telegram-bot via BotFather (instruktioner i dashboardet)",
+          "Kopier API-token og chat-ID",
+          'Indtast oplysningerne i kontoindstillingerne under "Alarmindstillinger"',
+          'Test forbindelsen med knappen "Send testbesked"',
         ],
-        outro: "Du finder en detaljeret guide i dit dashboard.",
+        outro:
+          "Hvis du har brug for mere hjælp, er en detaljeret guide tilgængelig i dit dashboard.",
       },
       updates: {
-        question: "Hvor ofte opdateres bilannoncer?",
+        question: "Hvor ofte opdateres annoncerne?",
         answer:
-          "Afhænger af din plan. Basis opdaterer hver 6. time; Premium kan opdatere så ofte som hver 30. minut. Du kan se og ændre frekvensen i indstillingerne.",
+          "Opdateringsfrekvensen afhænger af abonnementspakken. Basisplaner får opdateringer hver 6. time, premiumplaner kan være hver 30. minut. Du kan se og ændre den nuværende frekvens i abonnementsindstillingerne.",
       },
       facebook: {
         question: "Kan jeg overvåge Facebook Marketplace?",
         answer:
-          "Ja. Angiv URL’en til din Marketplace-søgeresultatside med filtre. Vi overvåger netop den søgning for nye matches.",
+          "Ja, vi understøtter overvågning af Facebook Marketplace. Angiv URL'en til søgeresultatsiden med anvendte filtre. Systemet overvåger derefter den søgning for nye annoncer, der matcher dine kriterier.",
       },
       cancel: {
-        question: "Hvordan annullerer jeg mit abonnement?",
+        question: "Hvordan opsiger jeg abonnementet?",
         answer:
-          'Gå til din profilside, fanen "Abonnementer", og klik "Annullér abonnement". Tjenesten fortsætter til periodens udløb.',
+          'Du kan opsige abonnementet når som helst via profilsiden. Klik på fanen "Abonnementer", find abonnementet og klik på "Opsig abonnement". Tjenesten forbliver aktiv indtil udgangen af faktureringsperioden.',
       },
       full: {
-        question: "Hvad hvis alle pladser er optaget?",
+        question: "Hvad sker der, hvis alle pladser er optaget?",
         answer:
-          "For at sikre kvalitet begrænser vi antallet af aktive abonnementer. Hvis alt er optaget, kan du tilmelde dig ventelisten og får besked, når der er plads.",
+          "For at opretholde høj tjenestekvalitet begrænser vi antallet af aktive abonnementer. Hvis alle pladser er optaget, kan du tilmelde dig ventelisten. Når en plads bliver ledig, underretter vi dig, og du har prioritet over offentligheden.",
       },
     },
     stillNeedHelp: {
-      heading: "Brug for mere hjælp?",
-      description: "Kontakt vores supportteam – vi er klar til at hjælpe.",
+      heading: "Har du brug for mere hjælp?",
+      description:
+        "Hvis du ikke fandt svaret, kontakt vores supportteam. Vi er her for at hjælpe!",
       button: "Kontakt support",
     },
   },
-
   notFound: {
-    title: "404 – Siden blev ikke fundet",
-    message: "Glemte du at tilføje siden i routeren?",
+    title: "404 Side ikke fundet",
+    message: "Glemte du at tilføje siden til routeren?",
   },
-
   emails: {
     verification: {
-      subject: "Din Amiquus e-mailbekræftelseskode",
+      subject: "Amiquus e-mail bekræftelseskode",
       greeting: "Hej,",
-      message: "Brug koden herunder for at fuldføre din tilmelding:",
+      message: "Brug følgende kode til at fuldføre din registrering:",
       expiration: "Koden udløber om 10 minutter.",
     },
     invoice: {
       success: {
-        subject: "Din Amiquus kvittering – Faktura #",
-        h2Message: "Din betaling for Amiquus-abonnementet var vellykket!",
+        subject: "Betaling modtaget Amiquus – Faktura #",
+        h2Message: "Din Amiquus-abonnementsbetaling lykkedes!",
         greeting: "Hej,",
         paymentMessage: "Vi har modtaget din betaling på",
         downloadMessage:
-          "Du kan se eller downloade din faktura via linket herunder:",
+          "Du kan se eller downloade fakturaen via følgende link:",
         viewInvoice: "Se faktura",
         invoiceNumber: "Faktura #:",
       },
       pending: {
-        subjectA: "Afventende betaling – Faktura",
+        subjectA: "Betaling afventer – Faktura",
         subjectB: "for dit Amiquus-abonnement",
         h2Message:
-          "Handling påkrævet: Gennemfør betalingen for dit Amiquus-abonnement",
+          "Handling påkrævet: Fuldfør betalingen for dit Amiquus-abonnement",
         greeting: "Hej,",
         messageA: "Din faktura",
         messageB:
-          "er stadig ubetalt. For at aktivere dit abonnement bedes du betale",
-        paymentMessage: "Du kan betale sikkert via linket herunder:",
+          "er stadig ubetalt. Fuldfør betalingen på for at aktivere abonnementet",
+        paymentMessage: "Du kan betale sikkert via følgende link:",
         payInvoice: "Betal faktura",
         ignoreEmail:
           "Hvis du allerede har betalt, kan du ignorere denne e-mail.",
       },
       failed: {
         subject: "Betaling mislykkedes – Faktura",
-        message: "Vi kunne ikke gennemføre din seneste betaling (forsøg",
-        attemptsA: "Vi prøver igen snart. Ingen handling krævet nu.",
-        attemptsB: "Vi har forsøgt at trække betalingen 3 gange uden held.",
+        message: "Vi kunne ikke behandle din seneste betaling (forsøg",
+        attemptsA:
+          "Vi prøver igen snart. Ingen handling påkrævet i øjeblikket.",
+        attemptsB:
+          "Vi har forsøgt at debitere din betalingsmetode tre gange, men alle forsøg mislykkedes.",
         attemptsC:
-          "Dit abonnement er derfor <strong>sat på pause</strong>. Du modtager ingen opdateringer, før du genaktiverer.",
+          "Som følge heraf er dit abonnement <strong>midlertidigt sat på pause</strong>. Du modtager ingen opdateringer før genaktivering.",
         attemptsD:
-          "Opdater din betalingsmetode og genoptag abonnementet fra din profil:",
+          "Opdater din betalingsmetode og genaktiver abonnementet fra profilen:",
         viewInvoice: "Se faktura",
-        managePayment: "Administrer betalingsmetoder",
+        managePayment: "Håndter betalingsmetoder",
       },
     },
     waitlist: {
-      subject: "Du er på Amiquus’ venteliste!",
+      subject: "Du er på Amiquus venteliste!",
       h2Message: "Du er på listen!",
       hi: "Hej",
       message:
-        "Tak fordi du tilmeldte dig ventelisten. Vi giver dig besked, så snart der bliver en ledig plads.",
-      anyQuestions: "Har du spørgsmål, kan du svare på denne e-mail.",
+        "Tak for at tilmelde dig Amiquus ventelisten. Vi underretter dig, så snart en plads bliver ledig.",
+      anyQuestions:
+        "Hvis du har spørgsmål, tøv ikke med at svare på denne e-mail.",
     },
     common: {
-      thanksMessage: "Tak fordi du valgte Amiquus!",
-      signature: "De bedste hilsner<br/>Amiquus-teamet",
+      thanksMessage: "Tak for at vælge Amiquus!",
+      signature: "Med venlig hilsen,<br/>Amiquus-teamet",
       team: "— Amiquus-teamet",
-      needHelp: "Brug for hjælp?",
+      needHelp: "Har du brug for hjælp?",
       hello: "Hej",
     },
   },

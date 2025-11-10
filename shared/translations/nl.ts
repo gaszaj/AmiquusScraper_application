@@ -1,13 +1,14 @@
+// === nl.ts === Nederlands
 export const nl = {
   navigations: {
-    features: "Kenmerken",
+    features: "Functies",
     how: "Hoe het werkt",
     pricing: "Prijzen",
-    getAlerts: "Meldingen ontvangen",
+    getAlerts: "Ontvang meldingen",
     waitlist: "Wachtlijst",
-    faq: "Veelgestelde vragen",
+    faq: "FAQ",
     login: "Inloggen",
-    getStarted: "Begin nu",
+    getStarted: "Aan de slag",
     subscribers: "Abonnees",
     theme: "Thema",
     language: "Taal",
@@ -15,1357 +16,1425 @@ export const nl = {
     profile: "Profiel",
     settings: "Instellingen",
     logout: "Uitloggen",
-    signUp: "Registreren"
+    signUp: "Registreren",
   },
   hero: {
-    label: "Volg tweedehands autoadvertenties in realtime",
-    title: "Mis nooit meer jouw perfecte autodeal",
-    subtitle: "AMIQUUS laat je direct weten wanneer jouw droomauto beschikbaar is op meerdere autosites. Ontvang direct meldingen via Telegram zodra er een match gevonden is.",
-    button1: "Stel je meldingen in",
+    label: "Volg gebruikte auto-advertenties in realtime!",
+    title: "Mis nooit meer de perfecte aanbieding voor je auto",
+    subtitle:
+      "Amiquus waarschuwt je onmiddellijk wanneer de auto van je dromen op meerdere sites verschijnt. Ontvang meldingen via Telegram zodra er een match is.",
+    button1: "Meldingen instellen",
     button2: "Bekijk hoe het werkt",
     trustIndicators: {
-      websites: "15+ websites gevolgd",
+      websites: "Meer dan 15 sites",
       realtime: "Realtime meldingen",
-      noSetup: "Geen configuratie vereist",
-      cancelAnytime: "Annuleer op elk moment"
-    }
+      noSetup: "Geen installatie",
+      cancelAnytime: "Op elk moment opzegbaar",
+    },
   },
   limited: {
     full: {
-      title: "Abonnementslimiet bereikt",
-      description: "We hebben het maximum van 30 actieve abonnees bereikt. Schrijf je in op de wachtlijst om een seintje te krijgen zodra er een plek vrijkomt.",
-      buttonText: "Aanmelden voor wachtlijst"
+      title: "Limiet van abonnementen bereikt",
+      description:
+        "We hebben de capaciteit van 30 actieve abonnees bereikt. Voeg je toe aan de wachtlijst om op de hoogte te worden gebracht wanneer er een plek vrijkomt.",
+      buttonText: "Voeg toe aan wachtlijst",
     },
     limited: {
       title: "Beperkte beschikbaarheid",
-      description: "Er zijn nog maar {{remaining}} plekken beschikbaar van de {{capacity}}. Schrijf je nu in voordat we vol zitten!",
-      buttonText: "Begin nu"
+      description:
+        "Er zijn nog maar {{remaining}} van {{capacity}} plekken over. Abonneer nu voordat ze op zijn!",
+      buttonText: "Nu starten",
     },
     available: {
       title: "Abonnementen beschikbaar",
-      description: "{{active}} van de {{capacity}} abonnementen zijn momenteel actief. Er is nog volop ruimte om mee te doen!",
-      buttonText: "Begin nu"
-    }
+      description:
+        "{{active}} van {{capacity}} abonnementen zijn momenteel actief. Er is veel ruimte voor jou!",
+      buttonText: "Nu starten",
+    },
   },
   features: {
     heading: "Waarom kiezen voor Amiquus?",
-    subheading: "Bespaar tijd en mis nooit jouw perfecte auto met onze geautomatiseerde volgservice.",
+    subheading:
+      "Bespaar tijd en mis nooit de perfecte auto met onze geautomatiseerde service.",
     multiSite: {
-      title: "Multi-site tracking",
-      description: "Bewaak meerdere auto-advertentiewebsites tegelijkertijd zonder elk afzonderlijk handmatig te hoeven controleren."
+      title: "Multi-site monitoring",
+      description:
+        "Volg meerdere autosites tegelijk zonder elk handmatig te controleren.",
     },
     notifications: {
       title: "Directe meldingen",
-      description: "Ontvang direct meldingen via Telegram wanneer er een auto die aan jouw criteria voldoet te koop wordt aangeboden."
+      description:
+        "Ontvang directe meldingen via Telegram wanneer een auto aan je criteria voldoet.",
     },
     filters: {
-      title: "Aangepaste filters",
-      description: "Stel nauwkeurige criteria in, zoals merk, model, bouwjaar, kilometerstand en prijsklasse om precies te vinden wat je zoekt."
+      title: "Aanpasbare filters",
+      description:
+        "Stel precieze criteria in: merk, model, bouwjaar, kilometerstand, prijs – vind precies wat je wilt.",
     },
     frequency: {
       title: "Aanpasbare frequentie",
-      description: "Kies hoe vaak we nieuwe aanbiedingen voor je controleren, van updates per uur tot monitoring in real-time."
+      description:
+        "Kies hoe vaak nieuwe advertenties worden gecontroleerd – van elk uur tot realtime.",
     },
     languages: {
       title: "Meertalige ondersteuning",
-      description: "Ontvang meldingen in uw voorkeurstaal voor een beter begrip van de vermeldingen."
+      description:
+        "Ontvang meldingen in je voorkeurstaal voor een betere begrip van advertenties.",
     },
     account: {
       title: "Eenvoudig accountbeheer",
-      description: "Beheer meerdere zoekprofielen en pas je abonnementsinstellingen eenvoudig aan met een paar klikken."
-    }
+      description:
+        "Beheer meerdere zoekprofielen en wijzig je abonnement met een paar klikken.",
+    },
   },
   howItWorks: {
     title: "Hoe werkt Amiquus",
-    subtitle: "Stel één keer in en laat ons geautomatiseerd systeem de perfecte autodeal voor jou vinden",
-    whyTitle: "Why Choose Amiquus?",
+    subtitle:
+      "Stel één keer in en laat ons systeem de perfecte aanbieding voor je vinden",
+    whyTitle: "Waarom kiezen voor Amiquus?",
     steps: {
       preferences: {
         title: "Stel je voorkeuren in",
-        description: "Selecteer automerken, modellen, prijsklasse en andere criteria die je wilt volgen."
+        description:
+          "Kies merken, modellen, prijsklassen en andere criteria die je interesseren.",
       },
       telegram: {
-        title: "Telegram verbinden",
-        description: "Koppel je Telegram-account om direct meldingen te ontvangen over nieuwe aanbiedingen."
+        title: "Koppel Telegram",
+        description:
+          "Koppel je Telegram-account om directe meldingen over nieuwe advertenties te ontvangen.",
       },
       notifications: {
-        title: "Ontvang direct meldingen",
-        description: "Ontvang direct een melding zodra er een auto die aan jouw criteria voldoet verschijnt op een van onze gecontroleerde websites."
+        title: "Ontvang directe meldingen",
+        description:
+          "Krijg direct meldingen wanneer een overeenkomende auto op een site verschijnt.",
       },
       findCar: {
-        title: "Vind uw perfecte auto",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "Vind je perfecte auto",
+        description:
+          "Wees als eerste op de hoogte van nieuwe advertenties en grijp de beste deals.",
+      },
     },
-    features: {
-      0: "Volg tegelijkertijd meer dan 15 autosites",
-      1: "Aanpasbare zoekcriteria met geavanceerde filters",
-      2: "Meldingen in realtime via Telegram",
-      3: "Automatische meldingen bij prijsdalingen en nieuwe aanbiedingen",
-      4: "Eenvoudig installatieproces dat minder dan 5 minuten duurt"
-    },
-    setAlerts: "Stel je waarschuwingen in",
+    features: [
+      "Volg meer dan 15 sites tegelijk",
+      "Aanpasbare zoekcriteria met geavanceerde filtering",
+      "Realtime meldingen via Telegram",
+      "Automatische meldingen voor prijsdalingen en nieuwe advertenties",
+      "Eenvoudig instelproces in minder dan 5 minuten",
+    ],
+    setAlerts: "Meldingen instellen",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Nieuwe match gevonden!",
+      description:
+        "BMW 3 Serie, 2019, € 32.500 – Recent geplaatst op AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram waarschuwing",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "Telegram-melding",
+      description:
+        "Mercedes C-Klasse, 2020, 30.000 km – Prijs met € 2.000 gedaald",
+    },
   },
   pricing: {
-    title: "Eerlijke, transparante prijzen",
-    subtitle: "Onze prijzen zijn afgestemd op jouw specifieke wensen. Begin met een basispakket en stel het samen naar jouw behoeften.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Eenvoudige en transparante prijzen",
+    subtitle:
+      "Onze prijzen zijn gebaseerd op jouw behoeften. Begin met het basisplan en pas aan.",
+    baseTitle: "Basisplan: € 79,99/maand",
+    includedTitle: "Inbegrepen:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Monitoring van één site",
+      "Updates elk uur",
+      "Onbeperkte filters",
+      "Meldingen via Telegram",
     ],
     addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Elke extra website"
-      },
-      1: {
-        name: "Updates elke 30 minuten"
-      },
-      2: {
-        name: "Elke 15 minuten bijgewerkt"
-      },
-      3: {
-        name: "Updates elke 5 minuten"
-      },
-      4: {
-        name: "Updates per minuut"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Begin nu"
+    addons: [
+      { name: "Elke extra site", price: 4.99 },
+      { name: "Updates elke 30 minuten", price: 2.99 },
+      { name: "Updates elke 15 minuten", price: 5.99 },
+      { name: "Updates elke 5 minuten", price: 9.99 },
+      { name: "Updates elke minuut", price: 14.99 },
+    ],
+    footerNote:
+      "Alle plannen omvatten onbeperkte zoekinstellingen en eenvoudig abonnementbeheer.",
+    button: "Nu starten",
   },
   signup: {
-    heading: "Maak je auto-waarschuwing",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Auto-melding aanmaken",
+    subheading:
+      "Stel gepersonaliseerde meldingen in voor auto-advertenties in een paar stappen.",
+    cta: "Nu meldingen ontvangen",
     waitlist: {
-      message: "We zitten momenteel op volledige capaciteit. Sluit je aan bij onze wachtlijst om op de hoogte te worden gesteld wanneer er een plek vrijkomt.",
-      cta: "Join Waitlist"
+      message:
+        "We zitten momenteel vol. Voeg je toe aan de wachtlijst om op de hoogte te worden gebracht wanneer er een plek vrijkomt.",
+      cta: "Voeg toe aan wachtlijst",
     },
     toast: {
       success: {
         title: "Abonnement aangemaakt",
-        description: "Your subscription has been created successfully"
+        description: "Je abonnement is succesvol aangemaakt",
       },
       error: {
-        title: "Abonnement mislukt",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Abonnement aanmaken mislukt",
+        description: "Kon het abonnement niet aanmaken. Probeer later opnieuw.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "Succes",
-        description: "Je betaalmethode is succesvol ingesteld."
+        description: "Je betaalmethode is succesvol ingesteld.",
       },
       error: {
         title: "Fout",
-        fallback: "Er is een onverwachte fout opgetreden. Probeer het alstublieft opnieuw."
-      }
+        fallback: "Er is een onverwachte fout opgetreden. Probeer opnieuw.",
+      },
     },
     button: {
       submit: "Betaalmethode instellen",
-      processing: "Bezig met verwerken..."
-    }
+      processing: "Verwerken...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "Het automerk is verplicht",
+      carModel: "Het automodel is verplicht",
+      fuelType: "Het brandstoftype is verplicht",
+      priceMin: "De minimumprijs moet een getal zijn",
+      priceMax: "De maximumprijs moet een getal zijn",
+      yearMin: "Het minimum bouwjaar moet geldig zijn",
+      yearMax: "Het maximum bouwjaar moet geldig zijn",
+      maxKilometers: "De maximum kilometerstand moet een getal zijn",
+      telegramUsername: "De Telegram-gebruikersnaam is verplicht",
+      telegramToken: "De Telegram-bot token is verplicht",
+      telegramChatId: "De Telegram-chat ID is verplicht",
+      websitesSelected: "Je moet minstens één site selecteren",
+      notificationLanguage: "De meldings taal is verplicht",
+      facebookMarketplaceUrl:
+        "De Facebook Marketplace URL is verplicht als Facebook is geselecteerd",
+    },
   },
   personalInfo: {
-    heading: "Persoonlijke gegevens",
-    description: "Vul alstublieft uw persoonlijke gegevens in zodat wij uw meldingen correct kunnen instellen.",
+    heading: "Persoonlijke informatie",
+    description:
+      "Voer je persoonlijke gegevens in om je meldingen correct in te stellen.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "E-mailadres"
+      firstName: "Voornaam",
+      lastName: "Achternaam",
+      email: "E-mailadres",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com"
+      firstName: "Jan",
+      lastName: "de Vries",
+      email: "jan.devries@voorbeeld.nl",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Voer een geldig e-mailadres in"
+      firstName: "De voornaam is verplicht",
+      lastName: "De achternaam is verplicht",
+      email: "Voer een geldig e-mailadres in",
     },
     actions: {
-      login: "Inloggen of registreren om door te gaan",
-      continue: "Doorgaan"
-    }
+      login: "Log in of registreer om door te gaan",
+      continue: "Doorgaan",
+    },
   },
   websiteSelection: {
-    heading: "Websitekeuze",
-    description: "Kies welke websites je wilt volgen en hoe vaak je updates wilt ontvangen.",
+    heading: "Site selectie",
+    description: "Kies de sites om te volgen en de gewenste updatefrequentie.",
     labels: {
-      websites: "Websites om te monitoren",
+      websites: "Sites om te volgen",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Updatefrequentie",
     },
     placeholders: {
-      frequency: "Selecteer frequentie"
+      frequency: "Selecteer frequentie",
     },
     help: {
-      websites: "Selecteer een of meer websites om te monitoren voor autoadvertenties.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites: "Selecteer één of meer sites om auto-advertenties te volgen.",
+      facebookUrl: "Plak de URL van je zoekresultaten op Facebook Marketplace.",
+      videoTitle: "Hulp nodig bij het vinden van de Facebook Marketplace link?",
+      videoDesc: "Bekijk de onderstaande video voor stapsgewijze instructies.",
+      updateFrequency:
+        "Hoe vaak controleren we nieuwe advertenties? Hogere frequenties kunnen meer kosten.",
     },
     errors: {
-      websites: "Er moet minstens één website worden geselecteerd.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "Je moet minstens één site selecteren",
+      facebookUrl:
+        "De Facebook Marketplace URL is verplicht als Facebook is geselecteerd",
     },
     actions: {
       previous: "Vorige",
-      continue: "Doorgaan"
-    }
+      continue: "Doorgaan",
+    },
   },
   carDetails: {
-    heading: "Auto details",
-    description: "Geef de specificaties van de auto op waar je naar zoekt. Alle velden zijn optioneel – laat ze leeg voor een breder aanbod aan resultaten.",
+    heading: "Autodetails",
+    description:
+      "Specificeer de details van de auto die je zoekt. Alle velden zijn optioneel – laat leeg voor bredere resultaten.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "Automerk",
+      carModel: "Automodel",
+      fuelType: "Brandstoftype",
+      priceMin: "Minimumprijs",
+      priceMax: "Maximumprijs",
+      yearMin: "Minimum bouwjaar",
+      yearMax: "Maximum bouwjaar",
+      maxKilometers: "Maximum kilometerstand",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "Selecteer merk",
+      carModel: "Selecteer model",
+      carModelDisabled: "Selecteer eerst het merk",
+      fuelType: "Selecteer brandstoftype",
+      priceMin: "Voer minimumprijs in",
+      priceMax: "Voer maximumprijs in",
+      yearMin: "Voer minimum bouwjaar in",
+      yearMax: "Voer maximum bouwjaar in",
+      maxKilometers: "Voer maximum kilometerstand in",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "Geen modellen beschikbaar",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "Het automerk is verplicht",
+      carModel: "Het automodel is verplicht",
+      fuelType: "Het brandstoftype is verplicht",
+      priceMin: "De minimumprijs moet een getal zijn",
+      priceMax: "De maximumprijs moet een getal zijn",
+      yearMin: "Het minimum bouwjaar moet geldig zijn",
+      yearMax: "Het maximum bouwjaar moet geldig zijn",
+      maxKilometers: "De maximum kilometerstand moet een getal zijn",
     },
     actions: {
       previous: "Vorige",
-      continue: "Doorgaan"
-    }
+      continue: "Doorgaan",
+    },
   },
   telegram: {
-    heading: "Telegram instellen",
-    description: "Stel Telegram-meldingen in door je bot-token en chat-ID op te geven.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Als je problemen hebt met het aanmaken van een Telegram-bot, neem dan contact met ons op. We bellen je en helpen je er graag mee.",
+    heading: "Telegram configuratie",
+    description:
+      "Stel Telegram-meldingen in door de bot token en chat ID in te voeren.",
+    subHeading: "Stel je Telegram-bot in",
+    info: "Problemen met het aanmaken van een Telegram-bot? Neem contact met ons op en we helpen je.",
     contact: "Neem contact op",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Hoe verkrijg je de Telegram-bot token:",
+      botStep1: "Open Telegram en zoek naar @BotFather",
+      botStep2: "Stuur het commando /newbot",
+      botStep3: "Volg de instructies om de bot aan te maken",
+      botStep4: "Kopieer de token die BotFather geeft",
+
+      chatTitle: "Hoe verkrijg je je Telegram-chat ID:",
+      chatStep1: "Open Telegram en zoek naar @userinfobot",
+      chatStep2: "Stuur een willekeurig bericht naar de bot",
+      chatStep3: "De bot reageert met je informatie, inclusief de chat ID",
+      chatStep4: "Kopieer de chat ID (een getal)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Hulp nodig bij het instellen van de bot token en chat ID?",
+    videoDescription:
+      "Bekijk de onderstaande video voor stapsgewijze instructies.",
+
     labels: {
-      token: "Telegram Bot Token",
-      chatId: "Your Telegram Chat ID",
-      language: "Meldingstaal",
-      username: "Telegram gebruikersnaam"
+      token: "Telegram-bot token",
+      chatId: "Je Telegram-chat ID",
+      language: "Meldings taal",
+      username: "Telegram-gebruikersnaam",
     },
+
     placeholders: {
-      token: "Voer je bot-token van BotFather in",
-      chatId: "Enter your Telegram chat ID",
-      language: "Selecteer de taal van het Telegram-bericht",
-      username: "Voer je Telegram-gebruikersnaam in"
+      token: "Voer je bot token van BotFather in",
+      chatId: "Voer je Telegram-chat ID in",
+      language: "Selecteer de taal voor Telegram-berichten",
+      username: "Voer je Telegram-gebruikersnaam in",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Dit is de gebruikersnaam van je Telegram-account (zonder het @ teken).",
     examples: {
       token: "Voorbeeld: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      chatId:
+        "Verkrijg dit door een bericht te sturen naar @userinfobot op Telegram",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Instelinstructies:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Open Telegram en zoek naar "BotFather"',
+      'Start een gesprek met BotFather door op "Start" te klikken',
+      "Voer /newbot in en volg de instructies om een nieuwe bot aan te maken",
+      "Kies een naam voor je bot",
+      "Kies een gebruikersnaam voor de bot (moet eindigen op 'bot')",
+      "Kopieer de API-token die BotFather geeft",
+      "Stuur een bericht naar je nieuwe bot om het gesprek te activeren",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Hoe verkrijg je je Telegram-chat ID:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Open Telegram en zoek naar "userinfobot"',
+      "Stuur een willekeurig bericht naar de bot",
+      "De bot reageert met je informatie, inclusief de chat ID",
+      "Kopieer je chat ID",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle: "Hulp nodig bij het instellen van de bot token en chat ID?",
+    helpDescription:
+      "Bekijk de onderstaande video voor stapsgewijze instructies.",
+    botTokenLabel: "Telegram-bot token",
+    botTokenPlaceholder: "Voer je bot token van BotFather in",
+    botTokenExample:
+      "Voorbeeld: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Je Telegram-chat ID",
+    chatIdPlaceholder: "Voer je Telegram-chat ID in",
+    chatIdDescription:
+      "Verkrijg dit door een bericht te sturen naar @userinfobot op Telegram",
+    languageLabel: "Meldings taal",
+    languagePlaceholder: "Selecteer de taal voor Telegram-berichten",
     languages: {
       en: "Engels",
       de: "Duits",
       fr: "Frans",
-      es: "Nederlands",
-      it: "Nederlands"
+      es: "Spaans",
+      it: "Italiaans",
+      nl: "Nederlands",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Voorbeeld Telegram-melding",
+    carAlertTitle: "Nieuwe auto-melding!",
+    priceLabel: "Prijs: {{price}}",
+    kilometresLabel: "Kilometers: {{kms}}",
+    locationLabel: "Locatie: {{location}}",
+    viewListing: "Bekijk advertentie →",
     errors: {
-      token: "Telegram-bottoken is vereist",
-      chatId: "Telegram chat ID is required",
-      language: "Taal van de melding is verplicht",
-      username: "Telegram-gebruikersnaam is verplicht"
+      token: "De Telegram-bot token is verplicht",
+      chatId: "De Telegram-chat ID is verplicht",
+      language: "De meldings taal is verplicht",
+      username: "De Telegram-gebruikersnaam is verplicht",
     },
+
     actions: {
       previous: "Vorige",
-      continue: "Ga verder"
+      continue: "Doorgaan",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "Start een gesprek met onze Telegram-bot door op de onderstaande link te klikken en een bericht te sturen:",
+    contactBotNote:
+      "Dit is verplicht om auto-meldingen te ontvangen. Als je op de computer bent, scan de QR-code.",
+    confirmContact:
+      "Ik heb een gesprek gestart met de bot en een bericht gestuurd",
   },
   review: {
-    title: "Bekijk je abonnement",
-    description: "Controleer alstublieft uw abonnementsgegevens voordat u doorgaat naar de betaling.",
+    title: "Overzicht van je abonnement",
+    description: "Controleer de abonnementsdetails voordat je betaalt.",
+
     personal: {
-      title: "Persoonlijke gegevens",
+      title: "Persoonlijke informatie",
       name: "Naam",
-      email: "E-mail"
+      email: "E-mail",
     },
+
     monitoring: {
-      title: "Monitoringsinstellingen",
-      websites: "Websites",
+      title: "Monitoring instellingen",
+      websites: "Sites",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Updatefrequentie",
     },
+
     specs: {
       title: "Autospecificaties",
       brand: "Merk",
       model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Actieradius (km)",
-      price: "Prijsklasse (€)"
+      fuelType: "Brandstoftype",
+      yearRange: "Bouwjaar",
+      mileage: "Kilometers (km)",
+      price: "Prijs (€)",
     },
+
     notification: {
       title: "Meldingsinstellingen",
-      telegram: "Telegram Bot",
-      language: "Taal van meldingen"
+      telegram: "Telegram-bot",
+      language: "Meldings taal",
     },
+
     summary: {
-      title: "Abonnements­overzicht",
+      title: "Abonnementsoverzicht",
       base: "Basisabonnement",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Totaal (per maand)"
+      extraWebsites: "Extra sites",
+      frequencyUpgrade: "Frequentie upgrade",
+      total: "Totaal (maandelijks)",
     },
+
     terms: {
       checkbox: "Ik ga akkoord met de",
-      tos: "Servicevoorwaarden",
-      privacy: "Privacyverklaring",
-      note: "Je abonnement wordt elke maand automatisch verlengd. Je kunt op elk moment opzeggen.",
-      error: "U moet akkoord gaan met de algemene voorwaarden"
+      tos: "Gebruikersvoorwaarden",
+      privacy: "Privacybeleid",
+      note: "Je abonnement vernieuwt automatisch elke maand. Je kunt op elk moment opzeggen.",
+      error: "Je moet de gebruikersvoorwaarden accepteren",
     },
+
     actions: {
       previous: "Vorige",
-      submit: "Doorgaan naar betaling"
-    }
+      submit: "Ga naar betaling",
+    },
   },
   faq: {
     title: "Veelgestelde vragen",
-    subtitle: "Vind antwoorden op de meest gestelde vragen over onze service.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "De snelheid van meldingen hangt af van de door jou gekozen updatefrequentie. Met het standaard uurlijkse abonnement ontvang je meldingen binnen een uur nadat er een nieuwe advertentie is geplaatst. Voor bijna real-time meldingen (binnen enkele minuten na plaatsing) kun je upgraden naar onze frequentere update-abonnementen.",
-        question: "Hoe snel ontvang ik meldingen nadat er een nieuwe advertentie is geplaatst?"
+    subtitle:
+      "Vind antwoorden op de meest voorkomende vragen over onze service.",
+    contactPrompt: "Nog vragen?",
+    contactLink: "Neem contact op met onze support",
+    questions: [
+      {
+        question:
+          "Hoe snel ontvang ik meldingen na plaatsing van een nieuwe advertentie?",
+        answer:
+          "De snelheid van meldingen hangt af van de gekozen updatefrequentie. Met het uurplan ontvang je meldingen binnen een uur na plaatsing. Voor bijna directe meldingen (binnen enkele minuten), upgrade naar frequentere plannen.",
       },
-      1: {
-        answer: "Ja! Je kunt meerdere zoekprofielen aanmaken met verschillende criteria. Elk profiel telt als een apart abonnement, maar je beheert ze allemaal vanuit één account. Ideaal als je tegelijkertijd naar verschillende soorten voertuigen zoekt.",
-        question: "Kan ik meerdere verschillende typen auto's tegelijk volgen?"
+      {
+        question: "Kan ik meerdere verschillende autotypes tegelijk volgen?",
+        answer:
+          "Ja! Je kunt meerdere zoekprofielen aanmaken met verschillende criteria. Elk profiel telt als een apart abonnement, maar je beheert ze allemaal vanuit één account.",
       },
-      2: {
-        answer: "We ondersteunen momenteel de belangrijkste platforms voor autoverkoop, waaronder AutoTrader, CarGurus, Cars.com en Facebook Marketplace. We breiden onze dekking voortdurend uit om meer websites toe te voegen op basis van gebruikersvraag en regionale populariteit.",
-        question: "Welke websites ondersteunt u momenteel?"
+      {
+        question: "Welke sites ondersteunen jullie momenteel?",
+        answer:
+          "We ondersteunen momenteel de belangrijkste platforms, waaronder AutoTrader, CarGurus, Cars.com en Facebook Marketplace. We voegen voortdurend nieuwe sites toe op verzoek.",
       },
-      3: {
-        answer: "Helemaal niet! We bieden stapsgewijze instructies met zowel tekst- als videohandleidingen om je te helpen de Telegram-bot in te stellen. De meeste gebruikers ronden de installatie af in minder dan 5 minuten, zelfs zonder technische kennis.",
-        question: "Heb ik technische kennis nodig om de Telegram-bot te gebruiken?"
+      {
+        question: "Heb ik technische kennis nodig voor de Telegram-bot?",
+        answer:
+          "Nee! We bieden gedetailleerde instructies met tekst en video. De meeste gebruikers stellen de bot in binnen 5 minuten.",
       },
-      4: {
-        answer: "Ja, je kunt je zoekcriteria op elk moment aanpassen via het dashboard van je account. Wijzigingen worden direct doorgevoerd en je meldingen worden meteen bijgewerkt, zonder enige onderbreking van de service.",
-        question: "Kan ik mijn zoekcriteria aanpassen nadat ik mijn abonnement heb ingesteld?"
+      {
+        question:
+          "Kan ik de zoekcriteria wijzigen na het instellen van het abonnement?",
+        answer:
+          "Ja, je kunt de criteria op elk moment wijzigen in het dashboard. Wijzigingen worden onmiddellijk van kracht.",
       },
-      5: {
-        answer: "Je kunt je abonnement op elk moment opzeggen via het dashboard van je account. Ga naar het gedeelte \"Abonnementen\", selecteer het abonnement dat je wilt opzeggen en klik op de knop \"Abonnement opzeggen\". Je dienst blijft actief tot het einde van je huidige factureringsperiode.",
-        question: "Hoe zeg ik mijn abonnement op?"
-      }
-    }
+      {
+        question: "Hoe zeg ik het abonnement op?",
+        answer:
+          'Je kunt het abonnement op elk moment opzeggen in de sectie "Abonnementen" van het dashboard. De service blijft actief tot het einde van de factureringsperiode.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
+    brandDescription:
+      "Je persoonlijke assistent om de perfecte gebruikte auto-aanbieding op het juiste moment te vinden.",
+    quickLinks: "Snelle links",
     features: "Functies",
     pricing: "Prijzen",
-    faq: "Veelgestelde vragen",
-    getStarted: "Get Started",
+    faq: "FAQ",
+    getStarted: "Aan de slag",
     legal: "Juridisch",
-    terms: "Servicevoorwaarden",
-    privacy: "Privacyverklaring",
+    terms: "Gebruikersvoorwaarden",
+    privacy: "Privacybeleid",
     cookies: "Cookiebeleid",
-    gdpr: "AVG-naleving",
+    gdpr: "GDPR-naleving",
     contact: "Contact",
     email: "support@amiquus.com",
-    telegram: "Neem contact met ons op via Telegram",
+    telegram: "Neem contact op via Telegram",
     copyright: "Alle rechten voorbehouden.",
     about: "Over ons",
     blog: "Blog",
-    careers: "Vacatures",
-    support: "Ondersteuning"
+    careers: "Carrières",
+    support: "Support",
   },
   login: {
-    title: "Log in op je account",
-    description: "Voer je e-mailadres en wachtwoord in om toegang te krijgen tot je dashboard",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    title: "Inloggen op account",
+    description:
+      "Voer je e-mail en wachtwoord in om toegang te krijgen tot het dashboard",
+    emailLabel: "E-mail",
+    passwordLabel: "Wachtwoord",
+    loginButton: "Inloggen",
+    loggingIn: "Bezig met inloggen...",
+    loginWithGoogle: "Inloggen met Google",
     or: "of",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Nog geen account?",
+    registerLink: "Registreren",
+    successTitle: "Succesvol ingelogd",
+    successMessage: "Je bent succesvol ingelogd.",
+    errorTitle: "Inloggen mislukt",
+    genericError: "Controleer je gegevens en probeer opnieuw.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "Voer een geldig e-mailadres in",
+      shortPassword: "Het wachtwoord moet minstens 6 tekens bevatten",
+    },
   },
   register: {
     title: "Account aanmaken",
-    description: "Meld je aan om je droomauto te volgen",
-    google: "Aanmelden met Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
+    description:
+      "Registreer en begin met het zoeken naar de auto van je dromen",
+    google: "Registreren met Google",
+    orContinue: "Of ga verder met",
+    firstName: "Voornaam",
+    lastName: "Achternaam",
     username: "Gebruikersnaam",
     email: "E-mail",
     password: "Wachtwoord",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "Bevestig wachtwoord",
+    termsNotice: "Ik ga akkoord met de",
+    termsOfService: "Gebruikersvoorwaarden",
+    privacyPolicy: "Privacybeleid",
+    createBtn: "Account aanmaken",
+    alreadyHave: "Heb je al een account?",
     login: "Inloggen",
     and: "en",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Ontbrekende velden",
+        desc: "Vul alle verplichte velden in",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Ongeldige gebruikersnaam",
+        desc: "De gebruikersnaam moet alfanumeriek zijn en tussen 3 en 20 tekens bevatten",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Wachtwoorden komen niet overeen",
+        desc: "Zorg ervoor dat de wachtwoorden overeenkomen",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Voorwaarden niet geaccepteerd",
+        desc: "Je moet de gebruikersvoorwaarden en het privacybeleid accepteren om door te gaan",
       },
       success: {
         title: "Registratie geslaagd",
-        desc: "Welkom bij Amiquus! Je wordt doorgestuurd om je e-mailadres te verifiëren."
+        desc: "Welkom bij Amiquus! Je wordt doorgestuurd naar de e-mailverificatie.",
       },
       failure: {
         title: "Registratie mislukt",
-        desc: "Controleer uw gegevens en probeer het opnieuw."
-      }
-    }
+        desc: "Controleer je gegevens en probeer opnieuw",
+      },
+    },
   },
   verifyEmail: {
-    title: "Bevestig je e-mailadres",
-    description: "Er is een verificatiecode naar je e-mailadres gestuurd.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "E-mail verifiëren",
+    description: "We hebben een verificatiecode naar je e-mailadres gestuurd.",
+    codeLabel: "Verificatiecode",
+    verifyButton: "E-mail verifiëren",
+    updateEmailLabel: "E-mail bijwerken",
+    updateEmailButton: "E-mail bijwerken",
+    resendButton: "Code opnieuw versturen",
+    resendCountdown: "Je kunt de code over {{seconds}}s opnieuw versturen",
+    footerNote: "Geen code ontvangen? Controleer je spamfolder.",
     toast: {
-      verified: "E-mail is bevestigd",
+      verified: "E-mail geverifieerd",
       failed: "Verificatie mislukt",
-      resent: "Verificatiecode opnieuw verzonden",
+      resent: "Verificatiecode opnieuw verstuurd",
       error: "Fout",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      invalidEmail: "Ongeldig e-mailadres",
+      enterValidEmail: "Voer een geldig e-mailadres in",
+      sameEmail: "Zelfde e-mail",
+      sameEmailDesc: "Het nieuwe e-mailadres is identiek aan het huidige",
+      emailUpdated: "E-mail bijgewerkt",
+    },
   },
   dashboardPayment: {
     add: "Betaalmethode toevoegen",
-    description: "Voeg een nieuwe creditcard of betaalpas toe voor je abonnementsbetalingen.",
-    processing: "Bezig met verwerken...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    description:
+      "Voeg een nieuwe creditcard of debitcard toe voor abonnementsbetalingen.",
+    processing: "Verwerken...",
+    errorTitle: "Fout bij toevoegen betaalmethode",
+    errorMessage: "Er is een onverwachte fout opgetreden",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "Fout",
+      description: "Kon de betalingsinstellingen niet initialiseren",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
+      years: "Bouwjaren",
+      priceRange: "Prijs",
+      websites: "Sites",
       updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      language: "Taal",
+      price: "Prijs",
+      edit: "Bewerken",
+      cancelAlert: "Melding annuleren",
+      cancelTitle: "Auto-melding annuleren",
+      cancelDescription:
+        "Weet je zeker dat je de melding voor {{brand}} {{model}} wilt annuleren? Dit stopt alle meldingen en je moet de melding opnieuw instellen.",
+      keepMyAlert: "Melding behouden",
+      confirmCancel: "Melding annuleren",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Vervalt",
+      default: "Standaard",
+      setAsDefault: "Instellen als standaard",
+      remove: "Verwijderen",
+      setDefaultTitle: "Standaard betaalmethode instellen",
+      setDefaultDescription:
+        "Wil je de kaart {{brand}}, eindigend op {{last4}}, instellen als standaard betaalmethode? Deze kaart wordt gebruikt voor alle toekomstige betalingen.",
+      removeTitle: "Betaalmethode verwijderen",
+      removeDescription:
+        "Weet je zeker dat je de kaart {{brand}}, eindigend op {{last4}}, wilt verwijderen?",
+      removeWarning:
+        "Dit is je standaard betaalmethode en verwijderen kan actieve abonnementen beïnvloeden.",
+      cancel: "Annuleren",
+      confirmRemove: "Kaart verwijderen",
+    },
   },
   profile: {
     tabs: {
       alerts: "Mijn meldingen",
-      payments: "Betaalmethoden"
+      payments: "Betaalmethoden",
     },
     sidebar: {
-      memberSince: "Member since",
+      memberSince: "Lid sinds",
       subscriptions: "Abonnementen",
       methods: "Betaalmethoden",
       account: "Accountinstellingen",
-      privacy: "Privacy & beveiliging",
-      logout: "Uitloggen"
+      privacy: "Privacy en beveiliging",
+      logout: "Uitloggen",
     },
     account: {
       title: "Accountinstellingen",
-      desc: "Werk uw accountgegevens en voorkeuren bij.",
+      desc: "Werk je accountinformatie en instellingen bij.",
       name: "Naam",
       email: "E-mail",
       username: "Gebruikersnaam",
       cancel: "Annuleren",
-      save: "Wijzigingen opslaan"
+      save: "Wijzigingen opslaan",
     },
     security: {
-      title: "Privacy & Beveiliging",
-      desc: "Beheer je beveiligingsinstellingen en privacyvoorkeuren.",
+      title: "Privacy en beveiliging",
+      desc: "Beheer beveiligings- en privacyinstellingen.",
       current: "Huidig wachtwoord",
       new: "Nieuw wachtwoord",
       confirm: "Bevestig nieuw wachtwoord",
-      update: "Wachtwoord bijwerken"
+      update: "Wachtwoord bijwerken",
     },
     logout: {
       title: "Uitloggen",
-      desc: "Weet je zeker dat je wilt uitloggen uit je account?",
-      success: "Je bent succesvol uitgelogd."
+      desc: "Weet je zeker dat je wilt uitloggen?",
+      success: "Je bent succesvol uitgelogd.",
     },
     alerts: {
-      title: "Abonnementen op auto-alerts",
-      desc: "Beheer je zoekmeldingen voor auto's en je notificatievoorkeuren.",
+      title: "Auto-meldingsabonnementen",
+      desc: "Beheer je meldingen en meldingsinstellingen.",
       add: "Nieuwe melding toevoegen",
       none: "Je hebt geen actieve auto-meldingen.",
       cta: "Maak je eerste melding aan",
-      warning: "⚠️ Wijzigingen aan je abonnement worden doorgevoerd in de volgende factureringsperiode, en alleen na een geslaagde betaling. Als de betaling mislukt, blijft je huidige alert-instelling ongewijzigd."
+      warning:
+        "⚠️ Wijzigingen aan het abonnement worden van kracht in de volgende factureringscyclus en alleen na een succesvolle betaling. Bij mislukte betaling blijft de huidige configuratie behouden.",
     },
     payments: {
       title: "Betaalmethoden",
-      desc: "Beheer je betaalmethoden voor abonnementskosten.",
-      none: "Je hebt geen betaalmethoden opgeslagen.",
-      encrypted: "Je betaalgegevens worden versleuteld en veilig opgeslagen."
-    }
+      desc: "Beheer betaalmethoden voor abonnementen.",
+      none: "Je hebt geen opgeslagen betaalmethoden.",
+      encrypted: "Je betaalgegevens zijn versleuteld en veilig opgeslagen.",
+    },
   },
   setupAlerts: {
-    title: "Stel je auto-alerts in",
-    subtitle: "Stel je Telegram-bot in om meldingen te ontvangen over jouw droomauto",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Start mijn auto-alarmdienst",
-    cancel: "Op ieder moment opzegbaar",
+    title: "Auto-meldingen instellen",
+    subtitle:
+      "Stel je Telegram-bot in om meldingen te ontvangen over de auto van je dromen",
+    basicPlan: "Basisplan",
+    baseTitle: "€ 79,99/maand",
+    button: "Start auto-meldingsdienst",
+    cancel: "Op elk moment opzegbaar",
     toasts: {
       terms: {
         title: "Voorwaarden niet geaccepteerd",
-        description: "U moet akkoord gaan met de servicevoorwaarden om door te gaan."
+        description:
+          "Je moet de gebruikersvoorwaarden accepteren om door te gaan",
       },
       success: {
         title: "Abonnement aangemaakt",
-        description: "Je abonnement is succesvol aangemaakt"
+        description: "Je abonnement is succesvol aangemaakt",
       },
       error: {
-        title: "Fout bij het aanmaken van het abonnement"
+        title: "Fout bij aanmaken abonnement",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "Botcontact vereist",
+        description:
+          "Om auto-meldingen te ontvangen, moet je een gesprek starten met onze Telegram-bot en een bericht sturen. Volg de onderstaande instructies.",
+      },
+    },
   },
   loginPrompt: {
     title: "Inloggen vereist",
-    description: "U moet ingelogd zijn om door te gaan. Log in of registreer u.",
+    description: "Je moet ingelogd zijn om door te gaan. Log in of registreer.",
     register: "Registreren",
-    login: "Inloggen"
+    login: "Inloggen",
   },
   waitlistPrompt: {
-    title: "Meld je aan voor de wachtlijst",
-    description: "We zitten momenteel vol. Schrijf je in op de wachtlijst om bericht te krijgen zodra er een plek vrijkomt.",
-    button: "Aanmelden voor wachtlijst"
+    title: "Voeg toe aan wachtlijst",
+    description:
+      "We zitten momenteel vol. Voeg je toe aan de wachtlijst om op de hoogte te worden gebracht wanneer er een plek vrijkomt.",
+    button: "Voeg toe aan wachtlijst",
   },
   subscription: {
-    title: "Abonnementsgegevens",
-    subTitle: "Edit your subscription details below",
-    error: "Ga terug naar het dashboard",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Je kunt je abonnement op elk moment pauzeren. Wanneer je je abonnement pauzeert, stoppen je auto-meldingen totdat je ze weer hervat.",
+    title: "Abonnementsdetails",
+    subTitle: "Bewerk de abonnementsdetails hieronder",
+    error: "Terug naar dashboard",
+    notFound: "Abonnement niet gevonden",
+    notFoundSub: "Terug naar dashboard",
+    description:
+      "Je kunt het abonnement op elk moment pauzeren. Wanneer gepauzeerd, stoppen de meldingen tot reactivatie.",
     form: {
       status: {
         label: "Status",
         placeholder: "Selecteer status",
         active: "Actief",
-        paused: "Gepauzeerd"
-      }
+        paused: "Gepauzeerd",
+      },
     },
     actions: {
       save: "Wijzigingen opslaan",
-      back: "Terug"
+      back: "Terug",
     },
     toasts: {
       success: {
         title: "Abonnement bijgewerkt",
-        description: "Je abonnement voor {{brand}} {{model}} is succesvol bijgewerkt"
+        description:
+          "Je abonnement voor {{brand}} {{model}} is succesvol bijgewerkt",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Kan abonnement niet bijwerken",
+        description:
+          "Je kunt niet tegelijk pauzeren en de prijs van het abonnement bijwerken. Kies één van beide.",
       },
       error: {
-        title: "Fout bij het bijwerken van het abonnement"
-      }
-    }
+        title: "Fout bij bijwerken abonnement",
+      },
+    },
   },
   about: {
     title: "Over Amiquus",
-    description: "Wij veranderen de manier waarop mensen hun perfecte tweedehands auto vinden door geavanceerde monitoringtechnologie voor iedereen toegankelijk te maken.",
+    description:
+      "We revolutioneren de zoektocht naar de perfecte gebruikte auto met geavanceerde monitoringtechnologie",
     meta: {
-      title: "Over ons | Amiquus - Dienst voor het monitoren van autoadvertenties",
-      description: "Lees meer over AMIQUUS, onze missie om het kopen van tweedehands auto’s te vernieuwen, en het team achter onze slimme dienst voor het monitoren van autoadvertenties."
+      title: "Over | Amiquus - Auto-advertentie monitoring service",
+      description:
+        "Leer meer over Amiquus, onze missie en het team achter de slimme auto-advertentie monitoring service.",
     },
     story: {
       heading: "Ons verhaal",
-      paragraphs: {
-        0: "AMIQUUS is in 2023 ontstaan toen onze oprichter, Alex, maandenlang autosites ververste op zoek naar een specifiek zeldzaam model voor een goede prijs. Nadat hij door vertraagde meldingen meerdere kansen had gemist, besefte hij dat het anders moest kunnen.",
-        1: "Samen met een klein team van ontwikkelaars en autoliefhebbers bouwde Alex een monitoringssysteem dat advertenties op meerdere websites tegelijk kon volgen en direct meldingen stuurde zodra er een match werd gevonden.",
-        2: "Wat begon als een persoonlijk project, trok al snel de aandacht van vrienden en familie. Begin 2025 werd AMIQUUS gelanceerd als een dienst die voor iedereen beschikbaar is. Vandaag de dag helpen we autokopers in het hele land tijd te besparen en betere deals te vinden met onze slimme monitoringtechnologie."
-      }
+      paragraphs: [
+        "Amiquus begon in 2023 toen onze oprichter Alex maandenlang sites vernieuwde op zoek naar een zeldzaam model tegen een goede prijs. Na gemiste kansen besefte hij dat er een betere manier moest zijn.",
+        "Met een klein team van ontwikkelaars en autoliefhebbers bouwde Alex een systeem om meerdere sites tegelijk te volgen en directe meldingen te sturen.",
+        "Het project groeide snel en begin 2025 werd Amiquus een service voor iedereen. Vandaag helpen we kopers in het hele land tijd te besparen en betere deals te vinden.",
+      ],
     },
     mission: {
       heading: "Onze missie",
-      items: {
-        0: {
-          description: "Voorkom dat je steeds meerdere websites moet verversen door het zoekproces te automatiseren en tijdig meldingen te ontvangen.",
-          title: "Bespaar tijd"
+      items: [
+        {
+          title: "Tijd besparen",
+          description:
+            "Elimineer de noodzaak om constant meerdere sites te vernieuwen met geautomatiseerd zoeken en tijdige meldingen.",
         },
-        1: {
-          description: "Wees als eerste op de hoogte van een geweldige deal en krijg zo een voorsprong op een concurrerende markt waar timing allesbepalend is.",
-          title: "Vind betere deals"
+        {
+          title: "Betere deals vinden",
+          description:
+            "Wees als eerste op de hoogte van geweldige deals en krijg een voorsprong in een competitieve markt.",
         },
-        2: {
-          description: "Neem weloverwogen beslissingen met uitgebreid inzicht op meerdere betrouwbare autoplatforms.",
-          title: "Koop met vertrouwen"
-        }
-      }
+        {
+          title: "Met vertrouwen kopen",
+          description:
+            "Neem geïnformeerde beslissingen met volledig overzicht over meerdere betrouwbare platforms.",
+        },
+      ],
     },
     team: {
       heading: "Ons team",
-      members: {
-        0: {
-          bio: "Voormalig software engineer met een passie voor auto’s en het bouwen van innovatieve oplossingen.",
-          name: "Alex Morgan, zo werkt het",
-          role: "Oprichter & CEO"
+      members: [
+        {
+          name: "Alex Morgan",
+          role: "Oprichter en CEO",
+          bio: "Voormalig programmeur gepassioneerd door auto's en innovatieve oplossingen.",
         },
-        1: {
-          bio: "Data science expert met specialisatie in webscraping en informatiesystemen.",
-          name: "Sarah Chen, zo werkt het",
-          role: "Technisch directeur"
+        {
+          name: "Sarah Chen",
+          role: "Technisch directeur",
+          bio: "Data science expert, gespecialiseerd in web scraping.",
         },
-        2: {
-          bio: "Full-stack engineer met expertise in het bouwen van krachtige notificatiesystemen.",
+        {
           name: "Marcus Lee",
-          role: "Hoofdontwikkelaar"
+          role: "Ontwikkelingsmanager",
+          bio: "Full-stack engineer met ervaring in high-performance meldingsystemen.",
         },
-        3: {
-          bio: "Voormalig autoverkoper toegewijd aan het helpen van klanten bij het vinden van hun ideale auto.",
-          name: "Elena Rodriguez, zo werkt het",
-          role: "Klantensucces"
-        }
-      }
+        {
+          name: "Elena Rodriguez",
+          role: "Klantenondersteuning",
+          bio: "Voormalig autoverkoper, toegewijd om het perfecte voertuig te helpen vinden.",
+        },
+      ],
     },
     join: {
-      heading: "Word lid van ons team",
-      description: "We zijn altijd op zoek naar getalenteerde mensen die gepassioneerd zijn over technologie en het vernieuwen van de autokoopervaring. Bekijk onze actuele vacatures en sluit je aan bij onze missie.",
-      cta: "Bekijk open vacatures"
+      heading: "Word lid van het team",
+      description:
+        "We zoeken altijd gepassioneerde talenten voor technologie en het revolutioneren van autokoop.",
+      cta: "Bekijk open vacatures",
     },
     questions: {
-      heading: "Vragen?",
-      description: "Lees meer over hoe onze service werkt, bekijk de prijsopties of neem contact op met ons supportteam.",
+      heading: "Heb je vragen?",
+      description:
+        "Leer meer over hoe de service werkt, prijzen of neem contact op met support.",
       links: {
-        faq: "Bekijk de FAQ",
+        faq: "Bezoek de FAQ",
         pricing: "Bekijk prijzen",
-        support: "Neem contact op met support"
-      }
-    }
+        support: "Contacteer support",
+      },
+    },
   },
   terms: {
-    metaTitle: "Servicevoorwaarden | Amiquus",
-    metaDescription: "Lees de Amiquus Gebruiksvoorwaarden die van toepassing zijn op jouw gebruik van onze dienst voor het monitoren en ontvangen van meldingen over autoadvertenties.",
-    title: "Servicevoorwaarden",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Gebruikersvoorwaarden | Amiquus",
+    metaDescription:
+      "Lees de gebruikersvoorwaarden van Amiquus die het gebruik van de auto-advertentie monitoring service regelen.",
+    title: "Gebruikersvoorwaarden",
+    lastUpdated: "Laatst bijgewerkt: 21 mei 2025.",
     sections: {
-      1: {
-        id: "overeenkomst",
-        heading: "Akkoord met de voorwaarden",
-        paragraphs: {
-          0: "Deze Gebruiksvoorwaarden vormen een juridisch bindende overeenkomst tussen jou en AMIQUUS met betrekking tot jouw toegang tot en gebruik van onze website en diensten.",
-          1: "Door onze diensten te gebruiken of te bezoeken, ga je akkoord met deze Voorwaarden. Als je het niet eens bent met (een deel van) de voorwaarden, mag je geen gebruik maken van de dienst."
-        },
-        list: [
-        ]
+      "1": {
+        id: "agreement",
+        heading: "Aanvaarding van de voorwaarden",
+        paragraphs: [
+          "Deze gebruikersvoorwaarden vormen een juridisch bindende overeenkomst tussen jou en Amiquus met betrekking tot toegang tot en gebruik van onze site en services.",
+          "Door toegang te krijgen tot of gebruik te maken van onze services, ga je akkoord met deze voorwaarden. Als je het niet eens bent met enig deel, mag je de services niet gebruiken.",
+        ],
+        list: [],
       },
-      2: {
-        id: "wijzigingen",
-        heading: "Wijzigingen van de voorwaarden",
-        paragraphs: {
-          0: "We behouden ons het recht voor om deze Voorwaarden op elk moment naar eigen inzicht te wijzigen of te vervangen. Als een wijziging wezenlijk is, zullen wij redelijke inspanningen leveren om ten minste 30 dagen van tevoren melding te maken voordat de nieuwe voorwaarden van kracht worden.",
-          1: "Door onze dienst te blijven gebruiken of er toegang toe te krijgen nadat deze wijzigingen van kracht zijn geworden, ga je akkoord met de aangepaste voorwaarden. Als je niet akkoord gaat met de nieuwe voorwaarden, stop dan met het gebruik van de dienst."
-        },
-        list: [
-        ]
+      "2": {
+        id: "changes",
+        heading: "Wijzigingen in de voorwaarden",
+        paragraphs: [
+          "We behouden ons het recht voor om deze voorwaarden naar eigen goeddunken te wijzigen of te vervangen. Als een wijziging materieel is, geven we ten minste 30 dagen voorafgaande kennisgeving voordat de nieuwe voorwaarden van kracht worden.",
+          "Door de service te blijven gebruiken na de inwerkingtreding van de wijzigingen, ga je akkoord met de herziene voorwaarden. Als je het niet eens bent met de nieuwe voorwaarden, stop dan met het gebruik van de service.",
+        ],
+        list: [],
       },
-      3: {
+      "3": {
         id: "account",
         heading: "Accountvoorwaarden",
-        paragraphs: {
-          0: "Om van onze diensten gebruik te maken, moet u:"
-        },
-        list: {
-          0: "Je moet minimaal 18 jaar oud zijn",
-          1: "Voltooi het registratieproces",
-          2: "Voorzie nauwkeurige, volledige en actuele informatie",
-          3: "Wees verantwoordelijk voor het beveiligen van je account en wachtwoord",
-          4: "Wees verantwoordelijk voor alle activiteiten die onder jouw account plaatsvinden",
-          5: "Stel ons direct op de hoogte zodra je op de hoogte bent van een beveiligingsinbreuk of ongeoorloofd gebruik van je account."
-        }
-      },
-      4: {
-        id: "betaling",
-        heading: "Betaalvoorwaarden",
-        paragraphs: {
-          0: "AMIQUUS biedt abonnementsdiensten aan onder de volgende voorwaarden:"
-        },
-        list: {
-          0: "Alle tarieven zijn exclusief btw, die waar van toepassing wordt toegevoegd.",
-          1: "Abonnementprijzen kunnen worden gewijzigd met een kennisgeving van 30 dagen.",
-          2: "Abonnementen worden automatisch verlengd, tenzij je vóór de volgende factureringsperiode opzegt.",
-          3: "Terugbetalingen worden per geval beoordeeld volgens ons restitutiebeleid.",
-          4: "Wij gebruiken Stripe voor veilige betalingsverwerking en alle betaalgegevens worden door Stripe opgeslagen."
-        }
-      },
-      5: {
-        id: "capaciteit",
-        heading: "Capaciteitsbeperkingen",
-        paragraphs: {
-          0: "Om de servicekwaliteit en betrouwbaarheid te waarborgen, beperkt AMIQUUS het aantal actieve abonnementen tot 30. Zodra deze limiet is bereikt:"
-        },
-        list: {
-          0: "Nieuwe gebruikers kunnen zich aanmelden voor onze wachtlijst",
-          1: "De positie op de wachtlijst wordt bepaald op basis van wie het eerst komt, het eerst maalt.",
-          2: "Wanneer er capaciteit vrijkomt, worden gebruikers op de wachtlijst op volgorde geïnformeerd.",
-          3: "We behouden ons het recht voor om de capaciteitslimieten op elk moment aan te passen."
-        }
-      },
-      6: {
-        id: "gegevens verzamelen",
-        heading: "Beperkingen van webscraping",
-        paragraphs: {
-          0: "Onze dienst haalt gegevens op en verwerkt deze van meerdere autosites. Door gebruik te maken van onze dienst, erkent u dat:"
-        },
-        list: {
-          0: "Amiquus respecteert de gebruiksvoorwaarden van de websites die wij monitoren.",
-          1: "We hanteren snelheidsbeperkingen en respectvolle crawlerspraktijken",
-          2: "De beschikbaarheid van bepaalde websites kan veranderen op basis van hun voorwaarden en technische maatregelen.",
-          3: "Wij geven geen garanties over de volledigheid of actualiteit van de verzamelde gegevens."
-        }
-      },
-      7: {
-        id: "intellectueel",
-        heading: "Intellectueel eigendom",
-        paragraphs: {
-          0: "De AMIQUUS-service, inclusief de originele inhoud, functies en functionaliteit, is en blijft het exclusieve eigendom van AMIQUUS. Onze service is beschermd door auteursrechten, handelsmerken en andere wetten van zowel de Verenigde Staten als andere landen.",
-          1: "Onze handelsmerken en huisstijl mogen niet worden gebruikt in verband met enig product of dienst zonder voorafgaande schriftelijke toestemming van AMIQUUS."
-        },
+        paragraphs: ["Om onze services te gebruiken, moet je:"],
         list: [
-        ]
+          "Ouder zijn dan 18 jaar",
+          "Het registratieproces voltooien",
+          "Nauwkeurige, volledige en actuele informatie verstrekken",
+          "Verantwoordelijk zijn voor de beveiliging van je account en wachtwoord",
+          "Verantwoordelijk zijn voor alle activiteiten op je account",
+          "Onmiddellijk elk ongeautoriseerd gebruik of misbruik van het account melden",
+        ],
       },
-      8: {
-        id: "beëindiging",
+      "4": {
+        id: "payment",
+        heading: "Betalingsvoorwaarden",
+        paragraphs: [
+          "Amiquus biedt op abonnementen gebaseerde services met deze voorwaarden:",
+        ],
+        list: [
+          "Alle prijzen zijn exclusief belastingen, die worden toegevoegd indien van toepassing",
+          "Abonnementsprijzen kunnen met 30 dagen voorafgaande kennisgeving wijzigen",
+          "Abonnementen vernieuwen automatisch tenzij opgezegd vóór de volgende factureringscyclus",
+          "Terugbetalingen worden per geval behandeld volgens het terugbetalingsbeleid",
+          "We gebruiken Stripe voor veilige betalingsverwerking, alle betaalgegevens worden op Stripe opgeslagen",
+        ],
+      },
+      "5": {
+        id: "capacity",
+        heading: "Capaciteitslimieten",
+        paragraphs: [
+          "Om de servicekwaliteit te waarborgen, beperken we het aantal actieve abonnementen tot 30. Wanneer de limiet is bereikt:",
+        ],
+        list: [
+          "Nieuwe gebruikers kunnen zich aanmelden voor de wachtlijst",
+          "De plaats op de wachtlijst wordt bepaald op basis van volgorde van binnenkomst",
+          "Wanneer een plek vrijkomt, stellen we gebruikers in volgorde op de hoogte",
+          "We behouden ons het recht voor om de capaciteitslimieten te wijzigen",
+        ],
+      },
+      "6": {
+        id: "scraping",
+        heading: "Web scraping limieten",
+        paragraphs: [
+          "Onze service verkrijgt en verwerkt gegevens van meerdere sites. Door de service te gebruiken, erken je:",
+        ],
+        list: [
+          "Amiquus respecteert de gebruiksvoorwaarden van de gevolgde sites",
+          "We gebruiken rate limiting en ethische gegevensverzamelingspraktijken",
+          "De beschikbaarheid van bepaalde sites kan veranderen",
+          "We garanderen niet de volledigheid of actualiteit van verzamelde gegevens",
+        ],
+      },
+      "7": {
+        id: "intellectual",
+        heading: "Intellectuele eigendom",
+        paragraphs: [
+          "De Amiquus-service, inclusief originele inhoud, functies en functionaliteit, is en blijft exclusief eigendom van Amiquus. De service is beschermd door auteursrecht, handelsmerken en andere wetten.",
+          "Je mag onze handelsmerken en ontwerpen niet gebruiken zonder voorafgaande schriftelijke toestemming van Amiquus.",
+        ],
+        list: [],
+      },
+      "8": {
+        id: "termination",
         heading: "Beëindiging",
-        paragraphs: {
-          0: "We kunnen je account direct beëindigen of tijdelijk schorsen, zonder voorafgaande kennisgeving of aansprakelijkheid, om welke reden dan ook, inclusief, maar niet beperkt tot, als je de Voorwaarden overtreedt.",
-          1: "Bij beëindiging vervalt je recht om de dienst te gebruiken direct. Wil je je account beëindigen, dan kun je simpelweg stoppen met het gebruik van de dienst of contact met ons opnemen om je account te laten verwijderen."
-        },
+        paragraphs: [
+          "We kunnen het account onmiddellijk beëindigen of opschorten, zonder voorafgaande kennisgeving, om welke reden dan ook, inclusief schending van de voorwaarden.",
+          "Bij beëindiging eindigt het recht om de service te gebruiken onmiddellijk. Als je het account wilt beëindigen, stop dan met het gebruik van de service of neem contact met ons op voor verwijdering.",
+        ],
+        list: [],
+      },
+      "9": {
+        id: "limitations",
+        heading: "Aansprakelijkheidsbeperking",
+        paragraphs: [
+          "Amiquus, haar directeuren, werknemers, partners of leveranciers zijn niet aansprakelijk voor indirecte, incidentele, speciale of punitieve schade, inclusief verlies van winst, gegevens of andere immateriële verliezen, voortkomend uit:",
+        ],
         list: [
-        ]
+          "Toegang tot of onvermogen om toegang te krijgen tot de service",
+          "Inhoud of gedrag van derden op de service",
+          "Inhoud verkregen van de service",
+          "Ongeautoriseerde toegang tot of wijziging van je gegevens",
+        ],
       },
-      9: {
-        id: "beperkingen",
-        heading: "Beperking van aansprakelijkheid",
-        paragraphs: {
-          0: "In geen geval zijn AMIQUUS, noch haar bestuurders, werknemers, partners, agenten, leveranciers of gelieerde ondernemingen aansprakelijk voor enige indirecte, incidentele, bijzondere, gevolg- of strafschade, waaronder maar niet beperkt tot verlies van winst, gegevens, gebruik, goodwill of andere immateriële verliezen, voortvloeiend uit:"
-        },
-        list: {
-          0: "Je toegang tot of gebruik van of onvermogen om toegang te krijgen tot of gebruik te maken van de dienst",
-          1: "Elk gedrag of elke inhoud van een derde partij op de dienst",
-          2: "Alle inhoud verkregen via de dienst",
-          3: "Ongeautoriseerde toegang, gebruik of wijziging van uw transmissies of inhoud"
-        }
+      "10": {
+        id: "disclaimer",
+        heading: "Vrijwaring",
+        paragraphs: [
+          'Het gebruik van de service is op eigen risico. De service wordt geleverd "ZOALS HET IS" en "ZOALS BESCHIKBAAR". We garanderen niet dat de service ononderbroken, tijdig, veilig of foutvrij zal zijn.',
+          "We garanderen niet dat de resultaten van het gebruik van de service nauwkeurig of betrouwbaar zullen zijn.",
+        ],
+        list: [],
       },
-      10: {
-        id: "vrijwaring",
-        heading: "Juridische disclaimer",
-        paragraphs: {
-          0: "Het gebruik van de dienst is volledig op eigen risico. De dienst wordt geleverd op een `AS IS` en `AS AVAILABLE` basis. De dienst wordt aangeboden zonder enige vorm van garantie, expliciet of impliciet.",
-          1: "AMIQUUS geeft geen garantie dat de dienst ononderbroken, tijdig, veilig of foutloos zal zijn, of dat de resultaten die uit het gebruik van de dienst worden verkregen, accuraat of betrouwbaar zullen zijn."
-        },
-        list: [
-        ]
-      },
-      11: {
+      "11": {
         id: "cookies",
         heading: "Cookiebeleid",
-        paragraphs: {
-          0: "Ons Cookiebeleid legt uit wat cookies zijn, hoe wij cookies gebruiken, hoe derden waarmee wij samenwerken cookies kunnen gebruiken op onze dienst, uw keuzes met betrekking tot cookies en verdere informatie over cookies. Raadpleeg het gedeelte Cookies in ons Privacybeleid."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Ons cookiebeleid legt uit wat cookies zijn, hoe we ze gebruiken, hoe derden ze gebruiken en je keuzes. Zie het cookie-gedeelte in ons Privacybeleid.",
+        ],
+        list: [],
       },
-      12: {
-        id: "toepasselijk recht",
+      "12": {
+        id: "governing-law",
         heading: "Toepasselijk recht",
-        paragraphs: {
-          0: "Deze Voorwaarden worden beheerst door en geïnterpreteerd in overeenstemming met de wetten van de Verenigde Staten, ongeacht de bepalingen inzake conflicterende wetgeving.",
-          1: "Het niet afdwingen van enig recht of bepaling van deze Voorwaarden door ons wordt niet beschouwd als een afstand van dat recht. Indien een bepaling van deze Voorwaarden door een rechter ongeldig of onafdwingbaar wordt verklaard, blijven de overige bepalingen van deze Voorwaarden volledig van kracht."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Deze voorwaarden worden beheerst door en geïnterpreteerd in overeenstemming met de wetten van de Verenigde Staten van Amerika, zonder rekening te houden met conflicterende wettelijke bepalingen.",
+          "Als we een recht of bepaling niet uitoefenen, vormt dit geen afstand. Als een rechtbank een bepaling ongeldig verklaart, blijven de overige bepalingen van kracht.",
+        ],
+        list: [],
       },
-      13: {
+      "13": {
         id: "contact",
         heading: "Neem contact op",
-        paragraphs: {
-          0: "Als je vragen hebt over deze Voorwaarden, neem dan contact met ons op:"
-        },
-        list: {
-          0: "Per e-mail: legal@amiquus.com",
-          1: "Door de contactpagina op onze website te bezoeken"
-        }
-      }
-    }
+        paragraphs: [
+          "Als je vragen hebt over de voorwaarden, neem dan contact met ons op:",
+        ],
+        list: [
+          "Via e-mail: legal@amiquus.com",
+          "Via de contactpagina op onze site",
+        ],
+      },
+    },
   },
   privacy: {
     metaTitle: "Privacybeleid | Amiquus",
-    metaDescription: "Lees hoe AMIQUUS omgaat met jouw persoonsgegevens, privacyrechten en gegevensverzameling.",
-    title: "Privacyverklaring",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaDescription:
+      "Leer hoe Amiquus je persoonlijke gegevens, rechten en gegevensverzamelingspraktijken beheert.",
+    title: "Privacybeleid",
+    lastUpdated: "Laatst bijgewerkt: 21 mei 2025.",
     sections: {
-      0: {
-        id: "introductie",
+      "0": {
+        id: "introduction",
         heading: "Inleiding",
-        paragraphs: {
-          0: "Welkom bij AMIQUUS. Wij respecteren uw privacy en zetten ons in voor de bescherming van uw persoonsgegevens. Dit privacybeleid informeert u over hoe wij omgaan met uw persoonsgegevens wanneer u onze website bezoekt, en licht uw privacyrechten en de bescherming door de wet toe."
-        }
+        paragraphs: [
+          "Welkom bij Amiquus. We respecteren je privacy en zetten ons in om je persoonlijke gegevens te beschermen. Dit privacybeleid legt uit hoe we omgaan met je gegevens, je rechten en hoe de wet je beschermt.",
+        ],
       },
-      1: {
-        id: "gegevens-die-we-verzamelen",
-        heading: "Gegevens die wij verzamelen",
-        paragraphs: {
-          0: "We verzamelen verschillende soorten informatie voor diverse doeleinden om onze service aan jou te leveren en te verbeteren:"
-        },
-        list: {
-          0: "Persoonsgegevens: E-mailadres, voornaam, achternaam en profielfoto (indien verstrekt via authenticatie door een derde partij).",
-          1: "Accountgegevens: Je inloggegevens en accountvoorkeuren.",
-          2: "Gebruiksgegevens: Informatie over hoe je onze website en diensten gebruikt.",
-          3: "Voorkeuren voor autozoekopdrachten: De voertuigcriteria die je instelt om te volgen (merk, model, prijsklasse, enz.).",
-          4: "Telegram-informatie: Als je ervoor kiest om meldingen via Telegram te ontvangen, slaan we je Telegram-chat-ID en bot-token op.",
-          5: "Betaalinformatie: Wanneer je een aankoop doet, verzamelt onze betalingsverwerker de betaalgegevens die nodig zijn om je transactie te verwerken. AMIQUUS slaat je volledige creditcardgegevens niet op."
-        }
+      "1": {
+        id: "data-we-collect",
+        heading: "Gegevens die we verzamelen",
+        paragraphs: [
+          "We verzamelen verschillende soorten gegevens voor verschillende doeleinden om je de service te bieden en te verbeteren:",
+        ],
+        list: [
+          "Persoonsgegevens: e-mailadres, voornaam, achternaam en profielfoto (indien verstrekt via derden).",
+          "Accountgegevens: inloggegevens en accountinstellingen.",
+          "Gebruiksgegevens: informatie over hoe je de site en services gebruikt.",
+          "Zoekcriteria: voertuigcriteria die je instelt voor monitoring (merk, model, prijs, etc.).",
+          "Telegram-gegevens: als je Telegram-meldingen kiest, slaan we je chat ID en bot token op.",
+          "Betalingsgegevens: bij aankoop verzamelt onze betalingsverwerker de benodigde gegevens. Amiquus slaat geen volledige creditcardgegevens op.",
+        ],
       },
-      2: {
-        id: "hoe-we-gegevens-gebruiken",
-        heading: "Hoe wij uw gegevens gebruiken",
-        paragraphs: {
-          0: "We gebruiken je persoonsgegevens voor de volgende doeleinden:"
-        },
-        list: {
-          0: "Om onze dienst te leveren en te onderhouden",
-          1: "Om u op de hoogte te stellen van wijzigingen in onze dienst",
-          2: "Om je de mogelijkheid te geven deel te nemen aan interactieve functies van onze dienst",
-          3: "Klantenondersteuning bieden",
-          4: "Om analyses of waardevolle informatie te verzamelen zodat wij onze service kunnen verbeteren",
-          5: "Om het gebruik van onze dienst te monitoren",
-          6: "Technische problemen opsporen, voorkomen en oplossen",
-          7: "Om betalingen te verwerken en frauduleuze transacties te voorkomen",
-          8: "Om autoadvertenties te versturen die aansluiten bij jouw voorkeuren via je gekozen notificatiemethode"
-        }
+      "2": {
+        id: "how-we-use-data",
+        heading: "Hoe we je gegevens gebruiken",
+        paragraphs: ["We gebruiken je persoonlijke gegevens om:"],
+        list: [
+          "De service te bieden en te onderhouden",
+          "Wijzigingen in de service te melden",
+          "Interactieve functies toe te staan",
+          "Klantenondersteuning te bieden",
+          "Analyse te verzamelen om de service te verbeteren",
+          "Het gebruik van de service te monitoren",
+          "Technische problemen te detecteren, voorkomen en op te lossen",
+          "Betalingen te verwerken en fraude te voorkomen",
+          "Advertenties te sturen die overeenkomen met je criteria",
+        ],
       },
-      3: {
-        id: "gegevensopslag",
+      "3": {
+        id: "data-storage",
         heading: "Gegevensopslag en beveiliging",
-        paragraphs: {
-          0: "We nemen passende beveiligingsmaatregelen om jouw persoonsgegevens te beschermen tegen ongeautoriseerde toegang, wijziging, openbaarmaking of vernietiging. Alle gegevens worden opgeslagen op beveiligde servers met versleuteling tijdens verzending en opslag.",
-          1: "We bewaren je persoonsgegevens alleen zo lang als nodig is voor de doeleinden die in dit privacybeleid worden beschreven, waaronder het voldoen aan wettelijke, regelgevende, fiscale, boekhoudkundige of rapportageverplichtingen."
-        }
+        paragraphs: [
+          "We passen passende beveiligingsmaatregelen toe om te beschermen tegen ongeautoriseerde toegang, wijziging of vernietiging van gegevens. Alle gegevens worden opgeslagen op beveiligde servers met versleuteling in transit en at rest.",
+          "We bewaren je persoonlijke gegevens alleen zo lang als nodig is voor de doeleinden in dit beleid, inclusief om te voldoen aan wettelijke, regelgevende of boekhoudkundige vereisten.",
+        ],
       },
-      4: {
-        id: "algemene verordening gegevensbescherming",
-        heading: "Uw GDPR-rechten",
-        paragraphs: {
-          0: "Als u inwoner bent van de Europese Economische Ruimte (EER), heeft u bepaalde rechten op het gebied van gegevensbescherming. AMIQUUS streeft ernaar redelijke stappen te ondernemen zodat u uw persoonsgegevens kunt corrigeren, aanpassen, verwijderen of het gebruik ervan kunt beperken.",
-          1: "U heeft de volgende rechten met betrekking tot gegevensbescherming:"
-        },
-        list: {
-          0: "Het recht op inzage, bijwerking of verwijdering van de gegevens die wij over u hebben",
-          1: "Het recht op rectificatie",
-          2: "Het recht om bezwaar te maken",
-          3: "Het recht op beperking",
-          4: "Het recht op gegevensoverdraagbaarheid",
-          5: "Het recht om toestemming in te trekken"
-        }
+      "4": {
+        id: "gdpr",
+        heading: "Je rechten onder de GDPR",
+        paragraphs: [
+          "Als je inwoner bent van de Europese Economische Ruimte (EER), heb je bepaalde gegevensbeschermingsrechten. Amiquus streeft ernaar om correctie, wijziging, verwijdering of beperking van het gebruik van je gegevens toe te staan.",
+          "Je hebt de volgende rechten:",
+        ],
+        list: [
+          "Recht op toegang, bijwerking of verwijdering van de gegevens",
+          "Recht op rectificatie",
+          "Recht op bezwaar",
+          "Recht op beperking",
+          "Recht op gegevensoverdraagbaarheid",
+          "Recht om toestemming in te trekken",
+        ],
       },
-      5: {
+      "5": {
         id: "cookies",
         heading: "Cookiebeleid",
-        paragraphs: {
-          0: "Cookies zijn kleine stukjes gegevens die op jouw apparaat worden opgeslagen. Wij gebruiken cookies om:"
-        },
-        list: {
-          0: "Aangemeld blijven",
-          1: "Begrijp hoe u onze website gebruikt",
-          2: "Onthoud je voorkeuren",
-          3: "Pas je ervaring aan"
-        }
+        paragraphs: [
+          "Cookies zijn kleine gegevens die op je apparaat worden opgeslagen. We gebruiken ze om:",
+        ],
+        list: [
+          "De sessie ingelogd te houden",
+          "Het sitegebruik te begrijpen",
+          "Voorkeuren op te slaan",
+          "De ervaring te personaliseren",
+        ],
       },
-      6: {
-        id: "derde partij",
-        heading: "Diensten van derden",
-        paragraphs: {
-          0: "We kunnen externe bedrijven en individuen inschakelen om onze dienst te faciliteren, de dienst namens ons te leveren, taken met betrekking tot de dienst uit te voeren of ons te helpen analyseren hoe onze dienst wordt gebruikt.",
-          1: "Deze derden omvatten:"
-        },
-        list: {
-          0: "Betaalverwerkers (Stripe)",
-          1: "Aanbieders van analyses",
-          2: "Klantenservice",
-          3: "Hosting- en cloudinfrastructuurproviders"
-        },
-        paragraphs2: {
-          0: "Deze derde partijen hebben alleen toegang tot jouw persoonsgegevens om deze taken namens ons uit te voeren en zijn verplicht deze niet openbaar te maken of voor andere doeleinden te gebruiken."
-        }
+      "6": {
+        id: "third-party",
+        heading: "Derden",
+        paragraphs: [
+          "We kunnen derden inschakelen om de service uit te voeren, taken uit te voeren of gebruik te analyseren.",
+          "Deze derden omvatten:",
+        ],
+        list: [
+          "Betalingsverwerkers (Stripe)",
+          "Analyseproviders",
+          "Klantenondersteuningsdiensten",
+          "Hosting- en cloudproviders",
+        ],
+        paragraphs2: [
+          "Deze derden hebben alleen toegang tot je gegevens om taken uit te voeren en mogen ze niet bekendmaken of voor andere doeleinden gebruiken.",
+        ],
       },
-      7: {
-        id: "wijzigingen",
-        heading: "Wijzigingen in dit privacybeleid",
-        paragraphs: {
-          0: "We kunnen ons privacybeleid van tijd tot tijd bijwerken. We zullen je van eventuele wijzigingen op de hoogte stellen door het nieuwe privacybeleid op deze pagina te plaatsen en de datum ‘Laatst bijgewerkt’ aan te passen.",
-          1: "Wij raden u aan dit privacybeleid regelmatig te controleren op eventuele wijzigingen. Wijzigingen in dit privacybeleid zijn van kracht zodra ze op deze pagina zijn geplaatst."
-        }
+      "7": {
+        id: "changes",
+        heading: "Wijzigingen in het privacybeleid",
+        paragraphs: [
+          "We kunnen het privacybeleid van tijd tot tijd bijwerken. We informeren je door het nieuwe beleid op deze pagina te plaatsen en de datum 'Laatst bijgewerkt' te updaten.",
+          "We raden aan het beleid regelmatig te controleren. Wijzigingen worden van kracht bij publicatie.",
+        ],
       },
-      8: {
+      "8": {
         id: "contact",
         heading: "Neem contact op",
-        paragraphs: {
-          0: "Als je vragen hebt over dit privacybeleid, neem dan contact met ons op:"
-        },
-        list: {
-          0: "Per e-mail: privacy@amiquus.com",
-          1: "Door de contactpagina op onze website te bezoeken"
-        }
-      }
-    }
+        paragraphs: [
+          "Als je vragen hebt over het privacybeleid, neem dan contact met ons op:",
+        ],
+        list: [
+          "Via e-mail: privacy@amiquus.com",
+          "Via de contactpagina op onze site",
+        ],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Veelgestelde vragen | Amiquus",
-    metaDescription: "Vind antwoorden op de meest gestelde vragen over de AMIQUUS autoadvertentie monitoringservice, abonnementen, het instellen van meldingen en meer.",
+    metaTitle: "FAQ | Amiquus",
+    metaDescription:
+      "Vind antwoorden op de meest voorkomende vragen over de Amiquus auto-advertentie monitoring service.",
     title: "Veelgestelde vragen",
-    subtitle: "Vind snel antwoorden op veelgestelde vragen over onze dienst voor het monitoren van autoadvertenties",
+    subtitle:
+      "Snelle antwoorden op veelgestelde vragen over onze auto-advertentie monitoring service",
     general: {
-      heading: "Veelgestelde vragen",
+      heading: "Algemene vragen",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Wat is Amiquus?",
+        answer:
+          "Amiquus is een service die meerdere voertuigsites volgt die overeenkomen met je criteria. Wanneer er een match is, ontvang je een directe melding via Telegram.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Hoe werkt het?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
+          "Stel zoekcriteria in (merk, model, prijs, etc.)",
+          "Selecteer sites om te volgen",
+          "Koppel Telegram voor meldingen",
+          "Ons systeem monitort continu de geselecteerde sites",
+          "Bij een match ontvang je een directe Telegram-melding met details en link",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Welke sites volgen jullie?",
+        answerIntro: "We volgen momenteel de volgende belangrijke platforms:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
           "Facebook Marketplace (via URL)",
-
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro:
+          "We voegen voortdurend nieuwe platforms toe voor bredere dekking.",
+      },
     },
     subscription: {
-      heading: "Vragen over abonnementen",
+      heading: "Vragen over abonnement",
       cost: {
-        question: "Wat kost een abonnement?",
-        answer: {
-          0: "Onze prijzen beginnen vanaf $79,99 per maand voor het monitoren van één website met updates elke 6 uur. Extra websites kosten $4,99 per stuk per maand. Je kunt ook de updatefrequentie verhogen voor snellere meldingen.",
-          1: "Voor specifieke prijsinformatie kunt u ons prijsoverzicht op de homepage bekijken."
-        }
+        question: "Hoeveel kost het abonnement?",
+        answer: [
+          "Prijzen beginnen bij € 79,99/maand voor het volgen van één site met updates elke 6 uur. Extra sites kosten € 4,99 per maand. Upgrade voor snellere meldingen.",
+          "Voor prijsdetails, zie het prijzengedeelte op de homepage.",
+        ],
       },
       cancel: {
-        question: "Hoe zeg ik mijn abonnement op?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Log in op je account",
-          1: "Ga naar de pagina \"Profiel\"",
-          2: "Selecteer het tabblad \"Abonnementen\"",
-          3: "Klik op de knop ‘Abonnement annuleren’ naast het abonnement dat je wilt opzeggen."
-        },
-        note: "Je abonnement blijft actief tot het einde van je huidige factureringsperiode."
+        question: "Hoe zeg ik het abonnement op?",
+        stepsIntro:
+          "Je kunt het abonnement op elk moment opzeggen via de profielpagina:",
+        steps: [
+          "Log in op je account",
+          'Ga naar de pagina "Profiel"',
+          'Selecteer het tabblad "Abonnementen"',
+          'Klik op "Abonnement opzeggen" naast het abonnement dat je wilt opzeggen',
+        ],
+        note: "Het abonnement blijft actief tot het einde van de huidige factureringsperiode.",
       },
       multiple: {
-        question: "Kan ik meerdere abonnementen hebben voor verschillende automodellen?",
-        answer: "Ja, je kunt meerdere abonnementen aanmaken onder één account. Elk abonnement kan verschillende automodellen, merken of prijsklassen volgen. Dit is vooral handig als je naar meerdere auto's zoekt of vrienden en familie helpt bij hun zoektocht naar een auto."
+        question:
+          "Kan ik meerdere abonnementen hebben voor verschillende modellen?",
+        answer:
+          "Ja, je kunt meerdere abonnementen aanmaken onder één account. Elk kan verschillende modellen of merken volgen. Ideaal als je meerdere voertuigen zoekt of vrienden helpt.",
       },
       limit: {
-        question: "Waarom is er een limiet aan het aantal abonnees?",
-        intro: "We beperken onze service tot 30 actieve abonnees om te waarborgen:",
-        list: {
-          0: "De hoogste kwaliteit van service en datanauwkeurigheid",
-          1: "Persoonlijke ondersteuning voor elke abonnee",
-          2: "Snellere bezorging van meldingen tijdens piekmomenten van plaatsingen",
-          3: "Ethisch scrapen dat de doelwebsites niet overbelast"
-        },
-        outro: "Als we vol zitten, kun je je aanmelden voor onze wachtlijst om een seintje te krijgen zodra er een plek vrijkomt."
-      }
+        question: "Waarom is er een limiet op abonnees?",
+        intro: "We beperken de service tot 30 actieve abonnees om:",
+        list: [
+          "De hoogste servicekwaliteit en gegevensnauwkeurigheid",
+          "Persoonlijke ondersteuning voor elke abonnee",
+          "Snellere melding levering tijdens piekuren",
+          "Ethisch scraping dat doelsites niet overbelast",
+        ],
+        outro:
+          "Als we vol zijn, voeg je toe aan de wachtlijst en we informeren je wanneer een plek vrijkomt.",
+      },
     },
     technical: {
       heading: "Technische vragen",
       telegram: {
         question: "Hoe stel ik Telegram-meldingen in?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Maak een Telegram-bot aan via BotFather (instructies worden tijdens de installatie gegeven)",
-          1: "Kopieer je bot-token van BotFather",
-          2: "Begin een gesprek met je bot",
-          3: "Haal je chat-ID op (instructies worden tijdens de installatie gegeven)",
-          4: "Voer je bot-token en chat-ID in bij de abonnement-instellingen van AMIQUUS",
-          5: "Test je notificatie-instellingen met de knop `Testbericht verzenden`"
-        },
-        note: "Gedetailleerde stapsgewijze instructies met screenshots worden tijdens het instellen van het abonnement verstrekt."
+        stepsIntro: "Om Telegram-meldingen in te stellen:",
+        steps: [
+          "Maak een Telegram-bot aan via BotFather (instructies in het dashboard)",
+          "Kopieer de bot token en chat ID",
+          'Voer de gegevens in de accountinstellingen in onder "Meldingsinstellingen"',
+          'Test de verbinding met de knop "Testbericht sturen"',
+        ],
+        note: "Gedetailleerde instructies met screenshots beschikbaar tijdens het instellen van het abonnement.",
       },
       frequency: {
         question: "Hoe vaak ontvang ik meldingen?",
-        intro: "De frequentie van meldingen is afhankelijk van:",
-        list: {
-          0: "Je gekozen updatefrequentiepakket (van elke 6 uur tot elke 30 minuten)",
-          1: "Hoeveel nieuwe aanbiedingen voldoen aan jouw criteria",
-          2: "Hoe actief de markt is voor jouw geselecteerde merk/model"
-        },
-        outro: "Je ontvangt alleen meldingen wanneer er nieuwe aanbiedingen zijn die aan jouw criteria voldoen."
+        intro: "De meldingsfrequentie hangt af van:",
+        list: [
+          "Het geselecteerde frequentiepakket (van elk uur tot elke minuut)",
+          "Het aantal nieuwe advertenties dat aan je criteria voldoet",
+          "De marktactiviteit voor het geselecteerde merk/model",
+        ],
+        outro:
+          "Je ontvangt alleen meldingen wanneer nieuwe advertenties aan je criteria voldoen.",
       },
       privacy: {
-        question: "Hoe worden mijn persoonsgegevens beschermd?",
-        intro: "Wij nemen gegevensprivacy serieus en passen de volgende maatregelen toe:",
-        list: {
-          0: "Versleutelde gegevens tijdens overdracht en opslag",
-          1: "Veilige betalingen via Stripe",
-          2: "Geen gegevensdeling met derden",
-          3: "Je kunt op elk moment je gegevens opvragen of verwijderen"
-        },
-        outro: "Lees ons volledige privacybeleid voor meer informatie."
-      }
+        question: "Hoe wordt mijn privacy beschermd?",
+        intro: "We nemen privacy serieus en gebruiken:",
+        list: [
+          "Gegevensversleuteling in transit en at rest",
+          "Veilige betalingen via Stripe",
+          "Geen gegevensdeling met derden",
+          "Je kunt je gegevens op elk moment opvragen of verwijderen",
+        ],
+        outro: "Meer informatie in ons volledige Privacybeleid.",
+      },
     },
     support: {
-      heading: "Heb je nog vragen?",
-      description: "Kon je het antwoord op je vraag niet vinden? Ons supportteam staat voor je klaar om te helpen!",
-      button: "Neem contact op met support"
-    }
+      heading: "Nog vragen?",
+      description:
+        "Als je het antwoord niet hebt gevonden, staat onze support voor je klaar!",
+      button: "Contacteer support",
+    },
   },
   waitlist: {
-    metaTitle: "Meld je aan voor de wachtlijst – Amiquus",
-    metaDescription: "Meld je aan voor de wachtlijst van AMIQUUS om een seintje te krijgen zodra abonnementen beschikbaar zijn.",
-    title: "Meld je aan voor onze wachtlijst",
-    subtitle: "Vanwege de grote vraag beperken we het aantal actieve abonnementen om de beste servicekwaliteit voor alle gebruikers te waarborgen.",
+    metaTitle: "Voeg toe aan wachtlijst - Amiquus",
+    metaDescription:
+      "Voeg je toe aan de wachtlijst van Amiquus en word geïnformeerd wanneer abonnementen beschikbaar zijn.",
+    title: "Voeg je toe aan onze wachtlijst",
+    subtitle:
+      "Vanwege hoge vraag beperken we het aantal actieve abonnementen om de beste kwaliteit te garanderen.",
     limited: {
       heading: "Beperkte beschikbaarheid",
-      description: "We beperken ons systeem tot slechts 30 actieve abonnees om te waarborgen:",
-      points: {
-        0: "Uitzonderlijke betrouwbaarheid en snelheid van scraping voor alle gebruikers",
-        1: "Kleinere kans om geblokkeerd te worden door autosite-platforms",
-        2: "Persoonlijke ondersteuning voor elke abonnee",
-        3: "Eerlijke verdeling van serverbronnen"
-      },
-      available: "{{remaining}} abonnementplaatsen van de {{capacity}} zijn momenteel beschikbaar.",
-      full: "Alle abonnementsplekken zijn momenteel bezet. Schrijf je in voor de wachtlijst om een melding te krijgen zodra er een plek vrijkomt."
+      description:
+        "We beperken het systeem tot slechts 30 actieve abonnees om:",
+      points: [
+        "Uitzonderlijke betrouwbaarheid en scraping snelheid voor alle gebruikers",
+        "Minder risico op blokkades door sites",
+        "Persoonlijke ondersteuning voor elke abonnee",
+        "Eerlijke verdeling van serverbronnen",
+      ],
+      available:
+        "{{remaining}} abonnementsplekken van {{capacity}} zijn momenteel beschikbaar.",
+      full: "Alle abonnementsplekken zijn momenteel bezet. Voeg je toe aan de wachtlijst om op de hoogte te worden gebracht wanneer een plek vrijkomt.",
     },
     success: {
       title: "Je staat op de wachtlijst!",
-      description: "We laten het je weten zodra er een abonnementsplek beschikbaar is.",
-      message: "Bedankt voor je interesse in Amiquus! We hebben je toegevoegd aan onze wachtlijst en nemen contact met je op zodra er een plek vrijkomt.",
-      button: "Terug naar de homepage"
+      description: "We informeren je zodra een abonnementsplek vrijkomt",
+      message:
+        "Bedankt voor je interesse in Amiquus! We hebben je toegevoegd aan de wachtlijst en nemen contact op zodra een plek beschikbaar is.",
+      button: "Terug naar homepage",
     },
     cantJoin: {
-      title: "Sluit je aan bij de wachtlijst",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Voeg toe aan wachtlijst",
+      description: "We informeren je zodra een abonnementsplek vrijkomt",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Voornaam",
+        placeholder: "Jan",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Achternaam",
+        placeholder: "de Vries",
       },
       email: {
         label: "E-mail",
-        placeholder: "john.doe@example.com",
-        description: "We gebruiken dit e-mailadres om je te laten weten wanneer er een plek vrijkomt."
+        placeholder: "jan.devries@voorbeeld.nl",
+        description:
+          "We gebruiken dit e-mailadres om je te informeren wanneer een plek vrijkomt",
       },
-      submit: "Aanmelden voor wachtlijst",
-      submitting: "Indienen..."
-    }
+      submit: "Voeg toe aan wachtlijst",
+      submitting: "Verzenden...",
+    },
   },
   support: {
-    metaTitle: "Ondersteuning | Amiquus - Helpcentrum",
-    metaDescription: "Krijg hulp met je AMIQUUS-account, abonnement of auto-meldingen. Bekijk ons helpcentrum of neem contact op met ons supportteam voor assistentie.",
-    title: "Helpcentrum",
-    subtitle: "Vind antwoorden op veelgestelde vragen of neem contact op met ons supportteam",
+    metaTitle: "Support | Amiquus - Helpcentrum",
+    metaDescription:
+      "Krijg hulp voor je Amiquus-account, abonnement of meldingen. Verken het helpcentrum of neem contact op met support.",
+    title: "Supportcentrum",
+    subtitle:
+      "Vind antwoorden op veelgestelde vragen of neem contact op met ons supportteam",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "E-mail support",
+      description: "Stuur ons een e-mail en we reageren binnen 24 uur",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Veelgestelde vragen",
     faqs: {
       telegram: {
         question: "Hoe stel ik Telegram-meldingen in?",
-        intro: "Volg deze stappen om Telegram-meldingen in te stellen:",
-        steps: {
-          0: "Maak een Telegram-bot aan via BotFather (instructies vind je in ons dashboard)",
-          1: "Kopieer je API-token en chat-ID",
-          2: "Voer deze gegevens in bij je accountinstellingen onder ‘Meldingsvoorkeuren’",
-          3: "Test je verbinding met de knop \"Testbericht verzenden\""
-        },
-        outro: "Als je meer hulp nodig hebt, vind je onze uitgebreide handleiding in je dashboard."
+        intro: "Om Telegram-meldingen in te stellen volg je deze stappen:",
+        steps: [
+          "Maak een Telegram-bot aan via BotFather (instructies in het dashboard)",
+          "Kopieer de API-token en chat ID",
+          'Voer de gegevens in de accountinstellingen in onder "Meldingsinstellingen"',
+          'Test de verbinding met de knop "Testbericht sturen"',
+        ],
+        outro:
+          "Als je meer hulp nodig hebt, is een gedetailleerde gids beschikbaar in je dashboard.",
       },
       updates: {
-        question: "Hoe vaak worden de autoadvertenties bijgewerkt?",
-        answer: "De updatefrequentie is afhankelijk van je abonnement. Met een Basic-abonnement ontvang je elke 6 uur updates, terwijl Premium-abonnementen updates kunnen ontvangen tot elke 30 minuten. Je kunt je huidige updatefrequentie bekijken en aanpassen in je abonnementsinstellingen."
+        question: "Hoe vaak worden advertenties bijgewerkt?",
+        answer:
+          "De updatefrequentie hangt af van het abonnementspakket. Basisplannen krijgen updates elke 6 uur, premium plannen kunnen elke 30 minuten zijn. Je kunt de huidige frequentie bekijken en wijzigen in de abonnementsinstellingen.",
       },
       facebook: {
-        question: "Kan ik Facebook Marketplace monitoren?",
-        answer: "Ja, wij ondersteunen het monitoren van Facebook Marketplace. Om dit in te stellen, moet je de URL van de Facebook Marketplace zoekresultatenpagina met de gewenste filters aanleveren. Ons systeem houdt vervolgens precies die zoekopdracht in de gaten voor nieuwe advertenties die aan jouw criteria voldoen."
+        question: "Kan ik Facebook Marketplace volgen?",
+        answer:
+          "Ja, we ondersteunen het volgen van Facebook Marketplace. Geef de URL van de zoekresultatenpagina met toegepaste filters op. Het systeem volgt dan die zoekopdracht voor nieuwe advertenties die aan je criteria voldoen.",
       },
       cancel: {
-        question: "Hoe zeg ik mijn abonnement op?",
-        answer: "Je kunt je abonnement op elk moment opzeggen via de profielpagina van je account. Klik op het tabblad ‘Abonnementen’, zoek het abonnement dat je wilt opzeggen en klik op de knop ‘Abonnement opzeggen’. Je dienst blijft actief tot het einde van je huidige factureringsperiode."
+        question: "Hoe zeg ik het abonnement op?",
+        answer:
+          'Je kunt het abonnement op elk moment opzeggen via de profielpagina. Klik op het tabblad "Abonnementen", zoek het abonnement en klik op "Abonnement opzeggen". De service blijft actief tot het einde van de factureringsperiode.',
       },
       full: {
-        question: "Wat gebeurt er als alle abonnementsplekken vol zijn?",
-        answer: "Om onze hoge servicekwaliteit te waarborgen, beperken we het aantal actieve abonnementen. Als alle plekken vol zijn, kun je je inschrijven op onze wachtlijst. We laten het je direct weten zodra er een plek vrijkomt, en je krijgt voorrang om deze te claimen voordat we deze openstellen voor het grote publiek."
-      }
+        question: "Wat gebeurt er als alle plekken bezet zijn?",
+        answer:
+          "Om hoge servicekwaliteit te behouden, beperken we het aantal actieve abonnementen. Als alle plekken bezet zijn, kun je je aanmelden voor de wachtlijst. Wanneer een plek vrijkomt, informeren we je en heb je voorrang op het algemene publiek.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "Meer hulp nodig?",
+      description:
+        "Als je het antwoord niet hebt gevonden, neem dan contact op met ons supportteam. We zijn hier om te helpen!",
+      button: "Contacteer support",
+    },
   },
   notFound: {
     title: "404 Pagina niet gevonden",
-    message: "Ben je vergeten de pagina aan de router toe te voegen?"
+    message: "Ben je vergeten de pagina aan de router toe te voegen?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Amiquus e-mail verificatiecode",
+      greeting: "Hallo,",
+      message: "Gebruik de volgende code om je registratie te voltooien:",
+      expiration: "De code vervalt over 10 minuten.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Betaling ontvangen Amiquus – Factuur #",
+        h2Message: "Je Amiquus abonnementsbetaling is gelukt!",
+        greeting: "Hallo,",
+        paymentMessage: "We hebben je betaling van",
+        downloadMessage:
+          "Je kunt de factuur bekijken of downloaden via de volgende link:",
+        viewInvoice: "Factuur bekijken",
+        invoiceNumber: "Factuur #:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Betaling in afwachting – Factuur",
+        subjectB: "voor je Amiquus abonnement",
+        h2Message:
+          "Actie vereist: Voltooi de betaling voor je Amiquus abonnement",
+        greeting: "Hallo,",
+        messageA: "Je factuur",
+        messageB:
+          "is nog niet betaald. Voltooi de betaling van om het abonnement te activeren",
+        paymentMessage: "Je kunt veilig betalen via de volgende link:",
+        payInvoice: "Factuur betalen",
+        ignoreEmail: "Als je al hebt betaald, kun je deze e-mail negeren.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Betaling mislukt – Factuur",
+        message: "We konden je recente betaling niet verwerken (poging",
+        attemptsA:
+          "We proberen het binnenkort opnieuw. Geen actie vereist voor nu.",
+        attemptsB:
+          "We hebben drie keer geprobeerd je betaalmethode te debiteren, maar alle pogingen zijn mislukt.",
+        attemptsC:
+          "Als gevolg is je abonnement <strong>tijdelijk gepauzeerd</strong>. Je ontvangt geen updates tot reactivatie.",
+        attemptsD:
+          "Werk je betaalmethode bij en reactiveer het abonnement vanuit het profiel:",
+        viewInvoice: "Factuur bekijken",
+        managePayment: "Beheer betaalmethoden",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Je staat op de Amiquus wachtlijst!",
+      h2Message: "Je staat op de lijst!",
+      hi: "Hallo",
+      message:
+        "Bedankt voor het aanmelden voor de Amiquus wachtlijst. We informeren je zodra een plek vrijkomt.",
+      anyQuestions:
+        "Als je vragen hebt, aarzel niet om op deze e-mail te antwoorden.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Bedankt voor het kiezen van Amiquus!",
+      signature: "Met vriendelijke groet,<br/>Het Amiquus team",
+      team: "— Het Amiquus team",
+      needHelp: "Hulp nodig?",
+      hello: "Hallo",
+    },
+  },
 };

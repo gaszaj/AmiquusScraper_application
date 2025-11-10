@@ -135,7 +135,7 @@ export const en = {
     title: "Simple, Transparent Pricing",
     subtitle:
       "Our pricing is based on your specific needs. Start with a base package and customize it to fit your requirements.",
-    baseTitle: "Base Package: $9.99/month",
+    baseTitle: "Base Package: $79.99/month",
     includedTitle: "What's Included:",
     includedFeatures: [
       "One website monitoring",
@@ -717,7 +717,7 @@ export const en = {
     subtitle:
       " Configure your Telegram bot to receive notifications about your dream car",
     basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
+    baseTitle: "$79.99/month",
     button: "Start My Car Alert Service",
     cancel: "Cancel anytime",
     toasts: {
@@ -1181,7 +1181,7 @@ export const en = {
       cost: {
         question: "How much does a subscription cost?",
         answer: [
-          "Our pricing starts at $9.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
+          "Our pricing starts at $79.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
           "For specific pricing details, please view our pricing section on the homepage.",
         ],
       },
@@ -1234,7 +1234,7 @@ export const en = {
         question: "How often will I receive notifications?",
         intro: "The frequency of notifications depends on:",
         list: [
-          "Your chosen update frequency package (from every 6 hours to every 30 minutes)",
+          "Your chosen update frequency package (from every 1 hour to every 1 minutes)",
           "How many new listings match your criteria",
           "How active the market is for your selected make/model",
         ],
