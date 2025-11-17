@@ -1,6 +1,6 @@
 export const ro = {
   navigations: {
-    features: "Caracteristici",
+    features: "Funcții",
     how: "Cum funcționează",
     pricing: "Prețuri",
     getAlerts: "Primește alerte",
@@ -15,1357 +15,1436 @@ export const ro = {
     profile: "Profil",
     settings: "Setări",
     logout: "Deconectare",
-    signUp: "Înregistrare"
+    signUp: "Înregistrare",
   },
   hero: {
-    label: "Urmărește anunțurile cu mașini second hand în timp real",
-    title: "Nu rata niciodată oferta perfectă la mașina ta",
-    subtitle: "AMIQUUS te anunță imediat când mașina ta de vis devine disponibilă pe mai multe site-uri de anunțuri auto. Primește notificări pe Telegram de îndată ce se găsește o potrivire.",
-    button1: "Configurează-ți alertele",
-    button2: "Vezi cum funcționează",
+    label: "Urmăriți mașini second-hand în timp real!",
+    title: "Nu ratați niciodată o ofertă excelentă la mașini",
+    subtitle:
+      "Amiquus vă notifică instantaneu când mașina visurilor dvs. apare pe mai multe site-uri de vânzări auto. Primiți alerte imediate în Telegram pentru fiecare potrivire.",
+    button1: "Setați alerte",
+    button2: "Vedeți cum funcționează",
     trustIndicators: {
-      websites: "15+ site-uri urmărite",
-      realtime: "Alerte în timp real",
-      noSetup: "Nu necesită configurare",
-      cancelAnytime: "Anulează oricând"
-    }
+      websites: "Urmărim peste 15 site-uri",
+      realtime: "Notificări în timp real",
+      noSetup: "Fără configurare necesară",
+      cancelAnytime: "Anulați oricând",
+    },
   },
   limited: {
     full: {
-      title: "Limita de abonament a fost atinsă",
-      description: "Am atins limita de 30 de abonați activi. Înscrie-te pe lista de așteptare ca să fii anunțat când se eliberează un loc.",
-      buttonText: "Înscrie-te pe lista de așteptare"
+      title: "Limita de abonați atinsă",
+      description:
+        "Am atins limita de 30 de abonați activi. Alăturați-vă listei de așteptare pentru a primi notificarea când apare un loc liber.",
+      buttonText: "Alăturați-vă listei de așteptare",
     },
     limited: {
-      title: "Disponibilitate limitată",
-      description: "Au mai rămas doar {{remaining}} locuri din totalul de {{capacity}}. Abonează-te acum, înainte să epuizăm toate locurile!",
-      buttonText: "Începe acum"
+      title: "Acces limitat",
+      description:
+        "Din {{capacity}} locuri, mai rămân doar {{remaining}}. Abonați-vă acum înainte să se epuizeze!",
+      buttonText: "Începeți acum",
     },
     available: {
-      title: "Abonamente disponibile",
-      description: "{{active}} din {{capacity}} abonamente sunt active în prezent. Este destul loc să te alături!",
-      buttonText: "Începe acum"
-    }
+      title: "Abonament disponibil",
+      description:
+        "În prezent activi {{active}} din {{capacity}} abonamente. Suficient loc pentru a vă alătura!",
+      buttonText: "Începeți acum",
+    },
   },
   features: {
-    heading: "De ce să alegi AMIQUUS?",
-    subheading: "Economisește timp și nu rata niciodată mașina perfectă cu serviciul nostru automatizat de monitorizare.",
+    heading: "De ce să alegeți Amiquus",
+    subheading:
+      "Economisiți timp cu urmărirea automată și nu ratați niciodată o mașină perfectă.",
     multiSite: {
       title: "Urmărire multi-site",
-      description: "Monitorizați simultan mai multe site-uri de anunțuri auto fără a fi nevoie să verificați fiecare manual."
+      description:
+        "Urmăriți mai multe site-uri de vânzări auto simultan fără verificări manuale.",
     },
     notifications: {
-      title: "Notificări instant",
-      description: "Primește alerte imediate prin Telegram atunci când este listată spre vânzare o mașină care corespunde criteriilor tale."
+      title: "Notificări instantanee",
+      description:
+        "Primiți notificări Telegram imediate când o mașină se potrivește criteriilor dvs.",
     },
     filters: {
       title: "Filtre personalizate",
-      description: "Stabilește criterii precise, inclusiv marca, modelul, anul, kilometrajul și intervalul de preț, ca să găsești exact ce îți dorești."
+      description:
+        "Setați criterii precise – marcă, model, an, kilometraj, interval de preț.",
     },
     frequency: {
-      title: "Frecvență personalizabilă",
-      description: "Alege cât de des verificăm noile anunțuri, de la actualizări la oră până la monitorizare în timp real."
+      title: "Frecvență personalizată",
+      description:
+        "Alegeți frecvența verificării anunțurilor noi – de la orar la timp real.",
     },
     languages: {
-      title: "Suport pentru mai multe limbi",
-      description: "Primiți notificări în limba preferată pentru o înțelegere mai ușoară a anunțurilor."
+      title: "Suport multilingv",
+      description:
+        "Primiți notificări în limba preferată pentru a înțelege mai ușor anunțurile.",
     },
     account: {
-      title: "Administrare ușoară a contului",
-      description: "Gestionează mai multe profiluri de căutare și modifică setările abonamentului cu doar câteva clicuri."
-    }
+      title: "Gestionare ușoară a contului",
+      description:
+        "Creați mai multe profiluri de căutare și modificați setările abonamentului cu câteva click-uri.",
+    },
   },
   howItWorks: {
-    title: "Cum funcționează AMIQUUS",
-    subtitle: "Configurează o singură dată și lasă sistemul nostru automatizat să găsească oferta perfectă la mașină pentru tine",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Cum funcționează Amiquus",
+    subtitle:
+      "Setați o dată, iar sistemul automat va găsi oferta perfectă de mașină",
+    whyTitle: "De ce să alegeți Amiquus",
     steps: {
       preferences: {
-        title: "Setează-ți preferințele",
-        description: "Selectează mărcile de mașini, modelele, intervalul de preț și alte criterii pe care vrei să le monitorizezi."
+        title: "Setați preferințele",
+        description:
+          "Alegeți marca, modelul, intervalul de preț și alte criterii de urmărire.",
       },
       telegram: {
-        title: "Conectează Telegram",
-        description: "Conectează-ți contul de Telegram pentru a primi notificări instantanee despre noile anunțuri."
+        title: "Conectați Telegram",
+        description:
+          "Conectați contul Telegram pentru a primi notificări imediate despre anunțuri noi.",
       },
       notifications: {
-        title: "Primește notificări instant",
-        description: "Primește alerte imediat ce apare o mașină care corespunde criteriilor tale pe oricare dintre site-urile monitorizate de noi."
+        title: "Primiți notificări instantanee",
+        description:
+          "Veți fi notificat imediat când o mașină potrivită apare pe site-urile urmărite.",
       },
       findCar: {
-        title: "Găsește-ți mașina perfectă",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "Găsiți mașina visurilor",
+        description:
+          "Aflați despre anunțuri noi primul și asigurați-vă cea mai bună ofertă înaintea altora.",
+      },
     },
-    features: {
-      0: "Urmărește simultan peste 15 site-uri cu anunțuri auto",
-      1: "Criterii de căutare personalizabile cu filtrare avansată",
-      2: "Notificări în timp real prin Telegram",
-      3: "Alerte automate pentru reducerea prețului și anunțuri noi",
-      4: "Proces de instalare simplu, care durează mai puțin de 5 minute"
-    },
-    setAlerts: "Configurează alertele",
+    features: [
+      "Urmărire simultană a peste 15 site-uri de vânzări auto",
+      "Criterii de căutare personalizate cu filtrare avansată",
+      "Notificări în timp real prin Telegram",
+      "Notificări automate despre scăderi de preț și anunțuri noi",
+      "Proces de configurare simplu, durează sub 5 minute",
+    ],
+    setAlerts: "Setați alerte",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Potrivire nouă!",
+      description: "BMW Seria 3, 2019, $32,500 – anunț nou pe AutoTrader",
     },
     notificationMockup2: {
-      title: "Alertă Telegram",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "Notificare Telegram",
+      description: "Mercedes Clasa C, 2020, 30.000 mile – preț redus cu $2.000",
+    },
   },
   pricing: {
     title: "Prețuri simple și transparente",
-    subtitle: "Prețurile noastre sunt adaptate nevoilor tale specifice. Începe cu un pachet de bază și personalizează-l după cerințele tale.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    subtitle:
+      "Prețurile bazate pe nevoile dvs. Începeți cu pachetul de bază și personalizați după necesitate.",
+    baseTitle: "Pachet de bază: $79.99/lună",
+    includedTitle: "Inclus:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "1 urmărire site",
+      "Actualizări orare",
+      "Filtre nelimitate",
+      "Notificări Telegram",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Fiecare site suplimentar"
-      },
-      1: {
-        name: "Actualizări la fiecare 30 de minute"
-      },
-      2: {
-        name: "Actualizări la fiecare 15 minute"
-      },
-      3: {
-        name: "Actualizări la fiecare 5 minute"
-      },
-      4: {
-        name: "Actualizări la fiecare minut"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Începe acum"
+    addonsTitle: "Suplimente:",
+    addons: [
+      { name: "Site suplimentar", price: 4.99 },
+      { name: "Actualizări la 30 min", price: 2.99 },
+      { name: "Actualizări la 15 min", price: 5.99 },
+      { name: "Actualizări la 5 min", price: 9.99 },
+      { name: "Actualizări la 1 min", price: 14.99 },
+    ],
+    footerNote:
+      "Toate pachetele includ configurare căutare nelimitată și gestionare ușoară a abonamentului.",
+    button: "Începeți acum",
   },
   signup: {
-    heading: "Creează alerta ta auto",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Creați alerte auto",
+    subheading:
+      "Setați notificări personalizate pentru anunțuri auto în câțiva pași.",
+    cta: "Primiți notificări acum",
     waitlist: {
-      message: "Suntem momentan la capacitate maximă. Alătură-te listei noastre de așteptare pentru a fi notificat când se eliberează un loc.",
-      cta: "Join Waitlist"
+      message:
+        "În prezent plin. Alăturați-vă listei de așteptare pentru a primi notificarea când apare un loc liber.",
+      cta: "Alăturați-vă listei de așteptare",
     },
     toast: {
       success: {
         title: "Abonament creat",
-        description: "Your subscription has been created successfully"
+        description: "Abonamentul a fost creat cu succes",
       },
       error: {
-        title: "Abonamentul a eșuat",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Crearea abonamentului a eșuat",
+        description:
+          "Nu s-a putut crea abonamentul. Încercați din nou mai târziu.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "Succes",
-        description: "Metoda dvs. de plată a fost setată cu succes."
+        description: "Metoda de plată a fost setată cu succes.",
       },
       error: {
         title: "Eroare",
-        fallback: "A apărut o eroare neașteptată. Vă rugăm să încercați din nou."
-      }
+        fallback: "A apărut o eroare neașteptată. Încercați din nou.",
+      },
     },
     button: {
-      submit: "Configurează metoda de plată",
-      processing: "Se procesează..."
-    }
+      submit: "Setați metoda de plată",
+      processing: "Se procesează...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "Marca mașinii este obligatorie",
+      carModel: "Modelul mașinii este obligatoriu",
+      fuelType: "Tipul de combustibil este obligatoriu",
+      priceMin: "Prețul minim trebuie să fie un număr",
+      priceMax: "Prețul maxim trebuie să fie un număr",
+      yearMin: "Anul minim trebuie să fie un an valid",
+      yearMax: "Anul maxim trebuie să fie un an valid",
+      maxKilometers: "Kilometrajul maxim trebuie să fie un număr",
+      telegramUsername: "Numele de utilizator Telegram este obligatoriu",
+      telegramToken: "Token-ul botului Telegram este obligatoriu",
+      telegramChatId: "ID-ul chat-ului Telegram este obligatoriu",
+      websitesSelected: "Selectați cel puțin un site",
+      notificationLanguage: "Limba notificărilor este obligatorie",
+      facebookMarketplaceUrl:
+        "Dacă este selectat Facebook, URL-ul Facebook Marketplace este obligatoriu",
+    },
   },
   personalInfo: {
     heading: "Informații personale",
-    description: "Vă rugăm să introduceți datele dvs. personale pentru ca să vă putem seta corect notificările.",
+    description:
+      "Introduceți informațiile personale pentru a seta corect notificările.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Adresă de email"
+      firstName: "Prenume",
+      lastName: "Nume de familie",
+      email: "Adresă de email",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com"
+      firstName: "Ion",
+      lastName: "Popescu",
+      email: "ion.popescu@exemplu.ro",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Vă rugăm să introduceți un email valid"
+      firstName: "Prenumele este obligatoriu",
+      lastName: "Numele de familie este obligatoriu",
+      email: "Introduceți o adresă de email validă",
     },
     actions: {
-      login: "Autentifică-te sau înregistrează-te pentru a continua",
-      continue: "Continuă"
-    }
+      login: "Autentificați-vă sau înregistrați-vă pentru a continua",
+      continue: "Continuați",
+    },
   },
   websiteSelection: {
-    heading: "Selectarea site-ului web",
-    description: "Alege ce site-uri vrei să monitorizezi și cât de des vrei să primești actualizări.",
+    heading: "Selecție site-uri",
+    description:
+      "Selectați site-urile și frecvența de actualizare pentru urmărire.",
     labels: {
-      websites: "Site-uri de monitorizat",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      websites: "Site-uri urmărite",
+      facebookUrl: "URL Facebook Marketplace",
+      updateFrequency: "Frecvență actualizare",
     },
     placeholders: {
-      frequency: "Selectează frecvența"
+      frequency: "Selectați frecvența",
     },
     help: {
-      websites: "Selectează una sau mai multe site-uri pentru a monitoriza anunțurile auto.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites:
+        "Selectați cel puțin un site pentru urmărirea anunțurilor auto.",
+      facebookUrl:
+        "Introduceți aici URL-ul rezultatelor căutării Facebook Marketplace.",
+      videoTitle:
+        "Aveți nevoie de ajutor pentru a găsi link-ul Facebook Marketplace?",
+      videoDesc: "Urmăriți ghidul pas cu pas în videoclipul de mai jos.",
+      updateFrequency:
+        "Cât de des să verificăm anunțuri noi? Frecvența mai mare poate necesita plată suplimentară.",
     },
     errors: {
-      websites: "Trebuie selectat cel puțin un site web",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "Selectați cel puțin un site",
+      facebookUrl:
+        "Dacă este selectat Facebook, URL-ul Facebook Marketplace este obligatoriu",
     },
     actions: {
-      previous: "Anterior",
-      continue: "Continuă"
-    }
+      previous: "Înapoi",
+      continue: "Continuați",
+    },
   },
   carDetails: {
-    heading: "Detalii despre automobil",
-    description: "Specifică detaliile mașinii pe care o cauți. Toate câmpurile sunt opționale – lasă-le necompletate pentru a obține rezultate mai variate.",
+    heading: "Detalii mașină",
+    description:
+      "Introduceți detaliile mașinii căutate. Toate câmpurile sunt opționale – lăsați goale pentru rezultate mai largi.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "Marca mașinii",
+      carModel: "Modelul mașinii",
+      fuelType: "Tip combustibil",
+      priceMin: "Preț minim",
+      priceMax: "Preț maxim",
+      yearMin: "An minim",
+      yearMax: "An maxim",
+      maxKilometers: "Kilometraj maxim",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "Selectați marca mașinii",
+      carModel: "Selectați modelul mașinii",
+      carModelDisabled: "Selectați mai întâi marca",
+      fuelType: "Selectați tipul de combustibil",
+      priceMin: "Introduceți prețul minim",
+      priceMax: "Introduceți prețul maxim",
+      yearMin: "Introduceți anul minim",
+      yearMax: "Introduceți anul maxim",
+      maxKilometers: "Introduceți kilometrajul maxim",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "Niciun model disponibil",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "Marca mașinii este obligatorie",
+      carModel: "Modelul mașinii este obligatoriu",
+      fuelType: "Tipul de combustibil este obligatoriu",
+      priceMin: "Prețul minim trebuie să fie un număr",
+      priceMax: "Prețul maxim trebuie să fie un număr",
+      yearMin: "Anul minim trebuie să fie un an valid",
+      yearMax: "Anul maxim trebuie să fie un an valid",
+      maxKilometers: "Kilometrajul maxim trebuie să fie un număr",
     },
     actions: {
-      previous: "Anterior",
-      continue: "Continuă"
-    }
+      previous: "Înapoi",
+      continue: "Continuați",
+    },
   },
   telegram: {
-    heading: "Configurare Telegram",
-    description: "Configurează notificările Telegram introducând tokenul botului și ID-ul chatului.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Dacă întâmpini dificultăți la crearea botului de Telegram, contactează-ne și te vom suna ca să te ajutăm să-l creezi.",
-    contact: "Contactează-ne",
+    heading: "Setări Telegram",
+    description:
+      "Introduceți token-ul botului și ID-ul chat-ului pentru a seta notificările Telegram.",
+    subHeading: "Setați botul Telegram",
+    info: "Dacă întâmpinați probleme la crearea botului Telegram, contactați-ne. Vă vom ajuta prin telefon.",
+    contact: "Contactați",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Cum să obțineți token-ul botului Telegram:",
+      botStep1: "Deschideți Telegram și căutați @BotFather",
+      botStep2: "Trimiteți comanda /newbot",
+      botStep3: "Urmați instrucțiunile de creare a botului",
+      botStep4: "Copiați token-ul furnizat de BotFather",
+
+      chatTitle: "Cum să obțineți ID-ul chat-ului Telegram:",
+      chatStep1: "Deschideți Telegram și căutați @userinfobot",
+      chatStep2: "Trimiteți orice mesaj botului",
+      chatStep3: "Botul va răspunde cu informații, inclusiv ID-ul chat-ului",
+      chatStep4: "Copiați ID-ul chat-ului (număr)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt:
+      "Aveți nevoie de ajutor pentru a seta token-ul botului Telegram și ID-ul chat-ului?",
+    videoDescription: "Urmăriți ghidul pas cu pas în videoclipul de mai jos.",
+
     labels: {
-      token: "Token Bot Telegram",
-      chatId: "Your Telegram Chat ID",
+      token: "Token bot Telegram",
+      chatId: "ID-ul chat-ului Telegram al dvs.",
       language: "Limba notificărilor",
-      username: "Nume de utilizator Telegram"
+      username: "Nume utilizator Telegram",
     },
+
     placeholders: {
-      token: "Introduce tokenul botului de la BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Selectează limba mesajului Telegram",
-      username: "Introduceți numele de utilizator Telegram"
+      token: "Introduceți token-ul botului furnizat de BotFather",
+      chatId: "Introduceți ID-ul chat-ului Telegram al dvs.",
+      language: "Selectați limba mesajelor Telegram",
+      username: "Introduceți numele de utilizator Telegram",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Acesta este numele de utilizator al contului dvs. Telegram (fără @).",
     examples: {
       token: "Exemplu: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      chatId:
+        "Trimiteți un mesaj la @userinfobot în Telegram pentru a-l obține",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Pași de configurare:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Deschideți Telegram și căutați "BotFather"',
+      'Începeți chat-ul cu BotFather apăsând "Start"',
+      "Introduceți /newbot și urmați instrucțiunile de creare a unui bot nou",
+      "Alegeți numele botului",
+      "Alegeți numele de utilizator al botului (trebuie să se termine cu bot)",
+      "Copiați token-ul API furnizat de BotFather",
+      "Trimiteți un mesaj botului nou pentru a activa chat-ul",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Cum să obțineți ID-ul chat-ului Telegram:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Deschideți Telegram și căutați "userinfobot"',
+      "Trimiteți orice mesaj botului",
+      "Botul va răspunde cu informații, inclusiv ID-ul chat-ului",
+      "Copiați ID-ul chat-ului",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle:
+      "Aveți nevoie de ajutor pentru a seta token-ul botului Telegram și ID-ul chat-ului?",
+    helpDescription: "Urmăriți ghidul pas cu pas în videoclipul de mai jos.",
+    botTokenLabel: "Token bot Telegram",
+    botTokenPlaceholder: "Introduceți token-ul botului furnizat de BotFather",
+    botTokenExample: "Exemplu: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "ID-ul chat-ului Telegram al dvs.",
+    chatIdPlaceholder: "Introduceți ID-ul chat-ului Telegram al dvs.",
+    chatIdDescription:
+      "Trimiteți un mesaj la @userinfobot în Telegram pentru a-l obține",
+    languageLabel: "Limba notificărilor",
+    languagePlaceholder: "Selectați limba mesajelor Telegram",
     languages: {
       en: "Engleză",
       de: "Germană",
       fr: "Franceză",
-      es: "Română",
-      it: "Română"
+      es: "Spaniolă",
+      it: "Italiană",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Previzualizare notificare Telegram",
+    carAlertTitle: "Alertă mașină nouă!",
+    priceLabel: "Preț: {{price}}",
+    kilometresLabel: "Kilometraj: {{kms}}",
+    locationLabel: "Locație: {{location}}",
+    viewListing: "Vizualizați anunțul →",
     errors: {
-      token: "Este necesar tokenul pentru botul Telegram",
-      chatId: "Telegram chat ID is required",
-      language: "Limba notificării este obligatorie.",
-      username: "Numele de utilizator Telegram este obligatoriu"
+      token: "Token-ul botului Telegram este obligatoriu",
+      chatId: "ID-ul chat-ului Telegram este obligatoriu",
+      language: "Limba notificărilor este obligatorie",
+      username: "Numele de utilizator Telegram este obligatoriu",
     },
+
     actions: {
-      previous: "Anterior",
-      continue: "Continuă"
+      previous: "Înapoi",
+      continue: "Continuați",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "Faceți click pe link-ul de mai jos pentru a începe chat-ul cu botul Telegram și a trimite un mesaj:",
+    contactBotNote:
+      "Acest lucru este necesar pentru a primi alerte auto. Pe computer, puteți scana și codul QR.",
+    confirmContact: "Am început chat-ul cu botul și am trimis mesajul",
   },
   review: {
-    title: "Revizuiește abonamentul tău",
-    description: "Vă rugăm să verificați detaliile abonamentului înainte de a continua cu plata.",
+    title: "Revizualizare abonament",
+    description: "Revizuiți detaliile abonamentului înainte de plată.",
+
     personal: {
       title: "Informații personale",
       name: "Nume",
-      email: "E-mail"
+      email: "Email",
     },
+
     monitoring: {
-      title: "Setări de monitorizare",
-      websites: "Site-uri web",
-      facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      title: "Setări urmărire",
+      websites: "Site-uri",
+      facebookUrl: "URL Facebook",
+      updateFrequency: "Frecvență actualizare",
     },
+
     specs: {
-      title: "Specificații automobil",
+      title: "Specificații mașină",
       brand: "Marcă",
       model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Autonomie (km)",
-      price: "Interval de prețuri (€)"
+      fuelType: "Tip combustibil",
+      yearRange: "Interval ani",
+      mileage: "Interval kilometraj (km)",
+      price: "Interval preț (€)",
     },
+
     notification: {
       title: "Setări notificări",
       telegram: "Bot Telegram",
-      language: "Limba notificărilor"
+      language: "Limba notificărilor",
     },
+
     summary: {
-      title: "Sumarul abonamentului",
+      title: "Rezumat abonament",
       base: "Abonament de bază",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Lunar)"
+      extraWebsites: "Site-uri suplimentare",
+      frequencyUpgrade: "Upgrade frecvență",
+      total: "Total (lunar)",
     },
+
     terms: {
-      checkbox: "Sunt de acord cu",
-      tos: "Termeni și condiții",
+      checkbox: "Sunt de acord",
+      tos: "Termeni de utilizare",
       privacy: "Politica de confidențialitate",
-      note: "Abonamentul tău se va reînnoi automat în fiecare lună. Poți anula oricând.",
-      error: "Trebuie să accepți termenii și condițiile"
+      note: "Abonamentul se reînnoiește automat lunar. Poate fi anulat oricând.",
+      error: "Trebuie să fiți de acord cu termenii de utilizare și politica",
     },
+
     actions: {
-      previous: "Anterior",
-      submit: "Continuă la plată"
-    }
+      previous: "Înapoi",
+      submit: "Continuați la plată",
+    },
   },
   faq: {
     title: "Întrebări frecvente",
-    subtitle: "Găsește răspunsuri la cele mai frecvente întrebări despre serviciul nostru.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "Viteza notificărilor depinde de frecvența de actualizare aleasă. Cu planul implicit, care actualizează la fiecare oră, vei primi notificări în decurs de o oră de la publicarea unui anunț nou. Pentru notificări aproape în timp real (în câteva minute de la publicare), poți face upgrade la planurile noastre cu actualizări mai frecvente.",
-        question: "Cât de rapid voi primi notificări după ce este publicat un anunț nou?"
+    subtitle:
+      "Găsiți răspunsuri la întrebările cele mai frecvente despre serviciu.",
+    contactPrompt: "Mai aveți întrebări?",
+    contactLink: "Contactați echipa de suport",
+    questions: [
+      {
+        question:
+          "Cât de rapid voi primi o notificare după publicarea unui anunț nou?",
+        answer:
+          "Viteza notificării depinde de frecvența de actualizare aleasă. În pachetul de bază (orar) notificarea este primită în decurs de 1 oră de la anunțul nou. Cu actualizări mai frecvente, notificările sunt aproape în timp real (câteva minute după publicare).",
       },
-      1: {
-        answer: "Da! Poți crea mai multe profiluri de căutare cu criterii diferite. Fiecare profil este considerat un abonament separat, dar le poți gestiona pe toate dintr-un singur cont. Este perfect dacă vrei să cauți diferite tipuri de vehicule în același timp.",
-        question: "Pot să urmăresc simultan mai multe tipuri diferite de mașini?"
+      {
+        question: "Pot urmări tipuri diferite de mașini simultan?",
+        answer:
+          "Da! Puteți crea mai multe profiluri de căutare cu criterii diferite. Fiecare profil este un abonament separat, dar toate sunt gestionate dintr-un singur cont. Ideal pentru urmărirea simultană a diferitelor tipuri de mașini.",
       },
-      2: {
-        answer: "În prezent, susținem principalele platforme de anunțuri auto, inclusiv AutoTrader, CarGurus, Cars.com și Facebook Marketplace. Ne extindem constant acoperirea pentru a include mai multe site-uri web, în funcție de cererea utilizatorilor și popularitatea regională.",
-        question: "Ce site-uri web susțineți în prezent?"
+      {
+        question: "Ce site-uri sunt suportate în prezent?",
+        answer:
+          "În prezent suportăm platformele principale de vânzări auto, inclusiv AutoTrader, CarGurus, Cars.com și Facebook Marketplace. Extindem acoperirea pe baza cererilor utilizatorilor și popularității regionale.",
       },
-      3: {
-        answer: "Deloc! Oferim instrucțiuni pas cu pas, atât în format text, cât și video, ca să te ajutăm să configurezi botul de Telegram. Majoritatea utilizatorilor finalizează configurarea în mai puțin de 5 minute, chiar și fără cunoștințe tehnice.",
-        question: "Am nevoie de cunoștințe tehnice ca să folosesc botul de Telegram?"
+      {
+        question: "Utilizarea botului Telegram necesită cunoștințe tehnice?",
+        answer:
+          "Deloc! Oferim ghiduri detaliate text și video. Majoritatea utilizatorilor finalizează configurarea în 5 minute fără cunoștințe tehnice.",
       },
-      4: {
-        answer: "Da, poți modifica oricând criteriile de căutare din panoul de control al contului tău. Modificările se aplică imediat, iar notificările tale vor fi actualizate corespunzător, fără nicio întrerupere a serviciului.",
-        question: "Pot să modific criteriile de căutare după ce am setat abonamentul?"
+      {
+        question:
+          "Pot modifica criteriile de căutare după setarea abonamentului?",
+        answer:
+          "Da, criteriile de căutare pot fi modificate oricând din panoul contului. Modificările intră în vigoare imediat, iar notificările sunt actualizate fără întreruperea serviciului.",
       },
-      5: {
-        answer: "Poți anula abonamentul oricând din panoul de control al contului tău. Mergi la secțiunea „Abonamente”, selectează abonamentul pe care vrei să-l anulezi și apasă pe butonul „Anulează abonamentul”. Serviciul tău va rămâne activ până la sfârșitul perioadei curente de facturare.",
-        question: "Cum îmi pot anula abonamentul?"
-      }
-    }
+      {
+        question: "Cum anulez abonamentul?",
+        answer:
+          'Abonamentul poate fi anulat oricând din panoul contului. Accesați secțiunea "Abonamente", selectați abonamentul dorit și faceți click pe "Anulați abonamentul". Serviciul va continua până la sfârșitul perioadei de plată curente.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "Funcționalități",
+    brandDescription:
+      "Asistentul dvs. personal pentru a găsi mașina second-hand perfectă la momentul potrivit.",
+    quickLinks: "Link-uri rapide",
+    features: "Funcții",
     pricing: "Prețuri",
     faq: "Întrebări frecvente",
-    getStarted: "Get Started",
+    getStarted: "Începeți",
     legal: "Legal",
-    terms: "Termeni și condiții",
+    terms: "Termeni de utilizare",
     privacy: "Politica de confidențialitate",
-    cookies: "Politica de cookie-uri",
-    gdpr: "Conformitate cu GDPR",
-    contact: "Contactează",
+    cookies: "Politica cookie-uri",
+    gdpr: "Conformitate GDPR",
+    contact: "Contact",
     email: "support@amiquus.com",
-    telegram: "Contactați-ne pe Telegram",
+    telegram: "Contactați pe Telegram",
     copyright: "Toate drepturile rezervate.",
     about: "Despre noi",
     blog: "Blog",
     careers: "Cariere",
-    support: "Suport"
+    support: "Suport",
   },
   login: {
-    title: "Autentifică-te în contul tău",
-    description: "Introduce adresa ta de email și parola pentru a accesa panoul tău de control",
+    title: "Autentificare în cont",
+    description: "Introduceți email-ul și parola pentru a accesa panoul",
     emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    passwordLabel: "Parolă",
+    loginButton: "Autentificare",
+    loggingIn: "Se autentifică...",
+    loginWithGoogle: "Autentificare cu Google",
     or: "sau",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Nu aveți cont?",
+    registerLink: "Înregistrați-vă",
+    successTitle: "Autentificare reușită",
+    successMessage: "Ați fost autentificat cu succes.",
+    errorTitle: "Autentificare eșuată",
+    genericError: "Verificați detaliile și încercați din nou.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "Introduceți o adresă de email validă",
+      shortPassword: "Parola trebuie să aibă cel puțin 6 caractere",
+    },
   },
   register: {
-    title: "Creează un cont",
-    description: "Înscrie-te ca să începi să urmărești mașina visurilor tale",
-    google: "Înregistrează-te cu Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Nume de utilizator",
-    email: "E-mail",
+    title: "Creați cont",
+    description: "Înregistrați-vă pentru a începe urmărirea mașinii visurilor",
+    google: "Înregistrare cu Google",
+    orContinue: "sau continuați",
+    firstName: "Prenume",
+    lastName: "Nume de familie",
+    username: "Nume utilizator",
+    email: "Email",
     password: "Parolă",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "Confirmați parola",
+    termsNotice: "Sunt de acord",
+    termsOfService: "Termenii de serviciu",
+    privacyPolicy: "Politica de confidențialitate",
+    createBtn: "Creați cont",
+    alreadyHave: "Aveți deja cont?",
     login: "Autentificare",
     and: "și",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Câmpuri lipsă",
+        desc: "Completați toate câmpurile obligatorii",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Nume utilizator invalid",
+        desc: "Numele de utilizator trebuie să aibă 3-20 caractere și să conțină doar litere și numere",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Parolele nu se potrivesc",
+        desc: "Asigurați-vă că parolele coincid",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Termenii nu sunt acceptați",
+        desc: "Trebuie să acceptați termenii de serviciu și politica de confidențialitate pentru a continua",
       },
       success: {
         title: "Înregistrare reușită",
-        desc: "Bine ai venit la AMIQUUS! Vei fi redirecționat pentru a-ți verifica adresa de email."
+        desc: "Bine ați venit la Amiquus! Veți fi redirecționat către verificarea email-ului.",
       },
       failure: {
-        title: "Înregistrarea a eșuat",
-        desc: "Vă rugăm să verificați informațiile și să încercați din nou."
-      }
-    }
+        title: "Înregistrare eșuată",
+        desc: "Verificați detaliile și încercați din nou",
+      },
+    },
   },
   verifyEmail: {
-    title: "Verifică-ți adresa de email",
-    description: "Un cod de verificare a fost trimis pe adresa ta de email.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "Verificare email",
+    description: "Am trimis un cod de verificare la adresa dvs. de email.",
+    codeLabel: "Cod de verificare",
+    verifyButton: "Verificați email-ul",
+    updateEmailLabel: "Actualizați email-ul",
+    updateEmailButton: "Actualizați email-ul",
+    resendButton: "Retrimiteți codul",
+    resendCountdown: "Codul poate fi retrimis după {{seconds}} secunde",
+    footerNote: "Nu ați primit codul? Verificați folderul spam.",
     toast: {
-      verified: "Emailul a fost verificat",
+      verified: "Email verificat",
       failed: "Verificarea a eșuat",
       resent: "Codul de verificare a fost retrimis",
       error: "Eroare",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      invalidEmail: "Email invalid",
+      enterValidEmail: "Introduceți o adresă de email validă",
+      sameEmail: "Același email",
+      sameEmailDesc: "Noua adresă de email este aceeași cu cea curentă",
+      emailUpdated: "Email actualizat",
+    },
   },
   dashboardPayment: {
-    add: "Adaugă metodă de plată",
-    description: "Adaugă un nou card de credit sau de debit pentru plățile abonamentului.",
+    add: "Adăugați metodă de plată",
+    description:
+      "Adăugați un card de credit sau debit nou pentru plățile abonamentului.",
     processing: "Se procesează...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    errorTitle: "Eroare la adăugarea metodei de plată",
+    errorMessage: "A apărut o eroare neașteptată",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "Eroare",
+      description: "Nu s-a putut inițializa configurarea plății",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Ani",
+      priceRange: "Preț",
+      websites: "Site-uri",
+      updates: "Actualizări",
+      language: "Limbă",
+      price: "Preț",
+      edit: "Editați",
+      cancelAlert: "Anulați alerta",
+      cancelTitle: "Anulați alerta mașină",
+      cancelDescription:
+        "Doriți să anulați alerta pentru mașina {{brand}} {{model}}? Aceasta va opri toate notificările, iar pentru a urmări din nou această mașină, va trebui să creați o alertă nouă.",
+      keepMyAlert: "Păstrați alerta mea",
+      confirmCancel: "Anulați alerta",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Expiră",
+      default: "Implicit",
+      setAsDefault: "Setați ca implicit",
+      remove: "Eliminați",
+      setDefaultTitle: "Setați metoda de plată ca implicită",
+      setDefaultDescription:
+        "Doriți să setați cardul {{brand}} care expiră cu {{last4}} ca metodă de plată implicită? Acest card va fi utilizat pentru toate plățile viitoare ale abonamentului.",
+      removeTitle: "Eliminați metoda de plată",
+      removeDescription:
+        "Doriți să eliminați cardul {{brand}} care expiră cu {{last4}}?",
+      removeWarning:
+        "Aceasta este metoda de plată implicită, iar eliminarea ei poate afecta abonamentele active.",
+      cancel: "Anulați",
+      confirmRemove: "Eliminați cardul",
+    },
   },
   profile: {
     tabs: {
       alerts: "Alertele mele",
-      payments: "Metode de plată"
+      payments: "Metode de plată",
     },
     sidebar: {
-      memberSince: "Member since",
+      memberSince: "Membru din",
       subscriptions: "Abonamente",
       methods: "Metode de plată",
       account: "Setări cont",
       privacy: "Confidențialitate și securitate",
-      logout: "Deconectare"
+      logout: "Deconectare",
     },
     account: {
       title: "Setări cont",
-      desc: "Actualizează informațiile și preferințele contului tău.",
+      desc: "Actualizați informațiile contului și preferințele.",
       name: "Nume",
-      email: "E-mail",
-      username: "Nume de utilizator",
-      cancel: "Anulează",
-      save: "Salvează modificările"
+      email: "Email",
+      username: "Nume utilizator",
+      cancel: "Anulați",
+      save: "Salvați modificările",
     },
     security: {
       title: "Confidențialitate și securitate",
-      desc: "Gestionează setările de securitate și preferințele de confidențialitate.",
-      current: "Parolă curentă",
+      desc: "Gestionați setările de securitate și preferințele de confidențialitate.",
+      current: "Parola curentă",
       new: "Parolă nouă",
-      confirm: "Confirmă noua parolă",
-      update: "Actualizează parola"
+      confirm: "Confirmați parola nouă",
+      update: "Actualizați parola",
     },
     logout: {
       title: "Deconectare",
-      desc: "Ești sigur că vrei să te deconectezi de la contul tău?",
-      success: "Ați fost delogat cu succes."
+      desc: "Doriți să vă deconectați de la cont?",
+      success: "Ați fost deconectat cu succes.",
     },
     alerts: {
-      title: "Abonamente la alerte auto",
-      desc: "Gestionează alertele de căutare auto și preferințele de notificare.",
-      add: "Adaugă alertă nouă",
-      none: "Nu aveți niciun alertă activă pentru mașini.",
-      cta: "Creează prima ta alertă",
-      warning: "⚠️ Modificările abonamentului tău vor fi aplicate în următoarea perioadă de facturare și doar după o plată reușită. Dacă plata eșuează, setările actuale ale alertelor vor rămâne neschimbate."
+      title: "Abonamente alerte auto",
+      desc: "Gestionați alertele de căutare auto și preferințele de notificare.",
+      add: "Adăugați alertă nouă",
+      none: "Nu există alerte auto active.",
+      cta: "Creați prima alertă",
+      warning:
+        "⚠️ Modificările abonamentului vor intra în vigoare în următoarea perioadă de facturare și doar după o plată reușită. Dacă plata eșuează, configurația curentă a alertei nu se va schimba.",
     },
     payments: {
       title: "Metode de plată",
-      desc: "Gestionează metodele de plată pentru abonamentul tău.",
-      none: "Nu ai nicio metodă de plată salvată.",
-      encrypted: "Informațiile dvs. de plată sunt criptate și stocate în siguranță."
-    }
+      desc: "Gestionați metodele de plată pentru facturarea abonamentului.",
+      none: "Nu există metode de plată salvate.",
+      encrypted: "Informațiile de plată sunt criptate și stocate în siguranță.",
+    },
   },
   setupAlerts: {
-    title: "Setează alertele pentru mașina ta",
-    subtitle: "Configurează-ți botul Telegram pentru a primi notificări despre mașina ta de vis",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Pornește serviciul meu de alerte pentru mașină",
-    cancel: "Anulează oricând",
+    title: "Configurare alerte auto",
+    subtitle:
+      "Setați botul Telegram pentru a primi notificări despre mașina visurilor",
+    basicPlan: "Plan de bază",
+    baseTitle: "$79.99/lună",
+    button: "Activați serviciul meu de alerte auto",
+    cancel: "Poate fi anulat oricând",
     toasts: {
       terms: {
-        title: "Termenii nu au fost acceptați",
-        description: "Trebuie să fii de acord cu termenii de utilizare pentru a continua."
+        title: "Termenii nu sunt acceptați",
+        description:
+          "Trebuie să acceptați termenii de utilizare pentru a continua",
       },
       success: {
         title: "Abonament creat",
-        description: "Abonamentul dvs. a fost creat cu succes"
+        description: "Abonamentul a fost creat cu succes",
       },
       error: {
-        title: "Eroare la crearea abonamentului"
+        title: "Eroare la crearea abonamentului",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "Trebuie să contactați botul",
+        description:
+          "Pentru a primi alerte auto, trebuie să începeți chat-ul cu botul Telegram și să trimiteți un mesaj. Urmați instrucțiunile de mai jos pentru a contacta botul.",
+      },
+    },
   },
   loginPrompt: {
     title: "Autentificare necesară",
-    description: "Trebuie să fii autentificat pentru a continua. Te rugăm să te conectezi sau să te înregistrezi.",
-    register: "Înregistrează-te",
-    login: "Autentificare"
+    description:
+      "Pentru a continua, trebuie să vă autentificați. Autentificați-vă sau înregistrați-vă.",
+    register: "Înregistrați-vă",
+    login: "Autentificare",
   },
   waitlistPrompt: {
-    title: "Înscrie-te pe lista de așteptare",
-    description: "Momentan suntem la capacitate maximă. Înscrie-te pe lista de așteptare ca să fii anunțat când se eliberează un loc.",
-    button: "Înscrie-te pe lista de așteptare"
+    title: "Alăturați-vă listei de așteptare",
+    description:
+      "În prezent plin. Alăturați-vă listei de așteptare pentru a primi notificarea când apare un loc liber.",
+    button: "Alăturați-vă listei de așteptare",
   },
   subscription: {
     title: "Detalii abonament",
-    subTitle: "Edit your subscription details below",
-    error: "Întoarce-te la panoul de control",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Poți întrerupe abonamentul oricând. Când întrerupi abonamentul, alertele pentru mașină vor fi oprite până când le reiei.",
+    subTitle: "Modificați detaliile abonamentului de mai jos",
+    error: "Înapoi la panou",
+    notFound: "Abonament negăsit",
+    notFoundSub: "Înapoi la panou",
+    description:
+      "Abonamentul poate fi suspendat oricând. Când este suspendat, alertele auto vor fi oprite până la reluare.",
     form: {
       status: {
-        label: "Stare",
-        placeholder: "Selectează statutul",
+        label: "Status",
+        placeholder: "Selectați statusul",
         active: "Activ",
-        paused: "Pauzat"
-      }
+        paused: "Suspendat",
+      },
     },
     actions: {
-      save: "Salvează modificările",
-      back: "Înapoi"
+      save: "Salvați modificările",
+      back: "Înapoi",
     },
     toasts: {
       success: {
         title: "Abonament actualizat",
-        description: "Abonamentul tău pentru {{brand}} {{model}} a fost actualizat cu succes"
+        description:
+          "Abonamentul {{brand}} {{model}} a fost actualizat cu succes",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Nu se poate actualiza abonamentul",
+        description:
+          "Nu se poate suspenda și actualiza prețul simultan. Alegeți fie suspendarea, fie actualizarea prețului.",
       },
       error: {
-        title: "Eroare la actualizarea abonamentului"
-      }
-    }
+        title: "Eroare la actualizarea abonamentului",
+      },
+    },
   },
   about: {
-    title: "Despre AMIQUUS",
-    description: "Revoluționăm modul în care oamenii își găsesc mașina perfectă la mâna a doua, aducând tehnologia avansată de monitorizare pentru toți.",
+    title: "Despre Amiquus",
+    description:
+      "Revoluționăm căutarea mașinilor second-hand pentru toți cu tehnologie avansată de urmărire",
     meta: {
-      title: "Despre noi | Amiquus - Serviciu de monitorizare a anunțurilor auto",
-      description: "Află mai multe despre AMIQUUS, misiunea noastră de a revoluționa cumpărarea mașinilor rulate și echipa din spatele serviciului nostru inteligent de monitorizare a anunțurilor auto."
+      title: "Despre noi | Amiquus – Serviciu de urmărire anunțuri auto",
+      description:
+        "Aflați despre Amiquus, misiunea noastră de a revoluționa cumpărarea mașinilor second-hand și echipa din spatele serviciului inteligent de urmărire anunțuri auto.",
     },
     story: {
       heading: "Povestea noastră",
-      paragraphs: {
-        0: "AMIQUUS a început în 2023, când fondatorul nostru, Alex, a petrecut luni întregi actualizând site-urile cu anunțuri auto, încercând să găsească un anumit model rar la un preț bun. După ce a ratat mai multe oportunități din cauza notificărilor întârziate, și-a dat seama că trebuie să existe o soluție mai bună.",
-        1: "Lucrând cu o echipă mică de dezvoltatori și pasionați de mașini, Alex a creat un sistem de monitorizare care putea urmări anunțurile de pe mai multe site-uri simultan și trimite notificări instantanee atunci când apăreau potriviri relevante.",
-        2: "Ceea ce a început ca un proiect personal a atras rapid interesul prietenilor și familiei, iar la începutul anului 2025, AMIQUUS a devenit un serviciu disponibil pentru toți. Astăzi, ajutăm cumpărătorii de mașini din toată țara să economisească timp și să găsească oferte mai bune cu tehnologia noastră inteligentă de monitorizare."
-      }
+      paragraphs: [
+        "Amiquus a început în 2023 când fondatorul Aleksej a petrecut luni de zile reîmprospătând site-urile de vânzări auto pentru a găsi un model rar la un preț bun. După câteva oferte ratate, a realizat nevoia unei soluții mai bune.",
+        "Împreună cu o mică echipă de dezvoltatori și entuziaști auto, Aleksej a creat un sistem care urmărește mai multe site-uri simultan și trimite notificări imediate despre potriviri.",
+        "Început ca proiect personal, a atras rapid atenția prietenilor și familiei, iar la începutul lui 2025 Amiquus a devenit un serviciu pentru toți. Astăzi ajutăm cumpărătorii de mașini din toată țara să economisească timp și să găsească cele mai bune oferte cu tehnologie inteligentă de urmărire.",
+      ],
     },
     mission: {
       heading: "Misiunea noastră",
-      items: {
-        0: {
-          description: "Eliminați necesitatea de a actualiza constant mai multe site-uri web, automatizând procesul de căutare și primind notificări la timp.",
-          title: "Economisește timp"
+      items: [
+        {
+          title: "Economisire timp",
+          description:
+            "Eliminați nevoia de a reîmprospăta constant mai multe site-uri cu căutare automată și notificări la timp.",
         },
-        1: {
-          description: "Fii primul care află despre o ofertă excelentă, ca să ai un avantaj pe o piață competitivă unde fiecare secundă contează.",
-          title: "Găsește oferte mai bune"
+        {
+          title: "Găsirea celor mai bune oferte",
+          description:
+            "Aflați despre oferte excelente primul, oferindu-vă un avantaj în piața competitivă unde timpul este esențial.",
         },
-        2: {
-          description: "Ia decizii informate cu monitorizare completă pe mai multe platforme de anunțuri auto de încredere.",
-          title: "Cumpără cu încredere"
-        }
-      }
+        {
+          title: "Cumpărare cu încredere",
+          description:
+            "Luați decizii informate cu urmărire completă pe mai multe platforme de vânzări auto de încredere.",
+        },
+      ],
     },
     team: {
       heading: "Echipa noastră",
-      members: {
-        0: {
-          bio: "Fost inginer software, pasionat de mașini și de crearea soluțiilor inovatoare.",
-          name: "Alex Morgan",
-          role: "Fondator și Director General"
+      members: [
+        {
+          name: "Aleksej Morgan",
+          role: "Fondator și CEO",
+          bio: "Fost inginer software cu pasiune pentru mașini și soluții inovatoare.",
         },
-        1: {
-          bio: "Expert în știința datelor, specializat în web scraping și sisteme de extragere a informațiilor.",
-          name: "Sarah Chen",
-          role: "Director Tehnic"
+        {
+          name: "Sara Chen",
+          role: "Lider tehnic",
+          bio: "Om de știință în date, specializat în web scraping și extragere de informații.",
         },
-        2: {
-          bio: "Inginer full-stack cu expertiză în dezvoltarea sistemelor de notificări performante.",
-          name: "Marcus Lee",
-          role: "Dezvoltator principal"
+        {
+          name: "Markus Li",
+          role: "Dezvoltator principal",
+          bio: "Inginer full-stack cu experiență în construirea sistemelor de notificare de înaltă performanță.",
         },
-        3: {
-          bio: "Fost consilier auto dedicat să ajute clienții să găsească vehiculul perfect pentru ei.",
+        {
           name: "Elena Rodriguez",
-          role: "Succesul clienților"
-        }
-      }
+          role: "Succes client",
+          bio: "Fost specialist în vânzări auto, dedicat să ajute clienții să găsească vehiculul ideal.",
+        },
+      ],
     },
     join: {
-      heading: "Alătură-te echipei noastre",
-      description: "Căutăm mereu persoane talentate, pasionate de tehnologie și de a revoluționa experiența de cumpărare a mașinilor. Vezi posturile disponibile și alătură-te misiunii noastre la AMIQUUS.",
-      cta: "Vezi posturile disponibile"
+      heading: "Alăturați-vă echipei noastre",
+      description:
+        "Căutăm mereu persoane talentate pasionate de tehnologie și de revoluționarea experienței de cumpărare auto. Consultați pozițiile deschise și alăturați-vă misiunii.",
+      cta: "Vedeți pozițiile deschise",
     },
     questions: {
-      heading: "Ai întrebări?",
-      description: "Află mai multe despre cum funcționează serviciul nostru, vezi opțiunile de preț sau contactează echipa noastră de suport.",
+      heading: "Aveți întrebări?",
+      description:
+        "Aflați mai multe despre cum funcționează serviciul, vizualizați prețurile sau contactați echipa de suport.",
       links: {
-        faq: "Vezi întrebări frecvente",
-        pricing: "Vezi prețurile",
-        support: "Contactează suportul"
-      }
-    }
+        faq: "Vizitați Întrebări frecvente",
+        pricing: "Vedeți prețurile",
+        support: "Contactați suportul",
+      },
+    },
   },
   terms: {
-    metaTitle: "Termeni și condiții | Amiquus",
-    metaDescription: "Citește Termenii și Condițiile AMIQUUS care reglementează utilizarea serviciului nostru de monitorizare și notificare a anunțurilor auto.",
-    title: "Termeni și condiții",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Termeni de utilizare | Amiquus",
+    metaDescription:
+      "Citește Termenii de utilizare Amiquus care guvernează folosirea serviciului nostru de monitorizare și notificare a anunțurilor auto.",
+    title: "Termeni de utilizare",
+    lastUpdated: "Ultima actualizare: 21 mai 2025",
     sections: {
-      1: {
-        id: "acord",
-        heading: "Acord cu termenii",
-        paragraphs: {
-          0: "Acești Termeni și Condiții constituie un acord legal obligatoriu între dumneavoastră și AMIQUUS, referitor la accesul și utilizarea site-ului nostru web și a serviciilor noastre.",
-          1: "Prin accesarea sau utilizarea serviciilor noastre, sunteți de acord să respectați acești Termeni. Dacă nu sunteți de acord cu vreo parte a termenilor, nu puteți accesa serviciul."
-        },
+      "1": {
+        id: "agreement",
+        heading: "Acord privind Termenii",
+        paragraphs: [
+          "Acești Termeni de utilizare reprezintă un acord cu caracter juridic obligatoriu încheiat între tine și Amiquus, referitor la accesul și utilizarea site-ului și serviciilor noastre.",
+          "Prin accesarea sau utilizarea serviciilor noastre, ești de acord să respecți acești Termeni. Dacă nu ești de acord cu orice parte a termenilor, nu poți accesa serviciul.",
+        ],
+        list: [],
+      },
+      "2": {
+        id: "changes",
+        heading: "Modificări ale Termenilor",
+        paragraphs: [
+          "Ne rezervăm dreptul, la discreția noastră, să modificăm sau să înlocuim acești Termeni în orice moment. Dacă o modificare este semnificativă, vom depune eforturi rezonabile pentru a oferi un preaviz de cel puțin 30 de zile înainte ca noii termeni să intre în vigoare.",
+          "Continuând să accesezi sau să utilizezi serviciul nostru după ce aceste modificări devin efective, ești de acord să fii obligat de termenii modificați. Dacă nu ești de acord cu noii termeni, te rugăm să încetezi utilizarea serviciului.",
+        ],
+        list: [],
+      },
+      "3": {
+        id: "account",
+        heading: "Termeni de utilizare a contului",
+        paragraphs: ["Pentru a utiliza serviciile noastre, trebuie să:"],
         list: [
-        ]
+          "Ai cel puțin 18 ani",
+          "Finalizezi procesul de înregistrare",
+          "Furnizezi informații corecte, complete și actualizate",
+          "Fii responsabil pentru securitatea contului și a parolei tale",
+          "Fii responsabil pentru toate activitățile desfășurate prin contul tău",
+          "Ne informezi imediat ce afli de orice breșă de securitate sau utilizare neautorizată a contului tău",
+        ],
       },
-      2: {
-        id: "modificări",
-        heading: "Modificări ale termenilor",
-        paragraphs: {
-          0: "Ne rezervăm dreptul, la propria noastră discreție, să modificăm sau să înlocuim oricând acești Termeni. Dacă o modificare este semnificativă, vom depune eforturi rezonabile pentru a oferi cel puțin 30 de zile de notificare înainte ca noii termeni să intre în vigoare.",
-          1: "Continuând să accesezi sau să folosești serviciul nostru după ce aceste modificări devin efective, ești de acord să fii obligat de termenii revizuiți. Dacă nu ești de acord cu noii termeni, te rugăm să nu mai folosești serviciul."
-        },
-        list: [
-        ]
-      },
-      3: {
-        id: "cont",
-        heading: "Termeni ai contului",
-        paragraphs: {
-          0: "Pentru a utiliza serviciile noastre, trebuie să:"
-        },
-        list: {
-          0: "Trebuie să ai cel puțin 18 ani",
-          1: "Finalizează procesul de înregistrare",
-          2: "Furnizați informații corecte, complete și actualizate",
-          3: "Fii responsabil de păstrarea securității contului și parolei tale",
-          4: "Fii responsabil pentru toate activitățile care au loc sub contul tău",
-          5: "Anunțați-ne imediat ce aflați despre orice încălcare a securității sau utilizare neautorizată a contului dumneavoastră."
-        }
-      },
-      4: {
-        id: "plată",
+      "4": {
+        id: "payment",
         heading: "Termeni de plată",
-        paragraphs: {
-          0: "AMIQUUS oferă servicii pe bază de abonament în următoarele condiții:"
-        },
-        list: {
-          0: "Toate taxele nu includ TVA-ul, care va fi adăugat atunci când este cazul.",
-          1: "Prețurile abonamentelor pot fi modificate cu un preaviz de 30 de zile.",
-          2: "Abonamentele se reînnoiesc automat, exceptând cazurile când sunt anulate înainte de următorul ciclu de facturare.",
-          3: "Rambursările sunt analizate individual, conform politicii noastre de rambursare.",
-          4: "Folosim Stripe pentru procesarea sigură a plăților, iar toate informațiile despre plată sunt stocate de Stripe."
-        }
+        paragraphs: [
+          "Amiquus oferă servicii pe bază de abonament, cu următorii termeni:",
+        ],
+        list: [
+          "Toate taxele sunt exclusive de taxe și impozite, care vor fi adăugate atunci când este cazul",
+          "Prețurile abonamentelor pot fi modificate cu un preaviz de 30 de zile",
+          "Abonamentele se reînnoiesc automat dacă nu sunt anulate înainte de următorul ciclu de facturare",
+          "Rambursările sunt gestionate de la caz la caz, în conformitate cu politica noastră de rambursare",
+          "Folosim Stripe pentru procesarea securizată a plăților, iar toate informațiile de plată sunt stocate de Stripe",
+        ],
       },
-      5: {
-        id: "capacitate",
+      "5": {
+        id: "capacity",
         heading: "Limite de capacitate",
-        paragraphs: {
-          0: "Pentru a menține calitatea și fiabilitatea serviciului, AMIQUUS limitează numărul de abonamente active la 30. Când această limită este atinsă:"
-        },
-        list: {
-          0: "Utilizatorii noi se pot înscrie pe lista noastră de așteptare",
-          1: "Poziția în lista de așteptare este stabilită după principiul „primul venit, primul servit”.",
-          2: "Când va fi disponibilă capacitate, utilizatorii de pe lista de așteptare vor fi notificați în ordine.",
-          3: "Ne rezervăm dreptul de a modifica oricând limitele de capacitate."
-        }
+        paragraphs: [
+          "Pentru a menține calitatea și fiabilitatea serviciului, Amiquus limitează numărul de abonamente active la 30. Când această limită este atinsă:",
+        ],
+        list: [
+          "Utilizatorii noi se pot înscrie pe lista de așteptare",
+          "Poziția pe lista de așteptare este stabilită în ordinea înscrierii (primul venit, primul servit)",
+          "Când devine disponibilă capacitate, utilizatorii de pe lista de așteptare vor fi notificați în ordine",
+          "Ne rezervăm dreptul de a modifica limitele de capacitate în orice moment",
+        ],
       },
-      6: {
-        id: "extragere de date",
-        heading: "Limitările extragerii datelor web",
-        paragraphs: {
-          0: "Serviciul nostru accesează și procesează date de pe mai multe site-uri cu anunțuri auto. Prin utilizarea serviciului nostru, confirmați că:"
-        },
-        list: {
-          0: "Amiquus respectă termenii și condițiile site-urilor pe care le monitorizăm.",
-          1: "Implementăm limitarea traficului și respectăm bunele practici de accesare a site-urilor",
-          2: "Disponibilitatea anumitor site-uri poate varia în funcție de termenii și măsurile tehnice ale acestora.",
-          3: "Nu oferim nicio garanție privind completitudinea sau actualitatea datelor colectate."
-        }
+      "6": {
+        id: "scraping",
+        heading: "Limitări privind web scraping-ul",
+        paragraphs: [
+          "Serviciul nostru accesează și procesează date de pe mai multe site-uri de anunțuri auto. Prin utilizarea serviciului, recunoști că:",
+        ],
+        list: [
+          "Amiquus respectă termenii de utilizare ai site-urilor pe care le monitorizăm",
+          "Implementăm limitare de rată (rate limiting) și practici de crawling responsabile",
+          "Disponibilitatea anumitor site-uri se poate modifica în funcție de termenii și măsurile lor tehnice",
+          "Nu oferim nicio garanție privind caracterul complet sau actualitatea datelor extrase",
+        ],
       },
-      7: {
-        id: "intelectual",
+      "7": {
+        id: "intellectual",
         heading: "Proprietate intelectuală",
-        paragraphs: {
-          0: "Serviciul AMIQUUS, inclusiv conținutul său original, funcționalitățile și caracteristicile sale, este și va rămâne proprietatea exclusivă a AMIQUUS. Serviciul nostru este protejat prin drepturi de autor, mărci comerciale și alte legi din Statele Unite ale Americii și din alte țări.",
-          1: "Mărcile și elementele de identitate vizuală ale noastre nu pot fi folosite în legătură cu niciun produs sau serviciu fără acordul prealabil, în scris, al AMIQUUS."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Serviciul Amiquus, inclusiv conținutul original, funcționalitățile și caracteristicile sale, reprezintă și vor rămâne proprietatea exclusivă a Amiquus. Serviciul nostru este protejat de legea drepturilor de autor, a mărcilor comerciale și alte legi aplicabile în Statele Unite și alte țări.",
+          "Mărcile noastre și identitatea noastră vizuală nu pot fi folosite în legătură cu niciun produs sau serviciu fără acordul scris prealabil al Amiquus.",
+        ],
+        list: [],
       },
-      8: {
-        id: "reziliere",
-        heading: "Reziliere",
-        paragraphs: {
-          0: "Putem să vă suspendăm sau să vă închidem contul imediat, fără notificare prealabilă sau răspundere, din orice motiv, inclusiv, fără limitare, dacă încălcați Termenii.",
-          1: "La încetarea serviciului, dreptul dumneavoastră de a utiliza serviciul va înceta imediat. Dacă doriți să vă închideți contul, puteți pur și simplu să nu mai folosiți serviciul sau să ne contactați pentru a solicita ștergerea contului."
-        },
-        list: [
-        ]
+      "8": {
+        id: "termination",
+        heading: "Încetarea utilizării",
+        paragraphs: [
+          "Putem închide sau suspenda contul tău imediat, fără notificare prealabilă sau răspundere, din orice motiv, inclusiv, fără limitare, dacă încalci acești Termeni.",
+          "La încetare, dreptul tău de a utiliza serviciul va înceta imediat. Dacă dorești să-ți închizi contul, poți pur și simplu să încetezi utilizarea serviciului sau să ne contactezi pentru a solicita ștergerea contului.",
+        ],
+        list: [],
       },
-      9: {
-        id: "limitări",
+      "9": {
+        id: "limitations",
         heading: "Limitarea răspunderii",
-        paragraphs: {
-          0: "În niciun caz AMIQUUS, nici directorii, angajații, partenerii, agenții, furnizorii sau afiliații săi nu vor fi răspunzători pentru orice daune indirecte, incidentale, speciale, consecutive sau punitive, inclusiv, fără limitare, pentru pierderea profitului, a datelor, a utilizării, a reputației sau a altor pierderi intangibile, rezultate din:"
-        },
-        list: {
-          0: "Accesul sau utilizarea ori imposibilitatea de a accesa sau utiliza serviciul",
-          1: "Orice comportament sau conținut al oricărei terțe părți pe serviciu",
-          2: "Orice conținut obținut din serviciu",
-          3: "Acces, utilizare sau modificare neautorizată a transmisiunilor sau conținutului dumneavoastră"
-        }
-      },
-      10: {
-        id: "declinare a responsabilității",
-        heading: "Declarație de declinare a responsabilității",
-        paragraphs: {
-          0: "Utilizarea serviciului este pe propria răspundere. Serviciul este oferit „CA ATARE” și „ÎN FUNCȚIE DE DISPONIBILITATE”. Serviciul este furnizat fără niciun fel de garanții, exprese sau implicite.",
-          1: "AMIQUUS nu garantează că serviciul va fi neîntrerupt, la timp, sigur sau fără erori, și nici că rezultatele obținute prin utilizarea serviciului vor fi exacte sau de încredere."
-        },
+        paragraphs: [
+          "În niciun caz Amiquus și nici directorii, angajații, partenerii, agenții, furnizorii sau afiliații săi nu vor fi răspunzători pentru niciun fel de daune indirecte, incidentale, speciale, consecutive sau punitive, inclusiv, fără limitare, pierderea de profit, date, utilizare, fond comercial sau alte pierderi intangibile, rezultate din:",
+        ],
         list: [
-        ]
+          "Accesul sau utilizarea sau imposibilitatea de a accesa sau utiliza serviciul",
+          "Orice comportament sau conținut al unui terț în cadrul serviciului",
+          "Orice conținut obținut prin intermediul serviciului",
+          "Accesul neautorizat, utilizarea sau modificarea transmisiilor sau conținutului tău",
+        ],
       },
-      11: {
-        id: "cookie-uri",
+      "10": {
+        id: "disclaimer",
+        heading: "Declinarea răspunderii",
+        paragraphs: [
+          "Utilizarea serviciului se face pe proprie răspundere. Serviciul este furnizat pe baza `CA ATARE` și `ÎN FUNCȚIE DE DISPONIBILITATE`. Serviciul este oferit fără garanții de orice fel, exprese sau implicite.",
+          "Amiquus nu garantează că serviciul va fi neîntrerupt, la timp, sigur sau fără erori, sau că rezultatele obținute din utilizarea serviciului vor fi corecte sau de încredere.",
+        ],
+        list: [],
+      },
+      "11": {
+        id: "cookies",
         heading: "Politica de cookie-uri",
-        paragraphs: {
-          0: "Politica noastră privind cookie-urile explică ce sunt cookie-urile, cum folosim cookie-urile, cum terțe părți cu care putem colabora pot folosi cookie-uri pe serviciul nostru, opțiunile dumneavoastră referitoare la cookie-uri și informații suplimentare despre cookie-uri. Vă rugăm să consultați secțiunea despre cookie-uri din Politica noastră de confidențialitate."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Politica noastră privind cookie-urile explică ce sunt cookie-urile, cum le folosim, cum pot utiliza cookie-uri terțele părți cu care colaborăm, opțiunile tale privind cookie-urile și informații suplimentare despre acestea. Te rugăm să consulți secțiunea Cookie-uri din Politica noastră de confidențialitate.",
+        ],
+        list: [],
       },
-      12: {
-        id: "legea aplicabilă",
+      "12": {
+        id: "governing-law",
         heading: "Legea aplicabilă",
-        paragraphs: {
-          0: "Acești Termeni vor fi guvernați și interpretați în conformitate cu legile Statelor Unite ale Americii, fără a ține cont de prevederile privind conflictul de legi.",
-          1: "Neaplicarea de către noi a oricărui drept sau prevedere din acești Termeni nu va fi considerată o renunțare la acele drepturi. Dacă vreo prevedere din acești Termeni este declarată nulă sau inaplicabilă de către o instanță, celelalte prevederi ale acestor Termeni vor rămâne în vigoare."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Acești Termeni vor fi guvernați și interpretați în conformitate cu legile Statelor Unite, fără a ține cont de dispozițiile privind conflictul de legi.",
+          "Neîndeplinirea de către noi a oricărui drept sau prevedere din acești Termeni nu va constitui o renunțare la acel drept. Dacă o prevedere a acestor Termeni este declarată invalidă sau inaplicabilă de către o instanță, celelalte prevederi vor rămâne în vigoare.",
+        ],
+        list: [],
       },
-      13: {
-        id: "contactează",
+      "13": {
+        id: "contact",
         heading: "Contactează-ne",
-        paragraphs: {
-          0: "Dacă aveți întrebări legate de acești Termeni, vă rugăm să ne contactați:"
-        },
-        list: {
-          0: "Prin e-mail: legal@amiquus.com",
-          1: "Accesând pagina de contact de pe site-ul nostru"
-        }
-      }
-    }
+        paragraphs: [
+          "Dacă ai orice întrebări legate de acești Termeni, te rugăm să ne contactezi:",
+        ],
+        list: [
+          "Prin e-mail: legal@amiquus.com",
+          "Accesând pagina de contact de pe site-ul nostru",
+        ],
+      },
+    },
   },
   privacy: {
     metaTitle: "Politica de confidențialitate | Amiquus",
-    metaDescription: "Află cum AMIQUUS gestionează datele tale personale, drepturile tale la confidențialitate și practicile de colectare a datelor.",
+    metaDescription:
+      "Află cum gestionează Amiquus datele tale personale, drepturile tale de confidențialitate și practicile noastre de colectare a datelor.",
     title: "Politica de confidențialitate",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Ultima actualizare: 21 mai 2025",
     sections: {
-      0: {
-        id: "introducere",
+      "0": {
+        id: "introduction",
         heading: "Introducere",
-        paragraphs: {
-          0: "Bine ați venit la AMIQUUS. Respectăm confidențialitatea dumneavoastră și suntem dedicați protejării datelor dumneavoastră personale. Această politică de confidențialitate vă informează despre modul în care avem grijă de datele dumneavoastră personale atunci când vizitați site-ul nostru și vă explică drepturile pe care le aveți privind confidențialitatea, precum și modul în care legea vă protejează."
-        }
+        paragraphs: [
+          "Bine ai venit la Amiquus. Respectăm confidențialitatea ta și suntem dedicați protejării datelor tale personale. Această politică de confidențialitate îți explică modul în care avem grijă de datele tale personale atunci când vizitezi site-ul nostru și îți prezintă drepturile tale de confidențialitate și modul în care legea te protejează.",
+        ],
       },
-      1: {
-        id: "datele-pe-care-le-colectăm",
-        heading: "Informațiile pe care le colectăm",
-        paragraphs: {
-          0: "Colectăm mai multe tipuri de informații pentru diverse scopuri, ca să vă putem oferi și îmbunătăți serviciul nostru:"
-        },
-        list: {
-          0: "Date personale: Adresă de email, prenume, nume de familie și poză de profil (dacă este furnizată prin autentificare terță).",
-          1: "Date de cont: Datele tale de autentificare și preferințele contului.",
-          2: "Date de utilizare: Informații despre modul în care folosești site-ul și serviciile noastre.",
-          3: "Preferințe de căutare auto: Criteriile pentru vehicul pe care le setezi pentru monitorizare (marcă, model, interval de preț etc.).",
-          4: "Informații despre Telegram: Dacă alegi să primești notificări prin Telegram, stocăm ID-ul chatului tău Telegram și tokenul botului.",
-          5: "Informații despre plată: Când efectuați o achiziție, procesatorul nostru de plăți colectează detaliile necesare pentru procesarea tranzacției dumneavoastră. AMIQUUS nu stochează informațiile complete ale cardului dumneavoastră de credit."
-        }
+      "1": {
+        id: "data-we-collect",
+        heading: "Informații pe care le colectăm",
+        paragraphs: [
+          "Colectăm mai multe tipuri de informații în scopuri diferite, pentru a-ți putea oferi și îmbunătăți serviciul:",
+        ],
+        list: [
+          "Date personale: Adresă de e-mail, prenume, nume, și poză de profil (dacă este furnizată prin autentificare terță parte).",
+          "Date de cont: Date de autentificare și preferințele contului.",
+          "Date de utilizare: Informații despre modul în care utilizezi site-ul și serviciile noastre.",
+          "Preferințe de căutare auto: Criteriile de vehicul pe care le setezi pentru monitorizare (marcă, model, interval de preț etc.).",
+          "Informații Telegram: Dacă alegi să primești notificări prin Telegram, stocăm ID-ul tău de chat și token-ul botului.",
+          "Informații de plată: Când faci o achiziție, procesatorul nostru de plăți colectează detaliile necesare pentru a procesa tranzacția. Amiquus nu stochează numărul complet al cardului tău.",
+        ],
       },
-      2: {
-        id: "cum-folosim-datele",
-        heading: "Cum folosim datele dvs.",
-        paragraphs: {
-          0: "Folosim datele tale personale în următoarele scopuri:"
-        },
-        list: {
-          0: "Pentru a furniza și menține serviciul nostru",
-          1: "Pentru a vă informa despre modificările aduse serviciului nostru",
-          2: "Pentru a vă permite să participați la funcțiile interactive ale serviciului nostru",
-          3: "A oferi asistență clienților",
-          4: "Pentru a colecta analize sau informații valoroase, astfel încât să putem îmbunătăți serviciul nostru",
-          5: "Pentru a monitoriza utilizarea serviciului nostru",
-          6: "Pentru a detecta, preveni și soluționa probleme tehnice",
-          7: "Pentru procesarea plăților și prevenirea tranzacțiilor frauduloase",
-          8: "Pentru a trimite anunțuri auto care corespund preferințelor tale prin metoda de notificare aleasă"
-        }
+      "2": {
+        id: "how-we-use-data",
+        heading: "Cum folosim datele tale",
+        paragraphs: ["Folosim datele tale personale în următoarele scopuri:"],
+        list: [
+          "Pentru a furniza și menține serviciul nostru",
+          "Pentru a te notifica în legătură cu modificări ale serviciului",
+          "Pentru a-ți permite să participi la funcționalitățile interactive ale serviciului",
+          "Pentru a oferi suport clienți",
+          "Pentru a colecta analize sau informații utile pentru a îmbunătăți serviciul",
+          "Pentru a monitoriza utilizarea serviciului",
+          "Pentru a detecta, preveni și remedia probleme tehnice",
+          "Pentru a procesa plăți și a preveni tranzacțiile frauduloase",
+          "Pentru a-ți trimite anunțuri auto care se potrivesc preferințelor tale prin metoda de notificare aleasă",
+        ],
       },
-      3: {
-        id: "stocare date",
+      "3": {
+        id: "data-storage",
         heading: "Stocarea și securitatea datelor",
-        paragraphs: {
-          0: "Implementăm măsuri de securitate adecvate pentru a proteja datele dumneavoastră personale împotriva accesului neautorizat, modificării, divulgării sau distrugerii. Toate datele sunt stocate pe servere securizate, cu criptare atât în tranzit, cât și în repaus.",
-          1: "Păstrăm datele dvs. personale doar atât timp cât este necesar pentru scopurile prevăzute în această politică de confidențialitate, inclusiv pentru îndeplinirea oricăror cerințe legale, de reglementare, fiscale, contabile sau de raportare."
-        }
+        paragraphs: [
+          "Implementăm măsuri de securitate adecvate pentru a proteja datele tale personale împotriva accesului neautorizat, modificării, divulgării sau distrugerii. Toate datele sunt stocate pe servere securizate, cu criptare atât în tranzit, cât și la stocare.",
+          "Păstrăm datele tale personale doar atât timp cât este necesar pentru scopurile stabilite în această politică de confidențialitate, inclusiv pentru îndeplinirea obligațiilor legale, de reglementare, fiscale, contabile sau de raportare.",
+        ],
       },
-      4: {
-        id: "regulamentul general privind protecția datelor",
+      "4": {
+        id: "gdpr",
         heading: "Drepturile tale GDPR",
-        paragraphs: {
-          0: "Dacă ești rezident al Spațiului Economic European (SEE), ai anumite drepturi privind protecția datelor. AMIQUUS își propune să ia măsuri rezonabile pentru a-ți permite să corectezi, modifici, ștergi sau să limitezi utilizarea datelor tale personale.",
-          1: "Aveți următoarele drepturi privind protecția datelor:"
-        },
-        list: {
-          0: "Dreptul de a accesa, actualiza sau șterge informațiile pe care le avem despre tine",
-          1: "Dreptul la rectificare",
-          2: "Dreptul de a obiecta",
-          3: "Dreptul la restricționare",
-          4: "Dreptul la portabilitatea datelor",
-          5: "Dreptul de a retrage consimțământul"
-        }
+        paragraphs: [
+          "Dacă ești rezident al Spațiului Economic European (SEE), beneficiezi de anumite drepturi privind protecția datelor. Amiquus își propune să ia măsuri rezonabile pentru a-ți permite să corectezi, modifici, ștergi sau să limitezi utilizarea datelor tale personale.",
+          "Ai următoarele drepturi privind protecția datelor:",
+        ],
+        list: [
+          "Dreptul de acces, actualizare sau ștergere a informațiilor pe care le deținem despre tine",
+          "Dreptul la rectificare",
+          "Dreptul de opoziție",
+          "Dreptul la restricționarea prelucrării",
+          "Dreptul la portabilitatea datelor",
+          "Dreptul de a-ți retrage consimțământul",
+        ],
       },
-      5: {
-        id: "cookie-uri",
+      "5": {
+        id: "cookies",
         heading: "Politica de cookie-uri",
-        paragraphs: {
-          0: "Cookie-urile sunt mici fragmente de date stocate pe dispozitivul tău. Folosim cookie-uri pentru:"
-        },
-        list: {
-          0: "Rămâi autentificat",
-          1: "Înțelegeți cum utilizați site-ul nostru",
-          2: "Ține minte preferințele tale",
-          3: "Personalizează-ți experiența"
-        }
+        paragraphs: [
+          "Cookie-urile sunt fișiere mici de date stocate pe dispozitivul tău. Folosim cookie-uri pentru:",
+        ],
+        list: [
+          "A te menține autentificat",
+          "A înțelege cum folosești site-ul nostru",
+          "A-ți reține preferințele",
+          "A personaliza experiența ta",
+        ],
       },
-      6: {
-        id: "terță parte",
+      "6": {
+        id: "third-party",
         heading: "Servicii terțe",
-        paragraphs: {
-          0: "Putem angaja companii și persoane terțe pentru a facilita serviciul nostru, a furniza serviciul în numele nostru, a îndeplini sarcini legate de serviciu sau a ne ajuta să analizăm modul în care este utilizat serviciul nostru.",
-          1: "Aceste terțe părți includ:"
-        },
-        list: {
-          0: "Procesatori de plăți (Stripe)",
-          1: "Furnizori de analiză",
-          2: "Servicii de asistență pentru clienți",
-          3: "Furnizori de găzduire și infrastructură cloud"
-        },
-        paragraphs2: {
-          0: "Aceste terțe părți au acces la datele tale personale doar pentru a îndeplini aceste sarcini în numele nostru și sunt obligate să nu le dezvăluie sau să le folosească în alt scop."
-        }
+        paragraphs: [
+          "Putem angaja companii și persoane terțe pentru a facilita serviciul nostru, pentru a furniza serviciul în numele nostru, pentru a îndeplini sarcini legate de serviciu sau pentru a ne ajuta să analizăm modul în care este utilizat serviciul.",
+          "Aceste terțe părți includ:",
+        ],
+        list: [
+          "Procesatori de plăți (Stripe)",
+          "Furnizori de servicii de analiză",
+          "Servicii de suport clienți",
+          "Furnizori de găzduire și infrastructură cloud",
+        ],
+        paragraphs2: [
+          "Aceste terțe părți au acces la datele tale personale doar pentru a îndeplini aceste sarcini în numele nostru și sunt obligate să nu le dezvăluie și să nu le utilizeze în alte scopuri.",
+        ],
       },
-      7: {
-        id: "modificări",
-        heading: "Modificări ale acestei Politici de confidențialitate",
-        paragraphs: {
-          0: "Putem actualiza periodic politica noastră de confidențialitate. Vă vom informa despre orice modificare prin publicarea noii politici de confidențialitate pe această pagină și actualizarea datei „Ultima actualizare”.",
-          1: "Vă recomandăm să revizuiți periodic această politică de confidențialitate pentru eventuale modificări. Modificările aduse acestei politici de confidențialitate intră în vigoare atunci când sunt publicate pe această pagină."
-        }
+      "7": {
+        id: "changes",
+        heading: "Modificări ale acestei politici de confidențialitate",
+        paragraphs: [
+          "Este posibil să actualizăm periodic politica noastră de confidențialitate. Te vom notifica în legătură cu orice modificare prin publicarea noii politici pe această pagină și prin actualizarea datei „Ultima actualizare”.",
+          "Ești încurajat să consulți periodic această politică de confidențialitate pentru a observa eventualele modificări. Modificările intră în vigoare atunci când sunt publicate pe această pagină.",
+        ],
       },
-      8: {
-        id: "contactează",
+      "8": {
+        id: "contact",
         heading: "Contactează-ne",
-        paragraphs: {
-          0: "Dacă aveți întrebări despre această politică de confidențialitate, vă rugăm să ne contactați:"
-        },
-        list: {
-          0: "Prin e-mail: privacy@amiquus.com",
-          1: "Accesând pagina de contact de pe site-ul nostru"
-        }
-      }
-    }
+        paragraphs: [
+          "Dacă ai întrebări cu privire la această politică de confidențialitate, te rugăm să ne contactezi:",
+        ],
+        list: [
+          "Prin e-mail: privacy@amiquus.com",
+          "Accesând pagina de contact de pe site-ul nostru",
+        ],
+      },
+    },
   },
   faqs: {
     metaTitle: "Întrebări frecvente | Amiquus",
-    metaDescription: "Găsește răspunsuri la cele mai frecvente întrebări despre serviciul de monitorizare a anunțurilor auto AMIQUUS, abonamente, configurarea notificărilor și altele.",
+    metaDescription:
+      "Găsește răspunsuri la cele mai frecvente întrebări despre serviciul de monitorizare a anunțurilor auto Amiquus, abonamente, configurarea notificărilor și multe altele.",
     title: "Întrebări frecvente",
-    subtitle: "Găsește rapid răspunsuri la întrebările frecvente despre serviciul nostru de monitorizare a anunțurilor auto",
+    subtitle:
+      "Găsește rapid răspunsuri la întrebările comune despre serviciul nostru de monitorizare a anunțurilor auto",
     general: {
       heading: "Întrebări generale",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Ce este Amiquus?",
+        answer:
+          "Amiquus este un serviciu care monitorizează mai multe site-uri de anunțuri auto pentru vehicule ce corespund criteriilor tale specifice. Atunci când apare un anunț potrivit, primești o notificare instant prin Telegram, astfel încât să fii printre primii care contactează vânzătorul și prinde cele mai bune oferte.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Cum funcționează?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
+          "Îți setezi criteriile de căutare (marcă, model, interval de preț etc.)",
+          "Alegi ce site-uri vrei să fie monitorizate",
+          "Îți conectezi contul de Telegram pentru notificări",
+          "Sistemul nostru monitorizează în mod continuu site-urile selectate pentru anunțuri noi",
+          "Când apare un vehicul potrivit, primești o notificare instant pe Telegram cu toate detaliile și un link direct",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Ce site-uri de anunțuri auto monitorizați?",
+        answerIntro:
+          "Monitorizăm în prezent următoarele platforme mari de anunțuri auto:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (prin URL)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro:
+          "Adăugăm constant și alte platforme pentru a oferi o acoperire cât mai completă.",
+      },
     },
     subscription: {
       heading: "Întrebări despre abonament",
       cost: {
         question: "Cât costă un abonament?",
-        answer: {
-          0: "Prețurile noastre încep de la 79,99 $ pe lună pentru monitorizarea unui site web cu actualizări la fiecare 6 ore. Fiecare site suplimentar costă 4,99 $ pe lună. Poți, de asemenea, să mărești frecvența actualizărilor pentru notificări mai rapide.",
-          1: "Pentru detalii specifice despre prețuri, vă rugăm să consultați secțiunea de prețuri de pe pagina principală."
-        }
+        answer: [
+          "Prețurile noastre încep de la 79,99 $ pe lună pentru monitorizarea unui singur site, cu actualizări la fiecare 6 ore. Site-urile suplimentare costă 4,99 $ fiecare pe lună. Poți, de asemenea, să îți upgradezi frecvența de actualizare pentru notificări mai rapide.",
+          "Pentru detalii specifice de preț, te rugăm să consulți secțiunea de prețuri de pe pagina principală.",
+        ],
       },
       cancel: {
-        question: "Cum îmi pot anula abonamentul?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Autentifică-te în contul tău",
-          1: "Accesează pagina „Profil”",
-          2: "Selectați fila „Abonamente”",
-          3: "Apasă butonul „Anulează abonamentul” de lângă abonamentul pe care vrei să-l anulezi."
-        },
-        note: "Abonamentul tău va rămâne activ până la sfârșitul perioadei tale curente de facturare."
+        question: "Cum îmi anulez abonamentul?",
+        stepsIntro:
+          "Îți poți anula abonamentul în orice moment din pagina de profil a contului:",
+        steps: [
+          "Autentifică-te în contul tău",
+          "Mergi la pagina „Profile”",
+          "Selectează fila „Subscriptions”",
+          "Apasă pe butonul „Cancel Subscription” de lângă abonamentul pe care vrei să-l anulezi",
+        ],
+        note: "Abonamentul tău va rămâne activ până la finalul perioadei de facturare curente.",
       },
       multiple: {
-        question: "Pot avea mai multe abonamente pentru diferite modele de mașini?",
-        answer: "Da, poți crea mai multe abonamente sub un singur cont. Fiecare abonament poate urmări modele, mărci sau intervale de preț diferite de mașini. Acest lucru este deosebit de util dacă cauți mai multe vehicule sau ajuți prieteni și familie să găsească o mașină."
+        question:
+          "Pot avea mai multe abonamente pentru modele diferite de mașini?",
+        answer:
+          "Da, poți crea mai multe abonamente în același cont. Fiecare abonament poate urmări modele, mărci sau intervale de preț diferite. Acest lucru este util dacă cauți mai multe vehicule sau ajuți prieteni și familie să caute mașini.",
       },
       limit: {
-        question: "De ce există o limită pentru numărul de abonați?",
-        intro: "Limităm serviciul nostru la 30 de abonați activi pentru a asigura:",
-        list: {
-          0: "Cea mai înaltă calitate a serviciilor și acuratețea datelor",
-          1: "Suport personalizat pentru fiecare abonat",
-          2: "Livrare mai rapidă a notificărilor în perioadele de vârf ale publicării",
-          3: "Colectare etică de date care nu suprasolicită site-urile țintă"
-        },
-        outro: "Dacă am atins capacitatea maximă, vă puteți înscrie pe lista de așteptare pentru a fi notificat când devine disponibil un loc."
-      }
+        question: "De ce există o limită de abonați?",
+        intro: "Limităm serviciul la 30 de abonați activi pentru a asigura:",
+        list: [
+          "Cea mai bună calitate a serviciului și acuratețea datelor",
+          "Suport mai personalizat pentru fiecare abonat",
+          "Livrarea mai rapidă a notificărilor în perioadele de vârf",
+          "Un web scraping etic, care nu supraîncarcă site-urile monitorizate",
+        ],
+        outro:
+          "Dacă am atins capacitatea maximă, te poți înscrie pe lista de așteptare pentru a fi notificat când se eliberează un loc.",
+      },
     },
     technical: {
       heading: "Întrebări tehnice",
       telegram: {
-        question: "Cum activez notificările Telegram?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Creează un bot Telegram folosind BotFather (instrucțiunile sunt oferite în timpul configurării)",
-          1: "Copiază tokenul botului tău de la BotFather",
-          2: "Începe o conversație cu botul tău",
-          3: "Obțineți ID-ul de chat (instrucțiunile sunt oferite în timpul configurării)",
-          4: "Introdu tokenul botului și ID-ul chatului în setările abonamentului AMIQUUS.",
-          5: "Testează-ți setările de notificare folosind butonul `Trimite mesaj de test`"
-        },
-        note: "Instrucțiuni detaliate pas cu pas, cu capturi de ecran, sunt oferite pe parcursul configurării abonamentului."
+        question: "Cum configurez notificările prin Telegram?",
+        stepsIntro: "Pentru a configura notificările prin Telegram:",
+        steps: [
+          "Creează un bot Telegram folosind BotFather (instrucțiunile sunt furnizate în timpul configurării)",
+          "Copiază token-ul botului de la BotFather",
+          "Pornește o conversație cu botul tău",
+          "Obține ID-ul tău de chat (instrucțiunile sunt furnizate în timpul configurării)",
+          "Introdu token-ul botului și ID-ul de chat în setările abonamentului tău Amiquus",
+          "Testează configurarea notificărilor folosind butonul `Send Test Message`",
+        ],
+        note: "Instrucțiuni detaliate pas cu pas, împreună cu capturi de ecran, sunt disponibile în timpul procesului de configurare a abonamentului.",
       },
       frequency: {
         question: "Cât de des voi primi notificări?",
         intro: "Frecvența notificărilor depinde de:",
-        list: {
-          0: "Pachetul ales de frecvență a actualizărilor (de la fiecare 6 ore până la fiecare 30 de minute)",
-          1: "Câte anunțuri noi corespund criteriilor tale",
-          2: "Cât de activă este piața pentru marca/modelul selectat"
-        },
-        outro: "Vei primi notificări doar atunci când vor fi găsite anunțuri noi care corespund criteriilor tale."
+        list: [
+          "Pachetul de frecvență a actualizărilor pe care îl alegi (de la la fiecare 1 oră până la fiecare 1 minut)",
+          "Câte anunțuri noi corespund criteriilor tale",
+          "Cât de activă este piața pentru marca/modelul selectat",
+        ],
+        outro:
+          "Vei primi notificări numai atunci când sunt găsite anunțuri noi care corespund criteriilor tale.",
       },
       privacy: {
         question: "Cum sunt protejate datele mele personale?",
-        intro: "Tratăm confidențialitatea datelor cu maximă seriozitate și aplicăm următoarele măsuri:",
-        list: {
-          0: "Date criptate în tranzit și în repaus",
-          1: "Plăți sigure prin Stripe",
-          2: "Fără partajarea datelor cu terți",
-          3: "Poți solicita sau șterge datele tale oricând"
-        },
-        outro: "Citește întreaga noastră Politică de Confidențialitate pentru mai multe detalii."
-      }
+        intro:
+          "Tratem foarte serios confidențialitatea datelor și aplicăm următoarele măsuri:",
+        list: [
+          "Criptarea datelor în tranzit și la stocare",
+          "Plăți securizate prin Stripe",
+          "Fără partajare de date cu terți fără necesitate",
+          "Poți solicita sau șterge datele tale în orice moment",
+        ],
+        outro:
+          "Citește Politica noastră de confidențialitate completă pentru mai multe detalii.",
+      },
     },
     support: {
       heading: "Mai ai întrebări?",
-      description: "Dacă nu ai găsit răspunsul la întrebarea ta, echipa noastră de suport AMIQUUS este aici să te ajute!",
-      button: "Contactează suportul"
-    }
+      description:
+        "Dacă nu ai găsit răspunsul la întrebarea ta, echipa noastră de suport este aici pentru tine!",
+      button: "Contactează suportul",
+    },
   },
   waitlist: {
-    metaTitle: "Înscrie-te pe lista de așteptare – Amiquus",
-    metaDescription: "Înscrie-te pe lista de așteptare AMIQUUS ca să fii anunțat când abonamentele devin disponibile.",
+    metaTitle: "Înscrie-te pe lista de așteptare - Amiquus",
+    metaDescription:
+      "Înscrie-te pe lista de așteptare Amiquus pentru a fi notificat când devin disponibile abonamente noi.",
     title: "Înscrie-te pe lista noastră de așteptare",
-    subtitle: "Din cauza cererii ridicate, limităm numărul de abonamente active pentru a asigura cea mai bună calitate a serviciilor pentru toți utilizatorii.",
+    subtitle:
+      "Din cauza cererii ridicate, limităm numărul de abonamente active pentru a menține cea mai bună calitate a serviciului pentru toți utilizatorii.",
     limited: {
       heading: "Disponibilitate limitată",
-      description: "Limităm sistemul nostru la doar 30 de abonați activi pentru a asigura:",
-      points: {
-        0: "Fiabilitate și viteză excepțională la extragerea datelor pentru toți utilizatorii",
-        1: "Șanse reduse de a fi blocat de site-urile de anunțuri auto",
-        2: "Suport personalizat pentru fiecare abonat",
-        3: "Distribuire echitabilă a resurselor serverului"
-      },
-      available: "{{remaining}} locuri de abonament din {{capacity}} sunt disponibile acum.",
-      full: "Toate locurile pentru abonament sunt ocupate în prezent. Înscrie-te pe lista de așteptare ca să fii anunțat când se eliberează un loc."
+      description:
+        "Limităm sistemul la doar 30 de abonați activi pentru a asigura:",
+      points: [
+        "Fiabilitate și viteză excelente ale procesului de scraping pentru toți utilizatorii",
+        "Reducerea riscului de blocare din partea site-urilor de anunțuri auto",
+        "Suport mai personalizat pentru fiecare abonat",
+        "Distribuirea corectă a resurselor de server",
+      ],
+      available:
+        "{{remaining}} locuri de abonament disponibile din {{capacity}}.",
+      full: "Toate locurile de abonament sunt ocupate în prezent. Înscrie-te pe lista de așteptare pentru a fi notificat când se eliberează un loc.",
     },
     success: {
       title: "Ești pe lista de așteptare!",
-      description: "Te vom anunța imediat ce va fi disponibil un loc la abonament.",
-      message: "Vă mulțumim pentru interesul acordat pentru Amiquus! V-am adăugat pe lista de așteptare și vă vom contacta imediat ce va fi disponibil un loc.",
-      button: "Înapoi la pagina principală"
+      description:
+        "Te vom anunța imediat ce un loc de abonament devine disponibil",
+      message:
+        "Îți mulțumim pentru interesul acordat Amiquus! Te-am adăugat pe lista noastră de așteptare și te vom contacta imediat ce apare un loc liber.",
+      button: "Înapoi la pagina principală",
     },
     cantJoin: {
-      title: "Alătură-te listei de așteptare",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Înscrie-te pe lista de așteptare",
+      description:
+        "Te vom anunța imediat ce un loc de abonament devine disponibil",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Prenume",
+        placeholder: "John",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Nume",
+        placeholder: "Doe",
       },
       email: {
         label: "E-mail",
         placeholder: "john.doe@example.com",
-        description: "Vom folosi acest e-mail ca să vă anunțăm când va fi disponibil un loc."
+        description:
+          "Vom folosi acest e-mail pentru a te anunța când un loc devine disponibil",
       },
       submit: "Înscrie-te pe lista de așteptare",
-      submitting: "Se trimite..."
-    }
+      submitting: "Se trimite...",
+    },
   },
   support: {
-    metaTitle: "Asistență | Amiquus - Centrul de Ajutor",
-    metaDescription: "Obține ajutor pentru contul tău AMIQUUS, abonament sau alertele pentru mașină. Răsfoiește centrul nostru de asistență sau contactează echipa noastră de suport pentru ajutor.",
-    title: "Centrul de suport",
-    subtitle: "Găsește răspunsuri la întrebări frecvente sau contactează echipa noastră de suport",
+    metaTitle: "Suport | Amiquus - Centru de ajutor",
+    metaDescription:
+      "Primește ajutor pentru contul tău Amiquus, abonament sau alertele auto. Consultă centrul nostru de ajutor sau contactează echipa de suport pentru asistență.",
+    title: "Centru de suport",
+    subtitle:
+      "Găsește răspunsuri la întrebări frecvente sau contactează echipa noastră de suport",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "Suport prin e-mail",
+      description:
+        "Trimite-ne un e-mail și îți vom răspunde în cel mult 24 de ore",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Întrebări frecvente",
     faqs: {
       telegram: {
-        question: "Cum activez notificările Telegram?",
-        intro: "Pentru a activa notificările Telegram, urmați acești pași:",
-        steps: {
-          0: "Creează un bot Telegram folosind BotFather (instrucțiunile le găsești în panoul nostru de control)",
-          1: "Copiază tokenul tău API și ID-ul chatului",
-          2: "Introduce aceste detalii în setările contului tău la „Preferințe notificări”",
-          3: "Testează-ți conexiunea folosind butonul „Trimite mesaj de test”"
-        },
-        outro: "Dacă ai nevoie de ajutor suplimentar, ghidul nostru detaliat este disponibil în panoul tău de control."
+        question: "Cum configurez notificările prin Telegram?",
+        intro:
+          "Pentru a configura notificările prin Telegram, urmează acești pași:",
+        steps: [
+          "Creează un bot Telegram folosind BotFather (instrucțiuni disponibile în dashboard-ul nostru)",
+          "Copiază token-ul API și ID-ul de chat",
+          "Introdu aceste detalii în setările contului, la secțiunea „Notification Preferences”",
+          "Testează conexiunea folosind butonul „Send Test Message”",
+        ],
+        outro:
+          "Dacă ai nevoie de ajutor suplimentar, ghidul nostru detaliat este disponibil în dashboard-ul tău.",
       },
       updates: {
         question: "Cât de des sunt actualizate anunțurile auto?",
-        answer: "Frecvența actualizărilor depinde de planul tău de abonament. Planurile de bază primesc actualizări la fiecare 6 ore, în timp ce planurile Premium pot primi actualizări chiar și la fiecare 30 de minute. Poți vedea și modifica frecvența actualizărilor din setările abonamentului."
+        answer:
+          "Frecvența actualizărilor depinde de planul tău de abonament. Planurile Basic primesc actualizări la fiecare 6 ore, în timp ce planurile Premium pot primi actualizări la fiecare 30 de minute. Poți vedea și modifica frecvența actualizărilor din setările abonamentului.",
       },
       facebook: {
-        question: "Pot să monitorizez Facebook Marketplace?",
-        answer: "Da, oferim suport pentru monitorizarea Facebook Marketplace. Pentru a configura acest lucru, va trebui să furnizați URL-ul paginii cu rezultatele căutării pe Facebook Marketplace, cu filtrele dorite aplicate. Sistemul nostru va monitoriza apoi acea căutare specifică pentru anunțuri noi care corespund criteriilor dumneavoastră."
+        question: "Pot monitoriza Facebook Marketplace?",
+        answer:
+          "Da, suportăm monitorizarea Facebook Marketplace. Pentru a configura acest lucru, trebuie să ne furnizezi URL-ul paginii de rezultate de căutare din Facebook Marketplace, cu filtrele tale deja aplicate. Sistemul nostru va monitoriza acea căutare pentru anunțuri noi care corespund criteriilor tale.",
       },
       cancel: {
-        question: "Cum îmi pot anula abonamentul?",
-        answer: "Îți poți anula abonamentul oricând din pagina de profil a contului tău. Dă click pe fila „Abonamente”, găsește abonamentul pe care vrei să-l anulezi și apasă pe butonul „Anulează abonamentul”. Serviciul tău va rămâne activ până la sfârșitul perioadei tale curente de facturare."
+        question: "Cum îmi anulez abonamentul?",
+        answer:
+          "Îți poți anula abonamentul în orice moment din pagina de profil a contului. Accesează fila „Subscriptions”, găsește abonamentul pe care dorești să îl anulezi și apasă pe butonul „Cancel Subscription”. Serviciul va continua până la sfârșitul perioadei de facturare curente.",
       },
       full: {
-        question: "Ce se întâmplă dacă toate sloturile de abonament sunt ocupate?",
-        answer: "Pentru a menține calitatea înaltă a serviciului nostru, limităm numărul de abonamente active. Dacă toate locurile sunt ocupate, vă puteți înscrie pe lista de așteptare. Vă vom anunța imediat ce un loc devine disponibil și veți avea prioritate să-l revendicați înainte să-l deschidem publicului larg."
-      }
+        question:
+          "Ce se întâmplă dacă toate locurile de abonament sunt ocupate?",
+        answer:
+          "Pentru a menține o calitate ridicată a serviciului, limităm numărul de abonamente active. Dacă toate locurile sunt ocupate, te poți înscrie pe lista de așteptare. Te vom notifica imediat ce se eliberează un loc, iar tu vei avea prioritate să îl revendici înainte de a-l oferi publicului larg.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "Ai nevoie de ajutor suplimentar?",
+      description:
+        "Dacă nu ai găsit răspunsul la întrebarea ta, nu ezita să contactezi echipa noastră de suport. Suntem aici pentru tine!",
+      button: "Contactează suportul",
+    },
   },
   notFound: {
-    title: "404 Pagina nu a fost găsită",
-    message: "Ai uitat să adaugi pagina în router?"
+    title: "404 Pagină negăsită",
+    message: "Ai uitat să adaugi pagina în router?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Codul tău de verificare a e-mailului Amiquus",
+      greeting: "Bună,",
+      message:
+        "Folosește codul de verificare de mai jos pentru a finaliza înregistrarea:",
+      expiration: "Acest cod va expira în 10 minute.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Chitanța ta de plată Amiquus – Factura #",
+        h2Message:
+          "Plata abonamentului tău Amiquus a fost efectuată cu succes!",
+        greeting: "Bună,",
+        paymentMessage: "Am primit plata ta în valoare de",
+        downloadMessage:
+          "Poți vedea sau descărca factura folosind linkul de mai jos:",
+        viewInvoice: "Vezi factura",
+        invoiceNumber: "Factura #:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Plată în așteptare – Factura",
+        subjectB: "pentru abonamentul tău Amiquus",
+        h2Message:
+          "Acțiune necesară: finalizează plata pentru abonamentul tău Amiquus",
+        greeting: "Bună,",
+        messageA: "Factura ta",
+        messageB:
+          "este încă neplătită. Pentru a-ți activa abonamentul, te rugăm să finalizezi plata în valoare de",
+        paymentMessage:
+          "Poți efectua plata în siguranță folosind linkul de mai jos:",
+        payInvoice: "Plătește factura",
+        ignoreEmail: "Dacă ai efectuat deja plata, poți ignora acest e-mail.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Plată eșuată – Factura",
+        message: "Nu am reușit să procesăm plata ta recentă (încercarea nr.",
+        attemptsA:
+          "Vom încerca din nou să procesăm plata în curând. Nu este necesară nicio acțiune deocamdată.",
+        attemptsB:
+          "Am încercat să debităm metoda ta de plată de 3 ori, dar toate încercările au eșuat.",
+        attemptsC:
+          "Ca urmare, abonamentul tău a fost <strong>pus în pauză</strong>. Nu vei mai primi actualizări până când nu îl reactivezi.",
+        attemptsD:
+          "Te rugăm să îți actualizezi metoda de plată și să reiei abonamentul din profilul tău:",
+        viewInvoice: "Vezi factura",
+        managePayment: "Gestionează metodele de plată",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Ești pe lista de așteptare Amiquus!",
+      h2Message: "Ești pe listă!",
+      hi: "Bună",
+      message:
+        "Îți mulțumim că te-ai înscris pe lista de așteptare Amiquus. Te vom anunța imediat ce un loc devine disponibil.",
+      anyQuestions: "Dacă ai întrebări, nu ezita să răspunzi la acest e-mail.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Îți mulțumim că ai ales Amiquus!",
+      signature: "Cu stimă,<br/>Echipa Amiquus",
+      team: "— Echipa Amiquus",
+      needHelp: "Ai nevoie de ajutor?",
+      hello: "Salut",
+    },
+  },
 };

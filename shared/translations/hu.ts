@@ -4,1368 +4,1433 @@ export const hu = {
     how: "Hogyan működik",
     pricing: "Árak",
     getAlerts: "Értesítések fogadása",
-    waitlist: "Várólist",
+    waitlist: "Várólista",
     faq: "GYIK",
     login: "Bejelentkezés",
     getStarted: "Kezdés",
-    subscribers: "Feliratkozók",
+    subscribers: "Előfizetők",
     theme: "Téma",
     language: "Nyelv",
     myAlerts: "Értesítéseim",
     profile: "Profil",
     settings: "Beállítások",
     logout: "Kijelentkezés",
-    signUp: "Regisztráció"
+    signUp: "Regisztráció",
   },
   hero: {
-    label: "Használt autóhirdetések nyomon követése valós időben",
-    title: "Soha ne maradj le a tökéletes autóajánlatról!",
-    subtitle: "Amiquus azonnal értesít, amint álmaid autója elérhetővé válik több autóhirdetési oldalon. Értesítéseket kapsz Telegramon, amint megtaláljuk a megfelelő találatot.",
-    button1: "Állítsa be az értesítéseit",
+    label: "Kövesse nyomon az eladó autókat valós időben!",
+    title: "Soha ne hagyja ki a tökéletes autóvásárlást",
+    subtitle:
+      "Az Amiquus azonnal értesíti, amikor álmai autója megjelenik több autós eladási oldalon. Telegram értesítéseket kap azonnal, amint találat érkezik.",
+    button1: "Értesítések beállítása",
     button2: "Nézd meg, hogyan működik",
     trustIndicators: {
-      websites: "15+ weboldal követése",
-      realtime: "Valós idejű riasztások",
+      websites: "Több mint 15 oldalt követ",
+      realtime: "Valós idejű értesítések",
       noSetup: "Nincs szükség beállításra",
-      cancelAnytime: "Bármikor lemondható"
-    }
+      cancelAnytime: "Bármikor lemondható",
+    },
   },
   limited: {
     full: {
-      title: "Előfizetési limit elérve",
-      description: "Elértük a 30 aktív előfizető kapacitását. Csatlakozz a várólistánkhoz, hogy értesítést kapj, amikor felszabadul egy hely.",
-      buttonText: "Csatlakozz a várólistához"
+      title: "Előfizetői limit elérve",
+      description:
+        "Elértük a 30 aktív előfizető kapacitáskorlátját. Csatlakozzon a várólistához, hogy értesítést kapjon, amikor hely szabadul fel.",
+      buttonText: "Csatlakozás a várólistához",
     },
     limited: {
       title: "Korlátozott elérhetőség",
-      description: "Már csak {{remaining}} hely maradt a {{capacity}}-ból. Iratkozz fel most, mielőtt betelik a létszám!",
-      buttonText: "Kezdje el most"
+      description:
+        "Csak {{remaining}} hely maradt a {{capacity}}-ból. Fizessen elő most, mielőtt a kapacitás betelik!",
+      buttonText: "Kezdje el most",
     },
     available: {
-      title: "Előfizetések elérhetők",
-      description: "Jelenleg {{active}} a(z) {{capacity}} előfizetésből aktív. Bőven van még hely, csatlakozz te is!",
-      buttonText: "Kezdje el most"
-    }
+      title: "Előfizetések elérhetőek",
+      description:
+        "{{active}}/{{capacity}} előfizetés aktív jelenleg. Sok hely a csatlakozáshoz!",
+      buttonText: "Kezdje el most",
+    },
   },
   features: {
     heading: "Miért válassza az Amiquus-t?",
-    subheading: "Takarítson meg időt, és soha ne maradjon le a tökéletes autójáról az AMIQUUS automatizált követési szolgáltatásával!",
+    subheading:
+      "Spóroljon időt és soha ne hagyja ki a tökéletes autót automatizált nyomon követési szolgáltatásunkkal.",
     multiSite: {
-      title: "Többoldalas követés",
-      description: "Kövessen nyomon több autóhirdetési weboldalt egyidejűleg anélkül, hogy mindegyiket manuálisan ellenőrizné."
+      title: "Többszörös oldal nyomon követése",
+      description:
+        "Kövesse nyomon több autós eladási oldalt egyszerre kézi ellenőrzés nélkül.",
     },
     notifications: {
       title: "Azonnali értesítések",
-      description: "Azonnali értesítéseket kapsz Telegramon, amikor a keresési feltételeidnek megfelelő autó felkerül az eladásra."
+      description:
+        "Kapjon azonnali értesítéseket Telegramon keresztül, amikor az Ön kritériumainak megfelelő autó eladásra kerül.",
     },
     filters: {
-      title: "Egyedi szűrők",
-      description: "Állítson be pontos keresési feltételeket, beleértve a márkát, modellt, évjáratot, futott kilométert és árkategóriát, hogy megtalálja pontosan azt, amit keres."
+      title: "Testreszabott szűrők",
+      description:
+        "Állítson be pontos kritériumokat, beleértve a márkát, modellt, évjáratot, futásteljesítményt és árkategóriát, hogy pontosan azt találja, amit keres.",
     },
     frequency: {
-      title: "Testreszabható frekvencia",
-      description: "Válaszd ki, milyen gyakran ellenőrizzük az új hirdetéseket, az óránkénti frissítésektől a valós idejű figyelésig."
+      title: "Testreszabható gyakoriság",
+      description:
+        "Válassza ki, milyen gyakran ellenőrizzük az új hirdetéseket – óránkénti frissítésektől a valós idejű nyomon követésig.",
     },
     languages: {
       title: "Többnyelvű támogatás",
-      description: "Kapjon értesítéseket az Ön által preferált nyelven a hirdetések könnyebb megértése érdekében."
+      description:
+        "Kapjon értesítéseket a preferált nyelven a hirdetések könnyebb megértéséhez.",
     },
     account: {
       title: "Egyszerű fiókkezelés",
-      description: "Kezeld egyszerre több keresési profilt, és módosítsd előfizetési beállításaidat néhány kattintással."
-    }
+      description:
+        "Kezeljen több keresési profilt és módosítsa az előfizetés beállításait néhány kattintással.",
+    },
   },
   howItWorks: {
-    title: "Hogyan működik az AMIQUUS",
-    subtitle: "Állítsd be egyszer, és hagyd, hogy automatizált rendszerünk megtalálja számodra a tökéletes autóajánlatot",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Hogyan működik az Amiquus",
+    subtitle:
+      "Állítsa be egyszer és hagyja, hogy automatizált rendszerünk megtalálja Önnek a tökéletes autóajánlatot",
+    whyTitle: "Miért válassza az Amiquus-t?",
     steps: {
       preferences: {
-        title: "Állítsa be a beállításait",
-        description: "Válassza ki az autómárkákat, modelleket, árkategóriát és egyéb szempontokat, amelyeket figyelni szeretne."
+        title: "Állítsa be a preferenciákat",
+        description:
+          "Válassza ki az autó márkákat, modelleket, árkategóriákat és egyéb kritériumokat, amelyeket nyomon szeretne követni.",
       },
       telegram: {
-        title: "Csatlakoztasd a Telegramot",
-        description: "Kapcsold össze Telegram-fiókodat, hogy azonnali értesítéseket kapj az új hirdetésekről."
+        title: "Csatlakoztassa a Telegramot",
+        description:
+          "Csatlakoztassa Telegram fiókját, hogy azonnali értesítéseket kapjon az új hirdetésekről.",
       },
       notifications: {
-        title: "Azonnali értesítéseket kap",
-        description: "Értesítést kapsz, amint a feltételeidnek megfelelő autó megjelenik bármelyik általunk figyelt weboldalon."
+        title: "Kapjon azonnali értesítéseket",
+        description:
+          "Kapjon értesítéseket azonnal, amikor az Ön kritériumainak megfelelő autó megjelenik bármelyik nyomon követett oldalon.",
       },
       findCar: {
-        title: "Találja meg tökéletes autóját",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "Találja meg álmai autóját",
+        description:
+          "Legyen az első, aki értesül az új hirdetésekről és biztosítsa a legjobb ajánlatokat mások előtt.",
+      },
     },
-    features: {
-      0: "Kövesd egyszerre több mint 15 autóhirdetési weboldal ajánlatait",
-      1: "Testreszabható keresési feltételek fejlett szűrési lehetőségekkel",
-      2: "Valós idejű értesítések Telegramon keresztül",
-      3: "Automatikus árértesítő és új hirdetés figyelmeztetések",
-      4: "Egyszerű telepítési folyamat, amely kevesebb mint 5 percet vesz igénybe"
-    },
-    setAlerts: "Állítsd be a riasztásokat",
+    features: [
+      "Kövesse nyomon több mint 15 autós eladási oldalt egyszerre",
+      "Testreszabott keresési kritériumok fejlett szűréssel",
+      "Valós idejű értesítések Telegramon keresztül",
+      "Automatikus értesítések árcsökkenésekről és új hirdetésekről",
+      "Egyszerű beállítási folyamat, amely kevesebb mint 5 percet vesz igénybe",
+    ],
+    setAlerts: "Értesítések beállítása",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Új találat!",
+      description:
+        "BMW 3 Series, 2019, $32,500 – Frissen közzétéve az AutoTraderen",
     },
     notificationMockup2: {
-      title: "Telegram riasztás",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "Telegram értesítés",
+      description:
+        "Mercedes C-Class, 2020, 30,000 mérföld – Az ár $2,000-rel csökkent",
+    },
   },
   pricing: {
-    title: "Egyszerű, átlátható árképzés",
-    subtitle: "Árainkat az Ön egyedi igényeihez igazítjuk. Kezdje egy alapcsomaggal, majd szabja testre saját elvárásai szerint.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Egyszerű, átlátható árak",
+    subtitle:
+      "Áraink az Ön specifikus igényein alapulnak. Kezdje az alapcsomaggal és szabja testre a követelményeknek megfelelően.",
+    baseTitle: "Alapcsomag: $79.99/hó",
+    includedTitle: "Tartalmazza:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Egy oldal nyomon követése",
+      "Óránkénti frissítések",
+      "Korlátlan szűrők",
+      "Telegram értesítések",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Minden további weboldal"
-      },
-      1: {
-        name: "Frissítés 30 percenként"
-      },
-      2: {
-        name: "15 percenkénti frissítések"
-      },
-      3: {
-        name: "5 percenkénti frissítések"
-      },
-      4: {
-        name: "Percenkénti frissítések"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Kezdje el most"
+    addonsTitle: "Kiegészítők:",
+    addons: [
+      { name: "Minden további oldal", price: 4.99 },
+      { name: "Frissítések 30 percenként", price: 2.99 },
+      { name: "Frissítések 15 percenként", price: 5.99 },
+      { name: "Frissítések 5 percenként", price: 9.99 },
+      { name: "Frissítések percenként", price: 14.99 },
+    ],
+    footerNote:
+      "Minden csomag korlátlan keresési konfigurációt és egyszerű előfizetéskezelést tartalmaz.",
+    button: "Kezdje el most",
   },
   signup: {
-    heading: "Hozd létre autóriasztásod",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Autó értesítés létrehozása",
+    subheading:
+      "Állítsa be testreszabott autóhirdetési értesítéseit néhány lépésben.",
+    cta: "Kapjon értesítéseket most",
     waitlist: {
-      message: "Jelenleg tele vagyunk. Csatlakozz a várólistánkhoz, hogy értesítést kapj, amikor felszabadul egy hely.",
-      cta: "Join Waitlist"
+      message:
+        "Jelenleg teljes kapacitással működünk. Csatlakozzon a várólistához, hogy értesítést kapjon, amikor hely szabadul fel.",
+      cta: "Csatlakozás a várólistához",
     },
     toast: {
       success: {
         title: "Előfizetés létrehozva",
-        description: "Your subscription has been created successfully"
+        description: "Előfizetése sikeresen létrehozva",
       },
       error: {
         title: "Előfizetés sikertelen",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        description:
+          "Nem tudtuk létrehozni az előfizetését. Kérjük, próbálja újra később.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "Siker",
-        description: "A fizetési módod sikeresen beállítva."
+        description: "Fizetési módja sikeresen beállítva.",
       },
       error: {
         title: "Hiba",
-        fallback: "Váratlan hiba történt. Kérjük, próbálja meg újra."
-      }
+        fallback: "Váratlan hiba történt. Kérjük, próbálja újra.",
+      },
     },
     button: {
       submit: "Fizetési mód beállítása",
-      processing: "Feldolgozás..."
-    }
+      processing: "Feldolgozás...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "Az autó márkája kötelező",
+      carModel: "Az autó modellje kötelező",
+      fuelType: "Az üzemanyag típusa kötelező",
+      priceMin: "A minimum árnak számnak kell lennie",
+      priceMax: "A maximum árnak számnak kell lennie",
+      yearMin: "A minimum évjáratnak érvényes évnek kell lennie",
+      yearMax: "A maximum évjáratnak érvényes évnek kell lennie",
+      maxKilometers: "A maximum futásteljesítménynek számnak kell lennie",
+      telegramUsername: "A Telegram felhasználónév kötelező",
+      telegramToken: "A Telegram bot token kötelező",
+      telegramChatId: "A Telegram chat ID kötelező",
+      websitesSelected: "Legalább egy oldalt ki kell választani",
+      notificationLanguage: "Az értesítések nyelve kötelező",
+      facebookMarketplaceUrl:
+        "A Facebook Marketplace URL kötelező, ha a Facebook ki van választva",
+    },
   },
   personalInfo: {
     heading: "Személyes adatok",
-    description: "Kérjük, adja meg személyes adatait, hogy értesítéseit megfelelően be tudjuk állítani.",
+    description:
+      "Kérjük, adja meg személyes adatait, hogy helyesen állíthassuk be az értesítéseket.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Email-cím"
+      firstName: "Keresztnév",
+      lastName: "Vezetéknév",
+      email: "E-mail cím",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com"
+      firstName: "János",
+      lastName: "Kovács",
+      email: "janos.kovacs@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Kérjük, adjon meg egy érvényes e-mail címet"
+      firstName: "A keresztnév kötelező",
+      lastName: "A vezetéknév kötelező",
+      email: "Kérjük, adjon meg érvényes e-mail címet",
     },
     actions: {
-      login: "Jelentkezz be vagy regisztrálj a folytatáshoz",
-      continue: "Folytatás"
-    }
+      login: "Jelentkezzen be vagy regisztráljon a folytatáshoz",
+      continue: "Folytatás",
+    },
   },
   websiteSelection: {
-    heading: "Webhely kiválasztása",
-    description: "Válaszd ki, mely weboldalakat szeretnéd figyelni, és milyen gyakran szeretnél értesítéseket kapni.",
+    heading: "Oldalak kiválasztása",
+    description:
+      "Válassza ki, mely oldalakat szeretné nyomon követni és milyen gyakran szeretné a frissítéseket.",
     labels: {
-      websites: "Weboldalak figyelése",
+      websites: "Nyomon követendő oldalak",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Frissítési gyakoriság",
     },
     placeholders: {
-      frequency: "Válassza ki a gyakoriságot"
+      frequency: "Válasszon gyakoriságot",
     },
     help: {
-      websites: "Válassz ki egy vagy több weboldalt, amelyeken autóhirdetéseket szeretnél figyelni.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites:
+        "Válasszon ki egy vagy több oldalt az autóhirdetések nyomon követéséhez.",
+      facebookUrl:
+        "Ide írja be a Facebook Marketplace keresési eredmények URL-jét.",
+      videoTitle:
+        "Segítségre van szüksége a Facebook Marketplace keresési link megtalálásában?",
+      videoDesc: "Nézd meg az alábbi videót lépésről lépésre útmutatóért.",
+      updateFrequency:
+        "Milyen gyakran ellenőrizzük az új hirdetéseket? A magasabb gyakoriságok többe kerülhetnek.",
     },
     errors: {
-      websites: "Legalább egy weboldalt ki kell választani.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "Legalább egy oldalt ki kell választani",
+      facebookUrl:
+        "A Facebook Marketplace URL kötelező, ha a Facebook ki van választva",
     },
     actions: {
       previous: "Előző",
-      continue: "Folytatás"
-    }
+      continue: "Folytatás",
+    },
   },
   carDetails: {
-    heading: "Autó részletei",
-    description: "Adja meg a keresett autó adatait! Minden mező kitöltése opcionális – hagyja üresen bármelyiket, hogy szélesebb találati listát kapjon.",
+    heading: "Autó részletek",
+    description:
+      "Adja meg a keresett autó részleteit. Minden mező opcionális – hagyja üresen szélesebb eredményekért.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "Autó márka",
+      carModel: "Autó modell",
+      fuelType: "Üzemanyag típusa",
+      priceMin: "Minimum ár",
+      priceMax: "Maximum ár",
+      yearMin: "Minimum évjárat",
+      yearMax: "Maximum évjárat",
+      maxKilometers: "Maximum futásteljesítmény",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "Válasszon autó márkát",
+      carModel: "Válasszon autó modellt",
+      carModelDisabled: "Előbb válasszon autó márkát",
+      fuelType: "Válasszon üzemanyag típust",
+      priceMin: "Adja meg a minimum árat",
+      priceMax: "Adja meg a maximum árat",
+      yearMin: "Adja meg a minimum évjáratot",
+      yearMax: "Adja meg a maximum évjáratot",
+      maxKilometers: "Adja meg a maximum futásteljesítményt",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "Nincsenek elérhető modellek",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "Az autó márkája kötelező",
+      carModel: "Az autó modellje kötelező",
+      fuelType: "Az üzemanyag típusa kötelező",
+      priceMin: "A minimum árnak számnak kell lennie",
+      priceMax: "A maximum árnak számnak kell lennie",
+      yearMin: "A minimum évjáratnak érvényes évnek kell lennie",
+      yearMax: "A maximum évjáratnak érvényes évnek kell lennie",
+      maxKilometers: "A maximum futásteljesítménynek számnak kell lennie",
     },
     actions: {
       previous: "Előző",
-      continue: "Folytatás"
-    }
+      continue: "Folytatás",
+    },
   },
   telegram: {
-    heading: "Telegram beállítása",
-    description: "Állítsd be a Telegram értesítéseket a bot token és a chat azonosító megadásával.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Ha problémád adódik a Telegram bot létrehozásával, vedd fel velünk a kapcsolatot, és visszahívunk, hogy segítsünk elkészíteni.",
+    heading: "Telegram beállítás",
+    description:
+      "Állítsa be a Telegram értesítéseket a bot token és a chat ID megadásával.",
+    subHeading: "Állítsa be a Telegram botját",
+    info: "Ha problémái vannak a Telegram bot létrehozásával, lépjen kapcsolatba velünk és felhívjuk Önt segítségért.",
     contact: "Lépjen kapcsolatba velünk",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Hogyan szerezzen Telegram bot tokent:",
+      botStep1: "Nyissa meg a Telegramot és keresse meg a @BotFather-t",
+      botStep2: "Küldje el a /newbot parancsot",
+      botStep3: "Kövesse a bot létrehozási utasításokat",
+      botStep4: "Másolja ki a BotFather által adott tokent",
+
+      chatTitle: "Hogyan szerezze meg a Telegram chat ID-jét:",
+      chatStep1: "Nyissa meg a Telegramot és keresse meg a @userinfobot-ot",
+      chatStep2: "Küldjön bármilyen üzenetet a botnak",
+      chatStep3: "A bot válaszol információkkal, beleértve a chat ID-jét",
+      chatStep4: "Másolja ki a chat ID-t (ez egy szám)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt:
+      "Segítségre van szüksége a Telegram bot token és chat ID beállításában?",
+    videoDescription: "Nézd meg az alábbi videót lépésről lépésre útmutatóért.",
+
     labels: {
       token: "Telegram bot token",
-      chatId: "Your Telegram Chat ID",
-      language: "Értesítési nyelv",
-      username: "Telegram felhasználónév"
+      chatId: "Az Ön Telegram chat ID-je",
+      language: "Értesítések nyelve",
+      username: "Telegram felhasználónév",
     },
+
     placeholders: {
-      token: "Add meg a bot tokened a BotFather-tól",
-      chatId: "Enter your Telegram chat ID",
-      language: "Válassza ki a Telegram üzenet nyelvét",
-      username: "Add meg a Telegram felhasználóneved"
+      token: "Adja meg a BotFather által adott bot tokent",
+      chatId: "Adja meg az Ön Telegram chat ID-jét",
+      language: "Válassza ki a Telegram üzenetek nyelvét",
+      username: "Adja meg a Telegram felhasználónevet",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Ez az Ön Telegram fiókjának felhasználóneve (@ jel nélkül).",
     examples: {
-      token: "Értem! Kérlek, add meg a lefordítandó szöveget.",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      token: "Példa: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId:
+        "Ezt a @userinfobot-nak küldött üzenettel szerezheti meg a Telegramban",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Beállítási utasítások:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Nyissa meg a Telegramot és keresse meg a "BotFather"-t',
+      'Kezdjen beszélgetést a BotFather-rel a "Start" gombra kattintva',
+      "Írja be a /newbot parancsot és kövesse az új bot létrehozási utasításokat",
+      "Válasszon nevet a botjának",
+      "Válasszon felhasználónevet a botnak (bot-tal kell végződnie)",
+      "Másolja ki a BotFather által adott API tokent",
+      "Küldjön üzenetet az új botjának a beszélgetés aktiválásához",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Hogyan szerezze meg a Telegram chat ID-jét:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Nyissa meg a Telegramot és keresse meg a "userinfobot"-ot',
+      "Küldjön bármilyen üzenetet a botnak",
+      "A bot válaszol információkkal, beleértve a chat ID-jét",
+      "Másolja ki a chat ID-jét",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle:
+      "Segítségre van szüksége a Telegram bot token és chat ID beállításában?",
+    helpDescription: "Nézd meg az alábbi videót lépésről lépésre útmutatóért.",
+    botTokenLabel: "Telegram bot token",
+    botTokenPlaceholder: "Adja meg a BotFather által adott bot tokent",
+    botTokenExample: "Példa: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Az Ön Telegram chat ID-je",
+    chatIdPlaceholder: "Adja meg az Ön Telegram chat ID-jét",
+    chatIdDescription:
+      "Ezt a @userinfobot-nak küldött üzenettel szerezheti meg a Telegramban",
+    languageLabel: "Értesítések nyelve",
+    languagePlaceholder: "Válassza ki a Telegram üzenetek nyelvét",
     languages: {
       en: "Angol",
       de: "Német",
       fr: "Francia",
-      es: "Magyar",
-      it: "Magyar"
+      es: "Spanyol",
+      it: "Olasz",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Telegram értesítések előnézete",
+    carAlertTitle: "Új autó értesítés!",
+    priceLabel: "Ár: {{price}}",
+    kilometresLabel: "Futásteljesítmény: {{kms}}",
+    locationLabel: "Helyszín: {{location}}",
+    viewListing: "Hirdetés megtekintése →",
     errors: {
-      token: "Telegram bot token megadása kötelező",
-      chatId: "Telegram chat ID is required",
-      language: "Az értesítési nyelv megadása kötelező.",
-      username: "A Telegram felhasználónév megadása kötelező"
+      token: "A Telegram bot token kötelező",
+      chatId: "A Telegram chat ID kötelező",
+      language: "Az értesítések nyelve kötelező",
+      username: "A Telegram felhasználónév kötelező",
     },
+
     actions: {
       previous: "Előző",
-      continue: "Folytatás"
+      continue: "Folytatás",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "Kezdjen beszélgetést a Telegram botunkkal az alábbi linkre kattintva és küldjön neki üzenetet:",
+    contactBotNote:
+      "Ez szükséges az autó értesítések fogadásához. Számítógépen QR-kód beolvasásával is lehetséges.",
+    confirmContact: "Beszélgetést kezdtem a bottal és küldtem üzenetet",
   },
   review: {
-    title: "Tekintse át az előfizetését",
-    description: "Kérjük, fizetés előtt ellenőrizze előfizetése adatait.",
+    title: "Előfizetés áttekintése",
+    description:
+      "Kérjük, tekintse át előfizetése részleteit a fizetéshez való továbblépés előtt.",
+
     personal: {
       title: "Személyes adatok",
       name: "Név",
-      email: "E-mail"
+      email: "E-mail",
     },
+
     monitoring: {
-      title: "Megfigyelési beállítások",
-      websites: "Weboldalak",
+      title: "Nyomon követési beállítások",
+      websites: "Oldalak",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Frissítési gyakoriság",
     },
+
     specs: {
       title: "Autó specifikációk",
       brand: "Márka",
       model: "Modell",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Hatótávolság (km)",
-      price: "Árkategória (€)"
+      fuelType: "Üzemanyag típusa",
+      yearRange: "Évjárat tartomány",
+      mileage: "Futásteljesítmény tartomány (km)",
+      price: "Árkategória (€)",
     },
+
     notification: {
       title: "Értesítési beállítások",
-      telegram: "Telegram Bot",
-      language: "Értesítési nyelv"
+      telegram: "Telegram bot",
+      language: "Értesítések nyelve",
     },
+
     summary: {
-      title: "Előfizetés összegzése",
+      title: "Előfizetés összefoglaló",
       base: "Alap előfizetés",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Összesen (havonta)"
+      extraWebsites: "Extra oldalak",
+      frequencyUpgrade: "Gyakoriság frissítés",
+      total: "Összesen (havi)",
     },
+
     terms: {
-      checkbox: "Elfogadom a",
-      tos: "Felhasználási feltételek",
-      privacy: "Adatvédelmi tájékoztató",
-      note: "Előfizetésed havonta automatikusan megújul. Bármikor lemondhatod.",
-      error: "El kell fogadnod a felhasználási feltételeket."
+      checkbox: "Elfogadom",
+      tos: "Felhasználási feltételeket",
+      privacy: "Adatvédelmi irányelveket",
+      note: "Előfizetése automatikusan megújul havonta. Bármikor lemondható.",
+      error: "El kell fogadnia a feltételeket és irányelveket",
     },
+
     actions: {
       previous: "Előző",
-      submit: "Tovább a fizetéshez"
-    }
+      submit: "Továbblépés a fizetéshez",
+    },
   },
   faq: {
     title: "Gyakran ismételt kérdések",
-    subtitle: "Találd meg a leggyakoribb kérdésekre adott válaszokat szolgáltatásunkkal kapcsolatban.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "Az értesítések gyorsasága az általad választott frissítési gyakoriságtól függ. Az alapértelmezett óránkénti csomaggal az új hirdetés megjelenése után egy órán belül értesítést kapsz. Ha szinte valós idejű értesítéseket szeretnél (néhány percen belül a közzététel után), válthatsz a gyakoribb frissítési csomagjainkra.",
-        question: "Milyen gyorsan kapok értesítést, miután új hirdetés kerül fel az oldalra?"
+    subtitle:
+      "Találja meg a válaszokat szolgáltatásunkkal kapcsolatos leggyakoribb kérdésekre.",
+    contactPrompt: "Még mindig van kérdése?",
+    contactLink: "Lépjen kapcsolatba támogatási csapatunkkal",
+    questions: [
+      {
+        question:
+          "Milyen gyorsan kapok értesítést egy új hirdetés közzététele után?",
+        answer:
+          "Az értesítések sebessége a választott frissítési gyakoriságtól függ. Az alapcsomaggal (óránkénti) az értesítéseket egy órán belül megkapja az új hirdetés közzététele után. Közel valós idejű (perceken belül a közzétételtől) frissíthető a gyakoribb frissítési csomagokkal.",
       },
-      1: {
-        answer: "Igen! Több keresési profilt is létrehozhatsz különböző feltételekkel. Minden profil külön előfizetésnek számít, de mindet egyetlen fiókból kezelheted. Ez tökéletes megoldás, ha egyszerre többféle járművet keresel.",
-        question: "Nyomon tudok követni egyszerre többféle autót?"
+      {
+        question: "Nyomon követhetek egyszerre több különböző típusú autót?",
+        answer:
+          "Igen! Több keresési profilt hozhat létre különböző kritériumokkal. Minden profil külön előfizetésnek számít, de mindet egy fiókból kezelheti. Ideális, ha egyszerre keres különböző járműtípusokat.",
       },
-      2: {
-        answer: "Jelenleg támogatjuk a legnépszerűbb autóhirdetési platformokat, beleértve az AutoTrader, CarGurus, Cars.com és Facebook Marketplace oldalakat is. Folyamatosan bővítjük lefedettségünket, hogy a felhasználói igények és a regionális népszerűség alapján további weboldalakat is bevonjunk.",
-        question: "Milyen weboldalakat támogat jelenleg?"
+      {
+        question: "Mely oldalakat támogatják jelenleg?",
+        answer:
+          "Jelenleg a fő autós eladási platformokat támogatjuk, beleértve az AutoTrader-t, CarGurus-t, Cars.com-ot és a Facebook Marketplace-t. Folyamatosan bővítjük a lefedettséget további oldalakkal a felhasználói kérések és regionális népszerűség alapján.",
       },
-      3: {
-        answer: "Egyáltalán nem! Lépésről lépésre haladó útmutatókat biztosítunk szöveges és videós formában is, hogy könnyedén beállíthasd a Telegram botot. A legtöbb felhasználó kevesebb mint 5 perc alatt elvégzi a beállítást, még technikai előképzettség nélkül is.",
-        question: "Szükségem van technikai tudásra a Telegram bot használatához?"
+      {
+        question:
+          "Szükségem van technikai tudásra a Telegram bot használatához?",
+        answer:
+          "Egyáltalán nem! Lépésről lépésre útmutatókat biztosítunk szöveges és videós formában a Telegram bot beállításához. A legtöbb felhasználó 5 perc alatt befejezi a beállítást technikai tapasztalat nélkül is.",
       },
-      4: {
-        answer: "Igen, a keresési feltételeidet bármikor módosíthatod a fiókod vezérlőpultján. A változtatások azonnal életbe lépnek, és az értesítéseid ennek megfelelően frissülnek, a szolgáltatás megszakítása nélkül.",
-        question: "Meg tudom változtatni a keresési feltételeimet az előfizetés beállítása után?"
+      {
+        question:
+          "Módosíthatom a keresési kritériumokat az előfizetés beállítása után?",
+        answer:
+          "Igen, a keresési kritériumokat bármikor módosíthatja a fiók irányítópultján. A változások azonnal életbe lépnek, és az értesítések ennek megfelelően frissülnek szolgáltatás megszakítása nélkül.",
       },
-      5: {
-        answer: "Előfizetését bármikor lemondhatja a fiókja vezérlőpultján. Lépjen a „Előfizetések” menüpontra, válassza ki a lemondani kívánt előfizetést, majd kattintson az „Előfizetés lemondása” gombra. Szolgáltatása az aktuális számlázási időszak végéig elérhető marad.",
-        question: "Hogyan mondhatom le az előfizetésemet?"
-      }
-    }
+      {
+        question: "Hogyan mondhatom le az előfizetést?",
+        answer:
+          'Az előfizetést bármikor lemondhatja a fiók irányítópultján. Menjen az "Előfizetések" szakaszba, válassza ki a lemondani kívánt előfizetést és kattintson a "Előfizetés lemondása" gombra. A szolgáltatás a jelenlegi fizetési időszak végéig folytatódik.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
+    brandDescription:
+      "Személyes asszisztense a tökéletes használt autó megtalálásához a megfelelő időben.",
+    quickLinks: "Gyors linkek",
     features: "Funkciók",
     pricing: "Árak",
     faq: "GYIK",
-    getStarted: "Get Started",
+    getStarted: "Kezdés",
     legal: "Jogi",
-    terms: "Szolgáltatási feltételek",
-    privacy: "Adatvédelmi tájékoztató",
-    cookies: "Süti szabályzat",
-    gdpr: "GDPR-megfelelőség",
+    terms: "Felhasználási feltételek",
+    privacy: "Adatvédelmi irányelvek",
+    cookies: "Sütik irányelvek",
+    gdpr: "GDPR megfelelőség",
     contact: "Kapcsolat",
     email: "support@amiquus.com",
-    telegram: "Lépjen velünk kapcsolatba Telegramon",
+    telegram: "Lépjen kapcsolatba velünk Telegramon",
     copyright: "Minden jog fenntartva.",
     about: "Rólunk",
     blog: "Blog",
     careers: "Karrier",
-    support: "Támogatás"
+    support: "Támogatás",
   },
   login: {
-    title: "Jelentkezzen be a fiókjába",
-    description: "Adja meg e-mail címét és jelszavát a vezérlőpult eléréséhez",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    title: "Jelentkezzen be fiókjába",
+    description:
+      "Adja meg e-mail címét és jelszavát az irányítópult eléréséhez",
+    emailLabel: "E-mail",
+    passwordLabel: "Jelszó",
+    loginButton: "Bejelentkezés",
+    loggingIn: "Bejelentkezés...",
+    loginWithGoogle: "Bejelentkezés Google-lal",
     or: "vagy",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Nincs fiókja?",
+    registerLink: "Regisztráció",
+    successTitle: "Sikeres bejelentkezés",
+    successMessage: "Sikeresen bejelentkezett.",
+    errorTitle: "Bejelentkezés sikertelen",
+    genericError: "Kérjük, ellenőrizze adatait és próbálja újra.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "Kérjük, adjon meg érvényes e-mail címet",
+      shortPassword: "A jelszónak legalább 6 karakternek kell lennie",
+    },
   },
   register: {
     title: "Fiók létrehozása",
-    description: "Regisztrálj, hogy elkezdhesd követni álmaid autóját",
-    google: "Jelentkezés Google-lel",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
+    description: "Regisztráljon álmai autó nyomon követésének megkezdéséhez",
+    google: "Regisztráció Google-lal",
+    orContinue: "Vagy folytassa",
+    firstName: "Keresztnév",
+    lastName: "Vezetéknév",
     username: "Felhasználónév",
     email: "E-mail",
     password: "Jelszó",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "Jelszó megerősítése",
+    termsNotice: "Elfogadom",
+    termsOfService: "Felhasználási feltételeket",
+    privacyPolicy: "Adatvédelmi irányelveket",
+    createBtn: "Fiók létrehozása",
+    alreadyHave: "Már van fiókja?",
     login: "Bejelentkezés",
     and: "és",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Hiányzó mezők",
+        desc: "Kérjük, töltse ki az összes kötelező mezőt",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Érvénytelen felhasználónév",
+        desc: "A felhasználónévnek alfanumerikusnak kell lennie és 3-20 karakter hosszúnak",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "A jelszavak nem egyeznek",
+        desc: "Kérjük, győződjön meg róla, hogy a jelszavak egyeznek",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Feltételek nem elfogadva",
+        desc: "El kell fogadnia a feltételeket és adatvédelmi irányelveket a folytatáshoz",
       },
       success: {
         title: "Sikeres regisztráció",
-        desc: "Üdvözlünk az AMIQUUS-on! Hamarosan átirányítunk, hogy megerősíthesd az e-mail címedet."
+        desc: "Üdvözöljük az Amiquus-ban! Átirányítjuk az e-mail megerősítésére.",
       },
       failure: {
-        title: "A regisztráció sikertelen",
-        desc: "Kérjük, ellenőrizze adatait, és próbálja meg újra."
-      }
-    }
+        title: "Regisztráció sikertelen",
+        desc: "Kérjük, ellenőrizze adatait és próbálja újra",
+      },
+    },
   },
   verifyEmail: {
-    title: "Erősítse meg e-mail-címét",
-    description: "Ellenőrző kódot küldtünk az e-mail címedre.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "E-mail megerősítés",
+    description: "Megerősítő kódot küldtünk e-mail címére.",
+    codeLabel: "Megerősítő kód",
+    verifyButton: "E-mail megerősítése",
+    updateEmailLabel: "E-mail frissítése",
+    updateEmailButton: "E-mail frissítése",
+    resendButton: "Kód újraküldése",
+    resendCountdown: "A kódot újra elküldheti {{seconds}} másodperc múlva",
+    footerNote: "Nem kapta meg a kódot? Ellenőrizze a spam mappát.",
     toast: {
       verified: "E-mail megerősítve",
-      failed: "Ellenőrzés sikertelen",
-      resent: "Az ellenőrző kódot újraküldtük",
+      failed: "Megerősítés sikertelen",
+      resent: "Megerősítő kód újraküldve",
       error: "Hiba",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      invalidEmail: "Érvénytelen e-mail",
+      enterValidEmail: "Kérjük, adjon meg érvényes e-mail címet",
+      sameEmail: "Ugyanaz az e-mail",
+      sameEmailDesc: "Az új e-mail cím megegyezik a jelenlegivel",
+      emailUpdated: "E-mail frissítve",
+    },
   },
   dashboardPayment: {
     add: "Fizetési mód hozzáadása",
-    description: "Adjon hozzá új hitel- vagy bankkártyát az előfizetési fizetésekhez.",
+    description:
+      "Adjon hozzá új hitel- vagy betéti kártyát az előfizetés fizetéséhez.",
     processing: "Feldolgozás...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    errorTitle: "Hiba a fizetési mód hozzáadásakor",
+    errorMessage: "Váratlan hiba történt",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "Hiba",
+      description: "A fizetés beállítása nem indítható el",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Évjáratok",
+      priceRange: "Ár",
+      websites: "Oldalak",
+      updates: "Frissítések",
+      language: "Nyelv",
+      price: "Ár",
+      edit: "Szerkesztés",
+      cancelAlert: "Értesítés lemondása",
+      cancelTitle: "Autó értesítés lemondása",
+      cancelDescription:
+        "Biztosan le szeretné mondani a {{brand}} {{model}} autó értesítést? Ez leállítja az összes értesítést és új értesítést kell beállítania, ha újra nyomon szeretné követni ezt az autót.",
+      keepMyAlert: "Értesítés megtartása",
+      confirmCancel: "Értesítés lemondása",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Lejár",
+      default: "Alapértelmezett",
+      setAsDefault: "Beállítás alapértelmezettként",
+      remove: "Eltávolítás",
+      setDefaultTitle: "Fizetési mód alapértelmezettként való beállítása",
+      setDefaultDescription:
+        "Szeretné beállítani a {{brand}} kártyát, amely {{last4}}-re végződik, alapértelmezett fizetési módként? Ezt a kártyát használjuk minden jövőbeli előfizetési fizetéshez.",
+      removeTitle: "Fizetési mód eltávolítása",
+      removeDescription:
+        "Biztosan el szeretné távolítani a {{brand}} kártyát, amely {{last4}}-re végződik?",
+      removeWarning:
+        "Ez az alapértelmezett fizetési módja és eltávolítása befolyásolhatja aktív előfizetéseit.",
+      cancel: "Mégse",
+      confirmRemove: "Kártya eltávolítása",
+    },
   },
   profile: {
     tabs: {
       alerts: "Értesítéseim",
-      payments: "Fizetési módok"
+      payments: "Fizetési módok",
     },
     sidebar: {
-      memberSince: "Member since",
+      memberSince: "Tag óta",
       subscriptions: "Előfizetések",
       methods: "Fizetési módok",
-      account: "Fiókbeállítások",
+      account: "Fiók beállítások",
       privacy: "Adatvédelem és biztonság",
-      logout: "Kijelentkezés"
+      logout: "Kijelentkezés",
     },
     account: {
-      title: "Fiókbeállítások",
-      desc: "Frissítse fiókja adatait és beállításait.",
+      title: "Fiók beállítások",
+      desc: "Frissítse fiókadatait és preferenciáit.",
       name: "Név",
       email: "E-mail",
       username: "Felhasználónév",
       cancel: "Mégse",
-      save: "Változtatások mentése"
+      save: "Változások mentése",
     },
     security: {
       title: "Adatvédelem és biztonság",
-      desc: "Kezeld a biztonsági beállításaidat és az adatvédelmi preferenciáidat.",
+      desc: "Kezelje a biztonsági beállításokat és adatvédelmi preferenciákat.",
       current: "Jelenlegi jelszó",
       new: "Új jelszó",
       confirm: "Új jelszó megerősítése",
-      update: "Jelszó frissítése"
+      update: "Jelszó frissítése",
     },
     logout: {
       title: "Kijelentkezés",
-      desc: "Biztosan ki szeretne jelentkezni a fiókjából?",
-      success: "Sikeresen kijelentkeztél."
+      desc: "Biztosan ki szeretne jelentkezni a fiókból?",
+      success: "Sikeresen kijelentkezett.",
     },
     alerts: {
-      title: "Autóriasztási előfizetések",
-      desc: "Kezelje autókeresési értesítéseit és értesítési beállításait.",
-      add: "Új riasztás hozzáadása",
-      none: "Nincsenek aktív autós értesítéseid.",
-      cta: "Hozza létre első figyelmeztetését",
-      warning: "⚠️ Az előfizetésed módosításai a következő számlázási időszakban lépnek életbe, és csak sikeres fizetés után. Sikertelen fizetés esetén a jelenlegi riasztási beállításaid változatlanok maradnak."
+      title: "Autó értesítési előfizetések",
+      desc: "Kezelje az autó keresési értesítéseket és értesítési preferenciákat.",
+      add: "Új értesítés hozzáadása",
+      none: "Nincsenek aktív autó értesítései.",
+      cta: "Hozza létre az első értesítést",
+      warning:
+        "⚠️ Az előfizetés változásai a következő számlázási időszakban lépnek életbe és csak sikeres fizetés után. Ha a fizetés sikertelen, a jelenlegi értesítési konfiguráció változatlan marad.",
     },
     payments: {
       title: "Fizetési módok",
-      desc: "Kezeld az előfizetéses számlázáshoz tartozó fizetési módjaidat.",
-      none: "Nincs elmentett fizetési módja.",
-      encrypted: "Fizetési adataid titkosítva és biztonságosan tárolva vannak."
-    }
+      desc: "Kezelje az előfizetés számlázási fizetési módjait.",
+      none: "Nincsenek mentett fizetési módjai.",
+      encrypted: "Fizetési adatai titkosítva és biztonságosan tárolva vannak.",
+    },
   },
   setupAlerts: {
-    title: "Állítsa be autója értesítéseit",
-    subtitle: "Állítsd be a Telegram botodat, hogy értesítéseket kapj az álomautódról",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Indítsd el az autóm riasztási szolgáltatását",
-    cancel: "Bármikor lemondhatod",
+    title: "Autó értesítések beállítása",
+    subtitle:
+      "Állítsa be Telegram botját, hogy értesítéseket kapjon álmai autójáról",
+    basicPlan: "Alapcsomag",
+    baseTitle: "$79.99/hó",
+    button: "Indítsa el autó értesítési szolgáltatásomat",
+    cancel: "Bármikor lemondható",
     toasts: {
       terms: {
         title: "Feltételek nem elfogadva",
-        description: "A folytatáshoz el kell fogadnod a szolgáltatási feltételeket."
+        description:
+          "El kell fogadnia a felhasználási feltételeket a folytatáshoz",
       },
       success: {
         title: "Előfizetés létrehozva",
-        description: "Előfizetését sikeresen létrehoztuk."
+        description: "Előfizetése sikeresen létrehozva",
       },
       error: {
-        title: "Hiba történt az előfizetés létrehozásakor"
+        title: "Hiba az előfizetés létrehozásakor",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "Bot kapcsolat szükséges",
+        description:
+          "Beszélgetést kell kezdnie a Telegram botunkkal és üzenetet kell küldenie neki az autó értesítések fogadásához. Kérjük, kövesse az alábbi utasításokat a bot kapcsolatfelvételéhez.",
+      },
+    },
   },
   loginPrompt: {
     title: "Bejelentkezés szükséges",
-    description: "A folytatáshoz be kell jelentkezned. Kérlek, jelentkezz be vagy regisztrálj.",
-    register: "Regisztrálj",
-    login: "Bejelentkezés"
+    description:
+      "A folytatáshoz be kell jelentkeznie. Kérjük, jelentkezzen be vagy regisztráljon.",
+    register: "Regisztráció",
+    login: "Bejelentkezés",
   },
   waitlistPrompt: {
-    title: "Csatlakozz a várólistához",
-    description: "Jelenleg megteltünk. Iratkozz fel a várólistára, hogy értesítést kapj, amint felszabadul egy hely.",
-    button: "Csatlakozz a várólistához"
+    title: "Csatlakozzon a várólistához",
+    description:
+      "Jelenleg teljes kapacitással működünk. Csatlakozzon a várólistához, hogy értesítést kapjon, amikor hely szabadul fel.",
+    button: "Csatlakozás a várólistához",
   },
   subscription: {
-    title: "Előfizetés részletei",
-    subTitle: "Edit your subscription details below",
-    error: "Menj vissza a vezérlőpultra",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Előfizetésedet bármikor szüneteltetheted. Amikor szünetelteted az előfizetésedet, az autós értesítéseid leállnak, amíg újra nem indítod őket.",
+    title: "Előfizetés részletek",
+    subTitle: "Módosítsa előfizetése részleteit alább",
+    error: "Vissza az irányítópulthoz",
+    notFound: "Előfizetés nem található",
+    notFoundSub: "Vissza az irányítópulthoz",
+    description:
+      "Az előfizetést bármikor szüneteltetheti. Ha szünetelteti az előfizetést, az autó értesítések leállnak az újraindításig.",
     form: {
       status: {
         label: "Állapot",
-        placeholder: "Állapot kiválasztása",
+        placeholder: "Válasszon állapotot",
         active: "Aktív",
-        paused: "Szüneteltetve"
-      }
+        paused: "Szüneteltetett",
+      },
     },
     actions: {
-      save: "Változtatások mentése",
-      back: "Vissza"
+      save: "Változások mentése",
+      back: "Vissza",
     },
     toasts: {
       success: {
         title: "Előfizetés frissítve",
-        description: "Az Ön {{brand}} {{model}} előfizetése sikeresen frissítve lett."
+        description: "A {{brand}} {{model}} előfizetése sikeresen frissítve",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Előfizetés nem frissíthető",
+        description:
+          "Nem szüneteltetheti és frissítheti az árat egyszerre. Vagy szüneteltesse vagy frissítse az árat.",
       },
       error: {
-        title: "Hiba a feliratkozás frissítésekor"
-      }
-    }
+        title: "Hiba az előfizetés frissítésekor",
+      },
+    },
   },
   about: {
-    title: "Az Amiquusról",
-    description: "Forradalmasítjuk azt, ahogyan az emberek megtalálják a tökéletes használt autójukat, hiszen a fejlett megfigyelési technológiát mindenki számára elérhetővé tesszük.",
+    title: "Az Amiquus-ról",
+    description:
+      "Forradalmasítjuk a tökéletes használt autó keresését fejlett nyomon követési technológiával mindenkinek",
     meta: {
-      title: "Rólunk | Amiquus - Autóhirdetés-figyelő szolgáltatás",
-      description: "Ismerje meg az AMIQUUS-t, küldetésünket, amellyel forradalmasítjuk a használt autók vásárlását, valamint a csapatot, amely intelligens autóhirdetés-figyelő szolgáltatásunk mögött áll."
+      title: "Rólunk | Amiquus – Autó hirdetési nyomon követési szolgáltatás",
+      description:
+        "Ismerje meg az Amiquus-t, küldetésünket a használt autó vásárlás forradalmasítására és a csapatot az okos autó hirdetési nyomon követési szolgáltatásunk mögött.",
     },
     story: {
       heading: "Történetünk",
-      paragraphs: {
-        0: "Az AMIQUUS 2023-ban indult, amikor alapítónk, Alex hónapokat töltött autóhirdetési oldalak frissítésével, hogy megtaláljon egy bizonyos ritka modellt jó áron. Miután több lehetőségről is lemaradt a késve érkező értesítések miatt, rájött, hogy ennek van jobb módja is.",
-        1: "Alex egy kis fejlesztői és autórajongó csapattal dolgozva egy olyan monitorozó rendszert épített, amely egyszerre több weboldalon tudta figyelni a hirdetéseket, és azonnali értesítést küldött, amikor megfelelő találat jelent meg.",
-        2: "Amiquus egy személyes projektként indult, ami gyorsan felkeltette barátaink és családtagjaink érdeklődését, és 2025 elejére mindenki számára elérhető szolgáltatássá vált. Ma már országszerte segítünk autóvásárlóknak időt spórolni és jobb ajánlatokat találni intelligens megfigyelő technológiánkkal."
-      }
+      paragraphs: [
+        "Az Amiquus 2023-ban indult, amikor alapítónk, Aleksej hónapokat töltött autós eladási oldalak frissítésével, próbálva megtalálni egy konkrét ritka modellt jó áron. Több lehetőség elvesztése után a lassú értesítések miatt rájött, hogy jobb módszernek kell lennie.",
+        "Egy kis fejlesztőkből és autós rajongókból álló csapattal Aleksej létrehozott egy nyomon követési rendszert, amely képes egyszerre több oldalon hirdetéseket követni és azonnali értesítéseket küldetni találat esetén.",
+        "Ami személyes projektként indult, gyorsan felkeltette a barátok és család figyelmét, és 2025 elejére az Amiquus szolgáltatásként született meg mindenki számára. Ma segítünk autóvásárlóknak országszerte időt spórolni és a legjobb ajánlatokat megtalálni okos nyomon követési technológiánkkal.",
+      ],
     },
     mission: {
       heading: "Küldetésünk",
-      items: {
-        0: {
-          description: "Felejtsd el a folyamatos frissítgetést több weboldalon – automatizáld a keresést, és kapj időben értesítéseket.",
-          title: "Időt takarít meg"
+      items: [
+        {
+          title: "Idő spórolás",
+          description:
+            "Szüntesse meg a több oldal állandó frissítésének szükségességét az automatizált keresési folyamattal és időbeni értesítésekkel.",
         },
-        1: {
-          description: "Legyen Ön az első, aki értesül egy remek ajánlatról, így előnyt szerezhet egy olyan versenypiacon, ahol az időzítés mindent jelent.",
-          title: "Találjon jobb ajánlatokat"
+        {
+          title: "Legjobb ajánlatok megtalálása",
+          description:
+            "Legyen az első, aki értesül a nagyszerű ajánlatokról, előnyt adva a versenyző piacon, ahol az idő minden.",
         },
-        2: {
-          description: "Hozzon megalapozott döntéseket átfogó monitorozással több megbízható autóhirdetési platformon keresztül.",
-          title: "Vásároljon magabiztosan"
-        }
-      }
+        {
+          title: "Biztos vásárlás",
+          description:
+            "Hozzon tájékozott döntéseket teljes nyomon követéssel több megbízható autós eladási platformon.",
+        },
+      ],
     },
     team: {
       heading: "Csapatunk",
-      members: {
-        0: {
-          bio: "Egykori szoftvermérnök, aki szenvedéllyel rajong az autókért és az innovatív megoldások fejlesztéséért.",
-          name: "Alex Morgan, így működik",
-          role: "Alapító és vezérigazgató"
+      members: [
+        {
+          name: "Aleksej Morgan",
+          role: "Alapító és vezérigazgató",
+          bio: "Korábbi szoftvermérnök autós szenvedéllyel és innovatív megoldások alkotója.",
         },
-        1: {
-          bio: "Adattudományi szakértő, aki webes adatgyűjtésre és információ-visszakereső rendszerekre specializálódott.",
-          name: "Sarah Chen",
-          role: "Műszaki igazgató"
+        {
+          name: "Sara Chen",
+          role: "Technikai vezető",
+          bio: "Adattudomány szakértő, specializálódva web scrapingre és információkinyerő rendszerekre.",
         },
-        2: {
-          bio: "Full-stack fejlesztő, aki nagy teljesítményű értesítési rendszerek építésében jártas.",
-          name: "Marcus Lee",
-          role: "Vezető fejlesztő"
+        {
+          name: "Markus Li",
+          role: "Vezető fejlesztő",
+          bio: "Teljes stack mérnök tapasztalattal magas teljesítményű értesítési rendszerek építésében.",
         },
-        3: {
-          bio: "Egykori autóértékesítő szakember, aki elkötelezetten segít ügyfeleinek megtalálni a tökéletes járművet.",
+        {
           name: "Elena Rodriguez",
-          role: "Ügyfélsiker"
-        }
-      }
+          role: "Ügyfél siker",
+          bio: "Korábbi autó eladási szakember, elkötelezett az ügyfelek tökéletes jármű megtalálásában való segítésében.",
+        },
+      ],
     },
     join: {
-      heading: "Csatlakozz a csapatunkhoz",
-      description: "Folyamatosan keressük azokat a tehetséges szakembereket, akiket szenvedéllyel tölt el a technológia és az autóvásárlási élmény forradalmasítása. Nézd meg aktuális állásajánlatainkat, és csatlakozz hozzánk küldetésünkben!",
-      cta: "Tekintse meg a nyitott pozíciókat"
+      heading: "Csatlakozzon csapatunkhoz",
+      description:
+        "Mindig keressük a tehetséges embereket, akik szenvedélyesek a technológia iránt és az autóvásárlási élmény forradalmasításáért. Nézze meg aktuális nyitott pozícióinkat és csatlakozzon küldetésünkhöz.",
+      cta: "Nyitott pozíciók megtekintése",
     },
     questions: {
       heading: "Van kérdése?",
-      description: "Tudjon meg többet arról, hogyan működik szolgáltatásunk, tekintse meg az árakat, vagy lépjen kapcsolatba ügyfélszolgálatunkkal.",
+      description:
+        "Tudjon meg többet szolgáltatásunk működéséről, nézze meg az árakat vagy lépjen kapcsolatba támogatási csapatunkkal.",
       links: {
-        faq: "Gyakori kérdések megtekintése",
-        pricing: "Árak megtekintése",
-        support: "Lépjen kapcsolatba az ügyfélszolgálattal"
-      }
-    }
+        faq: "Látogassa meg a GYIK-et",
+        pricing: "Nézd meg az árakat",
+        support: "Lépjen kapcsolatba a támogatással",
+      },
+    },
   },
   terms: {
     metaTitle: "Szolgáltatási feltételek | Amiquus",
-    metaDescription: "Olvassa el az AMIQUUS szolgáltatási feltételeit, amelyek szabályozzák az autóhirdetések figyelésére és értesítésére szolgáló szolgáltatásunk használatát.",
+    metaDescription:
+      "Olvassa el az Amiquus szolgáltatási feltételeit, amelyek szabályozzák az autóhirdetések figyelésére és értesítésére szolgáló rendszer használatát.",
     title: "Szolgáltatási feltételek",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Utoljára frissítve: 2025. május 21.",
     sections: {
-      1: {
-        id: "megállapodás",
-        heading: "Felhasználási feltételek elfogadása",
-        paragraphs: {
-          0: "A jelen Szolgáltatási Feltételek jogilag kötelező érvényű megállapodást jelentenek Ön és az AMIQUUS között, amely a weboldalunkhoz és szolgáltatásainkhoz való hozzáférésére és azok használatára vonatkozik.",
-          1: "A szolgáltatásaink elérésével vagy használatával elfogadod ezeket a Feltételeket. Ha a feltételek bármely részével nem értesz egyet, nem használhatod a szolgáltatást."
-        },
+      "1": {
+        id: "agreement",
+        heading: "A feltételek elfogadása",
+        paragraphs: [
+          "A jelen szolgáltatási feltételek jogilag kötelező érvényű megállapodást jelentenek Ön és az Amiquus között, amely szabályozza weboldalunkhoz és szolgáltatásainkhoz való hozzáférését.",
+          "Szolgáltatásaink használatával Ön elfogadja a jelen feltételeket. Amennyiben bármelyik feltétellel nem ért egyet, kérjük, ne használja szolgáltatásainkat.",
+        ],
+        list: [],
+      },
+      "2": {
+        id: "changes",
+        heading: "A feltételek módosítása",
+        paragraphs: [
+          "Fenntartjuk a jogot a jelen feltételek bármikori módosítására vagy frissítésére saját belátásunk szerint. Lényeges változások esetén ésszerű erőfeszítéseket teszünk, hogy legalább 30 nappal a módosítások életbe lépése előtt értesítsük Önt.",
+          "A szolgáltatás további használata a módosításokat követően azt jelenti, hogy Ön elfogadja az új feltételeket. Ha nem ért egyet, kérjük, hagyja abba a szolgáltatás használatát.",
+        ],
+        list: [],
+      },
+      "3": {
+        id: "account",
+        heading: "Fiókhasználati feltételek",
+        paragraphs: ["Szolgáltatásaink használatához Önnek:"],
         list: [
-        ]
+          "Legalább 18 évesnek kell lennie",
+          "El kell végeznie a regisztrációs folyamatot",
+          "Pontos, naprakész és teljes adatokat kell megadnia",
+          "Biztosítania kell fiókja és jelszava biztonságát",
+          "Felelősséget kell vállalnia minden tevékenységért, amely a fiókján keresztül történik",
+          "Haladéktalanul értesítenie kell minket bármilyen jogosulatlan fiókhasználatról vagy biztonsági incidensről",
+        ],
       },
-      2: {
-        id: "változások",
-        heading: "Felhasználási feltételek módosítása",
-        paragraphs: {
-          0: "Fenntartjuk a jogot, hogy saját belátásunk szerint bármikor módosítsuk vagy lecseréljük ezen Feltételeket. Amennyiben a módosítás lényeges, ésszerű erőfeszítéseket teszünk annak érdekében, hogy legalább 30 nappal az új feltételek hatályba lépése előtt értesítést küldjünk.",
-          1: "A módosítások hatályba lépése után a szolgáltatás további elérésével vagy használatával elfogadod a módosított feltételeket. Ha nem értesz egyet az új feltételekkel, kérjük, hagyd abba a szolgáltatás használatát."
-        },
-        list: [
-        ]
-      },
-      3: {
-        id: "fiók",
-        heading: "Fiók feltételei",
-        paragraphs: {
-          0: "Szolgáltatásaink igénybevételéhez szükséges:"
-        },
-        list: {
-          0: "Legalább 18 évesnek kell lenned",
-          1: "Fejezze be a regisztrációs folyamatot",
-          2: "Adjon meg pontos, teljes és naprakész információkat",
-          3: "Legyen felelős fiókja és jelszava biztonságának megőrzéséért.",
-          4: "Ön felelős minden olyan tevékenységért, amely a fiókja alatt történik.",
-          5: "Értesítsen minket azonnal, amint tudomást szerez bármilyen biztonsági incidensről vagy a fiókja jogosulatlan használatáról."
-        }
-      },
-      4: {
-        id: "fizetés",
+      "4": {
+        id: "payment",
         heading: "Fizetési feltételek",
-        paragraphs: {
-          0: "Amiquus előfizetéses szolgáltatásokat kínál a következő feltételekkel:"
-        },
-        list: {
-          0: "Minden díj adó nélkül értendő, az adókat szükség esetén hozzáadjuk.",
-          1: "Az előfizetési díjak 30 napos előzetes értesítéssel változhatnak.",
-          2: "Az előfizetések automatikusan megújulnak, hacsak nem mondod le a következő számlázási ciklus előtt.",
-          3: "A visszatérítéseket egyedi elbírálás alapján, a visszatérítési szabályzatunk szerint kezeljük.",
-          4: "A Stripe-ot használjuk a biztonságos fizetésfeldolgozáshoz, és minden fizetési információt a Stripe tárol."
-        }
+        paragraphs: [
+          "Az Amiquus előfizetéses szolgáltatásokat kínál az alábbi feltételekkel:",
+        ],
+        list: [
+          "Minden díj nettó összeg, amelyhez az alkalmazandó adók hozzáadódnak",
+          "Az előfizetési árak 30 napos értesítéssel módosíthatók",
+          "Az előfizetések automatikusan megújulnak, hacsak nem mondja le azokat a következő számlázási ciklus előtt",
+          "A visszatérítéseket egyedi elbírálás szerint kezeljük a visszatérítési szabályzatunk alapján",
+          "Biztonságos fizetési feldolgozás érdekében a Stripe rendszert használjuk, és minden fizetési adatot a Stripe tárol",
+        ],
       },
-      5: {
-        id: "kapacitás",
+      "5": {
+        id: "capacity",
         heading: "Kapacitáskorlátok",
-        paragraphs: {
-          0: "A szolgáltatás minőségének és megbízhatóságának fenntartása érdekében az AMIQUUS az aktív előfizetések számát 30-ra korlátozza. Amikor ez a limit eléri a maximumot:"
-        },
-        list: {
-          0: "Új felhasználók csatlakozhatnak a várólistánkhoz",
-          1: "A várólista sorrendje érkezési sorrendben kerül meghatározásra.",
-          2: "Amint felszabadul kapacitás, a várólistán lévő felhasználókat sorrendben értesítjük.",
-          3: "Fenntartjuk a jogot, hogy a kapacitáskorlátokat bármikor módosítsuk."
-        }
+        paragraphs: [
+          "A szolgáltatás minőségének biztosítása érdekében az Amiquus legfeljebb 30 aktív előfizetésre korlátozza a rendszer kapacitását. Ha a kapacitás betelik:",
+        ],
+        list: [
+          "Az új felhasználók a várólistára kerülnek",
+          "A várólista sorrendje érkezési sorrend alapján történik",
+          "Amikor kapacitás szabadul fel, a várólistán szereplő felhasználókat értesítjük",
+          "Fenntartjuk a jogot a kapacitáskorlátok módosítására",
+        ],
       },
-      6: {
-        id: "adatgyűjtés",
-        heading: "Webes adatgyűjtés korlátai",
-        paragraphs: {
-          0: "Szolgáltatásunk több autóhirdetési weboldalról származó adatokat ér el és dolgoz fel. Szolgáltatásunk használatával Ön tudomásul veszi, hogy:"
-        },
-        list: {
-          0: "Amiquus tiszteletben tartja az általunk figyelt weboldalak felhasználási feltételeit.",
-          1: "Sebességkorlátozást és körültekintő feltérképezési gyakorlatokat alkalmazunk",
-          2: "Bizonyos weboldalak elérhetősége a saját feltételeik és technikai intézkedéseik alapján változhat.",
-          3: "Nem vállalunk garanciát a begyűjtött adatok teljességére vagy időszerűségére."
-        }
+      "6": {
+        id: "scraping",
+        heading: "Adatgyűjtési korlátozások",
+        paragraphs: [
+          "Szolgáltatásunk több autóhirdetési platformról gyűjt és dolgoz fel adatokat. A szolgáltatás használatával Ön tudomásul veszi, hogy:",
+        ],
+        list: [
+          "Az Amiquus tiszteletben tartja a monitorozott weboldalak szolgáltatási feltételeit",
+          "Korlátozzuk a lekérdezések számát és etikus adatgyűjtési módszereket alkalmazunk",
+          "Egyes weboldalak elérhetősége módosulhat saját szabályzataik vagy technikai korlátozásaik alapján",
+          "Nem vállalunk garanciát az adatok teljességére vagy pontosságára",
+        ],
       },
-      7: {
-        id: "intellektuális",
+      "7": {
+        id: "intellectual",
         heading: "Szellemi tulajdon",
-        paragraphs: {
-          0: "Az AMIQUUS szolgáltatás, beleértve annak eredeti tartalmát, funkcióit és működését, az AMIQUUS kizárólagos tulajdonát képezi és az is marad. Szolgáltatásunkat szerzői jog, védjegy és egyéb, az Amerikai Egyesült Államokban és más országokban érvényben lévő jogszabályok védik.",
-          1: "Védjegyeink és arculatunk nem használhatók fel semmilyen termékkel vagy szolgáltatással kapcsolatban az Amiquus előzetes írásbeli hozzájárulása nélkül."
-        },
+        paragraphs: [
+          "Az Amiquus szolgáltatás, beleértve az eredeti tartalmakat, funkciókat és kialakítást, az Amiquus kizárólagos tulajdonát képezi, és szerzői jogi és védjegyjogszabályok védik.",
+          "Védjegyeink és arculati elemeink nem használhatók fel az Amiquus írásos engedélye nélkül.",
+        ],
+        list: [],
+      },
+      "8": {
+        id: "termination",
+        heading: "Fiók megszüntetése",
+        paragraphs: [
+          "Jogunkban áll fiókját azonnali hatállyal, előzetes értesítés nélkül felfüggeszteni vagy megszüntetni bármilyen okból, többek között a feltételek megsértése miatt.",
+          "A megszüntetés után Ön azonnal elveszíti a szolgáltatáshoz való hozzáférést. Ha törölni szeretné a fiókját, egyszerűen hagyja abba a szolgáltatás használatát, vagy vegye fel velünk a kapcsolatot a törléshez.",
+        ],
+        list: [],
+      },
+      "9": {
+        id: "limitations",
+        heading: "Felelősségkorlátozás",
+        paragraphs: [
+          "Az Amiquus, annak igazgatói, alkalmazottai, partnerei, beszállítói vagy leányvállalatai semmilyen esetben sem felelősek közvetett, véletlenszerű, különleges vagy következményes károkért, beleértve többek között a nyereség, adatok vagy jó hírnév elvesztését, amelyek az alábbiak miatt következnek be:",
+        ],
         list: [
-        ]
+          "A szolgáltatáshoz való hozzáférés vagy annak hiánya",
+          "Harmadik felek magatartása vagy tartalma",
+          "A szolgáltatásból származó tartalmak",
+          "Jogosulatlan hozzáférés vagy adatmanipuláció",
+        ],
       },
-      8: {
-        id: "felmondás",
-        heading: "Megszüntetés",
-        paragraphs: {
-          0: "Fiókját azonnal megszüntethetjük vagy felfüggeszthetjük előzetes értesítés vagy felelősség nélkül, bármilyen okból, beleértve korlátozás nélkül, ha megszegi a Feltételeket.",
-          1: "A szolgáltatás megszűnésekor az Ön szolgáltatáshoz való hozzáférése azonnal megszűnik. Ha szeretné megszüntetni fiókját, egyszerűen hagyja abba a szolgáltatás használatát, vagy lépjen kapcsolatba velünk fiókja törlésének igényléséhez."
-        },
-        list: [
-        ]
-      },
-      9: {
-        id: "korlátozások",
-        heading: "Felelősség kizárása",
-        paragraphs: {
-          0: "AMIQUUS, valamint annak igazgatói, alkalmazottai, partnerei, ügynökei, beszállítói vagy leányvállalatai semmilyen esetben sem felelősek semmilyen közvetett, véletlenszerű, különleges, következményi vagy büntető jellegű kárért, beleértve – korlátozás nélkül – az elmaradt hasznot, adat-, használat-, jóhírnév-veszteséget vagy egyéb immateriális veszteséget, amely abból ered, hogy:"
-        },
-        list: {
-          0: "Az Ön hozzáférése vagy használata, illetve a szolgáltatáshoz való hozzáférés vagy használat lehetetlensége",
-          1: "Bármilyen harmadik fél magatartása vagy tartalma a szolgáltatáson",
-          2: "Bármilyen, a szolgáltatásból származó tartalom",
-          3: "Jogosulatlan hozzáférés, használat vagy az Ön adatainak, tartalmának módosítása"
-        }
-      },
-      10: {
-        id: "jogi nyilatkozat",
+      "10": {
+        id: "disclaimer",
         heading: "Jogi nyilatkozat",
-        paragraphs: {
-          0: "A szolgáltatást saját felelősségére használja. A szolgáltatás „JELEN ÁLLAPOTÁBAN” és „ELÉRHETŐSÉGE SZERINT” vehető igénybe. A szolgáltatás bármiféle garancia nélkül, akár kifejezett, akár hallgatólagos módon kerül nyújtásra.",
-          1: "Amiquus nem vállal garanciát arra, hogy a szolgáltatás folyamatos, időszerű, biztonságos vagy hibamentes lesz, illetve hogy a szolgáltatás használatával elérhető eredmények pontosak vagy megbízhatóak lesznek."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "A szolgáltatást saját felelősségére használja. A szolgáltatás „JELEN ÁLLAPOTÁBAN” és „ELÉRHETŐ FORMÁBAN” kerül biztosításra, bármilyen kifejezett vagy hallgatólagos garancia nélkül.",
+          "Az Amiquus nem garantálja, hogy a szolgáltatás megszakításmentes, biztonságos vagy hibamentes lesz.",
+        ],
+        list: [],
       },
-      11: {
-        id: "sütik",
-        heading: "Sütikre vonatkozó szabályzat",
-        paragraphs: {
-          0: "A Cookie-szabályzatunk elmagyarázza, mik azok a sütik, hogyan használjuk őket, hogyan használhatják partnereink – harmadik felek – a sütiket szolgáltatásunkban, milyen lehetőségei vannak a sütik kezelésére, valamint további információkat is nyújt a sütikről. Kérjük, tekintse meg az Adatvédelmi szabályzatunk Sütikre vonatkozó részét."
-        },
-        list: [
-        ]
+      "11": {
+        id: "cookies",
+        heading: "Cookie-kra vonatkozó szabályzat",
+        paragraphs: [
+          "Cookie-szabályzatunk ismerteti, mik azok a cookie-k, hogyan használjuk őket, milyen harmadik felek használhatnak cookie-kat, és milyen lehetőségei vannak Önnek a cookie-k kezelésére. További részletek az adatvédelmi szabályzatban találhatók.",
+        ],
+        list: [],
       },
-      12: {
-        id: "irányadó jog",
+      "12": {
+        id: "governing-law",
         heading: "Irányadó jog",
-        paragraphs: {
-          0: "Ezen Feltételekre az Amerikai Egyesült Államok jogszabályai az irányadók és azok szerint kell értelmezni őket, függetlenül a kollíziós jogi rendelkezésektől.",
-          1: "Az, hogy nem érvényesítjük ezen Feltételek bármely jogát vagy rendelkezését, nem minősül az adott jogról való lemondásnak. Ha ezen Feltételek bármely rendelkezését egy bíróság érvénytelennek vagy végrehajthatatlannak nyilvánítja, a többi rendelkezés továbbra is érvényben marad."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "A jelen feltételekre az Amerikai Egyesült Államok joga irányadó, a kollíziós szabályok figyelmen kívül hagyásával.",
+          "Bármely feltétel érvénytelensége nem érinti a többi feltétel érvényességét.",
+        ],
+        list: [],
       },
-      13: {
-        id: "kapcsolat",
-        heading: "Lépjen kapcsolatba velünk",
-        paragraphs: {
-          0: "Ha bármilyen kérdése van ezekkel a Feltételekkel kapcsolatban, kérjük, lépjen kapcsolatba velünk:"
-        },
-        list: {
-          0: "E-mailben: legal@amiquus.com",
-          1: "A kapcsolat oldal meglátogatásával a weboldalunkon"
-        }
-      }
-    }
+      "13": {
+        id: "contact",
+        heading: "Kapcsolatfelvétel",
+        paragraphs: [
+          "Ha kérdése van a jelen feltételekkel kapcsolatban, kérjük, lépjen kapcsolatba velünk:",
+        ],
+        list: [
+          "E-mail: legal@amiquus.com",
+          "Weboldalunk kapcsolati oldalán keresztül",
+        ],
+      },
+    },
   },
   privacy: {
-    metaTitle: "Adatvédelmi tájékoztató | Amiquus",
-    metaDescription: "Ismerje meg, hogyan kezeli az AMIQUUS az Ön személyes adatait, adatvédelmi jogait és adatgyűjtési gyakorlatait.",
-    title: "Adatvédelmi tájékoztató",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Adatvédelmi irányelvek | Amiquus",
+    metaDescription:
+      "Ismerje meg, hogyan kezeli az Amiquus az Ön személyes adatait, milyen jogai vannak, és milyen adatkezelési elvek alapján működik a rendszer.",
+    title: "Adatvédelmi irányelvek",
+    lastUpdated: "Utoljára frissítve: 2025. május 21.",
     sections: {
-      0: {
-        id: "bevezetés",
+      "0": {
+        id: "introduction",
         heading: "Bevezetés",
-        paragraphs: {
-          0: "Üdvözöljük az AMIQUUS oldalán. Tiszteletben tartjuk az Ön magánéletét, és elkötelezettek vagyunk személyes adatainak védelme mellett. Ez az adatvédelmi tájékoztató arról informálja Önt, hogyan kezeljük személyes adatait, amikor meglátogatja weboldalunkat, valamint ismerteti az Ön adatvédelmi jogait és azt, hogy a jogszabályok miként védik Önt."
-        }
+        paragraphs: [
+          "Üdvözöljük az Amiquus oldalán. Tiszteletben tartjuk az Ön adatvédelmét, és elkötelezettek vagyunk személyes adatainak védelme iránt. Ez az irányelv leírja, hogyan kezeljük az Ön adatait, amikor ellátogat weboldalunkra, és hogyan gyakorolhatja adatvédelmi jogait.",
+        ],
       },
-      1: {
-        id: "adatok-amelyeket-gyűjtünk",
-        heading: "Az általunk gyűjtött információk",
-        paragraphs: {
-          0: "Különféle típusú információkat gyűjtünk különböző célokra, hogy szolgáltatásunkat biztosítsuk és fejlesszük az Ön számára."
-        },
-        list: {
-          0: "Személyes adatok: E-mail cím, keresztnév, vezetéknév és profilkép (ha harmadik fél általi hitelesítés során meg van adva).",
-          1: "Fiókadatok: Bejelentkezési adatai és fiókbeállításai.",
-          2: "Használati adatok: Információk arról, hogyan használja weboldalunkat és szolgáltatásainkat.",
-          3: "Autókeresési beállítások: Azok a járműkritériumok, amelyeket a figyeléshez megad (márka, modell, árkategória stb.).",
-          4: "Telegram információk: Ha úgy döntesz, hogy Telegramon keresztül szeretnél értesítéseket kapni, eltároljuk a Telegram chat azonosítódat és a bot tokenedet.",
-          5: "Fizetési információk: Amikor vásárol, a fizetési szolgáltatónk begyűjti azokat az adatokat, amelyek szükségesek a tranzakció feldolgozásához. Az AMIQUUS nem tárolja a teljes hitelkártyaadatait."
-        }
+      "1": {
+        id: "data-we-collect",
+        heading: "Milyen adatokat gyűjtünk",
+        paragraphs: [
+          "Többféle adatot gyűjtünk annak érdekében, hogy szolgáltatásunkat biztosítani és fejleszteni tudjuk:",
+        ],
+        list: [
+          "Személyes adatok: e-mail cím, vezetéknév, keresztnév, profilkép (ha harmadik fél által biztosított bejelentkezést használ).",
+          "Fiókadatok: bejelentkezési információk és fiókbeállítások.",
+          "Használati adatok: információk arról, hogyan használja weboldalunkat és szolgáltatásunkat.",
+          "Autókeresési beállítások: a márka, modellek, árkategória és egyéb paraméterek, amelyeket figyelésre állít be.",
+          "Telegram információk: ha Telegram értesítéseket kér, eltároljuk a chat ID-t és a bot tokenjét.",
+          "Fizetési adatok: ha fizetést hajt végre, fizetésfeldolgozónk gyűjti a tranzakcióhoz szükséges adatokat. Az Amiquus nem tárol hitelkártya adatokat.",
+        ],
       },
-      2: {
-        id: "hogyan-használjuk-az-adatokat",
-        heading: "Hogyan használjuk az adataidat",
-        paragraphs: {
-          0: "Személyes adataidat a következő célokra használjuk fel:"
-        },
-        list: {
-          0: "Szolgáltatásunk nyújtása és fenntartása érdekében",
-          1: "Hogy értesíthessünk a szolgáltatásunk változásairól",
-          2: "Annak érdekében, hogy részt vehess az AMIQUUS szolgáltatásunk interaktív funkcióiban",
-          3: "Ügyfélszolgálat biztosítása",
-          4: "Elemzések vagy értékes információk gyűjtése annak érdekében, hogy javíthassuk szolgáltatásunkat",
-          5: "Szolgáltatásunk használatának nyomon követése érdekében",
-          6: "A technikai problémák felismerése, megelőzése és kezelése érdekében",
-          7: "A fizetések feldolgozásához és a csalárd tranzakciók megelőzéséhez",
-          8: "Az Ön preferenciáinak megfelelő autóhirdetések küldése az Ön által választott értesítési módon keresztül"
-        }
+      "2": {
+        id: "how-we-use-data",
+        heading: "Hogyan használjuk az adatokat",
+        paragraphs: ["A személyes adatokat az alábbi célokra használjuk:"],
+        list: [
+          "Szolgáltatásunk biztosítása és fenntartása",
+          "Értesítések küldése a szolgáltatás változásairól",
+          "Interaktív funkciók használatának lehetővé tétele",
+          "Ügyféltámogatás biztosítása",
+          "Elemzési adatok gyűjtése a szolgáltatás fejlesztésére",
+          "A szolgáltatás használatának monitorozása",
+          "Technikai problémák észlelése és kezelése",
+          "Fizetések feldolgozása és a csalások megelőzése",
+          "Autóhirdetések küldése az Ön beállított kritériumai alapján",
+        ],
       },
-      3: {
-        id: "adat­tárolás",
-        heading: "Adattárolás és biztonság",
-        paragraphs: {
-          0: "Megfelelő biztonsági intézkedéseket alkalmazunk annak érdekében, hogy személyes adatait megvédjük a jogosulatlan hozzáféréstől, módosítástól, nyilvánosságra hozataltól vagy megsemmisüléstől. Minden adat biztonságos szervereken kerül tárolásra, titkosítva az átvitel és a tárolás során is.",
-          1: "Személyes adatait csak addig őrizzük meg, ameddig az ebben az adatvédelmi tájékoztatóban meghatározott célok teljesítéséhez szükséges, beleértve bármilyen jogi, szabályozási, adózási, számviteli vagy jelentéstételi kötelezettség teljesítését is."
-        }
+      "3": {
+        id: "data-storage",
+        heading: "Adatok tárolása és biztonság",
+        paragraphs: [
+          "Megfelelő biztonsági intézkedéseket alkalmazunk az Ön személyes adatainak védelmére, beleértve a titkosítást adatátvitel és tárolás során.",
+          "Személyes adatait csak addig őrizzük meg, ameddig az szükséges az adatvédelmi irányelvben meghatározott célok teljesítéséhez.",
+        ],
       },
-      4: {
-        id: "általános adatvédelmi rendelet",
+      "4": {
+        id: "gdpr",
         heading: "Az Ön GDPR jogai",
-        paragraphs: {
-          0: "Ha Ön az Európai Gazdasági Térség (EGT) lakosa, bizonyos adatvédelmi jogok illetik meg. Az AMIQUUS arra törekszik, hogy ésszerű lépéseket tegyen annak érdekében, hogy Ön javíthassa, módosíthassa, törölhesse vagy korlátozhassa személyes adatainak felhasználását.",
-          1: "Önnek a következő adatvédelmi jogai vannak:"
-        },
-        list: {
-          0: "Jog az Önről tárolt információkhoz való hozzáférésre, frissítésére vagy törlésére",
-          1: "A helyesbítéshez való jog",
-          2: "Tiltakozáshoz való jog",
-          3: "A korlátozáshoz való jog",
-          4: "Az adathordozhatósághoz való jog",
-          5: "A hozzájárulás visszavonásának joga"
-        }
+        paragraphs: [
+          "Ha Ön az Európai Gazdasági Térség (EGT) lakosa, a következő adatvédelmi jogok illetik meg:",
+        ],
+        list: [
+          "Hozzáférési jog",
+          "Helyesbítéshez való jog",
+          "Törléshez való jog",
+          "Adatkezelés korlátozásának joga",
+          "Tiltakozáshoz való jog",
+          "Adathordozhatósághoz való jog",
+          "Hozzájárulás visszavonásának joga",
+        ],
       },
-      5: {
-        id: "sütik",
-        heading: "Sütik szabályzata",
-        paragraphs: {
-          0: "A sütik kis adatfájlok, amelyeket az eszközödön tárolunk. A sütiket arra használjuk, hogy:"
-        },
-        list: {
-          0: "Maradjon bejelentkezve",
-          1: "Értsd meg, hogyan használod a weboldalunkat",
-          2: "Emlékezz a beállításaidra",
-          3: "Személyre szabhatja az élményt"
-        }
+      "5": {
+        id: "cookies",
+        heading: "Cookie-k használata",
+        paragraphs: [
+          "A cookie-k kis adatfájlok, amelyeket a készüléken tárolunk. Cookie-kat használunk az alábbi célokra:",
+        ],
+        list: [
+          "Az Ön bejelentkezési állapotának megőrzése",
+          "Weboldalunk használatának megértése",
+          "Az Ön beállításainak megőrzése",
+          "Személyre szabott élmény biztosítása",
+        ],
       },
-      6: {
-        id: "harmadik fél",
-        heading: "Harmadik fél szolgáltatások",
-        paragraphs: {
-          0: "Harmadik fél cégeket és magánszemélyeket is megbízhatunk szolgáltatásunk elősegítésével, a szolgáltatás nyújtásával a nevünkben, szolgáltatáshoz kapcsolódó feladatok elvégzésével, vagy azzal, hogy segítsenek elemezni, hogyan használják a szolgáltatásunkat.",
-          1: "Ezek a harmadik felek a következők:"
-        },
-        list: {
-          0: "Fizetési feldolgozók (Stripe)",
-          1: "Analitikai szolgáltatók",
-          2: "Ügyfélszolgálati szolgáltatások",
-          3: "Tárhely- és felhőinfrastruktúra-szolgáltatók"
-        },
-        paragraphs2: {
-          0: "Ezek a harmadik felek kizárólag a nevünkben végzett feladatok elvégzése érdekében férhetnek hozzá személyes adataihoz, és kötelesek azokat semmilyen más célra nem nyilvánosságra hozni vagy felhasználni."
-        }
+      "6": {
+        id: "third-party",
+        heading: "Harmadik fél szolgáltatók",
+        paragraphs: [
+          "Harmadik fél szolgáltatókat vehetünk igénybe a szolgáltatásunk működtetéséhez, elemzéséhez vagy támogatásához.",
+          "Ezek közé tartozhatnak:",
+        ],
+        list: [
+          "Fizetésfeldolgozók (Stripe)",
+          "Analitikai szolgáltatások",
+          "Ügyfélszolgálati szolgáltatók",
+          "Tárhely- és felhőinfrastruktúra-szolgáltatók",
+        ],
+        paragraphs2: [
+          "A harmadik fél szolgáltatók kizárólag az adott feladat elvégzéséhez szükséges mértékben férnek hozzá személyes adatokhoz, és nem jogosultak azokat más célra felhasználni.",
+        ],
       },
-      7: {
-        id: "változások",
-        heading: "A jelen Adatvédelmi szabályzat módosításai",
-        paragraphs: {
-          0: "Időnként frissíthetjük adatvédelmi szabályzatunkat. Minden változásról értesítjük Önt azzal, hogy az új adatvédelmi szabályzatot közzétesszük ezen az oldalon, és frissítjük az „Utoljára frissítve” dátumot.",
-          1: "Javasoljuk, hogy időnként tekintse át ezt az adatvédelmi tájékoztatót az esetleges változások miatt. Az adatvédelmi tájékoztató módosításai akkor lépnek hatályba, amikor ezen az oldalon közzétesszük őket."
-        }
+      "7": {
+        id: "changes",
+        heading: "Az adatvédelmi irányelvek módosítása",
+        paragraphs: [
+          "Időnként frissíthetjük adatvédelmi irányelveinket. A módosításokat ezen az oldalon tesszük közzé, és frissítjük a „Utoljára frissítve” dátumot.",
+          "Javasoljuk, hogy rendszeresen ellenőrizze az esetleges változásokat.",
+        ],
       },
-      8: {
-        id: "kapcsolat",
-        heading: "Lépjen kapcsolatba velünk",
-        paragraphs: {
-          0: "Ha bármilyen kérdése van a jelen adatvédelmi szabályzattal kapcsolatban, kérjük, lépjen velünk kapcsolatba:"
-        },
-        list: {
-          0: "E-mailben: privacy@amiquus.com",
-          1: "A kapcsolat oldal meglátogatásával a weboldalunkon"
-        }
-      }
-    }
+      "8": {
+        id: "contact",
+        heading: "Kapcsolatfelvétel",
+        paragraphs: [
+          "Ha kérdése van az adatvédelmi irányelvekkel kapcsolatban, lépjen kapcsolatba velünk:",
+        ],
+        list: [
+          "E-mail: privacy@amiquus.com",
+          "Weboldalunk kapcsolati oldalán keresztül",
+        ],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Gyakran Ismételt Kérdések | Amiquus",
-    metaDescription: "Találd meg a válaszokat a leggyakoribb kérdésekre az AMIQUUS autóhirdetés-figyelő szolgáltatásáról, előfizetésekről, értesítések beállításáról és egyebekről.",
+    metaTitle: "GYIK | Amiquus",
+    metaDescription:
+      "Válaszok a leggyakrabban feltett kérdésekre az Amiquus autóhirdetés-figyelő szolgáltatásával kapcsolatban.",
     title: "Gyakran ismételt kérdések",
-    subtitle: "Találjon gyors válaszokat a gyakran ismételt kérdésekre autóhirdetés-figyelő szolgáltatásunkkal kapcsolatban",
+    subtitle:
+      "Gyors válaszok az autóhirdetés-figyelő szolgáltatásunkkal kapcsolatban",
     general: {
       heading: "Általános kérdések",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Mi az az Amiquus?",
+        answer:
+          "Az Amiquus egy szolgáltatás, amely több autóhirdetési weboldalt figyel, és azonnali Telegram értesítéseket küld, amikor a keresési feltételeknek megfelelő hirdetés jelenik meg.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Hogyan működik?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
+          "Beállítja keresési feltételeit (márka, modell, ár stb.)",
+          "Kiválasztja, mely weboldalakat szeretné figyelni",
+          "Összekapcsolja Telegram fiókját",
+          "A rendszer folyamatosan figyeli a kiválasztott oldalakat",
+          "Amint megjelenik egy megfelelő autóhirdetés, azonnal értesítést kap",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Mely autóhirdetési weboldalakat figyelitek?",
+        answerIntro: "Jelenleg a következő nagy platformokat figyeljük:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (URL alapján)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro: "Folyamatosan bővítjük a monitorozott weboldalak listáját.",
+      },
     },
     subscription: {
-      heading: "Előfizetéssel kapcsolatos kérdések",
+      heading: "Előfizetések",
       cost: {
         question: "Mennyibe kerül az előfizetés?",
-        answer: {
-          0: "Áraink már havi 79,99 USD-tól elérhetők, amely egy weboldal 6 óránkénti frissítésével járó monitorozását tartalmazza. Minden további weboldal havi 4,99 USD-ba kerül. A frissítési gyakoriságot is növelheti a gyorsabb értesítésekért.",
-          1: "A részletes árakért kérjük, tekintse meg az árak szekciót a kezdőlapon."
-        }
+        answer: [
+          "Előfizetési áraink havi $79.99-tól indulnak egy weboldal figyelése esetén, 6 óránkénti frissítéssel.",
+          "További weboldalak figyelése havi $4.99-ért érhető el.",
+        ],
       },
       cancel: {
-        question: "Hogyan mondhatom le az előfizetésemet?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Jelentkezzen be fiókjába",
-          1: "Navigáljon a „Profil” oldalra",
-          2: "Válassza a „Előfizetések” fület",
-          3: "Kattintson a „Előfizetés lemondása” gombra annál az előfizetésnél, amelyet le szeretne mondani."
-        },
-        note: "Az előfizetésed aktív marad a jelenlegi számlázási időszak végéig."
+        question: "Hogyan tudom lemondani az előfizetést?",
+        stepsIntro: "Az előfizetés lemondásához:",
+        steps: [
+          "Jelentkezzen be fiókjába",
+          "Nyissa meg a „Profile” oldalt",
+          "Lépjen a „Subscriptions” fülre",
+          "Kattintson a „Cancel Subscription” gombra",
+        ],
+        note: "Az előfizetés a jelenlegi számlázási ciklus végéig aktív marad.",
       },
       multiple: {
-        question: "Lehet több előfizetésem különböző autómodellekre?",
-        answer: "Igen, egyetlen fiók alatt több előfizetést is létrehozhatsz. Minden előfizetés különböző autómodelleket, márkákat vagy árkategóriákat követhet. Ez különösen hasznos, ha több járművet keresel, vagy barátoknak és családtagoknak segítesz autót találni."
+        question: "Lehet több előfizetésem is?",
+        answer:
+          "Igen, egy fiókon belül több előfizetés is létrehozható különböző autótípusokra vagy keresési beállításokra.",
       },
       limit: {
-        question: "Miért van korlátozva a feliratkozók száma?",
-        intro: "Szolgáltatásunkat 30 aktív előfizetőre korlátozzuk, hogy biztosítsuk:",
-        list: {
-          0: "A legmagasabb színvonalú szolgáltatás és adatok pontossága",
-          1: "Személyre szabott támogatás minden előfizetőnek",
-          2: "Gyorsabb értesítéskézbesítés a csúcsidőszakokban",
-          3: "Etikus adatgyűjtés, amely nem terheli túl a célzott weboldalakat"
-        },
-        outro: "Ha elértük a kapacitást, csatlakozhatsz a várólistánkhoz, hogy értesítést kapj, amikor felszabadul egy hely."
-      }
+        question: "Miért van előfizetési limit?",
+        intro: "Legfeljebb 30 aktív előfizetőt fogadunk, hogy:",
+        list: [
+          "biztosítsuk a szolgáltatás magas minőségét",
+          "személyes támogatást nyújtsunk",
+          "gyorsabb értesítéseket küldhessünk",
+          "etikus és stabil adatgyűjtést végezhessünk",
+        ],
+        outro: "Ha elértük a kapacitást, csatlakozhat a várólistához.",
+      },
     },
     technical: {
-      heading: "Műszaki kérdések",
+      heading: "Technikai kérdések",
       telegram: {
         question: "Hogyan állíthatom be a Telegram értesítéseket?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Hozz létre egy Telegram botot a BotFather segítségével (a beállítás során részletes útmutatót kapsz)",
-          1: "Másold ki a bot tokenedet a BotFathertől",
-          2: "Kezdje el a beszélgetést a botjával",
-          3: "Szerezze meg a chat-azonosítóját (a beállítás során részletes útmutatót kap)",
-          4: "Add meg a bot tokenedet és a chat azonosítódat az AMIQUUS előfizetésed beállításaiban.",
-          5: "Tesztelje az értesítési beállítását a `Tesztüzenet küldése` gombbal"
-        },
-        note: "Részletes, lépésről lépésre vezető útmutató képernyőképekkel a feliratkozás beállítása során elérhető."
+        stepsIntro: "Kövesse az alábbi lépéseket:",
+        steps: [
+          "Hozzon létre egy Telegram botot a BotFather segítségével",
+          "Másolja ki a bot tokenjét",
+          "Indítson beszélgetést a bottal",
+          "Szerezze meg a chat ID-t",
+          "Adja meg a fenti adatokat az Amiquus beállításaiban",
+          "Tesztelje az értesítést a „Send Test Message” gombbal",
+        ],
+        note: "Részletes útmutató elérhető a felhasználói felületen.",
       },
       frequency: {
-        question: "Milyen gyakran fogok értesítéseket kapni?",
-        intro: "Az értesítések gyakorisága attól függ, hogy:",
-        list: {
-          0: "Az Ön által választott frissítési gyakorisági csomag (6 óránkéntitől 30 percenkéntiig)",
-          1: "Hány új hirdetés felel meg a keresési feltételeidnek?",
-          2: "Mennyire aktív a piac az Ön által kiválasztott márka/modell esetében"
-        },
-        outro: "Csak akkor kapsz értesítést, ha új, a keresési feltételeidnek megfelelő hirdetések jelennek meg."
+        question: "Milyen gyakran kapok értesítést?",
+        intro: "Az értesítések gyakorisága attól függ:",
+        list: [
+          "milyen frissítési csomagot választott",
+          "mennyire aktív a piac a keresett autók esetében",
+          "milyen gyorsan jelennek meg új hirdetések",
+        ],
+        outro:
+          "Értesítést csak akkor kap, ha új, a keresési feltételeinek megfelelő hirdetés jelenik meg.",
       },
       privacy: {
-        question: "Hogyan védik a személyes adataimat?",
-        intro: "Az adatvédelem kiemelten fontos számunkra, ezért a következő intézkedéseket alkalmazzuk:",
-        list: {
-          0: "Titkosított adatok átvitel közben és tároláskor",
-          1: "Biztonságos fizetés Stripe-on keresztül",
-          2: "Nincs adatmegosztás harmadik féllel",
-          3: "Adatainak lekérését vagy törlését bármikor kérheti"
-        },
-        outro: "Olvassa el teljes Adatvédelmi szabályzatunkat további információkért."
-      }
+        question: "Hogyan véditek az adataimat?",
+        intro: "Az adatbiztonság érdekében:",
+        list: [
+          "titkosítást alkalmazunk átvitelkor és tároláskor",
+          "biztonságos fizetést használunk (Stripe)",
+          "nem osztjuk meg adatait harmadik felekkel",
+          "bármikor kérheti adatai törlését",
+        ],
+        outro: "További információt az adatvédelmi irányelvekben talál.",
+      },
     },
     support: {
-      heading: "Még mindig van kérdése?",
-      description: "Ha nem találta meg a kérdésére a választ, ügyfélszolgálatunk készséggel segít Önnek!",
-      button: "Lépjen kapcsolatba az ügyfélszolgálattal"
-    }
+      heading: "További kérdése van?",
+      description:
+        "Ha nem találta meg a választ, ügyfélszolgálatunk készséggel áll rendelkezésére!",
+      button: "Kapcsolatfelvétel",
+    },
   },
   waitlist: {
-    metaTitle: "Csatlakozz a várólistához – Amiquus",
-    metaDescription: "Csatlakozz az AMIQUUS várólistájához, hogy értesítést kapj, amikor az előfizetések elérhetővé válnak.",
-    title: "Csatlakozz a várólistánkhoz",
-    subtitle: "A nagy kereslet miatt korlátozzuk az aktív előfizetések számát, hogy minden felhasználónk számára a legjobb szolgáltatási minőséget biztosíthassuk.",
+    metaTitle: "Várólista – Amiquus",
+    metaDescription:
+      "Csatlakozzon az Amiquus várólistájához, hogy értesítést kapjon, amikor elérhetővé válik egy előfizetési hely.",
+    title: "Csatlakozás a várólistához",
+    subtitle:
+      "A magas kereslet miatt korlátozzuk az aktív előfizetések számát, hogy mindenki számára magas minőséget biztosítsunk.",
     limited: {
-      heading: "Korlátozott elérhetőség",
-      description: "Rendszerünket legfeljebb 30 aktív előfizetőre korlátozzuk, hogy biztosítsuk:",
-      points: {
-        0: "Kivételes adatgyűjtési megbízhatóság és sebesség minden felhasználó számára",
-        1: "Csökkentett esély az autóhirdető weboldalak általi blokkolásra",
-        2: "Személyre szabott támogatás minden előfizetőnek",
-        3: "A szervererőforrások méltányos elosztása"
-      },
-      available: "Jelenleg {{remaining}} előfizetői hely elérhető a teljes {{capacity}}-ből.",
-      full: "Jelenleg minden előfizetési hely betelt. Iratkozz fel a várólistára, hogy értesítést kapj, amikor felszabadul egy hely."
+      heading: "Korlátozott kapacitás",
+      description: "Rendszerünk maximum 30 aktív előfizetést támogat, hogy:",
+      points: [
+        "gyors és megbízható adatgyűjtést biztosítsunk",
+        "minimálisra csökkentsük az autóhirdetési oldalak letiltásának esélyét",
+        "személyre szabott támogatást nyújtsunk",
+        "egyenletesen osszuk el a szervererőforrásokat",
+      ],
+      available: "{{remaining}} szabad hely elérhető a(z) {{capacity}} közül.",
+      full: "Jelenleg minden előfizetési hely betelt. Csatlakozzon a várólistához, és elsőként értesítjük, amikor egy hely felszabadul.",
     },
     success: {
-      title: "Várólistára kerültél!",
-      description: "Értesítünk, amint elérhetővé válik egy előfizetői hely.",
-      message: "Köszönjük érdeklődését az Amiquus iránt! Felvettük a várólistára, és amint felszabadul egy hely, felvesszük Önnel a kapcsolatot.",
-      button: "Vissza a kezdőlapra"
+      title: "Sikeresen felkerült a várólistára!",
+      description: "Értesítjük, amint elérhetővé válik egy előfizetési hely.",
+      message:
+        "Köszönjük érdeklődését az Amiquus iránt! Felvettük a várólistára, és értesítjük, amint új előfizetési lehetőség nyílik.",
+      button: "Vissza a főoldalra",
     },
     cantJoin: {
-      title: "Csatlakozz a várólistához",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Csatlakozás a várólistához",
+      description: "Értesítjük, amint felszabadul egy hely.",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Keresztnév",
+        placeholder: "János",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Vezetéknév",
+        placeholder: "Kovács",
       },
       email: {
         label: "E-mail",
-        placeholder: "john.doe@example.com",
-        description: "Ezt az e-mail címet arra fogjuk használni, hogy értesítsünk, amikor felszabadul egy hely."
+        placeholder: "email@example.com",
+        description:
+          "Erre az e-mail címre küldjük az értesítést, amikor egy hely elérhetővé válik.",
       },
-      submit: "Csatlakozz a várólistához",
-      submitting: "Beküldés..."
-    }
+      submit: "Csatlakozás a várólistához",
+      submitting: "Küldés...",
+    },
   },
   support: {
-    metaTitle: "Támogatás | Amiquus - Súgóközpont",
-    metaDescription: "Kérjen segítséget AMIQUUS fiókjához, előfizetéséhez vagy autós értesítéseihez. Böngéssze súgóközpontunkat, vagy lépjen kapcsolatba ügyfélszolgálatunkkal segítségért.",
-    title: "Ügyfélszolgálat",
-    subtitle: "Találd meg a gyakran ismételt kérdésekre a válaszokat, vagy vedd fel a kapcsolatot ügyfélszolgálatunkkal!",
+    metaTitle: "Ügyfélszolgálat | Amiquus – Súgóközpont",
+    metaDescription:
+      "Segítség fiókjával, előfizetésével vagy autófigyelési beállításaival kapcsolatban. Böngéssze a súgóközpontot vagy lépjen kapcsolatba támogatási csapatunkkal.",
+    title: "Súgóközpont",
+    subtitle: "Gyakori kérdések és támogatás minden Amiquus funkcióhoz",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "E-mailes támogatás",
+      description: "Írjon nekünk, és 24 órán belül válaszolunk.",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Gyakran ismételt kérdések",
     faqs: {
       telegram: {
         question: "Hogyan állíthatom be a Telegram értesítéseket?",
-        intro: "A Telegram értesítések beállításához kövesse az alábbi lépéseket:",
-        steps: {
-          0: "Hozz létre egy Telegram botot a BotFather segítségével (útmutató a vezérlőpultunkon található)",
-          1: "Másold ki az API tokenedet és a chat azonosítódat",
-          2: "Add meg ezeket az adatokat a fiókbeállításaidnál az „Értesítési beállítások” alatt",
-          3: "Tesztelje a kapcsolatát a „Tesztüzenet küldése” gombbal."
-        },
-        outro: "Ha további segítségre van szükséged, részletes útmutatónk elérhető a vezérlőpultodon."
+        intro: "Az értesítések beállításához kövesse az alábbi lépéseket:",
+        steps: [
+          "Hozzon létre egy Telegram botot a BotFather segítségével",
+          "Másolja ki az API tokent és a chat ID-t",
+          "Adja meg ezeket az adatokat a „Notification Preferences” beállításoknál",
+          "Tesztelje a kapcsolatot a „Send Test Message” gombbal",
+        ],
+        outro: "Részletes útmutató elérhető a kezelőfelületén.",
       },
       updates: {
         question: "Milyen gyakran frissülnek az autóhirdetések?",
-        answer: "A frissítések gyakorisága az előfizetési csomagjától függ. Az alapcsomagok 6 óránként kapnak frissítést, míg a Prémium csomagok akár 30 percenként is frissülhetnek. Az aktuális frissítési gyakoriságot megtekintheti és módosíthatja az előfizetési beállításoknál."
+        answer:
+          "Ez az előfizetési csomagtól függ: az alapcsomag 6 óránként frissül, a prémium akár 30 percenként.",
       },
       facebook: {
         question: "Figyelhetem a Facebook Marketplace-et?",
-        answer: "Igen, támogatjuk a Facebook Marketplace figyelését. Ennek beállításához meg kell adnod a Facebook Marketplace keresési eredményoldalának URL-jét a kívánt szűrőkkel. Rendszerünk ezután figyeli ezt a konkrét keresést, és értesít azokról az új hirdetésekről, amelyek megfelelnek a megadott feltételeidnek."
+        answer:
+          "Igen. A monitorozni kívánt Marketplace keresés URL-jének megadásával figyelni tudjuk az Ön számára releváns találatokat.",
       },
       cancel: {
-        question: "Hogyan mondhatom le az előfizetésemet?",
-        answer: "Előfizetését bármikor lemondhatja a fiókprofil oldalán. Kattintson az „Előfizetések” fülre, keresse meg a lemondani kívánt előfizetést, majd kattintson az „Előfizetés lemondása” gombra. Szolgáltatása az aktuális számlázási időszak végéig elérhető marad."
+        question: "Hogyan mondhatom le az előfizetést?",
+        answer:
+          "A „Profile” oldalon lépjen a „Subscriptions” fülre, majd kattintson a „Cancel Subscription” gombra.",
       },
       full: {
-        question: "Mi történik, ha minden előfizetési hely betelt?",
-        answer: "Szolgáltatásunk magas színvonalának megőrzése érdekében korlátozzuk az aktív előfizetések számát. Ha minden hely betelt, csatlakozhatsz a várólistánkhoz. Értesítünk, amint felszabadul egy hely, és elsőbbséged lesz az igénylésre, mielőtt azt a nagyközönség számára elérhetővé tennénk."
-      }
+        question: "Mi történik, ha minden hely betelt?",
+        answer:
+          "A várólistára kerülhet, és elsőként értesítjük, amikor egy hely felszabadul.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "További segítségre van szüksége?",
+      description:
+        "Ha nem találta meg a választ, ügyfélszolgálatunk örömmel segít!",
+      button: "Kapcsolatfelvétel",
+    },
   },
   notFound: {
-    title: "404 Az oldal nem található",
-    message: "Elfelejtetted hozzáadni az oldalt a routerhez?"
+    title: "404 – Az oldal nem található",
+    message: "Elképzelhető, hogy nem adta hozzá ezt az oldalt a routerhez?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Amiquus – E-mail ellenőrző kód",
+      greeting: "Üdvözöljük!",
+      message: "Az alábbi ellenőrző kóddal véglegesítheti regisztrációját:",
+      expiration: "A kód 10 perc múlva lejár.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Amiquus – Fizetési visszaigazolás (Számla #)",
+        h2Message: "Az Amiquus előfizetés sikeresen kifizetve!",
+        greeting: "Üdvözöljük!",
+        paymentMessage: "A következő összeget kaptuk meg:",
+        downloadMessage:
+          "A számlát az alábbi hivatkozáson tekintheti meg vagy töltheti le:",
+        viewInvoice: "Számla megtekintése",
+        invoiceNumber: "Számla #:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Fizetés függőben – Számla",
+        subjectB: "az Amiquus előfizetéséhez",
+        h2Message: "Teendő: fejezze be előfizetésének kifizetését",
+        greeting: "Üdvözöljük!",
+        messageA: "A(z)",
+        messageB:
+          "számú számlája még nincs kifizetve. Előfizetésének aktiválásához kérjük, rendezze a következő összeget:",
+        paymentMessage: "Az alábbi linken keresztül tud biztonságosan fizetni:",
+        payInvoice: "Számla kifizetése",
+        ignoreEmail:
+          "Ha időközben már kifizette, kérem, hagyja figyelmen kívül ezt az üzenetet.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Sikertelen fizetés – Számla",
+        message:
+          "A legutóbbi fizetés feldolgozása sikertelen volt (próbálkozás:",
+        attemptsA:
+          "Hamarosan újra megpróbáljuk. Önnek jelenleg nincs további teendője.",
+        attemptsB: "Három egymást követő tranzakció is sikertelen volt.",
+        attemptsC:
+          "Előfizetését <strong>ideiglenesen felfüggesztettük</strong>.",
+        attemptsD:
+          "Kérjük, frissítse fizetési módszerét, majd aktiválja újra előfizetését:",
+        viewInvoice: "Számla megtekintése",
+        managePayment: "Fizetési módok kezelése",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Felkerült az Amiquus várólistájára!",
+      h2Message: "Ön most a listán van!",
+      hi: "Kedves felhasználó,",
+      message:
+        "Köszönjük, hogy csatlakozott az Amiquus várólistájához! Amint felszabadul egy hely, azonnal értesítjük.",
+      anyQuestions:
+        "Ha bármilyen kérdése lenne, nyugodtan válaszoljon erre az e-mailre.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Köszönjük, hogy az Amiquust választotta!",
+      signature: "Üdvözlettel,<br/>Az Amiquus csapata",
+      team: "— Amiquus csapat",
+      needHelp: "Segítségre van szüksége?",
+      hello: "Üdvözöljük",
+    },
+  },
 };

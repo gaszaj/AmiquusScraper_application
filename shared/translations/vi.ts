@@ -15,1357 +15,1439 @@ export const vi = {
     profile: "Hồ sơ",
     settings: "Cài đặt",
     logout: "Đăng xuất",
-    signUp: "Đăng ký"
+    signUp: "Đăng ký",
   },
   hero: {
-    label: "Theo dõi tin đăng xe đã qua sử dụng theo thời gian thực",
-    title: "Đừng bao giờ bỏ lỡ cơ hội mua xe hoàn hảo",
-    subtitle: "AMIQUUS sẽ thông báo ngay lập tức khi chiếc xe mơ ước của bạn xuất hiện trên nhiều trang web rao bán xe. Nhận thông báo qua Telegram ngay khi tìm thấy kết quả phù hợp.",
-    button1: "Thiết lập cảnh báo của bạn",
+    label: "Theo dõi tin đăng xe cũ theo thời gian thực!",
+    title: "Đừng bỏ lỡ chiếc xe hoàn hảo cho bạn thêm lần nào nữa",
+    subtitle:
+      "Amiquus sẽ báo ngay cho bạn khi chiếc xe mơ ước xuất hiện trên nhiều trang đăng tin xe. Nhận thông báo qua Telegram ngay khi tìm thấy kết quả phù hợp.",
+    button1: "Thiết lập thông báo",
     button2: "Xem cách hoạt động",
     trustIndicators: {
-      websites: "15+ trang web được theo dõi",
-      realtime: "Cảnh báo thời gian thực",
-      noSetup: "Không cần thiết lập",
-      cancelAnytime: "Hủy bất cứ lúc nào"
-    }
+      websites: "Theo dõi hơn 15 website",
+      realtime: "Thông báo theo thời gian thực",
+      noSetup: "Không cần cấu hình phức tạp",
+      cancelAnytime: "Hủy bất cứ lúc nào",
+    },
   },
   limited: {
     full: {
       title: "Đã đạt giới hạn đăng ký",
-      description: "Chúng tôi đã đạt giới hạn 30 người đăng ký đang hoạt động. Hãy tham gia danh sách chờ để được thông báo khi có chỗ trống.",
-      buttonText: "Tham gia danh sách chờ"
+      description:
+        "Chúng tôi đã đạt mức tối đa 30 người đăng ký đang hoạt động. Hãy tham gia danh sách chờ để được báo khi có chỗ trống.",
+      buttonText: "Tham gia danh sách chờ",
     },
     limited: {
       title: "Số lượng có hạn",
-      description: "Chỉ còn {{remaining}} chỗ trống trên tổng số {{capacity}}. Đăng ký ngay trước khi hết chỗ!",
-      buttonText: "Bắt đầu ngay"
+      description:
+        "Chỉ còn {{remaining}} trên tổng số {{capacity}} chỗ. Đăng ký ngay trước khi hết chỗ!",
+      buttonText: "Bắt đầu ngay",
     },
     available: {
-      title: "Các gói đăng ký hiện có",
-      description: "Hiện có {{active}} trên tổng số {{capacity}} gói đăng ký đang hoạt động. Vẫn còn nhiều chỗ để bạn tham gia!",
-      buttonText: "Bắt đầu ngay"
-    }
+      title: "Vẫn còn chỗ đăng ký",
+      description:
+        "Hiện có {{active}} trên {{capacity}} đăng ký đang hoạt động. Vẫn còn nhiều chỗ dành cho bạn!",
+      buttonText: "Bắt đầu ngay",
+    },
   },
   features: {
-    heading: "Tại sao chọn Amiquus?",
-    subheading: "Tiết kiệm thời gian và không bao giờ bỏ lỡ chiếc xe hoàn hảo với dịch vụ theo dõi tự động của chúng tôi.",
+    heading: "Vì sao nên chọn Amiquus?",
+    subheading:
+      "Tiết kiệm thời gian và không bỏ lỡ chiếc xe phù hợp nhờ dịch vụ theo dõi tin đăng tự động.",
     multiSite: {
-      title: "Theo dõi đa trang web",
-      description: "Theo dõi nhiều trang web rao vặt xe hơi cùng lúc mà không cần phải kiểm tra từng trang thủ công."
+      title: "Theo dõi nhiều website",
+      description:
+        "Theo dõi đồng thời nhiều trang đăng tin xe, không cần tự vào từng trang để kiểm tra.",
     },
     notifications: {
       title: "Thông báo tức thì",
-      description: "Nhận thông báo ngay lập tức qua Telegram khi có xe phù hợp tiêu chí của bạn được đăng bán."
+      description:
+        "Nhận thông báo ngay qua Telegram khi có tin đăng phù hợp với tiêu chí của bạn.",
     },
     filters: {
-      title: "Bộ lọc tùy chỉnh",
-      description: "Đặt tiêu chí chi tiết như hãng xe, mẫu mã, năm sản xuất, số km đã đi và khoảng giá để tìm đúng chiếc xe bạn mong muốn."
+      title: "Bộ lọc chi tiết",
+      description:
+        "Thiết lập tiêu chí chính xác: hãng xe, mẫu xe, năm sản xuất, số km và khoảng giá để tìm đúng thứ bạn cần.",
     },
     frequency: {
-      title: "Tần suất tùy chỉnh",
-      description: "Chọn tần suất kiểm tra tin đăng mới, từ cập nhật hàng giờ đến giám sát theo thời gian thực."
+      title: "Tuỳ chỉnh tần suất quét",
+      description:
+        "Chọn tần suất kiểm tra tin mới – từ mỗi giờ một lần đến gần như thời gian thực.",
     },
     languages: {
       title: "Hỗ trợ đa ngôn ngữ",
-      description: "Nhận thông báo bằng ngôn ngữ ưa thích của bạn để hiểu danh sách dễ dàng hơn."
+      description:
+        "Nhận thông báo bằng ngôn ngữ bạn quen dùng để dễ đọc và hiểu nội dung tin đăng.",
     },
     account: {
       title: "Quản lý tài khoản dễ dàng",
-      description: "Quản lý nhiều hồ sơ tìm kiếm và thay đổi cài đặt đăng ký chỉ với vài cú nhấp chuột."
-    }
+      description:
+        "Quản lý nhiều hồ sơ tìm kiếm và chỉnh sửa cài đặt gói đăng ký chỉ với vài thao tác.",
+    },
   },
   howItWorks: {
-    title: "Cách hoạt động của Amiquus",
-    subtitle: "Chỉ cần thiết lập một lần, hệ thống tự động của chúng tôi sẽ tìm cho bạn chiếc xe phù hợp nhất.",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Amiquus hoạt động như thế nào",
+    subtitle:
+      "Thiết lập một lần và để hệ thống tự động tìm cho bạn những deal xe tốt nhất",
+    whyTitle: "Vì sao nên chọn Amiquus?",
     steps: {
       preferences: {
-        title: "Thiết lập tùy chọn của bạn",
-        description: "Chọn hãng xe, mẫu xe, khoảng giá và các tiêu chí khác mà bạn muốn theo dõi."
+        title: "Thiết lập tiêu chí",
+        description:
+          "Chọn hãng xe, mẫu xe, khoảng giá và các tiêu chí khác mà bạn muốn theo dõi.",
       },
       telegram: {
         title: "Kết nối Telegram",
-        description: "Kết nối tài khoản Telegram của bạn để nhận thông báo ngay lập tức về các tin đăng mới."
+        description:
+          "Kết nối tài khoản Telegram để nhận thông báo ngay khi có tin đăng mới.",
       },
       notifications: {
-        title: "Nhận thông báo ngay lập tức",
-        description: "Nhận thông báo ngay khi có xe phù hợp với tiêu chí của bạn xuất hiện trên bất kỳ trang web nào mà AMIQUUS đang theo dõi."
+        title: "Nhận thông báo tức thì",
+        description:
+          "Nhận thông báo ngay khi chiếc xe phù hợp xuất hiện trên bất kỳ website nào chúng tôi theo dõi.",
       },
       findCar: {
-        title: "Tìm chiếc xe hoàn hảo của bạn",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "Tìm chiếc xe hoàn hảo",
+        description:
+          "Là một trong những người đầu tiên biết đến tin đăng mới và chốt deal trước người khác.",
+      },
     },
-    features: {
-      0: "Theo dõi cùng lúc hơn 15 trang web đăng tin rao bán ô tô",
-      1: "Tiêu chí tìm kiếm tùy chỉnh với bộ lọc nâng cao",
-      2: "Thông báo thời gian thực qua Telegram",
-      3: "Thông báo tự động khi giảm giá và có tin đăng mới",
-      4: "Quy trình cài đặt dễ dàng, chỉ mất chưa đến 5 phút"
-    },
-    setAlerts: "Thiết lập cảnh báo của bạn",
+    features: [
+      "Theo dõi hơn 15 website đăng tin xe cùng lúc",
+      "Tiêu chí tìm kiếm linh hoạt với bộ lọc nâng cao",
+      "Thông báo thời gian thực qua Telegram",
+      "Tự động báo tin đăng mới và khi giá giảm",
+      "Quy trình thiết lập đơn giản, chưa đến 5 phút",
+    ],
+    setAlerts: "Thiết lập thông báo",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Đã tìm thấy tin đăng mới!",
+      description:
+        "BMW 3 Series, 2019, 32.500$ – Vừa được đăng trên AutoTrader",
     },
     notificationMockup2: {
-      title: "Cảnh báo Telegram",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "Thông báo Telegram",
+      description: "Mercedes C-Class, 2020, 30.000 km – Vừa giảm giá 2.000$",
+    },
   },
   pricing: {
-    title: "Giá cả minh bạch, đơn giản",
-    subtitle: "Giá của chúng tôi được xây dựng dựa trên nhu cầu riêng của bạn. Hãy bắt đầu với gói cơ bản và tuỳ chỉnh theo yêu cầu của bạn.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Bảng giá đơn giản, minh bạch",
+    subtitle:
+      "Giá được xây dựng dựa trên nhu cầu của bạn. Bắt đầu với gói cơ bản và tuỳ chỉnh thêm theo yêu cầu.",
+    baseTitle: "Gói cơ bản: 79,99$/tháng",
+    includedTitle: "Bao gồm:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Theo dõi 1 website",
+      "Cập nhật mỗi giờ",
+      "Không giới hạn bộ lọc",
+      "Thông báo qua Telegram",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Mỗi website bổ sung"
-      },
-      1: {
-        name: "Cập nhật mỗi 30 phút"
-      },
-      2: {
-        name: "Cập nhật mỗi 15 phút"
-      },
-      3: {
-        name: "Cập nhật mỗi 5 phút"
-      },
-      4: {
-        name: "Cập nhật mỗi phút"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Bắt đầu ngay"
+    addonsTitle: "Tuỳ chọn bổ sung:",
+    addons: [
+      { name: "Mỗi website bổ sung", price: 4.99 },
+      { name: "Cập nhật mỗi 30 phút", price: 2.99 },
+      { name: "Cập nhật mỗi 15 phút", price: 5.99 },
+      { name: "Cập nhật mỗi 5 phút", price: 9.99 },
+      { name: "Cập nhật mỗi 1 phút", price: 14.99 },
+    ],
+    footerNote:
+      "Mọi gói đều hỗ trợ không giới hạn cấu hình tìm kiếm và quản lý đăng ký dễ dàng.",
+    button: "Bắt đầu ngay",
   },
   signup: {
-    heading: "Tạo cảnh báo xe của bạn",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Tạo thông báo xe của bạn",
+    subheading:
+      "Thiết lập thông báo tin đăng xe cá nhân hóa chỉ trong vài bước.",
+    cta: "Nhận thông báo ngay",
     waitlist: {
-      message: "Chúng tôi hiện đang ở mức đầy. Vui lòng tham gia danh sách chờ của chúng tôi để được thông báo khi có chỗ trống.",
-      cta: "Join Waitlist"
+      message:
+        "Hiện tại chúng tôi đã đầy công suất. Hãy tham gia danh sách chờ để được thông báo khi có chỗ trống.",
+      cta: "Tham gia danh sách chờ",
     },
     toast: {
       success: {
-        title: "Đã tạo đăng ký",
-        description: "Your subscription has been created successfully"
+        title: "Tạo đăng ký thành công",
+        description: "Gói đăng ký của bạn đã được tạo thành công.",
       },
       error: {
-        title: "Đăng ký thất bại",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Tạo đăng ký thất bại",
+        description: "Không thể tạo đăng ký. Vui lòng thử lại sau.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "Thành công",
-        description: "Phương thức thanh toán của bạn đã được thiết lập thành công."
+        description: "Phương thức thanh toán của bạn đã được thiết lập.",
       },
       error: {
         title: "Lỗi",
-        fallback: "Đã xảy ra lỗi ngoài ý muốn. Vui lòng thử lại."
-      }
+        fallback: "Đã xảy ra lỗi không mong muốn. Vui lòng thử lại.",
+      },
     },
     button: {
       submit: "Thiết lập phương thức thanh toán",
-      processing: "Đang xử lý..."
-    }
+      processing: "Đang xử lý...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "Hãng xe là bắt buộc",
+      carModel: "Mẫu xe là bắt buộc",
+      fuelType: "Loại nhiên liệu là bắt buộc",
+      priceMin: "Giá thấp nhất phải là số",
+      priceMax: "Giá cao nhất phải là số",
+      yearMin: "Năm thấp nhất phải là năm hợp lệ",
+      yearMax: "Năm cao nhất phải là năm hợp lệ",
+      maxKilometers: "Số km tối đa phải là số",
+      telegramUsername: "Tên người dùng Telegram là bắt buộc",
+      telegramToken: "Telegram bot token là bắt buộc",
+      telegramChatId: "Telegram chat ID là bắt buộc",
+      websitesSelected: "Cần chọn ít nhất một website",
+      notificationLanguage: "Cần chọn ngôn ngữ thông báo",
+      facebookMarketplaceUrl:
+        "Bắt buộc nhập Facebook Marketplace URL khi chọn Facebook",
+    },
   },
   personalInfo: {
     heading: "Thông tin cá nhân",
-    description: "Vui lòng cung cấp thông tin cá nhân của bạn để chúng tôi có thể thiết lập thông báo cho bạn một cách chính xác.",
+    description:
+      "Vui lòng cung cấp thông tin của bạn để chúng tôi thiết lập thông báo chính xác.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Địa chỉ email"
+      firstName: "Tên",
+      lastName: "Họ",
+      email: "Địa chỉ email",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com"
+      firstName: "Nguyễn",
+      lastName: "Văn A",
+      email: "email@vidu.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Vui lòng nhập địa chỉ email hợp lệ"
+      firstName: "Vui lòng nhập tên",
+      lastName: "Vui lòng nhập họ",
+      email: "Vui lòng nhập địa chỉ email hợp lệ",
     },
     actions: {
-      login: "Đăng nhập hoặc Đăng ký để tiếp tục",
-      continue: "Tiếp tục"
-    }
+      login: "Đăng nhập hoặc đăng ký để tiếp tục",
+      continue: "Tiếp tục",
+    },
   },
   websiteSelection: {
-    heading: "Chọn trang web",
-    description: "Chọn những trang web bạn muốn theo dõi và tần suất bạn muốn nhận cập nhật.",
+    heading: "Chọn website",
+    description: "Chọn các website muốn theo dõi và tần suất cập nhật.",
     labels: {
-      websites: "Các trang web cần theo dõi",
+      websites: "Website cần theo dõi",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Tần suất cập nhật",
     },
     placeholders: {
-      frequency: "Chọn tần suất"
+      frequency: "Chọn tần suất",
     },
     help: {
-      websites: "Chọn một hoặc nhiều trang web để theo dõi tin đăng bán ô tô.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites: "Chọn một hoặc nhiều website để theo dõi tin đăng xe.",
+      facebookUrl:
+        "Dán URL kết quả tìm kiếm trên Facebook Marketplace của bạn vào đây.",
+      videoTitle: "Không biết lấy link Facebook Marketplace ở đâu?",
+      videoDesc: "Xem video hướng dẫn chi tiết từng bước bên dưới.",
+      updateFrequency:
+        "Bạn muốn chúng tôi kiểm tra tin mới thường xuyên thế nào? Tần suất cao hơn có thể đi kèm chi phí cao hơn.",
     },
     errors: {
-      websites: "Cần chọn ít nhất một trang web",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "Cần chọn ít nhất một website",
+      facebookUrl: "Bắt buộc nhập Facebook Marketplace URL khi chọn Facebook",
     },
     actions: {
-      previous: "Trước",
-      continue: "Tiếp tục"
-    }
+      previous: "Quay lại",
+      continue: "Tiếp tục",
+    },
   },
   carDetails: {
     heading: "Chi tiết xe",
-    description: "Nhập thông tin xe bạn muốn tìm. Tất cả các trường đều không bắt buộc – để trống nếu muốn xem nhiều kết quả hơn.",
+    description:
+      "Nhập chi tiết chiếc xe bạn đang tìm. Tất cả các trường đều không bắt buộc – để trống nếu bạn muốn phạm vi kết quả rộng hơn.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "Hãng xe",
+      carModel: "Mẫu xe",
+      fuelType: "Loại nhiên liệu",
+      priceMin: "Giá thấp nhất",
+      priceMax: "Giá cao nhất",
+      yearMin: "Năm thấp nhất",
+      yearMax: "Năm cao nhất",
+      maxKilometers: "Số km tối đa",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "Chọn hãng xe",
+      carModel: "Chọn mẫu xe",
+      carModelDisabled: "Vui lòng chọn hãng xe trước",
+      fuelType: "Chọn loại nhiên liệu",
+      priceMin: "Nhập giá thấp nhất",
+      priceMax: "Nhập giá cao nhất",
+      yearMin: "Nhập năm thấp nhất",
+      yearMax: "Nhập năm cao nhất",
+      maxKilometers: "Nhập số km tối đa",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "Không có mẫu xe nào",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "Hãng xe là bắt buộc",
+      carModel: "Mẫu xe là bắt buộc",
+      fuelType: "Loại nhiên liệu là bắt buộc",
+      priceMin: "Giá thấp nhất phải là số",
+      priceMax: "Giá cao nhất phải là số",
+      yearMin: "Năm thấp nhất phải là năm hợp lệ",
+      yearMax: "Năm cao nhất phải là năm hợp lệ",
+      maxKilometers: "Số km tối đa phải là số",
     },
     actions: {
-      previous: "Trước",
-      continue: "Tiếp tục"
-    }
+      previous: "Quay lại",
+      continue: "Tiếp tục",
+    },
   },
   telegram: {
-    heading: "Cài đặt Telegram",
-    description: "Thiết lập thông báo Telegram bằng cách nhập token bot và ID trò chuyện.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Nếu bạn gặp khó khăn khi tạo bot Telegram, hãy liên hệ với chúng tôi, chúng tôi sẽ gọi điện và hỗ trợ bạn tạo bot.",
-    contact: "Liên hệ với chúng tôi",
+    heading: "Thiết lập Telegram",
+    description:
+      "Thiết lập thông báo qua Telegram bằng cách cung cấp bot token và chat ID.",
+    subHeading: "Thiết lập Telegram Bot của bạn",
+    info: "Nếu bạn gặp khó khăn khi tạo Telegram bot, hãy liên hệ với chúng tôi. Chúng tôi sẽ gọi và hỗ trợ bạn từng bước.",
+    contact: "Liên hệ",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "Cách lấy Telegram Bot Token:",
+      botStep1: "Mở Telegram và tìm @BotFather",
+      botStep2: "Gửi lệnh /newbot",
+      botStep3: "Làm theo hướng dẫn để tạo bot",
+      botStep4: "Sao chép token mà BotFather cung cấp",
+
+      chatTitle: "Cách lấy Telegram Chat ID:",
+      chatStep1: "Mở Telegram và tìm @userinfobot",
+      chatStep2: "Gửi bất kỳ tin nhắn nào cho bot",
+      chatStep3: "Bot sẽ trả lời với thông tin của bạn, bao gồm cả Chat ID",
+      chatStep4: "Sao chép Chat ID (đây là một dãy số)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Cần trợ giúp thiết lập Telegram Bot Token và Chat ID?",
+    videoDescription: "Xem video bên dưới để được hướng dẫn từng bước.",
+
     labels: {
-      token: "Mã token bot Telegram",
-      chatId: "Your Telegram Chat ID",
+      token: "Telegram Bot Token",
+      chatId: "Telegram Chat ID của bạn",
       language: "Ngôn ngữ thông báo",
-      username: "Tên người dùng Telegram"
+      username: "Tên người dùng Telegram",
     },
+
     placeholders: {
-      token: "Nhập mã token bot từ BotFather",
-      chatId: "Enter your Telegram chat ID",
+      token: "Nhập bot token từ BotFather",
+      chatId: "Nhập Telegram chat ID của bạn",
       language: "Chọn ngôn ngữ tin nhắn Telegram",
-      username: "Nhập tên người dùng Telegram của bạn"
+      username: "Nhập tên người dùng Telegram của bạn",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Đây là tên người dùng trên tài khoản Telegram của bạn (không bao gồm ký tự @).",
     examples: {
       token: "Ví dụ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      chatId: "Bạn có thể lấy bằng cách nhắn tin cho @userinfobot",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Hướng dẫn thiết lập:",
     setupSteps: [
-
-      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
-
-      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Mở Telegram và tìm "BotFather"',
+      'Nhấn "Start" để bắt đầu cuộc trò chuyện với BotFather',
+      "Gõ /newbot và làm theo hướng dẫn để tạo bot mới",
+      "Đặt tên cho bot",
+      "Đặt username cho bot (phải kết thúc bằng chữ 'bot')",
+      "Sao chép API token mà BotFather gửi cho bạn",
+      "Gửi một tin nhắn bất kỳ đến bot của bạn để kích hoạt cuộc trò chuyện",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Cách lấy Telegram Chat ID của bạn:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Mở Telegram và tìm "userinfobot"',
+      "Gửi một tin nhắn bất kỳ cho bot",
+      "Bot sẽ trả lời với Chat ID của bạn",
+      "Sao chép Chat ID đó",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
+    helpTitle: "Cần trợ giúp thiết lập Bot Token và Chat ID?",
+    helpDescription: "Xem video bên dưới để được hướng dẫn chi tiết.",
     botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    botTokenPlaceholder: "Nhập bot token từ BotFather",
+    botTokenExample: "Ví dụ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Telegram Chat ID của bạn",
+    chatIdPlaceholder: "Nhập Telegram chat ID của bạn",
+    chatIdDescription:
+      "Bạn có thể lấy số này bằng cách nhắn tin cho @userinfobot",
+    languageLabel: "Ngôn ngữ thông báo",
+    languagePlaceholder: "Chọn ngôn ngữ tin nhắn Telegram",
     languages: {
       en: "Tiếng Anh",
       de: "Tiếng Đức",
       fr: "Tiếng Pháp",
-      es: "Tiếng Việt",
-      it: "Tiếng Việt"
+      es: "Tiếng Tây Ban Nha",
+      it: "Tiếng Ý",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Xem thử thông báo Telegram",
+    carAlertTitle: "🚗 Thông báo xe mới!",
+    priceLabel: "Giá: {{price}}",
+    kilometresLabel: "Số km: {{kms}}",
+    locationLabel: "Khu vực: {{location}}",
+    viewListing: "Xem tin đăng →",
     errors: {
-      token: "Cần nhập mã token của bot Telegram",
-      chatId: "Telegram chat ID is required",
+      token: "Telegram bot token là bắt buộc",
+      chatId: "Telegram chat ID là bắt buộc",
       language: "Ngôn ngữ thông báo là bắt buộc",
-      username: "Tên người dùng Telegram là bắt buộc"
+      username: "Tên người dùng Telegram là bắt buộc",
     },
+
     actions: {
-      previous: "Trước",
-      continue: "Tiếp tục"
+      previous: "Quay lại",
+      continue: "Tiếp tục",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "Bắt đầu trò chuyện với Telegram bot của chúng tôi bằng cách nhấn vào liên kết bên dưới và gửi ít nhất một tin nhắn:",
+    contactBotNote:
+      "Bước này bắt buộc để bạn có thể nhận được thông báo xe. Nếu đang dùng máy tính, bạn có thể quét mã QR.",
+    confirmContact: "Tôi đã bắt đầu trò chuyện với bot và đã gửi tin nhắn",
   },
   review: {
     title: "Xem lại gói đăng ký của bạn",
-    description: "Vui lòng kiểm tra lại thông tin đăng ký của bạn trước khi tiến hành thanh toán.",
+    description:
+      "Vui lòng kiểm tra lại thông tin đăng ký trước khi thanh toán.",
+
     personal: {
       title: "Thông tin cá nhân",
       name: "Tên",
-      email: "Email"
+      email: "Email",
     },
+
     monitoring: {
-      title: "Cài đặt giám sát",
-      websites: "Trang web",
+      title: "Cài đặt theo dõi",
+      websites: "Website",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      updateFrequency: "Tần suất cập nhật",
     },
+
     specs: {
-      title: "Thông số kỹ thuật xe",
-      brand: "Thương hiệu",
+      title: "Thông số xe",
+      brand: "Hãng",
       model: "Mẫu",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Quãng đường di chuyển (km)",
-      price: "Khoảng giá (€)"
+      fuelType: "Loại nhiên liệu",
+      yearRange: "Khoảng năm sản xuất",
+      mileage: "Khoảng số km (km)",
+      price: "Khoảng giá (€)",
     },
+
     notification: {
       title: "Cài đặt thông báo",
-      telegram: "Bot Telegram",
-      language: "Ngôn ngữ thông báo"
+      telegram: "Telegram Bot",
+      language: "Ngôn ngữ thông báo",
     },
+
     summary: {
       title: "Tóm tắt đăng ký",
-      base: "Gói đăng ký cơ bản",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Tổng cộng (hàng tháng)"
+      base: "Gói cơ bản",
+      extraWebsites: "Website bổ sung",
+      frequencyUpgrade: "Nâng cấp tần suất",
+      total: "Tổng cộng (theo tháng)",
     },
+
     terms: {
       checkbox: "Tôi đồng ý với",
       tos: "Điều khoản dịch vụ",
-      privacy: "Chính sách bảo mật",
-      note: "Gói đăng ký của bạn sẽ tự động gia hạn mỗi tháng. Bạn có thể hủy bất cứ lúc nào.",
-      error: "Bạn phải đồng ý với các điều khoản và điều kiện"
+      privacy: "Chính sách quyền riêng tư",
+      note: "Gói đăng ký sẽ tự động gia hạn mỗi tháng. Bạn có thể hủy bất kỳ lúc nào.",
+      error: "Bạn cần đồng ý với điều khoản và chính sách trước khi tiếp tục",
     },
+
     actions: {
-      previous: "Trước",
-      submit: "Tiến hành thanh toán"
-    }
+      previous: "Quay lại",
+      submit: "Tiến hành thanh toán",
+    },
   },
   faq: {
     title: "Câu hỏi thường gặp",
-    subtitle: "Tìm câu trả lời cho những thắc mắc phổ biến về dịch vụ của chúng tôi.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "Tốc độ nhận thông báo phụ thuộc vào tần suất cập nhật mà bạn chọn. Với gói mặc định cập nhật mỗi giờ, bạn sẽ nhận được thông báo trong vòng một giờ sau khi có tin đăng mới. Nếu muốn nhận thông báo gần như ngay lập tức (chỉ trong vài phút sau khi đăng), bạn có thể nâng cấp lên các gói cập nhật thường xuyên hơn của chúng tôi.",
-        question: "Tôi sẽ nhận được thông báo sau khi có tin đăng mới trong bao lâu?"
+    subtitle:
+      "Tìm câu trả lời cho những câu hỏi phổ biến về dịch vụ của chúng tôi.",
+    contactPrompt: "Vẫn còn thắc mắc?",
+    contactLink: "Liên hệ đội hỗ trợ của chúng tôi",
+    questions: [
+      {
+        question:
+          "Tôi sẽ nhận được thông báo nhanh như thế nào sau khi có tin đăng mới?",
+        answer:
+          "Tốc độ thông báo phụ thuộc vào tần suất kiểm tra mà bạn chọn. Với gói mặc định kiểm tra mỗi giờ, bạn sẽ nhận thông báo trong vòng 1 giờ kể từ khi tin được đăng. Nếu muốn gần như thời gian thực (sau vài phút), bạn có thể nâng cấp lên các gói có tần suất kiểm tra dày hơn.",
       },
-      1: {
-        answer: "Vâng! Bạn có thể tạo nhiều hồ sơ tìm kiếm với các tiêu chí khác nhau. Mỗi hồ sơ được tính là một gói đăng ký riêng biệt, nhưng bạn có thể quản lý tất cả chỉ với một tài khoản. Điều này rất phù hợp nếu bạn đang tìm kiếm nhiều loại phương tiện cùng lúc.",
-        question: "Tôi có thể theo dõi nhiều loại xe khác nhau cùng lúc không?"
+      {
+        question: "Tôi có thể theo dõi nhiều loại xe cùng lúc không?",
+        answer:
+          "Hoàn toàn có thể! Bạn có thể tạo nhiều hồ sơ tìm kiếm với các tiêu chí khác nhau. Mỗi hồ sơ được tính là một đăng ký riêng, nhưng bạn có thể quản lý tất cả trong cùng một tài khoản.",
       },
-      2: {
-        answer: "Hiện tại, chúng tôi hỗ trợ các nền tảng đăng tin mua bán ô tô lớn như AutoTrader, CarGurus, Cars.com và Facebook Marketplace. AMIQUUS luôn mở rộng phạm vi hỗ trợ để tích hợp thêm nhiều website dựa trên nhu cầu người dùng và mức độ phổ biến tại từng khu vực.",
-        question: "Hiện tại bạn hỗ trợ những trang web nào?"
+      {
+        question: "Hiện tại hỗ trợ những website nào?",
+        answer:
+          "Hiện chúng tôi hỗ trợ các nền tảng lớn như AutoTrader, CarGurus, Cars.com và Facebook Marketplace. Chúng tôi liên tục mở rộng sang nhiều website khác dựa trên nhu cầu và mức độ phổ biến ở từng khu vực.",
       },
-      3: {
-        answer: "Hoàn toàn không! Chúng tôi cung cấp hướng dẫn từng bước bằng cả văn bản và video để bạn dễ dàng cài đặt bot Telegram. Hầu hết người dùng chỉ mất chưa đến 5 phút để hoàn tất, ngay cả khi không có kiến thức kỹ thuật.",
-        question: "Tôi có cần kiến thức kỹ thuật để sử dụng bot Telegram không?"
+      {
+        question: "Tôi có cần kiến thức kỹ thuật để dùng Telegram bot không?",
+        answer:
+          "Không cần! Chúng tôi cung cấp hướng dẫn chi tiết bằng văn bản và video. Hầu hết người dùng chỉ mất chưa đến 5 phút để hoàn tất, kể cả khi không rành công nghệ.",
       },
-      4: {
-        answer: "Vâng, bạn có thể thay đổi tiêu chí tìm kiếm bất cứ lúc nào từ bảng điều khiển tài khoản của mình. Các thay đổi sẽ có hiệu lực ngay lập tức và thông báo của bạn sẽ được cập nhật tương ứng mà không làm gián đoạn dịch vụ.",
-        question: "Tôi có thể thay đổi tiêu chí tìm kiếm sau khi đã thiết lập đăng ký không?"
+      {
+        question:
+          "Sau khi thiết lập đăng ký, tôi có thể thay đổi tiêu chí tìm kiếm không?",
+        answer:
+          "Có. Bạn có thể thay đổi tiêu chí bất cứ lúc nào trong bảng điều khiển (dashboard). Thay đổi sẽ có hiệu lực ngay và thông báo sẽ được điều chỉnh theo tiêu chí mới.",
       },
-      5: {
-        answer: "Bạn có thể hủy gói đăng ký bất cứ lúc nào trong trang quản lý tài khoản của mình. Vào mục \"Đăng ký\", chọn gói bạn muốn hủy và nhấn nút \"Hủy đăng ký\". Dịch vụ của bạn sẽ tiếp tục hoạt động đến hết chu kỳ thanh toán hiện tại.",
-        question: "Làm thế nào để hủy đăng ký của tôi?"
-      }
-    }
+      {
+        question: "Làm sao để hủy đăng ký?",
+        answer:
+          'Bạn có thể hủy đăng ký bất cứ lúc nào trong phần "Subscriptions" trên dashboard. Chọn đăng ký cần hủy và nhấn "Cancel Subscription". Dịch vụ sẽ vẫn hoạt động đến hết chu kỳ thanh toán hiện tại.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
+    brandDescription:
+      "Trợ lý cá nhân giúp bạn tìm được deal xe cũ phù hợp nhất vào đúng thời điểm.",
+    quickLinks: "Liên kết nhanh",
     features: "Tính năng",
     pricing: "Bảng giá",
     faq: "Câu hỏi thường gặp",
-    getStarted: "Get Started",
+    getStarted: "Bắt đầu",
     legal: "Pháp lý",
     terms: "Điều khoản dịch vụ",
-    privacy: "Chính sách bảo mật",
+    privacy: "Chính sách quyền riêng tư",
     cookies: "Chính sách Cookie",
     gdpr: "Tuân thủ GDPR",
     contact: "Liên hệ",
     email: "support@amiquus.com",
-    telegram: "Liên hệ với chúng tôi qua Telegram",
+    telegram: "Liên hệ qua Telegram",
     copyright: "Đã đăng ký bản quyền.",
     about: "Về chúng tôi",
     blog: "Blog",
-    careers: "Cơ hội nghề nghiệp",
-    support: "Hỗ trợ"
+    careers: "Tuyển dụng",
+    support: "Hỗ trợ",
   },
   login: {
-    title: "Đăng nhập vào tài khoản của bạn",
-    description: "Nhập email và mật khẩu để truy cập bảng điều khiển của bạn",
+    title: "Đăng nhập vào tài khoản",
+    description: "Nhập email và mật khẩu để truy cập bảng điều khiển.",
     emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    passwordLabel: "Mật khẩu",
+    loginButton: "Đăng nhập",
+    loggingIn: "Đang đăng nhập...",
+    loginWithGoogle: "Đăng nhập với Google",
     or: "hoặc",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Chưa có tài khoản?",
+    registerLink: "Đăng ký",
+    successTitle: "Đăng nhập thành công",
+    successMessage: "Bạn đã đăng nhập thành công.",
+    errorTitle: "Đăng nhập thất bại",
+    genericError: "Vui lòng kiểm tra lại thông tin và thử lại.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "Vui lòng nhập địa chỉ email hợp lệ",
+      shortPassword: "Mật khẩu phải có ít nhất 6 ký tự",
+    },
   },
   register: {
     title: "Tạo tài khoản",
-    description: "Đăng ký để bắt đầu theo dõi chiếc xe mơ ước của bạn",
+    description: "Đăng ký để bắt đầu theo dõi chiếc xe mơ ước của bạn.",
     google: "Đăng ký với Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Tên đăng nhập",
+    orContinue: "Hoặc tiếp tục với",
+    firstName: "Tên",
+    lastName: "Họ",
+    username: "Tên người dùng",
     email: "Email",
     password: "Mật khẩu",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "Xác nhận mật khẩu",
+    termsNotice: "Tôi đồng ý với",
+    termsOfService: "Điều khoản dịch vụ",
+    privacyPolicy: "Chính sách quyền riêng tư",
+    createBtn: "Tạo tài khoản",
+    alreadyHave: "Đã có tài khoản?",
     login: "Đăng nhập",
     and: "và",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Thiếu thông tin",
+        desc: "Vui lòng điền đầy đủ các trường bắt buộc.",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Tên người dùng không hợp lệ",
+        desc: "Tên người dùng chỉ được chứa chữ và số, dài từ 3 đến 20 ký tự.",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Mật khẩu không khớp",
+        desc: "Vui lòng đảm bảo cả hai mật khẩu giống nhau.",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Chưa chấp nhận điều khoản",
+        desc: "Bạn cần chấp nhận điều khoản và chính sách để tiếp tục.",
       },
       success: {
         title: "Đăng ký thành công",
-        desc: "Chào mừng bạn đến với Amiquus! Bạn sẽ được chuyển hướng để xác minh địa chỉ email của mình."
+        desc: "Chào mừng đến với Amiquus! Bạn sẽ được chuyển sang bước xác minh email.",
       },
       failure: {
-        title: "Đăng ký không thành công",
-        desc: "Vui lòng kiểm tra lại thông tin của bạn và thử lại."
-      }
-    }
+        title: "Đăng ký thất bại",
+        desc: "Vui lòng kiểm tra lại thông tin và thử lại.",
+      },
+    },
   },
   verifyEmail: {
-    title: "Xác minh email của bạn",
-    description: "Mã xác thực đã được gửi tới email của bạn.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "Xác minh email",
+    description: "Mã xác minh đã được gửi đến email của bạn.",
+    codeLabel: "Mã xác minh",
+    verifyButton: "Xác minh email",
+    updateEmailLabel: "Cập nhật email",
+    updateEmailButton: "Cập nhật email",
+    resendButton: "Gửi lại mã",
+    resendCountdown: "Bạn có thể gửi lại mã sau {{seconds}} giây",
+    footerNote:
+      "Không nhận được email? Hãy kiểm tra thư mục spam hoặc quảng cáo.",
     toast: {
-      verified: "Email đã được xác minh",
-      failed: "Xác minh không thành công",
-      resent: "Mã xác minh đã được gửi lại",
+      verified: "Xác minh email thành công",
+      failed: "Xác minh email thất bại",
+      resent: "Đã gửi lại mã xác minh",
       error: "Lỗi",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      invalidEmail: "Email không hợp lệ",
+      enterValidEmail: "Vui lòng nhập địa chỉ email hợp lệ",
+      sameEmail: "Email không thay đổi",
+      sameEmailDesc: "Email mới trùng với email hiện tại",
+      emailUpdated: "Đã cập nhật email",
+    },
   },
   dashboardPayment: {
     add: "Thêm phương thức thanh toán",
-    description: "Thêm thẻ tín dụng hoặc thẻ ghi nợ mới để thanh toán đăng ký của bạn.",
+    description:
+      "Thêm thẻ tín dụng hoặc thẻ ghi nợ mới cho thanh toán gói đăng ký của bạn.",
     processing: "Đang xử lý...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    errorTitle: "Lỗi khi thêm phương thức thanh toán",
+    errorMessage: "Đã xảy ra lỗi không mong muốn.",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "Lỗi",
+      description: "Không thể khởi tạo thiết lập thanh toán.",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Năm",
+      priceRange: "Giá",
+      websites: "Website",
+      updates: "Cập nhật",
+      language: "Ngôn ngữ",
+      price: "Giá",
+      edit: "Chỉnh sửa",
+      cancelAlert: "Hủy thông báo",
+      cancelTitle: "Hủy thông báo xe",
+      cancelDescription:
+        "Bạn có chắc muốn hủy thông báo cho {{brand}} {{model}} không? Mọi thông báo sẽ dừng lại và nếu muốn theo dõi lại, bạn cần tạo thông báo mới.",
+      keepMyAlert: "Giữ lại thông báo",
+      confirmCancel: "Hủy thông báo",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Hết hạn",
+      default: "Mặc định",
+      setAsDefault: "Đặt làm mặc định",
+      remove: "Xoá",
+      setDefaultTitle: "Đặt làm phương thức thanh toán mặc định",
+      setDefaultDescription:
+        "Bạn có muốn đặt thẻ {{brand}} với 4 số cuối {{last4}} làm phương thức thanh toán mặc định không? Thẻ này sẽ được dùng cho mọi khoản thanh toán sau này.",
+      removeTitle: "Xoá phương thức thanh toán",
+      removeDescription:
+        "Bạn có chắc muốn xoá thẻ {{brand}} với 4 số cuối {{last4}} không?",
+      removeWarning:
+        "Đây là phương thức thanh toán mặc định. Việc xoá có thể ảnh hưởng đến các đăng ký đang hoạt động.",
+      cancel: "Hủy",
+      confirmRemove: "Xoá thẻ",
+    },
   },
   profile: {
     tabs: {
-      alerts: "Cảnh báo của tôi",
-      payments: "Phương thức thanh toán"
+      alerts: "Thông báo của tôi",
+      payments: "Phương thức thanh toán",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Gói đăng ký",
+      memberSince: "Thành viên từ",
+      subscriptions: "Đăng ký",
       methods: "Phương thức thanh toán",
       account: "Cài đặt tài khoản",
       privacy: "Quyền riêng tư & bảo mật",
-      logout: "Đăng xuất"
+      logout: "Đăng xuất",
     },
     account: {
       title: "Cài đặt tài khoản",
-      desc: "Cập nhật thông tin và tùy chọn tài khoản của bạn.",
+      desc: "Cập nhật thông tin và tuỳ chọn tài khoản của bạn.",
       name: "Tên",
       email: "Email",
-      username: "Tên đăng nhập",
+      username: "Tên người dùng",
       cancel: "Hủy",
-      save: "Lưu thay đổi"
+      save: "Lưu thay đổi",
     },
     security: {
-      title: "Quyền riêng tư & Bảo mật",
-      desc: "Quản lý cài đặt bảo mật và tùy chọn quyền riêng tư của bạn.",
+      title: "Quyền riêng tư & bảo mật",
+      desc: "Quản lý cài đặt bảo mật và quyền riêng tư.",
       current: "Mật khẩu hiện tại",
       new: "Mật khẩu mới",
       confirm: "Xác nhận mật khẩu mới",
-      update: "Cập nhật mật khẩu"
+      update: "Cập nhật mật khẩu",
     },
     logout: {
       title: "Đăng xuất",
-      desc: "Bạn có chắc chắn muốn đăng xuất khỏi tài khoản của mình không?",
-      success: "Bạn đã đăng xuất thành công."
+      desc: "Bạn có chắc muốn đăng xuất khỏi tài khoản?",
+      success: "Bạn đã đăng xuất thành công.",
     },
     alerts: {
-      title: "Đăng ký nhận thông báo xe",
-      desc: "Quản lý cảnh báo tìm kiếm xe và tùy chọn thông báo của bạn.",
-      add: "Thêm cảnh báo mới",
-      none: "Bạn chưa có cảnh báo xe nào đang hoạt động.",
-      cta: "Tạo cảnh báo đầu tiên của bạn",
-      warning: "⚠️ Các thay đổi đối với gói đăng ký của bạn sẽ được áp dụng vào kỳ thanh toán tiếp theo và chỉ sau khi thanh toán thành công. Nếu thanh toán không thành công, cài đặt cảnh báo hiện tại của bạn sẽ được giữ nguyên."
+      title: "Đăng ký thông báo xe",
+      desc: "Quản lý thông báo tìm kiếm xe và các tuỳ chọn liên quan.",
+      add: "Thêm thông báo mới",
+      none: "Bạn chưa có thông báo xe nào đang hoạt động.",
+      cta: "Tạo thông báo đầu tiên của bạn",
+      warning:
+        "⚠️ Thay đổi đối với đăng ký sẽ được áp dụng vào chu kỳ thanh toán tiếp theo và chỉ sau khi thanh toán thành công. Nếu thanh toán thất bại, cấu hình hiện tại sẽ được giữ nguyên.",
     },
     payments: {
       title: "Phương thức thanh toán",
-      desc: "Quản lý phương thức thanh toán cho việc gia hạn đăng ký.",
+      desc: "Quản lý các phương thức thanh toán cho gói đăng ký.",
       none: "Bạn chưa lưu phương thức thanh toán nào.",
-      encrypted: "Thông tin thanh toán của bạn được mã hóa và lưu trữ an toàn."
-    }
+      encrypted: "Thông tin thanh toán của bạn được mã hoá và lưu trữ an toàn.",
+    },
   },
   setupAlerts: {
-    title: "Thiết lập cảnh báo cho xe của bạn",
-    subtitle: "Cấu hình bot Telegram của bạn để nhận thông báo về chiếc xe mơ ước của bạn",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Bắt đầu dịch vụ cảnh báo xe của tôi",
-    cancel: "Hủy bất cứ lúc nào",
+    title: "Thiết lập thông báo xe của bạn",
+    subtitle: "Cấu hình Telegram bot để nhận thông báo về chiếc xe mơ ước.",
+    basicPlan: "Gói cơ bản",
+    baseTitle: "79,99$/tháng",
+    button: "Bắt đầu dịch vụ thông báo xe",
+    cancel: "Có thể hủy bất cứ lúc nào",
     toasts: {
       terms: {
-        title: "Điều khoản chưa được chấp nhận",
-        description: "Bạn phải đồng ý với điều khoản dịch vụ để tiếp tục"
+        title: "Chưa đồng ý điều khoản",
+        description: "Bạn cần đồng ý với điều khoản dịch vụ để tiếp tục.",
       },
       success: {
-        title: "Đăng ký đã được tạo",
-        description: "Đăng ký của bạn đã được tạo thành công"
+        title: "Tạo đăng ký thành công",
+        description: "Gói đăng ký của bạn đã được tạo thành công.",
       },
       error: {
-        title: "Đã xảy ra lỗi khi tạo đăng ký"
+        title: "Lỗi khi tạo đăng ký",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "Cần liên hệ bot trước",
+        description:
+          "Bạn cần bắt đầu trò chuyện với Telegram bot của chúng tôi và gửi ít nhất một tin nhắn. Vui lòng làm theo hướng dẫn bên dưới.",
+      },
+    },
   },
   loginPrompt: {
-    title: "Yêu cầu đăng nhập",
-    description: "Bạn cần đăng nhập để tiếp tục. Vui lòng đăng nhập hoặc đăng ký.",
+    title: "Cần đăng nhập",
+    description:
+      "Bạn cần đăng nhập để tiếp tục. Vui lòng đăng nhập hoặc đăng ký.",
     register: "Đăng ký",
-    login: "Đăng nhập"
+    login: "Đăng nhập",
   },
   waitlistPrompt: {
     title: "Tham gia danh sách chờ",
-    description: "Hiện tại chúng tôi đã hết chỗ. Đăng ký vào danh sách chờ để được thông báo khi có chỗ trống.",
-    button: "Tham gia danh sách chờ"
+    description:
+      "Hiện tại chúng tôi đã đầy công suất. Hãy tham gia danh sách chờ để được thông báo khi có chỗ trống.",
+    button: "Tham gia danh sách chờ",
   },
   subscription: {
-    title: "Chi tiết gói đăng ký",
-    subTitle: "Edit your subscription details below",
+    title: "Chi tiết đăng ký",
+    subTitle: "Chỉnh sửa chi tiết gói đăng ký của bạn bên dưới",
     error: "Quay lại bảng điều khiển",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Bạn có thể tạm dừng gói đăng ký bất cứ lúc nào. Khi tạm dừng, các cảnh báo về xe của bạn sẽ ngừng gửi cho đến khi bạn kích hoạt lại.",
+    notFound: "Không tìm thấy gói đăng ký",
+    notFoundSub: "Quay lại bảng điều khiển",
+    description:
+      "Bạn có thể tạm dừng gói đăng ký bất cứ lúc nào. Khi tạm dừng, thông báo xe sẽ dừng cho đến khi bạn kích hoạt lại.",
     form: {
       status: {
         label: "Trạng thái",
         placeholder: "Chọn trạng thái",
         active: "Đang hoạt động",
-        paused: "Tạm dừng"
-      }
+        paused: "Tạm dừng",
+      },
     },
     actions: {
       save: "Lưu thay đổi",
-      back: "Quay lại"
+      back: "Quay lại",
     },
     toasts: {
       success: {
-        title: "Đăng ký đã được cập nhật",
-        description: "Đăng ký của bạn cho {{brand}} {{model}} đã được cập nhật thành công"
+        title: "Cập nhật đăng ký thành công",
+        description:
+          "Đã cập nhật thành công gói đăng ký cho {{brand}} {{model}}.",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Không thể cập nhật đăng ký",
+        description:
+          "Không thể vừa tạm dừng vừa thay đổi giá trong cùng một lần. Vui lòng thực hiện từng bước riêng.",
       },
       error: {
-        title: "Lỗi khi cập nhật gói đăng ký"
-      }
-    }
+        title: "Lỗi khi cập nhật đăng ký",
+      },
+    },
   },
   about: {
-    title: "Giới thiệu về Amiquus",
-    description: "Chúng tôi đang cách mạng hóa cách mọi người tìm kiếm chiếc xe đã qua sử dụng hoàn hảo của mình bằng cách mang công nghệ giám sát tiên tiến đến với tất cả mọi người.",
+    title: "Về Amiquus",
+    description:
+      "Chúng tôi đang thay đổi cách mọi người tìm xe cũ bằng cách mang công nghệ theo dõi tin đăng thông minh đến với tất cả mọi người.",
     meta: {
-      title: "Về chúng tôi | Amiquus - Dịch vụ theo dõi tin đăng ô tô",
-      description: "Tìm hiểu về AMIQUUS, sứ mệnh của chúng tôi trong việc cách mạng hóa mua bán ô tô đã qua sử dụng, và đội ngũ đứng sau dịch vụ giám sát tin đăng xe thông minh."
+      title: "Về chúng tôi | Amiquus - Dịch vụ theo dõi tin đăng xe",
+      description:
+        "Tìm hiểu về Amiquus, sứ mệnh của chúng tôi và đội ngũ đứng sau dịch vụ theo dõi tin đăng xe thông minh.",
     },
     story: {
       heading: "Câu chuyện của chúng tôi",
-      paragraphs: {
-        0: "AMIQUUS được thành lập vào năm 2023 khi người sáng lập của chúng tôi, Alex, đã dành nhiều tháng liên tục làm mới các trang web rao bán ô tô để tìm một mẫu xe hiếm với mức giá tốt. Sau khi bỏ lỡ nhiều cơ hội vì nhận thông báo chậm trễ, anh nhận ra rằng chắc chắn phải có một cách tốt hơn.",
-        1: "Làm việc cùng một nhóm nhỏ các lập trình viên và những người đam mê ô tô, Alex đã xây dựng một hệ thống giám sát có thể theo dõi các tin đăng trên nhiều trang web cùng lúc và gửi thông báo ngay lập tức khi có kết quả phù hợp xuất hiện.",
-        2: "Ban đầu chỉ là một dự án cá nhân, nhưng nhanh chóng nhận được sự quan tâm từ bạn bè và gia đình, và đến đầu năm 2025, AMIQUUS đã ra đời như một dịch vụ dành cho tất cả mọi người. Ngày nay, chúng tôi giúp người mua xe trên toàn quốc tiết kiệm thời gian và tìm được những ưu đãi tốt hơn nhờ công nghệ giám sát thông minh của mình."
-      }
+      paragraphs: [
+        "Amiquus bắt đầu vào năm 2023, khi người sáng lập của chúng tôi – Alex – phải dành nhiều tháng liên tục F5 các trang đăng tin xe để tìm một mẫu xe hiếm với mức giá tốt. Sau khi bỏ lỡ vài cơ hội do thông báo chậm, anh nhận ra cần phải có một cách tốt hơn.",
+        "Cùng với một nhóm nhỏ các lập trình viên và những người yêu xe, Alex đã xây dựng hệ thống theo dõi có thể giám sát nhiều website cùng lúc và gửi thông báo ngay khi xuất hiện tin đăng phù hợp.",
+        "Từ một dự án cá nhân, Amiquus nhanh chóng thu hút sự quan tâm của bạn bè và gia đình. Đến đầu năm 2025, Amiquus chính thức trở thành dịch vụ cho mọi người. Ngày nay, chúng tôi giúp người mua xe trên khắp cả nước tiết kiệm thời gian và tìm được deal tốt hơn nhờ công nghệ theo dõi tin đăng thông minh.",
+      ],
     },
     mission: {
       heading: "Sứ mệnh của chúng tôi",
-      items: {
-        0: {
-          description: "Loại bỏ việc phải liên tục làm mới nhiều trang web bằng cách tự động hóa quá trình tìm kiếm và nhận thông báo kịp thời.",
-          title: "Tiết kiệm thời gian"
+      items: [
+        {
+          title: "Tiết kiệm thời gian",
+          description:
+            "Loại bỏ việc phải liên tục làm mới nhiều website. Hãy để hệ thống của chúng tôi làm thay và gửi thông báo kịp thời cho bạn.",
         },
-        1: {
-          description: "Hãy là người đầu tiên biết khi có ưu đãi hấp dẫn xuất hiện, giúp bạn nắm lợi thế trên thị trường cạnh tranh nơi thời gian là yếu tố quyết định.",
-          title: "Tìm ưu đãi tốt hơn"
+        {
+          title: "Giúp bạn bắt được deal tốt",
+          description:
+            "Là một trong những người đầu tiên biết về những tin đăng tốt, giúp bạn có lợi thế trên thị trường cạnh tranh.",
         },
-        2: {
-          description: "Đưa ra quyết định chính xác với hệ thống giám sát toàn diện trên nhiều nền tảng đăng tin ô tô uy tín.",
-          title: "Mua sắm an tâm"
-        }
-      }
+        {
+          title: "Giúp bạn mua xe tự tin hơn",
+          description:
+            "Quyết định dựa trên thông tin đầy đủ nhờ theo dõi nhiều nền tảng đăng tin uy tín cùng lúc.",
+        },
+      ],
     },
     team: {
       heading: "Đội ngũ của chúng tôi",
-      members: {
-        0: {
-          bio: "Cựu kỹ sư phần mềm với niềm đam mê ô tô và xây dựng các giải pháp sáng tạo.",
-          name: "Alex Morgan, đây là cách thực hiện",
-          role: "Nhà sáng lập & Giám đốc điều hành"
+      members: [
+        {
+          name: "Alex Morgan",
+          role: "Nhà sáng lập & CEO",
+          bio: "Cựu kỹ sư phần mềm, người yêu xe và đam mê xây dựng các giải pháp sáng tạo.",
         },
-        1: {
-          bio: "Chuyên gia khoa học dữ liệu, chuyên về thu thập dữ liệu web và hệ thống truy xuất thông tin.",
-          name: "Sarah Chen, đây là cách",
-          role: "Giám đốc công nghệ"
+        {
+          name: "Sarah Chen",
+          role: "CTO",
+          bio: "Chuyên gia khoa học dữ liệu, chuyên về web scraping và hệ thống truy xuất thông tin.",
         },
-        2: {
-          bio: "Kỹ sư full-stack với chuyên môn xây dựng hệ thống thông báo hiệu suất cao.",
+        {
           name: "Marcus Lee",
-          role: "Lập trình viên chính"
+          role: "Lead Developer",
+          bio: "Lập trình viên full-stack có kinh nghiệm xây dựng hệ thống thông báo hiệu năng cao.",
         },
-        3: {
-          bio: "Cựu chuyên viên kinh doanh ô tô tận tâm hỗ trợ khách hàng tìm ra chiếc xe hoàn hảo nhất.",
+        {
           name: "Elena Rodriguez",
-          role: "Thành công khách hàng"
-        }
-      }
+          role: "Customer Success",
+          bio: "Cựu chuyên viên tư vấn bán xe, tận tâm giúp khách hàng tìm được chiếc xe phù hợp nhất.",
+        },
+      ],
     },
     join: {
       heading: "Gia nhập đội ngũ của chúng tôi",
-      description: "Chúng tôi luôn tìm kiếm những cá nhân tài năng, đam mê công nghệ và mong muốn thay đổi cách mọi người mua xe. Khám phá các vị trí tuyển dụng hiện tại và cùng AMIQUUS thực hiện sứ mệnh này.",
-      cta: "Xem các vị trí tuyển dụng"
+      description:
+        "Chúng tôi luôn tìm kiếm những người tài năng, yêu công nghệ và muốn thay đổi trải nghiệm mua xe. Xem các vị trí đang tuyển và cùng tham gia sứ mệnh với chúng tôi.",
+      cta: "Xem vị trí tuyển dụng",
     },
     questions: {
-      heading: "Bạn có thắc mắc?",
-      description: "Tìm hiểu thêm về cách AMIQUUS hoạt động, xem các gói giá hoặc liên hệ với đội ngũ hỗ trợ của chúng tôi.",
+      heading: "Có câu hỏi thêm?",
+      description:
+        "Tìm hiểu thêm về cách dịch vụ hoạt động, xem bảng giá hoặc liên hệ đội hỗ trợ của chúng tôi.",
       links: {
-        faq: "Xem Câu hỏi thường gặp",
+        faq: "Xem phần Câu hỏi thường gặp",
         pricing: "Xem bảng giá",
-        support: "Liên hệ hỗ trợ"
-      }
-    }
+        support: "Liên hệ hỗ trợ",
+      },
+    },
   },
   terms: {
-    metaTitle: "Điều khoản dịch vụ | Amiquus",
-    metaDescription: "Đọc Điều khoản Dịch vụ của AMIQUUS điều chỉnh việc sử dụng dịch vụ theo dõi và thông báo tin đăng xe của bạn.",
-    title: "Điều khoản dịch vụ",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Điều Khoản Dịch Vụ | Amiquus",
+    metaDescription:
+      "Đọc Điều Khoản Dịch Vụ của Amiquus quy định việc bạn sử dụng dịch vụ theo dõi và thông báo danh sách xe hơi.",
+    title: "Điều Khoản Dịch Vụ",
+    lastUpdated: "Cập nhật lần cuối: 21 tháng 5, 2025",
+
     sections: {
-      1: {
-        id: "thỏa thuận",
-        heading: "Đồng ý với các điều khoản",
-        paragraphs: {
-          0: "Các Điều Khoản Dịch Vụ này là một thỏa thuận có tính ràng buộc pháp lý giữa bạn và AMIQUUS, liên quan đến việc bạn truy cập và sử dụng trang web cũng như các dịch vụ của chúng tôi.",
-          1: "Bằng việc truy cập hoặc sử dụng dịch vụ của chúng tôi, bạn đồng ý bị ràng buộc bởi các Điều Khoản này. Nếu bạn không đồng ý với bất kỳ phần nào của các điều khoản, bạn không được phép truy cập dịch vụ."
-        },
+      "1": {
+        id: "agreement",
+        heading: "Chấp Nhận Điều Khoản",
+        paragraphs: [
+          "Điều Khoản Dịch Vụ này là thỏa thuận pháp lý giữa bạn và Amiquus liên quan đến việc truy cập và sử dụng trang web và dịch vụ của chúng tôi.",
+          "Bằng việc truy cập hoặc sử dụng dịch vụ, bạn đồng ý tuân theo các điều khoản này. Nếu bạn không đồng ý, vui lòng ngừng sử dụng dịch vụ.",
+        ],
+        list: [],
+      },
+
+      "2": {
+        id: "changes",
+        heading: "Thay Đổi Điều Khoản",
+        paragraphs: [
+          "Chúng tôi có quyền sửa đổi hoặc thay thế Điều Khoản này bất cứ lúc nào. Nếu có thay đổi quan trọng, chúng tôi sẽ thông báo trước ít nhất 30 ngày.",
+          "Việc bạn tiếp tục sử dụng dịch vụ sau khi điều khoản mới có hiệu lực nghĩa là bạn đồng ý với các thay đổi đó.",
+        ],
+        list: [],
+      },
+
+      "3": {
+        id: "account",
+        heading: "Điều Khoản Tài Khoản",
+        paragraphs: ["Để sử dụng dịch vụ, bạn phải:"],
         list: [
-        ]
+          "Từ 18 tuổi trở lên",
+          "Hoàn tất quá trình đăng ký",
+          "Cung cấp thông tin chính xác và cập nhật",
+          "Chịu trách nhiệm giữ an toàn cho tài khoản và mật khẩu",
+          "Chịu trách nhiệm cho mọi hoạt động diễn ra trong tài khoản",
+          "Thông báo cho chúng tôi ngay nếu có truy cập trái phép",
+        ],
       },
-      2: {
-        id: "thay đổi",
-        heading: "Thay đổi Điều khoản",
-        paragraphs: {
-          0: "Chúng tôi có quyền, theo quyết định riêng của mình, sửa đổi hoặc thay thế các Điều Khoản này vào bất kỳ thời điểm nào. Nếu có thay đổi quan trọng, chúng tôi sẽ nỗ lực hợp lý để thông báo trước ít nhất 30 ngày trước khi các điều khoản mới có hiệu lực.",
-          1: "Bằng việc tiếp tục truy cập hoặc sử dụng dịch vụ của chúng tôi sau khi các thay đổi này có hiệu lực, bạn đồng ý bị ràng buộc bởi các điều khoản đã được sửa đổi. Nếu bạn không đồng ý với các điều khoản mới, vui lòng ngừng sử dụng dịch vụ."
-        },
+
+      "4": {
+        id: "payment",
+        heading: "Điều Khoản Thanh Toán",
+        paragraphs: [
+          "Amiquus cung cấp dịch vụ dựa trên gói đăng ký với các điều khoản sau:",
+        ],
         list: [
-        ]
+          "Tất cả phí chưa bao gồm thuế",
+          "Giá đăng ký có thể thay đổi với thông báo trước 30 ngày",
+          "Gói đăng ký sẽ tự động gia hạn trừ khi bạn hủy trước chu kỳ kế tiếp",
+          "Việc hoàn tiền được xử lý theo chính sách hoàn tiền của chúng tôi",
+          "Chúng tôi sử dụng Stripe để xử lý thanh toán và không lưu trữ thông tin thẻ của bạn",
+        ],
       },
-      3: {
-        id: "tài khoản",
-        heading: "Điều khoản tài khoản",
-        paragraphs: {
-          0: "Để sử dụng dịch vụ của chúng tôi, bạn cần:"
-        },
-        list: {
-          0: "Bạn phải đủ 18 tuổi trở lên",
-          1: "Hoàn tất quá trình đăng ký",
-          2: "Cung cấp thông tin chính xác, đầy đủ và cập nhật",
-          3: "Hãy chịu trách nhiệm bảo mật tài khoản và mật khẩu của bạn",
-          4: "Chịu trách nhiệm cho mọi hoạt động diễn ra dưới tài khoản của bạn",
-          5: "Thông báo cho chúng tôi ngay khi bạn phát hiện bất kỳ vi phạm bảo mật hoặc sử dụng trái phép tài khoản của mình"
-        }
-      },
-      4: {
-        id: "thanh toán",
-        heading: "Điều khoản thanh toán",
-        paragraphs: {
-          0: "Amiquus cung cấp dịch vụ đăng ký với các điều khoản sau:"
-        },
-        list: {
-          0: "Tất cả các khoản phí chưa bao gồm thuế, thuế sẽ được cộng thêm khi áp dụng.",
-          1: "Giá đăng ký có thể thay đổi với thông báo trước 30 ngày.",
-          2: "Gói đăng ký sẽ tự động gia hạn trừ khi bạn hủy trước chu kỳ thanh toán tiếp theo.",
-          3: "Việc hoàn tiền được xem xét từng trường hợp dựa trên chính sách hoàn tiền của chúng tôi.",
-          4: "Chúng tôi sử dụng Stripe để xử lý thanh toán an toàn, và tất cả thông tin thanh toán đều được Stripe lưu trữ."
-        }
-      },
-      5: {
-        id: "sức chứa",
-        heading: "Giới hạn sức chứa",
-        paragraphs: {
-          0: "Để đảm bảo chất lượng và độ tin cậy của dịch vụ, AMIQUUS giới hạn số lượng đăng ký hoạt động ở mức 30. Khi đạt đến giới hạn này:"
-        },
-        list: {
-          0: "Người dùng mới có thể tham gia danh sách chờ của chúng tôi",
-          1: "Vị trí trong danh sách chờ được xác định theo thứ tự đăng ký trước.",
-          2: "Khi có chỗ trống, người trong danh sách chờ sẽ được thông báo theo thứ tự.",
-          3: "Chúng tôi có quyền thay đổi giới hạn sức chứa vào bất kỳ thời điểm nào."
-        }
-      },
-      6: {
-        id: "thu thập dữ liệu",
-        heading: "Giới hạn thu thập dữ liệu web",
-        paragraphs: {
-          0: "Dịch vụ của chúng tôi truy cập và xử lý dữ liệu từ nhiều trang web đăng tin rao bán ô tô. Khi sử dụng dịch vụ của chúng tôi, bạn xác nhận rằng:"
-        },
-        list: {
-          0: "Amiquus tôn trọng điều khoản dịch vụ của các trang web mà chúng tôi theo dõi",
-          1: "Chúng tôi áp dụng giới hạn tốc độ và tuân thủ các quy tắc thu thập dữ liệu một cách tôn trọng",
-          2: "Khả năng truy cập một số trang web có thể thay đổi tùy theo điều khoản và biện pháp kỹ thuật của họ.",
-          3: "Chúng tôi không đảm bảo tính đầy đủ hoặc cập nhật kịp thời của dữ liệu được thu thập."
-        }
-      },
-      7: {
-        id: "trí tuệ",
-        heading: "Sở hữu trí tuệ",
-        paragraphs: {
-          0: "Dịch vụ AMIQUUS, bao gồm nội dung gốc, các tính năng và chức năng, là và sẽ luôn thuộc quyền sở hữu độc quyền của AMIQUUS. Dịch vụ của chúng tôi được bảo vệ bởi luật bản quyền, nhãn hiệu và các quy định pháp luật khác của Hoa Kỳ cũng như các quốc gia khác.",
-          1: "Các nhãn hiệu và nhận diện thương hiệu của chúng tôi không được phép sử dụng cho bất kỳ sản phẩm hoặc dịch vụ nào nếu không có sự đồng ý bằng văn bản trước đó của AMIQUUS."
-        },
+
+      "5": {
+        id: "capacity",
+        heading: "Giới Hạn Số Lượng Người Dùng",
+        paragraphs: [
+          "Để đảm bảo chất lượng dịch vụ, Amiquus giới hạn số lượng người đăng ký tối đa là 30. Khi đạt giới hạn:",
+        ],
         list: [
-        ]
+          "Người dùng mới sẽ được đưa vào danh sách chờ",
+          "Thứ tự danh sách chờ dựa trên thời gian đăng ký",
+          "Khi có chỗ trống, người trong danh sách chờ sẽ được thông báo",
+          "Chúng tôi có quyền thay đổi giới hạn này bất kỳ lúc nào",
+        ],
       },
-      8: {
-        id: "chấm dứt",
-        heading: "Chấm dứt",
-        paragraphs: {
-          0: "Chúng tôi có thể chấm dứt hoặc tạm ngưng tài khoản của bạn ngay lập tức mà không cần thông báo trước hoặc chịu bất kỳ trách nhiệm nào, vì bất kỳ lý do gì, bao gồm nhưng không giới hạn nếu bạn vi phạm Điều Khoản.",
-          1: "Khi chấm dứt, quyền sử dụng dịch vụ của bạn sẽ ngay lập tức bị hủy. Nếu bạn muốn xóa tài khoản, bạn chỉ cần ngừng sử dụng dịch vụ hoặc liên hệ với chúng tôi để yêu cầu xóa tài khoản."
-        },
+
+      "6": {
+        id: "scraping",
+        heading: "Giới Hạn Thu Thập Dữ Liệu",
+        paragraphs: [
+          "Dịch vụ của chúng tôi truy cập và xử lý dữ liệu từ nhiều website đăng tin xe hơi. Khi sử dụng dịch vụ, bạn đồng ý rằng:",
+        ],
         list: [
-        ]
+          "Amiquus tuân thủ điều khoản sử dụng của các website theo dõi",
+          "Chúng tôi áp dụng giới hạn tần suất và thu thập dữ liệu một cách hợp lý",
+          "Một số website có thể thay đổi quyền truy cập hoặc hạn chế kỹ thuật",
+          "Chúng tôi không đảm bảo dữ liệu luôn đầy đủ hoặc được cập nhật ngay lập tức",
+        ],
       },
-      9: {
-        id: "giới hạn",
-        heading: "Giới hạn trách nhiệm",
-        paragraphs: {
-          0: "Trong mọi trường hợp, AMIQUUS cũng như các giám đốc, nhân viên, đối tác, đại lý, nhà cung cấp hoặc các bên liên kết của mình sẽ không chịu trách nhiệm đối với bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, hệ quả hoặc mang tính trừng phạt nào, bao gồm nhưng không giới hạn ở việc mất lợi nhuận, dữ liệu, quyền sử dụng, uy tín hoặc các tổn thất vô hình khác phát sinh từ:"
-        },
-        list: {
-          0: "Việc bạn truy cập, sử dụng hoặc không thể truy cập, sử dụng dịch vụ",
-          1: "Bất kỳ hành vi hoặc nội dung nào của bên thứ ba trên dịch vụ",
-          2: "Bất kỳ nội dung nào lấy từ dịch vụ",
-          3: "Truy cập, sử dụng hoặc thay đổi trái phép các truyền tải hoặc nội dung của bạn"
-        }
+
+      "7": {
+        id: "intellectual",
+        heading: "Quyền Sở Hữu Trí Tuệ",
+        paragraphs: [
+          "Tất cả nội dung, tính năng và thiết kế của dịch vụ Amiquus là tài sản độc quyền của Amiquus.",
+          "Bạn không được sử dụng thương hiệu hoặc tài liệu của chúng tôi nếu không có sự đồng ý bằng văn bản.",
+        ],
+        list: [],
       },
-      10: {
-        id: "tuyên bố miễn trừ trách nhiệm",
-        heading: "Tuyên bố miễn trừ trách nhiệm",
-        paragraphs: {
-          0: "Việc bạn sử dụng dịch vụ là hoàn toàn tự chịu trách nhiệm. Dịch vụ được cung cấp theo nguyên tắc “NGUYÊN TRẠNG” và “KHI CÓ SẴN”. Dịch vụ được cung cấp mà không có bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý.",
-          1: "AMIQUUS không đảm bảo rằng dịch vụ sẽ luôn không bị gián đoạn, đúng thời gian, an toàn hoặc không có lỗi, cũng như không đảm bảo rằng các kết quả thu được từ việc sử dụng dịch vụ sẽ chính xác hoặc đáng tin cậy."
-        },
+
+      "8": {
+        id: "termination",
+        heading: "Chấm Dứt Dịch Vụ",
+        paragraphs: [
+          "Chúng tôi có thể tạm khóa hoặc chấm dứt tài khoản của bạn ngay lập tức nếu bạn vi phạm Điều Khoản.",
+          "Khi tài khoản bị chấm dứt, quyền sử dụng dịch vụ sẽ dừng ngay lập tức.",
+        ],
+        list: [],
+      },
+
+      "9": {
+        id: "limitations",
+        heading: "Giới Hạn Trách Nhiệm",
+        paragraphs: [
+          "Amiquus không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp hoặc đặc biệt nào, bao gồm:",
+        ],
         list: [
-        ]
+          "Không thể sử dụng dịch vụ",
+          "Hành vi của bên thứ ba",
+          "Dữ liệu không chính xác",
+          "Truy cập trái phép vào tài khoản",
+        ],
       },
-      11: {
-        id: "cookie",
-        heading: "Chính sách Cookie",
-        paragraphs: {
-          0: "Chính sách Cookie của chúng tôi giải thích cookie là gì, cách chúng tôi sử dụng cookie, cách các bên thứ ba mà chúng tôi hợp tác có thể sử dụng cookie trên dịch vụ của chúng tôi, các lựa chọn của bạn liên quan đến cookie và thêm thông tin về cookie. Vui lòng tham khảo mục Cookie trong Chính sách Bảo mật của chúng tôi."
-        },
-        list: [
-        ]
+
+      "10": {
+        id: "disclaimer",
+        heading: "Miễn Trừ Trách Nhiệm",
+        paragraphs: [
+          "Dịch vụ được cung cấp “như hiện có” và “khi có sẵn”, không có bất kỳ đảm bảo nào.",
+          "Chúng tôi không đảm bảo dịch vụ luôn hoạt động liên tục, an toàn hoặc không có lỗi.",
+        ],
+        list: [],
       },
-      12: {
-        id: "luật điều chỉnh",
-        heading: "Luật điều chỉnh",
-        paragraphs: {
-          0: "Các Điều Khoản này sẽ được điều chỉnh và giải thích theo pháp luật Hoa Kỳ, bất kể các quy định về xung đột pháp luật.",
-          1: "Việc chúng tôi không thực thi bất kỳ quyền hoặc điều khoản nào trong các Điều Khoản này sẽ không được coi là từ bỏ những quyền đó. Nếu bất kỳ điều khoản nào trong các Điều Khoản này bị tòa án tuyên là vô hiệu hoặc không thể thực thi, các điều khoản còn lại vẫn sẽ tiếp tục có hiệu lực."
-        },
-        list: [
-        ]
+
+      "11": {
+        id: "cookies",
+        heading: "Chính Sách Cookies",
+        paragraphs: [
+          "Bạn có thể xem thông tin chi tiết về cookies trong Chính Sách Quyền Riêng Tư của chúng tôi.",
+        ],
+        list: [],
       },
-      13: {
-        id: "liên hệ",
-        heading: "Liên hệ với chúng tôi",
-        paragraphs: {
-          0: "Nếu bạn có bất kỳ thắc mắc nào về các Điều Khoản này, vui lòng liên hệ với chúng tôi:"
-        },
-        list: {
-          0: "Qua email: legal@amiquus.com",
-          1: "Bằng cách truy cập trang liên hệ trên website của chúng tôi"
-        }
-      }
-    }
+
+      "12": {
+        id: "governing-law",
+        heading: "Luật Áp Dụng",
+        paragraphs: [
+          "Điều Khoản này tuân theo luật pháp Hoa Kỳ.",
+          "Nếu bất kỳ điều khoản nào không hợp lệ, các điều khoản còn lại vẫn có hiệu lực.",
+        ],
+        list: [],
+      },
+
+      "13": {
+        id: "contact",
+        heading: "Liên Hệ",
+        paragraphs: ["Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ:"],
+        list: ["Email: legal@amiquus.com", "Trang liên hệ trên website"],
+      },
+    },
   },
   privacy: {
-    metaTitle: "Chính Sách Bảo Mật | Amiquus",
-    metaDescription: "Tìm hiểu cách AMIQUUS xử lý dữ liệu cá nhân, quyền riêng tư và các hoạt động thu thập dữ liệu của bạn.",
-    title: "Chính sách bảo mật",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Chính Sách Quyền Riêng Tư | Amiquus",
+    metaDescription:
+      "Tìm hiểu cách Amiquus thu thập, sử dụng và bảo vệ dữ liệu cá nhân của bạn.",
+    title: "Chính Sách Quyền Riêng Tư",
+    lastUpdated: "Cập nhật lần cuối: 21 tháng 5, 2025",
+
     sections: {
-      0: {
-        id: "giới thiệu",
-        heading: "Giới thiệu",
-        paragraphs: {
-          0: "Chào mừng bạn đến với AMIQUUS. Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu cá nhân của bạn. Chính sách bảo mật này sẽ thông báo cho bạn về cách chúng tôi bảo vệ dữ liệu cá nhân của bạn khi bạn truy cập website của chúng tôi, cũng như quyền riêng tư của bạn và cách pháp luật bảo vệ bạn."
-        }
+      "0": {
+        id: "introduction",
+        heading: "Giới Thiệu",
+        paragraphs: [
+          "Amiquus tôn trọng quyền riêng tư và cam kết bảo vệ dữ liệu cá nhân của bạn. Chính sách này giải thích cách chúng tôi thu thập và sử dụng dữ liệu.",
+        ],
       },
-      1: {
-        id: "du-lieu-chung-toi-thu-thap",
-        heading: "Thông tin chúng tôi thu thập",
-        paragraphs: {
-          0: "Chúng tôi thu thập nhiều loại thông tin khác nhau cho các mục đích nhằm cung cấp và cải thiện dịch vụ cho bạn:"
-        },
-        list: {
-          0: "Dữ liệu cá nhân: Địa chỉ email, tên, họ và ảnh đại diện (nếu được cung cấp qua xác thực bên thứ ba).",
-          1: "Dữ liệu tài khoản: Thông tin đăng nhập và tùy chọn tài khoản của bạn.",
-          2: "Dữ liệu sử dụng: Thông tin về cách bạn sử dụng website và dịch vụ của chúng tôi.",
-          3: "Tuỳ chọn tìm kiếm xe: Tiêu chí về xe mà bạn thiết lập để theo dõi (hãng, mẫu xe, khoảng giá, v.v.).",
-          4: "Thông tin về Telegram: Nếu bạn chọn nhận thông báo qua Telegram, chúng tôi sẽ lưu trữ ID chat Telegram và mã token bot của bạn.",
-          5: "Thông tin thanh toán: Khi bạn thực hiện mua hàng, đơn vị xử lý thanh toán của chúng tôi sẽ thu thập các thông tin cần thiết để xử lý giao dịch của bạn. AMIQUUS không lưu trữ đầy đủ thông tin thẻ tín dụng của bạn."
-        }
+
+      "1": {
+        id: "data-we-collect",
+        heading: "Dữ Liệu Chúng Tôi Thu Thập",
+        paragraphs: [
+          "Chúng tôi thu thập nhiều loại dữ liệu để cải thiện dịch vụ:",
+        ],
+        list: [
+          "Dữ liệu cá nhân: email, họ tên, ảnh đại diện",
+          "Thông tin tài khoản",
+          "Dữ liệu sử dụng dịch vụ",
+          "Tiêu chí tìm kiếm xe hơi",
+          "Dữ liệu Telegram (Chat ID và Bot Token)",
+          "Thông tin thanh toán được xử lý qua Stripe",
+        ],
       },
-      2: {
-        id: "cách-chúng-tôi-sử-dụng-dữ-liệu",
-        heading: "Cách chúng tôi sử dụng dữ liệu của bạn",
-        paragraphs: {
-          0: "Chúng tôi sử dụng dữ liệu cá nhân của bạn cho các mục đích sau:"
-        },
-        list: {
-          0: "Cung cấp và duy trì dịch vụ của chúng tôi",
-          1: "Thông báo cho bạn về những thay đổi đối với dịch vụ của chúng tôi",
-          2: "Để bạn có thể tham gia vào các tính năng tương tác của dịch vụ chúng tôi",
-          3: "Hỗ trợ khách hàng",
-          4: "Thu thập phân tích hoặc thông tin giá trị để chúng tôi có thể cải thiện dịch vụ của mình",
-          5: "Để theo dõi việc sử dụng dịch vụ của chúng tôi",
-          6: "Phát hiện, ngăn chặn và xử lý sự cố kỹ thuật",
-          7: "Xử lý thanh toán và ngăn chặn giao dịch gian lận",
-          8: "Gửi danh sách xe phù hợp với nhu cầu của bạn qua phương thức thông báo đã chọn"
-        }
+
+      "2": {
+        id: "how-we-use-data",
+        heading: "Cách Chúng Tôi Sử Dụng Dữ Liệu",
+        paragraphs: ["Chúng tôi sử dụng dữ liệu của bạn để:"],
+        list: [
+          "Cung cấp và duy trì dịch vụ",
+          "Thông báo thay đổi dịch vụ",
+          "Hỗ trợ khách hàng",
+          "Cải thiện và phân tích hoạt động dịch vụ",
+          "Ngăn chặn gian lận",
+          "Xử lý thanh toán",
+          "Gửi thông báo về các tin đăng phù hợp",
+        ],
       },
-      3: {
-        id: "lưu trữ dữ liệu",
-        heading: "Lưu trữ và bảo mật dữ liệu",
-        paragraphs: {
-          0: "Chúng tôi áp dụng các biện pháp bảo mật phù hợp để bảo vệ dữ liệu cá nhân của bạn khỏi truy cập, thay đổi, tiết lộ hoặc phá hủy trái phép. Tất cả dữ liệu đều được lưu trữ trên các máy chủ an toàn với mã hóa trong quá trình truyền và khi lưu trữ.",
-          1: "Chúng tôi chỉ lưu giữ dữ liệu cá nhân của bạn trong thời gian cần thiết cho các mục đích được nêu trong chính sách quyền riêng tư này, bao gồm cả việc đáp ứng các yêu cầu pháp lý, quy định, thuế, kế toán hoặc báo cáo."
-        }
+
+      "3": {
+        id: "data-storage",
+        heading: "Lưu Trữ & Bảo Mật Dữ Liệu",
+        paragraphs: [
+          "Dữ liệu được lưu trữ trên máy chủ bảo mật cao và được mã hóa khi truyền tải và khi lưu trữ.",
+          "Chúng tôi chỉ lưu dữ liệu trong thời gian cần thiết cho mục đích hợp pháp.",
+        ],
       },
-      4: {
-        id: "quy định bảo vệ dữ liệu chung",
-        heading: "Quyền của bạn theo GDPR",
-        paragraphs: {
-          0: "Nếu bạn là cư dân của Khu vực Kinh tế Châu Âu (EEA), bạn có một số quyền về bảo vệ dữ liệu cá nhân. AMIQUUS cam kết thực hiện các biện pháp hợp lý để cho phép bạn chỉnh sửa, cập nhật, xóa hoặc giới hạn việc sử dụng dữ liệu cá nhân của mình.",
-          1: "Bạn có các quyền bảo vệ dữ liệu sau:"
-        },
-        list: {
-          0: "Quyền truy cập, cập nhật hoặc xóa thông tin mà chúng tôi lưu trữ về bạn",
-          1: "Quyền được chỉnh sửa thông tin",
-          2: "Quyền phản đối",
-          3: "Quyền hạn chế",
-          4: "Quyền chuyển giao dữ liệu",
-          5: "Quyền rút lại sự đồng ý"
-        }
+
+      "4": {
+        id: "gdpr",
+        heading: "Quyền Theo GDPR",
+        paragraphs: ["Nếu bạn sống trong khu vực EEA, bạn có các quyền sau:"],
+        list: [
+          "Quyền truy cập dữ liệu",
+          "Quyền chỉnh sửa",
+          "Quyền xóa dữ liệu",
+          "Quyền hạn chế xử lý",
+          "Quyền chuyển dữ liệu",
+          "Quyền rút lại sự đồng ý",
+        ],
       },
-      5: {
-        id: "cookie",
-        heading: "Chính sách Cookie",
-        paragraphs: {
-          0: "Cookie là các tệp dữ liệu nhỏ được lưu trữ trên thiết bị của bạn. Chúng tôi sử dụng cookie để:"
-        },
-        list: {
-          0: "Giữ bạn luôn đăng nhập",
-          1: "Hiểu cách bạn sử dụng trang web của chúng tôi",
-          2: "Ghi nhớ tùy chọn của bạn",
-          3: "Tùy chỉnh trải nghiệm của bạn"
-        }
+
+      "5": {
+        id: "cookies",
+        heading: "Cookies",
+        paragraphs: ["Chúng tôi sử dụng cookies để:"],
+        list: [
+          "Duy trì trạng thái đăng nhập",
+          "Ghi nhớ tùy chọn của bạn",
+          "Phân tích hành vi người dùng",
+          "Cải thiện trải nghiệm dịch vụ",
+        ],
       },
-      6: {
-        id: "bên thứ ba",
-        heading: "Dịch vụ bên thứ ba",
-        paragraphs: {
-          0: "Chúng tôi có thể thuê các công ty và cá nhân bên thứ ba để hỗ trợ vận hành dịch vụ, cung cấp dịch vụ thay mặt chúng tôi, thực hiện các nhiệm vụ liên quan đến dịch vụ hoặc hỗ trợ chúng tôi phân tích cách thức sử dụng dịch vụ của mình.",
-          1: "Các bên thứ ba này bao gồm:"
-        },
-        list: {
-          0: "Cổng thanh toán (Stripe)",
-          1: "Nhà cung cấp phân tích",
-          2: "Dịch vụ hỗ trợ khách hàng",
-          3: "Nhà cung cấp dịch vụ lưu trữ và hạ tầng đám mây"
-        },
-        paragraphs2: {
-          0: "Các bên thứ ba này chỉ được phép truy cập dữ liệu cá nhân của bạn để thực hiện các nhiệm vụ này thay mặt cho chúng tôi và có nghĩa vụ không tiết lộ hoặc sử dụng cho bất kỳ mục đích nào khác."
-        }
+
+      "6": {
+        id: "third-party",
+        heading: "Dịch Vụ Bên Thứ Ba",
+        paragraphs: ["Chúng tôi sử dụng một số dịch vụ bên thứ ba:"],
+        list: [
+          "Stripe (xử lý thanh toán)",
+          "Dịch vụ phân tích",
+          "Dịch vụ hỗ trợ khách hàng",
+          "Cơ sở hạ tầng đám mây",
+        ],
+        paragraphs2: [
+          "Các nhà cung cấp này chỉ được truy cập dữ liệu trong phạm vi cần thiết để thực hiện dịch vụ.",
+        ],
       },
-      7: {
-        id: "thay đổi",
-        heading: "Những thay đổi đối với Chính sách quyền riêng tư này",
-        paragraphs: {
-          0: "Chúng tôi có thể cập nhật chính sách quyền riêng tư của mình theo thời gian. Mọi thay đổi sẽ được thông báo bằng cách đăng chính sách quyền riêng tư mới trên trang này và cập nhật ngày \"Cập nhật lần cuối\".",
-          1: "Bạn nên thường xuyên xem lại chính sách quyền riêng tư này để cập nhật các thay đổi (nếu có). Các thay đổi đối với chính sách quyền riêng tư này sẽ có hiệu lực ngay khi được đăng trên trang này."
-        }
+
+      "7": {
+        id: "changes",
+        heading: "Thay Đổi Chính Sách",
+        paragraphs: [
+          "Chúng tôi có thể cập nhật Chính Sách Quyền Riêng Tư bất kỳ lúc nào. Mọi thay đổi sẽ được đăng trên trang này.",
+        ],
       },
-      8: {
-        id: "liên hệ",
-        heading: "Liên hệ với chúng tôi",
-        paragraphs: {
-          0: "Nếu bạn có bất kỳ thắc mắc nào về chính sách quyền riêng tư này, vui lòng liên hệ với chúng tôi:"
-        },
-        list: {
-          0: "Qua email: privacy@amiquus.com",
-          1: "Bằng cách truy cập trang liên hệ trên website của chúng tôi"
-        }
-      }
-    }
+
+      "8": {
+        id: "contact",
+        heading: "Liên Hệ",
+        paragraphs: ["Nếu bạn có thắc mắc, vui lòng liên hệ:"],
+        list: ["Email: privacy@amiquus.com", "Trang liên hệ trên website"],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Câu hỏi thường gặp | Amiquus",
-    metaDescription: "Tìm câu trả lời cho những thắc mắc phổ biến về dịch vụ giám sát tin đăng xe của AMIQUUS, gói đăng ký, cài đặt thông báo và nhiều nội dung khác.",
-    title: "Câu hỏi thường gặp",
-    subtitle: "Tìm câu trả lời nhanh cho các thắc mắc thường gặp về dịch vụ giám sát tin đăng ô tô của AMIQUUS",
+    metaTitle: "Câu Hỏi Thường Gặp | Amiquus",
+    metaDescription:
+      "Tìm câu trả lời cho các thắc mắc phổ biến về Amiquus: theo dõi tin đăng xe hơi, gói đăng ký, cài đặt thông báo và nhiều hơn nữa.",
+    title: "Câu Hỏi Thường Gặp",
+    subtitle:
+      "Tìm câu trả lời nhanh chóng cho các câu hỏi thường gặp về dịch vụ theo dõi tin đăng xe hơi của chúng tôi",
+
     general: {
-      heading: "Câu hỏi thường gặp",
+      heading: "Câu hỏi chung",
+
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Amiquus là gì?",
+        answer:
+          "Amiquus là dịch vụ theo dõi tin đăng xe hơi từ nhiều website khác nhau và gửi thông báo ngay lập tức qua Telegram khi có tin đăng phù hợp với tiêu chí của bạn.",
       },
+
       howItWorks: {
-        question: "How does it work?",
+        question: "Amiquus hoạt động như thế nào?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
-      },
-      whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
-        list: [
-
-          "AutoTrader",
-
-          "Cars.com",
-
-          "CarGurus",
-
-          "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
-          "Craigslist",
-
-          "eBay Motors"
-
+          "1. Bạn đặt tiêu chí tìm kiếm (hãng xe, mẫu xe, giá, v.v.).",
+          "2. Chọn các website bạn muốn theo dõi.",
+          "3. Kết nối Telegram để nhận thông báo.",
+          "4. Hệ thống liên tục kiểm tra các tin đăng mới.",
+          "5. Bạn nhận được thông báo ngay khi có tin phù hợp.",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+      },
+
+      whichWebsites: {
+        question: "Amiquus theo dõi những website nào?",
+        answerIntro: "Chúng tôi hiện theo dõi các nền tảng sau:",
+        list: [
+          "AutoTrader",
+          "Cars.com",
+          "CarGurus",
+          "TrueCar",
+          "Facebook Marketplace (qua URL)",
+          "Craigslist",
+          "eBay Motors",
+        ],
+        outro:
+          "Chúng tôi sẽ tiếp tục bổ sung thêm nhiều nền tảng khác trong tương lai.",
+      },
     },
+
     subscription: {
       heading: "Câu hỏi về đăng ký",
+
       cost: {
-        question: "Chi phí đăng ký là bao nhiêu?",
-        answer: {
-          0: "Giá của chúng tôi bắt đầu từ 79,99 USD mỗi tháng để giám sát một website với cập nhật mỗi 6 giờ. Mỗi website bổ sung có giá 4,99 USD mỗi tháng. Bạn cũng có thể nâng cấp tần suất cập nhật để nhận thông báo nhanh hơn.",
-          1: "Để biết chi tiết về giá, vui lòng xem mục Bảng giá trên trang chủ."
-        }
+        question: "Gói đăng ký có giá bao nhiêu?",
+        answer: [
+          "Gói cơ bản: $79.99/tháng cho 1 website, cập nhật mỗi 6 giờ.",
+          "Mỗi website thêm: $4.99/tháng.",
+          "Bạn có thể nâng cấp tần suất cập nhật để nhận thông báo nhanh hơn.",
+        ],
       },
+
       cancel: {
-        question: "Làm thế nào để hủy đăng ký của tôi?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Đăng nhập vào tài khoản của bạn",
-          1: "Đi tới trang \"Hồ sơ\"",
-          2: "Chọn tab \"Gói đăng ký\"",
-          3: "Nhấn vào nút \"Hủy đăng ký\" bên cạnh gói đăng ký bạn muốn hủy"
-        },
-        note: "Gói đăng ký của bạn sẽ tiếp tục hoạt động cho đến hết chu kỳ thanh toán hiện tại."
+        question: "Làm thế nào để hủy đăng ký?",
+        stepsIntro: "Bạn có thể hủy bất cứ lúc nào:",
+        steps: [
+          "1. Đăng nhập tài khoản.",
+          "2. Truy cập mục “Hồ sơ cá nhân”.",
+          "3. Chọn tab “Gói đăng ký”.",
+          "4. Nhấn “Hủy đăng ký”.",
+        ],
+        note: "Sau khi hủy, dịch vụ vẫn còn hiệu lực đến hết chu kỳ thanh toán.",
       },
+
       multiple: {
-        question: "Tôi có thể đăng ký nhiều gói cho các mẫu xe khác nhau không?",
-        answer: "Vâng, bạn có thể tạo nhiều gói đăng ký dưới một tài khoản. Mỗi gói đăng ký có thể theo dõi các mẫu xe, thương hiệu hoặc mức giá khác nhau. Điều này đặc biệt hữu ích nếu bạn đang tìm kiếm nhiều xe hoặc hỗ trợ bạn bè, người thân trong việc tìm xe."
+        question:
+          "Tôi có thể đăng ký nhiều gói cho nhiều mẫu xe khác nhau không?",
+        answer:
+          "Có. Bạn có thể tạo nhiều gói theo dõi, mỗi gói cho một mẫu xe, mức giá hoặc tiêu chí tìm kiếm riêng.",
       },
+
       limit: {
-        question: "Tại sao lại có giới hạn số lượng người đăng ký?",
-        intro: "Chúng tôi giới hạn dịch vụ ở mức 30 người đăng ký hoạt động để đảm bảo:",
-        list: {
-          0: "Dịch vụ chất lượng cao nhất và độ chính xác dữ liệu tuyệt đối",
-          1: "Hỗ trợ cá nhân hóa cho từng người đăng ký",
-          2: "Giao thông báo nhanh hơn vào giờ cao điểm đăng tin",
-          3: "Thu thập dữ liệu một cách có đạo đức, không gây quá tải cho các trang web mục tiêu"
-        },
-        outro: "Nếu số lượng đã đầy, bạn có thể tham gia danh sách chờ để được thông báo khi có chỗ trống."
-      }
+        question: "Tại sao giới hạn số lượng người dùng?",
+        intro: "Amiquus chỉ nhận tối đa 30 người dùng để đảm bảo:",
+        list: [
+          "Chất lượng dữ liệu tốt nhất",
+          "Hệ thống gửi thông báo nhanh và ổn định",
+          "Không gây quá tải cho các website nguồn",
+          "Hỗ trợ khách hàng hiệu quả hơn",
+        ],
+        outro: "Khi đủ số lượng, bạn có thể tham gia danh sách chờ.",
+      },
     },
+
     technical: {
       heading: "Câu hỏi kỹ thuật",
+
       telegram: {
-        question: "Làm thế nào để cài đặt thông báo Telegram?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Tạo bot Telegram bằng BotFather (hướng dẫn sẽ được cung cấp trong quá trình thiết lập)",
-          1: "Sao chép mã token bot của bạn từ BotFather",
-          2: "Bắt đầu trò chuyện với bot của bạn",
-          3: "Lấy ID trò chuyện của bạn (hướng dẫn sẽ được cung cấp trong quá trình thiết lập)",
-          4: "Nhập mã token bot và ID chat của bạn trong phần cài đặt đăng ký Amiquus",
-          5: "Kiểm tra thiết lập thông báo của bạn bằng nút `Gửi tin nhắn thử nghiệm`"
-        },
-        note: "Hướng dẫn chi tiết từng bước kèm hình ảnh minh họa sẽ được cung cấp trong quá trình thiết lập đăng ký."
+        question: "Cách cài đặt thông báo Telegram?",
+        stepsIntro: "Làm theo các bước sau:",
+        steps: [
+          "1. Tạo Telegram Bot qua BotFather.",
+          "2. Lấy API Token.",
+          "3. Bắt đầu chat với Bot để lấy Chat ID.",
+          "4. Nhập Token và Chat ID vào Amiquus.",
+          "5. Nhấn “Gửi tin nhắn kiểm tra”.",
+        ],
+        note: "Có hướng dẫn chi tiết kèm hình ảnh trong Dashboard.",
       },
+
       frequency: {
-        question: "Tôi sẽ nhận thông báo bao lâu một lần?",
-        intro: "Tần suất nhận thông báo phụ thuộc vào:",
-        list: {
-          0: "Gói tần suất cập nhật bạn đã chọn (từ mỗi 6 giờ đến mỗi 30 phút)",
-          1: "Có bao nhiêu tin đăng mới phù hợp với tiêu chí của bạn",
-          2: "Mức độ sôi động của thị trường cho hãng/mẫu xe bạn chọn"
-        },
-        outro: "Bạn chỉ nhận được thông báo khi có tin đăng mới phù hợp với tiêu chí của bạn."
+        question: "Tôi nhận thông báo thường xuyên như thế nào?",
+        intro: "Tần suất tùy thuộc vào:",
+        list: [
+          "Gói đăng ký bạn dùng (từ 6 giờ/lần đến 1 phút/lần)",
+          "Số lượng tin đăng mới phù hợp",
+          "Độ sôi động của thị trường xe bạn quan tâm",
+        ],
+        outro: "Bạn chỉ nhận thông báo khi có tin đăng thỏa điều kiện.",
       },
+
       privacy: {
-        question: "Dữ liệu cá nhân của tôi được bảo vệ như thế nào?",
-        intro: "Chúng tôi coi trọng quyền riêng tư dữ liệu và áp dụng các biện pháp sau:",
-        list: {
-          0: "Dữ liệu được mã hóa khi truyền và lưu trữ",
-          1: "Thanh toán an toàn qua Stripe",
-          2: "Không chia sẻ dữ liệu với bên thứ ba",
-          3: "Bạn có thể yêu cầu hoặc xóa dữ liệu của mình bất cứ lúc nào"
-        },
-        outro: "Đọc toàn bộ Chính sách quyền riêng tư của chúng tôi để biết thêm thông tin."
-      }
+        question: "Dữ liệu cá nhân của tôi được bảo mật thế nào?",
+        intro: "Chúng tôi bảo vệ dữ liệu bằng:",
+        list: [
+          "Mã hóa dữ liệu khi truyền và lưu trữ",
+          "Thanh toán an toàn qua Stripe",
+          "Không bán hoặc chia sẻ dữ liệu với bên thứ ba",
+          "Bạn có thể yêu cầu xóa hoặc tải dữ liệu bất kỳ lúc nào",
+        ],
+        outro: "Xem thêm tại Chính Sách Quyền Riêng Tư.",
+      },
     },
+
     support: {
-      heading: "Bạn vẫn còn thắc mắc?",
-      description: "Nếu bạn chưa tìm thấy câu trả lời cho thắc mắc của mình, đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giúp đỡ bạn!",
-      button: "Liên hệ hỗ trợ"
-    }
+      heading: "Vẫn cần hỗ trợ?",
+      description:
+        "Nếu bạn không tìm thấy câu trả lời, đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giúp bạn.",
+      button: "Liên hệ hỗ trợ",
+    },
   },
   waitlist: {
-    metaTitle: "Tham gia danh sách chờ - Amiquus",
-    metaDescription: "Tham gia danh sách chờ của AMIQUUS để nhận thông báo khi dịch vụ đăng ký được mở.",
-    title: "Tham gia danh sách chờ",
-    subtitle: "Do nhu cầu sử dụng cao, chúng tôi giới hạn số lượng đăng ký hoạt động để đảm bảo chất lượng dịch vụ tốt nhất cho tất cả người dùng.",
+    metaTitle: "Danh Sách Chờ - Amiquus",
+    metaDescription:
+      "Tham gia danh sách chờ của Amiquus để được thông báo khi có chỗ trống cho gói đăng ký.",
+    title: "Danh Sách Chờ",
+    subtitle:
+      "Do nhu cầu cao, chúng tôi giới hạn số lượng người đăng ký để đảm bảo chất lượng dịch vụ tốt nhất.",
+
     limited: {
-      heading: "Số lượng có hạn",
-      description: "Chúng tôi giới hạn hệ thống chỉ còn 30 người đăng ký hoạt động để đảm bảo:",
-      points: {
-        0: "Độ tin cậy và tốc độ thu thập dữ liệu vượt trội cho mọi người dùng",
-        1: "Giảm nguy cơ bị các trang web đăng tin ô tô chặn",
-        2: "Hỗ trợ cá nhân hóa cho từng thuê bao",
-        3: "Phân bổ tài nguyên máy chủ công bằng"
-      },
-      available: "Hiện còn {{remaining}} suất đăng ký trên tổng số {{capacity}} suất.",
-      full: "Hiện tại tất cả các suất đăng ký đều đã kín. Hãy tham gia danh sách chờ để được thông báo khi có suất trống."
+      heading: "Số Lượng Có Hạn",
+      description:
+        "Chúng tôi giới hạn hệ thống ở 30 người dùng đang hoạt động để đảm bảo:",
+      points: [
+        "Tốc độ và độ chính xác của việc theo dõi",
+        "Giảm nguy cơ bị chặn từ các website nguồn",
+        "Hỗ trợ người dùng tốt hơn",
+        "Phân bổ tài nguyên máy chủ hiệu quả",
+      ],
+      available: "Còn {{remaining}} chỗ trong tổng số {{capacity}}.",
+      full: "Tất cả chỗ đã đầy. Hãy tham gia danh sách chờ để được thông báo khi có chỗ trống.",
     },
+
     success: {
-      title: "Bạn đã vào danh sách chờ!",
-      description: "Chúng tôi sẽ thông báo cho bạn ngay khi có chỗ đăng ký mới.",
-      message: "Cảm ơn bạn đã quan tâm đến Amiquus! Chúng tôi đã thêm bạn vào danh sách chờ và sẽ liên hệ với bạn ngay khi có suất trống.",
-      button: "Quay lại trang chủ"
+      title: "Bạn đã tham gia danh sách chờ!",
+      description: "Chúng tôi sẽ thông báo ngay khi có chỗ trống.",
+      message:
+        "Cảm ơn bạn đã quan tâm đến Amiquus! Bạn đã được thêm vào danh sách chờ và sẽ nhận email khi có vị trí trống.",
+      button: "Quay lại trang chủ",
     },
+
     cantJoin: {
-      title: "Tham gia danh sách chờ",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Tham Gia Danh Sách Chờ",
+      description: "Chúng tôi sẽ thông báo qua email ngay khi có thể tham gia.",
     },
+
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Tên",
+        placeholder: "Nguyen",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Họ",
+        placeholder: "Van A",
       },
       email: {
         label: "Email",
-        placeholder: "john.doe@example.com",
-        description: "Chúng tôi sẽ dùng email này để thông báo cho bạn khi có chỗ trống."
+        placeholder: "example@email.com",
+        description:
+          "Chúng tôi sẽ gửi thông báo đến email này khi có chỗ trống.",
       },
-      submit: "Tham gia danh sách chờ",
-      submitting: "Đang gửi..."
-    }
+      submit: "Tham gia",
+      submitting: "Đang gửi...",
+    },
   },
   support: {
-    metaTitle: "Hỗ trợ | Amiquus - Trung tâm trợ giúp",
-    metaDescription: "Nhận hỗ trợ về tài khoản, gói đăng ký hoặc cảnh báo xe của bạn trên AMIQUUS. Khám phá trung tâm trợ giúp hoặc liên hệ đội ngũ hỗ trợ của chúng tôi để được giúp đỡ.",
-    title: "Trung tâm hỗ trợ",
-    subtitle: "Tìm câu trả lời cho các câu hỏi thường gặp hoặc liên hệ với đội ngũ hỗ trợ của chúng tôi",
+    metaTitle: "Hỗ Trợ | Amiquus",
+    metaDescription:
+      "Nhận hỗ trợ về tài khoản, đăng ký hoặc thông báo của Amiquus. Xem câu hỏi thường gặp hoặc liên hệ đội hỗ trợ.",
+    title: "Trung Tâm Hỗ Trợ",
+    subtitle: "Tìm câu trả lời hoặc liên hệ đội hỗ trợ khi cần",
+
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "Hỗ Trợ Qua Email",
+      description: "Gửi email cho chúng tôi và nhận phản hồi trong vòng 24 giờ",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+
+    faqHeading: "Câu Hỏi Thường Gặp",
+
     faqs: {
       telegram: {
-        question: "Làm thế nào để cài đặt thông báo Telegram?",
-        intro: "Để thiết lập thông báo Telegram, hãy làm theo các bước sau:",
-        steps: {
-          0: "Tạo bot Telegram bằng BotFather (hướng dẫn có trong trang quản trị của chúng tôi)",
-          1: "Sao chép mã API và ID cuộc trò chuyện của bạn",
-          2: "Nhập các thông tin này trong phần Cài đặt tài khoản dưới mục \"Tùy chọn thông báo\"",
-          3: "Kiểm tra kết nối của bạn bằng nút \"Gửi tin nhắn thử\""
-        },
-        outro: "Nếu bạn cần thêm trợ giúp, hướng dẫn chi tiết của chúng tôi có sẵn trong bảng điều khiển của bạn."
+        question: "Cách cài đặt thông báo Telegram?",
+        intro: "Thực hiện theo các bước sau:",
+        steps: [
+          "Tạo Telegram Bot thông qua BotFather",
+          "Lấy API Token và Chat ID",
+          "Nhập thông tin đó vào trang cài đặt của bạn",
+          "Nhấn “Gửi tin nhắn kiểm tra” để kiểm tra",
+        ],
+        outro: "Có hướng dẫn hình ảnh chi tiết trong Dashboard.",
       },
+
       updates: {
-        question: "Các tin đăng bán xe được cập nhật bao lâu một lần?",
-        answer: "Tần suất cập nhật phụ thuộc vào gói đăng ký của bạn. Gói Cơ bản sẽ nhận cập nhật mỗi 6 giờ, trong khi gói Premium có thể nhận cập nhật thường xuyên tới mỗi 30 phút. Bạn có thể xem và thay đổi tần suất cập nhật hiện tại trong phần cài đặt đăng ký."
+        question: "Hệ thống cập nhật tin đăng bao lâu một lần?",
+        answer:
+          "Tùy thuộc vào gói đăng ký: gói cơ bản cập nhật mỗi 6 giờ, gói cao cấp có thể cập nhật mỗi 30 phút.",
       },
+
       facebook: {
         question: "Tôi có thể theo dõi Facebook Marketplace không?",
-        answer: "Vâng, chúng tôi hỗ trợ theo dõi Facebook Marketplace. Để thiết lập, bạn cần cung cấp đường dẫn URL tới trang kết quả tìm kiếm trên Facebook Marketplace với các bộ lọc mong muốn đã được áp dụng. Hệ thống của chúng tôi sẽ theo dõi chính xác tìm kiếm đó để phát hiện các tin đăng mới phù hợp với tiêu chí của bạn."
+        answer:
+          "Có. Chỉ cần dán URL trang tìm kiếm vào hệ thống và chúng tôi sẽ theo dõi nó cho bạn.",
       },
+
       cancel: {
-        question: "Làm sao để hủy đăng ký của tôi?",
-        answer: "Bạn có thể hủy gói đăng ký bất cứ lúc nào tại trang hồ sơ tài khoản của mình. Nhấn vào tab \"Đăng ký\", tìm gói bạn muốn hủy và nhấn nút \"Hủy đăng ký\". Dịch vụ của bạn sẽ tiếp tục cho đến hết chu kỳ thanh toán hiện tại."
+        question: "Làm sao để hủy đăng ký?",
+        answer: "Đi tới Hồ sơ → Gói đăng ký → Nhấn 'Hủy đăng ký'.",
       },
+
       full: {
-        question: "Điều gì xảy ra nếu tất cả các vị trí đăng ký đều đã đầy?",
-        answer: "Để đảm bảo chất lượng dịch vụ luôn ở mức cao, chúng tôi giới hạn số lượng đăng ký đang hoạt động. Nếu tất cả các suất đều đã đầy, bạn có thể tham gia danh sách chờ của chúng tôi. Chúng tôi sẽ thông báo cho bạn ngay khi có suất trống và bạn sẽ được ưu tiên đăng ký trước khi mở cho công chúng."
-      }
+        question: "Nếu toàn bộ chỗ đã đầy thì sao?",
+        answer:
+          "Bạn có thể tham gia danh sách chờ và sẽ nhận thông báo khi có chỗ trống.",
+      },
     },
+
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "Cần thêm hỗ trợ?",
+      description:
+        "Nếu bạn vẫn không tìm thấy câu trả lời, hãy liên hệ đội hỗ trợ — chúng tôi luôn sẵn sàng giúp bạn.",
+      button: "Liên hệ hỗ trợ",
+    },
   },
   notFound: {
-    title: "404 Không tìm thấy trang",
-    message: "Bạn quên thêm trang vào bộ định tuyến rồi phải không?"
+    title: "404 - Không Tìm Thấy Trang",
+    message: "Có thể bạn đã quên thêm trang này vào bộ định tuyến.",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Mã Xác Minh Email Của Bạn - Amiquus",
+      greeting: "Xin chào,",
+      message: "Sử dụng mã bên dưới để hoàn tất đăng ký:",
+      expiration: "Mã này sẽ hết hạn sau 10 phút.",
     },
+
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Thanh Toán Thành Công – Hóa Đơn #",
+        h2Message: "Thanh toán của bạn đã thành công!",
+        greeting: "Xin chào,",
+        paymentMessage: "Chúng tôi đã nhận được thanh toán:",
+        downloadMessage:
+          "Bạn có thể xem hoặc tải xuống hóa đơn tại liên kết sau:",
+        viewInvoice: "Xem Hóa Đơn",
+        invoiceNumber: "Số hóa đơn:",
       },
+
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Thanh toán đang chờ xử lý – Hóa đơn",
+        subjectB: "cho gói đăng ký Amiquus",
+        h2Message: "Hãy hoàn tất thanh toán để kích hoạt gói đăng ký",
+        greeting: "Xin chào,",
+        messageA: "Hóa đơn của bạn",
+        messageB:
+          "chưa được thanh toán. Để kích hoạt gói đăng ký, vui lòng thanh toán:",
+        paymentMessage: "Thanh toán an toàn qua liên kết sau:",
+        payInvoice: "Thanh toán ngay",
+        ignoreEmail: "Nếu bạn đã thanh toán, hãy bỏ qua email này.",
       },
+
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Thanh toán thất bại – Hóa đơn",
+        message: "Chúng tôi không thể xử lý thanh toán (lần thử:",
+        attemptsA: "Chúng tôi sẽ thử lại sớm, bạn không cần làm gì thêm.",
+        attemptsB: "Đã thử thanh toán 3 lần nhưng đều thất bại.",
+        attemptsC: "Gói đăng ký của bạn đã bị tạm dừng.",
+        attemptsD:
+          "Vui lòng cập nhật phương thức thanh toán để tiếp tục sử dụng:",
+        viewInvoice: "Xem hóa đơn",
+        managePayment: "Quản lý phương thức thanh toán",
+      },
     },
+
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Bạn Đã Tham Gia Danh Sách Chờ!",
+      h2Message: "Chào mừng bạn!",
+      hi: "Xin chào,",
+      message:
+        "Cảm ơn bạn đã tham gia danh sách chờ. Chúng tôi sẽ thông báo ngay khi có chỗ trống.",
+      anyQuestions: "Nếu bạn có thắc mắc, hãy phản hồi email này.",
     },
+
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "Cảm ơn bạn đã sử dụng Amiquus!",
+      signature: "Trân trọng,<br/>Đội ngũ Amiquus",
+      team: "— Đội ngũ Amiquus",
+      needHelp: "Cần hỗ trợ?",
+      hello: "Xin chào,",
+    },
+  },
 };

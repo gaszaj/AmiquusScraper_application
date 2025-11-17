@@ -41,6 +41,7 @@ const languages: Language[] = [
   { code: "sq", name: "Shqip", flag: "🇦🇱" },
   { code: "hy", name: "Հայերեն", flag: "🇦🇲" },
   { code: "az", name: "Azərbaycan dili", flag: "🇦🇿" },
+  //,
   { code: "bn", name: "বাংলা", flag: "🇧🇩" },
   { code: "be", name: "Беларуская", flag: "🇧🇾" },
   { code: "bs", name: "Bosanski", flag: "🇧🇦" },
@@ -53,6 +54,7 @@ const languages: Language[] = [
   { code: "ja", name: "日本語", flag: "🇯🇵" },
   { code: "ko", name: "한국어", flag: "🇰🇷" },
   { code: "lv", name: "Latviešu", flag: "🇱🇻" },
+  //
   { code: "lt", name: "Lietuvių", flag: "🇱🇹" },
   { code: "ms", name: "Bahasa Melayu", flag: "🇲🇾" },
   { code: "ro", name: "Română", flag: "🇲🇩" },
