@@ -9,11 +9,12 @@ if (!process.env.DATABASE_URL) {
   );
 }
 
+const sslEnabled =
+  process.env.DATABASE_URL?.includes("sslmode=require");
+
 export const pool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
-  // ssl: {
-  //   rejectUnauthorized: false,
-  // },
+  ssl: sslEnabled ? { rejectUnauthorized: false } : undefined,
 });
 
 export const db = drizzle(pool, { schema });
