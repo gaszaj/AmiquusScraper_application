@@ -9,7 +9,11 @@ if (!process.env.DATABASE_URL) {
   );
 }
 
-const ssl = { rejectUnauthorized: false };
+export const pool = new pg.Pool({
+  connectionString: process.env.DATABASE_URL,
+  // ssl: {
+  //   rejectUnauthorized: false,
+  // },
+});
 
-export const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl });
 export const db = drizzle(pool, { schema });
