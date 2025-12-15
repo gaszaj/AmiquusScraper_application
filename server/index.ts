@@ -3,18 +3,11 @@ import { registerRoutes } from "./routes";
 import {registerStripeRoutes} from "./routes/stripe";
 import { setupVite, serveStatic, log } from "./vite";
 import stripeWebhookHandler from "./routes/webhook"; // create this module
-import { migrate } from "drizzle-orm/node-postgres/migrator";
-import { db, pool } from "./db";
 
 const app = express();
 
 // ✅ Register Stripe webhook BEFORE body parsing
 app.use("/api/stripe-webhook", stripeWebhookHandler);
-
-migrate(db, { migrationsFolder: "./migrations" });
-
-console.log("✅ Database initialized");
-pool.end();
 
 // ✅ Then use JSON parsing for everything else
 app.use(express.json());
