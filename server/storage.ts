@@ -42,8 +42,7 @@ export interface IStorage {
 }
 
 // Import required modules for session storage
-import { pool } from "./db";
-import * as pg from "pg";
+import { sessionPool } from "./session-pool";
 const PostgresStore = connectPg(session);
 
 export class DrizzleStorage implements IStorage {
@@ -55,7 +54,7 @@ export class DrizzleStorage implements IStorage {
       // Create session store using PostgreSQL
       // Cast the pool to pg.Pool since connect-pg-simple expects that type
       this.sessionStore = new PostgresStore({
-        pool: pool as unknown as pg.Pool,
+        pool: sessionPool,
         tableName: "session",
         createTableIfMissing: true,
         schemaName: "public",
