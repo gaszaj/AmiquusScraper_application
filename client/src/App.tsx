@@ -8,9 +8,9 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Signup from "@/pages/signup";
 import Login from "@/pages/login";
-import Register from "@/pages/Register"
-import VerifyEmail from "@/pages/verify-email"
-import SubscriptionPage from "@/pages/subscription"
+import Register from "@/pages/Register";
+import VerifyEmail from "@/pages/verify-email";
+import SubscriptionPage from "@/pages/subscription";
 import Dashboard from "@/pages/dashboard";
 import About from "@/pages/about";
 import Terms from "@/pages/terms";
@@ -26,9 +26,9 @@ import Blog from "@/pages/blog";
 import Careers from "@/pages/careers";
 import Support from "@/pages/support";
 import { AuthProvider } from "@/hooks/use-auth";
-import { ProtectedRoute } from "@/lib/protected-route"
+import { ProtectedRoute } from "@/lib/protected-route";
 import { LanguageProvider } from "@/components/language-provider";
-import CheckSubscriptionPage from "@/pages/check-subscription"
+import CheckSubscriptionPage from "@/pages/check-subscription";
 
 function Router() {
   return (
@@ -63,17 +63,17 @@ function App() {
   return (
     <AuthProvider>
       <LanguageProvider>
-      <TooltipProvider>
-        <Toaster />
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-1">
-            <Router />
-          </main>
-          <Footer />
-          <ScrollToTop />
-        </div>
-      </TooltipProvider>
+        <TooltipProvider>
+          <Toaster />
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">
+              <Router />
+            </main>
+            <Footer />
+            <ScrollToTop />
+          </div>
+        </TooltipProvider>
       </LanguageProvider>
     </AuthProvider>
   );

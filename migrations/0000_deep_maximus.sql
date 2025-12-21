@@ -1,10 +1,10 @@
 CREATE TYPE "public"."frequency" AS ENUM('hourly', '30min', '15min', '5min', '1min');--> statement-breakpoint
 CREATE TYPE "public"."language" AS ENUM('en', 'es', 'fr', 'de', 'it', 'pt', 'ru');--> statement-breakpoint
-CREATE TABLE "session" (
-	"sid" text PRIMARY KEY NOT NULL,
-	"sess" json NOT NULL,
-	"expire" timestamp NOT NULL
-);
+-- CREATE TABLE "session" (
+-- 	"sid" text PRIMARY KEY NOT NULL,
+-- 	"sess" json NOT NULL,
+-- 	"expire" timestamp NOT NULL
+-- );
 --> statement-breakpoint
 CREATE TABLE "subscriptions" (
 	"id" serial PRIMARY KEY NOT NULL,

@@ -21,6 +21,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { useAuth } from "@/hooks/use-auth";
 import { useLanguage } from "@/components/language-provider";
+import { globalBasePrice, additionalWebsitePrice } from "@shared/pricing";
 
 interface ReviewPaymentProps {
   formData: Partial<AlertFormSchema>;
@@ -44,14 +45,14 @@ function calculateBasePrice(formData: Partial<AlertFormSchema>): number {
   const calculatePrice = (count: number, freq: string) => {
     // Base price for one website
     // let price = 9.99;
-    let price = 1.0;
+    let price = globalBasePrice;
 
     // Add price for additional websites
     // if (count > 1) {
     //   price += 4.99 * (count - 1);
     // }
     if (count > 1) {
-      price += 0.1 * (count - 1);
+      price += additionalWebsitePrice * (count - 1);
     }
 
     // Add price for frequency
@@ -269,7 +270,7 @@ export default function ReviewPayment({
           <div className="flex justify-between">
             <span>{t("review.summary.base")}:</span>
             {/* <span>${(9.99).toFixed(2)}</span> */}
-            <span>${(1.0).toFixed(2)}</span>
+            <span>${globalBasePrice}</span>
           </div>
 
           {formData.websitesSelected &&
@@ -278,9 +279,8 @@ export default function ReviewPayment({
                 <span>
                   {t("review.summary.extraWebsites")} ({formData.websitesSelected.length - 1})
                 </span>
-                {/* <span>${((formData.websitesSelected.length - 1) * 4.99).toFixed(2)}</span> */}
                 <span>
-                  ${((formData.websitesSelected.length - 1) * 0.1).toFixed(2)}
+                  ${((formData.websitesSelected.length - 1) * additionalWebsitePrice).toFixed(2)}
                 </span>
               </div>
             )}

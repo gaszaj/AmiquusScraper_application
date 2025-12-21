@@ -14,7 +14,7 @@ const sslEnabled =
 
 export const pool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: sslEnabled ? { rejectUnauthorized: false } : undefined,
+  // ssl: sslEnabled ? { rejectUnauthorized: false } : undefined,
 });
 
 export const db = drizzle(pool, { schema });

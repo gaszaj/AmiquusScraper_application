@@ -1,13 +1,17 @@
 import { Check, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/language-provider";
+import { globalAddons } from "@shared/pricing";
 
 interface PricingProps {
   onGetStarted: () => void;
 }
 
+type TranslatedAddon = { name: string; price?: number }; // price is ignored if present
+
 export default function Pricing({ onGetStarted }: PricingProps) {
   const { t } = useLanguage();
+  
   const includedFeatures = [
     "One website monitoring",
     "Hourly updates",
@@ -15,13 +19,17 @@ export default function Pricing({ onGetStarted }: PricingProps) {
     "Telegram notifications",
   ];
 
-  const addOns = [
-    { name: "Each additional website", price: 4.99 },
-    { name: "30-minute updates", price: 2.99 },
-    { name: "15-minute updates", price: 5.99 },
-    { name: "5-minute updates", price: 9.99 },
-    { name: "1-minute updates", price: 14.99 },
-  ];
+  const translatedAddons = t("pricing.addons", { returnObjects: true }) as TranslatedAddon[];
+
+  // Merge addon names from translations with prices from globalAddons (by index/order)
+  const addons = translatedAddons.map((addon, index) => {
+    const price = globalAddons[index]?.price;
+
+    return {
+      name: addon.name,
+      price: typeof price === "number" ? price : 0, // safe fallback
+    };
+  });
 
   return (
     <section id="pricing" className="py-16 bg-white dark:bg-neutral-900">
@@ -66,12 +74,7 @@ export default function Pricing({ onGetStarted }: PricingProps) {
                   {t("pricing.addonsTitle")}
                 </h4>
                 <ul className="space-y-3">
-                  {(
-                    t("pricing.addons", { returnObjects: true }) as {
-                      name: string;
-                      price: number;
-                    }[]
-                  ).map((addon, index) => (
+                  {addons.map((addon, index) => (
                     <li
                       key={index}
                       className="flex items-start justify-between text-neutral-700 dark:text-neutral-300"

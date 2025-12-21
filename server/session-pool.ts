@@ -5,5 +5,5 @@ const sslEnabled =
 
 export const sessionPool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: sslEnabled ? { rejectUnauthorized: false } : undefined,
+  // ssl: sslEnabled ? { rejectUnauthorized: false } : undefined,
 });

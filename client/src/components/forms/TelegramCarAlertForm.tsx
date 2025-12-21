@@ -33,6 +33,7 @@ import WaitlistPromptModal from "@/components/modals/waitlist-prompt";
 import { apiRequest } from "@/lib/queryClient";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLanguage } from "@/components/language-provider";
+import { globalBasePrice, additionalWebsitePrice } from "@shared/pricing";
 import { buildAlertSchema } from "@/lib/buildAlertSchema";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
@@ -144,11 +145,11 @@ export default function TelegramCarAlertForm({
     if (websitesCount === 0) return 0;
 
     // let price = 9.99;
-    let price = 1.0;
+    let price = globalBasePrice;
 
     if (websitesCount > 1) {
       // price += 4.99 * (websitesCount - 1);
-      price += 0.1 * (websitesCount - 1);
+      price += additionalWebsitePrice * (websitesCount - 1);
     }
 
     const frequencyOption = FREQUENCY_OPTIONS.find(
@@ -160,6 +161,21 @@ export default function TelegramCarAlertForm({
 
     return price;
   }
+
+  const formatPrice = (value: number, locale = "en-US", currency = "USD") =>
+    new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency,
+      minimumFractionDigits: 2,
+    }).format(value);
+
+  const rawTitle = t("setupAlerts.baseTitle");
+
+  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, globalBasePrice);
+
+  <span className="text-neutral-900 dark:text-white font-medium">
+    {fixedTitle}
+  </span>;
 
   const setupSteps = t("telegram.setupSteps", {
     returnObjects: true,
@@ -213,7 +229,7 @@ export default function TelegramCarAlertForm({
   };
 
   const onSubmit = async (values: AlertFormSchema) => {
-    if (!hasContactBot){
+    if (!hasContactBot) {
       toast({
         title: t("setupAlerts.toasts.contactBot.title"),
         description: t("setupAlerts.toasts.contactBot.description"),
@@ -221,7 +237,7 @@ export default function TelegramCarAlertForm({
       });
       return;
     }
-    
+
     if (!termsAgreed) {
       toast({
         title: t("setupAlerts.toasts.terms.title"),
@@ -967,7 +983,7 @@ export default function TelegramCarAlertForm({
                     {t("review.monitoring.websites")})
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
-                    {t("setupAlerts.baseTitle")}
+                    {fixedTitle}
                   </span>
                 </div>
                 <div className="flex justify-between items-center mb-4">
@@ -980,17 +996,11 @@ export default function TelegramCarAlertForm({
                     )
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
-                    {/* {(
-                      Math.max(
-                        (form.watch("websitesSelected")?.length || 1) - 1,
-                        0,
-                      ) * 4.99
-                    ).toFixed(2)} */}
                     {(
                       Math.max(
                         (form.watch("websitesSelected")?.length || 1) - 1,
                         0,
-                      ) * 0.1
+                      ) * additionalWebsitePrice
                     ).toFixed(2)}
                   </span>
                 </div>

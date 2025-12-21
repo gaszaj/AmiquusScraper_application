@@ -27,6 +27,7 @@ import { useToast } from "@/hooks/use-toast";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/components/language-provider";
+import { globalBasePrice, additionalWebsitePrice } from "@shared/pricing";
 import { buildAlertSchema } from "@/lib/buildAlertSchema";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
@@ -112,11 +113,11 @@ export default function EditSubscriptionPage({
     if (websitesCount === 0) return 0;
 
     // let price = 9.99;
-    let price = 1.0;
+    let price = globalBasePrice;
 
     if (websitesCount > 1) {
       // price += 4.99 * (websitesCount - 1);
-      price += 0.1 * (websitesCount - 1);
+      price += additionalWebsitePrice * (websitesCount - 1);
     }
 
     const frequencyOption = FREQUENCY_OPTIONS.find(
@@ -819,7 +820,7 @@ export default function EditSubscriptionPage({
                   Math.max(
                     (form.watch("websitesSelected")?.length || 1) - 1,
                     0,
-                  ) * 0.1
+                  ) * additionalWebsitePrice
                 ).toFixed(2)}
               </span>
             </div>

@@ -1,18 +1,22 @@
-
 import { Helmet } from "react-helmet";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useLanguage } from "@/components/language-provider";
 import { useEffect, useState } from "react";
 import { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 import { newcomerDefault } from "@/data/newcomer-default";
-
+import { additionalWebsitePrice, globalBasePrice } from "@shared/pricing";
 
 export default function FAQ() {
   const { t } = useLanguage();
 
   const [data, setData] = useState<NewComerResponse | null>(null);
   const [loading, setLoading] = useState(true);
-   const [carBrands, setCarBrands] = useState<string[]>([]);
+  const [carBrands, setCarBrands] = useState<string[]>([]);
 
   useEffect(() => {
     fetch("/api/newcommer")
@@ -32,13 +36,41 @@ export default function FAQ() {
       if (data) {
         setCarBrands(Object.keys(data.brands_and_models));
       } else {
-    setCarBrands(Object.keys(newcomerDefault.brands_and_models));
+        setCarBrands(Object.keys(newcomerDefault.brands_and_models));
       }
     }
   }, [data, loading]);
 
   const renderList = (items: string[]) =>
     items.map((item, idx) => <li key={idx}>{item}</li>);
+
+  function formatMoney(value: number, locale: string, currency: string) {
+    return new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency,
+      minimumFractionDigits: 2,
+    }).format(value);
+  }
+
+  // Replaces 79.99/79,99 and 4.99/4,99 (with or without $ / spaces)
+  function replacePricesInString(
+    text: string,
+    locale: string,
+    currency: string,
+  ) {
+    const base = formatMoney(globalBasePrice, locale, currency);
+    const addWebsite = formatMoney(additionalWebsitePrice, locale, currency);
+
+    return (
+      text
+        // base price
+        .replace(/\$?\s*79[.,]99\b/g, base)
+        .replace(/\b79[.,]99\s*\$/g, base)
+        // additional website price
+        .replace(/\$?\s*4[.,]99\b/g, addWebsite)
+        .replace(/\b4[.,]99\s*\$/g, addWebsite)
+    );
+  }
 
   return (
     <>
@@ -63,69 +95,111 @@ export default function FAQ() {
             </h2>
             <Accordion type="single" collapsible className="mb-8">
               <AccordionItem value="what-is">
-                 <AccordionTrigger className="text-lg">{t("faqs.general.whatIs.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">{t("faqs.general.whatIs.answer")}</AccordionContent>
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.general.whatIs.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                  {t("faqs.general.whatIs.answer")}
+                </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="how-it-works">
-                 <AccordionTrigger className="text-lg">{t("faqs.general.howItWorks.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.general.howItWorks.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                   <ol className="list-decimal list-inside space-y-2 ml-2">
-                    {renderList(t("faqs.general.howItWorks.answer", { returnObjects: true }))}
+                    {renderList(
+                      t("faqs.general.howItWorks.answer", {
+                        returnObjects: true,
+                      }),
+                    )}
                   </ol>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="which-websites">
-                 <AccordionTrigger className="text-lg">{t("faqs.general.whichWebsites.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.general.whichWebsites.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                   <p>{t("faqs.general.whichWebsites.answerIntro")}</p>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1">
                     {carBrands.map((brand, idx) => (
                       <li key={idx}>{brand}</li>
                     ))}
                   </ul>
-                  <p className="mt-2">{t("faqs.general.whichWebsites.outro")}</p>
+                  <p className="mt-2">
+                    {t("faqs.general.whichWebsites.outro")}
+                  </p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
 
             {/* SUBSCRIPTION */}
-            <h2 className="text-2xl font-semibold mb-6">{t("faqs.subscription.heading")}</h2>
+            <h2 className="text-2xl font-semibold mb-6">
+              {t("faqs.subscription.heading")}
+            </h2>
             <Accordion type="single" collapsible className="mb-8">
               <AccordionItem value="subscription-cost">
-                 <AccordionTrigger className="text-lg">{t("faqs.subscription.cost.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
-                  {t("faqs.subscription.cost.answer", { returnObjects: true }).map((p: string, idx: number) => (
-                    <p className="mb-2" key={idx}>{p}</p>
-                  ))}
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.subscription.cost.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                  {t("faqs.subscription.cost.answer", {
+                    returnObjects: true,
+                  }).map((p: string, idx: number) => {
+                    const processedText = replacePricesInString(p, "en-US", "USD");
+      
+                    return (
+                      <p className="mb-2" key={idx}>
+                        {processedText}
+                      </p>
+                    );
+                  })}
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="cancel-subscription">
-                 <AccordionTrigger className="text-lg">{t("faqs.subscription.cancel.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
-                  <p className="mb-2">{t("faqs.subscription.cancel.stepsIntro")}</p>
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.subscription.cancel.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                  <p className="mb-2">
+                    {t("faqs.subscription.cancel.stepsIntro")}
+                  </p>
                   <ol className="list-decimal list-inside space-y-1 ml-2">
-                    {renderList(t("faqs.subscription.cancel.steps", { returnObjects: true }))}
+                    {renderList(
+                      t("faqs.subscription.cancel.steps", {
+                        returnObjects: true,
+                      }),
+                    )}
                   </ol>
                   <p className="mt-2">{t("faqs.subscription.cancel.note")}</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="multiple-subscriptions">
-                 <AccordionTrigger className="text-lg">{t("faqs.subscription.multiple.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.subscription.multiple.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                   {t("faqs.subscription.multiple.answer")}
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="limit">
-                 <AccordionTrigger className="text-lg">{t("faqs.subscription.limit.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.subscription.limit.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                   <p>{t("faqs.subscription.limit.intro")}</p>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1">
-                    {renderList(t("faqs.subscription.limit.list", { returnObjects: true }))}
+                    {renderList(
+                      t("faqs.subscription.limit.list", {
+                        returnObjects: true,
+                      }),
+                    )}
                   </ul>
                   <p className="mt-2">{t("faqs.subscription.limit.outro")}</p>
                 </AccordionContent>
@@ -133,36 +207,56 @@ export default function FAQ() {
             </Accordion>
 
             {/* TECHNICAL */}
-            <h2 className="text-2xl font-semibold mb-6">{t("faqs.technical.heading")}</h2>
+            <h2 className="text-2xl font-semibold mb-6">
+              {t("faqs.technical.heading")}
+            </h2>
             <Accordion type="single" collapsible className="mb-8">
               <AccordionItem value="telegram-setup">
-                 <AccordionTrigger className="text-lg">{t("faqs.technical.telegram.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
-                  <p className="mb-2">{t("faqs.technical.telegram.stepsIntro")}</p>
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.technical.telegram.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                  <p className="mb-2">
+                    {t("faqs.technical.telegram.stepsIntro")}
+                  </p>
                   <ol className="list-decimal list-inside space-y-2 ml-2">
-                    {renderList(t("faqs.technical.telegram.steps", { returnObjects: true }))}
+                    {renderList(
+                      t("faqs.technical.telegram.steps", {
+                        returnObjects: true,
+                      }),
+                    )}
                   </ol>
                   <p className="mt-2">{t("faqs.technical.telegram.note")}</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="notifications-frequency">
-                 <AccordionTrigger className="text-lg">{t("faqs.technical.frequency.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.technical.frequency.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                   <p className="mb-2">{t("faqs.technical.frequency.intro")}</p>
                   <ol className="list-decimal list-inside space-y-2 ml-2">
-                    {renderList(t("faqs.technical.frequency.list", { returnObjects: true }))}
+                    {renderList(
+                      t("faqs.technical.frequency.list", {
+                        returnObjects: true,
+                      }),
+                    )}
                   </ol>
                   <p className="mt-2">{t("faqs.technical.frequency.outro")}</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="data-privacy">
-                 <AccordionTrigger className="text-lg">{t("faqs.technical.privacy.question")}</AccordionTrigger>
-                 <AccordionContent className="text-neutral-600 dark:text-neutral-400">
+                <AccordionTrigger className="text-lg">
+                  {t("faqs.technical.privacy.question")}
+                </AccordionTrigger>
+                <AccordionContent className="text-neutral-600 dark:text-neutral-400">
                   <p className="mb-2">{t("faqs.technical.privacy.intro")}</p>
                   <ul className="list-disc list-inside space-y-1 ml-4">
-                    {renderList(t("faqs.technical.privacy.list", { returnObjects: true }))}
+                    {renderList(
+                      t("faqs.technical.privacy.list", { returnObjects: true }),
+                    )}
                   </ul>
                   <p className="mt-2">{t("faqs.technical.privacy.outro")}</p>
                 </AccordionContent>
@@ -171,7 +265,9 @@ export default function FAQ() {
 
             {/* SUPPORT */}
             <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-8 text-center">
-              <h2 className="text-2xl font-semibold mb-4">{t("faqs.support.heading")}</h2>
+              <h2 className="text-2xl font-semibold mb-4">
+                {t("faqs.support.heading")}
+              </h2>
               <p className="text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl mx-auto">
                 {t("faqs.support.description")}
               </p>

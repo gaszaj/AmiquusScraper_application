@@ -20,6 +20,7 @@ import { newcomerDefault } from "@/data/newcomer-default";
 import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 import PaymentScreen from "@/components/subscription/PaymentScreen";
 import { useLanguage } from "@/components/language-provider";
+import { globalBasePrice } from "@shared/pricing";
 
 interface SignupProps {
   embedded?: boolean;
@@ -147,7 +148,7 @@ export default function Signup({ embedded = false }: SignupProps) {
         priceMax: parseNullableNumber(formData.priceMax),
         telegramUsername: formData.telegramUsername,
         notificationLanguage: formData.notificationLanguage,
-        price: formData.price || 1.0,
+        price: formData.price || globalBasePrice,
         // price: formData.price || 9.99,
       };
 
