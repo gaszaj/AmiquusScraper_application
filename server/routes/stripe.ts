@@ -54,7 +54,7 @@ export function registerStripeRoutes(app: Express) {
         });
 
         console.log("Setup intent created:", setupIntent);
-        res.json({ clientSecret: setupIntent.client_secret });
+        res.status(200).json({ clientSecret: setupIntent.client_secret });
       } catch (error: any) {
         console.error("Error creating setup intent:", error);
         res.status(500).json({ message: error.message });
@@ -96,7 +96,7 @@ export function registerStripeRoutes(app: Express) {
         };
       });
 
-      res.json(formattedPaymentMethods);
+      res.status(200).json(formattedPaymentMethods);
     } catch (error: any) {
       console.error("Error getting payment methods:", error);
       res.status(500).json({ message: error.message });
@@ -125,7 +125,7 @@ export function registerStripeRoutes(app: Express) {
           },
         });
 
-        res.json({ success: true });
+        res.status(200).json({ success: true });
       } catch (error: any) {
         console.error("Error setting default payment method:", error);
         res.status(500).json({ message: error.message });
@@ -141,7 +141,7 @@ export function registerStripeRoutes(app: Express) {
       // Detach the payment method from the customer
       await stripe.paymentMethods.detach(paymentMethodId);
 
-      res.json({ success: true });
+      res.status(200).json({ success: true });
     } catch (error: any) {
       console.error("Error removing payment method:", error);
       res.status(500).json({ message: error.message });
@@ -186,7 +186,7 @@ export function registerStripeRoutes(app: Express) {
           },
         });
 
-        res.json({ clientSecret: paymentIntent.client_secret });
+        res.status(200).json({ clientSecret: paymentIntent.client_secret });
       } catch (error: any) {
         console.error("Error creating payment intent:", error);
         res.status(500).json({ message: error.message });
@@ -257,7 +257,7 @@ export function registerStripeRoutes(app: Express) {
       : null;
 
 
-      return res.json({
+      return res.status(200).json({
         miniData,
         subscription,
         activeSubscriptions,

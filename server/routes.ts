@@ -470,7 +470,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             verificationCodeExpiry,
             ...userWithoutPassword
           } = user;
-          return res.json(userWithoutPassword);
+          return res.status(200).json(userWithoutPassword);
         });
       })(req, res, next);
     } catch (error) {
@@ -529,7 +529,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ...userWithoutPassword
       } = req.user as any;
       const hasPassword = !!password;
-      return res.json({ user: { ...userWithoutPassword, hasPassword } });
+      return res.status(200).json({ user: { ...userWithoutPassword, hasPassword } });
     }
     return res.status(401).json({ message: "Not authenticated" });
   });
@@ -694,7 +694,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         metadata: cust.metadata,
       }));
 
-      res.json({ customers: simplified });
+      res.status(200).json({ customers: simplified });
     } catch (error: any) {
       console.error("Error fetching Stripe customers:", error);
       res.status(500).json({ message: "Failed to retrieve customers" });
@@ -917,7 +917,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       await handleInvoicePaymentFailed(dummy);
-      res.json({
+      res.status(200).json({
         ok: true,
         message: "Simulated invoice.payment_failed delivered",
       });
@@ -1070,7 +1070,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         (sub) => sub.status !== "pending",
       );
 
-      return res.json(activeSubscriptions);
+      return res.status(200).json(activeSubscriptions);
     } catch (error) {
       return res.status(500).json({ message: "Failed to fetch subscriptions" });
     }
@@ -1091,7 +1091,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(404).json({ message: "Subscription not found" });
       }
 
-      return res.json(subscription);
+      return res.status(200).json(subscription);
     } catch (error) {
       return res.status(500).json({ message: "Failed to fetch subscription" });
     }
@@ -1350,7 +1350,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         const data = JSON.parse(text);
         // console.log("Newcommer data:", data)
-        res.json(data);
+        res.status(200).json(data);
       } catch (jsonError) {
         console.error("Not valid JSON. Response was:", text);
         throw new Error("Invalid JSON response from remote server.");
@@ -1410,7 +1410,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         },
       });
 
-      res.json({ clientSecret: paymentIntent.client_secret });
+      res.status(200).json({ clientSecret: paymentIntent.client_secret });
     } catch (error: any) {
       console.error("Stripe payment intent error:", error);
       res
@@ -1449,7 +1449,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               },
             );
             if (!res.ok) return null;
-            return await res.json();
+            return await res.status(200).json();
           } catch (err) {
             console.error(`Error fetching JSON for ${username}:`, err);
             return null;
@@ -1470,7 +1470,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       // Step 4: Send response
-      res.json({
+      res.status(200).json({
         active: activeCount,
         capacity,
         remaining: Math.max(0, capacity - activeCount),
@@ -1542,7 +1542,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       // @ts-ignore - Type issues with expanded fields
-      res.json({
+      res.status(200).json({
         subscriptionId: subscription.id,
         clientSecret:
           subscription.latest_invoice?.payment_intent?.client_secret,
