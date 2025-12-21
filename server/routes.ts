@@ -1469,7 +1469,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       });
 
-      console.log(`Active subscriptions: ${activeCount}/${capacity}`, userJsons)
+      //console.log(`Active subscriptions: ${activeCount}/${capacity}`, userJsons)
 
       // Step 4: Send response
       res.status(200).json({
