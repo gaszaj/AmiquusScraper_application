@@ -1449,7 +1449,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               },
             );
             if (!res.ok) return null;
-            return await res.status(200).json();
+          return await res.json();
           } catch (err) {
             console.error(`Error fetching JSON for ${username}:`, err);
             return null;
@@ -1468,6 +1468,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           }
         }
       });
+
+      console.log(`Active subscriptions: ${activeCount}/${capacity}`, userJsons)
 
       // Step 4: Send response
       res.status(200).json({
