@@ -93,6 +93,8 @@ export default function EditSubscriptionPage({
     },
   });
 
+  console.log("subscription", subscription, "form", form.getValues())
+
   useEffect(() => {
     fetch("/api/newcommer")
       .then((res) => res.json())
