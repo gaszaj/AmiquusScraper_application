@@ -80,11 +80,11 @@ export default function EditSubscriptionPage({
       carBrand: subscription.brand as string,
       carModel: subscription.model as string,
       fuelType: subscription.fuelType as string || "",
-      priceMin: String(subscription.priceMin) || "",
-      priceMax: String(subscription.priceMax) || "",
-      yearMin: String(subscription.yearMin) || "",
-      yearMax: String(subscription.yearMax) || "",
-      maxKilometers: String(subscription.mileageMax) || "",
+      priceMin: subscription.priceMin ? String(subscription.priceMin) : "",
+      priceMax: subscription.priceMax ? String(subscription.priceMax) : "",
+      yearMin:  subscription.yearMin ? String(subscription.yearMin) : "",
+      yearMax: subscription.yearMax ? String(subscription.yearMax) : "",
+      maxKilometers: subscription.mileageMax ? String(subscription.mileageMax) : "",
       telegramUsername: subscription.telegramUsername as string || "",
       websitesSelected: (subscription.websitesSelected as string[]) || [],
       facebookMarketplaceUrl: subscription.facebookMarketplaceUrl as string || "",
@@ -93,7 +93,7 @@ export default function EditSubscriptionPage({
     },
   });
 
-  console.log("subscription", subscription, "form", form.getValues())
+  // console.log("subscription", subscription, "form", form.getValues())
 
   useEffect(() => {
     fetch("/api/newcommer")
