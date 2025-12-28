@@ -931,7 +931,7 @@ export const en = {
         paragraphs: [
           "Certain features require a paid subscription. By starting a subscription, you authorize us (and our payment processor) to charge your payment method on a recurring basis according to the plan you select until you cancel.",
           "All fees are exclusive of taxes, and applicable taxes may be added where required. Prices may change; if we make a material price change, we will provide advance notice before it takes effect for your next billing cycle.",
-          "Payments are processed by third-party payment processors (for example, Stripe). We do not store full payment card details; payment information is handled by the processor under its terms. :contentReference[oaicite:1]{index=1}",
+          "Payments are processed by third-party payment processors (for example, Paddle). We do not store full payment card details; payment information is handled by the processor under its terms.",
         ],
         list: [],
       },
@@ -1024,22 +1024,13 @@ export const en = {
         id: "17",
         heading: "EU/EEA/UK Consumer Rights (If Applicable)",
         paragraphs: [
-          "If you are a consumer in the EU/EEA/UK, you may have mandatory rights that cannot be waived by contract, including withdrawal rights for distance contracts. Nothing in these Terms limits those mandatory rights. :contentReference[oaicite:2]{index=2}",
-          "Where allowed by law for digital services, if you request immediate access/performance during the withdrawal period, you may be asked to expressly consent to that immediate performance and acknowledge that you may lose your right of withdrawal once performance begins. :contentReference[oaicite:3]{index=3}",
+          "If you are a consumer in the EU/EEA/UK, you may have mandatory rights that cannot be waived by contract, including withdrawal rights for distance contracts. Nothing in these Terms limits those mandatory rights.",
+          "Where allowed by law for digital services, if you request immediate access/performance during the withdrawal period, you may be asked to expressly consent to that immediate performance and acknowledge that you may lose your right of withdrawal once performance begins.",
         ],
         list: [],
       },
       "18": {
         id: "18",
-        heading: "Governing Law; Dispute Resolution",
-        paragraphs: [
-          " These Terms are governed by the laws of the <strong>United States</strong> and the laws of the State/Commonwealth of <strong>[INSERT STATE]</strong>, without regard to conflict of laws rules, except where mandatory consumer protection laws apply.",
-          "<strong>Venue.</strong> Unless prohibited by law, you agree that any dispute arising out of or relating to these Terms or the Service will be brought in the state or federal courts located in <strong>[INSERT COUNTY/STATE]</strong>, and you consent to personal jurisdiction in those courts.",
-        ],
-        list: [],
-      },
-      "19": {
-        id: "19",
         heading: "Severability; Entire Agreement; Assignment",
         paragraphs: [
           "If any provision of these Terms is found invalid or unenforceable, the remaining provisions remain in effect. These Terms and the policies referenced herein constitute the entire agreement between you and Amiquus regarding the Service.",
@@ -1047,8 +1038,8 @@ export const en = {
         ],
         list: [],
       },
-      "20": {
-        id: "20",
+      "19": {
+        id: "19",
         heading: "Contact",
         paragraphs: [
           `Questions about these Terms:
@@ -1129,12 +1120,10 @@ export const en = {
         paragraphs: [
           `If you are a consumer in the EU/EEA/UK, you may have a statutory right
         to withdraw from a distance contract within 14 days, unless an exception
-        applies. Nothing in this Refund Policy limits mandatory consumer rights.
-        :contentReference[oaicite:5]{index=5}`,
+        applies. Nothing in this Refund Policy limits mandatory consumer rights.`,
           ` For digital services, where permitted, you may be asked to expressly
         request immediate performance and acknowledge that you may lose your
-        withdrawal right once performance begins.
-        :contentReference[oaicite:6]{index=6}`
+        withdrawal right once performance begins.`
         ],
         list: [],
       },
@@ -1241,7 +1230,7 @@ export const en = {
           "These third parties include:",
         ],
         list: [
-          "Payment processors (Stripe)",
+          "Payment processors (Paddle)",
           "Analytics providers",
           "Customer support services",
           "Hosting and cloud infrastructure providers",
@@ -1382,7 +1371,7 @@ export const en = {
         intro: "We take data privacy seriously and apply these measures:",
         list: [
           "Encrypted data in transit and at rest",
-          "Secure payments via Stripe",
+          "Secure payments via Paddle",
           "No third-party data sharing",
           "You can request or delete your data anytime",
         ],

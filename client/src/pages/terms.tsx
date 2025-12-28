@@ -26,7 +26,7 @@ export default function Terms() {
          </div>
 
         <div className="prose prose-neutral dark:prose-invert max-w-none">
-          {Array.from({ length: 20 }).map((_, i) => {
+          {Array.from({ length: 19 }).map((_, i) => {
             const sectionKey = `terms.sections.${i + 1}`;
             return (
               <section key={i}>

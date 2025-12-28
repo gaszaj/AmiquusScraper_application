@@ -88,14 +88,20 @@ export function LanguageSelector() {
         <SelectValue className="sr-only" />
       </SelectTrigger>
       <SelectContent>
-        {languages.map((lang) => (
+        {/* {languages.map((lang) => (
           <SelectItem key={lang.code} value={lang.code}>
             <div className="flex items-center gap-2">
               <span>{lang.flag}</span>
               <span>{lang.name}</span>
             </div>
           </SelectItem>
-        ))}
+        ))} */}
+        <SelectItem value="en">
+          <div className="flex items-center gap-2">
+            <span>🇺🇸</span>
+            <span>English</span>
+          </div>
+        </SelectItem>
       </SelectContent>
     </Select>
   );
