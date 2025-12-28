@@ -29,6 +29,7 @@ import { AuthProvider } from "@/hooks/use-auth";
 import { ProtectedRoute } from "@/lib/protected-route";
 import { LanguageProvider } from "@/components/language-provider";
 import CheckSubscriptionPage from "@/pages/check-subscription";
+import Refund from "@/pages/refund";
 
 function Router() {
   return (
@@ -48,6 +49,7 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/refund" component={Refund} />
       <Route path="/faq" component={FAQ} />
       <Route path="/waitlist" component={Waitlist} />
       <Route path="/blog" component={Blog} />

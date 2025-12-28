@@ -528,6 +528,7 @@ export const en = {
     blog: "Blog",
     careers: "Careers",
     support: "Support",
+    refund: "Refund Policy",
   },
   login: {
     title: "Log in to your account",
@@ -868,150 +869,285 @@ export const en = {
     },
   },
   terms: {
-    metaTitle: "Terms of Service | Amiquus",
-    metaDescription:
-      "Read the Amiquus Terms of Service that govern your use of our car listing monitoring and notification service.",
+    metaTitle: "Amiquus — Terms of Service",
+    metaDescription: "Amiquus Terms of Service",
     title: "Terms of Service",
     lastUpdated: "Last updated: May 21, 2025",
+    callout: {
+      title: "What Amiquus is (and is not).",
+      description:
+        "Amiquus provides software tools such as search, notifications, filtering, organization, and links that help you discover and track vehicle listings on third-party websites. Amiquus is not a car dealer, broker, marketplace, auctioneer, insurer, lender, or a party to any transaction between you and a third party. Any purchase, negotiation, or interaction related to a vehicle is solely between you and the relevant third party.",
+    },
     sections: {
       "1": {
         id: "agreement",
         heading: "Agreement to Terms",
         paragraphs: [
-          "These Terms of Service constitute a legally binding agreement made between you and Amiquus, concerning your access to and use of our website and services.",
-          "By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service.",
+          "These Terms of Service (“Terms”) are a legally binding agreement between you (“you” or “User”) and Amiquus (“Amiquus,” “we,” “us,” or “our”) governing your access to and use of our website, applications, and services (collectively, the “Service”).",
+          "By accessing or using the Service, you acknowledge that you have read, understood, and agree to be bound by these Terms and by any policies referenced here (including the Refund Policy and Privacy Policy). If you do not agree, do not use the Service.",
         ],
         list: [],
       },
       "2": {
         id: "changes",
-        heading: "Changes to Terms",
+        heading: "Eligibility and Account Registration",
         paragraphs: [
-          "  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.",
-          "By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service.",
+          "You must be at least 18 years old (or the age of majority in your jurisdiction) to use the Service.",
+          "When you create an account, you agree to provide accurate, complete, and up-to-date information and to keep it current. You are responsible for maintaining the confidentiality of your credentials and for all activity that occurs under your account.",
+          `You must promptly notify us of any suspected unauthorized access or security incident at <a href="mailto:support@amiquus.com">support@amiquus.com</a>.`,
         ],
         list: [],
       },
       "3": {
         id: "account",
-        heading: "Account Terms",
-        paragraphs: ["To use our services, you must:"],
-        list: [
-          "Be at least 18 years old",
-          "Complete the registration process",
-          "Provide accurate, complete, and up-to-date information",
-          "Be responsible for maintaining the security of your account and password",
-          "Be responsible for all activities that occur under your account",
-          "Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account",
+        heading: "Service Description; Third-Party Websites",
+        paragraphs: [
+          "The Service may display, transform, organize, summarize, or otherwise present information about vehicle listings that originate from third-party websites (“Listing Sites”) and may provide deep links that take you to those Listing Sites.",
+          "<strong>Listing Sites are independent third parties.</strong> We do not control, operate, endorse, or guarantee any Listing Site, including the accuracy, availability, legality, or completeness of information shown on a Listing Site, or the quality, safety, or legitimacy of any vehicles or offers.",
+          "<strong>Information may change at any time.</strong> Listing details (including price, availability, mileage, options, seller identity, and other attributes) can change without notice, and the way Listing Sites display or allow access to information can change due to their own policies, technical changes, or availability. You agree that you will always verify any listing details directly on the Listing Site and with the seller before making decisions.",
         ],
+        list: [],
       },
       "4": {
         id: "payment",
-        heading: "Payment Terms",
+        heading: "User Responsibility; No Reliance",
         paragraphs: [
-          " Amiquus offers subscription-based services with the following terms:",
+          "You acknowledge that the Service is provided for informational and convenience purposes only. You are solely responsible for how you interpret, use, or act on any information accessed through the Service, including contacting sellers, negotiating, purchasing, transporting, financing, inspecting, or registering a vehicle.",
+          " You should use appropriate professional advice where needed (e.g., mechanical inspection, legal guidance, financing advice) and perform your own due diligence. Amiquus is not responsible for your decisions or outcomes.",
         ],
-        list: [
-          "All fees are exclusive of taxes, which will be added when applicable",
-          "Subscription prices are subject to change with 30 days' notice",
-          "Subscriptions automatically renew unless canceled before the next billing cycle",
-          "Refunds are handled on a case-by-case basis according to our refund policy",
-          "We use Stripe for secure payment processing, and all payment information is stored by Stripe",
-        ],
+        list: [],
       },
       "5": {
         id: "capacity",
-        heading: "Capacity Limits",
+        heading: "Prohibited Use",
         paragraphs: [
-          "In order to maintain service quality and reliability, Amiquus limits the number of active subscriptions to 30. When this limit is reached:",
+          "You agree not to misuse the Service. Misuse includes: attempting to gain unauthorized access to the Service or systems; interfering with or disrupting the Service; reverse engineering except where prohibited by law; using the Service to violate any law or the rights of others; uploading malware; or using the Service in a manner that imposes an unreasonable burden on the Service or our providers.",
         ],
-        list: [
-          "New users may join our waitlist",
-          "Waitlist position is determined on a first-come, first-served basis",
-          "When capacity becomes available, waitlisted users will be notified in order",
-          "We reserve the right to modify capacity limits at any time",
-        ],
+        list: [],
       },
       "6": {
         id: "scraping",
-        heading: "Web Scraping Limitations",
+        heading: "Subscriptions, Billing, and Taxes",
         paragraphs: [
-          "Our service accesses and processes data from multiple car listing websites. By using our service, you acknowledge that:",
+          "Certain features require a paid subscription. By starting a subscription, you authorize us (and our payment processor) to charge your payment method on a recurring basis according to the plan you select until you cancel.",
+          "All fees are exclusive of taxes, and applicable taxes may be added where required. Prices may change; if we make a material price change, we will provide advance notice before it takes effect for your next billing cycle.",
+          "Payments are processed by third-party payment processors (for example, Stripe). We do not store full payment card details; payment information is handled by the processor under its terms. :contentReference[oaicite:1]{index=1}",
         ],
-        list: [
-          "Amiquus respects the terms of service of the websites we monitor",
-          "We implement rate limiting and respectful crawling practices",
-          "The availability of certain websites may change based on their terms and technical measures",
-          "We make no guarantees regarding the completeness or timeliness of scraped data",
-        ],
+        list: [],
       },
       "7": {
         id: "intellectual",
-        heading: "Intellectual Property",
+        heading: "Cancellation",
         paragraphs: [
-          "The Amiquus service, including its original content, features, and functionality, are and will remain the exclusive property of Amiquus. Our service is protected by copyright, trademark, and other laws of both the United States and foreign countries.",
-          "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Amiquus.",
+          "You can cancel your subscription at any time through your account settings (if available) or by contacting us. Cancellation stops future renewals. Unless required by law or expressly stated in our Refund Policy, cancellation does not entitle you to a refund or credits for any fees already paid.",
         ],
         list: [],
       },
       "8": {
         id: "termination",
-        heading: "Termination",
+        heading: "Refunds",
         paragraphs: [
-          "   We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including, without limitation, if you breach the Terms.",
-          " Upon termination, your right to use the service will immediately cease. If you wish to terminate your account, you may simply discontinue using the service or contact us to request account deletion.",
+          "Refunds, if any, are governed exclusively by our Refund Policy. If there is any conflict between these Terms and the Refund Policy, the Refund Policy controls for refund-related issues.",
         ],
         list: [],
       },
       "9": {
         id: "limitations",
-        heading: "Limitation of Liability",
+        heading: "Capacity Limits; Waitlist",
         paragraphs: [
-          "In no event shall Amiquus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:",
+          "To maintain service quality, we may limit active subscriptions (for example, to a maximum number of active subscribers at a given time). If capacity is reached, we may offer a waitlist and notify users as space becomes available. We may adjust capacity limits at any time.",
         ],
-        list: [
-          "Your access to or use of or inability to access or use the service",
-          "Any conduct or content of any third party on the service",
-          "Any content obtained from the service",
-          "Unauthorized access, use, or alteration of your transmissions or content",
-        ],
+        list: [],
       },
       "10": {
         id: "disclaimer",
-        heading: "Disclaimer",
+        heading: "Intellectual Property",
         paragraphs: [
-          " Your use of the service is at your sole risk. The service is provided on an `AS IS` and `AS AVAILABLE` basis. The service is provided without warranties of any kind, whether express or implied.",
-          "Amiquus does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that the results that may be obtained from the use of the service will be accurate or reliable.",
+          "The Service, including its software, design, text, graphics, and all related intellectual property rights, is owned by Amiquus or its licensors and is protected by applicable laws. Subject to your compliance with these Terms, Amiquus grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Service for your personal or internal business purposes.",
+          "   Amiquus trademarks, logos, and trade dress may not be used without our prior written consent.",
         ],
         list: [],
       },
       "11": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "Feedback",
         paragraphs: [
-          "Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our service, your choices regarding cookies, and further information about cookies. Please refer to the Cookies section in our Privacy Policy.",
+          "If you provide feedback or suggestions, you grant us the right to use them without restriction or compensation to you.",
         ],
         list: [],
       },
       "12": {
         id: "governing-law",
-        heading: "Governing Law",
+        heading: "Termination and Suspension",
         paragraphs: [
-          "    These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.",
-          " Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.",
+          "We may suspend or terminate your access to the Service at any time, with or without notice, if we believe you violated these Terms, created risk, or used the Service in a way that could expose us, other users, or third parties to liability.",
+          "Upon termination, your right to use the Service stops immediately. Sections intended to survive termination (including limitation of liability, disclaimers, governing law, and indemnity) will survive.",
         ],
         list: [],
       },
       "13": {
         id: "contact",
-        heading: "Contact Us",
+        heading: "Disclaimer of Warranties",
         paragraphs: [
-          "  If you have any questions about these Terms, please contact us:",
+          "THE SERVICE IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. TO THE MAXIMUM EXTENT PERMITTED BY LAW, AMIQUUS DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.",
+          "WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, SECURE, ERROR-FREE, OR THAT ANY OUTPUT OR INFORMATION WILL BE ACCURATE, COMPLETE, OR CURRENT. WE DO NOT WARRANT THAT LISTING SITES OR THEIR CONTENT WILL BE AVAILABLE OR COMPATIBLE WITH THE SERVICE.",
+        ],
+        list: [],
+      },
+      "14": {
+        id: "lim",
+        heading: "Limitation of Liability",
+        paragraphs: [
+          "TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL AMIQUUS OR ITS AFFILIATES, DIRECTORS, EMPLOYEES, CONTRACTORS, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF (OR INABILITY TO USE) THE SERVICE.",
+          "    TO THE MAXIMUM EXTENT PERMITTED BY LAW, AMIQUUS’S TOTAL LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THE SERVICE OR THESE TERMS WILL NOT EXCEED THE AMOUNT YOU PAID TO AMIQUUS FOR THE SERVICE IN THE THREE (3) MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM.",
+        ],
+        list: [],
+      },
+      "15": {
+        id: "15",
+        heading: "Indemnification",
+        paragraphs: [
+          "  You agree to defend, indemnify, and hold harmless Amiquus and its affiliates, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to: (a) your use of the Service, (b) your violation of these Terms, (c) your violation of any law or the rights of a third party, or (d) any dispute between you and a Listing Site, seller, or other third party.",
+        ],
+        list: [],
+      },
+      "16": {
+        id: "16",
+        heading: "Changes to the Service and Terms",
+        paragraphs: [
+          "We may modify or discontinue the Service (in whole or in part) at any time. We may update these Terms from time to time. If we make a material change, we will make reasonable efforts to provide notice (for example, by posting an updated date and/or sending an email).",
+          "Your continued use of the Service after updated Terms become effective constitutes acceptance of the updated Terms.",
+        ],
+        list: [],
+      },
+      "17": {
+        id: "17",
+        heading: "EU/EEA/UK Consumer Rights (If Applicable)",
+        paragraphs: [
+          "If you are a consumer in the EU/EEA/UK, you may have mandatory rights that cannot be waived by contract, including withdrawal rights for distance contracts. Nothing in these Terms limits those mandatory rights. :contentReference[oaicite:2]{index=2}",
+          "Where allowed by law for digital services, if you request immediate access/performance during the withdrawal period, you may be asked to expressly consent to that immediate performance and acknowledge that you may lose your right of withdrawal once performance begins. :contentReference[oaicite:3]{index=3}",
+        ],
+        list: [],
+      },
+      "18": {
+        id: "18",
+        heading: "Governing Law; Dispute Resolution",
+        paragraphs: [
+          " These Terms are governed by the laws of the <strong>United States</strong> and the laws of the State/Commonwealth of <strong>[INSERT STATE]</strong>, without regard to conflict of laws rules, except where mandatory consumer protection laws apply.",
+          "<strong>Venue.</strong> Unless prohibited by law, you agree that any dispute arising out of or relating to these Terms or the Service will be brought in the state or federal courts located in <strong>[INSERT COUNTY/STATE]</strong>, and you consent to personal jurisdiction in those courts.",
+        ],
+        list: [],
+      },
+      "19": {
+        id: "19",
+        heading: "Severability; Entire Agreement; Assignment",
+        paragraphs: [
+          "If any provision of these Terms is found invalid or unenforceable, the remaining provisions remain in effect. These Terms and the policies referenced herein constitute the entire agreement between you and Amiquus regarding the Service.",
+          "You may not assign these Terms without our prior written consent. We may assign these Terms in connection with a merger, acquisition, reorganization, or sale of assets.",
+        ],
+        list: [],
+      },
+      "20": {
+        id: "20",
+        heading: "Contact",
+        paragraphs: [
+          `Questions about these Terms:
+          <a href="mailto:legal@amiquus.com">legal@amiquus.com</a>`,
+          `Support: <a href="mailto:support@amiquus.com">support@amiquus.com</a>
+            • Telegram: <a href="https://t.me/AmiquusSupport" rel="noopener noreferrer" target="_blank">@AmiquusSupport</a>`,
+        ],
+        list: [],
+      },
+    },
+  },
+  refunds: {
+    metaTitle: "Amiquus — Refund Policy",
+    metaDescription: "Amiquus Refund Policy",
+    title: "Refund Policy",
+    lastUpdated: "Last updated: May 21, 2025",
+    callout: {
+      title: "Summary.",
+      description:
+        "Subscription payments are generally non-refundable. You can cancel at any time to prevent future renewals.  We offer a narrow refund window for the most recent payment if requested within 24 hours, subject to the conditions below and unless the law requires otherwise.",
+    },
+    sections: {
+      "1": {
+        id: "1",
+        heading: "General Rule: No Refunds",
+        paragraphs: [
+          "Unless required by applicable law, all fees and charges for subscriptions are non-refundable and non-creditable once paid. Cancelling your subscription stops future renewals but does not automatically refund amounts already paid.",
+        ],
+        list: [],
+      },
+      "2": {
+        id: "2",
+        heading: "24-Hour Refund Exception (Most Recent Payment Only)",
+        paragraphs: [
+          `We may, at our discretion, refund your
+          <strong>most recent subscription payment</strong> if you meet
+          <em>all</em> of the following conditions:`,
         ],
         list: [
-          "By email: legal@amiquus.com",
-          "By visiting the contact page on our website",
+          "You submit a refund request within <strong>24 hours</strong> of the time of the charge.",
+          `You <strong>cancel</strong> your subscription before or at the time
+          you request the refund (to prevent a new renewal).`,
+          `You email your request to
+          <a href="mailto:refunds@amiquus.com">refunds@amiquus.com</a> from the
+          email address associated with your Amiquus account.`,
+          `You include: (a) your account email, (b) the plan name, and (c) the
+          date/time of the charge (approximate is fine).`,
+          "If approved, the refund applies only to the <strong>last successful payment</strong>. Earlier payments are not eligible. Refunds are processed back to the original payment method where possible."
         ],
+      },
+      "3": {
+        id: "3",
+        heading: "Non-Eligible Situations",
+        paragraphs: [
+          "To the maximum extent permitted by law, we do not provide refunds for:",
+        ],
+        list: [
+          "Requests submitted more than 24 hours after the charge time.",
+          "Partial periods of use, unused time, or plan downgrades.",
+          "Account termination or suspension for violation of our Terms of Service.",
+          "Issues caused by third-party websites, third-party content, or changes outside our control."
+        ],
+      },
+      "4": {
+        id: "4",
+        heading: "Chargebacks and Payment Disputes",
+        paragraphs: [
+          `If you have a billing issue, please contact us first at
+          <a href="mailto:refunds@amiquus.com">refunds@amiquus.com</a>. Unresolved
+          chargebacks or payment disputes may result in immediate suspension or
+          termination of your account.`,
+        ],
+        list: [],
+      },
+      "5": {
+        id: "5",
+        heading: "EU/EEA/UK Consumer Notice (If Applicable)",
+        paragraphs: [
+          `If you are a consumer in the EU/EEA/UK, you may have a statutory right
+        to withdraw from a distance contract within 14 days, unless an exception
+        applies. Nothing in this Refund Policy limits mandatory consumer rights.
+        :contentReference[oaicite:5]{index=5}`,
+          ` For digital services, where permitted, you may be asked to expressly
+        request immediate performance and acknowledge that you may lose your
+        withdrawal right once performance begins.
+        :contentReference[oaicite:6]{index=6}`
+        ],
+        list: [],
+      },
+      "6": {
+        id: "6",
+        heading: "Contact",
+        paragraphs: [
+          `Refund requests:
+        <a href="mailto:refunds@amiquus.com">refunds@amiquus.com</a><br />
+        General support:
+        <a href="mailto:support@amiquus.com">support@amiquus.com</a>`,
+        ],
+        list: [],
       },
     },
   },
