@@ -1,5 +1,7 @@
 import pg from "pg";
+import dotenv from 'dotenv';
 
+dotenv.config();
 const sslEnabled =
   process.env.DATABASE_URL?.includes("sslmode=require");
 
