@@ -30,6 +30,7 @@ import { ProtectedRoute } from "@/lib/protected-route";
 import { LanguageProvider } from "@/components/language-provider";
 import CheckSubscriptionPage from "@/pages/check-subscription";
 import Refund from "@/pages/refund";
+import DodoTestPage from "./pages/test";
 
 function Router() {
   return (
@@ -38,6 +39,7 @@ function Router() {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <ProtectedRoute path="/verify-email" component={VerifyEmail} />
+      <ProtectedRoute path="/test-dodo" component={DodoTestPage} />
       <ProtectedRoute path="/dashboard" component={NewProfile} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/subscribe" component={Subscribe} />

@@ -12,6 +12,8 @@ export const users = pgTable("users", {
   firstName: text("first_name"),
   lastName: text("last_name"),
   stripeCustomerId: text("stripe_customer_id").unique(),
+  dodoCustomerId: text("dodo_customer_id").unique(),
+  jsonUserId: text("json_user_id").unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   // 👇 New fields for email verification
   isEmailVerified: boolean("is_email_verified").default(false).notNull(),
@@ -77,8 +79,11 @@ export const subscriptions = pgTable("subscriptions", {
   priceMax: integer("price_max"),
   telegramUsername: text("telegram_username").notNull(),
   notificationLanguage: languageEnum("notification_language").notNull().default('en'),
+  promoCode: text("promo_code"),
+  codeApplied: boolean("code_applied").default(false).notNull(),
   price: integer("price").notNull(),
   stripePriceId: text("stripe_price_id"),
+  dodoPriceId: text("dodo_price_id"),
   status: text("status").notNull().default("active"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
@@ -110,7 +115,8 @@ export const subscriptionFormSchema = z.object({
   telegramUsername: z.string().min(1, "Telegram username is required"),
   notificationLanguage: z.enum(['en', 'es', 'fr', 'de', 'it', 'pt', 'ru']),
   price: z.number().min(1, "Price calculation failed"),
-  stripePriceId: z.string().optional(),
+  promoCode: z.string().optional(),
+  dodoPriceId: z.string().optional(),
 });
 
 export const alertSchema = z.object({
