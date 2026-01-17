@@ -4,7 +4,7 @@ import Features from "@/components/sections/features";
 import Pricing from "@/components/sections/pricing";
 import FaqSection from "@/components/sections/faq-section";
 import LimitedAvailability from "@/components/home/LimitedAvailability";
-import Signup from "@/pages/signup";
+import StepsSetupAlert from "@/pages/steps-setup-alerts";
 import { useLocation } from "wouter";
 import { useEffect, useRef } from "react";
 import PageWrapper from "@/components/layout/PageWrapper";
@@ -76,7 +76,7 @@ export default function Home() {
       </div>
       <Pricing onGetStarted={scrollToSignup} />
       <div id="signup-form" ref={signupRef}>
-        <Signup embedded={true} />
+        <StepsSetupAlert embedded={true} />
       </div>
       <FaqSection />
     </PageWrapper>

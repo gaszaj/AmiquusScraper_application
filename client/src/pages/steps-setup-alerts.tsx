@@ -22,11 +22,11 @@ import PaymentScreen from "@/components/subscription/PaymentScreen";
 import { useLanguage } from "@/components/language-provider";
 import { globalBasePrice } from "@shared/pricing";
 
-interface SignupProps {
+interface StepsSetupAlertProps {
   embedded?: boolean;
 }
 
-export default function Signup({ embedded = false }: SignupProps) {
+export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertProps) {
   const { t, language } = useLanguage();
   const [location, setLocation] = useLocation();
   const { user } = useAuth();

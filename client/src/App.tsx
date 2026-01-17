@@ -6,7 +6,6 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
-import Signup from "@/pages/signup";
 import Login from "@/pages/login";
 import Register from "@/pages/Register";
 import VerifyEmail from "@/pages/verify-email";
