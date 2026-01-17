@@ -52,9 +52,9 @@ export default function CarDetailsForm({
   const [priceMax, setPriceMax] = useState<string>(
     initialData?.priceMax ? initialData.priceMax.toString() : ""
   );
-  
+
   const [availableModels, setAvailableModels] = useState<string[]>([]);
-  
+
   useEffect(() => {
     if (brand) {
       setAvailableModels(getCarModels(brand));
@@ -63,7 +63,7 @@ export default function CarDetailsForm({
       setModel("");
     }
   }, [brand]);
-  
+
   useEffect(() => {
     onDataChange({
       brand,
@@ -88,9 +88,9 @@ export default function CarDetailsForm({
     priceMax,
     onDataChange,
   ]);
-  
+
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <div className="space-y-6">
       <div>
@@ -111,14 +111,14 @@ export default function CarDetailsForm({
           </SelectContent>
         </Select>
       </div>
-      
+
       <div>
         <Label htmlFor="car-model" className="block text-sm font-medium text-neutral-700 mb-1">
           Model
         </Label>
-        <Select 
-          value={model} 
-          onValueChange={setModel} 
+        <Select
+          value={model}
+          onValueChange={setModel}
           disabled={!brand}
         >
           <SelectTrigger id="car-model" className="w-full">
@@ -134,7 +134,7 @@ export default function CarDetailsForm({
           </SelectContent>
         </Select>
       </div>
-      
+
       <div>
         <Label htmlFor="fuel-type" className="block text-sm font-medium text-neutral-700 mb-1">
           Fuel Type
@@ -153,7 +153,7 @@ export default function CarDetailsForm({
           </SelectContent>
         </Select>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <Label className="block text-sm font-medium text-neutral-700 mb-3">
@@ -192,7 +192,7 @@ export default function CarDetailsForm({
             </div>
           </div>
         </div>
-        
+
         <div>
           <Label className="block text-sm font-medium text-neutral-700 mb-3">
             Mileage Range (miles)
@@ -229,10 +229,10 @@ export default function CarDetailsForm({
           </div>
         </div>
       </div>
-      
+
       <div>
         <Label className="block text-sm font-medium text-neutral-700 mb-3">
-          Price Range ($)
+          Price Range (€)
         </Label>
         <div className="grid grid-cols-2 gap-4">
           <div>

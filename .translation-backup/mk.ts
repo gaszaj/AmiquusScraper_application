@@ -1,1740 +1,1489 @@
 export const mk = {
   navigations: {
-    features: "Карактеристики",
-    how: "Како функционира",
-    pricing: "Цени",
-    getAlerts: "Добијте известувања",
-    waitlist: "Листа на чекање",
-    faq: "Најчесто поставувани прашања",
-    login: "Најава",
-    getStarted: "Започни",
-    subscribers: "Претплатници",
-    theme: "Тема",
-    language: "Јазик",
-    myAlerts: "Мои известувања",
-    profile: "Профил",
-    settings: "Поставувања",
-    logout: "Одјава",
-    signUp: "Регистрирај се"
+    features: "အင်္ဂါရပ်များ",
+    how: "အလုပ်လုပ်ပုံ",
+    pricing: "စျေးနှုန်းများ",
+    getAlerts: "အသိပေးချက်ရယူရန်",
+    waitlist: "စောင့်စာရင်း",
+    faq: "မကြာမကြာ မေးလေ့ရှိသော မေးခွန်းများ",
+    login: "လော့ဂ်အင်",
+    getStarted: "စတင်အသုံးပြုရန်",
+    subscribers: "စာရင်းသွင်းသူများ",
+    theme: "အမြင်ပုံစံ",
+    language: "ဘာသာစကား",
+    myAlerts: "ကျွန်တော့် အကြောင်းကြားချက်များ",
+    profile: "ပရိုဖိုင်",
+    settings: "ဆက်တင်များ",
+    logout: "လော့အောင်ထွက်ရန်",
+    signUp: "စာရင်းသွင်းမည်",
   },
   hero: {
-    label: "Следете огласи за половни автомобили во реално време",
-    title: "Никогаш не ја пропуштајте вашата совршена понуда за автомобил",
-    subtitle: "AMIQUUS веднаш ве известува кога вашиот автомобил од соништата ќе се појави на повеќе веб-страници за огласи за автомобили. Добијте нотификации преку Telegram штом се пронајде совпаѓање.",
-    button1: "Поставете ги вашите известувања",
-    button2: "Види како функционира",
+    label:
+      "အသုံးပြုပြီးရင် ယူဇ်ကား လော့စတင်များကို အချိန်နှင့်တပြေးညီ ခြေရာခံပါ!",
+    title: "သင့်အတွက် အကောင်းဆုံး ကားစျေးနှုန်းမလွတ်အောင် ဇှဲထားပါ",
+    subtitle:
+      "Amiquus သည် သင့်အိပ်မက်ကား ပုံစံနှင့် ကိုက်ညီသော ယူဇ်ကားလိုင်းများ ပေါ်လာချိန်တိုင်းကို မလပ်မသွား Telegram မှ တစ်ဆင့် ချက်ချင်း အကြောင်းကြားပေးပါမည်။",
+    button1: "အသိပေးချက်များ စတင်သတ်မှတ်ရန်",
+    button2: "အလုပ်လုပ်ပုံကို ကြည့်ရှုရန်",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
+      websites: "ကားလိုင်းဆိုက် 15+ ခု ခြေရာခံထားသည်",
+      realtime: "အချိန်နှင့်တပြေးညီ အသိပေးချက်",
+      noSetup: "ဆက်တင်ရှုပ်ထွေးမှု မလိုအပ်ပါ",
+      cancelAnytime: "လိုချင်သောအချိန်ပယ်ဖျက်နိုင်သည်",
     },
-    trustindicators: {
-      cancelanytime: "Откажете во било кое време",
-      nosetup: "Не е потребна инсталација",
-      realtime: "Известувања во реално време",
-      websites: "Следење на повеќе од 15 веб-страници"
-    }
   },
   limited: {
     full: {
-      title: "Достигнат е лимитот на претплата",
-      description: "Го достигнавме капацитетот од 30 активни претплатници. Пријавете се на листата на чекање за да бидете известени кога ќе се ослободи место.",
-      buttonText: "Придружи се на листата на чекање"
+      title: "စာရင်းသွင်း ခွင့်အကန့်အသတ် ပြည့်သွားပါပြီ",
+      description:
+        "လက်ရှိတွင် စာရင်းသွင်းမ użytk 30 ဦး အပြည့်ရှိလျက်ရှိသည်။ နောက်ထပ်နေရာလွတ်သည့်အခါ အကြောင်းကြားချက်ရယူလိုပါက စောင့်စာရင်းတွင် လက်မှတ်ရေးထိုးပါ။",
+      buttonText: "စောင့်စာရင်း ပူးပေါင်းမည်",
     },
     limited: {
-      title: "Ограничена достапност",
-      description: "Останаа само {{remaining}} места од вкупно {{capacity}}. Пријавете се сега пред да се пополни капацитетот!",
-      buttonText: "Започнете сега"
+      title: "အလွတ်နေရာ အကန့်အသတ်ရှိသည်",
+      description:
+        "စုစုပေါင်း {{capacity}} ထဲမှ {{remaining}} နေရာသာ ကျန်ရှိပါသည်။ အလွတ်နေရာ ပြည့်မီ စာရင်းသွင်းလိုက်ပါ!",
+      buttonText: "ယခုချိန်မှာ စတင်ပါ",
     },
     available: {
-      title: "Достапни претплати",
-      description: "{{active}} од {{capacity}} претплати се моментално активни. Има доволно место за да се приклучите!",
-      buttonText: "Започнете сега"
-    }
+      title: "စာရင်းသွင်းခွင့် ရရှိနိုင်ပါသည်",
+      description:
+        "လက်ရှိတွင် စာရင်းသွင်းသူ {{active}} / {{capacity}} ဖြစ်ပါသည်။ သင့်အတွက် နေရာလုံလောက်စွာ ရှိနေသေးသည်!",
+      buttonText: "ယခုချိန်မှာ စတင်ပါ",
+    },
   },
   features: {
-    heading: "Зошто да го одберете Amiquus?",
-    subheading: "Заштедете време и никогаш не пропуштајте го вашиот совршен автомобил со нашата автоматизирана услуга за следење.",
+    heading: "ဘာလို့ Amiquus ကို ရွေးချယ်ရမလဲ?",
+    subheading:
+      "အချိန်မဆုံးရှုံးဘဲ အလိုအလျောက် ခြေရာခံစနစ်နဲ့ သင့်အတွက် အကောင်းဆုံး ယူဇ်ကားကို လက်မလွှတ်ရအောင် ကူညီပေးမည်။",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "ဆိုက် များစွာ ခြေရာခံခြင်း",
+      description:
+        "ကားလိုင်း ဝဘ်ဆိုက်များစွာကို တစ်ကြိမ်တည်းနဲ့ အလိုအလျောက် စောင့်ကြည့်ပေးပြီး သင်ကိုယ်တိုင် ဆိုက်အားလုံးကို မကြည့်ရအောင် ကူညီပေးသည်။",
     },
     notifications: {
-      title: "Инстант известувања",
-      description: "Добиј веднаш известувања преку Telegram кога ќе се појави автомобил што ги исполнува твоите критериуми."
+      title: "ချက်ချင်း အသိပေးချက်",
+      description:
+        "သင့်အကြိုက်နှင့် လိုအပ်ချက်ကို ကိုက်ညီသော ကားအသစ် တင်ထားသည်နှင့် Telegram မှ တစ်ဆင့် ချက်ချင်း အသိပေးချက်ရရှိပါမည်။",
     },
     filters: {
-      title: "Прилагодени филтри",
-      description: "Поставете прецизни критериуми, вклучувајќи марка, модел, година, изминати километри и ценовен опсег, за да го најдете токму тоа што го барате."
+      title: "ကိုယ်ပိုင် Filter ခြယ်လှယ်နိုင်မှု",
+      description:
+        "ကားအမှတ်တံဆိပ်၊ မော်ဒယ်၊ နှစ်၊ မိုင်နှုန်း၊ စျေးနှုန်းအပိုင်းအခြားတို့ကို တိတိကျကျ သတ်မှတ်၍ သင်လိုချင်သည့် ကားကို တိကျပေါက်နုတ်ရှာဖွေပါ။",
     },
     frequency: {
-      title: "Прилагодлива фреквенција",
-      description: "Изберете колку често да проверуваме за нови огласи, од ажурирања на секој час до следење во реално време."
+      title: "အသိပေး အကြိမ်ရေ ကိုယ်တိုင်ရွေးချယ်နိုင်သည်",
+      description:
+        "နိုက်တ နာရီချင်း စစ်ဆေးသည့် ပုံမှန်အနေအထားမှ Real-time နီးပါး အချိန်အကြာအနည်းငယ်အတွင်း စစ်ဆေးမည့် ရွေးချယ်စရာများအထိ သင့်တော်သလို ရွေးချယ်နိုင်သည်။",
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "ဘာသာစကား များစွာ အထောက်အပံ့",
+      description:
+        "စာရင်းတင်ထားသော အချက်အလက်များကို ပိုမိုလွယ်ကူစွာ နားလည်ရရန် သင့်အကြိုက် ဘာသာစကားဖြင့် အသိပေးချက်များ ရယူနိုင်သည်။",
     },
     account: {
-      title: "Лесно управување со сметката",
-      description: "Управувајте со повеќе профили за пребарување и менувајте ги поставките за претплата со неколку клика."
+      title: "အကောင့် စီမံခန့်ခွဲရ လွယ်ကူသည်",
+      description:
+        "ရှာဖွေမှု ပရိုဖိုင် များစွာ သတ်မှတ်ထားနိုင်ပြီး စာရင်းသွင်းမှု ဆက်တင်များကိုလည်း အချိန်မရွေး ပြင်ဆင်နိုင်သည်။",
     },
-    multisite: {
-      description: "Следете повеќе веб-страници со огласи за автомобили истовремено, без да мора рачно да ги проверувате секоја посебно.",
-      title: "Следење на повеќе сајтови"
-    }
   },
   howItWorks: {
-    title: "Како функционира Amiquus",
-    subtitle: "Поставете еднаш и дозволете на нашиот автоматизиран систем да ја најде совршената понуда за автомобил за вас.",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Amiquus အလုပ်လုပ်ပုံ",
+    subtitle:
+      "တစ်ခါသာဆက်တင်ပြီးနောက် မိမိအတွက် အသင့်တော်ဆုံး ယူဇ်ကားကို စနစ်အလိုလို ရှာပေးပါစေ",
+    whyTitle: "ဘာလို့ Amiquus ကို ရွေးချယ်ရမလဲ?",
     steps: {
       preferences: {
-        title: "Поставете ги вашите поставки",
-        description: "Изберете марки и модели на автомобили, ценовен опсег и други критериуми што сакате да ги следите."
+        title: "သင့် အကြိုက်နှင့် စံနှုန်းများ သတ်မှတ်ပါ",
+        description:
+          "သည်းခံမည့် ကားအမှတ်တံဆိပ်၊ မော်ဒယ်၊ စျေးနှုန်းအပိုင်းအခြားနှင့် အခြား စံနှုန်းများကို သတ်မှတ်ထားပါ။",
       },
       telegram: {
-        title: "Поврзи Telegram",
-        description: "Поврзете го вашиот Telegram профил за да добивате инстант известувања за нови огласи."
+        title: "Telegram ကို ချိတ်ဆက်ပါ",
+        description:
+          "အသစ်တင်ထားသော လိုင်းများအကြောင်း Telegram မှတစ်ဆင့် ချက်ချင်း အသိပေးချက် ရရှိရန် သင့် Telegram အကောင့်ကို ချိတ်ဆက်ပါ။",
       },
       notifications: {
-        title: "Добијте инстант известувања",
-        description: "Добијте известувања веднаш штом се појави автомобил што одговара на вашите критериуми на било која од нашите следени веб-страници."
+        title: "ချက်ချင်း အသိပေးချက် ရယူပါ",
+        description:
+          "သင့်စံနှုန်းနှင့် ကိုက်ညီသည့် ကားအသစ် တင်သည့်အခါတိုင်း ကျွန်ုပ်များ စောင့်ကြည့်ထားသော ဆိုက်များမှ တစ်ဆင့် ချက်ချင်း အသိပေးပါမည်။",
       },
       findCar: {
-        title: "Find Your Perfect Car",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
+        title: "သင့်အတွက် သင့်တော်ဆုံး ကားကို ရှာဖွေလိုက်ပါ",
+        description:
+          "အသစ်အနေနဲ့ တင်ထားသည့် လိုင်းများကို ပထမဦးဆုံး သတင်းရရှိပြီး ယှဉ်ပြိုင်မှုများထဲတွင် အားသာနိုင်ပါစေ။",
       },
-      findcar: {
-        description: "Бидете први што ќе дознаат за нови огласи и обезбедете ги најдобрите понуди пред сите други.",
-        title: "Пронајдете го вашиот совршен автомобил"
-      }
     },
-    features: {
-      0: "Следете повеќе од 15 веб-страници со огласи за автомобили истовремено",
-      1: "Прилагодливи критериуми за пребарување со напредно филтрирање",
-      2: "Известувања во реално време преку Telegram",
-      3: "Автоматски известувања за намалување на цени и нови огласи",
-      4: "Едноставен процес на поставување што трае помалку од 5 минути"
-    },
-    setAlerts: "Set Up Your Alerts",
+    features: [
+      "ကားလိုင်း ဝဘ်ဆိုက် 15 ကျော်ကို တချိန်တည်း ခြေရာခံနိုင်သည်",
+      "ရှာဖွေရန် စံနှုန်းများကို အပြည့်အစုံ သတ်မှတ်နိုင်သော Advanced Filtering",
+      "Telegram မှတစ်ဆင့် Real-time နီးပါး အသိပေးချက်",
+      "စျေးကျခြင်းနှင့် အသစ်တင်ထားသော လိုင်းများအတွက် အလိုအလျောက် အသိပေးချက်",
+      "၅ မိနစ်အောက်အချိန်အတွင်း ပြီးသွားမည့် လွယ်ကူသော Setup လုပ်ငန်းစဉ်",
+    ],
+    setAlerts: "အသိပေးချက်များ သတ်မှတ်ရန်",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "အသစ် ကိုက်ညီမှုတွေ့ရှိပြီး!",
+      description:
+        "BMW 3 Series, 2019, $32,500 - AutoTrader တွင် လတ်တလောတင်ထားသည်",
     },
     notificationMockup2: {
-      title: "Telegram Alert",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
+      title: "Telegram အသိပေးချက်",
+      description:
+        "Mercedes C-Class, 2020, 30,000 miles - စျေးနှုန်း $2,000 နည်းသွားသည်",
     },
-    notificationmockup1: {
-      description: "BMW серија 3, 2019, $32,500 - Ново објавено на AutoTrader",
-      title: "Пронајдено ново совпаѓање!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-класа, 2020, 30.000 милји – Цената намалена за 2.000 $",
-      title: "Телеграм известување"
-    },
-    setalerts: "Поставете ги вашите известувања",
-    whytitle: "Зошто да изберете Amiquus?"
   },
   pricing: {
-    title: "Едноставни, транспарентни цени",
-    subtitle: "Нашите цени се прилагодуваат според вашите специфични потреби. Започнете со основен пакет и прилагодете го според вашите барања.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "ရိုးရှင်း တာဝန်ကျေပွန်သည့် စျေးနှုန်းများ",
+    subtitle:
+      "သင့်လိုအပ်ချက်အပေါ် မူတည်ပြီး စျေးနှုန်း သတ်မှတ်ထားပါသည်။ အခြေခံ Package ဖြင့် စတင်ပြီး သင့်လိုအပ်ချက်အလိုက် Customize လုပ်နိုင်ပါသည်။",
+    baseTitle: "အခြေခံ Package: $79.99 / လ",
+    includedTitle: "ပါဝင်သည့်အရာများ:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "ဝဘ်ဆိုက် တစ်ခု ခြေရာခံခြင်း",
+      "နာရီတိုင်း စစ်ဆေးပေးခြင်း",
+      "Unlimited Filters",
+      "Telegram အသိပေးချက်များ",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Секоја дополнителна веб-страница"
-      },
-      1: {
-        name: "Ажурирања на секои 30 минути"
-      },
-      2: {
-        name: "Ажурирања на секои 15 минути"
-      },
-      3: {
-        name: "Ажурирања на секои 5 минути"
-      },
-      4: {
-        name: "Ажурирања секоја минута"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Започнете сега",
-    addonstitle: "Додатоци:",
-    basetitle: "Основен пакет: 79,99 $/месец",
-    footernote: "Сите пакети вклучуваат неограничени конфигурации за пребарување и лесно управување со претплатата.",
-    includedfeatures: {
-      0: "Следење на една веб-страница",
-      1: "Часовни ажурирања",
-      2: "Неограничени филтри",
-      3: "Известувања на Telegram"
-    },
-    includedtitle: "Што е вклучено:"
+    addonsTitle: "ထပ်မံ ဝယ်ယူနိုင်သော အရာများ:",
+    addons: [
+      { name: "ထပ်မံ ခြေရာခံလိုသည့် ဝဘ်ဆိုက်တစ်ခုစီ", price: 4.99 },
+      { name: "30 မိနစ်တိုင်း အပ်ဒိတ်", price: 2.99 },
+      { name: "15 မိနစ်တိုင်း အပ်ဒိတ်", price: 5.99 },
+      { name: "5 မိနစ်တိုင်း အပ်ဒိတ်", price: 9.99 },
+      { name: "1 မိနစ်တိုင်း အပ်ဒိတ်", price: 14.99 },
+    ],
+    footerNote:
+      "စာရင်းသွင်းမှုအားလုံးတွင် Unlimited ရှာဖွေမှု Configuration များနှင့် စာရင်းသွင်းမှု စီမံခန့်ခွဲခြင်း လွယ်ကူစွာ ပါဝင်သည်။",
+    button: "ယခု လက်ခံ စတင်လိုက်ပါ",
   },
   signup: {
-    heading: "Create Your Car Alert",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "သင့်ကား အသိပေးချက်ကို ဖန်တီးပါ",
+    subheading:
+      "ကားလိုင်း အသိပေးချက်ကို အဆင့်နည်းနည်းအနိမ့် အသုံးပြုရ လွယ်ကူစွာ သတ်မှတ်လိုက်ပါ။",
+    cta: "ယခု အသိပေးချက်ရယူမည်",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
-      cta: "Join Waitlist"
+      message:
+        "လက်ရှိတွင် စွမ်းရည်အကန့်အသတ် ပြည့်သွားပြီးဖြစ်သည်။ နေရာလွတ်သည့်အခါ အကြောင်းကြားလိုပါက စောင့်စာရင်းတွင် ပူးပေါင်းပါ။",
+      cta: "စောင့်စာရင်းတွင် ပူးပေါင်းမည်",
     },
     toast: {
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "စာရင်းသွင်းမှု ပြီးမြောက်ပါပြီ",
+        description: "သင်၏ စာရင်းသွင်းမှုကို အောင်မြင်စွာ ဖန်တီးပြီးပါပြီ။",
       },
       error: {
-        title: "Subscription failed",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "စာရင်းသွင်းမှု မအောင်မြင်ပါ",
+        description:
+          "သင်၏ စာရင်းသွင်းမှုကို ဖန်တီး၍မရနိုင်ခဲ့ပါ။ နောက်တစ်ကြိမ် ထပ်မံကြိုးစားပါ။",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
-        title: "Успех",
-        description: "Вашиот начин на плаќање е успешно поставен."
+        title: "အောင်မြင်ပါသည်",
+        description:
+          "သင့် ငွေပေးချေမှု မက်သဒ်ကို အောင်မြင်စွာ သတ်မှတ်ပြီးပါပြီ။",
       },
       error: {
-        title: "Грешка",
-        fallback: "Се случи неочекувана грешка. Ве молиме обидете се повторно."
-      }
+        title: "အမှား",
+        fallback:
+          "မျှော်လင့်မထားသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်။ ထပ်မံကြိုးစားပါ။",
+      },
     },
     button: {
-      submit: "Поставете начин на плаќање",
-      processing: "Се обработува..."
-    }
+      submit: "ငွေပေးချေမှု မက်သဒ် သတ်မှတ်မည်",
+      processing: "ဆောင်ရွက်နေသည်...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Марка на автомобил е задолжителна",
-      carmodel: "Моделот на автомобил е задолжителен",
-      facebookmarketplaceurl: "URL за Facebook Marketplace е задолжителен кога е избран Facebook",
-      fueltype: "Тип на гориво е задолжителен",
-      maxkilometers: "Максималниот број на километри мора да биде бројка",
-      notificationlanguage: "Потребно е да се избере јазик за известување.",
-      pricemax: "Максималната цена мора да биде број",
-      pricemin: "Минималната цена мора да биде број",
-      telegramchatid: "Потребен е Telegram chat ID.",
-      telegramtoken: "Потребен е токен за Telegram бот",
-      telegramusername: "Телеграм корисничко име е задолжително",
-      websitesselected: "Мора да биде избрана барем една веб-страница.",
-      yearmax: "Максималната година мора да биде валидна година.",
-      yearmin: "Минималната година мора да биде валидна година"
-    }
+      carBrand: "ကားအမှတ်တံဆိပ် လိုအပ်သည်",
+      carModel: "ကားမော်ဒယ် လိုအပ်သည်",
+      fuelType: "စက်သုံးဆီအမျိုးအစား လိုအပ်သည်",
+      priceMin: "အနည်းဆုံး စျေးနှုန်းသည် ကိန်းဂဏန်း ဖြစ်ရမည်",
+      priceMax: "အမြင့်ဆုံး စျေးနှုန်းသည် ကိန်းဂဏန်း ဖြစ်ရမည်",
+      yearMin: "အနည်းဆုံး နှစ်သည် သက်ဆိုင်ရာနှစ် ဖြစ်ရမည်",
+      yearMax: "အမြင့်ဆုံး နှစ်သည် သက်ဆိုင်ရာနှစ် ဖြစ်ရမည်",
+      maxKilometers: "အများဆုံး ကီလိုမီတာသည် ကိန်းဂဏန်း ဖြစ်ရမည်",
+      telegramUsername: "Telegram အသုံးပြုသူအမည် လိုအပ်သည်",
+      telegramToken: "Telegram bot token လိုအပ်သည်",
+      telegramChatId: "Telegram chat ID လိုအပ်သည်",
+      websitesSelected: "ဝဘ်ဆိုက် အနည်းဆုံးတစ်ခု ရွေးချယ်ထားရမည်",
+      notificationLanguage: "အသိပေး ဘာသာစကား ရွေးချယ်ရန် လိုအပ်သည်",
+      facebookMarketplaceUrl:
+        "Facebook ကို ရွေးချယ်ထားသောအခါ Facebook Marketplace URL လိုအပ်သည်",
+    },
   },
   personalInfo: {
-    heading: "Лични податоци",
-    description: "Ве молиме внесете ги вашите лични податоци за да можеме правилно да ги поставиме вашите известувања.",
+    heading: "ကိုယ်ရေး အချက်အလက်",
+    description:
+      "သင့် အသိပေးချက်များကို မှန်ကန်စွာ စနစ်သတ်မှတ်နိုင်ရန် သင်၏ ကိုယ်ရေးအချက်အလက်များကို ဖြည့်သွင်းပါ။",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Е-пошта",
-      firstname: "Име",
-      lastname: "Презиме"
+      firstName: "အမည်",
+      lastName: "မျိုးနွယ်အမည်",
+      email: "အီးမေးလ် လိပ်စာ",
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
       email: "john.doe@example.com",
-      firstname: "Јован",
-      lastname: "Јелен"
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Внесете валидна е-пошта",
-      firstname: "Името е задолжително",
-      lastname: "Презимето е задолжително"
+      firstName: "အမည် လိုအပ်သည်",
+      lastName: "မျိုးနွယ်အမည် လိုအပ်သည်",
+      email: "မှန်ကန်သော အီးမေးလ် ထည့်ပါ",
     },
     actions: {
-      login: "Најавете се или регистрирајте за да продолжите",
-      continue: "Продолжи"
-    }
+      login: "ရှေ့ဆက်ရန် Login သို့မဟုတ် Sign Up လုပ်ပါ",
+      continue: "ရှေ့ဆက်ရန်",
+    },
   },
   websiteSelection: {
-    heading: "Избор на веб-страница",
-    description: "Изберете кои веб-страници сакате да ги следите и колку често сакате да добивате ажурирања.",
+    heading: "ဝဘ်ဆိုက်ရွေးချယ်ခြင်း",
+    description:
+      "စောင့်ကြည့်လိုသော ဝဘ်ဆိုက်များနှင့် အပ်ဒိတ် လုပ်မည့် အကြိမ်ရေကို ရွေးချယ်ပါ။",
     labels: {
-      websites: "Веб-страници за следење",
+      websites: "စောင့်ကြည့်မည့် ဝဘ်ဆိုက်များ",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL на Facebook Marketplace",
-      updatefrequency: "Фреквенција на ажурирање"
+      updateFrequency: "အပ်ဒိတ် အကြိမ်ရေ",
     },
     placeholders: {
-      frequency: "Изберете фреквенција"
+      frequency: "အကြိမ်ရေ ရွေးချယ်ပါ",
     },
     help: {
-      websites: "Изберете една или повеќе веб-страници за следење огласи за автомобили.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Внесете ја URL-адресата од вашите резултати од пребарување на Facebook Marketplace тука.",
-      updatefrequency: "Колку често треба да проверуваме за нови огласи? Почестите проверки може да значат поголеми трошоци.",
-      videodesc: "Погледнете го видеото подолу за чекор-по-чекор инструкции.",
-      videotitle: "Ви треба помош да ја најдете вашата Facebook Marketplace линк за пребарување?"
+      websites:
+        "ကားလိုင်းများကို စောင့်ကြည့်မည့် ဝဘ်ဆိုက် အနည်းဆုံး တစ်ခု以上 ရွေးပါ။",
+      facebookUrl:
+        "Facebook Marketplace တွင် ရှာထုတ်ထားသော ရလဒ် URL ကို ဒီနေရာမှာ ကူးထည့်ပါ။",
+      videoTitle: "Facebook Marketplace ရွေးချယ်မှု Link ကို ဘယ်လို ရယူရမလဲ?",
+      videoDesc: "အဆင့်လိုက် လုပ်နည်းကို ဗီဒီယိုဖြင့် ကြည့်ရှုနိုင်ပါသည်။",
+      updateFrequency:
+        "အသစ်တင်ထားသည့် လိုင်းများကို ဘယ်နှစ်ကြိမ် ခဏအလိုက် စစ်မလဲ? အကြိမ်ရေ မြင့်သလို လစဉ်စရိတ်လည်း ပိုမိုမြင့်မားနိုင်သည်။",
     },
     errors: {
-      websites: "Мора да биде избрана барем една веб-страница",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL за Facebook Marketplace е задолжителен кога е избран Facebook"
+      websites: "ဝဘ်ဆိုက် အနည်းဆုံး တစ်ခု ရွေးထားရမည်",
+      facebookUrl:
+        "Facebook ကို ရွေးချယ်ထားသောအခါ Facebook Marketplace URL လိုအပ်သည်",
     },
     actions: {
-      previous: "Претходно",
-      continue: "Продолжи"
-    }
+      previous: "နောက်သို့",
+      continue: "ရှေ့သို့",
+    },
   },
   carDetails: {
-    heading: "Детали за возилото",
-    description: "Наведете ги деталите за автомобилот што го барате. Сите полиња се опционални – оставете ги празни за поширок избор на резултати.",
+    heading: "ကားအသေးစိတ်",
+    description:
+      "သင်ရှာဖွေနေသော ကား၏ အသေးစိတ်အချက်အလက်များကို ထည့်ပါ။ မည်သည့် အကွက်မဆို မဖြည့်ထားလည်း ရပြီး ရလဒ်အနည်းငယ် ပိုကျယ်လာနိုင်သည်။",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Марка на автомобил",
-      carmodel: "Модел на автомобил",
-      fueltype: "Тип на гориво",
-      maxkilometers: "Максимални километри",
-      pricemax: "Максимална цена",
-      pricemin: "Минимална цена",
-      yearmax: "Максимална година",
-      yearmin: "Минимална година"
+      carBrand: "ကားအမှတ်တံဆိပ်",
+      carModel: "ကားမော်ဒယ်",
+      fuelType: "စက်သုံးဆီ အမျိုးအစား",
+      priceMin: "အနည်းဆုံး စျေးနှုန်း",
+      priceMax: "အမြင့်ဆုံး စျေးနှုန်း",
+      yearMin: "အနည်းဆုံး ထုတ်လုပ်သည့်နှစ်",
+      yearMax: "အမြင့်ဆုံး ထုတ်လုပ်သည့်နှစ်",
+      maxKilometers: "အများဆုံး ကီလိုမီတာ",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Изберете марка на автомобил",
-      carmodel: "Изберете модел на автомобил",
-      carmodeldisabled: "Прво одберете марка на автомобил",
-      fueltype: "Изберете тип на гориво",
-      maxkilometers: "Внесете максимален број километри",
-      pricemax: "Внесете максимална цена",
-      pricemin: "Внесете минимална цена",
-      yearmax: "Внесете максимална година",
-      yearmin: "Внесете минимална година"
+      carBrand: "ကားအမှတ်တံဆိပ်ကို ရွေးပါ",
+      carModel: "ကားမော်ဒယ်ကို ရွေးပါ",
+      carModelDisabled: "အရင် ကားအမှတ်တံဆိပ်ကို ရွေးပါ",
+      fuelType: "စက်သုံးဆီ အမျိုးအစားကို ရွေးပါ",
+      priceMin: "အနည်းဆုံး စျေးနှုန်း ထည့်ပါ",
+      priceMax: "အမြင့်ဆုံး စျေးနှုန်း ထည့်ပါ",
+      yearMin: "အနည်းဆုံး နှစ် ထည့်ပါ",
+      yearMax: "အမြင့်ဆုံး နှစ် ထည့်ပါ",
+      maxKilometers: "အများဆုံး ကီလိုမီတာ ထည့်ပါ",
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Нема достапни модели"
+      noModelsAvailable: "မော်ဒယ် မရှိပါ",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Марка на автомобил е задолжителна",
-      carmodel: "Моделот на автомобил е задолжителен",
-      fueltype: "Тип на гориво е задолжителен",
-      maxkilometers: "Максималниот број на километри мора да биде бројка.",
-      pricemax: "Максималната цена мора да биде број",
-      pricemin: "Минималната цена мора да биде број",
-      yearmax: "Максималната година мора да биде валидна година",
-      yearmin: "Минималната година мора да биде валидна година"
+      carBrand: "ကားအမှတ်တံဆိပ် လိုအပ်သည်",
+      carModel: "ကားမော်ဒယ် လိုအပ်သည်",
+      fuelType: "စက်သုံးဆီအမျိုးအစား လိုအပ်သည်",
+      priceMin: "အနည်းဆုံး စျေးနှုန်းသည် ကိန်းဂဏန်း ဖြစ်ရမည်",
+      priceMax: "အမြင့်ဆုံး စျေးနှုန်းသည် ကိန်းဂဏန်း ဖြစ်ရမည်",
+      yearMin: "အနည်းဆုံး နှစ်သည် မှန်ကန်သော နှစ် ဖြစ်ရမည်",
+      yearMax: "အမြင့်ဆုံး နှစ်သည် မှန်ကန်သော နှစ် ဖြစ်ရမည်",
+      maxKilometers: "အများဆုံး ကီလိုမီတာသည် ကိန်းဂဏန်း ဖြစ်ရမည်",
     },
     actions: {
-      previous: "Претходно",
-      continue: "Продолжи"
-    }
+      previous: "နောက်သို့",
+      continue: "ရှေ့သို့",
+    },
   },
   telegram: {
-    heading: "Поставување на Телеграм",
-    description: "Поставете Telegram известувања со внесување на токенот на вашиот бот и chat ID.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Доколку имате проблеми со креирање на Telegram бот, контактирајте нѐ и ќе ве побараме за да ви помогнеме да го креирате.",
-    contact: "Контактирајте не",
+    heading: "Telegram စနစ်သတ်မှတ်ခြင်း",
+    description:
+      "Telegram bot token နှင့် chat ID ဖြင့် Telegram အသိပေးချက်များကို သတ်မှတ်ပါ။",
+    subHeading: "သင့် Telegram Bot ကို သတ်မှတ်ပါ",
+    info: "Telegram bot ဖန်တီးရာတွင် အခက်အခဲ ရှိပါက ကျွန်တော်တို့ကို ဆက်သွယ်ပါ၊ ဖုန်းခေါ်ပြီး အဆင်ပြေစေသည့် နည်းလမ်းကို ညွှန်ပြပေးပါမည်။",
+    contact: "ကျွန်တော်တို့ကို ဆက်သွယ်မည်",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Отворете Telegram и побарајте @BotFather",
-      botstep2: "Испрати ја командата /newbot",
-      botstep3: "Следете ги упатствата за креирање бот",
-      botstep4: "Копирај го токенот што го даде BotFather",
-      bottitle: "Како да добиете Telegram Bot Token:",
-      chatstep1: "Отворете Telegram и побарајте @userinfobot",
-      chatstep2: "Испратете било каква порака до ботот",
-      chatstep3: "Ботот ќе ви одговори со вашите информации, вклучувајќи го и вашиот Chat ID.",
-      chatstep4: "Копирај го ID на разговорот (тоа е бројка)",
-      chattitle: "Како да го добиете вашиот Telegram Chat ID:"
+      botTitle: "Telegram Bot Token ရယူရန်:",
+      botStep1: "Telegram ထဲတွင် @BotFather ကို ရှာပါ",
+      botStep2: "/newbot ဟု Command ပို့ပါ",
+      botStep3: "Bot ဖန်တီးရန် လမ်းညွှန်ချက်များကို လိုက်နာပါ",
+      botStep4: "BotFather ပေးထားသော token ကို ကူးယူပါ",
+
+      chatTitle: "Telegram Chat ID ရယူရန်:",
+      chatStep1: "Telegram ထဲတွင် @userinfobot ကို ရှာပါ",
+      chatStep2: "bot သို့ မက်ဆေ့ခ်ျ တစ်ခု စတင်ပို့ပါ",
+      chatStep3:
+        "bot သည် သင့်အကြောင်းအရာနှင့်အတူ Chat ID ပါဝင်သော အချက်အလက်ကို ပြန်ပို့ပါမည်",
+      chatStep4: "Chat ID (ကိန်းဂဏန်း) ကို ကူးယူပါ",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Telegram Bot Token နှင့် Chat ID သတ်မှတ်ပုံ မသိဘူးလား?",
+    videoDescription:
+      "အဆင့်လိုက် လမ်းညွှန် ဗီဒီယိုကို ဤနေရာတွင် ကြည့်ရှုနိုင်ပါသည်။",
+
     labels: {
-      token: "Токен за Телеграм бот",
-      chatId: "Your Telegram Chat ID",
-      language: "Јазик на известувања",
-      username: "Телеграм корисничко име",
-      chatid: "Ваш Telegram Chat ID"
+      token: "Telegram Bot Token",
+      chatId: "သင့် Telegram Chat ID",
+      language: "အသိပေး ဘာသာစကား",
+      username: "Telegram အသုံးပြုသူအမည်",
     },
+
     placeholders: {
-      token: "Внесете го токенот на вашиот бот од BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Изберете јазик на пораката за Telegram",
-      username: "Внесете го вашето корисничко име на Telegram",
-      chatid: "Внесете го вашиот Telegram chat ID"
+      token: "BotFather မှ ရရှိသော bot token ထည့်ပါ",
+      chatId: "သင့် Telegram chat ID ထည့်ပါ",
+      language: "Telegram မက်ဆေ့ချ့် ဘာသာစကား ရွေးချယ်ပါ",
+      username: "သင့် Telegram အသုံးပြုသူအမည် (အမည်သာ၊ @ မပါ)",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "ဤအမည်မှာ သင့် Telegram အကောင့်အတွက် အသုံးပြုသည့် အမည်ဖြစ်သည် (@ မပါဘဲ ထည့်ပါ).",
     examples: {
-      token: "Пример: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Ова можете да го добиете ако испратите порака до @userinfobot на Telegram."
+      token: "ဥပမာ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId:
+        "@userinfobot တစ်ချက် မက်ဆေ့ခ်ျ ပို့ရုံဖြင့် Chat ID ရရှိနိုင်သည်",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Setup လုပ်ပုံ:",
     setupSteps: [
-
-      "Open Telegram and search for \\\"BotFather\\\"",
-
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Telegram ကိုဖွင့်ပြီး "BotFather" ဟု ရှာပါ',
+      '"Start" ကိုနှိပ်ပြီး BotFather နှင့် စတင်စကားပြောပါ',
+      "/newbot ဟု ရိုက်ထည့်ပြီး Bot တစ်ခုဖန်တီးရန် လမ်းညွှန်ချက်များ လိုက်နာပါ",
+      "သင့် bot အတွက် နာမည် တစ်ခုရွေးပါ",
+      "သင့် bot အတွက် username တစ်ခုရွေးပါ (အရှုံးမှာ 'bot' ဖြင့် ပိတ်ရပါမည်)",
+      "BotFather ပေးထားသော API token ကို ကူးယူပါ",
+      "သင့် bot သို့ မက်ဆေ့ခ်ျ တစ်ခု စတင်ပို့ပြီး chat ကို အလုပ်လုပ်စေပါ",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Telegram Chat ID ရယူပုံ:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\"userinfobot\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      '"userinfobot" ဟု ရှာပါ',
+      "bot သို့ မက်ဆေ့ခ်ျ တစ်ခု ပို့ပါ",
+      "သင့်အကြောင်းအရာနှင့်အတူ Chat ID ပါဝင်သည့် အချက်အလက်ကို ပြန်ပို့လိမ့်မည်",
+      "သင့် Chat ID ကို ကူးယူပါ",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
+    helpTitle: "Telegram Bot Token နှင့် Chat ID သတ်မှတ်ရန် အကူအညီလိုသလား?",
+    helpDescription:
+      "အဆင့်လိုက် လမ်းညွှန် ဗီဒီယိုကို ဤနေရာတွင် ကြည့်ရှုနိုင်ပါသည်။",
     botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    botTokenPlaceholder: "BotFather မှ ရရှိသော bot token ထည့်ပါ",
+    botTokenExample: "ဥပမာ: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "သင့် Telegram Chat ID",
+    chatIdPlaceholder: "သင့် Telegram chat ID ထည့်ပါ",
+    chatIdDescription:
+      "@userinfobot သို့ မက်ဆေ့ခ်ျ ပို့ခြင်းဖြင့် Chat ID ရနိုင်သည်",
+    languageLabel: "အသိပေး ဘာသာစကား",
+    languagePlaceholder: "Telegram မက်ဆေ့ချ့် ဘာသာစကား ရွေးချယ်ပါ",
     languages: {
-      en: "Англиски",
-      de: "Германски",
-      fr: "Француски",
-      es: "Македонски",
-      it: "Македонски"
+      en: "အင်္ဂလိပ်",
+      de: "ဂျာမန်",
+      fr: "ပြင်သစ်",
+      es: "စပိန်",
+      it: "အီတလီ",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Telegram အသိပေးချက် Preview",
+    carAlertTitle: "🚗 ကားအသစ် အသိပေးချက်!",
+    priceLabel: "စျေးနှုန်း: {{price}}",
+    kilometresLabel: "ကီလိုမီတာ: {{kms}}",
+    locationLabel: "တည်နေရာ: {{location}}",
+    viewListing: "လိုင်းကို ကြည့်ရန် →",
     errors: {
-      token: "Потребен е токен за Telegram ботот",
-      chatId: "Telegram chat ID is required",
-      language: "Потребно е да се избере јазик за известување.",
-      username: "Телеграм корисничко име е задолжително",
-      chatid: "Telegram chat ID е задолжителен"
+      token: "Telegram bot token လိုအပ်သည်",
+      chatId: "Telegram chat ID လိုအပ်သည်",
+      language: "အသိပေး ဘာသာစကား ရွေးရန် လိုအပ်သည်",
+      username: "Telegram အသုံးပြုသူအမည် လိုအပ်သည်",
     },
+
     actions: {
-      previous: "Претходно",
-      continue: "Продолжи"
+      previous: "နောက်သို့",
+      continue: "ရှေ့သို့",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Пример: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Токен за Телеграм бот",
-    bottokenplaceholder: "Внесете го вашиот токен за бот од BotFather",
-    caralerttitle: "🚗 Ново возило!",
-    chatiddescription: "Ова можете да го добиете ако испратите порака до @userinfobot на Telegram.",
-    chatidlabel: "Ваш Telegram Chat ID",
-    chatidplaceholder: "Внесете го вашиот Telegram chat ID",
-    chatidsteps: {
-      0: "Отворете Telegram и побарајте „userinfobot“",
-      1: "Испрати било каква порака до ботот",
-      2: "Ботот ќе ви одговори со вашите информации, вклучувајќи го и вашиот Chat ID.",
-      3: "Копирај го твојот Chat ID"
-    },
-    chatidtitle: "Како да го добиете вашиот Telegram Chat ID:",
-    confirmcontact: "Започнав разговор со ботот и испратив порака.",
-    contactbotinstruction: "Започнете разговор со нашиот Telegram бот со кликнување на линкот подолу и испратете му порака:",
-    contactbotnote: "Ова е потребно за да добивате известувања за автомобили. Ако сте на компјутер, можете да го скенирате QR кодот.",
-    helpdescription: "Погледнете го видеото подолу за чекор-по-чекор упатство.",
-    helptitle: "Потребна ви е помош при поставување на вашиот Telegram Bot Token и Chat ID?",
-    kilometreslabel: "Километри: {{kms}}",
-    languagelabel: "Јазик на известување",
-    languageplaceholder: "Изберете јазик на пораката за Telegram",
-    locationlabel: "Локација: {{location}}",
-    previewtitle: "Преглед на Telegram известувања",
-    pricelabel: "Цена: {{price}}",
-    setupsteps: {
-      0: "Отворете Telegram и побарајте \"BotFather\"",
-      1: "Започнете разговор со BotFather со кликнување на „Start“",
-      2: "Напишете /newbot и следете ги инструкциите за креирање нов бот.",
-      3: "Изберете име за вашиот бот",
-      4: "Изберете корисничко име за вашиот бот (мора да завршува на 'bot')",
-      5: "Копирај го API токенот што го обезбеди BotFather",
-      6: "Испратете порака до вашиот нов бот за да го активирате разговорот"
-    },
-    setuptitle: "Упатство за поставување:",
-    subheading: "Поставете го вашиот Telegram бот",
-    usernamedescription: "Ова е вашето корисничко име на вашиот Telegram профил (без симболот @).",
-    videodescription: "Погледнете го видеото подолу за чекор-по-чекор водич.",
-    videoprompt: "Потребна ви е помош при поставување на вашиот Telegram Bot Token и Chat ID?",
-    viewlisting: "Прегледај оглас →"
+    contactBotInstruction:
+      "အောက်ပါ Link ကို နှိပ်ပြီး သို့မဟုတ် QR code ကို သုံး၍ ကျွန်ုပ်တို့၏ Telegram bot နှင့် စတင်စကားပြောပါ၊ မက်ဆေ့ခ်ျ တစ်ခု ပို့ထားရမည်:",
+    contactBotNote:
+      "ကား အသိပေးချက်များရရန် အဓိကလိုအပ်ချက်ဖြစ်သည်။ Desktop တွင် အသုံးပြုနေပါက QR code ကို စကင်ဖတ်နိုင်သည်။",
+    confirmContact:
+      "ကျွန်ုပ်သည် Telegram bot နှင့် စကားပြောခြင်း ကို စတင်ပြီး မက်ဆေ့ခ်ျတစ်ခု ပို့ပြီးသား ဖြစ်ပါသည်",
   },
   review: {
-    title: "Прегледај ја твојата претплата",
-    description: "Ве молиме прегледајте ги деталите за вашата претплата пред да продолжите со плаќање.",
+    title: "သင့် စာရင်းသွင်းမှုကို ပြန်လည်စစ်ဆေးပါ",
+    description:
+      "ငွေပေးချေမှုအဆင့်သို့ ဆက်မသွားမီ သင်၏ စာရင်းသွင်းမှုအချက်အလက်များကို ပြန်လည်ကြည့်ရှုပါ။",
+
     personal: {
-      title: "Лични податоци",
-      name: "Име",
-      email: "Е-пошта"
+      title: "ကိုယ်ရေးအချက်အလက်",
+      name: "နာမည်",
+      email: "အီးမေးလ်",
     },
+
     monitoring: {
-      title: "Поставки за следење",
-      websites: "Веб-страници",
+      title: "စောင့်ကြည့်သည့် ဆက်တင်များ",
+      websites: "ဝဘ်ဆိုက်များ",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook URL",
-      updatefrequency: "Фреквенција на ажурирање"
+      updateFrequency: "အပ်ဒိတ် အကြိမ်ရေ",
     },
+
     specs: {
-      title: "Спецификации на автомобилот",
-      brand: "Бренд",
-      model: "Модел",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Достапен опсег (км)",
-      price: "Ценовен опсег (€)",
-      fueltype: "Тип на гориво",
-      yearrange: "Опсег на години"
+      title: "ကာ ´� အသေးစိတ် လက္ခဏာများ",
+      brand: "အမှတ်တံဆိပ်",
+      model: "မော်ဒယ်",
+      fuelType: "စက်သုံးဆီ အမျိုးအစား",
+      yearRange: "ထုတ်လုပ်သည့် နှစ် အပိုင်းအခြား",
+      mileage: "မိုင်လျှောက် (km) အပိုင်းအခြား",
+      price: "စျေးနှုန်း အပိုင်းအခြား (€)",
     },
+
     notification: {
-      title: "Поставки за известувања",
-      telegram: "Телеграм Бот",
-      language: "Јазик на известувања"
+      title: "အသိပေးချက် ဆက်တင်များ",
+      telegram: "Telegram Bot",
+      language: "အသိပေး ဘာသာစကား",
     },
+
     summary: {
-      title: "Преглед на претплатата",
-      base: "Основна претплата",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Вкупно (месечно)",
-      extrawebsites: "Дополнителни веб-страници",
-      frequencyupgrade: "Надградба на фреквенција"
+      title: "စာရင်းသွင်းမှု အကျဉ်းချုပ်",
+      base: "အခြေခံ စာရင်းသွင်းမှု",
+      extraWebsites: "ထပ်မံ ဝဘ်ဆိုက်များ",
+      frequencyUpgrade: "အပ်ဒိတ် အကြိမ်ရေ မြှင့်တင်မှု",
+      total: "စုစုပေါင်း (လစဉ်)",
     },
+
     terms: {
-      checkbox: "Се согласувам со",
-      tos: "Услови на користење",
-      privacy: "Политика за приватност",
-      note: "Вашата претплата ќе се обновува автоматски секој месец. Можете да ја откажете во било кое време.",
-      error: "Мора да се согласите со условите и правилата"
+      checkbox: "ကျွန်ုပ် သဘောတူလက်မှတ်ရေးထိုးပါသည်",
+      tos: "ဝန်ဆောင်မှု စည်းကမ်းချက်များ",
+      privacy: " အကျိုးသက်ရောက်မှု မူဝါဒ",
+      note: "သင့် စာရင်းသွင်းမှုသည် လစဉ် အလိုအလျောက် အပ်ဒိတ်လုပ်သွားမည်။ မည်သည့် အချိန်မဆို ပယ်ဖျက်နိုင်ပါသည်။",
+      error: "စည်းကမ်းချက်များကို သဘောတူ လက်မှတ်ရေးထိုးရမည်",
     },
+
     actions: {
-      previous: "Претходно",
-      submit: "Продолжи до плаќање"
-    }
+      previous: "နောက်သို့",
+      submit: "ငွေပေးချေမှု ဆက်သွားမည်",
+    },
   },
   faq: {
-    title: "Најчесто поставувани прашања",
-    subtitle: "Пронајдете одговори на најчесто поставуваните прашања за нашата услуга.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "Брзината на известувањата зависи од избраната фреквенција на ажурирање. Со стандардниот план на ажурирање на секој час, ќе добивате известувања во рок од еден час по објавување на нов оглас. За речиси моментални известувања (во рок од неколку минути по објавата), можете да надградите на нашите почести планови за ажурирање.",
-        question: "Колку брзо ќе добијам известување откако ќе биде објавен нов оглас?"
+    title: "မကြာမကြာ မေးလေ့ရှိသော မေးခွန်းများ",
+    subtitle:
+      "ကျွန်ုပ်တို့ ဝန်ဆောင်မှုအကြောင်း အများဆုံး မေးလေ့ရှိသည့် မေးခွန်းများကို ရှာဖွေကြည့်ပါ။",
+    contactPrompt: "နောက်ထပ် မေးချင်တာ ရှိနေသေးလား?",
+    contactLink: "ကျွန်ုပ်တို့ Support အဖွဲ့ကို ဆက်သွယ်ပါ",
+    questions: [
+      {
+        question:
+          "ကားအသစ် တင်ထားတဲ့အချိန်နဲ့ အသိပေးချက် ရရှိတဲ့အချိန် ကြားက အချို့်သက်သာချိန်က ဘယ်လောက်လောက်လဲ?",
+        answer:
+          "အသိပေးချက်ရမည့် အမြန်နှုန်းသည် သင်ရွေးထားသည့် အပ်ဒိတ် အကြိမ်ရေပေါ်မူတည်ပါသည်။ ပုံမှန် နာရီတိုင်း အပ်ဒိတ် စီမံထားပါက အသစ်တင်ထားသည့် လိုင်းမှ နာရီအနည်းငယ်အတွင်း အသိပေးချက်ရရှိပါမည်။ နာရီအနည်းငယ်အတွင်း Real-time နီးပါး အသိပေးလိုပါက ပိုမြန်သော အပ်ဒိတ် အစီအစဉ်များသို့ အဆင့်မြှင့်နိုင်ပါသည်။",
       },
-      1: {
-        answer: "Да! Можете да креирате повеќе профили за пребарување со различни критериуми. Секој профил се смета како посебна претплата, но сите можете да ги управувате од еден акаунт. Ова е идеално ако истовремено барате различни типови возила.",
-        question: "Може ли да следам повеќе различни типови автомобили истовремено?"
+      {
+        question:
+          "ကားအမျိုးအစား မျိုးစုံကို တချိန်တည်း စောင့်ကြည့်ထားလို့ ရမလား?",
+        answer:
+          "ရပါတယ်! စံနှုန်းမတူညီသော ရှာဖွေမှု ပရိုဖိုင်များကို တစ်ခုထက်ပို ဖန်တီးထားနိုင်ပြီး ကားအမျိုးအစား အမျိုးမျိုးကို တချိန်တည်း စောင့်ကြည့်နိုင်ပါတယ်။ ပရိုဖိုင်တစ်ခုချင်းစီသည် စာရင်းသွင်းမှုတစ်ခုစီ အနေနဲ့ တွက်ထားတာ ဖြစ်ပေမယ့် အကောင့်တစ်ခုထဲကနေ အားလုံးကို စီမံနိုင်ပါတယ်။",
       },
-      2: {
-        answer: "Во моментов поддржуваме главни платформи за огласување автомобили, вклучувајќи ги AutoTrader, CarGurus, Cars.com и Facebook Marketplace. Постојано ја прошируваме нашата покриеност за да вклучиме повеќе веб-страници според побарувачката на корисниците и регионалната популарност.",
-        question: "Кои веб-страници моментално ги поддржувате?"
+      {
+        question: "လက်ရှိ ဘယ်ဝဘ်ဆိုက်တွေကို ထောက်ပံ့ပေးထားလဲ?",
+        answer:
+          "လက်ရှိမှာ AutoTrader, CarGurus, Cars.com, Facebook Marketplace စတဲ့ ချုပ်ခွာကျော် ကားလိုင်း ဝဘ်ဆိုက်များကို ထောက်ပံ့ထားပြီး သုံးစွဲသူ လိုအပ်ချက်နဲ့ ဒေသခံ အကြိုက်အနှိုင်းအယှဉ်အပေါ်အခြေခံကာ အခြားဆိုက်အသစ်များကို လည်း ဆက်လက် ထည့်သွင်းနေပါတယ်။",
       },
-      3: {
-        answer: "Воопшто не! Даваме детални упатства чекор по чекор, со текстуални и видео водичи за да ви помогнеме да го подесите Telegram ботот. Повеќето корисници ја завршуваат поставката за помалку од 5 минути, дури и без техничко знаење.",
-        question: "Дали ми е потребно техничко знаење за да го користам Telegram ботот?"
+      {
+        question: "Telegram bot ကိုအသုံးပြုဖို့ IT နည်းပညာ အတွေ့အကြုံ လိုမလား?",
+        answer:
+          "လိုအပ်မနေပါဘူး! Telegram bot ကို ဘယ်လိုသတ်မှတ်ရမည်ဆိုတာ Text လမ်းညွှန်နဲ့ Video လမ်းညွှန်နှစ်မျိုးလုံးကို ပေးထားပါတယ်။ နည်းပညာအတွေ့အကြုံ မရှိတဲ့ သုံးစွဲသူတွေဖို့ပါ မိနစ် ၅ လောက်နဲ့ အချိန်မကြာသေးပဲ ပြီးအောင် လုပ်လို့ရပါတယ်။",
       },
-      4: {
-        answer: "Да, можете да ги измените вашите критериуми за пребарување во секое време преку контролниот панел на вашиот профил. Промените стапуваат на сила веднаш, а вашите известувања ќе се ажурираат соодветно без никакви прекини на услугата.",
-        question: "Може ли да ги променам критериумите за пребарување откако ќе ја поставам мојата претплата?"
+      {
+        question:
+          "စာရင်းသွင်းပြီးနောက် ရှာဖွေမှု စံနှုန်းတွေကို ပြန်ပြင်လို့ ရသေးလား?",
+        answer:
+          "ရပါတယ်။ သင့် Dashboard ထဲမှ ရှာဖွေမှု ဆက်တင်များကို မည်သည့်အချိန်မဆို ပြန်ပြင်နိုင်ပြီး ပြောင်းလဲမှုများသည် ခဏအချိန်အတွင်းတွင် ချက်ချင်း သက်ရောက်မည်ဖြစ်ပြီး သင့် အသိပေးချက်များလည်း အသစ်ပြောင်းလဲသွားမည်ဖြစ်ပါသည်။",
       },
-      5: {
-        answer: "Можете да ја откажете вашата претплата во било кое време преку контролниот панел на вашиот профил. Одете во делот „Претплати“, изберете ја претплатата што сакате да ја откажете и кликнете на копчето „Откажи претплата“. Вашата услуга ќе биде активна до крајот на тековниот период на наплата.",
-        question: "Како да ја откажам мојата претплата?"
-      }
-    },
-    contactlink: "Контактирајте го нашиот тим за поддршка",
-    contactprompt: "Сѐ уште имате прашања?"
+      {
+        question: "စာရင်းသွင်းမှုကို ဘယ်လို ပယ်ဖျက်မလဲ?",
+        answer:
+          'သင့် Dashboard ထဲမှ "Subscriptions" ဆိုသော အပိုင်းသို့ ဝင်ပြီး ပယ်ဖျက်လိုသော စာရင်းသွင်းမှုကို ရွေးကာ "Cancel Subscription" ခလုတ်ကို နှိပ်ပါ။ ထို ငွေပေးချေမှု စုစုပေါင်း သက်တမ်း ပြီးဆုံးသည်အထိ ဝန်ဆောင်မှု လက်ရှိအတိုင်း ဆက်လက် လုပ်ဆောင်ပေးမည်ဖြစ်သည်။',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "Функции",
-    pricing: "Цени",
-    faq: "Најчесто поставувани прашања",
-    getStarted: "Get Started",
-    legal: "Правно",
-    terms: "Услови на користење",
-    privacy: "Политика на приватност",
-    cookies: "Политика за колачиња",
-    gdpr: "Ускладеност со GDPR",
-    contact: "Контакт",
+    brandDescription:
+      "သင့်အတွက် အချိန်မှန်စွာ သင့်တော်သည့် ယူဇ်ကား ဈေးကွက်ကို ရှာဖွေကူညီပေးသည့် ကိုယ်ပိုင် အခိုယ်အညာမိတ်ဆွေ။",
+    quickLinks: "အမြန် လင့်များ",
+    features: "အင်္ဂါရပ်များ",
+    pricing: "စျေးနှုန်းများ",
+    faq: "FAQ",
+    getStarted: "စတင်အသုံးပြုရန်",
+    legal: "ဥပဒေရေးရာ",
+    terms: "ဝန်ဆောင်မှု စည်းကမ်းချက်",
+    privacy: "ပုဂ္ဂလိကသေးငယ်မှု မူဝါဒ",
+    cookies: "ကွီးကီး မူဝါဒ",
+    gdpr: "GDPR သက်ဆိုင်မှု",
+    contact: "ဆက်သွယ်ရန်",
     email: "support@amiquus.com",
-    telegram: "Контактирајте не на Telegram",
-    copyright: "Сите права задржани.",
-    about: "За нас",
-    blog: "Блог",
-    careers: "Кариера",
-    support: "Поддршка",
-    branddescription: "Вашиот личен асистент за пронаоѓање на совршена понуда за половен автомобил во вистинско време.",
-    brandtitle: "Амикус",
-    getstarted: "Започнете",
-    quicklinks: "Брзи линкови"
+    telegram: "Telegram မှ ဆက်သွယ်ရန်",
+    copyright: "မူပိုင်ခွင့် လုံးဝสงวนထားသည်။",
+    about: "ကျွန်ုပ်တို့ အကြောင်း",
+    blog: "ဘလော့ဂ်",
+    careers: "အလုပ်အကိုင် အခွင့်အလမ်းများ",
+    support: "အကူအညီ",
   },
   login: {
-    title: "Најавете се во вашиот налог",
-    description: "Внесете ја вашата е-пошта и лозинка за пристап до вашата контролна табла",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
-    or: "или",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    title: "သင့်အကောင့်သို့ ဝင်ရောက်ပါ",
+    description:
+      "Dashboard သို့ ဝင်ရောက်ရန် သင့် အီးမေးလ်နှင့် စကားဝှက်ကို ထည့်ပါ",
+    emailLabel: "အီးမေးလ်",
+    passwordLabel: "စကားဝှက်",
+    loginButton: "လော့ဂ်အင်",
+    loggingIn: "ဝင်ရောက်နေပါသည်...",
+    loginWithGoogle: "Google ဖြင့် လော့ဂ်အင်",
+    or: "သို့မဟုတ်",
+    noAccount: "အကောင့် မရှိသေးဘူးလား?",
+    registerLink: "စာရင်းသွင်းမည်",
+    successTitle: "လော့ဂ်အင် အောင်မြင်ပါသည်",
+    successMessage: "သင့်အကောင့်သို့ အောင်မြင်စွာ ဝင်ရောက်ပြီးပါပြီ။",
+    errorTitle: "လော့ဂ်အင် မအောင်မြင်ပါ",
+    genericError: "သင့်အချက်အလက်များကို ပြန်လည်စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Внесете валидна е-пошта",
-      shortpassword: "Лозинката мора да има најмалку 6 знаци"
+      invalidEmail: "မှန်ကန်သော အီးမေးလ် လိပ်စာထည့်ပါ",
+      shortPassword: "စကားဝှက်သည် အနည်းဆုံး အက္ခရာ 6 လုံး လိုအပ်သည်",
     },
-    emaillabel: "Е-пошта",
-    errortitle: "Најавувањето не успеа",
-    genericerror: "Ве молиме проверете ги вашите податоци за најава и обидете се повторно.",
-    loggingin: "Се најавува...",
-    loginbutton: "Најави се",
-    loginwithgoogle: "Најави се со Google",
-    noaccount: "Немате корисничка сметка?",
-    passwordlabel: "Лозинка",
-    registerlink: "Регистрирај се",
-    successmessage: "Успешно се најавивте.",
-    successtitle: "Најавата е успешна"
   },
   register: {
-    title: "Креирај сметка",
-    description: "Регистрирај се за да почнеш да го следиш својот автомобил од соништата",
-    google: "Најави се со Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Корисничко име",
-    email: "Е-пошта",
-    password: "Лозинка",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
-    login: "Најави се",
-    and: "и",
+    title: "အကောင့် ဖန်တီးမည်",
+    description: "သင့်အိပ်မက်ကားကို စောင့်ကြည့်ရန် အကောင့် ဖွင့်ပါ",
+    google: "Google ဖြင့် စာရင်းသွင်းမည်",
+    orContinue: "သို့မဟုတ် ဆက်လက်လုပ်ဆောင်ရန်",
+    firstName: "အမည်",
+    lastName: "မျိုးနွယ်အမည်",
+    username: "အသုံးပြုသူအမည်",
+    email: "အီးမေးလ်",
+    password: "စကားဝှက်",
+    confirmPassword: "စကားဝှက် ထပ်မံအတည်ပြုရန်",
+    termsNotice: "ကျွန်ုပ်သည် သဘောတူလက်မှတ်ရေးထိုးပါသည် -",
+    termsOfService: "ဝန်ဆောင်မှု စည်းကမ်းချက်များ",
+    privacyPolicy: "ပုဂ္ဂလိကသေးငယ်မှု မူဝါဒ",
+    createBtn: "အကောင့် ဖန်တီးမည်",
+    alreadyHave: "အကောင့်ရှိပြီးသားလား?",
+    login: "လော့ဂ်အင်ဝင်ရန်",
+    and: "နှင့်",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "ဖြည့်စွက်ရန် အကွက် လိုအပ်သည်",
+        desc: "လိုအပ်သော အကွက်များအားလုံးကို ဖြည့်စွက်ပါ",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "အသုံးပြုသူအမည် မမှန်ကန်ပါ",
+        desc: "အသုံးပြုသူအမည်သည် အက္ခရာနဲ့ ကိန်းဂဏန်းပါရှိပြီး အရှည် 3 မှ 20 အကြား ဖြစ်ရမည်",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "စကားဝှက် မကိုက်ညီပါ",
+        desc: "စကားဝှက် နှစ်ကြိမ် တူညီမှု ရှိစေရန် ပြန်လည်ထည့်သွင်းပါ",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "စည်းကမ်းချက်များကို မခံသော",
+        desc: "ဆက်လက်လုပ်ဆောင်ရန် စည်းကမ်းချက်နှင့် ပုဂ္ဂလိက မူဝါဒကို သဘောတူရန် လိုအပ်သည်",
       },
       success: {
-        title: "Регистрацијата е успешна",
-        desc: "Добредојдовте во Amiquus! Ќе бидете пренасочени за да ја потврдите вашата е-пошта."
+        title: "စာရင်းသွင်းမှု အောင်မြင်ပါသည်",
+        desc: "Amiquus မှ ကြိုဆိုပါတယ်! သင်၏ အီးမေးလ်ကို အတည်ပြုရန် ပြန်လည်လွှဲပြောင်းပို့ပါမည်။",
       },
       failure: {
-        title: "Регистрацијата не успеа",
-        desc: "Ве молиме проверете ги вашите податоци и обидете се повторно."
+        title: "စာရင်းသွင်းမှု မအောင်မြင်ပါ",
+        desc: "သင်၏ အချက်အလက်များကို ပြန်လည်စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ",
       },
-      invalidusername: {
-        desc: "Корисничкото име мора да биде алфанумеричко и да содржи меѓу 3 и 20 знаци.",
-        title: "Невалидно корисничко име"
-      },
-      missingfields: {
-        desc: "Ве молиме пополнете ги сите задолжителни полиња",
-        title: "Недостасуваат полиња"
-      },
-      passwordmismatch: {
-        desc: "Ве молиме проверете дали вашите лозинки се совпаѓаат.",
-        title: "Лозинките не се совпаѓаат"
-      },
-      termsnotaccepted: {
-        desc: "Мора да ги прифатите условите и политиката за приватност за да продолжите.",
-        title: "Условите не се прифатени"
-      }
     },
-    alreadyhave: "Веќе имате сметка?",
-    confirmpassword: "Потврдете лозинка",
-    createbtn: "Креирај сметка",
-    firstname: "Име",
-    lastname: "Презиме",
-    orcontinue: "Или продолжи со",
-    privacypolicy: "Политика на приватност",
-    termsnotice: "Се согласувам со",
-    termsofservice: "Услови на користење"
   },
   verifyEmail: {
-    title: "Потврдете ја вашата е-пошта",
-    description: "Кодот за потврда е испратен на вашата е-пошта.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "သင့်အီးမေးလ်ကို အတည်ပြုပါ",
+    description: "အတည်ပြုကုဒ်ကို သင့် အီးမေးလ်သို့ ပို့ပေးထားသည်။",
+    codeLabel: "အတည်ပြုကုဒ်",
+    verifyButton: "အီးမေးလ်ကို အတည်ပြုမည်",
+    updateEmailLabel: "အီးမေးလ် ပြင်ဆင်ရန်",
+    updateEmailButton: "အီးမေးလ် ပြင်မည်",
+    resendButton: "ကုဒ် ပြန်ပို့ရန်",
+    resendCountdown: "ကုဒ်ကို {{seconds}} စက္ကန့်အတွင်း ပြန်ပို့နိုင်ပါမည်",
+    footerNote: "ကုဒ်မရသေးပါက Spam ဖိုလ်ဒါကိုလည်း စစ်ဆေးပါ။",
     toast: {
-      verified: "Е-поштата е потврдена",
-      failed: "Потврдата не успеа",
-      resent: "Кодот за верификација е повторно испратен",
-      error: "Грешка",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Е-пошта ажурирана",
-      entervalidemail: "Внесете валидна е-пошта",
-      invalidemail: "Невалидна е-пошта",
-      sameemail: "Иста е-пошта",
-      sameemaildesc: "Новата е-пошта е иста како тековната е-пошта."
+      verified: "အီးမေးလ် အောင်မြင်စွာ အတည်ပြုပြီးပါပြီ",
+      failed: "အတည်ပြုမှု မအောင်မြင်ပါ",
+      resent: "အတည်ပြုကုဒ်ကို ပြန်ပို့ပြီးပါပြီ",
+      error: "အမှား",
+      invalidEmail: "အီးမေးလ် မမှန်ကန်ပါ",
+      enterValidEmail: "မှန်ကန်သော အီးမေးလ် လိပ်စာ ထည့်ပါ",
+      sameEmail: "အီးမေးလ် တူညီနေသည်",
+      sameEmailDesc: "အသစ်ထည့်သည့် အီးမေးလ် သည် လက်ရှိအီးမေးလ်နှင့် တူညီနေသည်",
+      emailUpdated: "အီးမေးလ် ပြောင်းပြီးပါပြီ",
     },
-    codelabel: "Код за потврда",
-    footernote: "Не добивте код? Проверете ја папката со несакана пошта.",
-    resendbutton: "Повтори код",
-    resendcountdown: "Можете повторно да го испратите кодот за {{seconds}}с.",
-    updateemailbutton: "Ажурирај е-пошта",
-    updateemaillabel: "Ажурирај е-пошта",
-    verifybutton: "Потврдете е-пошта"
   },
   dashboardPayment: {
-    add: "Додај начин на плаќање",
-    description: "Додајте нова кредитна или дебитна картичка за плаќање на вашата претплата.",
-    processing: "Се обработува...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "ငွေပေးချေမှု မက်သဒ် ထည့်မည်",
+    description:
+      "စာရင်းသွင်းခ ပေးချေရာတွင် အသုံးပြုမည့် Credit/Debit ကတ် အသစ်တစ်ခု ထည့်ပါ။",
+    processing: "ဆောင်ရွက်နေပါသည်...",
+    errorTitle: "ငွေပေးချေမှု မက်သဒ် ထည့်ရာတွင် အမှား",
+    errorMessage: "မျှော်လင့်မထားသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
+      title: "အမှား",
+      description: "ငွေပေးချေမှု Setup ကို စတင်၍မရနိုင်ပါ",
     },
-    errormessage: "Се случи неочекувана грешка",
-    errortitle: "Грешка при додавање на начин на плаќање",
-    initerror: {
-      description: "Не може да се иницијализира поставувањето на плаќање",
-      title: "Грешка"
-    }
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "နှစ်များ",
+      priceRange: "စျေးနှုန်း",
+      websites: "ဝဘ်ဆိုက်များ",
+      updates: "အပ်ဒိတ်များ",
+      language: "ဘာသာစကား",
+      price: "စျေးနှုန်း",
+      edit: "ပြင်ဆင်ရန်",
+      cancelAlert: "အသိပေးချက် ပယ်ဖျက်ရန်",
+      cancelTitle: "ကား အသိပေးချက် ပယ်ဖျက်မည်",
+      cancelDescription:
+        "{{brand}} {{model}} အတွက် သင့်ကား အသိပေးချက်ကို ပယ်ဖျက်လိုသည်မှာ သေချာပါသလား? ပယ်ဖျက်ပြီးနောက် ထိုကားအတွက် အသိပေးချက် မရတော့ပါဘူး၊ ထပ်မံစောင့်ကြည့်လိုပါက အသစ်တစ်ခု ပြန်တည်ဆောက်ရပါမည်။",
+      keepMyAlert: "အကြောင်းကြားချက်ကို ထိန်းထားမည်",
+      confirmCancel: "အသိပေးချက် ပယ်ဖျက်မည်",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "သက်တမ်းကုန်သည့်ရက်",
+      default: "မူလ သတ်မှတ်ထားသော ကဒ်",
+      setAsDefault: "မူလ သတ်မှတ်ထားသော ကဒ္ဍ အဖြစ် ပြောင်းမည်",
+      remove: "ဖြုတ်ပစ်မည်",
+      setDefaultTitle: "မူလ ငွေပေးချေမှု မက်သဒ် သတ်မှတ်မည်",
+      setDefaultDescription:
+        "{{last4}} ဖြင့် အဆုံးသတ်သော {{brand}} ကတ်ကို မူလ ငွေပေးချေမှု မက်သဒ် အဖြစ် သတ်မှတ်လိုသည်မှာ သေချာပါသလား? လာမည့် စာရင်းသွင်းငွေပေးချေမှုများအတွက် ယင်းကတ်ကို အသုံးပြုမည်ဖြစ်သည်။",
+      removeTitle: "ငွေပေးချေမှု မက်သဒ်ကို ဖယ်ရှားမည်",
+      removeDescription:
+        "{{last4}} ဖြင့် အဆုံးသတ်သော {{brand}} ကတ်ကို ဖယ်ရှားလိုပါသလား?",
+      removeWarning:
+        "ဤကတ်သည် သင့် မူလ ငွေပေးချေ သတ်မှတ်ထားသော ကတ် ဖြစ်သည်။ ဖယ်ရှားလိုက်ပါက လက်ရှိ စာရင်းသွင်းမှုများအပေါ် သက်ရောက်မှု ရှိနိုင်ပါသည်။",
+      cancel: "မလုပ်တော့ပါ",
+      confirmRemove: "ကတ်ကို ဖယ်ရှားမည်",
+    },
   },
   profile: {
     tabs: {
-      alerts: "Мои известувања",
-      payments: "Начини на плаќање"
+      alerts: "ကျွန်တော့် အသိပေးချက်များ",
+      payments: "ငွေပေးချေမှု မက်သဒ်များ",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Претплати",
-      methods: "Начини на плаќање",
-      account: "Поставки на сметка",
-      privacy: "Приватност и безбедност",
-      logout: "Одјави се",
-      membersince: "Член од"
+      memberSince: "အသင်းဝင် ဖြစ်လာသည့် နေ့",
+      subscriptions: "စာရင်းသွင်းမှုများ",
+      methods: "ငွေပေးချေမှု မက်သဒ်များ",
+      account: "အကောင့်ဆိုင်ရာ ဆက်တင်များ",
+      privacy: "ပုဂ္ဂလိက & လုံခြုံရေး",
+      logout: "လော့ဂ်အောက် ထွက်မည်",
     },
     account: {
-      title: "Поставки на сметка",
-      desc: "Ажурирајте ги информациите и поставките на вашиот профил.",
-      name: "Име",
-      email: "Е-пошта",
-      username: "Корисничко име",
-      cancel: "Откажи",
-      save: "Зачувај промени"
+      title: "အကောင့် ဆက်တင်များ",
+      desc: "သင့်အကောင့် အချက်အလက်များနှင့် လိုက်နာလိုသည့် အပြုအမူများကို ပြင်ဆင်ပါ။",
+      name: "နာမည်",
+      email: "အီးမေးလ်",
+      username: "အသုံးပြုသူအမည်",
+      cancel: "မလုပ်တော့ပါ",
+      save: "ပြောင်းလဲမှုများ သိမ်းဆည်းမည်",
     },
     security: {
-      title: "Приватност и безбедност",
-      desc: "Управувајте со вашите безбедносни поставки и поставки за приватност.",
-      current: "Тековна лозинка",
-      new: "Нова лозинка",
-      confirm: "Потврдете нова лозинка",
-      update: "Ажурирај лозинка"
+      title: "ပုဂ္ဂလိက & လုံခြုံရေး",
+      desc: "သင့် လုံခြုံရေး ဆက်တင်များနှင့် ပုဂ္ဂလိက ကို စီမံခန့်ခွဲပါ။",
+      current: "လက်ရှိ စကားဝှက်",
+      new: "စကားဝှက် အသစ်",
+      confirm: "စကားဝှက် အသစ် အတည်ပြုရန်",
+      update: "စကားဝှက် ပြောင်းလဲမည်",
     },
     logout: {
-      title: "Одјава",
-      desc: "Дали сте сигурни дека сакате да се одјавите од вашиот профил?",
-      success: "Успешно се одјавивте."
+      title: "လော့ဂ်အင် ထွက်ရန်",
+      desc: "သင့်အကောင့်မှ အကာအကွယ် ထွက်ချင်ပါသလား?",
+      success: "သင့်အကောင့်မှ အောင်မြင်စွာ ထွက်ပြီးပါပြီ။",
     },
     alerts: {
-      title: "Претплати за известувања за автомобили",
-      desc: "Управувајте со вашите известувања за пребарување автомобили и поставки за нотификации.",
-      add: "Додај ново известување",
-      none: "Немате ниту едно активно известување за автомобили.",
-      cta: "Креирај го твојот прв аларм",
-      warning: "⚠️ Промените на вашата претплата ќе бидат применети во следниот наплатен период, и тоа само по успешно плаќање. Доколку плаќањето не успее, вашата тековна поставка за известувања ќе остане непроменета."
+      title: "ကား အသိပေးစာ Subscription များ",
+      desc: "သင့်ကား ရှာဖွေမှု အသိပေးချက်များနှင့် စာရင်းသွင်းမှု ဆက်တင်များကို စီမံခန့်ခွဲပါ။",
+      add: "အသစ်သော အသိပေးချက် ထည့်မည်",
+      none: "လက်ရှိတွင် သင့်အား အသိပေး ကားစာရင်း Subscription မရှိသေးပါ။",
+      cta: "သင့် ပထမဆုံး အသိပေးချက်ကို ဖန်တီးလိုက်ပါ",
+      warning:
+        "⚠️ သင်ပြုလုပ်သည့် Subscription ပြောင်းလဲမှုများသည် နောက်လာမည့် ငွေပေးချေမှု စက်ဝန်းတွင်သာ သက်ရောက်ပါမည်။ ငွေပေးချေမှု မအောင်မြင်ပါက လက်ရှိ အသိပေးဆက်တင်ကို အပြောင်းအလဲ မလုပ်သေးပါ။",
     },
     payments: {
-      title: "Начини на плаќање",
-      desc: "Управувајте со вашите начини на плаќање за наплата на претплата.",
-      none: "Немате зачувани начини на плаќање.",
-      encrypted: "Вашите информации за плаќање се шифрирани и безбедно зачувани."
-    }
+      title: "ငွေပေးချေမှု မက်သဒ်များ",
+      desc: "စာရင်းသွင်းမှု ငွေပေးချေမှုအတွက် သင့်ငွေပေးချေမှု မက်သဒ်များကို စီမံပါ။",
+      none: "သင့်အကောင့်တွင် သတ်မှတ်ထားသည့် ငွေပေးချေမှု မက်သဒ် မရှိသေးပါ။",
+      encrypted:
+        "သင့် ငွေပေးချေမှု အချက်အလက်များကို ကုဒ်ပြောင်ထားပြီး လုံခြုံစွာ သိမ်းဆည်းထားပါသည်။",
+    },
   },
   setupAlerts: {
-    title: "Поставете известувања за вашиот автомобил",
-    subtitle: "Конфигурирај го твојот Telegram бот за да добиваш известувања за твојот автомобил од соништата.",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Започни ја мојата услуга за известување за автомобил",
-    cancel: "Откажете во било кое време",
+    title: "သင့် ကားအသိပေးချက်များကို သတ်မှတ်ပါ",
+    subtitle:
+      "သင့် Telegram bot ကို သတ်မှတ်ပြီး သင့် အိပ်မက်ကားအကြောင်း အသိပေးချက်များ ရယူပါ",
+    basicPlan: "အခြေခံ စာရင်းသွင်းမှု",
+    baseTitle: "$79.99 / လ",
+    button: "ကျွန်ုပ်၏ ကားအသိပေး စာရင်းသွင်းမှုစတင်မည်",
+    cancel: "မည်သည့်အချိန်မဆို ပယ်ဖျက်နိုင်သည်",
     toasts: {
       terms: {
-        title: "Условите не се прифатени",
-        description: "Мора да се согласите со условите за користење за да продолжите."
+        title: "စည်းကမ်းချက်ကို မလက်ခံရသေးပါ",
+        description:
+          "ဆက်လက်ဆောင်ရွက်ရန် ဝန်ဆောင်မှု စည်းကမ်းချက်ကို သဘောတူရန် လိုအပ်ပါသည်",
       },
       success: {
-        title: "Претплатата е креирана",
-        description: "Вашата претплата е успешно креирана."
+        title: "စာရင်းသွင်းမှု ပြီးမြောက်ပါပြီ",
+        description: "သင့် စာရင်းသွင်းမှုကို အောင်မြင်စွာ ဖန်တီးပြီးပါပြီ။",
       },
       error: {
-        title: "Грешка при креирање на претплата"
+        title: "Subscription ဖန်တီးရင် အမှားဖြစ်ပွားခဲ့သည်",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
+        title: "Bot နှင့် စကားပြောရပါမည်",
+        description:
+          "ကား အသိပေးချက်ရရန် Telegram bot နှင့် ဆက်သွယ်ပြီး မက်ဆေ့ခ်ျတစ်ခု ပို့ထားရပါမည်။ အောက်ပါ လမ်းညွှန်ချက်များကို လိုက်နာပါ။",
       },
-      contactbot: {
-        description: "За да добивате известувања за автомобили, мора да започнете разговор со нашиот Telegram бот и да испратите порака. Ве молиме следете ги упатствата подолу за да го контактирате ботот.",
-        title: "Потребен е контакт бот"
-      }
     },
-    basetitle: "79,99 $/месец",
-    basicplan: "Основен пакет"
   },
   loginPrompt: {
-    title: "Потребна е најава",
-    description: "Мора да бидете најавени за да продолжите. Најавете се или регистрирајте се.",
-    register: "Регистрирај се",
-    login: "Најава"
+    title: "လော့ဂ်အင် လိုအပ်သည်",
+    description:
+      "ဆက်လက် ဆောင်ရွက်ရန် သင်သည် လော့ဂ်အင် ဝင်ရောက်ထားရမည်။ လော့ဂ်အင် သို့မဟုတ် စာရင်းသွင်းပါ။",
+    register: "စာရင်းသွင်းမည်",
+    login: "လော့ဂ်အင်",
   },
   waitlistPrompt: {
-    title: "Придружи се на листата на чекање",
-    description: "Моментално сме на полн капацитет. Пријавете се на листата на чекање за да бидете известени кога ќе се ослободи место.",
-    button: "Придружи се на листата на чекање"
+    title: "စောင့်စာရင်းတွင် ပူးပေါင်းပါ",
+    description:
+      "လက်ရှိတွင် စွမ်းရည်အကန့်အသတ် ပြည့်နေသောကြောင့် စောင့်စာရင်းသို့ ပူးပေါင်းပြီး နေရာလွတ်သည့်အခါ အသိပေးချက်ရယူနိုင်ပါသည်။",
+    button: "စောင့်စာရင်းတွင် ပူးပေါင်းမည်",
   },
   subscription: {
-    title: "Детали за претплата",
-    subTitle: "Edit your subscription details below",
-    error: "Врати се на контролна табла",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Можете да ја паузирате вашата претплата во било кое време. Кога ќе ја паузирате претплатата, вашите известувања за автомобилот ќе престанат додека не ги продолжите.",
+    title: "စာရင်းသွင်းမှု အသေးစိတ်",
+    subTitle: "အောက်တွင် သင့် စာရင်းသွင်းမှု အသေးစိတ်ကို ပြင်ဆင်ပါ",
+    error: "Dashboard သို့ ပြန်သွားပါ",
+    notFound: "စာရင်းသွင်းမှု မတွေ့ပါ",
+    notFoundSub: "Dashboard သို့ ပြန်သွားပါ",
+    description: "သင်သည် စာရင်းသွင်းမှုကို မည်သည့်အချိန်မဆို ခေတ္တ ရပ်နားနိုင်သည်။ ရပ်နားထားချိန်တွင် သင့်ကား အသိပေးချက်များကို မပို့ပါ။ ပြန်လည်စတင်မှသာ အသိပေးချက် အလုပ်လုပ်မည်ဖြစ်သည်။",
     form: {
       status: {
-        label: "Статус",
-        placeholder: "Изберете статус",
-        active: "Активен",
-        paused: "Паузирано"
-      }
+        label: "အခြေအနေ",
+        placeholder: "အခြေအနေ ရွေးချယ်ပါ",
+        active: "လက်ရှိ လုပ်ဆောင်နေ",
+        paused: "ခေတ္တရပ်နားထား",
+      },
     },
     actions: {
-      save: "Зачувај промени",
-      back: "Назад"
+      save: "ပြောင်းလဲမှုများ သိမ်းဆည်းမည်",
+      back: "နောက်သို့",
     },
     toasts: {
       success: {
-        title: "Претплатата е ажурирана",
-        description: "Вашата претплата за {{brand}} {{model}} е успешно ажурирана."
+        title: "စာရင်းသွင်းမှု ပြင်ဆင်ပြီးပါပြီ",
+        description:
+          "{{brand}} {{model}} အတွက် သင့် စာရင်းသွင်းမှုကို အောင်မြင်စွာ ပြင်ဆင်ပြီးပါပြီ။",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Subscription ကို မသက်ဆိုင်စွာ ပြင်လို့မရပါ",
+        description:
+          "စာရင်းသွင်းမှုကို ခေတ္တရပ်နားခြင်းနှင့် စျေးနှုန်း ပြင်ဆင်ခြင်းကို တစ်ခါတည်း မပြုလုပ်နိုင်ပါ။ တစ်ခါတလေ သီးခြား ပြောင်းလဲပါ။",
       },
       error: {
-        title: "Грешка при ажурирање на претплатата"
+        title: "Subscription ပြင်ဆင်ရာတွင် အမှား",
       },
-      priceerror: {
-        description: "Не можете истовремено да ја паузирате и ажурирате цената на претплатата. Треба или да ја паузирате, или да ја ажурирате цената.",
-        title: "Не може да се ажурира претплатата"
-      }
     },
-    notfound: "Претплатата не е пронајдена",
-    notfoundsub: "Врати се на контролна табла",
-    subtitle: "Уредете ги деталите за вашата претплата подолу"
   },
   about: {
-    title: "За Amiquus",
-    description: "Ние ја револуционизираме потрагата по совршен половен автомобил, носејќи напредна технологија за следење до сите.",
+    title: "Amiquus အကြောင်း",
+    description:
+      "ယူဇ်ကား ဈေးကွက် ရှာဖွေမှုကို လူတိုင်းအတွက် ပိုမို ဉာဏ်ရည်နှင့် အသုံးဝင်အောင် ပြုလုပ်ပေးနေသော နည်းပညာ",
     meta: {
-      title: "За нас | Amiquus - Сервис за следење на огласи за автомобили",
-      description: "Дознајте повеќе за AMIQUUS, нашата мисија да го револуционизираме купувањето на половни автомобили и тимот што стои зад нашата интелигентна услуга за следење на огласи за автомобили."
+      title: "About Us | Amiquus - Car Listing Monitoring Service",
+      description:
+        "Amiquus အကြောင်း၊ ယူဇ်ကား ဝယ်ယူခြင်းနယ်ပယ်ကို ပြောင်းလဲကူညီရန် ကျွန်ုပ်တို့၏ လှုပ်ရှားမှုနှင့် အသင်းအဖွဲ့ကို လေ့လာပါ။",
     },
     story: {
-      heading: "Нашата приказна",
-      paragraphs: {
-        0: "AMIQUUS започна во 2023 година, кога нашиот основач Алекс помина месеци освежувајќи веб-страници со огласи за автомобили, обидувајќи се да најде одреден редок модел по добра цена. Откако пропушти неколку прилики поради задоцнети известувања, сфати дека мора да постои подобар начин.",
-        1: "Работејќи со мал тим на програмери и љубители на автомобили, Алекс изгради систем за следење кој може истовремено да ги следи огласите на повеќе веб-страници и веднаш да испраќа известувања кога ќе се појават соодветни совпаѓања.",
-        2: "Она што започна како личен проект, брзо го привлече вниманието на пријателите и семејството, и веќе на почетокот на 2025 година, AMIQUUS се роди како услуга достапна за сите. Денес им помагаме на купувачите на автомобили низ целата земја да заштедат време и да најдат подобри понуди со нашата интелигентна технологија за следење."
-      }
+      heading: "ကျွန်ုပ်တို့၏ ကွန်ရက်အကြောင်း",
+      paragraphs: [
+        "Amiquus သည် 2023 တွင် တည်ထောင်ခဲ့ပြီး ကျွန်တော်တို့၏ ဖောင်ဒါ Alex သည် သီးသန့်稀ကြသော ကားမော်ဒယ်တစ်ပုံတစ်ပုံကို သင့်တော်သည့် စျေးနှုန်းဖြင့် ရှာဖွေခြင်းအတွက် ကားလိုင်း ဆိုက်မျိုးစုံကို နေ့စဉ် လော့ချ်Refresh လုပ်နေရင်း စတင်လိုက်သည်။ အချိန်မတော်လှန်သည့် အသိပေးချက်များကြောင့် ကားအခွင့်အလမ်းအများအပြားကို သုံးစွဲမိပြီးနောက် အကောင်းဆုံးနည်းလမ်းတစ်ခု ရှိရမည် ဖြစ်ကြောင်း သိရှိလာခဲ့သည်။",
+        "နောက်မှ Developer များနှင့် ကားအချစ်တော် လူများ ပါဝင်သည့် အသေးစားအဖွဲ့တစ်ဖွဲ့ဖြင့် Auto Monitoring System တစ်ခု တည်ဆောက်ကာ ဆိုက်ပေါင်းများစွာကို တစ်ချိန်တည်း စောင့်ကြည့်၍ ကိုက်ညီမှု တွေ့သည်နှင့် အသိပေးခြင်းကို အလိုအလျောက် ပြုလုပ်စေခဲ့သည်။",
+        "ပုဂ္ဂလိက Project အနေနဲ့ စတင်ခဲ့သော်လည်း မိသားစုတွေ၊ သူငယ်ချင်းတွေထံမှ စိတ်ဝင်စားမှု ပိုမိုရရှိလာကာ 2025 ဒေါ်လာအတွင်းတွင် လူတိုင်း အသုံးပြုနိုင်သော ဝန်ဆောင်မှုဖြစ်လာခဲ့သည်။ ယနေ့တွင် Amiquus သည် နိုင်ငံအနှံ့ ယူဇ်ကား ဝယ်ယူလိုသူများကို အချိန်ကုန်သက်သာစေပြီး လိုအပ်သည့် ကားသင့်တော်တဲ့ စျေးနဲ့ ရနိုင်ဖို့ ကူညီပေးနေပါသည်။",
+      ],
     },
     mission: {
-      heading: "Нашата мисија",
-      items: {
-        0: {
-          description: "Елиминирајте ја потребата постојано да освежувате повеќе веб-страници со автоматизирање на процесот на пребарување и добивање навремени известувања.",
-          title: "Заштедете време"
+      heading: "ကျွန်ုပ်တို့၏ ရည်မှန်းချက်",
+      items: [
+        {
+          title: "အချိန် မဆုံးရှုံးစေချင်သည်",
+          description:
+            "ကားလိုင်း ဆိုက်ပေါင်းများစွာကို ကိုယ်တိုင် လော့ခ်Refresh မလုပ်ရတော့စေလိုက်ပါ။ စနစ်အလိုအလျောက် စောင့်ကြည့်ပြီး အချိန်မှန်အသိပေးချက်လေးတွေကို ရယူနိုင်ပါမည်။",
         },
-        1: {
-          description: "Бидете први што ќе дознаат кога ќе се појави одлична понуда, што ви дава предност на конкурентен пазар каде времето е пресудно.",
-          title: "Најдете подобри понуди"
+        {
+          title: "အကောင်းဆုံး စျေးကွက်ကို ရစေချင်သည်",
+          description:
+            "ယှဉ်ပြိုင်မှုများနောက်ကနေ မကျန်အောင် စျေးကောင်းသော ကားအသစ် တင်ကြောင်းကို ပထမဦးဆုံး သိရအောင် အချိန်မှန် အသိပေးချက်ရယူပါ။",
         },
-        2: {
-          description: "Донесувајте информирани одлуки со сеопфатен мониторинг на повеќе доверливи платформи за огласување автомобили.",
-          title: "Купувајте со доверба"
-        }
-      }
+        {
+          title: "ယုံကြည်စွာ ဝယ်ယူနိုင်စေချင်သည်",
+          description:
+            "ယုံကြည်ရသော ကားလိုင်း ဆိုက်စုံ ခြေရာခံမှုဖြင့် သတ်မှတ်ချက် အပြည့်အစုံကို လက်တွင်ခံပြီး သင့်မိမိဆုံးဖြတ်ချက်ကို ယုံကြည်စိတ်ချ စေလိုက်ပါ။",
+        },
+      ],
     },
     team: {
-      heading: "Наш тим",
-      members: {
-        0: {
-          bio: "Поранешен софтверски инженер со страст кон автомобилите и создавање иновативни решенија.",
-          name: "Алекс Морган",
-          role: "Основач и главен извршен директор"
+      heading: "ကျွန်ုပ်တို့၏ အသင်းအဖွဲ့",
+      members: [
+        {
+          name: "Alex Morgan",
+          role: "Founder & CEO",
+          bio: "ကားအချစ်တော် ဖြစ်လှသည့် နည်းပညာ ဗဟုသုတ အတွေ့အကြုံ ပြည့်စုံသော Software Engineer ဖြစ်သည်။",
         },
-        1: {
-          bio: "Експерт за наука за податоци, специјализиран за веб-скрејпинг и системи за пребарување информации.",
-          name: "Сара Чен",
-          role: "Главен технички директор"
+        {
+          name: "Sarah Chen",
+          role: "CTO",
+          bio: "Web scraping နှင့် အချက်အလက် ရှာဖွေရေး စနစ်များကို အထူးဖော်ထုတ်တတ်သော Data Scientist ဖြစ်သည်။",
         },
-        2: {
-          bio: "Full-stack инженер со експертиза во изработка на високо-ефикасни системи за нотификации.",
-          name: "Маркус Ли",
-          role: "Главен развивач"
+        {
+          name: "Marcus Lee",
+          role: "Lead Developer",
+          bio: "High-performance အသိပေးစနစ်များကို တည်ဆောက်ရာတွင် အတွေ့အကြုံ丰富သော Full-stack Engineer ဖြစ်သည်။",
         },
-        3: {
-          bio: "Поранешен професионалец за продажба на автомобили, посветен на помагање на клиентите да го најдат своето совршено возило.",
-          name: "Елена Родригез",
-          role: "Успех на клиентите"
-        }
-      }
+        {
+          name: "Elena Rodriguez",
+          role: "Customer Success",
+          bio: "ကားရောင်းဝယ်ရေးနယ်ပယ်သက်တမ်းရှည် ဖြစ်ပြီး သုံးစွဲသူများကို သူတို့အတွက် အကောင်းဆုံး ကားရှာဖွေရေးတွင် ကူညီပေးနေလျက်ရှိသူဖြစ်သည်။",
+        },
+      ],
     },
     join: {
-      heading: "Придружи се на нашиот тим",
-      description: "Секогаш бараме талентирани поединци кои се страствени за технологијата и сакаат да ја револуционизираат искуството на купување автомобили. Погледнете ги нашите тековни отворени позиции и придружете ни се во нашата мисија.",
-      cta: "Погледнете отворени позиции"
+      heading: "ကျွန်ုပ်တို့အဖွဲ့နှင့် ပူးပေါင်းပါ",
+      description:
+        "နည်းပညာနှင့် ယူဇ်ကား သဘောထားအသစ်များအပေါ် စိတ်ဝင်စားသူများကို အမြဲလက်ခံနေပါတယ်။ အလုပ်အကိုင်အခွင့်အလမ်းများကို စစ်ဆေးပြီး ကျွန်ုပ်တို့နှင့် ပူးပေါင်းပါ။",
+      cta: "အလုပ်အကိုင် အခွင့်အလမ်းများ ကြည့်ရှုရန်",
     },
     questions: {
-      heading: "Имате прашања?",
-      description: "Дознајте повеќе за тоа како функционира нашата услуга, разгледајте ги ценовните опции или контактирајте го нашиот тим за поддршка.",
+      heading: "မေးချင်တာ ရှိနေသေးလား?",
+      description:
+        "ဝန်ဆောင်မှု အလုပ်လုပ်ပုံ၊ စျေးနုန်းများနှင့် Support အဖွဲ့ ဆက်သွယ်နည်းများကို ဆက်လက် လေ့လာနိုင်ပါသည်။",
       links: {
-        faq: "Посетете ЧПП",
-        pricing: "Види цени",
-        support: "Контактирајте поддршка"
-      }
-    }
+        faq: "FAQ ကို သွားမည်",
+        pricing: "စျေးနှုန်းများ ကြည့်ရှုမည်",
+        support: "Support ကို ဆက်သွယ်မည်",
+      },
+    },
   },
   terms: {
-    metaTitle: "Услови на користење | Amiquus",
-    metaDescription: "Прочитајте ги Условите за користење на AMIQUUS кои го регулираат вашето користење на нашата услуга за следење и известување за огласи за автомобили.",
-    title: "Услови на користење",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Услови за користење | Amiquus",
+    metaDescription:
+      "Прочитајте ги Условите за користење на Amiquus кои го регулираат вашето користење на нашата услуга за следење и известување за огласи за автомобили.",
+    title: "Услови за користење",
+    lastUpdated: "Последно ажурирано: 21 мај 2025",
+
     sections: {
-      1: {
-        id: "договор",
-        heading: "Согласност со условите",
-        paragraphs: {
-          0: "Овие Услови на користење претставуваат правно обврзувачки договор помеѓу вас и AMIQUUS, во врска со вашиот пристап и користење на нашата веб-страница и услуги.",
-          1: "Со пристапување или користење на нашите услуги, се согласувате дека овие Услови ве обврзуваат. Доколку не се согласувате со кој било дел од условите, не смеете да пристапите до услугата."
-        },
+      "1": {
+        id: "agreement",
+        heading: "Согласност со Условите",
+        paragraphs: [
+          "Овие Услови за користење претставуваат правно обврзувачки договор помеѓу вас и Amiquus, кој се однесува на вашето пристапување и користење на нашата веб-страница и услуги.",
+          "Со пристапување или користење на нашите услуги, вие се согласувате со овие Услови. Доколку не се согласувате со некој дел од нив, ве молиме немојте да ја користите услугата.",
+        ],
+        list: [],
+      },
+
+      "2": {
+        id: "changes",
+        heading: "Измени на Условите",
+        paragraphs: [
+          "Amiquus го задржува правото, по свое дискреционо право, да ги измени или замени овие Услови во било кое време. За значајни промени ќе направиме разумни напори да известиме најмалку 30 дена однапред.",
+          "Со продолжување со користење на нашата услуга по стапувањето во сила на измените, вие се согласувате со новите услови. Ако не се согласувате, прекинете со користење на услугата.",
+        ],
+        list: [],
+      },
+
+      "3": {
+        id: "account",
+        heading: "Услови за сметка",
+        paragraphs: ["За да ја користите нашата услуга, мора да:"],
         list: [
-        ]
+          "Имате најмалку 18 години",
+          "Го комплетирате процесот на регистрација",
+          "Обезбедите точни и ажурирани информации",
+          "Ја чувате безбедноста на вашата сметка и лозинка",
+          "Преземате одговорност за сите активности на вашата сметка",
+          "Не известите веднаш ако забележите неовластено користење",
+        ],
       },
-      2: {
-        id: "промени",
-        heading: "Промени на условите",
-        paragraphs: {
-          0: "Го задржуваме правото, по наша сопствена дискреција, да ги измениме или замениме овие Услови во било кое време. Доколку измената е значајна, ќе вложиме разумни напори да обезбедиме најмалку 30-дневна најава пред новите услови да стапат во сила.",
-          1: "Со продолжување со пристапување или користење на нашата услуга по стапување во сила на овие измени, се согласувате да бидете обврзани со ревидираните услови. Доколку не се согласувате со новите услови, ве молиме престанете да ја користите услугата."
-        },
+
+      "4": {
+        id: "payment",
+        heading: "Услови за плаќање",
+        paragraphs: [
+          "Amiquus нуди услугa базирана на претплата, под следните услови:",
+        ],
         list: [
-        ]
+          "Сите цени се без вклучени даноци (ќе се додадат доколку е потребно)",
+          "Цените на претплатите може да се изменат со 30 дена претходна најава",
+          "Претплатите автоматски се обновуваат освен ако не ги откажете пред следниот наплатен циклус",
+          "Поврат на средства се обработува според нашата политика за рефундација",
+          "Stripe се користи за безбедно процесирање на плаќања; Amiquus не чува податоци од картички",
+        ],
       },
-      3: {
-        id: "сметка",
-        heading: "Услови на сметка",
-        paragraphs: {
-          0: "За да ги користите нашите услуги, мора да:"
-        },
-        list: {
-          0: "Мора да имате најмалку 18 години",
-          1: "Завршете ја регистрацијата",
-          2: "Обезбедете точни, целосни и ажурирани информации",
-          3: "Бидете одговорни за одржување на безбедноста на вашиот кориснички профил и лозинка.",
-          4: "Бидете одговорни за сите активности што се случуваат под вашиот кориснички профил.",
-          5: "Веднаш не известете доколку дознаете за било какво нарушување на безбедноста или неовластена употреба на вашиот кориснички сметка."
-        }
+
+      "5": {
+        id: "capacity",
+        heading: "Ограничувања на капацитет",
+        paragraphs: [
+          "За да се одржи висок квалитет на услугата, Amiquus го ограничува бројот на активни претплатници на 30. Кога ќе се достигне оваа граница:",
+        ],
+        list: [
+          "Новите корисници може да се запишат на листата на чекање",
+          "Редоследот на чекање е според времето на пријавување",
+          "Кога ќе се ослободи место, корисниците од листата ќе бидат известени по редослед",
+          "Го задржуваме правото да ги измениме капацитетските лимити кога е потребно",
+        ],
       },
-      4: {
-        id: "плаќање",
-        heading: "Услови на плаќање",
-        paragraphs: {
-          0: "Amiquus нуди услуги со претплата според следниве услови:"
-        },
-        list: {
-          0: "Сите надоместоци се без вклучен данок, кој ќе биде додаден кога е применливо.",
-          1: "Цените на претплатата може да се променат со 30-дневна претходна најава.",
-          2: "Претплатите автоматски се обновуваат, освен ако не ги откажете пред следниот наплатен период.",
-          3: "Враќањата се разгледуваат поединечно согласно нашата политика за враќање.",
-          4: "Користиме Stripe за безбедна обработка на плаќања, а сите информации за плаќањето ги чува Stripe."
-        }
+
+      "6": {
+        id: "scraping",
+        heading: "Ограничувања поврзани со веб-скрепинг",
+        paragraphs: [
+          "Нашата услуга пристапува и обработува податоци од различни веб-страници за огласи за автомобили. Со користење на услугата, вие прифаќате дека:",
+        ],
+        list: [
+          "Amiquus ги почитува условите на веб-страниците кои ги следи",
+          "Се применуваат ограничувања на фреквенцијата и одговорни скрепинг практики",
+          "Достапноста на одредени веб-страници може да се менува",
+          "Не гарантираме комплетност или моментална точност на добиените податоци",
+        ],
       },
-      5: {
-        id: "капацитет",
-        heading: "Ограничувања на капацитетот",
-        paragraphs: {
-          0: "За да се одржи квалитетот и сигурноста на услугата, AMIQUUS го ограничува бројот на активни претплати на 30. Кога ќе се достигне ова ограничување:"
-        },
-        list: {
-          0: "Нови корисници може да се приклучат на нашата листа на чекање.",
-          1: "Позицијата на листата на чекање се одредува според принципот „прв дојден, прв услужен“.",
-          2: "Кога ќе се ослободат капацитети, корисниците на листата на чекање ќе бидат известени по редослед.",
-          3: "Задржуваме право да ги измениме ограничувањата на капацитетот во било кое време."
-        }
-      },
-      6: {
-        id: "вадење податоци",
-        heading: "Ограничувања на веб-скрејпинг",
-        paragraphs: {
-          0: "Нашата услуга пристапува и обработува податоци од повеќе веб-страници за огласи за автомобили. Со користење на нашата услуга, потврдувате дека:"
-        },
-        list: {
-          0: "Amiquus ги почитува условите за користење на веб-страниците што ги следиме.",
-          1: "Воведуваме ограничување на брзината и почитуваме етички практики при индексирање.",
-          2: "Достапноста на одредени веб-страници може да се менува во зависност од нивните услови и технички мерки.",
-          3: "Не даваме гаранции за целосноста или навременоста на прибраните податоци."
-        }
-      },
-      7: {
-        id: "интелектуален",
+
+      "7": {
+        id: "intellectual",
         heading: "Интелектуална сопственост",
-        paragraphs: {
-          0: "Услугата Amiquus, вклучувајќи ја нејзината оригинална содржина, карактеристики и функционалност, е и ќе остане исклучива сопственост на Amiquus. Нашата услуга е заштитена со авторски права, трговски марки и други закони на Соединетите Американски Држави и странски држави.",
-          1: "Нашите трговски марки и визуелен идентитет не смеат да се користат во врска со кој било производ или услуга без претходна писмена согласност од AMIQUUS."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Услугата Amiquus, вклучувајќи ја содржината, функциите и функционалностите, е и ќе остане ексклузивна сопственост на Amiquus.",
+          "Нашите заштитни знаци и визуелен идентитет не смеат да се користат без претходна писмена согласност.",
+        ],
+        list: [],
       },
-      8: {
-        id: "прекинување",
-        heading: "Прекинување",
-        paragraphs: {
-          0: "Можеме веднаш да го прекинеме или суспендираме вашиот кориснички профил, без претходна најава или одговорност, од која било причина, вклучувајќи, но не ограничувајќи се на тоа, ако ги прекршите Условите.",
-          1: "По прекинување, вашето право да ја користите услугата веднаш престанува. Доколку сакате да го затворите вашиот кориснички профил, можете едноставно да престанете да ја користите услугата или да не контактирате за бришење на профилот."
-        },
-        list: [
-        ]
+
+      "8": {
+        id: "termination",
+        heading: "Прекинување на сметка",
+        paragraphs: [
+          "Amiquus може веднаш да ја суспендира или прекине вашата сметка без претходно известување, доколку ги прекршите овие услови.",
+          "По прекинувањето, вашето право да ја користите услугата веднаш престанува. Може да не контактирате за бришење на вашата сметка.",
+        ],
+        list: [],
       },
-      9: {
-        id: "ограничувања",
+
+      "9": {
+        id: "limitations",
         heading: "Ограничување на одговорност",
-        paragraphs: {
-          0: "Во ниту еден случај AMIQUUS, ниту неговите директори, вработени, партнери, агенти, добавувачи или поврзани лица, нема да бидат одговорни за каква било индиректна, случајна, посебна, последична или казнена штета, вклучувајќи, но не ограничувајќи се на загуба на добивка, податоци, употреба, углед или други нематеријални загуби, кои произлегуваат од:"
-        },
-        list: {
-          0: "Вашиот пристап до или користење на или неможност за пристап до или користење на услугата",
-          1: "Секое однесување или содржина од трета страна на сервисот",
-          2: "Секојa содржина добиена од услугата",
-          3: "Неовластен пристап, користење или измена на вашите преноси или содржина"
-        }
-      },
-      10: {
-        id: "одрекување од одговорност",
-        heading: "Одрекување од одговорност",
-        paragraphs: {
-          0: "Вашето користење на услугата е единствено на ваша сопствена одговорност. Услугата се обезбедува по принципот „КАКО ШТО Е“ и „КАКО ШТО Е ДОСТАПНА“. Услугата се обезбедува без никакви гаранции, изречни или имплицитни.",
-          1: "Amiquus не гарантира дека услугата ќе биде непрекината, навремена, безбедна или без грешки, ниту дека резултатите добиени од користењето на услугата ќе бидат точни или сигурни."
-        },
+        paragraphs: [
+          "Amiquus нема да биде одговорен за индиректни, посебни, случајни или последични штети, вклучувајќи:",
+        ],
         list: [
-        ]
+          "Невозможност за пристап до услугата",
+          "Однесување или содржина од трети страни",
+          "Неточни податоци добиени од услугата",
+          "Неовластен пристап или измена на вашата содржина",
+        ],
       },
-      11: {
-        id: "колачиња",
+
+      "10": {
+        id: "disclaimer",
+        heading: "Одредба за исклучување на гаранција",
+        paragraphs: [
+          "Услугата се обезбедува во состојба „КАКО ШТО Е“ и „КАКО ШТО Е ДОСТАПНА“ без било какви гаранции.",
+          "Не гарантираме дека услугата ќе биде непрекината, безбедна или без грешки.",
+        ],
+        list: [],
+      },
+
+      "11": {
+        id: "cookies",
         heading: "Политика за колачиња",
-        paragraphs: {
-          0: "Нашата Политика за колачиња објаснува што се колачиња, како ги користиме, како трети страни со кои можеме да соработуваме можат да користат колачиња на нашата услуга, вашите избори во врска со колачињата и дополнителни информации за колачињата. Ве молиме, погледнете го делот за колачиња во нашата Политика за приватност."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Политиката за колачиња објаснува како ги користиме колачињата и вашите избори поврзани со нив. Повеќе детали има во Политиката за приватност.",
+        ],
+        list: [],
       },
-      12: {
-        id: "важечко право",
-        heading: "Меродавно право",
-        paragraphs: {
-          0: "Овие Услови се уредуваат и толкуваат согласно законите на Соединетите Американски Држави, без оглед на одредбите за судир на закони.",
-          1: "Нашето неизвршување на било кое право или одредба од овие Услови нема да се смета за откажување од тие права. Доколку некоја одредба од овие Услови биде прогласена за неважечка или неприменлива од страна на суд, останатите одредби од овие Услови ќе останат во сила."
-        },
-        list: [
-        ]
+
+      "12": {
+        id: "governing-law",
+        heading: "Применливо право",
+        paragraphs: [
+          "Овие услови се регулирани според законите на САД, без да се земат предвид конфликтите на законите.",
+          "Ако некоја одредба е неважечка, останатите ќе продолжат да важат.",
+        ],
+        list: [],
       },
-      13: {
-        id: "контакт",
-        heading: "Контактирајте не",
-        paragraphs: {
-          0: "Доколку имате какви било прашања во врска со овие Услови, контактирајте не:"
-        },
-        list: {
-          0: "Преку е-пошта: legal@amiquus.com",
-          1: "Со посета на страницата за контакт на нашата веб-страница"
-        }
-      }
+
+      "13": {
+        id: "contact",
+        heading: "Контакт",
+        paragraphs: ["За прашања поврзани со овие Услови, контактирајте не:"],
+        list: [
+          "По е-пошта: legal@amiquus.com",
+          "Преку контакт-формата на веб-страницата",
+        ],
+      },
     },
-    lastupdated: "Последно ажурирано: 21 мај 2025"
   },
   privacy: {
-    metaTitle: "Политика на приватност | Amiquus",
-    metaDescription: "Дознајте како AMIQUUS ги обработува вашите лични податоци, правата за приватност и практиките за собирање на податоци.",
-    title: "Политика на приватност",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Политика за приватност | Amiquus",
+    metaDescription:
+      "Дознајте како Amiquus ги обработува, чува и ја заштитува вашата лична информација.",
+    title: "Политика за приватност",
+    lastUpdated: "Последно ажурирано: 21 мај 2025",
+
     sections: {
-      0: {
-        id: "вовед",
+      "0": {
+        id: "introduction",
         heading: "Вовед",
-        paragraphs: {
-          0: "Добредојдовте во Amiquus. Ја почитуваме вашата приватност и сме посветени на заштита на вашите лични податоци. Оваа политика за приватност ќе ве информира како се грижиме за вашите лични податоци кога ја посетувате нашата веб-страница, како и за вашите права за приватност и начинот на кој законот ве штити."
-        }
+        paragraphs: [
+          "Amiquus ја почитува вашата приватност и е посветен на заштита на вашите лични податоци. Оваа политика објаснува како ги собираме, користиме и чуваме вашите информации.",
+        ],
       },
-      1: {
-        id: "податоци-кои-ги-собираме",
-        heading: "Информации што ги собираме",
-        paragraphs: {
-          0: "Ние собираме различни видови информации за различни цели со цел да ви ја обезбедиме и подобриме нашата услуга:"
-        },
-        list: {
-          0: "Лични податоци: Е-мејл адреса, име, презиме и профилна слика (доколку е обезбедена преку автентикација од трета страна).",
-          1: "Податоци за сметка: Вашите податоци за најавување и поставки на сметката.",
-          2: "Податоци за користење: Информации за тоа како го користите нашето веб-сајт и услуги.",
-          3: "Поставки за пребарување на возила: Критериуми за возилата што ги поставувате за следење (марка, модел, ценовен опсег итн.).",
-          4: "Информации за Telegram: Доколку изберете да добивате известувања преку Telegram, ги зачувуваме вашиот Telegram chat ID и bot token.",
-          5: "Информации за плаќање: Кога ќе извршите купување, нашиот процесор за плаќања ги собира потребните детали за плаќање за да ја обработи вашата трансакција. AMIQUUS не ги чува целосните информации за вашата кредитна картичка."
-        }
+
+      "1": {
+        id: "data-we-collect",
+        heading: "Податоци што ги собираме",
+        paragraphs: [
+          "Собираме различни видови на информации за да ја подобриме нашата услуга:",
+        ],
+        list: [
+          "Лични податоци: е-пошта, име, презиме, профил-слика",
+          "Податоци за сметка: login информации и преференции",
+          "Податоци за користење",
+          "Преференци за пребарување на автомобили",
+          "Telegram Chat ID и Bot Token (ако користите Telegram известувања)",
+          "Податоци за плаќање преку Stripe (Amiquus не чува податоци од картичката)",
+        ],
       },
-      2: {
-        id: "kako-ja-koristime-vasata-data",
-        heading: "Како ги користиме вашите податоци",
-        paragraphs: {
-          0: "Вашите лични податоци ги користиме за следниве цели:"
-        },
-        list: {
-          0: "Да ја обезбедиме и одржуваме нашата услуга",
-          1: "Да ве известиме за промени на нашата услуга",
-          2: "Да ви овозможиме учество во интерактивните функции на нашата услуга",
-          3: "Да обезбедиме корисничка поддршка",
-          4: "Да собираме анализи или вредни информации за да ја подобриме нашата услуга",
-          5: "За следење на користењето на нашата услуга",
-          6: "Да се откриваат, спречуваат и решаваат технички проблеми",
-          7: "За обработка на плаќања и спречување на измамнички трансакции",
-          8: "За испраќање огласи за автомобили што одговараат на вашите преференции преку избраниот начин на известување"
-        }
+
+      "2": {
+        id: "how-we-use-data",
+        heading: "Како ги користиме податоците",
+        paragraphs: ["Ги користиме вашите податоци за:"],
+        list: [
+          "Да ја обезбедиме и одржуваме услугата",
+          "Да ве известуваме за промени",
+          "Да обезбедиме поддршка",
+          "Анализа за подобрување на услугата",
+          "Следење на корисничко однесување",
+          "Спречување измами",
+          "Процесирање плаќања",
+          "Испраќање огласи кои се совпаѓаат со вашите критериуми",
+        ],
       },
-      3: {
-        id: "складирање на податоци",
-        heading: "Складирање и безбедност на податоци",
-        paragraphs: {
-          0: "Применуваме соодветни безбедносни мерки за заштита на вашите лични податоци од неовластен пристап, измена, откривање или уништување. Сите податоци се чуваат на безбедни сервери со енкрипција при пренос и во мирување.",
-          1: "Вашите лични податоци ги чуваме само онолку долго колку што е потребно за целите наведени во оваа политика за приватност, вклучувајќи ги и целите на исполнување на какви било законски, регулаторни, даночни, сметководствени или извештајни обврски."
-        }
+
+      "3": {
+        id: "data-storage",
+        heading: "Чување и безбедност на податоци",
+        paragraphs: [
+          "Вашите податоци се чуваат на безбедни сервери со енкрипција.",
+          "Ги чуваме само онолку долго колку што е неопходно согласно оваа политика.",
+        ],
       },
-      4: {
-        id: "општа регулатива за заштита на лични податоци",
-        heading: "Вашите GDPR права",
-        paragraphs: {
-          0: "Доколку сте жител на Европската економска област (ЕЕА), имате одредени права за заштита на податоците. AMIQUUS настојува да преземе разумни чекори за да ви овозможи исправка, измена, бришење или ограничување на користењето на вашите лични податоци.",
-          1: "Ги имате следните права за заштита на личните податоци:"
-        },
-        list: {
-          0: "Право на пристап, ажурирање или бришење на информациите што ги имаме за вас.",
-          1: "Право на исправка",
-          2: "Право на приговор",
-          3: "Право на ограничување",
-          4: "Право на преносливост на податоци",
-          5: "Право на повлекување на согласност"
-        }
+
+      "4": {
+        id: "gdpr",
+        heading: "Ваши GDPR права",
+        paragraphs: ["Ако сте од ЕЕА, имате право на:"],
+        list: [
+          "Пристап до вашите податоци",
+          "Исправка на неточни податоци",
+          "Бришење податоци",
+          "Ограничување на обработка",
+          "Преносливост на податоци",
+          "Повлекување на согласност",
+        ],
       },
-      5: {
-        id: "колачиња",
-        heading: "Политика за колачиња",
-        paragraphs: {
-          0: "Колачињата се мали парчиња податоци што се зачувуваат на вашиот уред. Користиме колачиња за:"
-        },
-        list: {
-          0: "Останете најавени",
-          1: "Разберете како ја користите нашата веб-страница",
-          2: "Запомни ги твоите поставки",
-          3: "Прилагодете го вашето искуство"
-        }
+
+      "5": {
+        id: "cookies",
+        heading: "Колачиња",
+        paragraphs: ["Користиме колачиња за да:"],
+        list: [
+          "Ви овозможиме да останете најавени",
+          "Разбереме како ја користите платформата",
+          "Ги запомниме вашите преференции",
+          "Го подобриме корисничкото искуство",
+        ],
       },
-      6: {
-        id: "трета страна",
-        heading: "Услуги од трети страни",
-        paragraphs: {
-          0: "Можеме да ангажираме трети компании и поединци за да ја олеснат нашата услуга, да ја обезбедат услугата во наше име, да извршуваат задачи поврзани со услугата или да ни помогнат во анализата на тоа како се користи нашата услуга.",
-          1: "Овие трети страни вклучуваат:"
-        },
-        list: {
-          0: "Платежни процесори (Stripe)",
-          1: "Даватели на аналитика",
-          2: "Услуги за корисничка поддршка",
-          3: "Доставувачи на хостинг и cloud инфраструктура"
-        },
-        paragraphs2: {
-          0: "Овие трети страни имаат пристап до вашите лични податоци само за да ги извршат овие задачи во наше име и се обврзани да не ги откриваат или користат за било каква друга цел."
-        }
+
+      "6": {
+        id: "third-party",
+        heading: "Трети страни",
+        paragraphs: ["Користиме услуги од трети страни, вклучувајќи:"],
+        list: [
+          "Stripe (плаќања)",
+          "Analytics алатки",
+          "Customer Support алатки",
+          "Cloud Hosting",
+        ],
+        paragraphs2: [
+          "Овие страни имаат пристап само до минимални податоци потребни за извршување на задачите.",
+        ],
       },
-      7: {
-        id: "промени",
-        heading: "Промени на оваа Политика за приватност",
-        paragraphs: {
-          0: "Можеме повремено да ја ажурираме нашата политика за приватност. Ќе ве известиме за сите промени со објавување на новата политика за приватност на оваа страница и ажурирање на датумот „Последна промена“.",
-          1: "Ви препорачуваме периодично да ја прегледувате оваа политика за приватност поради можни измени. Измените на оваа политика за приватност стапуваат на сила кога ќе бидат објавени на оваа страница."
-        }
+
+      "7": {
+        id: "changes",
+        heading: "Измени на Политиката за приватност",
+        paragraphs: [
+          "Политиката може да се ажурира повремено. Новите измени ќе бидат објавени на оваа страница.",
+        ],
       },
-      8: {
-        id: "контакт",
-        heading: "Контактирајте не",
-        paragraphs: {
-          0: "Доколку имате било какви прашања во врска со оваа политика за приватност, ве молиме контактирајте не:"
-        },
-        list: {
-          0: "Преку е-пошта: privacy@amiquus.com",
-          1: "Со посета на страницата за контакт на нашата веб-страница"
-        }
-      }
+
+      "8": {
+        id: "contact",
+        heading: "Контакт",
+        paragraphs: ["За прашања поврзани со приватноста:"],
+        list: [
+          "Е-пошта: privacy@amiquus.com",
+          "Контакт-страницата на веб-страницата",
+        ],
+      },
     },
-    lastupdated: "Последно ажурирано: 21 мај 2025"
   },
   faqs: {
     metaTitle: "Најчесто поставувани прашања | Amiquus",
-    metaDescription: "Пронајдете одговори на најчесто поставуваните прашања за AMIQUUS услугата за следење на огласи за автомобили, претплати, поставување на известувања и многу повеќе.",
+    metaDescription:
+      "Најдете одговори на најчесто поставуваните прашања за услугата на Amiquus за следење на огласи за автомобили, претплати, известувања и повеќе.",
     title: "Најчесто поставувани прашања",
-    subtitle: "Пронајдете брзи одговори на чести прашања за нашата услуга за следење на огласи за автомобили",
+    subtitle: "Брзи одговори за најчестите прашања поврзани со нашата услуга",
+
     general: {
       heading: "Општи прашања",
+
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Што е Amiquus?",
+        answer:
+          "Amiquus е услуга што следи повеќе веб-страници за огласи за автомобили и ве известува веднаш штом се појави нов оглас кој одговара на вашите поставени параметри. Известувањата се испраќаат моментално преку Telegram."
       },
+
       howItWorks: {
-        question: "How does it work?",
+        question: "Како функционира Amiquus?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
+          "1. Ги поставувате вашите параметри за пребарување (марка, модел, цена итн.)",
+          "2. Ги избирате веб-страниците што сакате да се следат",
+          "3. Го поврзувате вашиот Telegram за известувања",
+          "4. Системот постојано ги следи веб-страниците за нови огласи",
+          "5. Кога ќе се појави оглас што одговара, добивате веднаш Telegram известување со сите детали"
         ]
       },
+
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Кои веб-страници ги следи Amiquus?",
+        answerIntro: "Во моментов ги следиме следниве големи платформи:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (со URL)",
           "Craigslist",
-
           "eBay Motors"
-
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Поставувате свои критериуми за пребарување (марка, модел, ценовен опсег, итн.)",
-          1: "Вие избирате кои веб-страници да ги следите.",
-          2: "Го поврзувате вашиот Telegram профил за известувања",
-          3: "Нашиот систем постојано ги следи вашите избрани веб-страници за нови огласи",
-          4: "Кога ќе се појави соодветен автомобил, добивате инстант известување на Telegram со сите детали и директна врска."
-        },
-        question: "Како функционира?"
-      },
-      whatis: {
-        answer: "AMIQUUS е услуга што следи повеќе веб-страници со огласи за автомобили и ги пронаоѓа возилата што одговараат на вашите специфични критериуми. Кога ќе се појави соодветен оглас, веднаш добивате известување преку Telegram, што ви овозможува да бидете меѓу првите што ќе ги контактираат продавачите и да обезбедите одлични понуди.",
-        question: "Што е Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Во моментов ги следиме следниве главни платформи за огласување автомобили:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (преку URL)",
-          5: "Craigslist",
-          6: "eBay Мотори"
-        },
-        outro: "Постојано додаваме нови платформи за да обезбедиме што поцелосна покриеност.",
-        question: "Кои веб-страници за огласување автомобили ги следите?"
+        outro: "Постојано додаваме нови платформи за подобра покриеност."
       }
     },
+
     subscription: {
-      heading: "Прашања за претплата",
+      heading: "Претплати",
+
       cost: {
         question: "Колку чини претплатата?",
-        answer: {
-          0: "Нашите цени започнуваат од 79,99 $ месечно за следење на една веб-страница со ажурирања на секои 6 часа. Дополнителни веб-страници чинат 4,99 $ месечно по страница. Може и да ја надградите фреквенцијата на ажурирања за побрзи известувања.",
-          1: "За конкретни информации за цените, погледнете ја секцијата за цени на почетната страница."
-        }
+        answer: [
+          "Основната претплата започнува од $79.99 месечно за следење на една веб-страница со ажурирања на секои 6 часа.",
+          "Дополнителни веб-страници се наплатуваат по $4.99 месечно.",
+          "Може да надградите и фреквенција на ажурирања за побрзи известувања."
+        ]
       },
+
       cancel: {
         question: "Како да ја откажам мојата претплата?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Најавете се во вашиот профил",
-          1: "Отидете на страницата „Профил“",
-          2: "Изберете ја јазичето „Претплати“",
-          3: "Кликнете на копчето „Откажи претплата“ до претплатата што сакате да ја откажете."
-        },
-        note: "Вашата претплата ќе остане активна до крајот на вашиот тековен наплатен период.",
-        stepsintro: "Можете да ја откажете вашата претплата во било кое време од страницата за профил на вашиот кориснички налог:"
+        stepsIntro: "Можете да ја откажете претплатата во кое било време:",
+        steps: [
+          "1. Најавете се во вашата сметка",
+          "2. Одете во „Профил“",
+          "3. Изберете „Претплати“",
+          "4. Кликнете на „Откажи претплата“ покрај активната претплата"
+        ],
+        note: "Вашата претплата ќе остане активна до крајот на тековниот наплатен период."
       },
+
       multiple: {
-        question: "Може ли да имам повеќе претплати за различни модели на автомобили?",
-        answer: "Да, можете да креирате повеќе претплати под еден кориснички профил. Секоја претплата може да следи различни модели на автомобили, брендови или ценовни категории. Ова е особено корисно ако барате повеќе возила или им помагате на пријатели и семејство при пребарување на автомобил."
+        question: "Може ли да имам повеќе претплати за различни автомобили?",
+        answer:
+          "Да. Можете да креирате повеќе претплати со различни параметри — идеално ако барате повеќе типови возила или барате за други луѓе."
       },
+
       limit: {
-        question: "Зошто постои ограничување на бројот на претплатници?",
-        intro: "Ја ограничуваме нашата услуга на 30 активни претплатници за да обезбедиме:",
-        list: {
-          0: "Највисок квалитет на услуга и точност на податоци",
-          1: "Персонализирана поддршка за секој претплатник",
-          2: "Побрза испорака на известувања за време на најголемата активност на објави",
-          3: "Етичко прибирање на податоци што не ги преоптоварува целните веб-страници"
-        },
-        outro: "Доколку ги имаме пополнето сите места, можете да се приклучите на нашата листа на чекање за да бидете известени кога ќе се ослободи место."
+        question: "Зошто има ограничување на бројот на претплатници?",
+        intro: "Го ограничуваме бројот на активни претплатници на 30 со цел:",
+        list: [
+          "Висока точност на податоците",
+          "Брзи известувања дури и во пикови",
+          "Побезбедно и етичко скрепирање на веб-страниците",
+          "Подобра техничка и корисничка поддршка"
+        ],
+        outro:
+          "Ако капацитетот е полн, можете да се запишете на листата на чекање за да добиете место кога ќе се ослободи."
       }
     },
+
     technical: {
       heading: "Технички прашања",
+
       telegram: {
         question: "Како да ги подесам Telegram известувањата?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Креирајте Telegram бот со BotFather (упатствата се дадени при поставувањето)",
-          1: "Копирај го токенот на твојот бот од BotFather",
-          2: "Започнете разговор со вашиот бот",
-          3: "Земете го вашиот ID за разговор (упатствата се дадени при поставувањето)",
-          4: "Внесете го вашиот bot token и chat ID во поставките за претплата на Amiquus.",
-          5: "Тестирајте ја вашата поставка за известувања со копчето `Испрати тест порака`"
-        },
-        note: "Детални чекор-по-чекор упатства со слики од екранот се достапни за време на поставувањето на претплатата.",
-        stepsintro: "За поставување Telegram известувања:"
+        stepsIntro: "Следете ги следниве чекори:",
+        steps: [
+          "1. Креирајте Telegram Bot преку BotFather",
+          "2. Копирајте го API Token",
+          "3. Започнете разговор со вашиот Bot",
+          "4. Земете го вашиот Chat ID",
+          "5. Внесете ги Token + Chat ID во Amiquus (во Подесувања)",
+          "6. Тестирајте со „Send Test Message“"
+        ],
+        note: "Во Dashboard има целосно водство со слики."
       },
+
       frequency: {
-        question: "Колку често ќе добивам известувања?",
-        intro: "Фреквенцијата на известувањата зависи од:",
-        list: {
-          0: "Вашиот избран пакет за фреквенција на ажурирање (од секои 6 часа до секои 30 минути)",
-          1: "Колку нови огласи одговараат на вашите критериуми",
-          2: "Колку е активен пазарот за вашиот избран модел/марка"
-        },
-        outro: "Ќе добивате известувања само кога ќе бидат пронајдени нови огласи што одговараат на вашите критериуми."
+        question: "Колку често добивам известувања?",
+        intro: "Фреквенцијата зависи од:",
+        list: [
+          "Вашиот избор на пакет (од 1 час до 1 минута)",
+          "Колку често се појавуваат огласи што одговараат",
+          "Активноста на пазарот за вашиот модел"
+        ],
+        outro: "Ќе добивате известување само кога има нов оглас што одговара."
       },
+
       privacy: {
-        question: "Како се заштитени моите лични податоци?",
-        intro: "Вашата приватност ја сфаќаме сериозно и ги применуваме следниве мерки:",
-        list: {
-          0: "Шифрирани податоци при пренос и складирање",
-          1: "Безбедни плаќања преку Stripe",
-          2: "Нема споделување на податоци со трети страни",
-          3: "Можете да ги побарате или избришете вашите податоци во било кое време."
-        },
-        outro: "Прочитајте ја нашата целосна Политика за приватност за повеќе информации."
+        question: "Како се заштитени моите податоци?",
+        intro: "Ги користиме следниве мерки:",
+        list: [
+          "Енкрипција на податоци",
+          "Stripe за безбедни плаќања",
+          "Нема споделување на податоци со трети страни",
+          "Можете да побарате бришење на вашите податоци во секое време"
+        ],
+        outro: "Повеќе информации има во Политиката за приватност."
       }
     },
     support: {
-      heading: "Сѐ уште имате прашања?",
-      description: "Доколку не го најдовте одговорот на вашето прашање, нашиот тим за поддршка е тука да ви помогне!",
-      button: "Контактирајте поддршка"
+      heading: "Имате дополнителни прашања?",
+      description:
+        "Доколку не го најдовте одговорот, контактирајте ја нашата поддршка — со задоволство ќе ви помогнеме!",
+      button: "Контактирај поддршка"
     }
   },
   waitlist: {
-    metaTitle: "Придружи се на листата на чекање – Amiquus",
-    metaDescription: "Придружете се на листата на чекање за AMIQUUS за да бидете известени кога ќе станат достапни претплатите.",
-    title: "Придружи се на нашата листа на чекање",
-    subtitle: "Поради голема побарувачка, го ограничуваме бројот на активни претплати за да обезбедиме најдобар квалитет на услугата за сите корисници.",
+    metaTitle: "Приклучи се на листата на чекање - Amiquus",
+    metaDescription:
+      "Пријавете се на листата на чекање на Amiquus и добијте известување кога ќе се ослободи место за претплата.",
+    title: "Листа на чекање",
+    subtitle:
+      "Поради висока побарувачка, го ограничуваме бројот на активни претплатници за да обезбедиме највисок квалитет на услугата.",
+
     limited: {
       heading: "Ограничена достапност",
-      description: "Го ограничуваме нашиот систем на само 30 активни претплатници за да обезбедиме:",
-      points: {
-        0: "Исклучителна сигурност и брзина на прибирање податоци за сите корисници",
-        1: "Намалени шанси за блокирање од веб-страници за огласување автомобили",
-        2: "Персонализирана поддршка за секој претплатник",
-        3: "Правична распределба на серверски ресурси"
-      },
-      available: "Достапни се {{remaining}} претплатнички места од вкупно {{capacity}}.",
-      full: "Сите места за претплата моментално се пополнети. Пријавете се на листата на чекање за да бидете известени кога ќе се ослободи место."
+      description:
+        "Го ограничуваме системот на само 30 активни претплатници со цел:",
+      points: [
+        "Подобра точност и брзина при скрепирање",
+        "Намалување на ризикот од блокирања на веб-страници",
+        "Понуда на персонализирана поддршка",
+        "Оптимално распределување на серверските ресурси"
+      ],
+      available:
+        "{{remaining}} места достапни од вкупно {{capacity}}.",
+      full:
+        "Сите места моментално се пополнети. Пријавете се на листата на чекање за да добиете известување кога ќе се ослободи место."
     },
+
     success: {
-      title: "Сте на листата на чекање!",
-      description: "Ќе ве известиме штом се ослободи место за претплата.",
-      message: "Ви благодариме за интересот за Amiquus! Ве додадовме на нашата листа на чекање и ќе ве контактираме штом се ослободи место.",
-      button: "Врати се на почетна страница"
+      title: "Успешно се приклучивте!",
+      description:
+        "Ќе ве известиме веднаш штом ќе се ослободи место.",
+      message:
+        "Ви благодариме за интересот! Додадени сте на нашата листа на чекање и ќе добиете известување кога ќе има слободно место.",
+      button: "Назад кон почетната страница"
     },
+
     cantJoin: {
-      title: "Join the Waitlist",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Приклучи се на листата на чекање",
+      description:
+        "Ќе ве известиме веднаш штом ќе се ослободи место."
     },
+
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Име",
+        placeholder: "Иван"
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Презиме",
+        placeholder: "Ивановски"
       },
       email: {
         label: "Е-пошта",
-        placeholder: "john.doe@example.com",
-        description: "Ќе ја користиме оваа е-пошта за да ве известиме кога ќе се ослободи место."
+        placeholder: "example@example.com",
+        description:
+          "Ќе ја користиме оваа е-пошта за да ве известиме кога ќе има слободно место."
       },
-      submit: "Придружи се на листата на чекање",
-      submitting: "Се поднесува...",
-      firstname: {
-        label: "Име",
-        placeholder: "Јован"
-      },
-      lastname: {
-        label: "Презиме",
-        placeholder: "Јелен"
-      }
-    },
-    cantjoin: {
-      description: "Ќе ве известиме штом се ослободи место за претплата.",
-      title: "Придружи се на листата на чекање"
+      submit: "Приклучи се",
+      submitting: "Испраќање..."
     }
   },
   support: {
-    metaTitle: "Поддршка | Amiquus - Центар за помош",
-    metaDescription: "Побарајте помош за вашиот AMIQUUS профил, претплата или известувања за автомобил. Прелистајте го нашиот центар за помош или контактирајте ја нашата служба за корисници за асистенција.",
+    metaTitle: "Поддршка | Amiquus",
+    metaDescription:
+      "Добијте помош за вашата Amiquus сметка, претплати или известувања. Прегледајте ги најчестите прашања или контактирајте не.",
     title: "Центар за поддршка",
-    subtitle: "Пронајдете одговори на чести прашања или контактирајте го нашиот тим за поддршка.",
+    subtitle:
+      "Пронајдете одговори или контактирајте со нашиот тим за поддршка",
+
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
+      title: "Е-пошта поддршка",
+      description: "Испратете ни порака и ќе одговориме во рок од 24 часа",
       email: "support@amiquus.com"
     },
-    faqHeading: "Frequently Asked Questions",
+
+    faqHeading: "Најчесто поставувани прашања",
+
     faqs: {
       telegram: {
-        question: "Како да ги подесам Telegram известувањата?",
-        intro: "За да ги поставите Telegram известувањата, следете ги овие чекори:",
-        steps: {
-          0: "Креирајте Telegram бот со BotFather (упатствата се на нашата контролна табла)",
-          1: "Копирај го твојот API токен и chat ID",
-          2: "Внесете ги овие податоци во поставките на вашиот профил под „Преференции за известувања“",
-          3: "Тестирајте ја вашата конекција со копчето „Испрати тест порака“"
-        },
-        outro: "Доколку ви е потребна дополнителна помош, нашиот детален водич е достапен на вашата контролна табла."
+        question: "Како да ги поставам Telegram известувањата?",
+        intro: "Следете ги овие чекори:",
+        steps: [
+          "Креирајте Telegram Bot преку BotFather",
+          "Копирајте го API Token",
+          "Внесете го Token и Chat ID во поставките на вашата сметка",
+          "Кликнете „Send Test Message“ за тестирање"
+        ],
+        outro:
+          "Во Dashboard е достапно целосно водство со слики."
       },
+
       updates: {
-        question: "Колку често се ажурираат огласите за автомобили?",
-        answer: "Фреквенцијата на ажурирање зависи од вашиот претплатнички план. Основните планови добиваат ажурирања на секои 6 часа, додека Premium плановите можат да добиваат ажурирања дури и на секои 30 минути. Можете да ја прегледате и измените вашата тековна фреквенција на ажурирање во поставките за претплата."
+        question: "Колку често се ажурираат огласите?",
+        answer:
+          "Фреквенцијата зависи од вашата претплатничка група. Основните пакети добиваат ажурирања на секои 6 часа, додека премиум пакетите може да добиваат ажурирања и на секои 30 минути."
       },
+
       facebook: {
-        question: "Може ли да следам Facebook Marketplace?",
-        answer: "Да, поддржуваме следење на Facebook Marketplace. За да го поставите ова, треба да ни го доставите URL-то од страницата со резултати од пребарување на Facebook Marketplace со применети филтри по ваш избор. Нашиот систем потоа ќе го следи токму тоа пребарување за нови огласи што одговараат на вашите критериуми."
+        question: "Може ли да следам огласи од Facebook Marketplace?",
+        answer:
+          "Да. Поддржуваме мониторинг врз база на URL од Facebook Marketplace. Внесете URL со поставени филтри и системот ќе го следи тој пребарувачки резултат."
       },
+
       cancel: {
-        question: "Како да ја откажам мојата претплата?",
-        answer: "Можете да ја откажете вашата претплата во секое време од страницата со профилот на вашиот кориснички сметка. Кликнете на табот „Претплати“, пронајдете ја претплатата што сакате да ја откажете и кликнете на копчето „Откажи претплата“. Вашата услуга ќе биде активна до крајот на тековниот период на наплата."
+        question: "Како да ја откажам претплатата?",
+        answer:
+          "Отидете во „Профил“ → „Претплати“ → Кликнете „Откажи претплата“. Ќе остане активна до крајот на тековниот период."
       },
+
       full: {
-        question: "Што се случува ако сите слотови за претплата се пополнети?",
-        answer: "За да ја одржиме високата квалитет на нашата услуга, го ограничуваме бројот на активни претплати. Доколку сите места се пополнети, можете да се приклучите на нашата листа на чекање. Ќе ве известиме веднаш штом се ослободи место, и ќе имате приоритет да го резервирате пред да го понудиме на пошироката јавност."
+        question: "Што ако сите места се пополнети?",
+        answer:
+          "Може да се пријавите на листата на чекање. Кога ќе се ослободи место, ќе добиете известување според редоследот на пријавување."
       }
     },
+
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Испратете ни е-пошта и ќе ви одговориме во рок од 24 часа.",
-      email: "support@amiquus.com",
-      title: "Поддршка по е-пошта"
-    },
-    faqheading: "Најчесто поставувани прашања",
-    stillneedhelp: {
-      button: "Контактирајте поддршка",
-      description: "Доколку не го најдовте одговорот на вашето прашање, слободно контактирајте го нашиот тим за поддршка. Тука сме да ви помогнеме!",
-      heading: "Сѐ уште ви треба помош?"
+      heading: "Потребна ви е дополнителна помош?",
+      description:
+        "Доколку не го најдовте одговорот, контактирајте со поддршката и ќе ви помогнеме.",
+      button: "Контактирај поддршка"
     }
   },
   notFound: {
-    title: "404 Страницата не е пронајдена",
-    message: "Дали заборавивте да ја додадете страницата во рутерот?"
+    title: "404 - Страницата не е пронајдена",
+    message: "Изгледа дека оваа страница не е додадена во рутата."
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Вашиот Amiquus код за верификација",
+      greeting: "Здраво,",
+      message:
+        "Користете го следниот код за да ја завршите регистрацијата:",
+      expiration: "Овој код важи 10 минути."
     },
+
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Вашата Amiquus наплата е успешна – Фактура #",
+        h2Message: "Вашата претплата е успешно наплатена!",
+        greeting: "Здраво,",
+        paymentMessage: "Вашата уплата изнесува:",
+        downloadMessage:
+          "Можете да ја прегледате или преземете вашата фактура преку следниот линк:",
+        viewInvoice: "Види фактура",
+        invoiceNumber: "Број на фактура:"
       },
+
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Неплатена фактура –",
+        subjectB: "за вашата Amiquus претплата",
+        h2Message:
+          "Потребна е акција: Завршете ја вашата уплата",
+        greeting: "Здраво,",
+        messageA: "Вашата фактура",
+        messageB:
+          "сè уште не е платена. За да активирате претплата, извршете уплата од:",
+        paymentMessage: "Платете безбедно преку линкот подолу:",
+        payInvoice: "Плати фактура",
+        ignoreEmail:
+          "Ако веќе сте ја платиле, слободно игнорирајте ја оваа порака."
       },
+
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
+        subject: "Неуспешна наплата – Фактура",
+        message:
+          "Вашата последна наплата не беше успешна (обид",
+        attemptsA:
+          "Ќе пробаме повторно наскоро. Не е потребна акција од ваша страна во моментов.",
+        attemptsB:
+          "Се обидовме 3 пати, но наплатата не успеа.",
+        attemptsC:
+          "Вашата претплата е привремено паузирана.",
+        attemptsD:
+          "Ажурирајте го методот за плаќање за да продолжите:",
+        viewInvoice: "Види фактура",
+        managePayment: "Управувај со методи за плаќање"
       }
     },
+
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Успешно сте додадени на листата на чекање!",
+      h2Message: "Добредојдовте на листата!",
+      hi: "Здраво",
+      message:
+        "Благодариме што се приклучивте на листата на чекање. Ќе ве известиме кога ќе се ослободи место.",
+      anyQuestions:
+        "Доколку имате прашања, слободно одговорете на оваа порака."
     },
+
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Откажи",
-    confirmremove: "Отстрани картичка",
-    default: "Стандардно",
-    expires: "Истекува",
-    remove: "Отстрани",
-    removedescription: "Дали сте сигурни дека сакате да ја отстраните вашата {{brand}} картичка со последни бројки {{last4}}?",
-    removetitle: "Отстрани начин на плаќање",
-    removewarning: "Ова е вашата стандардна платежна метода и нејзиното отстранување може да влијае на вашите активни претплати.",
-    setasdefault: "Постави како стандардно",
-    setdefaultdescription: "Дали сакате да ја поставите {{brand}} картичката што завршува на {{last4}} како ваш основен начин на плаќање? Оваа картичка ќе се користи за сите идни плаќања на претплата.",
-    setdefaulttitle: "Постави стандарден начин на плаќање"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Откажи предупредување",
-    canceldescription: "Дали сте сигурни дека сакате да го откажете известувањето за автомобилот {{brand}} {{model}}? Со ова ќе ги прекинете сите нотификации и ќе треба повторно да поставите ново известување ако сакате повторно да го следите овој автомобил.",
-    canceltitle: "Откажи известување за автомобил",
-    confirmcancel: "Откажи предупредување",
-    edit: "Уреди",
-    keepmyalert: "Зачувај го моето известување",
-    language: "Јазик",
-    price: "Цена",
-    pricerange: "Цена",
-    updates: "Ажурирања",
-    websites: "Веб-страници",
-    years: "Години"
-  },
-  signUp: {
-    cta: "Добиј известувања сега",
-    heading: "Креирај го твојот аларм за автомобил",
-    subheading: "Поставете ги вашите персонализирани известувања за огласи за автомобили во само неколку чекори.",
-    toast: {
-      error: {
-        description: "Не можевме да ја креираме вашата претплата. Ве молиме обидете се повторно подоцна.",
-        title: "Претплатата не успеа"
-      },
-      success: {
-        description: "Вашата претплата е успешно креирана.",
-        title: "Претплатата е креирана"
-      }
-    },
-    waitlist: {
-      cta: "Придружи се на листата на чекање",
-      message: "Во моментов сме пополнети до крај. Ве молиме приклучете се на нашата листа на чекање за да бидете известени кога ќе се ослободи место."
+      thanksMessage: "Ви благодариме што го користите Amiquus!",
+      signature: "Со почит,<br/>Тимот на Amiquus",
+      team: "— Тимот на Amiquus",
+      needHelp: "Потребна ви е помош?",
+      hello: "Здраво"
     }
   }
 };

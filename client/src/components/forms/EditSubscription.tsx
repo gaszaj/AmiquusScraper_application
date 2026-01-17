@@ -27,7 +27,7 @@ import { useToast } from "@/hooks/use-toast";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice, additionalWebsitePrice } from "@shared/pricing";
+import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
 import { buildAlertSchema } from "@/lib/buildAlertSchema";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
@@ -817,8 +817,8 @@ export default function EditSubscriptionPage({
                 )
               </span>
               <span className="text-neutral-900 dark:text-white font-medium">
-                {/* $9.98/month */}$
-                {(
+                {/* €9.98/month */}
+                {currencySymbol}{(
                   Math.max(
                     (form.watch("websitesSelected")?.length || 1) - 1,
                     0,
@@ -833,8 +833,7 @@ export default function EditSubscriptionPage({
                   {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                 </span>
                 <span className="text-neutral-900 dark:text-white font-medium">
-                  $
-                  {(
+                {currencySymbol}{(
                     FREQUENCY_OPTIONS.find(
                       (f) => f.id === form.watch("updateFrequency"),
                     )?.additionalPrice || 0
@@ -848,7 +847,7 @@ export default function EditSubscriptionPage({
                   {t("review.summary.total")}
                 </span>
                 <span className="text-primary dark:text-primary font-bold text-xl">
-                  ${totalPrice.toFixed(2)}
+                {currencySymbol}{totalPrice.toFixed(2)}
                 </span>
               </div>
             </div>

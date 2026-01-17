@@ -123,19 +123,19 @@ export const sr = {
     setAlerts: "Подесите обавештења",
     notificationMockup1: {
       title: "Ново подударање!",
-      description: "BMW Серија 3, 2019, $32,500 – нови оглас на AutoTrader-у",
+      description: "BMW Серија 3, 2019, €32,500 – нови оглас на AutoTrader-у",
     },
     notificationMockup2: {
       title: "Telegram обавештење",
       description:
-        "Mercedes C класа, 2020, 30.000 миља – цена смањена за $2.000",
+        "Mercedes C класа, 2020, 30.000 миља – цена смањена за €2.000",
     },
   },
   pricing: {
     title: "Једноставне и транспарентне цене",
     subtitle:
       "Цене засноване на вашим потребама. Започните са основним пакетом и прилагодите по потреби.",
-    baseTitle: "Основни пакет: $79.99/месец",
+    baseTitle: "Основни пакет: €79.99/месец",
     includedTitle: "Укључено:",
     includedFeatures: [
       "1 праћење сајта",
@@ -713,7 +713,7 @@ export const sr = {
     subtitle:
       "Подесите Telegram бот да бисте примали обавештења о аутомобилу из снова",
     basicPlan: "Основни план",
-    baseTitle: "$79.99/месец",
+    baseTitle: "€79.99/месец",
     button: "Активирајте моју услугу обавештења о аутомобилима",
     cancel: "Може се отказати било када",
     toasts: {

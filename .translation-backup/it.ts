@@ -1,11 +1,12 @@
+// === it.ts === Italiano
 export const it = {
   navigations: {
-    features: "Caratteristiche",
+    features: "Funzionalità",
     how: "Come funziona",
     pricing: "Prezzi",
     getAlerts: "Ricevi avvisi",
     waitlist: "Lista d'attesa",
-    faq: "Domande frequenti",
+    faq: "FAQ",
     login: "Accedi",
     getStarted: "Inizia",
     subscribers: "Abbonati",
@@ -15,677 +16,517 @@ export const it = {
     profile: "Profilo",
     settings: "Impostazioni",
     logout: "Esci",
-    signUp: "Registrati"
+    signUp: "Registrati",
   },
   hero: {
-    label: "Monitora gli annunci di auto usate in tempo reale",
-    title: "Non lasciarti mai più sfuggire l’offerta perfetta per la tua auto",
-    subtitle: "Amiquus ti avvisa all’istante quando la tua auto dei sogni è disponibile su più siti di annunci auto. Ricevi notifiche su Telegram non appena viene trovato un annuncio che corrisponde ai tuoi criteri.",
-    button1: "Imposta i tuoi avvisi",
+    label: "Monitora annunci di auto usate in tempo reale!",
+    title: "Non perdere mai più l'offerta perfetta per la tua auto",
+    subtitle:
+      "Amiquus ti notifica immediatamente quando l'auto dei tuoi sogni appare su più siti. Ricevi avvisi via Telegram non appena viene trovata una corrispondenza.",
+    button1: "Configura avvisi",
     button2: "Scopri come funziona",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
+      websites: "Oltre 15 siti",
+      realtime: "Notifiche in tempo reale",
+      noSetup: "Nessuna installazione",
+      cancelAnytime: "Annulla in qualsiasi momento",
     },
-    trustindicators: {
-      cancelanytime: "Annulla quando vuoi",
-      nosetup: "Nessuna configurazione richiesta",
-      realtime: "Avvisi in tempo reale",
-      websites: "Oltre 15 siti web monitorati"
-    }
   },
   limited: {
     full: {
-      title: "Limite di abbonamento raggiunto",
-      description: "Abbiamo raggiunto la capacità massima di 30 abbonati attivi. Unisciti alla lista d’attesa per essere avvisato quando si libera un posto.",
-      buttonText: "Unisciti alla lista d’attesa"
+      title: "Limite di abbonamenti raggiunto",
+      description:
+        "Abbiamo raggiunto la capacità di 30 abbonati attivi. Unisciti alla lista d'attesa per essere avvisato quando si libera un posto.",
+      buttonText: "Unisciti alla lista d'attesa",
     },
     limited: {
       title: "Disponibilità limitata",
-      description: "Sono rimasti solo {{remaining}} posti su un totale di {{capacity}}. Iscriviti ora prima che i posti finiscano!",
-      buttonText: "Inizia ora"
+      description:
+        "Rimangono solo {{remaining}} di {{capacity}} posti. Abbonati ora prima che finiscano!",
+      buttonText: "Inizia ora",
     },
     available: {
       title: "Abbonamenti disponibili",
-      description: "{{active}} su {{capacity}} abbonamenti sono attualmente attivi. C’è ancora tanto spazio per unirti!",
-      buttonText: "Inizia ora"
-    }
+      description:
+        "{{active}} di {{capacity}} abbonamenti sono attualmente attivi. Tanto spazio per te!",
+      buttonText: "Inizia ora",
+    },
   },
   features: {
     heading: "Perché scegliere Amiquus?",
-    subheading: "Risparmia tempo e non lasciarti mai sfuggire l’auto perfetta con il nostro servizio di tracciamento automatico.",
+    subheading:
+      "Risparmia tempo e non perdere mai l'auto perfetta con il nostro servizio automatizzato.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Monitoraggio multi-sito",
+      description:
+        "Monitora più siti di auto contemporaneamente senza controllare manualmente ciascuno.",
     },
     notifications: {
       title: "Notifiche istantanee",
-      description: "Ricevi avvisi immediati su Telegram quando viene messa in vendita un’auto che corrisponde ai tuoi criteri."
+      description:
+        "Ricevi notifiche immediate via Telegram quando un'auto corrisponde ai tuoi criteri.",
     },
     filters: {
-      title: "Filtri personalizzati",
-      description: "Imposta criteri precisi includendo marca, modello, anno, chilometraggio e fascia di prezzo per trovare esattamente ciò che desideri."
+      title: "Filtri personalizzabili",
+      description:
+        "Imposta criteri precisi: marca, modello, anno, chilometraggio, prezzo – trova esattamente ciò che vuoi.",
     },
     frequency: {
-      title: "Frequenza personalizzabile",
-      description: "Scegli con quale frequenza controlliamo i nuovi annunci, dagli aggiornamenti orari al monitoraggio in tempo reale."
+      title: "Frequenza regolabile",
+      description:
+        "Scegli la frequenza di verifica dei nuovi annunci – da oraria a in tempo reale.",
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Supporto multilingue",
+      description:
+        "Ricevi notifiche nella tua lingua preferita per una comprensione più facile degli annunci.",
     },
     account: {
-      title: "Gestione semplice dell’account",
-      description: "Gestisci più profili di ricerca e modifica le impostazioni dell’abbonamento con pochi clic."
+      title: "Gestione account semplice",
+      description:
+        "Gestisci più profili di ricerca e modifica il tuo abbonamento con pochi clic.",
     },
-    multisite: {
-      description: "Monitora contemporaneamente più siti di annunci auto senza doverli controllare manualmente uno per uno.",
-      title: "Monitoraggio su più siti"
-    }
   },
   howItWorks: {
     title: "Come funziona Amiquus",
-    subtitle: "Imposta una sola volta e lascia che il nostro sistema automatizzato trovi per te l’offerta auto perfetta",
-    whyTitle: "Why Choose Amiquus?",
+    subtitle:
+      "Configura una volta e lascia che il nostro sistema trovi l'offerta perfetta per te",
+    whyTitle: "Perché scegliere Amiquus?",
     steps: {
       preferences: {
         title: "Imposta le tue preferenze",
-        description: "Seleziona marche, modelli, fascia di prezzo e altri criteri che desideri monitorare."
+        description:
+          "Scegli marche, modelli, fasce di prezzo e altri criteri che ti interessano.",
       },
       telegram: {
         title: "Collega Telegram",
-        description: "Collega il tuo account Telegram per ricevere notifiche istantanee sulle nuove inserzioni."
+        description:
+          "Collega il tuo account Telegram per ricevere notifiche istantanee sui nuovi annunci.",
       },
       notifications: {
         title: "Ricevi notifiche istantanee",
-        description: "Ricevi una notifica non appena un’auto che corrisponde ai tuoi criteri compare su uno dei nostri siti monitorati."
+        description:
+          "Ricevi avvisi immediatamente quando un'auto corrispondente appare su qualsiasi sito.",
       },
       findCar: {
-        title: "Find Your Perfect Car",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
+        title: "Trova la tua auto perfetta",
+        description:
+          "Sii il primo a sapere dei nuovi annunci e assicurati le migliori offerte.",
       },
-      findcar: {
-        description: "Sii il primo a scoprire le nuove inserzioni e assicurati le migliori offerte prima di chiunque altro.",
-        title: "Trova la tua auto perfetta"
-      }
     },
-    features: {
-      0: "Monitora oltre 15 siti di annunci auto contemporaneamente",
-      1: "Criteri di ricerca personalizzabili con filtri avanzati",
-      2: "Notifiche in tempo reale tramite Telegram",
-      3: "Avvisi automatici su ribassi di prezzo e nuove inserzioni",
-      4: "Procedura di configurazione semplice che richiede meno di 5 minuti"
-    },
-    setAlerts: "Set Up Your Alerts",
+    features: [
+      "Monitora oltre 15 siti contemporaneamente",
+      "Criteri di ricerca personalizzabili con filtraggio avanzato",
+      "Notifiche in tempo reale via Telegram",
+      "Avvisi automatici per cali di prezzo e nuovi annunci",
+      "Processo di configurazione semplice in meno di 5 minuti",
+    ],
+    setAlerts: "Configura avvisi",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Nuova corrispondenza trovata!",
+      description:
+        "BMW Serie 3, 2019, 32.500 € – Pubblicato di recente su AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram Alert",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
+      title: "Avviso Telegram",
+      description:
+        "Mercedes Classe C, 2020, 30.000 km – Prezzo ridotto di 2.000 €",
     },
-    notificationmockup1: {
-      description: "BMW Serie 3, 2019, $32.500 - Appena pubblicato su AutoTrader",
-      title: "Nuova corrispondenza trovata!"
-    },
-    notificationmockup2: {
-      description: "Mercedes Classe C, 2020, 30.000 miglia - Prezzo ribassato di 2.000 $",
-      title: "Avviso Telegram"
-    },
-    setalerts: "Imposta i tuoi avvisi",
-    whytitle: "Perché scegliere Amiquus?"
   },
   pricing: {
     title: "Prezzi semplici e trasparenti",
-    subtitle: "I nostri prezzi sono basati sulle tue esigenze specifiche. Inizia con un pacchetto base e personalizzalo in base alle tue necessità.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    subtitle:
+      "I nostri prezzi si basano sulle tue esigenze. Inizia con il piano base e personalizzalo.",
+    baseTitle: "Piano base: 79,99 €/mese",
+    includedTitle: "Cosa è incluso:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Monitoraggio di un sito",
+      "Aggiornamenti ogni ora",
+      "Filtri illimitati",
+      "Notifiche via Telegram",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Ogni sito web aggiuntivo"
-      },
-      1: {
-        name: "Aggiornamenti ogni 30 minuti"
-      },
-      2: {
-        name: "Aggiornamenti ogni 15 minuti"
-      },
-      3: {
-        name: "Aggiornamenti ogni 5 minuti"
-      },
-      4: {
-        name: "Aggiornamenti ogni minuto"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
+    addonsTitle: "Componenti aggiuntivi:",
+    addons: [
+      { name: "Ogni sito aggiuntivo", price: 4.99 },
+      { name: "Aggiornamenti ogni 30 minuti", price: 2.99 },
+      { name: "Aggiornamenti ogni 15 minuti", price: 5.99 },
+      { name: "Aggiornamenti ogni 5 minuti", price: 9.99 },
+      { name: "Aggiornamenti ogni minuto", price: 14.99 },
+    ],
+    footerNote:
+      "Tutti i piani includono configurazioni di ricerca illimitate e gestione semplice dell'abbonamento.",
     button: "Inizia ora",
-    addonstitle: "Componenti aggiuntivi:",
-    basetitle: "Pacchetto Base: 79,99 €/mese",
-    footernote: "Tutti i piani includono configurazioni di ricerca illimitate e una gestione semplice dell’abbonamento.",
-    includedfeatures: {
-      0: "Monitoraggio di un sito web",
-      1: "Aggiornamenti ogni ora",
-      2: "Filtri illimitati",
-      3: "Notifiche Telegram"
-    },
-    includedtitle: "Cosa è incluso:"
   },
   signup: {
-    heading: "Create Your Car Alert",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Crea avviso auto",
+    subheading:
+      "Configura notifiche personalizzate per annunci auto in pochi passaggi.",
+    cta: "Ricevi notifiche ora",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
-      cta: "Join Waitlist"
+      message:
+        "Siamo attualmente al completo. Unisciti alla lista d'attesa per essere avvisato quando si libera un posto.",
+      cta: "Unisciti alla lista d'attesa",
     },
     toast: {
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "Abbonamento creato",
+        description: "Il tuo abbonamento è stato creato con successo",
       },
       error: {
-        title: "Subscription failed",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Creazione abbonamento fallita",
+        description: "Impossibile creare l'abbonamento. Riprova più tardi.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "Successo",
-        description: "Il tuo metodo di pagamento è stato configurato con successo."
+        description:
+          "Il tuo metodo di pagamento è stato configurato con successo.",
       },
       error: {
         title: "Errore",
-        fallback: "Si è verificato un errore imprevisto. Riprova."
-      }
+        fallback: "Si è verificato un errore imprevisto. Riprova.",
+      },
     },
     button: {
-      submit: "Imposta metodo di pagamento",
-      processing: "Elaborazione..."
-    }
+      submit: "Configura metodo di pagamento",
+      processing: "Elaborazione in corso...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Marca dell’auto obbligatoria",
-      carmodel: "Il modello dell’auto è obbligatorio",
-      facebookmarketplaceurl: "L’URL di Facebook Marketplace è obbligatorio quando viene selezionato Facebook",
-      fueltype: "Il tipo di carburante è obbligatorio",
-      maxkilometers: "Il numero massimo di chilometri deve essere un numero",
-      notificationlanguage: "La lingua della notifica è obbligatoria.",
-      pricemax: "Il prezzo massimo deve essere un numero",
-      pricemin: "Il prezzo minimo deve essere un numero",
-      telegramchatid: "L’ID chat di Telegram è obbligatorio",
-      telegramtoken: "È necessario il token del bot Telegram",
-      telegramusername: "Il nome utente Telegram è obbligatorio",
-      websitesselected: "Devi selezionare almeno un sito web",
-      yearmax: "L’anno massimo deve essere un anno valido",
-      yearmin: "L’anno minimo deve essere un anno valido"
-    }
+      carBrand: "La marca dell'auto è obbligatoria",
+      carModel: "Il modello dell'auto è obbligatorio",
+      fuelType: "Il tipo di carburante è obbligatorio",
+      priceMin: "Il prezzo minimo deve essere un numero",
+      priceMax: "Il prezzo massimo deve essere un numero",
+      yearMin: "L'anno minimo deve essere valido",
+      yearMax: "L'anno massimo deve essere valido",
+      maxKilometers: "Il chilometraggio massimo deve essere un numero",
+      telegramUsername: "Il nome utente Telegram è obbligatorio",
+      telegramToken: "Il token del bot Telegram è obbligatorio",
+      telegramChatId: "L'ID chat Telegram è obbligatorio",
+      websitesSelected: "Devi selezionare almeno un sito",
+      notificationLanguage: "La lingua delle notifiche è obbligatoria",
+      facebookMarketplaceUrl:
+        "L'URL di Facebook Marketplace è obbligatorio se Facebook è selezionato",
+    },
   },
   personalInfo: {
     heading: "Informazioni personali",
-    description: "Ti preghiamo di fornire i tuoi dati personali così potremo configurare correttamente le tue notifiche.",
+    description:
+      "Inserisci le tue informazioni personali per configurare correttamente i tuoi avvisi.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
+      firstName: "Nome",
+      lastName: "Cognome",
       email: "Indirizzo email",
-      firstname: "Nome",
-      lastname: "Cognome"
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Giovanni",
-      lastname: "Cervo"
+      firstName: "Mario",
+      lastName: "Rossi",
+      email: "mario.rossi@esempio.it",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
+      firstName: "Il nome è obbligatorio",
+      lastName: "Il cognome è obbligatorio",
       email: "Inserisci un indirizzo email valido",
-      firstname: "Il nome è obbligatorio",
-      lastname: "Il cognome è obbligatorio"
     },
     actions: {
       login: "Accedi o registrati per continuare",
-      continue: "Continua"
-    }
+      continue: "Continua",
+    },
   },
   websiteSelection: {
-    heading: "Selezione del sito web",
-    description: "Scegli quali siti web vuoi monitorare e con quale frequenza desideri ricevere aggiornamenti.",
+    heading: "Selezione siti",
+    description:
+      "Scegli i siti da monitorare e la frequenza di aggiornamento desiderata.",
     labels: {
-      websites: "Siti web da monitorare",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Frequenza di aggiornamento"
+      websites: "Siti da monitorare",
+      facebookUrl: "URL Facebook Marketplace",
+      updateFrequency: "Frequenza di aggiornamento",
     },
     placeholders: {
-      frequency: "Seleziona frequenza"
+      frequency: "Seleziona frequenza",
     },
     help: {
-      websites: "Seleziona uno o più siti web da monitorare per gli annunci di auto.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Incolla qui l’URL dei risultati di ricerca di Facebook Marketplace.",
-      updatefrequency: "Con quale frequenza dovremmo controllare i nuovi annunci? Frequenze più elevate potrebbero comportare costi maggiori.",
-      videodesc: "Guarda il video qui sotto per le istruzioni passo dopo passo.",
-      videotitle: "Hai bisogno di aiuto per trovare il tuo link di ricerca su Facebook Marketplace?"
+      websites: "Seleziona uno o più siti per monitorare annunci auto.",
+      facebookUrl:
+        "Incolla l'URL dei tuoi risultati di ricerca su Facebook Marketplace.",
+      videoTitle:
+        "Hai bisogno di aiuto per trovare il link di Facebook Marketplace?",
+      videoDesc: "Guarda il video qui sotto per istruzioni passo-passo.",
+      updateFrequency:
+        "Con quale frequenza controlliamo i nuovi annunci? Frequenze più alte possono costare di più.",
     },
     errors: {
-      websites: "Devi selezionare almeno un sito web",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "L’URL di Facebook Marketplace è obbligatorio quando viene selezionato Facebook"
+      websites: "Devi selezionare almeno un sito",
+      facebookUrl:
+        "L'URL di Facebook Marketplace è obbligatorio se Facebook è selezionato",
     },
     actions: {
       previous: "Precedente",
-      continue: "Continua"
-    }
+      continue: "Continua",
+    },
   },
   carDetails: {
-    heading: "Dettagli del veicolo",
-    description: "Specifica i dettagli dell’auto che stai cercando. Tutti i campi sono facoltativi: lasciane pure qualcuno vuoto per ottenere una selezione più ampia di risultati.",
+    heading: "Dettagli auto",
+    description:
+      "Specifica i dettagli dell'auto che stai cercando. Tutti i campi sono opzionali – lasciali vuoti per risultati più ampi.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Marca auto",
-      carmodel: "Modello auto",
-      fueltype: "Tipo di carburante",
-      maxkilometers: "Chilometri massimi",
-      pricemax: "Prezzo massimo",
-      pricemin: "Prezzo minimo",
-      yearmax: "Anno massimo",
-      yearmin: "Anno minimo"
+      carBrand: "Marca auto",
+      carModel: "Modello auto",
+      fuelType: "Tipo di carburante",
+      priceMin: "Prezzo minimo",
+      priceMax: "Prezzo massimo",
+      yearMin: "Anno minimo",
+      yearMax: "Anno massimo",
+      maxKilometers: "Chilometraggio massimo",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Seleziona marca auto",
-      carmodel: "Seleziona modello di auto",
-      carmodeldisabled: "Seleziona prima la marca dell’auto",
-      fueltype: "Seleziona il tipo di carburante",
-      maxkilometers: "Inserisci il numero massimo di chilometri",
-      pricemax: "Inserisci il prezzo massimo",
-      pricemin: "Inserisci il prezzo minimo",
-      yearmax: "Inserisci l’anno massimo",
-      yearmin: "Inserisci l’anno minimo"
+      carBrand: "Seleziona marca",
+      carModel: "Seleziona modello",
+      carModelDisabled: "Seleziona prima la marca",
+      fuelType: "Seleziona tipo di carburante",
+      priceMin: "Inserisci prezzo minimo",
+      priceMax: "Inserisci prezzo massimo",
+      yearMin: "Inserisci anno minimo",
+      yearMax: "Inserisci anno massimo",
+      maxKilometers: "Inserisci chilometraggio massimo",
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nessun modello disponibile"
+      noModelsAvailable: "Nessun modello disponibile",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Marca dell’auto obbligatoria",
-      carmodel: "Il modello dell’auto è obbligatorio",
-      fueltype: "Il tipo di carburante è obbligatorio",
-      maxkilometers: "Il numero massimo di chilometri deve essere un numero",
-      pricemax: "Il prezzo massimo deve essere un numero",
-      pricemin: "Il prezzo minimo deve essere un numero",
-      yearmax: "L’anno massimo deve essere un anno valido",
-      yearmin: "L’anno minimo deve essere un anno valido"
+      carBrand: "La marca dell'auto è obbligatoria",
+      carModel: "Il modello dell'auto è obbligatorio",
+      fuelType: "Il tipo di carburante è obbligatorio",
+      priceMin: "Il prezzo minimo deve essere un numero",
+      priceMax: "Il prezzo massimo deve essere un numero",
+      yearMin: "L'anno minimo deve essere valido",
+      yearMax: "L'anno massimo deve essere valido",
+      maxKilometers: "Il chilometraggio massimo deve essere un numero",
     },
     actions: {
       previous: "Precedente",
-      continue: "Continua"
-    }
+      continue: "Continua",
+    },
   },
   telegram: {
-    heading: "Configurazione di Telegram",
-    description: "Configura le notifiche Telegram inserendo il token del tuo bot e l’ID della chat.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Se hai problemi a creare il bot Telegram, contattaci e ti chiameremo per aiutarti a crearne uno.",
+    heading: "Configurazione Telegram",
+    description:
+      "Configura le notifiche Telegram inserendo il token del bot e l'ID chat.",
+    subHeading: "Configura il tuo bot Telegram",
+    info: "Se hai problemi a creare un bot Telegram, contattaci e ti aiuteremo.",
     contact: "Contattaci",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Apri Telegram e cerca @BotFather",
-      botstep2: "Invia il comando /newbot",
-      botstep3: "Segui le istruzioni per creare un bot",
-      botstep4: "Copia il token fornito da BotFather",
-      bottitle: "Come ottenere un token per il bot di Telegram:",
-      chatstep1: "Apri Telegram e cerca @userinfobot",
-      chatstep2: "Invia qualsiasi messaggio al bot",
-      chatstep3: "Il bot risponderà con le tue informazioni, incluso il tuo Chat ID",
-      chatstep4: "Copia l’ID della chat (è un numero)",
-      chattitle: "Come ottenere il tuo Telegram Chat ID:"
+      botTitle: "Come ottenere il token del bot Telegram:",
+      botStep1: "Apri Telegram e cerca @BotFather",
+      botStep2: "Invia il comando /newbot",
+      botStep3: "Segui le istruzioni per creare il bot",
+      botStep4: "Copia il token fornito da BotFather",
+
+      chatTitle: "Come ottenere il tuo ID chat Telegram:",
+      chatStep1: "Apri Telegram e cerca @userinfobot",
+      chatStep2: "Invia qualsiasi messaggio al bot",
+      chatStep3: "Il bot risponderà con i tuoi dati, inclusi l'ID chat",
+      chatStep4: "Copia l'ID chat (è un numero)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt:
+      "Hai bisogno di aiuto per configurare il token del bot e l'ID chat?",
+    videoDescription: "Guarda il video qui sotto per istruzioni passo-passo.",
+
     labels: {
-      token: "Token Bot Telegram",
-      chatId: "Your Telegram Chat ID",
-      language: "Lingua delle notifiche",
+      token: "Token bot Telegram",
+      chatId: "Il tuo ID chat Telegram",
+      language: "Lingua notifiche",
       username: "Nome utente Telegram",
-      chatid: "Il tuo ID chat Telegram"
     },
+
     placeholders: {
-      token: "Inserisci il token del tuo bot da BotFather",
-      chatId: "Enter your Telegram chat ID",
+      token: "Inserisci il tuo token bot da BotFather",
+      chatId: "Inserisci il tuo ID chat Telegram",
       language: "Seleziona la lingua dei messaggi Telegram",
       username: "Inserisci il tuo nome utente Telegram",
-      chatid: "Inserisci il tuo ID chat di Telegram"
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Questo è il nome utente del tuo account Telegram (senza il simbolo @).",
     examples: {
       token: "Esempio: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Puoi ottenerlo inviando un messaggio a @userinfobot su Telegram."
+      chatId: "Ottienilo inviando un messaggio a @userinfobot su Telegram",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Istruzioni di configurazione:",
     setupSteps: [
-
-      "Open Telegram and search for \\\"BotFather\\\"",
-
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Apri Telegram e cerca "BotFather"',
+      'Avvia una conversazione con BotFather cliccando su "Start"',
+      "Inserisci /newbot e segui le istruzioni per creare un nuovo bot",
+      "Scegli un nome per il tuo bot",
+      "Scegli un nome utente per il bot (deve terminare con 'bot')",
+      "Copia il token API fornito da BotFather",
+      "Invia un messaggio al tuo nuovo bot per attivare la conversazione",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Come ottenere il tuo ID chat Telegram:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\"userinfobot\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Apri Telegram e cerca "userinfobot"',
+      "Invia qualsiasi messaggio al bot",
+      "Il bot risponderà con i tuoi dati, inclusi l'ID chat",
+      "Copia il tuo ID chat",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle:
+      "Hai bisogno di aiuto per configurare il token del bot e l'ID chat?",
+    helpDescription: "Guarda il video qui sotto per istruzioni passo-passo.",
+    botTokenLabel: "Token bot Telegram",
+    botTokenPlaceholder: "Inserisci il tuo token bot da BotFather",
+    botTokenExample: "Esempio: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Il tuo ID chat Telegram",
+    chatIdPlaceholder: "Inserisci il tuo ID chat Telegram",
+    chatIdDescription:
+      "Ottienilo inviando un messaggio a @userinfobot su Telegram",
+    languageLabel: "Lingua notifiche",
+    languagePlaceholder: "Seleziona la lingua dei messaggi Telegram",
     languages: {
       en: "Inglese",
       de: "Tedesco",
       fr: "Francese",
-      es: "Italiano",
-      it: "Italiano"
+      es: "Spagnolo",
+      it: "Italiano",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Anteprima notifica Telegram",
+    carAlertTitle: "Nuovo avviso auto!",
+    priceLabel: "Prezzo: {{price}}",
+    kilometresLabel: "Chilometri: {{kms}}",
+    locationLabel: "Località: {{location}}",
+    viewListing: "Visualizza annuncio →",
     errors: {
-      token: "È necessario il token del bot Telegram",
-      chatId: "Telegram chat ID is required",
-      language: "La lingua della notifica è obbligatoria",
+      token: "Il token del bot Telegram è obbligatorio",
+      chatId: "L'ID chat Telegram è obbligatorio",
+      language: "La lingua delle notifiche è obbligatoria",
       username: "Il nome utente Telegram è obbligatorio",
-      chatid: "L’ID chat di Telegram è obbligatorio"
     },
+
     actions: {
       previous: "Precedente",
-      continue: "Continua"
+      continue: "Continua",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Esempio: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Token Bot Telegram",
-    bottokenplaceholder: "Inserisci il token del tuo bot da BotFather",
-    caralerttitle: "🚗 Nuova auto!",
-    chatiddescription: "Puoi ottenerlo inviando un messaggio a @userinfobot su Telegram.",
-    chatidlabel: "Il tuo ID chat Telegram",
-    chatidplaceholder: "Inserisci il tuo ID chat di Telegram",
-    chatidsteps: {
-      0: "Apri Telegram e cerca \"userinfobot\"",
-      1: "Invia qualsiasi messaggio al bot",
-      2: "Il bot risponderà con le tue informazioni, incluso il tuo Chat ID",
-      3: "Copia il tuo ID chat"
-    },
-    chatidtitle: "Come ottenere il tuo Telegram Chat ID:",
-    confirmcontact: "Ho avviato una chat con il bot e inviato un messaggio",
-    contactbotinstruction: "Avvia una chat con il nostro bot Telegram cliccando sul link qui sotto e inviandogli un messaggio:",
-    contactbotnote: "Questo è necessario per ricevere le notifiche sulle auto. Se sei da desktop, puoi scansionare il codice QR.",
-    helpdescription: "Guarda il video qui sotto per una guida passo dopo passo.",
-    helptitle: "Hai bisogno di aiuto per configurare il tuo Telegram Bot Token e Chat ID?",
-    kilometreslabel: "Chilometri: {{kms}}",
-    languagelabel: "Lingua delle notifiche",
-    languageplaceholder: "Seleziona la lingua dei messaggi Telegram",
-    locationlabel: "Località: {{location}}",
-    previewtitle: "Anteprima notifiche Telegram",
-    pricelabel: "Prezzo: {{price}}",
-    setupsteps: {
-      0: "Apri Telegram e cerca \"BotFather\"",
-      1: "Avvia una chat con BotFather cliccando su \"Start\"",
-      2: "Digita /newbot e segui le istruzioni per creare un nuovo bot",
-      3: "Scegli un nome per il tuo bot",
-      4: "Scegli un nome utente per il tuo bot (deve terminare con 'bot')",
-      5: "Copia il token API fornito da BotFather",
-      6: "Invia un messaggio al tuo nuovo bot per attivare la chat"
-    },
-    setuptitle: "Istruzioni per la configurazione:",
-    subheading: "Configura il tuo bot Telegram",
-    usernamedescription: "Questo è il nome utente del tuo account Telegram (senza il simbolo @).",
-    videodescription: "Guarda il video qui sotto per una guida passo passo.",
-    videoprompt: "Hai bisogno di aiuto per configurare il tuo Telegram Bot Token e Chat ID?",
-    viewlisting: "Visualizza annuncio →"
+    contactBotInstruction:
+      "Avvia una conversazione con il nostro bot Telegram cliccando sul link qui sotto e inviando un messaggio:",
+    contactBotNote:
+      "Questo è obbligatorio per ricevere avvisi auto. Se sei al computer, scansiona il codice QR.",
+    confirmContact:
+      "Ho avviato la conversazione con il bot e inviato un messaggio",
   },
   review: {
-    title: "Rivedi il tuo abbonamento",
-    description: "Ti preghiamo di verificare i dettagli del tuo abbonamento prima di procedere al pagamento.",
+    title: "Riepilogo del tuo abbonamento",
+    description: "Controlla i dettagli dell'abbonamento prima del pagamento.",
+
     personal: {
       title: "Informazioni personali",
       name: "Nome",
-      email: "E-mail"
+      email: "Email",
     },
+
     monitoring: {
       title: "Impostazioni di monitoraggio",
-      websites: "Siti web",
-      facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook",
-      updatefrequency: "Frequenza di aggiornamento"
+      websites: "Siti",
+      facebookUrl: "URL Facebook",
+      updateFrequency: "Frequenza di aggiornamento",
     },
+
     specs: {
-      title: "Specifiche dell’auto",
+      title: "Specifiche auto",
       brand: "Marca",
       model: "Modello",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Autonomia (km)",
-      price: "Fascia di prezzo (€)",
-      fueltype: "Tipo di carburante",
-      yearrange: "Intervallo di anni"
+      fuelType: "Tipo di carburante",
+      yearRange: "Anno",
+      mileage: "Chilometri (km)",
+      price: "Prezzo (€)",
     },
+
     notification: {
       title: "Impostazioni notifiche",
       telegram: "Bot Telegram",
-      language: "Lingua delle notifiche"
+      language: "Lingua notifiche",
     },
+
     summary: {
       title: "Riepilogo abbonamento",
       base: "Abbonamento base",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
+      extraWebsites: "Siti aggiuntivi",
+      frequencyUpgrade: "Aggiornamento frequenza",
       total: "Totale (mensile)",
-      extrawebsites: "Siti web aggiuntivi",
-      frequencyupgrade: "Aggiornamento frequenza"
     },
+
     terms: {
       checkbox: "Accetto i",
-      tos: "Termini di servizio",
+      tos: "Termini di utilizzo",
       privacy: "Informativa sulla privacy",
-      note: "Il tuo abbonamento si rinnoverà automaticamente ogni mese. Puoi annullarlo in qualsiasi momento.",
-      error: "Devi accettare i termini e le condizioni"
+      note: "Il tuo abbonamento si rinnova automaticamente ogni mese. Puoi annullare in qualsiasi momento.",
+      error: "Devi accettare i termini di utilizzo",
     },
+
     actions: {
       previous: "Precedente",
-      submit: "Procedi al pagamento"
-    }
+      submit: "Vai al pagamento",
+    },
   },
   faq: {
     title: "Domande frequenti",
-    subtitle: "Trova le risposte alle domande più frequenti sul nostro servizio.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "La velocità delle notifiche dipende dalla frequenza di aggiornamento scelta. Con il piano orario predefinito, riceverai le notifiche entro un’ora dalla pubblicazione di un nuovo annuncio. Per ricevere notifiche quasi in tempo reale (entro pochi minuti dalla pubblicazione), puoi passare ai nostri piani di aggiornamento più frequenti.",
-        question: "Quanto velocemente riceverò le notifiche dopo la pubblicazione di un nuovo annuncio?"
+    subtitle: "Trova risposte alle domande più comuni sul nostro servizio.",
+    contactPrompt: "Hai ancora domande?",
+    contactLink: "Contatta il nostro supporto",
+    questions: [
+      {
+        question:
+          "Quanto velocemente ricevo notifiche dopo la pubblicazione di un nuovo annuncio?",
+        answer:
+          "La velocità delle notifiche dipende dalla frequenza di aggiornamento scelta. Con il piano orario, ricevi notifiche entro un'ora dalla pubblicazione. Per notifiche quasi istantanee (in pochi minuti), passa a piani più frequenti.",
       },
-      1: {
-        answer: "Sì! Puoi creare più profili di ricerca con criteri diversi. Ogni profilo viene considerato come un abbonamento separato, ma puoi gestirli tutti da un unico account. È perfetto se stai cercando diversi tipi di veicoli contemporaneamente.",
-        question: "Posso monitorare diversi tipi di auto contemporaneamente?"
+      {
+        question:
+          "Posso monitorare più tipi di auto diversi contemporaneamente?",
+        answer:
+          "Sì! Puoi creare più profili di ricerca con criteri diversi. Ogni profilo conta come abbonamento separato, ma puoi gestirli tutti da un unico account.",
       },
-      2: {
-        answer: "Attualmente supportiamo le principali piattaforme di annunci auto, tra cui AutoTrader, CarGurus, Cars.com e Facebook Marketplace. Stiamo costantemente ampliando la nostra copertura per includere altri siti web in base alle richieste degli utenti e alla popolarità regionale.",
-        question: "Quali siti web supportate attualmente?"
+      {
+        question: "Quali siti supportate attualmente?",
+        answer:
+          "Attualmente supportiamo le principali piattaforme, inclusi AutoTrader, CarGurus, Cars.com e Facebook Marketplace. Aggiungiamo continuamente nuovi siti su richiesta.",
       },
-      3: {
-        answer: "Assolutamente no! Forniamo istruzioni dettagliate passo dopo passo, sia testuali che video, per aiutarti a configurare il bot Telegram. La maggior parte degli utenti completa la configurazione in meno di 5 minuti, anche senza alcuna esperienza tecnica.",
-        question: "Devo avere conoscenze tecniche per usare il bot Telegram?"
+      {
+        question:
+          "Ho bisogno di competenze tecniche per usare il bot Telegram?",
+        answer:
+          "No! Forniamo istruzioni dettagliate con testo e video. La maggior parte degli utenti configura il bot in meno di 5 minuti.",
       },
-      4: {
-        answer: "Sì, puoi modificare i tuoi criteri di ricerca in qualsiasi momento dalla dashboard del tuo account. Le modifiche avranno effetto immediato e le tue notifiche si aggiorneranno di conseguenza, senza alcuna interruzione del servizio.",
-        question: "Posso modificare i criteri di ricerca dopo aver attivato il mio abbonamento?"
+      {
+        question:
+          "Posso modificare i criteri di ricerca dopo aver configurato l'abbonamento?",
+        answer:
+          "Sì, puoi modificare i criteri in qualsiasi momento dal dashboard. Le modifiche hanno effetto immediato.",
       },
-      5: {
-        answer: "Puoi annullare il tuo abbonamento in qualsiasi momento dalla dashboard del tuo account. Vai alla sezione \"Abbonamenti\", seleziona l’abbonamento che desideri annullare e clicca sul pulsante \"Annulla abbonamento\". Il servizio rimarrà attivo fino al termine del periodo di fatturazione in corso.",
-        question: "Come posso annullare il mio abbonamento?"
-      }
-    },
-    contactlink: "Contatta il nostro team di supporto",
-    contactprompt: "Hai ancora domande?"
+      {
+        question: "Come annullo l'abbonamento?",
+        answer:
+          'Puoi annullare l\'abbonamento in qualsiasi momento nella sezione "Abbonamenti" del dashboard. Il servizio rimane attivo fino alla fine del periodo di fatturazione.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
+    brandDescription:
+      "Il tuo assistente personale per trovare l'offerta perfetta di auto usata al momento giusto.",
+    quickLinks: "Link rapidi",
     features: "Funzionalità",
     pricing: "Prezzi",
-    faq: "Domande frequenti",
-    getStarted: "Get Started",
+    faq: "FAQ",
+    getStarted: "Inizia",
     legal: "Legale",
-    terms: "Termini di servizio",
+    terms: "Termini di utilizzo",
     privacy: "Informativa sulla privacy",
-    cookies: "Informativa sui cookie",
-    gdpr: "Conformità al GDPR",
+    cookies: "Politica sui cookie",
+    gdpr: "Conformità GDPR",
     contact: "Contatti",
     email: "support@amiquus.com",
     telegram: "Contattaci su Telegram",
@@ -694,1047 +535,908 @@ export const it = {
     blog: "Blog",
     careers: "Carriere",
     support: "Supporto",
-    branddescription: "Il tuo assistente personale per trovare l’offerta perfetta di auto usata al momento giusto.",
-    brandtitle: "Ecco come",
-    getstarted: "Inizia",
-    quicklinks: "Collegamenti rapidi"
   },
   login: {
-    title: "Accedi al tuo account",
-    description: "Inserisci la tua email e la password per accedere alla tua dashboard",
+    title: "Accedi all'account",
+    description: "Inserisci email e password per accedere al dashboard",
     emailLabel: "Email",
     passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    loginButton: "Accedi",
+    loggingIn: "Accesso in corso...",
+    loginWithGoogle: "Accedi con Google",
     or: "oppure",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Non hai un account?",
+    registerLink: "Registrati",
+    successTitle: "Accesso riuscito",
+    successMessage: "Hai effettuato l'accesso con successo.",
+    errorTitle: "Accesso fallito",
+    genericError: "Controlla le tue credenziali e riprova.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Per favore, inserisci un indirizzo email valido",
-      shortpassword: "La password deve contenere almeno 6 caratteri"
+      invalidEmail: "Inserisci un indirizzo email valido",
+      shortPassword: "La password deve avere almeno 6 caratteri",
     },
-    emaillabel: "E-mail",
-    errortitle: "Accesso non riuscito",
-    genericerror: "Controlla le tue credenziali e riprova.",
-    loggingin: "Accesso in corso...",
-    loginbutton: "Accedi",
-    loginwithgoogle: "Accedi con Google",
-    noaccount: "Non hai un account?",
-    passwordlabel: "Password",
-    registerlink: "Registrati",
-    successmessage: "Accesso effettuato con successo.",
-    successtitle: "Accesso effettuato"
   },
   register: {
-    title: "Crea un account",
-    description: "Registrati per iniziare a monitorare la tua auto dei sogni",
+    title: "Crea account",
+    description: "Registrati e inizia a cercare l'auto dei tuoi sogni",
     google: "Registrati con Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
+    orContinue: "Oppure continua con",
+    firstName: "Nome",
+    lastName: "Cognome",
     username: "Nome utente",
-    email: "E-mail",
+    email: "Email",
     password: "Password",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "Conferma password",
+    termsNotice: "Accetto i",
+    termsOfService: "Termini di utilizzo",
+    privacyPolicy: "Informativa sulla privacy",
+    createBtn: "Crea account",
+    alreadyHave: "Hai già un account?",
     login: "Accedi",
     and: "e",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Campi mancanti",
+        desc: "Compila tutti i campi obbligatori",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Nome utente non valido",
+        desc: "Il nome utente deve essere alfanumerico e tra 3 e 20 caratteri",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Le password non corrispondono",
+        desc: "Assicurati che le password corrispondano",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Termini non accettati",
+        desc: "Devi accettare i termini di utilizzo e l'informativa sulla privacy per continuare",
       },
       success: {
-        title: "Registrazione avvenuta con successo",
-        desc: "Benvenuto su Amiquus! Verrai reindirizzato per verificare il tuo indirizzo email."
+        title: "Registrazione riuscita",
+        desc: "Benvenuto su Amiquus! Verrai reindirizzato alla verifica email.",
       },
       failure: {
-        title: "Registrazione non riuscita",
-        desc: "Controlla le tue informazioni e riprova."
+        title: "Registrazione fallita",
+        desc: "Controlla i tuoi dati e riprova",
       },
-      invalidusername: {
-        desc: "Il nome utente deve essere alfanumerico e contenere da 3 a 20 caratteri",
-        title: "Nome utente non valido"
-      },
-      missingfields: {
-        desc: "Per favore, compila tutti i campi obbligatori",
-        title: "Campi mancanti"
-      },
-      passwordmismatch: {
-        desc: "Assicurati che le tue password coincidano",
-        title: "Le password non corrispondono"
-      },
-      termsnotaccepted: {
-        desc: "Devi accettare i termini e l’informativa sulla privacy per continuare",
-        title: "Termini non accettati"
-      }
     },
-    alreadyhave: "Hai già un account?",
-    confirmpassword: "Conferma password",
-    createbtn: "Crea account",
-    firstname: "Nome",
-    lastname: "Cognome",
-    orcontinue: "Oppure continua con",
-    privacypolicy: "Informativa sulla privacy",
-    termsnotice: "Accetto i",
-    termsofservice: "Termini di servizio"
   },
   verifyEmail: {
-    title: "Verifica la tua email",
-    description: "Un codice di verifica è stato inviato alla tua email.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "Verifica email",
+    description:
+      "Abbiamo inviato un codice di verifica al tuo indirizzo email.",
+    codeLabel: "Codice di verifica",
+    verifyButton: "Verifica email",
+    updateEmailLabel: "Aggiorna email",
+    updateEmailButton: "Aggiorna email",
+    resendButton: "Reinvia codice",
+    resendCountdown: "Puoi reinviare il codice tra {{seconds}}s",
+    footerNote: "Non hai ricevuto il codice? Controlla la cartella spam.",
     toast: {
       verified: "Email verificata",
-      failed: "Verifica non riuscita",
+      failed: "Verifica fallita",
       resent: "Codice di verifica reinviato",
       error: "Errore",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Email aggiornata",
-      entervalidemail: "Per favore, inserisci un indirizzo email valido",
-      invalidemail: "Email non valida",
-      sameemail: "Stessa email",
-      sameemaildesc: "Il nuovo indirizzo email è uguale a quello attuale."
+      invalidEmail: "Email non valida",
+      enterValidEmail: "Inserisci un indirizzo email valido",
+      sameEmail: "Stessa email",
+      sameEmailDesc: "La nuova email è identica a quella attuale",
+      emailUpdated: "Email aggiornata",
     },
-    codelabel: "Codice di verifica",
-    footernote: "Non hai ricevuto il codice? Controlla la cartella dello spam.",
-    resendbutton: "Invia nuovamente il codice",
-    resendcountdown: "Puoi reinviare il codice tra {{seconds}}s",
-    updateemailbutton: "Aggiorna email",
-    updateemaillabel: "Aggiorna email",
-    verifybutton: "Verifica email"
   },
   dashboardPayment: {
     add: "Aggiungi metodo di pagamento",
-    description: "Aggiungi una nuova carta di credito o debito per i pagamenti dell’abbonamento.",
-    processing: "Elaborazione...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    description:
+      "Aggiungi una nuova carta di credito o debito per i pagamenti dell'abbonamento.",
+    processing: "Elaborazione in corso...",
+    errorTitle: "Errore nell'aggiunta del metodo di pagamento",
+    errorMessage: "Si è verificato un errore imprevisto",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
+      title: "Errore",
+      description: "Impossibile inizializzare le impostazioni di pagamento",
     },
-    errormessage: "Si è verificato un errore imprevisto",
-    errortitle: "Errore durante l’aggiunta del metodo di pagamento",
-    initerror: {
-      description: "Impossibile inizializzare la configurazione del pagamento",
-      title: "Errore"
-    }
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Anni",
+      priceRange: "Prezzo",
+      websites: "Siti",
+      updates: "Aggiornamenti",
+      language: "Lingua",
+      price: "Prezzo",
+      edit: "Modifica",
+      cancelAlert: "Annulla avviso",
+      cancelTitle: "Annulla avviso auto",
+      cancelDescription:
+        "Sei sicuro di voler annullare l'avviso per {{brand}} {{model}}? Questo interromperà tutte le notifiche e dovrai riconfigurare l'avviso.",
+      keepMyAlert: "Mantieni avviso",
+      confirmCancel: "Annulla avviso",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Scade",
+      default: "Predefinito",
+      setAsDefault: "Imposta come predefinito",
+      remove: "Rimuovi",
+      setDefaultTitle: "Imposta metodo di pagamento predefinito",
+      setDefaultDescription:
+        "Vuoi impostare la carta {{brand}}, terminante in {{last4}}, come metodo di pagamento predefinito? Questa carta verrà usata per tutti i pagamenti futuri.",
+      removeTitle: "Rimuovi metodo di pagamento",
+      removeDescription:
+        "Sei sicuro di voler rimuovere la carta {{brand}}, terminante in {{last4}}?",
+      removeWarning:
+        "Questo è il tuo metodo di pagamento predefinito e la rimozione potrebbe influire sugli abbonamenti attivi.",
+      cancel: "Annulla",
+      confirmRemove: "Rimuovi carta",
+    },
   },
   profile: {
     tabs: {
       alerts: "I miei avvisi",
-      payments: "Metodi di pagamento"
+      payments: "Metodi di pagamento",
     },
     sidebar: {
-      memberSince: "Member since",
+      memberSince: "Membro dal",
       subscriptions: "Abbonamenti",
       methods: "Metodi di pagamento",
       account: "Impostazioni account",
       privacy: "Privacy e sicurezza",
-      logout: "Disconnetti",
-      membersince: "Membro dal"
+      logout: "Esci",
     },
     account: {
       title: "Impostazioni account",
-      desc: "Aggiorna le informazioni e le preferenze del tuo account.",
+      desc: "Aggiorna le tue informazioni e impostazioni account.",
       name: "Nome",
-      email: "E-mail",
+      email: "Email",
       username: "Nome utente",
       cancel: "Annulla",
-      save: "Salva modifiche"
+      save: "Salva modifiche",
     },
     security: {
       title: "Privacy e sicurezza",
-      desc: "Gestisci le impostazioni di sicurezza e le preferenze sulla privacy.",
+      desc: "Gestisci impostazioni di sicurezza e privacy.",
       current: "Password attuale",
       new: "Nuova password",
       confirm: "Conferma nuova password",
-      update: "Aggiorna password"
+      update: "Aggiorna password",
     },
     logout: {
-      title: "Disconnetti",
-      desc: "Sei sicuro di voler uscire dal tuo account?",
-      success: "Sei stato disconnesso con successo."
+      title: "Esci",
+      desc: "Sei sicuro di voler uscire?",
+      success: "Hai effettuato la disconnessione con successo.",
     },
     alerts: {
-      title: "Abbonamenti agli avvisi auto",
-      desc: "Gestisci gli avvisi di ricerca auto e le preferenze di notifica.",
+      title: "Abbonamenti avvisi auto",
+      desc: "Gestisci i tuoi avvisi e impostazioni di notifica.",
       add: "Aggiungi nuovo avviso",
-      none: "Non hai nessun avviso attivo per le auto.",
+      none: "Non hai avvisi auto attivi.",
       cta: "Crea il tuo primo avviso",
-      warning: "⚠️ Le modifiche al tuo abbonamento saranno applicate nel prossimo periodo di fatturazione, e solo dopo un pagamento andato a buon fine. Se il pagamento non va a buon fine, la tua attuale configurazione degli avvisi resterà invariata."
+      warning:
+        "⚠️ Le modifiche all'abbonamento avranno effetto nel prossimo ciclo di fatturazione e solo dopo un pagamento riuscito. In caso di pagamento fallito, la configurazione attuale verrà mantenuta.",
     },
     payments: {
       title: "Metodi di pagamento",
-      desc: "Gestisci i tuoi metodi di pagamento per la fatturazione dell’abbonamento.",
-      none: "Non hai ancora salvato nessun metodo di pagamento.",
-      encrypted: "Le tue informazioni di pagamento sono criptate e conservate in modo sicuro."
-    }
+      desc: "Gestisci metodi di pagamento per abbonamenti.",
+      none: "Non hai metodi di pagamento salvati.",
+      encrypted:
+        "I tuoi dati di pagamento sono crittografati e archiviati in modo sicuro.",
+    },
   },
   setupAlerts: {
-    title: "Imposta gli avvisi per la tua auto",
-    subtitle: "Configura il tuo bot Telegram per ricevere notifiche sulla tua auto dei sogni",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Attiva il servizio di avviso per la mia auto",
+    title: "Configura avvisi auto",
+    subtitle:
+      "Configura il tuo bot Telegram per ricevere notifiche sull'auto dei tuoi sogni",
+    basicPlan: "Piano base",
+    baseTitle: "79,99 €/mese",
+    button: "Avvia servizio avvisi auto",
     cancel: "Annulla in qualsiasi momento",
     toasts: {
       terms: {
         title: "Termini non accettati",
-        description: "Devi accettare i termini di servizio per continuare"
+        description: "Devi accettare i termini di utilizzo per continuare",
       },
       success: {
         title: "Abbonamento creato",
-        description: "Il tuo abbonamento è stato creato con successo"
+        description: "Il tuo abbonamento è stato creato con successo",
       },
       error: {
-        title: "Errore durante la creazione dell’abbonamento"
+        title: "Errore nella creazione dell'abbonamento",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
+        title: "Contatto bot necessario",
+        description:
+          "Per ricevere avvisi auto, devi avviare una conversazione con il nostro bot Telegram e inviare un messaggio. Segui le istruzioni qui sotto.",
       },
-      contactbot: {
-        description: "Per ricevere le notifiche sulle auto, devi avviare una chat con il nostro bot Telegram e inviargli un messaggio. Segui le istruzioni qui sotto per contattare il bot.",
-        title: "È richiesto il bot di contatto"
-      }
     },
-    basetitle: "79,99 $/mese",
-    basicplan: "Piano Base"
   },
   loginPrompt: {
     title: "Accesso richiesto",
-    description: "Devi essere loggato per continuare. Effettua il login o registrati.",
+    description: "Devi essere loggato per continuare. Accedi o registrati.",
     register: "Registrati",
-    login: "Accesso"
+    login: "Accedi",
   },
   waitlistPrompt: {
-    title: "Unisciti alla lista d’attesa",
-    description: "Al momento abbiamo raggiunto la capacità massima. Unisciti alla lista d’attesa per essere avvisato quando si libera un posto.",
-    button: "Unisciti alla lista d’attesa"
+    title: "Unisciti alla lista d'attesa",
+    description:
+      "Siamo attualmente al completo. Unisciti alla lista d'attesa per essere avvisato quando si libera un posto.",
+    button: "Unisciti alla lista d'attesa",
   },
   subscription: {
-    title: "Dettagli dell’abbonamento",
-    subTitle: "Edit your subscription details below",
-    error: "Torna alla dashboard",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Puoi mettere in pausa il tuo abbonamento in qualsiasi momento. Quando metti in pausa il tuo abbonamento, gli avvisi per la tua auto saranno sospesi fino a quando non li riattivi.",
+    title: "Dettagli abbonamento",
+    subTitle: "Modifica i dettagli dell'abbonamento qui sotto",
+    error: "Torna al dashboard",
+    notFound: "Abbonamento non trovato",
+    notFoundSub: "Torna al dashboard",
+    description:
+      "Puoi mettere in pausa l'abbonamento in qualsiasi momento. Quando in pausa, gli avvisi si fermano fino alla riattivazione.",
     form: {
       status: {
         label: "Stato",
         placeholder: "Seleziona stato",
         active: "Attivo",
-        paused: "In pausa"
-      }
+        paused: "In pausa",
+      },
     },
     actions: {
       save: "Salva modifiche",
-      back: "Indietro"
+      back: "Indietro",
     },
     toasts: {
       success: {
         title: "Abbonamento aggiornato",
-        description: "Il tuo abbonamento per {{brand}} {{model}} è stato aggiornato con successo"
+        description:
+          "Il tuo abbonamento per {{brand}} {{model}} è stato aggiornato con successo",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Impossibile aggiornare l'abbonamento",
+        description:
+          "Non puoi mettere in pausa e aggiornare il prezzo dell'abbonamento contemporaneamente. Scegli una o l'altra opzione.",
       },
       error: {
-        title: "Errore durante l’aggiornamento dell’abbonamento"
+        title: "Errore nell'aggiornamento dell'abbonamento",
       },
-      priceerror: {
-        description: "Stai mettendo in pausa e aggiornando il prezzo dell’abbonamento contemporaneamente. Devi scegliere se mettere in pausa oppure aggiornare il prezzo.",
-        title: "Impossibile aggiornare l’abbonamento"
-      }
     },
-    notfound: "Abbonamento non trovato",
-    notfoundsub: "Torna alla dashboard",
-    subtitle: "Modifica i dettagli del tuo abbonamento qui sotto"
   },
   about: {
-    title: "Chi siamo AMIQUUS",
-    description: "Stiamo rivoluzionando il modo in cui le persone trovano la loro auto usata perfetta, portando la tecnologia di monitoraggio avanzata a tutti.",
+    title: "Chi siamo",
+    description:
+      "Rivoluzioniamo la ricerca dell'auto usata perfetta con tecnologia di monitoraggio avanzata",
     meta: {
       title: "Chi siamo | Amiquus - Servizio di monitoraggio annunci auto",
-      description: "Scopri AMIQUUS, la nostra missione per rivoluzionare l’acquisto di auto usate e il team che sta dietro al nostro servizio intelligente di monitoraggio degli annunci auto."
+      description:
+        "Scopri di più su Amiquus, la nostra missione e il team dietro il servizio intelligente di monitoraggio annunci.",
     },
     story: {
       heading: "La nostra storia",
-      paragraphs: {
-        0: "AMIQUUS è nato nel 2023 quando il nostro fondatore, Alex, ha passato mesi ad aggiornare siti di annunci auto cercando uno specifico modello raro a un buon prezzo. Dopo aver perso diverse occasioni a causa di notifiche in ritardo, ha capito che doveva esserci un modo migliore.",
-        1: "Lavorando con un piccolo team di sviluppatori e appassionati di auto, Alex ha realizzato un sistema di monitoraggio in grado di tracciare gli annunci su più siti contemporaneamente e inviare notifiche istantanee quando venivano trovate corrispondenze.",
-        2: "Quello che era iniziato come un progetto personale ha rapidamente suscitato l’interesse di amici e familiari, e già all’inizio del 2025, AMIQUUS è nato come servizio accessibile a tutti. Oggi aiutiamo gli acquirenti di auto in tutto il paese a risparmiare tempo e trovare offerte migliori grazie alla nostra tecnologia intelligente di monitoraggio."
-      }
+      paragraphs: [
+        "Amiquus è nato nel 2023 quando il nostro fondatore Alex ha passato mesi ad aggiornare siti alla ricerca di un modello raro a buon prezzo. Dopo aver perso opportunità, ha capito che doveva esserci un modo migliore.",
+        "Con un piccolo team di sviluppatori e appassionati di auto, Alex ha costruito un sistema per monitorare più siti contemporaneamente e inviare notifiche istantanee.",
+        "Il progetto è cresciuto rapidamente e all'inizio del 2025 Amiquus è diventato un servizio per tutti. Oggi aiutiamo acquirenti in tutto il paese a risparmiare tempo e trovare offerte migliori.",
+      ],
     },
     mission: {
       heading: "La nostra missione",
-      items: {
-        0: {
-          description: "Elimina la necessità di aggiornare continuamente più siti web automatizzando la ricerca e ricevendo notifiche tempestive.",
-          title: "Risparmia tempo"
+      items: [
+        {
+          title: "Risparmiare tempo",
+          description:
+            "Elimina la necessità di aggiornare costantemente più siti con ricerca automatizzata e notifiche tempestive.",
         },
-        1: {
-          description: "Sii il primo a scoprire quando appare un’offerta imperdibile, ottenendo così un vantaggio in un mercato competitivo dove il tempismo è tutto.",
-          title: "Trova offerte migliori"
+        {
+          title: "Trovare offerte migliori",
+          description:
+            "Sii il primo a sapere delle grandi offerte e ottieni un vantaggio in un mercato competitivo.",
         },
-        2: {
-          description: "Prendi decisioni informate grazie a un monitoraggio completo su più piattaforme affidabili di annunci auto.",
-          title: "Acquista in tutta sicurezza"
-        }
-      }
+        {
+          title: "Acquistare con fiducia",
+          description:
+            "Prendi decisioni informate con monitoraggio completo su più piattaforme affidabili.",
+        },
+      ],
     },
     team: {
       heading: "Il nostro team",
-      members: {
-        0: {
-          bio: "Ex ingegnere software con una passione per le auto e per la creazione di soluzioni innovative.",
-          name: "Alex Morgan, ecco come",
-          role: "Fondatore e CEO"
+      members: [
+        {
+          name: "Alex Morgan",
+          role: "Fondatore e CEO",
+          bio: "Ex programmatore appassionato di auto e soluzioni innovative.",
         },
-        1: {
-          bio: "Esperto di data science specializzato in web scraping e sistemi di recupero delle informazioni.",
+        {
           name: "Sarah Chen",
-          role: "Direttore tecnico"
+          role: "Responsabile tecnico",
+          bio: "Esperta di data science, specializzata in web scraping.",
         },
-        2: {
-          bio: "Ingegnere full-stack con esperienza nella realizzazione di sistemi di notifica ad alte prestazioni.",
+        {
           name: "Marcus Lee",
-          role: "Sviluppatore principale"
+          role: "Responsabile sviluppo",
+          bio: "Ingegnere full-stack con esperienza in sistemi di notifica ad alte prestazioni.",
         },
-        3: {
-          bio: "Ex venditore d’auto dedicato ad aiutare i clienti a trovare il veicolo perfetto.",
-          name: "Elena Rodriguez, ecco come",
-          role: "Successo clienti"
-        }
-      }
+        {
+          name: "Elena Rodriguez",
+          role: "Supporto clienti",
+          bio: "Ex venditrice di auto, dedicata ad aiutare a trovare il veicolo perfetto.",
+        },
+      ],
     },
     join: {
-      heading: "Entra a far parte del nostro team",
-      description: "Siamo sempre alla ricerca di persone di talento, appassionate di tecnologia e desiderose di rivoluzionare l’esperienza d’acquisto dell’auto. Scopri le nostre posizioni aperte e unisciti alla nostra missione.",
-      cta: "Visualizza le posizioni aperte"
+      heading: "Unisciti al team",
+      description:
+        "Cerchiamo sempre talenti appassionati di tecnologia e della rivoluzione nell'acquisto di auto.",
+      cta: "Visualizza posizioni aperte",
     },
     questions: {
       heading: "Hai domande?",
-      description: "Scopri come funziona il nostro servizio, consulta le opzioni di prezzo o contatta il nostro team di supporto.",
+      description:
+        "Scopri di più su come funziona il servizio, i prezzi o contatta il supporto.",
       links: {
         faq: "Visita le FAQ",
         pricing: "Visualizza prezzi",
-        support: "Contatta il supporto"
-      }
-    }
+        support: "Contatta supporto",
+      },
+    },
   },
   terms: {
-    metaTitle: "Termini di servizio | Amiquus",
-    metaDescription: "Leggi i Termini di Servizio di AMIQUUS che regolano l’utilizzo del nostro servizio di monitoraggio e notifica degli annunci auto.",
-    title: "Termini di servizio",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Termini di utilizzo | Amiquus",
+    metaDescription:
+      "Leggi i termini di utilizzo di Amiquus che regolano l'uso del servizio di monitoraggio annunci.",
+    title: "Termini di utilizzo",
+    lastUpdated: "Ultimo aggiornamento: 21 maggio 2025.",
     sections: {
-      1: {
-        id: "accordo",
-        heading: "Accettazione dei Termini",
-        paragraphs: {
-          0: "Questi Termini di Servizio costituiscono un accordo legalmente vincolante tra te e AMIQUUS, relativo al tuo accesso e utilizzo del nostro sito web e dei nostri servizi.",
-          1: "Accedendo o utilizzando i nostri servizi, accetti di essere vincolato da questi Termini. Se non sei d’accordo con una qualsiasi parte dei termini, non puoi accedere al servizio."
-        },
-        list: [
-        ]
+      "1": {
+        id: "agreement",
+        heading: "Accettazione dei termini",
+        paragraphs: [
+          "Questi termini di utilizzo costituiscono un accordo legalmente vincolante tra te e Amiquus riguardo all'accesso e all'uso del nostro sito e servizi.",
+          "Accedendo o utilizzando i nostri servizi, accetti questi termini. Se non sei d'accordo con qualsiasi parte, non puoi utilizzare i servizi.",
+        ],
+        list: [],
       },
-      2: {
-        id: "modifiche",
-        heading: "Modifiche ai Termini",
-        paragraphs: {
-          0: "Ci riserviamo il diritto, a nostra esclusiva discrezione, di modificare o sostituire questi Termini in qualsiasi momento. Se una modifica è sostanziale, faremo ogni ragionevole sforzo per fornire un preavviso di almeno 30 giorni prima che i nuovi termini abbiano effetto.",
-          1: "Continuando ad accedere o utilizzare il nostro servizio dopo l’entrata in vigore di tali modifiche, accetti di essere vincolato dai termini aggiornati. Se non accetti i nuovi termini, ti preghiamo di interrompere l’utilizzo del servizio."
-        },
-        list: [
-        ]
+      "2": {
+        id: "changes",
+        heading: "Modifiche ai termini",
+        paragraphs: [
+          "Ci riserviamo il diritto di modificare o sostituire questi termini a nostra discrezione. Se una modifica è sostanziale, forniremo un preavviso di almeno 30 giorni prima che i nuovi termini entrino in vigore.",
+          "Continuando a utilizzare il servizio dopo l'entrata in vigore delle modifiche, accetti i termini rivisti. Se non sei d'accordo con i nuovi termini, smetti di utilizzare il servizio.",
+        ],
+        list: [],
       },
-      3: {
+      "3": {
         id: "account",
-        heading: "Termini dell’account",
-        paragraphs: {
-          0: "Per utilizzare i nostri servizi, devi:"
-        },
-        list: {
-          0: "Devi avere almeno 18 anni",
-          1: "Completa la procedura di registrazione",
-          2: "Fornisci informazioni accurate, complete e aggiornate",
-          3: "Sii responsabile della sicurezza del tuo account e della tua password",
-          4: "Sii responsabile di tutte le attività che si svolgono sotto il tuo account",
-          5: "Avvisaci immediatamente non appena vieni a conoscenza di qualsiasi violazione della sicurezza o uso non autorizzato del tuo account."
-        }
+        heading: "Condizioni account",
+        paragraphs: ["Per utilizzare i nostri servizi, devi:"],
+        list: [
+          "Avere più di 18 anni",
+          "Completare il processo di registrazione",
+          "Fornire informazioni accurate, complete e aggiornate",
+          "Essere responsabile della sicurezza del tuo account e password",
+          "Essere responsabile per tutte le attività sul tuo account",
+          "Segnalare immediatamente qualsiasi uso non autorizzato o abuso dell'account",
+        ],
       },
-      4: {
-        id: "pagamento",
-        heading: "Termini di pagamento",
-        paragraphs: {
-          0: "Amiquus offre servizi in abbonamento alle seguenti condizioni:"
-        },
-        list: {
-          0: "Tutte le tariffe sono al netto delle imposte, che verranno aggiunte se applicabili.",
-          1: "I prezzi degli abbonamenti possono subire variazioni con un preavviso di 30 giorni.",
-          2: "Gli abbonamenti si rinnovano automaticamente, salvo disdetta prima del prossimo ciclo di fatturazione.",
-          3: "I rimborsi vengono gestiti caso per caso secondo la nostra politica di rimborso.",
-          4: "Utilizziamo Stripe per l’elaborazione sicura dei pagamenti e tutte le informazioni di pagamento sono conservate da Stripe."
-        }
+      "4": {
+        id: "payment",
+        heading: "Condizioni di pagamento",
+        paragraphs: [
+          "Amiquus offre servizi basati su abbonamento con queste condizioni:",
+        ],
+        list: [
+          "Tutti i prezzi sono senza tasse, che verranno aggiunte se applicabile",
+          "I prezzi degli abbonamenti possono cambiare con preavviso di 30 giorni",
+          "Gli abbonamenti si rinnovano automaticamente a meno che non vengano annullati prima del prossimo ciclo di fatturazione",
+          "I rimborsi vengono elaborati caso per caso secondo la politica di rimborso",
+          "Utilizziamo Stripe per l'elaborazione sicura dei pagamenti, tutti i dati di pagamento sono memorizzati su Stripe",
+        ],
       },
-      5: {
-        id: "capienza",
-        heading: "Limiti di capienza",
-        paragraphs: {
-          0: "Per garantire la qualità e l’affidabilità del servizio, AMIQUUS limita il numero di abbonamenti attivi a 30. Quando questo limite viene raggiunto:"
-        },
-        list: {
-          0: "I nuovi utenti possono unirsi alla nostra lista d’attesa",
-          1: "La posizione in lista d’attesa viene assegnata in base all’ordine di arrivo.",
-          2: "Quando saranno disponibili nuove capacità, gli utenti in lista d’attesa verranno avvisati in ordine.",
-          3: "Ci riserviamo il diritto di modificare i limiti di capienza in qualsiasi momento."
-        }
+      "5": {
+        id: "capacity",
+        heading: "Limiti di capacità",
+        paragraphs: [
+          "Per garantire la qualità del servizio, limitiamo il numero di abbonamenti attivi a 30. Quando il limite è raggiunto:",
+        ],
+        list: [
+          "I nuovi utenti possono unirsi alla lista d'attesa",
+          "Il posto in lista d'attesa è determinato dall'ordine di arrivo",
+          "Quando si libera un posto, notifichiamo gli utenti in ordine",
+          "Ci riserviamo il diritto di modificare i limiti di capacità",
+        ],
       },
-      6: {
-        id: "estrazione dati",
-        heading: "Limitazioni dello scraping web",
-        paragraphs: {
-          0: "Il nostro servizio accede ed elabora dati provenienti da diversi siti web di annunci automobilistici. Utilizzando il nostro servizio, riconosci che:"
-        },
-        list: {
-          0: "Amiquus rispetta i termini di servizio dei siti web che monitoriamo.",
-          1: "Applichiamo il rate limiting e adottiamo pratiche di crawling rispettose",
-          2: "La disponibilità di alcuni siti web può variare in base ai loro termini e alle misure tecniche.",
-          3: "Non garantiamo la completezza né l’aggiornamento dei dati raccolti."
-        }
+      "6": {
+        id: "scraping",
+        heading: "Limiti di web scraping",
+        paragraphs: [
+          "Il nostro servizio accede e processa dati da più siti. Utilizzando il servizio, riconosci:",
+        ],
+        list: [
+          "Amiquus rispetta i termini di utilizzo dei siti monitorati",
+          "Utilizziamo limitazione di tasso e pratiche etiche di raccolta dati",
+          "La disponibilità di alcuni siti può cambiare",
+          "Non garantiamo la completezza o l'aggiornamento dei dati raccolti",
+        ],
       },
-      7: {
-        id: "intellettuale",
+      "7": {
+        id: "intellectual",
         heading: "Proprietà intellettuale",
-        paragraphs: {
-          0: "Il servizio AMIQUUS, inclusi i suoi contenuti originali, le funzionalità e le caratteristiche, è e resterà di esclusiva proprietà di AMIQUUS. Il nostro servizio è protetto da copyright, marchi registrati e altre leggi degli Stati Uniti e dei paesi esteri.",
-          1: "I nostri marchi e la nostra veste grafica non possono essere utilizzati in relazione a nessun prodotto o servizio senza il previo consenso scritto di AMIQUUS."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Il servizio Amiquus, inclusi contenuti originali, funzionalità e funzionalità, è e rimane di proprietà esclusiva di Amiquus. Il servizio è protetto da copyright, marchi e altre leggi.",
+          "Non puoi utilizzare i nostri marchi e design senza previo consenso scritto di Amiquus.",
+        ],
+        list: [],
       },
-      8: {
-        id: "cessazione",
-        heading: "Cessazione",
-        paragraphs: {
-          0: "Possiamo terminare o sospendere il tuo account immediatamente, senza preavviso né responsabilità, per qualsiasi motivo, incluso, senza limitazione, se violi i Termini.",
-          1: "Alla cessazione, il tuo diritto di utilizzare il servizio terminerà immediatamente. Se desideri chiudere il tuo account, puoi semplicemente smettere di utilizzare il servizio oppure contattarci per richiederne l’eliminazione."
-        },
-        list: [
-        ]
+      "8": {
+        id: "termination",
+        heading: "Risoluzione",
+        paragraphs: [
+          "Possiamo terminare o sospendere l'account immediatamente, senza preavviso, per qualsiasi motivo, inclusa la violazione dei termini.",
+          "Alla risoluzione, il diritto di utilizzare il servizio cessa immediatamente. Se desideri terminare l'account, smetti di utilizzare il servizio o contattaci per l'eliminazione.",
+        ],
+        list: [],
       },
-      9: {
-        id: "limitazioni",
+      "9": {
+        id: "limitations",
         heading: "Limitazione di responsabilità",
-        paragraphs: {
-          0: "In nessun caso AMIQUUS, né i suoi amministratori, dipendenti, partner, agenti, fornitori o affiliati, potrà essere ritenuta responsabile per danni indiretti, accidentali, speciali, consequenziali o punitivi, inclusi, senza limitazione, perdita di profitti, dati, uso, avviamento o altre perdite immateriali derivanti da:"
-        },
-        list: {
-          0: "Il tuo accesso o utilizzo o l’impossibilità di accedere o utilizzare il servizio",
-          1: "Qualsiasi comportamento o contenuto di terzi sul servizio",
-          2: "Qualsiasi contenuto ottenuto dal servizio",
-          3: "Accesso, utilizzo o modifica non autorizzati delle tue trasmissioni o dei tuoi contenuti"
-        }
-      },
-      10: {
-        id: "dichiarazione di esclusione di responsabilità",
-        heading: "Esclusione di responsabilità",
-        paragraphs: {
-          0: "L’utilizzo del servizio è a tuo esclusivo rischio. Il servizio viene fornito “COSÌ COM’È” e “COME DISPONIBILE”. Il servizio è offerto senza alcuna garanzia, espressa o implicita.",
-          1: "Amiquus non garantisce che il servizio sarà ininterrotto, puntuale, sicuro o privo di errori, né che i risultati ottenuti dall’utilizzo del servizio saranno accurati o affidabili."
-        },
+        paragraphs: [
+          "Amiquus, i suoi direttori, dipendenti, partner o fornitori non sono responsabili per danni indiretti, incidentali, speciali o punitivi, inclusa perdita di profitti, dati o altre perdite intangibili, derivanti da:",
+        ],
         list: [
-        ]
+          "Accesso o incapacità di accedere al servizio",
+          "Contenuti o comportamento di terze parti nel servizio",
+          "Contenuti ottenuti dal servizio",
+          "Accesso non autorizzato o alterazione dei tuoi dati",
+        ],
       },
-      11: {
-        id: "cookie",
-        heading: "Informativa sui cookie",
-        paragraphs: {
-          0: "La nostra Cookie Policy spiega cosa sono i cookie, come li utilizziamo, come eventuali terze parti con cui collaboriamo possono utilizzare i cookie sui nostri servizi, le tue scelte riguardo ai cookie e ulteriori informazioni sui cookie. Ti invitiamo a consultare la sezione Cookie nella nostra Informativa sulla Privacy."
-        },
-        list: [
-        ]
+      "10": {
+        id: "disclaimer",
+        heading: "Disclaimer",
+        paragraphs: [
+          'L\'uso del servizio è a tuo rischio. Il servizio è fornito "COSÌ COM\'È" e "COME DISPONIBILE". Non garantiamo che il servizio sarà ininterrotto, tempestivo, sicuro o privo di errori.',
+          "Non garantiamo che i risultati dell'uso del servizio saranno accurati o affidabili.",
+        ],
+        list: [],
       },
-      12: {
-        id: "legge applicabile",
+      "11": {
+        id: "cookies",
+        heading: "Politica sui cookie",
+        paragraphs: [
+          "La nostra politica sui cookie spiega cosa sono i cookie, come li usiamo, come li usano terze parti e le tue opzioni. Vedi la sezione cookie nella nostra Informativa sulla privacy.",
+        ],
+        list: [],
+      },
+      "12": {
+        id: "governing-law",
         heading: "Legge applicabile",
-        paragraphs: {
-          0: "Questi Termini sono regolati e interpretati in conformità alle leggi degli Stati Uniti d’America, indipendentemente dalle disposizioni in materia di conflitto di leggi.",
-          1: "Il mancato esercizio da parte nostra di un diritto o di una disposizione di questi Termini non costituirà una rinuncia a tali diritti. Se una qualsiasi disposizione di questi Termini dovesse essere ritenuta invalida o inapplicabile da un tribunale, le restanti disposizioni continueranno a rimanere pienamente valide ed efficaci."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Questi termini sono regolati e interpretati secondo le leggi degli Stati Uniti d'America, senza riguardo alle norme sui conflitti di legge.",
+          "Se non esercitiamo un diritto o una disposizione, ciò non costituisce una rinuncia. Se un tribunale dichiara una disposizione non valida, le restanti rimangono in vigore.",
+        ],
+        list: [],
       },
-      13: {
-        id: "contatto",
+      "13": {
+        id: "contact",
         heading: "Contattaci",
-        paragraphs: {
-          0: "Se hai domande su questi Termini, contattaci:"
-        },
-        list: {
-          0: "Tramite e-mail: legal@amiquus.com",
-          1: "Visitando la pagina contatti sul nostro sito web"
-        }
-      }
+        paragraphs: ["Se hai domande sui termini, contattaci:"],
+        list: [
+          "Via email: legal@amiquus.com",
+          "Tramite la pagina contatti sul nostro sito",
+        ],
+      },
     },
-    lastupdated: "Ultimo aggiornamento: 21 maggio 2025"
   },
   privacy: {
     metaTitle: "Informativa sulla privacy | Amiquus",
-    metaDescription: "Scopri come AMIQUUS gestisce i tuoi dati personali, i tuoi diritti sulla privacy e le pratiche di raccolta dei dati.",
+    metaDescription:
+      "Scopri come Amiquus gestisce i tuoi dati personali, diritti e pratiche di raccolta dati.",
     title: "Informativa sulla privacy",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Ultimo aggiornamento: 21 maggio 2025.",
     sections: {
-      0: {
-        id: "introduzione",
+      "0": {
+        id: "introduction",
         heading: "Introduzione",
-        paragraphs: {
-          0: "Benvenuto su AMIQUUS. Rispettiamo la tua privacy e ci impegniamo a proteggere i tuoi dati personali. Questa informativa sulla privacy ti spiegherà come tuteliamo i tuoi dati personali quando visiti il nostro sito web e ti illustrerà i tuoi diritti in materia di privacy e come la legge ti tutela."
-        }
+        paragraphs: [
+          "Benvenuto su Amiquus. Rispettiamo la tua privacy e ci impegniamo a proteggere i tuoi dati personali. Questa informativa sulla privacy spiega come gestiamo i tuoi dati, i tuoi diritti e come la legge ti protegge.",
+        ],
       },
-      1: {
-        id: "dati-che-raccogliamo",
-        heading: "Informazioni che raccogliamo",
-        paragraphs: {
-          0: "Raccogliamo diversi tipi di informazioni per vari scopi al fine di fornire e migliorare il nostro servizio."
-        },
-        list: {
-          0: "Dati personali: Indirizzo email, nome, cognome e foto profilo (se fornita tramite autenticazione di terze parti).",
-          1: "Dati account: Le tue credenziali di accesso e le preferenze dell’account.",
-          2: "Dati di utilizzo: Informazioni su come utilizzi il nostro sito web e i nostri servizi.",
-          3: "Preferenze di ricerca auto: I criteri del veicolo che imposti per il monitoraggio (marca, modello, fascia di prezzo, ecc.).",
-          4: "Informazioni su Telegram: Se scegli di ricevere notifiche tramite Telegram, memorizziamo il tuo ID chat Telegram e il token del bot.",
-          5: "Informazioni di pagamento: Quando effettui un acquisto, il nostro processore di pagamento raccoglie i dati necessari per elaborare la tua transazione. AMIQUUS non memorizza i dati completi della tua carta di credito."
-        }
+      "1": {
+        id: "data-we-collect",
+        heading: "Dati che raccogliamo",
+        paragraphs: [
+          "Raccogliamo vari tipi di dati per scopi diversi per fornirti e migliorare il servizio:",
+        ],
+        list: [
+          "Dati personali: indirizzo email, nome, cognome e immagine del profilo (se fornita tramite terze parti).",
+          "Dati account: credenziali di accesso e impostazioni account.",
+          "Dati di utilizzo: informazioni su come utilizzi il sito e i servizi.",
+          "Criteri di ricerca: criteri del veicolo che imposti per il monitoraggio (marca, modello, prezzo, ecc.).",
+          "Dati Telegram: se scegli notifiche Telegram, memorizziamo il tuo ID chat e token bot.",
+          "Dati di pagamento: al momento dell'acquisto, il nostro processore di pagamento raccoglie i dati necessari. Amiquus non memorizza dati completi della carta di credito.",
+        ],
       },
-      2: {
-        id: "come-utilizziamo-i-dati",
+      "2": {
+        id: "how-we-use-data",
         heading: "Come utilizziamo i tuoi dati",
-        paragraphs: {
-          0: "Utilizziamo i tuoi dati personali per le seguenti finalità:"
-        },
-        list: {
-          0: "Fornire e mantenere il nostro servizio",
-          1: "Per informarti sulle modifiche al nostro servizio",
-          2: "Per consentirti di partecipare alle funzionalità interattive del nostro servizio",
-          3: "Fornire assistenza clienti",
-          4: "Per raccogliere analisi o informazioni preziose così da poter migliorare il nostro servizio",
-          5: "Per monitorare l’utilizzo del nostro servizio",
-          6: "Per rilevare, prevenire e risolvere problemi tecnici",
-          7: "Per elaborare i pagamenti e prevenire transazioni fraudolente",
-          8: "Inviare annunci di auto che corrispondono alle tue preferenze tramite il metodo di notifica scelto"
-        }
+        paragraphs: ["Utilizziamo i tuoi dati personali per:"],
+        list: [
+          "Fornire e mantenere il servizio",
+          "Notificare modifiche al servizio",
+          "Consentire funzionalità interattive",
+          "Fornire supporto clienti",
+          "Raccogliere analisi per migliorare il servizio",
+          "Monitorare l'uso del servizio",
+          "Rilevare, prevenire e risolvere problemi tecnici",
+          "Elaborare pagamenti e prevenire frodi",
+          "Inviare annunci che corrispondono ai tuoi criteri",
+        ],
       },
-      3: {
-        id: "archiviazione dati",
+      "3": {
+        id: "data-storage",
         heading: "Archiviazione e sicurezza dei dati",
-        paragraphs: {
-          0: "Adottiamo misure di sicurezza adeguate per proteggere i tuoi dati personali da accessi, modifiche, divulgazioni o distruzioni non autorizzate. Tutti i dati sono archiviati su server sicuri con crittografia sia durante la trasmissione che a riposo.",
-          1: "Conserviamo i tuoi dati personali solo per il tempo strettamente necessario alle finalità indicate nella presente informativa sulla privacy, inclusi gli obblighi di legge, regolamentari, fiscali, contabili o di rendicontazione."
-        }
+        paragraphs: [
+          "Applichiamo misure di sicurezza adeguate per proteggere contro accesso non autorizzato, alterazione o distruzione dei dati. Tutti i dati sono archiviati su server sicuri con crittografia in transito e a riposo.",
+          "Conserviamo i tuoi dati personali solo per il tempo necessario agli scopi indicati in questa politica, inclusi per soddisfare requisiti legali, normativi o contabili.",
+        ],
       },
-      4: {
-        id: "regolamento generale sulla protezione dei dati",
-        heading: "I tuoi diritti GDPR",
-        paragraphs: {
-          0: "Se sei residente nello Spazio Economico Europeo (SEE), hai determinati diritti in materia di protezione dei dati. AMIQUUS si impegna ad adottare misure ragionevoli per consentirti di correggere, modificare, cancellare o limitare l’utilizzo dei tuoi dati personali.",
-          1: "Hai i seguenti diritti in materia di protezione dei dati:"
-        },
-        list: {
-          0: "Il diritto di accedere, aggiornare o cancellare le informazioni che abbiamo su di te",
-          1: "Diritto di rettifica",
-          2: "Diritto di opposizione",
-          3: "Diritto alla limitazione",
-          4: "Diritto alla portabilità dei dati",
-          5: "Diritto di revocare il consenso"
-        }
+      "4": {
+        id: "gdpr",
+        heading: "I tuoi diritti ai sensi del GDPR",
+        paragraphs: [
+          "Se risiedi nello Spazio Economico Europeo (SEE), hai determinati diritti di protezione dei dati. Amiquus si impegna a consentire la correzione, modifica, eliminazione o limitazione dell'uso dei tuoi dati.",
+          "Hai i seguenti diritti:",
+        ],
+        list: [
+          "Diritto di accesso, aggiornamento o eliminazione dei dati",
+          "Diritto di rettifica",
+          "Diritto di opposizione",
+          "Diritto di limitazione",
+          "Diritto alla portabilità dei dati",
+          "Diritto di revoca del consenso",
+        ],
       },
-      5: {
-        id: "cookie",
-        heading: "Informativa sui cookie",
-        paragraphs: {
-          0: "I cookie sono piccoli file di dati memorizzati sul tuo dispositivo. Utilizziamo i cookie per:"
-        },
-        list: {
-          0: "Resta connesso",
-          1: "Comprendi come utilizzi il nostro sito web",
-          2: "Ricorda le tue preferenze",
-          3: "Personalizza la tua esperienza"
-        }
+      "5": {
+        id: "cookies",
+        heading: "Politica sui cookie",
+        paragraphs: [
+          "I cookie sono piccoli dati memorizzati sul tuo dispositivo. Li usiamo per:",
+        ],
+        list: [
+          "Mantenere la sessione di accesso",
+          "Comprendere l'uso del sito",
+          "Memorizzare preferenze",
+          "Personalizzare l'esperienza",
+        ],
       },
-      6: {
-        id: "terza parte",
-        heading: "Servizi di terze parti",
-        paragraphs: {
-          0: "Potremmo avvalerci di società e professionisti terzi per facilitare il nostro servizio, fornire il servizio per nostro conto, svolgere attività correlate al servizio o aiutarci ad analizzare come viene utilizzato il nostro servizio.",
-          1: "Queste terze parti includono:"
-        },
-        list: {
-          0: "Processori di pagamento (Stripe)",
-          1: "Fornitori di analisi",
-          2: "Servizi di assistenza clienti",
-          3: "Fornitori di hosting e infrastrutture cloud"
-        },
-        paragraphs2: {
-          0: "Queste terze parti hanno accesso ai tuoi dati personali solo per svolgere questi compiti per nostro conto e sono obbligate a non divulgarli né utilizzarli per nessun altro scopo."
-        }
+      "6": {
+        id: "third-party",
+        heading: "Terze parti",
+        paragraphs: [
+          "Possiamo incaricare terze parti di eseguire il servizio, svolgere compiti o analizzare l'uso.",
+          "Queste terze parti includono:",
+        ],
+        list: [
+          "Processori di pagamento (Stripe)",
+          "Fornitori di analisi",
+          "Servizi di supporto clienti",
+          "Fornitori di hosting e cloud",
+        ],
+        paragraphs2: [
+          "Queste terze parti hanno accesso ai tuoi dati solo per svolgere compiti e non possono divulgarli o usarli per altri scopi.",
+        ],
       },
-      7: {
-        id: "modifiche",
-        heading: "Modifiche alla presente Informativa sulla privacy",
-        paragraphs: {
-          0: "Potremmo aggiornare la nostra informativa sulla privacy di tanto in tanto. Ti informeremo di eventuali modifiche pubblicando la nuova informativa sulla privacy su questa pagina e aggiornando la data dell’“Ultimo aggiornamento”.",
-          1: "Ti consigliamo di consultare periodicamente questa informativa sulla privacy per eventuali modifiche. Le modifiche a questa informativa sulla privacy entrano in vigore quando vengono pubblicate su questa pagina."
-        }
+      "7": {
+        id: "changes",
+        heading: "Modifiche all'informativa sulla privacy",
+        paragraphs: [
+          "Possiamo aggiornare occasionalmente l'informativa sulla privacy. Ti informeremo pubblicando la nuova informativa su questa pagina e aggiornando la data 'Ultimo aggiornamento'.",
+          "Ti consigliamo di rivedere periodicamente l'informativa. Le modifiche entrano in vigore alla pubblicazione.",
+        ],
       },
-      8: {
-        id: "contatto",
+      "8": {
+        id: "contact",
         heading: "Contattaci",
-        paragraphs: {
-          0: "Se hai domande su questa informativa sulla privacy, contattaci:"
-        },
-        list: {
-          0: "Tramite e-mail: privacy@amiquus.com",
-          1: "Visitando la pagina contatti sul nostro sito web"
-        }
-      }
+        paragraphs: [
+          "Se hai domande sull'informativa sulla privacy, contattaci:",
+        ],
+        list: [
+          "Via email: privacy@amiquus.com",
+          "Tramite la pagina contatti sul nostro sito",
+        ],
+      },
     },
-    lastupdated: "Ultimo aggiornamento: 21 maggio 2025"
   },
   faqs: {
-    metaTitle: "Domande frequenti | Amiquus",
-    metaDescription: "Trova le risposte alle domande più frequenti sul servizio di monitoraggio annunci auto di AMIQUUS, abbonamenti, configurazione delle notifiche e altro ancora.",
+    metaTitle: "FAQ | Amiquus",
+    metaDescription:
+      "Trova risposte alle domande più comuni sul servizio di monitoraggio annunci auto Amiquus.",
     title: "Domande frequenti",
-    subtitle: "Trova risposte rapide alle domande frequenti sul nostro servizio di monitoraggio annunci auto",
+    subtitle:
+      "Risposte rapide alle domande comuni sul nostro servizio di monitoraggio annunci",
     general: {
-      heading: "Domande frequenti",
+      heading: "Domande generali",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Cos'è Amiquus?",
+        answer:
+          "Amiquus è un servizio che monitora più siti di veicoli corrispondenti ai tuoi criteri. Quando viene trovata una corrispondenza, ricevi una notifica istantanea via Telegram.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Come funziona?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
+          "Imposta criteri di ricerca (marca, modello, prezzo, ecc.)",
+          "Seleziona siti da monitorare",
+          "Collega Telegram per le notifiche",
+          "Il nostro sistema monitora continuamente i siti selezionati",
+          "Alla corrispondenza, ricevi una notifica Telegram istantanea con dettagli e link",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Quali siti monitorate?",
+        answerIntro:
+          "Attualmente monitoriamo le seguenti piattaforme principali:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (tramite URL)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
+        outro:
+          "Aggiungiamo continuamente nuove piattaforme per una copertura più ampia.",
       },
-      howitworks: {
-        answer: {
-          0: "Imposti i tuoi criteri di ricerca (marca, modello, fascia di prezzo, ecc.)",
-          1: "Selezioni quali siti web monitorare",
-          2: "Colleghi il tuo account Telegram per ricevere le notifiche",
-          3: "Il nostro sistema monitora costantemente i siti web da te selezionati per nuove inserzioni",
-          4: "Quando viene trovato un’auto corrispondente, ricevi subito una notifica su Telegram con tutti i dettagli e un link diretto."
-        },
-        question: "Come funziona?"
-      },
-      whatis: {
-        answer: "AMIQUUS è un servizio che monitora diversi siti web di annunci auto per trovare veicoli che corrispondono ai tuoi criteri specifici. Quando viene pubblicato un annuncio compatibile, ricevi una notifica istantanea su Telegram, così puoi essere tra i primi a contattare i venditori e assicurarti le migliori offerte.",
-        question: "Che cos’è Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Attualmente monitoriamo le principali piattaforme di annunci auto:",
-        list: {
-          0: "AutoTrader",
-          1: "AMIQUUS",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (tramite URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Stiamo aggiungendo continuamente nuove piattaforme per offrire la copertura più completa possibile.",
-        question: "Quali siti web di annunci auto monitori?"
-      }
     },
     subscription: {
-      heading: "Domande sull’abbonamento",
+      heading: "Domande sull'abbonamento",
       cost: {
-        question: "Quanto costa l’abbonamento?",
-        answer: {
-          0: "I nostri prezzi partono da 79,99 $ al mese per il monitoraggio di un sito web con aggiornamenti ogni 6 ore. Ogni sito web aggiuntivo costa 4,99 $ al mese. Puoi anche aumentare la frequenza degli aggiornamenti per ricevere notifiche più rapide.",
-          1: "Per dettagli specifici sui prezzi, consulta la sezione prezzi nella homepage."
-        }
+        question: "Quanto costa l'abbonamento?",
+        answer: [
+          "I prezzi partono da 79,99 €/mese per monitorare un sito con aggiornamenti ogni 6 ore. Siti aggiuntivi costano 4,99 € al mese. Aggiorna per notifiche più rapide.",
+          "Per dettagli sui prezzi, consulta la sezione prezzi sulla homepage.",
+        ],
       },
       cancel: {
-        question: "Come posso annullare il mio abbonamento?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Accedi al tuo account",
-          1: "Vai alla pagina \"Profilo\"",
-          2: "Seleziona la scheda \"Abbonamenti\"",
-          3: "Clicca sul pulsante \"Annulla abbonamento\" accanto all’abbonamento che desideri annullare"
-        },
-        note: "Il tuo abbonamento resterà attivo fino al termine del tuo attuale periodo di fatturazione.",
-        stepsintro: "Puoi annullare il tuo abbonamento in qualsiasi momento dalla pagina del profilo del tuo account:"
+        question: "Come annullo l'abbonamento?",
+        stepsIntro:
+          "Puoi annullare l'abbonamento in qualsiasi momento dalla pagina profilo:",
+        steps: [
+          "Accedi al tuo account",
+          'Vai alla pagina "Profilo"',
+          'Seleziona la scheda "Abbonamenti"',
+          'Clicca su "Annulla abbonamento" accanto all\'abbonamento da annullare',
+        ],
+        note: "L'abbonamento rimane attivo fino alla fine del periodo di fatturazione corrente.",
       },
       multiple: {
-        question: "Posso avere più abbonamenti per diversi modelli di auto?",
-        answer: "Sì, puoi creare più abbonamenti con un unico account. Ogni abbonamento può monitorare diversi modelli di auto, marche o fasce di prezzo. Questo è particolarmente utile se stai cercando più veicoli o se stai aiutando amici e familiari nella ricerca di un’auto."
+        question: "Posso avere più abbonamenti per modelli diversi?",
+        answer:
+          "Sì, puoi creare più abbonamenti sotto un unico account. Ognuno può monitorare modelli o marche diversi. Ideale se stai cercando più veicoli o aiutando amici.",
       },
       limit: {
-        question: "Perché esiste un limite al numero di iscritti?",
-        intro: "Limitiamo il nostro servizio a 30 abbonati attivi per garantire:",
-        list: {
-          0: "La massima qualità del servizio e accuratezza dei dati",
-          1: "Supporto personalizzato per ogni abbonato",
-          2: "Consegna più rapida delle notifiche durante i periodi di maggiore pubblicazione",
-          3: "Scraping etico che non sovraccarica i siti web di destinazione"
-        },
-        outro: "Se abbiamo raggiunto la capienza massima, puoi unirti alla nostra lista d’attesa per essere avvisato quando si libera un posto."
-      }
+        question: "Perché c'è un limite di abbonati?",
+        intro: "Limitiamo il servizio a 30 abbonati attivi per:",
+        list: [
+          "La massima qualità del servizio e precisione dei dati",
+          "Supporto personalizzato per ogni abbonato",
+          "Consegna più rapida delle notifiche nelle ore di punta",
+          "Scraping etico che non sovraccarica i siti target",
+        ],
+        outro:
+          "Se siamo al completo, unisciti alla lista d'attesa e ti avviseremo quando si libera un posto.",
+      },
     },
     technical: {
       heading: "Domande tecniche",
       telegram: {
-        question: "Come posso configurare le notifiche Telegram?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Crea un bot Telegram utilizzando BotFather (le istruzioni saranno fornite durante la configurazione)",
-          1: "Copia il token del tuo bot da BotFather",
-          2: "Inizia una conversazione con il tuo bot",
-          3: "Ottieni il tuo ID chat (istruzioni fornite durante la configurazione)",
-          4: "Inserisci il token del tuo bot e l’ID della chat nelle impostazioni dell’abbonamento Amiquus",
-          5: "Verifica la configurazione delle notifiche usando il pulsante `Invia messaggio di prova`"
-        },
-        note: "Istruzioni dettagliate passo dopo passo con screenshot sono disponibili durante la procedura di attivazione dell’abbonamento.",
-        stepsintro: "Per configurare le notifiche Telegram:"
+        question: "Come configuro le notifiche Telegram?",
+        stepsIntro: "Per configurare le notifiche Telegram:",
+        steps: [
+          "Crea un bot Telegram tramite BotFather (istruzioni nel dashboard)",
+          "Copia il token del bot e l'ID chat",
+          'Inserisci i dati nelle impostazioni account sotto "Impostazioni notifiche"',
+          'Testa la connessione con il pulsante "Invia messaggio di prova"',
+        ],
+        note: "Istruzioni dettagliate con screenshot disponibili durante la configurazione dell'abbonamento.",
       },
       frequency: {
-        question: "Con quale frequenza riceverò le notifiche?",
+        question: "Con quale frequenza ricevo notifiche?",
         intro: "La frequenza delle notifiche dipende da:",
-        list: {
-          0: "Il tuo pacchetto di frequenza aggiornamenti scelto (da ogni 6 ore a ogni 30 minuti)",
-          1: "Quanti nuovi annunci corrispondono ai tuoi criteri",
-          2: "Quanto è attivo il mercato per la marca/modello selezionato"
-        },
-        outro: "Riceverai notifiche solo quando verranno trovati nuovi annunci che corrispondono ai tuoi criteri."
+        list: [
+          "Il pacchetto di frequenza selezionato (da orario a ogni minuto)",
+          "Il numero di nuovi annunci che corrispondono ai tuoi criteri",
+          "L'attività di mercato per la marca/modello selezionata",
+        ],
+        outro:
+          "Ricevi notifiche solo quando vengono trovati nuovi annunci che corrispondono ai tuoi criteri.",
       },
       privacy: {
-        question: "Come sono protetti i miei dati personali?",
-        intro: "Prendiamo molto sul serio la privacy dei dati e adottiamo queste misure:",
-        list: {
-          0: "Dati crittografati durante il trasferimento e a riposo",
-          1: "Pagamenti sicuri tramite Stripe",
-          2: "Nessuna condivisione di dati con terze parti",
-          3: "Puoi richiedere o eliminare i tuoi dati in qualsiasi momento"
-        },
-        outro: "Leggi l’informativa completa sulla privacy per saperne di più."
-      }
+        question: "Come è protetta la mia privacy?",
+        intro: "Prendiamo sul serio la privacy e utilizziamo:",
+        list: [
+          "Crittografia dei dati in transito e a riposo",
+          "Pagamenti sicuri tramite Stripe",
+          "Nessuna condivisione di dati con terze parti",
+          "Puoi richiedere o eliminare i tuoi dati in qualsiasi momento",
+        ],
+        outro:
+          "Maggiori informazioni nella nostra Informativa sulla privacy completa.",
+      },
     },
     support: {
       heading: "Hai ancora domande?",
-      description: "Se non hai trovato la risposta alla tua domanda, il nostro team di supporto è qui per aiutarti!",
-      button: "Contatta il supporto"
-    }
+      description:
+        "Se non hai trovato la risposta, il nostro supporto è a disposizione!",
+      button: "Contatta supporto",
+    },
   },
   waitlist: {
-    metaTitle: "Unisciti alla lista d’attesa – Amiquus",
-    metaDescription: "Unisciti alla lista d’attesa di AMIQUUS per essere avvisato quando gli abbonamenti saranno disponibili.",
-    title: "Unisciti alla nostra lista d’attesa",
-    subtitle: "A causa dell’elevata richiesta, limitiamo il numero di abbonamenti attivi per garantire la migliore qualità del servizio a tutti gli utenti.",
+    metaTitle: "Unisciti alla lista d'attesa - Amiquus",
+    metaDescription:
+      "Unisciti alla lista d'attesa di Amiquus e sii avvisato quando gli abbonamenti sono disponibili.",
+    title: "Unisciti alla nostra lista d'attesa",
+    subtitle:
+      "A causa dell'alta domanda, limitiamo il numero di abbonamenti attivi per garantire la migliore qualità.",
     limited: {
       heading: "Disponibilità limitata",
-      description: "Limitiamo il nostro sistema a soli 30 abbonati attivi per garantire:",
-      points: {
-        0: "Affidabilità e velocità di scraping eccezionali per tutti gli utenti",
-        1: "Ridotte probabilità di essere bloccati dai siti di annunci auto",
-        2: "Supporto personalizzato per ogni abbonato",
-        3: "Equa distribuzione delle risorse del server"
-      },
-      available: "{{remaining}} posti disponibili su {{capacity}} totali per l’abbonamento.",
-      full: "Tutti i posti disponibili per l’abbonamento sono attualmente occupati. Unisciti alla lista d’attesa per essere avvisato quando si libera un posto."
+      description: "Limitiamo il sistema a soli 30 abbonati attivi per:",
+      points: [
+        "Affidabilità e velocità di scraping eccezionali per tutti gli utenti",
+        "Minore rischio di blocco da parte dei siti",
+        "Supporto personalizzato per ogni abbonato",
+        "Distribuzione equa delle risorse del server",
+      ],
+      available:
+        "{{remaining}} posti abbonamento su {{capacity}} sono attualmente disponibili.",
+      full: "Tutti i posti abbonamento sono attualmente occupati. Unisciti alla lista d'attesa per essere avvisato quando si libera un posto.",
     },
     success: {
-      title: "Sei nella lista d’attesa!",
-      description: "Ti avviseremo non appena sarà disponibile un posto in abbonamento.",
-      message: "Grazie per il tuo interesse per Amiquus! Ti abbiamo aggiunto alla nostra lista d’attesa e ti contatteremo non appena si libererà un posto.",
-      button: "Torna alla home page"
+      title: "Sei in lista d'attesa!",
+      description: "Ti avviseremo non appena si libera un posto abbonamento",
+      message:
+        "Grazie per il tuo interesse in Amiquus! Ti abbiamo aggiunto alla lista d'attesa e ti contatteremo non appena un posto sarà disponibile.",
+      button: "Torna alla homepage",
     },
     cantJoin: {
-      title: "Join the Waitlist",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Unisciti alla lista d'attesa",
+      description: "Ti avviseremo non appena si libera un posto abbonamento",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Nome",
+        placeholder: "Mario",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Cognome",
+        placeholder: "Rossi",
       },
       email: {
-        label: "E-mail",
-        placeholder: "john.doe@example.com",
-        description: "Useremo questa email per avvisarti quando si libera un posto."
+        label: "Email",
+        placeholder: "mario.rossi@esempio.it",
+        description:
+          "Useremo questo indirizzo email per avvisarti quando si libera un posto",
       },
-      submit: "Unisciti alla lista d’attesa",
+      submit: "Unisciti alla lista d'attesa",
       submitting: "Invio in corso...",
-      firstname: {
-        label: "Nome",
-        placeholder: "Giovanni"
-      },
-      lastname: {
-        label: "Cognome",
-        placeholder: "Cervo"
-      }
     },
-    cantjoin: {
-      description: "Ti avviseremo non appena sarà disponibile un posto per l’abbonamento.",
-      title: "Unisciti alla lista d’attesa"
-    }
   },
   support: {
     metaTitle: "Supporto | Amiquus - Centro assistenza",
-    metaDescription: "Ottieni assistenza per il tuo account AMIQUUS, abbonamento o avvisi auto. Consulta il nostro centro assistenza o contatta il nostro team di supporto per ricevere aiuto.",
-    title: "Centro assistenza",
-    subtitle: "Trova risposte alle domande frequenti o contatta il nostro team di supporto",
+    metaDescription:
+      "Ottieni aiuto per il tuo account Amiquus, abbonamento o avvisi. Esplora il centro assistenza o contatta il supporto.",
+    title: "Centro supporto",
+    subtitle:
+      "Trova risposte a domande comuni o contatta il nostro team di supporto",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "Supporto via email",
+      description: "Inviaci un'email e risponderemo entro 24 ore",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Domande frequenti",
     faqs: {
       telegram: {
-        question: "Come posso configurare le notifiche Telegram?",
-        intro: "Per configurare le notifiche Telegram, segui questi passaggi:",
-        steps: {
-          0: "Crea un bot Telegram usando BotFather (le istruzioni sono nella nostra dashboard)",
-          1: "Copia il tuo token API e l’ID della chat",
-          2: "Inserisci questi dati nelle impostazioni del tuo account sotto \"Preferenze di notifica\"",
-          3: "Verifica la tua connessione utilizzando il pulsante \"Invia messaggio di prova\""
-        },
-        outro: "Se hai bisogno di ulteriore assistenza, la nostra guida dettagliata è disponibile nella tua dashboard."
+        question: "Come configuro le notifiche Telegram?",
+        intro: "Per configurare le notifiche Telegram segui questi passaggi:",
+        steps: [
+          "Crea un bot Telegram tramite BotFather (istruzioni nel dashboard)",
+          "Copia il token API e l'ID chat",
+          'Inserisci i dati nelle impostazioni account sotto "Impostazioni notifiche"',
+          'Testa la connessione con il pulsante "Invia messaggio di prova"',
+        ],
+        outro:
+          "Se hai bisogno di ulteriore aiuto, una guida dettagliata è disponibile nel tuo dashboard.",
       },
       updates: {
-        question: "Con quale frequenza vengono aggiornati gli annunci di auto?",
-        answer: "La frequenza degli aggiornamenti dipende dal tuo piano di abbonamento. I piani Base ricevono aggiornamenti ogni 6 ore, mentre i piani Premium possono riceverli anche ogni 30 minuti. Puoi visualizzare e modificare la frequenza attuale degli aggiornamenti nelle impostazioni dell’abbonamento."
+        question: "Con quale frequenza vengono aggiornati gli annunci?",
+        answer:
+          "La frequenza di aggiornamento dipende dal pacchetto di abbonamento. I piani base ricevono aggiornamenti ogni 6 ore, i piani premium possono essere ogni 30 minuti. Puoi visualizzare e modificare la frequenza attuale nelle impostazioni di abbonamento.",
       },
       facebook: {
         question: "Posso monitorare Facebook Marketplace?",
-        answer: "Sì, supportiamo il monitoraggio di Facebook Marketplace. Per configurare questa funzione, dovrai fornire l’URL della pagina dei risultati di ricerca di Facebook Marketplace con i filtri desiderati già applicati. Il nostro sistema monitorerà quella specifica ricerca per nuovi annunci che corrispondono ai tuoi criteri."
+        answer:
+          "Sì, supportiamo il monitoraggio di Facebook Marketplace. Per configurarlo, fornisci l'URL della pagina dei risultati di ricerca con i filtri applicati. Il sistema monitorerà quindi quella ricerca per nuovi annunci che corrispondono ai tuoi criteri.",
       },
       cancel: {
-        question: "Come posso annullare il mio abbonamento?",
-        answer: "Puoi annullare il tuo abbonamento in qualsiasi momento dalla pagina del profilo del tuo account. Clicca sulla scheda \"Abbonamenti\", individua l’abbonamento che desideri annullare e clicca sul pulsante \"Annulla abbonamento\". Il servizio resterà attivo fino al termine del tuo attuale periodo di fatturazione."
+        question: "Come annullo l'abbonamento?",
+        answer:
+          'Puoi annullare l\'abbonamento in qualsiasi momento dalla pagina profilo. Clicca sulla scheda "Abbonamenti", trova l\'abbonamento e clicca su "Annulla abbonamento". Il servizio rimane attivo fino alla fine del periodo di fatturazione.',
       },
       full: {
-        question: "Cosa succede se tutti gli slot di abbonamento sono pieni?",
-        answer: "Per mantenere l’alta qualità del nostro servizio, limitiamo il numero di abbonamenti attivi. Se tutti gli slot sono occupati, puoi unirti alla nostra lista d’attesa. Ti avviseremo non appena si libera un posto e avrai la priorità per reclamarlo prima che venga reso disponibile al pubblico."
-      }
+        question: "Cosa succede se tutti i posti sono occupati?",
+        answer:
+          "Per mantenere un'alta qualità del servizio, limitiamo il numero di abbonamenti attivi. Se tutti i posti sono occupati, puoi unirti alla lista d'attesa. Quando si libera un posto, ti avviseremo e avrai priorità rispetto al pubblico generale.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
+      heading: "Hai bisogno di ulteriore aiuto?",
+      description:
+        "Se non hai trovato la risposta, contatta il nostro team di supporto. Siamo qui per aiutare!",
+      button: "Contatta supporto",
     },
-    emailsupport: {
-      description: "Inviaci un’email e ti risponderemo entro 24 ore.",
-      email: "support@amiquus.com",
-      title: "Assistenza via e-mail"
-    },
-    faqheading: "Domande frequenti",
-    stillneedhelp: {
-      button: "Contatta l’assistenza",
-      description: "Se non hai trovato la risposta alla tua domanda, non esitare a contattare il nostro team di supporto. Siamo qui per aiutarti!",
-      heading: "Hai ancora bisogno di aiuto?"
-    }
   },
   notFound: {
     title: "404 Pagina non trovata",
-    message: "Hai dimenticato di aggiungere la pagina al router?"
+    message: "Hai dimenticato di aggiungere la pagina al router?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Codice di verifica email Amiquus",
+      greeting: "Ciao,",
+      message: "Usa il seguente codice per completare la tua registrazione:",
+      expiration: "Il codice scade in 10 minuti.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Pagamento ricevuto Amiquus – Fattura #",
+        h2Message:
+          "Il tuo pagamento dell'abbonamento Amiquus è andato a buon fine!",
+        greeting: "Ciao,",
+        paymentMessage: "Abbiamo ricevuto il tuo pagamento di",
+        downloadMessage:
+          "Puoi visualizzare o scaricare la fattura tramite il seguente link:",
+        viewInvoice: "Visualizza fattura",
+        invoiceNumber: "Fattura #:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Pagamento in sospeso – Fattura",
+        subjectB: "per il tuo abbonamento Amiquus",
+        h2Message:
+          "Azione richiesta: Completa il pagamento per il tuo abbonamento Amiquus",
+        greeting: "Ciao,",
+        messageA: "La tua fattura",
+        messageB:
+          "è ancora da pagare. Per attivare l'abbonamento, completa il pagamento di",
+        paymentMessage:
+          "Puoi completare il pagamento in modo sicuro tramite il seguente link:",
+        payInvoice: "Paga fattura",
+        ignoreEmail:
+          "Se hai già effettuato il pagamento, puoi ignorare questa email.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Pagamento fallito – Fattura",
+        message:
+          "Non siamo riusciti a elaborare il tuo ultimo pagamento (tentativo",
+        attemptsA:
+          "Riproveremo a breve. Non è richiesta alcuna azione per ora.",
+        attemptsB:
+          "Abbiamo provato a addebitare il tuo metodo di pagamento tre volte, ma tutti i tentativi sono falliti.",
+        attemptsC:
+          "Di conseguenza, il tuo abbonamento è <strong>temporaneamente sospeso</strong>. Non riceverai aggiornamenti fino alla riattivazione.",
+        attemptsD:
+          "Aggiorna il tuo metodo di pagamento e riattiva l'abbonamento dal profilo:",
+        viewInvoice: "Visualizza fattura",
+        managePayment: "Gestisci metodi di pagamento",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Sei nella lista d'attesa di Amiquus!",
+      h2Message: "Sei in lista!",
+      hi: "Ciao",
+      message:
+        "Grazie per esserti unito alla lista d'attesa di Amiquus. Ti avviseremo non appena si libera un posto.",
+      anyQuestions: "Se hai domande, non esitare a rispondere a questa email.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Annulla",
-    confirmremove: "Rimuovi carta",
-    default: "Predefinito",
-    expires: "Scade",
-    remove: "Rimuovi",
-    removedescription: "Sei sicuro di voler rimuovere la tua carta {{brand}} che termina con {{last4}}?",
-    removetitle: "Rimuovi metodo di pagamento",
-    removewarning: "Questo è il tuo metodo di pagamento predefinito e la sua rimozione potrebbe influire sui tuoi abbonamenti attivi.",
-    setasdefault: "Imposta come predefinito",
-    setdefaultdescription: "Vuoi impostare la carta {{brand}} che termina con {{last4}} come metodo di pagamento predefinito? Questa carta verrà utilizzata per tutti i futuri pagamenti dell’abbonamento.",
-    setdefaulttitle: "Imposta metodo di pagamento predefinito"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Annulla avviso",
-    canceldescription: "Sei sicuro di voler annullare l’avviso per la tua auto {{brand}} {{model}}? Questo interromperà tutte le notifiche e dovrai creare un nuovo avviso se vorrai monitorare di nuovo questa auto.",
-    canceltitle: "Annulla avviso auto",
-    confirmcancel: "Annulla avviso",
-    edit: "Modifica",
-    keepmyalert: "Mantieni il mio avviso",
-    language: "Lingua",
-    price: "Prezzo",
-    pricerange: "Prezzo",
-    updates: "Aggiornamenti",
-    websites: "Siti web",
-    years: "Anni"
-  },
-  signUp: {
-    cta: "Ricevi subito gli avvisi",
-    heading: "Crea il tuo avviso auto",
-    subheading: "Imposta le tue notifiche personalizzate sugli annunci auto in pochi semplici passaggi.",
-    toast: {
-      error: {
-        description: "Non siamo riusciti a creare il tuo abbonamento. Riprova più tardi.",
-        title: "Abbonamento non riuscito"
-      },
-      success: {
-        description: "La tua sottoscrizione è stata creata con successo",
-        title: "Abbonamento creato"
-      }
+      thanksMessage: "Grazie per aver scelto Amiquus!",
+      signature: "Cordiali saluti,<br/>Il team Amiquus",
+      team: "— Il team Amiquus",
+      needHelp: "Hai bisogno di aiuto?",
+      hello: "Ciao",
     },
-    waitlist: {
-      cta: "Unisciti alla lista d’attesa",
-      message: "Al momento abbiamo raggiunto la capienza massima. Unisciti alla lista d’attesa per essere avvisato quando si libera un posto."
-    }
-  }
+  },
 };

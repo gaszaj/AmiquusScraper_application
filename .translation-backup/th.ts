@@ -1,688 +1,519 @@
 export const th = {
   navigations: {
-    features: "คุณสมบัติ",
+    features: "ฟีเจอร์",
     how: "วิธีการทำงาน",
     pricing: "ราคา",
     getAlerts: "รับการแจ้งเตือน",
-    waitlist: "รายการรอคอย",
+    waitlist: "รายชื่อรอ",
     faq: "คำถามที่พบบ่อย",
     login: "เข้าสู่ระบบ",
-    getStarted: "เริ่มใช้งาน",
-    subscribers: "สมาชิก",
+    getStarted: "เริ่มต้นใช้งาน",
+    subscribers: "ผู้สมัครใช้งาน",
     theme: "ธีม",
     language: "ภาษา",
     myAlerts: "การแจ้งเตือนของฉัน",
     profile: "โปรไฟล์",
     settings: "การตั้งค่า",
     logout: "ออกจากระบบ",
-    signUp: "สมัครสมาชิก"
+    signUp: "สมัครสมาชิก",
   },
   hero: {
-    label: "ติดตามประกาศขายรถมือสองแบบเรียลไทม์",
-    title: "ไม่พลาดดีลรถยนต์ที่ใช่อีกต่อไป",
-    subtitle: "AMIQUUS แจ้งเตือนคุณทันทีเมื่อรถในฝันของคุณมีประกาศขายบนหลายเว็บไซต์ รับการแจ้งเตือนผ่าน Telegram ทันทีที่พบรถที่ตรงกับความต้องการของคุณ",
+    label: "ติดตามประกาศขายรถมือสองแบบเรียลไทม์!",
+    title: "ไม่พลาดดีลรถในฝันของคุณอีกต่อไป",
+    subtitle:
+      "Amiquus จะแจ้งเตือนคุณทันทีเมื่อมีรถที่ตรงกับความต้องการของคุณ บนหลากหลายเว็บไซต์ประกาศขายรถ รับการแจ้งเตือนผ่าน Telegram ทันทีที่พบประกาศที่ตรงเงื่อนไข",
     button1: "ตั้งค่าการแจ้งเตือนของคุณ",
     button2: "ดูวิธีการทำงาน",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
+      websites: "ติดตามมากกว่า 15 เว็บไซต์",
+      realtime: "แจ้งเตือนแบบเรียลไทม์",
+      noSetup: "ไม่ต้องตั้งค่าซับซ้อน",
+      cancelAnytime: "ยกเลิกได้ทุกเมื่อ",
     },
-    trustindicators: {
-      cancelanytime: "ยกเลิกได้ทุกเมื่อ",
-      nosetup: "ไม่ต้องตั้งค่า",
-      realtime: "การแจ้งเตือนแบบเรียลไทม์",
-      websites: "ติดตามเว็บไซต์มากกว่า 15 แห่ง"
-    }
   },
   limited: {
     full: {
-      title: "ถึงขีดจำกัดการสมัครสมาชิกแล้ว",
-      description: "ขณะนี้มีสมาชิกใช้งานครบ 30 คนแล้ว หากต้องการรับการแจ้งเตือนเมื่อมีที่ว่าง กรุณาลงชื่อในรายชื่อรอ",
-      buttonText: "เข้าร่วมรายชื่อรอ"
+      title: "เต็มจำนวนผู้สมัครแล้ว",
+      description:
+        "ขณะนี้มีผู้สมัครใช้งานครบ 30 บัญชีแล้ว กรุณาลงชื่อในรายชื่อรอเพื่อให้เราแจ้งคุณเมื่อมีที่ว่าง",
+      buttonText: "เข้าร่วมรายชื่อรอ",
     },
     limited: {
-      title: "มีจำนวนจำกัด",
-      description: "เหลือเพียง {{remaining}} ที่นั่ง จากทั้งหมด {{capacity}} ที่นั่ง รีบสมัครตอนนี้ก่อนเต็ม!",
-      buttonText: "เริ่มต้นใช้งาน"
+      title: "จำนวนจำกัด",
+      description:
+        "เหลือเพียง {{remaining}} จากทั้งหมด {{capacity}} ที่นั่ง สมัครตอนนี้ก่อนที่จะเต็ม!",
+      buttonText: "เริ่มต้นตอนนี้",
     },
     available: {
-      title: "มีแพ็กเกจสมัครสมาชิก",
-      description: "ขณะนี้มีการใช้งาน {{active}} จาก {{capacity}} การสมัครสมาชิก ยังมีที่ว่างให้คุณเข้าร่วมอีกมาก!",
-      buttonText: "เริ่มต้นใช้งาน"
-    }
+      title: "ยังเปิดรับผู้สมัคร",
+      description:
+        "ขณะนี้มีผู้ใช้งาน {{active}} จาก {{capacity}} คุณยังสามารถเข้าร่วมได้สบาย ๆ",
+      buttonText: "เริ่มต้นตอนนี้",
+    },
   },
   features: {
     heading: "ทำไมต้องเลือก Amiquus?",
-    subheading: "ประหยัดเวลาและไม่พลาดรถยนต์ในฝันของคุณด้วยบริการติดตามอัตโนมัติของเรา",
+    subheading:
+      "ประหยัดเวลา และไม่พลาดโอกาสดี ๆ กับบริการติดตามประกาศขายรถอัตโนมัติของเรา",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "ติดตามหลายเว็บไซต์พร้อมกัน",
+      description:
+        "ติดตามหลายเว็บประกาศขายรถพร้อมกัน โดยไม่ต้องเข้าเช็คทีละเว็บด้วยตนเอง",
     },
     notifications: {
-      title: "การแจ้งเตือนทันที",
-      description: "รับการแจ้งเตือนทันทีผ่าน Telegram เมื่อมีรถที่ตรงกับเงื่อนไขของคุณถูกลงขาย"
+      title: "แจ้งเตือนทันที",
+      description:
+        "รับการแจ้งเตือนผ่าน Telegram ทันทีเมื่อมีรถที่ตรงกับเงื่อนไขของคุณถูกลงประกาศ",
     },
     filters: {
-      title: "ตัวกรองแบบกำหนดเอง",
-      description: "กำหนดเงื่อนไขให้ตรงใจ เช่น ยี่ห้อ รุ่น ปี เลขไมล์ และช่วงราคาที่ต้องการ เพื่อค้นหาสิ่งที่คุณมองหาได้อย่างแม่นยำ"
+      title: "ฟิลเตอร์แบบละเอียด",
+      description:
+        "ตั้งค่าเงื่อนไขได้อย่างแม่นยำ ทั้งยี่ห้อ รุ่น ปี เลขไมล์ และช่วงราคา เพื่อหารถที่คุณต้องการจริง ๆ",
     },
     frequency: {
-      title: "ปรับความถี่ได้",
-      description: "เลือกความถี่ที่เราจะตรวจสอบประกาศใหม่ ตั้งแต่การอัปเดตรายชั่วโมงไปจนถึงการตรวจสอบแบบเรียลไทม์"
+      title: "ปรับความถี่การตรวจสอบได้",
+      description:
+        "เลือกความถี่ในการเช็คประกาศใหม่ ๆ ได้ ตั้งแต่ทุกชั่วโมงไปจนถึงใกล้เคียงเรียลไทม์",
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "รองรับหลายภาษา",
+      description:
+        "รับการแจ้งเตือนเป็นภาษาที่คุณถนัด เพื่อให้อ่านและเข้าใจรายละเอียดประกาศได้ง่ายขึ้น",
     },
     account: {
-      title: "จ  �ดการบัญชีได้ง่าย",
-      description: "จัดการโปรไฟล์การค้นหาหลายรายการและปรับแต่งการตั้งค่าการสมัครของคุณได้ง่ายๆ ในไม่กี่คลิก"
+      title: "จัดการบัญชีได้ง่าย",
+      description:
+        "สร้างโปรไฟล์ค้นหาหลายแบบ และปรับแต่งการสมัครใช้งานได้ในไม่กี่คลิก",
     },
-    multisite: {
-      description: "ติดตามเว็บไซต์ประกาศขายรถหลายแห่งพร้อมกันได้โดยไม่ต้องเช็คแต่ละเว็บด้วยตัวเอง",
-      title: "การติดตามหลายเว็บไซต์"
-    }
   },
   howItWorks: {
     title: "Amiquus ทำงานอย่างไร",
-    subtitle: "ตั้งค่าเพียงครั้งเดียว แล้วปล่อยให้ระบบอัตโนมัติของเราค้นหาดีลรถที่ใช่สำหรับคุณ",
-    whyTitle: "Why Choose Amiquus?",
+    subtitle:
+      "ตั้งค่าเพียงครั้งเดียว แล้วปล่อยให้ระบบอัตโนมัติของเราค้นหาดีลรถที่เหมาะที่สุดให้คุณ",
+    whyTitle: "ทำไมต้อง Amiquus?",
     steps: {
       preferences: {
         title: "ตั้งค่าความต้องการของคุณ",
-        description: "เลือกยี่ห้อรถ รุ่น ช่วงราคา และเกณฑ์อื่น ๆ ที่คุณสนใจติดตาม"
+        description:
+          "เลือกยี่ห้อ รุ่น ช่วงราคา และเงื่อนไขอื่น ๆ ที่คุณต้องการให้เราติดตาม",
       },
       telegram: {
         title: "เชื่อมต่อ Telegram",
-        description: "เชื่อมต่อบัญชี Telegram ของคุณเพื่อรับการแจ้งเตือนเกี่ยวกับประกาศใหม่ทันที"
+        description:
+          "เชื่อมบัญชี Telegram เพื่อรับการแจ้งเตือนทันทีเมื่อมีประกาศที่ตรงเงื่อนไข",
       },
       notifications: {
         title: "รับการแจ้งเตือนทันที",
-        description: "รับการแจ้งเตือนทันทีเมื่อมีรถที่ตรงกับเงื่อนไขของคุณปรากฏบนเว็บไซต์ที่ AMIQUUS ตรวจสอบอยู่"
+        description:
+          "ระบบจะแจ้งเตือนคุณทันทีที่มีรถตรงตามเงื่อนไขปรากฏบนเว็บไซต์ที่เราติดตาม",
       },
       findCar: {
-        title: "Find Your Perfect Car",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
+        title: "เจอรถในฝันของคุณ",
+        description:
+          "รู้ข่าวก่อนใครเมื่อมีประกาศใหม่ และคว้าดีลดี ๆ ได้ก่อนคนอื่น",
       },
-      findcar: {
-        description: "รับข่าวสารเกี่ยวกับประกาศใหม่ก่อนใคร และคว้าดีลสุดพิเศษก่อนใครบน AMIQUUS",
-        title: "ค้นหารถที่ใช่สำหรับคุณ"
-      }
     },
-    features: {
-      0: "ติดตามเว็บไซต์ประกาศขายรถยนต์มากกว่า 15 แห่งได้พร้อมกัน",
-      1: "ปรับแต่งเกณฑ์การค้นหาพร้อมตัวกรองขั้นสูง",
-      2: "การแจ้งเตือนแบบเรียลไทม์ผ่าน Telegram",
-      3: "แจ้งเตือนอัตโนมัติเมื่อราคาลดและมีประกาศใหม่",
-      4: "ติดตั้งง่าย ใช้เวลาไม่ถึง 5 นาที"
-    },
-    setAlerts: "Set Up Your Alerts",
+    features: [
+      "ติดตามมากกว่า 15 เว็บไซต์ประกาศขายรถพร้อมกัน",
+      "ปรับแต่งเงื่อนไขการค้นหาได้อย่างละเอียด",
+      "แจ้งเตือนผ่าน Telegram แบบใกล้เคียงเรียลไทม์",
+      "แจ้งเตือนประกาศใหม่และการลดราคาทันที",
+      "ขั้นตอนการตั้งค่าง่าย ๆ ใช้เวลาไม่ถึง 5 นาที",
+    ],
+    setAlerts: "ตั้งค่าการแจ้งเตือนของคุณ",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "พบประกาศใหม่ที่ตรงเงื่อนไข!",
+      description: "BMW 3 Series, 2019, $32,500 - เพิ่งลงประกาศบน AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram Alert",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
+      title: "การแจ้งเตือนผ่าน Telegram",
+      description: "Mercedes C-Class, 2020, 30,000 ไมล์ - ลดราคาลง $2,000",
     },
-    notificationmockup1: {
-      description: "BMW ซีรีส์ 3, 2019, $32,500 - เพิ่งลงประกาศบน AutoTrader",
-      title: "พบการจับคู่ใหม่!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 30,000 ไมล์ - ราคาลดลง 2,000 ดอลลาร์",
-      title: "การแจ้งเตือน Telegram"
-    },
-    setalerts: "ตั้งค่าการแจ้งเตือนของคุณ",
-    whytitle: "ทำไมต้องเลือก Amiquus?"
   },
   pricing: {
-    title: "ราคาง่าย ๆ โปร่งใส",
-    subtitle: "ราคาของเราออกแบบตามความต้องการเฉพาะของคุณ เริ่มต้นด้วยแพ็กเกจพื้นฐานและปรับแต่งให้ตรงกับสิ่งที่คุณต้องการ",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "ราคาเรียบง่าย โปร่งใส",
+    subtitle:
+      "ราคาออกแบบตามความต้องการของคุณ เริ่มจากแพ็กเกจพื้นฐาน และเพิ่มตัวเลือกเสริมได้ตามต้องการ",
+    baseTitle: "แพ็กเกจพื้นฐาน: $79.99 / เดือน",
+    includedTitle: "สิ่งที่รวมอยู่แล้ว:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "ติดตาม 1 เว็บไซต์",
+      "อัปเดตทุก ๆ ชั่วโมง",
+      "ตั้งค่าฟิลเตอร์ได้ไม่จำกัด",
+      "แจ้งเตือนผ่าน Telegram",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "แต่ละเว็บไซต์เพิ่มเติม"
-      },
-      1: {
-        name: "อัปเดตทุก 30 นาที"
-      },
-      2: {
-        name: "อัปเดตทุก 15 นาที"
-      },
-      3: {
-        name: "อัปเดตทุก 5 นาที"
-      },
-      4: {
-        name: "อัปเดตทุกนาที"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "เริ่มต้นใช้งาน",
-    addonstitle: "ส่วนเสริม:",
-    basetitle: "แพ็กเกจพื้นฐาน: 79.99 ดอลลาร์/เดือน",
-    footernote: "ทุกแพ็กเกจรวมการตั้งค่าการค้นหาแบบไม่จำกัดและจัดการการสมัครใช้งานได้ง่าย",
-    includedfeatures: {
-      0: "การตรวจสอบเว็บไซต์หนึ่ง",
-      1: "อัปเดตทุกชั่วโมง",
-      2: "ตัวกรองไม่จำกัด",
-      3: "การแจ้งเตือนผ่าน Telegram"
-    },
-    includedtitle: "สิ่งที่รวมอยู่ในแพ็กเกจ"
+    addonsTitle: "ตัวเลือกเสริม:",
+    addons: [
+      { name: "เว็บไซต์เพิ่มเติมต่อเว็บ", price: 4.99 },
+      { name: "อัปเดตทุก 30 นาที", price: 2.99 },
+      { name: "อัปเดตทุก 15 นาที", price: 5.99 },
+      { name: "อัปเดตทุก 5 นาที", price: 9.99 },
+      { name: "อัปเดตทุก 1 นาที", price: 14.99 },
+    ],
+    footerNote:
+      "ทุกแพ็กเกจสามารถตั้งค่าการค้นหาได้ไม่จำกัด และจัดการการสมัครใช้งานได้อย่างง่ายดาย",
+    button: "เริ่มใช้งานตอนนี้",
   },
   signup: {
-    heading: "Create Your Car Alert",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "สร้างการแจ้งเตือนรถของคุณ",
+    subheading: "ตั้งค่าการแจ้งเตือนประกาศขายรถส่วนตัวของคุณได้ในไม่กี่ขั้นตอน",
+    cta: "รับการแจ้งเตือนตอนนี้",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
-      cta: "Join Waitlist"
+      message:
+        "ขณะนี้เรามีผู้ใช้งานครบตามจำนวนสูงสุดแล้ว กรุณาลงชื่อในรายชื่อรอเพื่อให้เราแจ้งคุณเมื่อมีที่ว่าง",
+      cta: "เข้าร่วมรายชื่อรอ",
     },
     toast: {
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "สร้างการสมัครใช้งานสำเร็จ",
+        description: "การสมัครใช้งานของคุณถูกสร้างเรียบร้อยแล้ว",
       },
       error: {
-        title: "Subscription failed",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "สร้างการสมัครใช้งานไม่สำเร็จ",
+        description:
+          "ไม่สามารถสร้างการสมัครใช้งานได้ กรุณาลองใหม่อีกครั้งในภายหลัง",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "สำเร็จ",
-        description: "วิธีการชำระเงินของคุณถูกตั้งค่าเรียบร้อยแล้ว"
+        description: "ตั้งค่าวิธีการชำระเงินของคุณเรียบร้อยแล้ว",
       },
       error: {
-        title: "ข้อผิดพลาด",
-        fallback: "เกิดข้อผิดพลาดที่ไม่คาดคิด กรุณาลองใหม่อีกครั้ง"
-      }
+        title: "เกิดข้อผิดพลาด",
+        fallback: "เกิดข้อผิดพลาดที่ไม่คาดคิด กรุณาลองใหม่อีกครั้ง",
+      },
     },
     button: {
       submit: "ตั้งค่าวิธีการชำระเงิน",
-      processing: "กำลังประมวลผล..."
-    }
+      processing: "กำลังดำเนินการ...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "กรุณาระบุยี่ห้อรถยนต์",
-      carmodel: "กรุณาระบุรุ่นรถ",
-      facebookmarketplaceurl: "จำเป็นต้องกรอก URL ของ Facebook Marketplace เมื่อเลือก Facebook",
-      fueltype: "กรุณาเลือกประเภทเชื้อเพลิง",
-      maxkilometers: "จำนวนกิโลเมตรสูงสุดต้องเป็นตัวเลข",
-      notificationlanguage: "จำเป็นต้องเลือกภาษาสำหรับการแจ้งเตือน",
-      pricemax: "ราคาสูงสุดต้องเป็นตัวเลข",
-      pricemin: "ราคาขั้นต่ำต้องเป็นตัวเลข",
-      telegramchatid: "จำเป็นต้องกรอก Telegram chat ID",
-      telegramtoken: "จำเป็นต้องใช้โทเคนบอท Telegram",
-      telegramusername: "จำเป็นต้องกรอกชื่อผู้ใช้ Telegram",
-      websitesselected: "ต้องเลือกเว็บไซต์อย่างน้อยหนึ่งเว็บไซต์",
-      yearmax: "ปีสูงสุดต้องเป็นปีที่ถูกต้อง",
-      yearmin: "ปีขั้นต่ำต้องเป็นปีที่ถูกต้อง"
-    }
+      carBrand: "จำเป็นต้องระบุยี่ห้อรถ",
+      carModel: "จำเป็นต้องระบุรุ่นรถ",
+      fuelType: "จำเป็นต้องระบุประเภทเชื้อเพลิง",
+      priceMin: "ราคาต่ำสุดต้องเป็นตัวเลข",
+      priceMax: "ราคาสูงสุดต้องเป็นตัวเลข",
+      yearMin: "ปีต่ำสุดต้องเป็นปีที่ถูกต้อง",
+      yearMax: "ปีสูงสุดต้องเป็นปีที่ถูกต้อง",
+      maxKilometers: "เลขไมล์สูงสุดต้องเป็นตัวเลข",
+      telegramUsername: "จำเป็นต้องระบุชื่อผู้ใช้ Telegram",
+      telegramToken: "จำเป็นต้องระบุ Telegram bot token",
+      telegramChatId: "จำเป็นต้องระบุ Telegram chat ID",
+      websitesSelected: "ต้องเลือกอย่างน้อยหนึ่งเว็บไซต์",
+      notificationLanguage: "จำเป็นต้องเลือกภาษาสำหรับการแจ้งเตือน",
+      facebookMarketplaceUrl:
+        "จำเป็นต้องระบุ Facebook Marketplace URL เมื่อเลือก Facebook",
+    },
   },
   personalInfo: {
     heading: "ข้อมูลส่วนตัว",
-    description: "กรุณากรอกข้อมูลส่วนตัวของคุณเพื่อให้เราตั้งค่าการแจ้งเตือนได้อย่างถูกต้อง",
+    description:
+      "กรุณากรอกข้อมูลส่วนตัวของคุณ เพื่อให้เราตั้งค่าการแจ้งเตือนได้อย่างถูกต้อง",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "ที่อยู่อีเมล",
-      firstname: "ชื่อจริง",
-      lastname: "นามสกุล"
+      firstName: "ชื่อ",
+      lastName: "นามสกุล",
+      email: "อีเมล",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "จอห์น",
-      lastname: "โด"
+      firstName: "สมชาย",
+      lastName: "ใจดี",
+      email: "someone@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "กรุณากรอกอีเมลที่ถูกต้อง",
-      firstname: "จำเป็นต้องกรอกชื่อจริง",
-      lastname: "นามสกุลจำเป็นต้องกรอก"
+      firstName: "กรุณากรอกชื่อ",
+      lastName: "กรุณากรอกนามสกุล",
+      email: "กรุณากรอกอีเมลให้ถูกต้อง",
     },
     actions: {
       login: "เข้าสู่ระบบหรือสมัครสมาชิกเพื่อดำเนินการต่อ",
-      continue: "ดำเนินการต่อ"
-    }
+      continue: "ดำเนินการต่อ",
+    },
   },
   websiteSelection: {
     heading: "เลือกเว็บไซต์",
-    description: "เลือกเว็บไซต์ที่คุณต้องการติดตามและกำหนดความถี่ในการรับการอัปเดต",
+    description:
+      "เลือกเว็บไซต์ที่คุณต้องการให้เราตรวจสอบ และความถี่ในการเช็คประกาศใหม่",
     labels: {
-      websites: "เว็บไซต์ที่ต้องติดตาม",
+      websites: "เว็บไซต์ที่ต้องการติดตาม",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "ลิงก์ Facebook Marketplace",
-      updatefrequency: "ความถี่ในการอัปเดต"
+      updateFrequency: "ความถี่ในการอัปเดต",
     },
     placeholders: {
-      frequency: "เลือกความถี่"
+      frequency: "เลือกความถี่",
     },
     help: {
-      websites: "เลือกหนึ่งหรือหลายเว็บไซต์เพื่อติดตามประกาศขายรถยนต์",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "วางลิงก์ URL ผลการค้นหาของคุณจาก Facebook Marketplace ที่นี่",
-      updatefrequency: "เราควรตรวจสอบรายการใหม่บ่อยแค่ไหน? หากตรวจสอบบ่อยขึ้นอาจมีค่าใช้จ่ายเพิ่ม",
-      videodesc: "ชมวิดีโอด้านล่างเพื่อดูวิธีทำทีละขั้นตอน",
-      videotitle: "ต้องการความช่วยเหลือในการค้นหาลิงก์การค้นหาของคุณบน Facebook Marketplace หรือไม่?"
+      websites: "เลือกอย่างน้อยหนึ่งเว็บไซต์ที่ต้องการติดตามประกาศขายรถ",
+      facebookUrl: "วาง URL ผลการค้นหาบน Facebook Marketplace ของคุณที่นี่",
+      videoTitle: "ไม่แน่ใจว่าจะหา Facebook Marketplace URL จากตรงไหน?",
+      videoDesc: "ดูวิดีโอด้านล่างเพื่อดูวิธีทำทีละขั้นตอน",
+      updateFrequency:
+        "ต้องการให้เราตรวจสอบประกาศใหม่บ่อยแค่ไหน? ยิ่งถี่ ราคาก็อาจสูงขึ้นตาม",
     },
     errors: {
-      websites: "ต้องเลือกเว็บไซต์อย่างน้อยหนึ่งเว็บไซต์",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "จำเป็นต้องกรอก URL ของ Facebook Marketplace เมื่อเลือก Facebook"
+      websites: "ต้องเลือกอย่างน้อยหนึ่งเว็บไซต์",
+      facebookUrl:
+        "จำเป็นต้องระบุ Facebook Marketplace URL เมื่อเลือก Facebook",
     },
     actions: {
-      previous: "ก่อนหน้า",
-      continue: "ดำเนินการต่อ"
-    }
+      previous: "ย้อนกลับ",
+      continue: "ถัดไป",
+    },
   },
   carDetails: {
     heading: "รายละเอียดรถ",
-    description: "ระบุรายละเอียดรถยนต์ที่คุณกำลังมองหา ทุกช่องสามารถเว้นว่างได้เพื่อขยายผลการค้นหาให้กว้างขึ้น",
+    description:
+      "ระบุรายละเอียดรถที่คุณต้องการค้นหา ทุกช่องเป็นตัวเลือก หากปล่อยว่าง ผลลัพธ์จะแสดงกว้างขึ้น",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "ยี่ห้อรถยนต์",
-      carmodel: "รุ่นรถ",
-      fueltype: "ประเภทเชื้อเพลิง",
-      maxkilometers: "ระยะทางสูงสุด",
-      pricemax: "ราคาสูงสุด",
-      pricemin: "ราคาขั้นต่ำ",
-      yearmax: "ปีสูงสุด",
-      yearmin: "ปีขั้นต่ำ"
+      carBrand: "ยี่ห้อรถ",
+      carModel: "รุ่นรถ",
+      fuelType: "ประเภทเชื้อเพลิง",
+      priceMin: "ราคาต่ำสุด",
+      priceMax: "ราคาสูงสุด",
+      yearMin: "ปีต่ำสุด",
+      yearMax: "ปีสูงสุด",
+      maxKilometers: "เลขไมล์สูงสุด",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "เลือกยี่ห้อรถยนต์",
-      carmodel: "เลือกโมเดลรถยนต์",
-      carmodeldisabled: "กรุณาเลือกยี่ห้อรถยนต์ก่อน",
-      fueltype: "เลือกประเภทเชื้อเพลิง",
-      maxkilometers: "กรอกจำนวนกิโลเมตรสูงสุด",
-      pricemax: "กรอกราคาสูงสุด",
-      pricemin: "กรอกราคาขั้นต่ำ",
-      yearmax: "กรอกปีสูงสุด",
-      yearmin: "กรอกปีขั้นต่ำ"
+      carBrand: "เลือกยี่ห้อรถ",
+      carModel: "เลือกรุ่นรถ",
+      carModelDisabled: "กรุณาเลือกยี่ห้อรถก่อน",
+      fuelType: "เลือกประเภทเชื้อเพลิง",
+      priceMin: "ใส่ราคาต่ำสุด",
+      priceMax: "ใส่ราคาสูงสุด",
+      yearMin: "ใส่ปีต่ำสุด",
+      yearMax: "ใส่ปีสูงสุด",
+      maxKilometers: "ใส่เลขไมล์สูงสุด",
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "ไม่มีโมเดลที่พร้อมใช้งาน"
+      noModelsAvailable: "ยังไม่มีรุ่นในระบบ",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "กรุณาระบุยี่ห้อรถยนต์",
-      carmodel: "กรุณาระบุรุ่นรถ",
-      fueltype: "กรุณาเลือกประเภทเชื้อเพลิง",
-      maxkilometers: "จำนวนกิโลเมตรสูงสุดต้องเป็นตัวเลข",
-      pricemax: "ราคาสูงสุดต้องเป็นตัวเลข",
-      pricemin: "ราคาขั้นต่ำต้องเป็นตัวเลข",
-      yearmax: "ปีสูงสุดต้องเป็นปีที่ถูกต้อง",
-      yearmin: "ปีขั้นต่ำต้องเป็นปีที่ถูกต้อง"
+      carBrand: "จำเป็นต้องระบุยี่ห้อรถ",
+      carModel: "จำเป็นต้องระบุรุ่นรถ",
+      fuelType: "จำเป็นต้องระบุประเภทเชื้อเพลิง",
+      priceMin: "ราคาต่ำสุดต้องเป็นตัวเลข",
+      priceMax: "ราคาสูงสุดต้องเป็นตัวเลข",
+      yearMin: "ปีต่ำสุดต้องเป็นปีที่ถูกต้อง",
+      yearMax: "ปีสูงสุดต้องเป็นปีที่ถูกต้อง",
+      maxKilometers: "เลขไมล์สูงสุดต้องเป็นตัวเลข",
     },
     actions: {
-      previous: "ก่อนหน้า",
-      continue: "ดำเนินการต่อ"
-    }
+      previous: "ย้อนกลับ",
+      continue: "ถัดไป",
+    },
   },
   telegram: {
-    heading: "การตั้งค่า Telegram",
-    description: "ตั้งค่าการแจ้งเตือน Telegram โดยกรอกโทเคนบอทและรหัสแชทของคุณ",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "หากคุณมีปัญหาในการสร้างบอท Telegram กรุณาติดต่อเรา แล้วเราจะโทรหาคุณเพื่อช่วยเหลือในการสร้างบอทให้",
+    heading: "ตั้งค่า Telegram",
+    description:
+      "ตั้งค่าการแจ้งเตือนผ่าน Telegram โดยกรอก bot token และ chat ID ของคุณ",
+    subHeading: "ตั้งค่า Telegram Bot ของคุณ",
+    info: "หากคุณมีปัญหาในการสร้าง Telegram bot ติดต่อเราได้ เราจะโทรไปช่วยคุณทีละขั้นตอน",
     contact: "ติดต่อเรา",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "เปิด Telegram แล้วค้นหา @BotFather",
-      botstep2: "ส่งคำสั่ง /newbot",
-      botstep3: "ทำตามคำแนะนำเพื่อสร้างบอท",
-      botstep4: "คัดลอกโทเคนที่ได้รับจาก BotFather",
-      bottitle: "วิธีรับโทเคนบอท Telegram",
-      chatstep1: "เปิด Telegram แล้วค้นหา @userinfobot",
-      chatstep2: "ส่งข้อความใดก็ได้ถึงบอท",
-      chatstep3: "บอทจะแจ้งข้อมูลของคุณรวมถึง Chat ID ของคุณ",
-      chatstep4: "คัดลอก Chat ID (เป็นตัวเลข)",
-      chattitle: "วิธีดู Telegram Chat ID ของคุณ:"
+      botTitle: "วิธีขอรับ Telegram Bot Token:",
+      botStep1: "เปิด Telegram และค้นหา @BotFather",
+      botStep2: "ส่งคำสั่ง /newbot",
+      botStep3: "ทำตามขั้นตอนที่ BotFather แนะนำเพื่อสร้างบอท",
+      botStep4: "คัดลอก token ที่ BotFather ให้มา",
+
+      chatTitle: "วิธีดู Telegram Chat ID ของคุณ:",
+      chatStep1: "เปิด Telegram และค้นหา @userinfobot",
+      chatStep2: "ส่งข้อความใด ๆ ไปยังบอท",
+      chatStep3: "บอทจะตอบกลับพร้อมข้อมูลของคุณ รวมถึง Chat ID ด้วย",
+      chatStep4: "คัดลอกหมายเลข Chat ID ของคุณ",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt:
+      "ต้องการความช่วยเหลือในการตั้งค่า Telegram Bot Token และ Chat ID หรือไม่?",
+    videoDescription: "ดูวิดีโอด้านล่างเพื่อดูวิธีทำทีละขั้นตอน",
+
     labels: {
-      token: "โทเคนบอท Telegram",
-      chatId: "Your Telegram Chat ID",
-      language: "ภาษาการแจ้งเตือน",
+      token: "Telegram Bot Token",
+      chatId: "Telegram Chat ID ของคุณ",
+      language: "ภาษาของข้อความแจ้งเตือน",
       username: "ชื่อผู้ใช้ Telegram",
-      chatid: "รหัสแชท Telegram ของคุณ"
     },
+
     placeholders: {
-      token: "กรุณากรอกโทเคนบอทจาก BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "เลือกภาษาข้อความ Telegram",
-      username: "กรอกชื่อผู้ใช้ Telegram ของคุณ",
-      chatid: "กรอก Telegram chat ID ของคุณ"
+      token: "กรอก bot token จาก BotFather",
+      chatId: "กรอก Telegram chat ID ของคุณ",
+      language: "เลือกภาษาสำหรับข้อความใน Telegram",
+      username: "กรอกชื่อผู้ใช้ Telegram (ไม่ต้องใส่ @)",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "นี่คือชื่อผู้ใช้ในบัญชี Telegram ของคุณ (ไม่ต้องใส่เครื่องหมาย @ ข้างหน้า)",
     examples: {
       token: "ตัวอย่าง: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "คุณสามารถรับข้อมูลนี้ได้โดยส่งข้อความหา @userinfobot ใน Telegram"
+      chatId: "คุณสามารถดูได้โดยส่งข้อความไปที่ @userinfobot",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "ขั้นตอนการตั้งค่า:",
     setupSteps: [
-
-      "Open Telegram and search for \\\"BotFather\\\"",
-
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'เปิด Telegram และค้นหา "BotFather"',
+      'กด "Start" เพื่อเริ่มสนทนากับ BotFather',
+      "พิมพ์ /newbot และทำตามคำแนะนำเพื่อสร้างบอทตัวใหม่",
+      "ตั้งชื่อบอทของคุณ",
+      "ตั้ง username ให้บอท (ต้องลงท้ายด้วยคำว่า 'bot')",
+      "คัดลอก API token ที่ BotFather ส่งให้",
+      "ส่งข้อความอย่างน้อยหนึ่งข้อความถึงบอทของคุณเพื่อเปิดการสนทนา",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "วิธีดู Telegram Chat ID ของคุณ:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\"userinfobot\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'เปิด Telegram และค้นหา "userinfobot"',
+      "ส่งข้อความใด ๆ ให้บอท",
+      "บอทจะตอบกลับพร้อม Chat ID ของคุณ",
+      "คัดลอก Chat ID ของคุณ",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
+    helpTitle: "ต้องการความช่วยเหลือในการตั้งค่า Bot Token และ Chat ID?",
+    helpDescription: "ดูวิดีโอด้านล่างสำหรับคำอธิบายทีละขั้นตอน",
     botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    botTokenPlaceholder: "กรอก bot token จาก BotFather",
+    botTokenExample:
+      "ตัวอย่าง: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Telegram Chat ID ของคุณ",
+    chatIdPlaceholder: "กรอก Telegram chat ID ของคุณ",
+    chatIdDescription:
+      "คุณสามารถดูหมายเลขนี้ได้โดยส่งข้อความไปที่ @userinfobot",
+    languageLabel: "ภาษาของข้อความแจ้งเตือน",
+    languagePlaceholder: "เลือกภาษาสำหรับข้อความใน Telegram",
     languages: {
       en: "อังกฤษ",
       de: "เยอรมัน",
       fr: "ฝรั่งเศส",
-      es: "ไทย",
-      it: "ไทย"
+      es: "สเปน",
+      it: "อิตาลี",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "ตัวอย่างข้อความแจ้งเตือนใน Telegram",
+    carAlertTitle: "🚗 พบรถใหม่ที่ตรงกับเงื่อนไข!",
+    priceLabel: "ราคา: {{price}}",
+    kilometresLabel: "เลขไมล์: {{kms}}",
+    locationLabel: "ตำแหน่ง: {{location}}",
+    viewListing: "ดูประกาศ →",
     errors: {
-      token: "จำเป็นต้องใช้โทเคนบอท Telegram",
-      chatId: "Telegram chat ID is required",
+      token: "จำเป็นต้องระบุ Telegram bot token",
+      chatId: "จำเป็นต้องระบุ Telegram chat ID",
       language: "จำเป็นต้องเลือกภาษาสำหรับการแจ้งเตือน",
-      username: "จำเป็นต้องกรอกชื่อผู้ใช้ Telegram",
-      chatid: "จำเป็นต้องกรอก Telegram chat ID"
+      username: "จำเป็นต้องระบุชื่อผู้ใช้ Telegram",
     },
+
     actions: {
-      previous: "ก่อนหน้า",
-      continue: "ดำเนินการต่อ"
+      previous: "ย้อนกลับ",
+      continue: "ถัดไป",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "ตัวอย่าง: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "โทเคนบอท Telegram",
-    bottokenplaceholder: "กรุณาใส่โทเคนบอทจาก BotFather",
-    caralerttitle: "🚗 รถใหม่มาแล้ว!",
-    chatiddescription: "คุณสามารถขอรับข้อมูลนี้ได้โดยส่งข้อความหา @userinfobot ทาง Telegram",
-    chatidlabel: "รหัสแชท Telegram ของคุณ",
-    chatidplaceholder: "กรอก Telegram chat ID ของคุณ",
-    chatidsteps: {
-      0: "เปิด Telegram แล้วค้นหา \"userinfobot\"",
-      1: "ส่งข้อความใดก็ได้ถึงบอท",
-      2: "บอทจะแจ้งข้อมูลของคุณรวมถึง Chat ID ของคุณ",
-      3: "คัดลอก Chat ID ของคุณ"
-    },
-    chatidtitle: "วิธีรับ Telegram Chat ID ของคุณ:",
-    confirmcontact: "ฉันได้เริ่มแชทกับบอทและส่งข้อความแล้ว",
-    contactbotinstruction: "เริ่มแชทกับ Telegram bot ของเราได้โดยคลิกลิงก์ด้านล่างแล้วส่งข้อความหา bot",
-    contactbotnote: "จำเป็นต้องกรอกเพื่อรับการแจ้งเตือนรถยนต์ หากใช้งานบนคอมพิวเตอร์ สามารถสแกน QR โค้ดได้",
-    helpdescription: "ชมวิดีโอด้านล่างเพื่อดูวิธีทำทีละขั้นตอน",
-    helptitle: "ต้องการความช่วยเหลือในการตั้งค่า Telegram Bot Token และ Chat ID อยู่หรือไม่?",
-    kilometreslabel: "กิโลเมตร: {{kms}}",
-    languagelabel: "ภาษาการแจ้งเตือน",
-    languageplaceholder: "เลือกภาษาข้อความ Telegram",
-    locationlabel: "สถานที่: {{location}}",
-    previewtitle: "ดูตัวอย่างการแจ้งเตือน Telegram",
-    pricelabel: "ราคา: {{price}}",
-    setupsteps: {
-      0: "เปิด Telegram แล้วค้นหา \"BotFather\"",
-      1: "เริ่มแชทกับ BotFather โดยคลิกที่ \"Start\"",
-      2: "พิมพ์ /newbot แล้วทำตามคำแนะนำเพื่อสร้างบอทใหม่",
-      3: "ตั้งชื่อบอทของคุณ",
-      4: "เลือกชื่อผู้ใช้สำหรับบอตของคุณ (ต้องลงท้ายด้วย 'bot')",
-      5: "คัดลอกโทเคน API ที่ได้รับจาก BotFather",
-      6: "ส่งข้อความถึงบอทใหม่ของคุณเพื่อเริ่มต้นแชท"
-    },
-    setuptitle: "คำแนะนำการตั้งค่า:",
-    subheading: "ตั้งค่า Telegram Bot ของคุณ",
-    usernamedescription: "นี่คือชื่อผู้ใช้ในบัญชี Telegram ของคุณ (โดยไม่ต้องใส่สัญลักษณ์ @)",
-    videodescription: "ชมวิดีโอด้านล่างเพื่อดูวิธีทำทีละขั้นตอน",
-    videoprompt: "ต้องการความช่วยเหลือในการตั้งค่า Telegram Bot Token และ Chat ID อยู่หรือไม่?",
-    viewlisting: "ดูประกาศ →"
+    contactBotInstruction:
+      "เริ่มแชทกับ Telegram bot ของเราผ่านลิงก์ด้านล่าง แล้วส่งข้อความไปอย่างน้อยหนึ่งข้อความ:",
+    contactBotNote:
+      "ขั้นตอนนี้จำเป็นเพื่อให้คุณได้รับการแจ้งเตือนรถ คุณสามารถสแกน QR code ได้หากใช้งานบนเดสก์ท็อป",
+    confirmContact: "ฉันได้เริ่มแชทกับบอทแล้วและได้ส่งข้อความไปเรียบร้อยแล้ว",
   },
   review: {
-    title: "ตรวจสอบการสมัครสมาชิกของคุณ",
-    description: "กรุณาตรวจสอบรายละเอียดการสมัครสมาชิกของคุณก่อนดำเนินการชำระเงิน",
+    title: "ตรวจสอบรายละเอียดการสมัครใช้งานของคุณ",
+    description: "กรุณาตรวจสอบรายละเอียดให้เรียบร้อยก่อนดำเนินการชำระเงิน",
+
     personal: {
       title: "ข้อมูลส่วนตัว",
       name: "ชื่อ",
-      email: "อีเมล"
+      email: "อีเมล",
     },
+
     monitoring: {
-      title: "การตั้งค่าการตรวจสอบ",
+      title: "การตั้งค่าการติดตาม",
       websites: "เว็บไซต์",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "ลิงก์ Facebook",
-      updatefrequency: "ความถี่ในการอัปเดต"
+      updateFrequency: "ความถี่ในการอัปเดต",
     },
+
     specs: {
-      title: "ข้อมูลจำเพาะรถยนต์",
-      brand: "แบรนด์",
+      title: "ข้อมูลรถ",
+      brand: "ยี่ห้อ",
       model: "รุ่น",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "ระยะทางวิ่ง (กม.)",
+      fuelType: "ประเภทเชื้อเพลิง",
+      yearRange: "ช่วงปีที่ต้องการ",
+      mileage: "ช่วงเลขไมล์ (กม.)",
       price: "ช่วงราคา (€)",
-      fueltype: "ประเภทเชื้อเพลิง",
-      yearrange: "ช่วงปี"
     },
+
     notification: {
       title: "การตั้งค่าการแจ้งเตือน",
-      telegram: "บอท Telegram",
-      language: "ภาษาการแจ้งเตือน"
+      telegram: "Telegram Bot",
+      language: "ภาษาการแจ้งเตือน",
     },
+
     summary: {
-      title: "สรุปการสมัครสมาชิก",
+      title: "สรุปการสมัครใช้งาน",
       base: "แพ็กเกจพื้นฐาน",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "รวม (รายเดือน)",
-      extrawebsites: "เว็บไซต์เพิ่มเติม",
-      frequencyupgrade: "อัปเกรดความถี่"
+      extraWebsites: "เว็บไซต์เพิ่มเติม",
+      frequencyUpgrade: "อัปเกรดความถี่",
+      total: "ยอดรวม (รายเดือน)",
     },
+
     terms: {
-      checkbox: "ฉันยอมรับข้อกำหนดของ",
-      tos: "ข้อกำหนดในการให้บริการ",
+      checkbox: "ฉันยอมรับ",
+      tos: "ข้อกำหนดการให้บริการ",
       privacy: "นโยบายความเป็นส่วนตัว",
-      note: "การสมัครสมาชิกของคุณจะต่ออายุโดยอัตโนมัติทุกเดือน คุณสามารถยกเลิกได้ทุกเมื่อ",
-      error: "คุณต้องยอมรับข้อกำหนดและเงื่อนไข"
+      note: "การสมัครใช้งานของคุณจะต่ออายุอัตโนมัติทุกเดือน คุณสามารถยกเลิกได้ทุกเมื่อ",
+      error: "คุณต้องยอมรับข้อกำหนดและนโยบายก่อนดำเนินการต่อ",
     },
+
     actions: {
-      previous: "ก่อนหน้า",
-      submit: "ดำเนินการชำระเงิน"
-    }
+      previous: "ย้อนกลับ",
+      submit: "ดำเนินการชำระเงิน",
+    },
   },
   faq: {
     title: "คำถามที่พบบ่อย",
-    subtitle: "ค้นหาคำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับบริการของเรา",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "ความเร็วในการแจ้งเตือนขึ้นอยู่กับความถี่ในการอัปเดตที่คุณเลือก โดยแผนรายชั่วโมงแบบเริ่มต้น คุณจะได้รับการแจ้งเตือนภายในหนึ่งชั่วโมงหลังจากมีประกาศใหม่ หากต้องการรับการแจ้งเตือนเกือบเรียลไทม์ (ภายในไม่กี่นาทีหลังจากประกาศ) คุณสามารถอัปเกรดเป็นแผนการอัปเดตที่ถี่ขึ้นของเราได้",
-        question: "ฉันจะได้รับการแจ้งเตือนหลังจากมีการลงประกาศใหม่เร็วแค่ไหน?"
+    subtitle: "ค้นหาคำตอบสำหรับคำถามเกี่ยวกับบริการของเรา",
+    contactPrompt: "ยังมีคำถามเพิ่มเติมอยู่หรือไม่?",
+    contactLink: "ติดต่อทีมซัพพอร์ตของเรา",
+    questions: [
+      {
+        question: "หลังจากมีประกาศใหม่ ฉันจะได้รับการแจ้งเตือนเร็วแค่ไหน?",
+        answer:
+          "ความเร็วในการแจ้งเตือนขึ้นอยู่กับความถี่ที่คุณเลือก หากใช้แบบมาตรฐานที่เช็คทุกชั่วโมง คุณจะได้รับการแจ้งเตือนภายในหนึ่งชั่วโมงหลังจากประกาศถูกโพสต์ หากต้องการแจ้งเตือนแบบใกล้เคียงเรียลไทม์ (ภายในไม่กี่นาที) คุณสามารถอัปเกรดเป็นแพ็กเกจที่เช็คบ่อยขึ้นได้",
       },
-      1: {
-        answer: "ใช่! คุณสามารถสร้างโปรไฟล์การค้นหาหลายโปรไฟล์ด้วยเงื่อนไขที่แตกต่างกันได้ แต่ละโปรไฟล์จะนับเป็นการสมัครสมาชิกแยกกัน แต่คุณสามารถจัดการทั้งหมดได้จากบัญชีเดียว เหมาะมากหากคุณกำลังมองหายานพาหนะหลายประเภทในเวลาเดียวกัน",
-        question: "ฉันสามารถติดตามรถหลายประเภทพร้อมกันได้ไหม?"
+      {
+        question: "ฉันสามารถติดตามรถหลายประเภทพร้อมกันได้ไหม?",
+        answer:
+          "ได้แน่นอน! คุณสามารถสร้างโปรไฟล์การค้นหาได้หลายแบบ โดยแต่ละโปรไฟล์จะมีเงื่อนไขที่ต่างกัน แต่คุณสามารถจัดการทุกโปรไฟล์ได้จากบัญชีเดียว",
       },
-      2: {
-        answer: "ขณะนี้เรารองรับแพลตฟอร์มประกาศขายรถยนต์ชั้นนำ เช่น AutoTrader, CarGurus, Cars.com และ Facebook Marketplace และเรายังคงขยายการรองรับเว็บไซต์เพิ่มเติมอย่างต่อเนื่องตามความต้องการของผู้ใช้และความนิยมในแต่ละภูมิภาค",
-        question: "ขณะนี้คุณสามารถใช้งานเว็บไซต์ใดบ้าง?"
+      {
+        question: "ตอนนี้รองรับเว็บไซต์อะไรบ้าง?",
+        answer:
+          "ปัจจุบันเรารองรับเว็บไซต์ใหญ่ ๆ เช่น AutoTrader, CarGurus, Cars.com และ Facebook Marketplace และกำลังเพิ่มเว็บไซต์ใหม่ ๆ เพิ่มขึ้นตามคำขอของผู้ใช้และความนิยมในแต่ละภูมิภาค",
       },
-      3: {
-        answer: "ไม่เลย! เรามีคำแนะนำทีละขั้นตอนทั้งแบบข้อความและวิดีโอ เพื่อช่วยให้คุณตั้งค่า Telegram bot ได้ง่ายๆ ผู้ใช้ส่วนใหญ่ใช้เวลาติดตั้งไม่ถึง 5 นาที แม้ไม่มีพื้นฐานด้านเทคนิคเลย",
-        question: "ฉันต้องมีความรู้ทางเทคนิคเพื่อใช้ Telegram bot ไหม?"
+      {
+        question: "ต้องมีความรู้ทางเทคนิคไหมในการใช้ Telegram bot?",
+        answer:
+          "ไม่จำเป็นเลย! เรามีทั้งคู่มือเป็นข้อความและวิดีโออธิบายขั้นตอนแบบทีละขั้น ส่วนใหญ่ผู้ใช้ใช้เวลาไม่ถึง 5 นาทีในการตั้งค่าทั้งหมด แม้จะไม่มีพื้นฐานด้านเทคนิคมาก่อน",
       },
-      4: {
-        answer: "คุณสามารถปรับเปลี่ยนเกณฑ์การค้นหาได้ตลอดเวลาจากแดชบอร์ดบัญชีของคุณ การเปลี่ยนแปลงจะมีผลทันที และการแจ้งเตือนของคุณจะอัปเดตตามนั้นโดยไม่มีการหยุดชะงักของบริการ",
-        question: "ฉันสามารถเปลี่ยนเกณฑ์การค้นหาหลังจากตั้งค่าการสมัครสมาชิกได้ไหม?"
+      {
+        question:
+          "หลังตั้งค่าการสมัครแล้ว ฉันสามารถเปลี่ยนเงื่อนไขการค้นหาได้ไหม?",
+        answer:
+          "ได้ คุณสามารถแก้ไขเงื่อนไขการค้นหาได้ทุกเมื่อจากหน้าแดชบอร์ดของคุณ การเปลี่ยนแปลงจะมีผลทันที และการแจ้งเตือนจะปรับตามเงื่อนไขใหม่ทันทีเช่นกัน",
       },
-      5: {
-        answer: "คุณสามารถยกเลิกการสมัครสมาชิกได้ทุกเมื่อผ่านแดชบอร์ดบัญชีของคุณ ไปที่ส่วน \"การสมัครสมาชิก\" เลือกการสมัครที่คุณต้องการยกเลิก แล้วคลิกปุ่ม \"ยกเลิกการสมัครสมาชิก\" บริการของคุณจะยังคงใช้งานได้จนถึงสิ้นสุดรอบบิลปัจจุบัน",
-        question: "ฉันจะยกเลิกการสมัครสมาชิกได้อย่างไร?"
-      }
-    },
-    contactlink: "ติดต่อทีมสนับสนุนของเรา",
-    contactprompt: "ยังมีคำถามอยู่หรือไม่?"
+      {
+        question: "จะยกเลิกการสมัครใช้งานได้อย่างไร?",
+        answer:
+          'คุณสามารถยกเลิกการสมัครได้ทุกเมื่อจากเมนู "Subscriptions" บนแดชบอร์ด เลือกการสมัครที่ต้องการยกเลิก แล้วกด "Cancel Subscription" บริการจะยังใช้งานได้จนกว่าจะครบกำหนดรอบบิลปัจจุบัน',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "คุณสมบัติ",
+    brandDescription:
+      "ผู้ช่วยส่วนตัวของคุณในการค้นหาดีลรถมือสองที่ใช่ ในเวลาที่เหมาะสม",
+    quickLinks: "ลิงก์ด่วน",
+    features: "ฟีเจอร์",
     pricing: "ราคา",
     faq: "คำถามที่พบบ่อย",
-    getStarted: "Get Started",
+    getStarted: "เริ่มต้นใช้งาน",
     legal: "ข้อกฎหมาย",
-    terms: "ข้อกำหนดในการให้บริการ",
+    terms: "ข้อกำหนดการให้บริการ",
     privacy: "นโยบายความเป็นส่วนตัว",
     cookies: "นโยบายคุกกี้",
     gdpr: "การปฏิบัติตาม GDPR",
@@ -693,208 +524,152 @@ export const th = {
     about: "เกี่ยวกับเรา",
     blog: "บล็อก",
     careers: "ร่วมงานกับเรา",
-    support: "ฝ่ายสนับสนุน",
-    branddescription: "ผู้ช่วยส่วนตัวของคุณในการค้นหาดีลรถมือสองที่ใช่ ในเวลาที่เหมาะสม",
-    brandtitle: "Amiquus, วิธีใช้งาน",
-    getstarted: "เริ่มต้น",
-    quicklinks: "ลิงก์ด่วน"
+    support: "ฝ่ายช่วยเหลือ",
   },
   login: {
     title: "เข้าสู่ระบบบัญชีของคุณ",
-    description: "กรอกอีเมลและรหัสผ่านเพื่อเข้าสู่แดชบอร์ดของคุณ",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    description: "กรอกอีเมลและรหัสผ่านเพื่อเข้าสู่แดชบอร์ด",
+    emailLabel: "อีเมล",
+    passwordLabel: "รหัสผ่าน",
+    loginButton: "เข้าสู่ระบบ",
+    loggingIn: "กำลังเข้าสู่ระบบ...",
+    loginWithGoogle: "เข้าสู่ระบบด้วย Google",
     or: "หรือ",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "ยังไม่มีบัญชีใช่ไหม?",
+    registerLink: "สมัครสมาชิก",
+    successTitle: "เข้าสู่ระบบสำเร็จ",
+    successMessage: "คุณเข้าสู่ระบบเรียบร้อยแล้ว",
+    errorTitle: "เข้าสู่ระบบไม่สำเร็จ",
+    genericError: "กรุณาตรวจสอบข้อมูลแล้วลองใหม่อีกครั้ง",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "กรุณากรอกอีเมลที่ถูกต้อง",
-      shortpassword: "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
+      invalidEmail: "กรุณากรอกอีเมลให้ถูกต้อง",
+      shortPassword: "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร",
     },
-    emaillabel: "อีเมล",
-    errortitle: "เข้าสู่ระบบไม่สำเร็จ",
-    genericerror: "กรุณาตรวจสอบข้อมูลเข้าสู่ระบบของคุณแล้วลองใหม่อีกครั้ง",
-    loggingin: "กำลังเข้าสู่ระบบ...",
-    loginbutton: "เข้าสู่ระบบ",
-    loginwithgoogle: "เข้าสู่ระบบด้วย Google",
-    noaccount: "ยังไม่มีบัญชีใช่ไหม?",
-    passwordlabel: "รหัสผ่าน",
-    registerlink: "สมัครสมาชิก",
-    successmessage: "คุณเข้าสู่ระบบสำเร็จแล้ว",
-    successtitle: "เข้าสู่ระบบสำเร็จ"
   },
   register: {
-    title: "สร้างบัญชี",
+    title: "สร้างบัญชีใหม่",
     description: "สมัครสมาชิกเพื่อเริ่มติดตามรถในฝันของคุณ",
     google: "สมัครด้วย Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
+    orContinue: "หรือดำเนินการต่อด้วย",
+    firstName: "ชื่อ",
+    lastName: "นามสกุล",
     username: "ชื่อผู้ใช้",
     email: "อีเมล",
     password: "รหัสผ่าน",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "ยืนยันรหัสผ่าน",
+    termsNotice: "ฉันยอมรับ",
+    termsOfService: "ข้อกำหนดการให้บริการ",
+    privacyPolicy: "นโยบายความเป็นส่วนตัว",
+    createBtn: "สร้างบัญชี",
+    alreadyHave: "มีบัญชีอยู่แล้ว?",
     login: "เข้าสู่ระบบ",
     and: "และ",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "ยังกรอกข้อมูลไม่ครบ",
+        desc: "กรุณากรอกข้อมูลในทุกช่องที่จำเป็น",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "ชื่อผู้ใช้ไม่ถูกต้อง",
+        desc: "ชื่อผู้ใช้ต้องเป็นตัวอักษรหรือตัวเลข และมีความยาวระหว่าง 3 ถึง 20 ตัวอักษร",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "รหัสผ่านไม่ตรงกัน",
+        desc: "กรุณายืนยันให้แน่ใจว่ารหัสผ่านทั้งสองช่องตรงกัน",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "ยังไม่ยอมรับข้อกำหนด",
+        desc: "คุณต้องยอมรับข้อกำหนดและนโยบายความเป็นส่วนตัวก่อนดำเนินการต่อ",
       },
       success: {
-        title: "ลงทะเบียนสำเร็จ",
-        desc: "ยินดีต้อนรับสู่ Amiquus! คุณจะถูกเปลี่ยนเส้นทางไปเพื่อยืนยันที่อยู่อีเมลของคุณ"
+        title: "สมัครสมาชิกสำเร็จ",
+        desc: "ยินดีต้อนรับสู่ Amiquus! คุณจะถูกนำไปสู่ขั้นตอนยืนยันอีเมล",
       },
       failure: {
-        title: "การลงทะเบียนล้มเหลว",
-        desc: "กรุณาตรวจสอบข้อมูลของคุณและลองใหม่อีกครั้ง"
+        title: "สมัครสมาชิกไม่สำเร็จ",
+        desc: "กรุณาตรวจสอบข้อมูลและลองใหม่อีกครั้ง",
       },
-      invalidusername: {
-        desc: "ชื่อผู้ใช้ต้องเป็นตัวอักษรหรือตัวเลขและมีความยาวระหว่าง 3 ถึง 20 ตัวอักษร",
-        title: "ชื่อผู้ใช้ไม่ถูกต้อง"
-      },
-      missingfields: {
-        desc: "กรุณากรอกข้อมูลในทุกช่องที่จำเป็น",
-        title: "กรอกข้อมูลไม่ครบ"
-      },
-      passwordmismatch: {
-        desc: "กรุณาตรวจสอบให้แน่ใจว่ารหัสผ่านของคุณตรงกัน",
-        title: "รหัสผ่านไม่ตรงกัน"
-      },
-      termsnotaccepted: {
-        desc: "คุณต้องยอมรับข้อกำหนดและนโยบายความเป็นส่วนตัวเพื่อดำเนินการต่อ",
-        title: "ไม่ได้ยอมรับข้อกำหนด"
-      }
     },
-    alreadyhave: "มีบัญชีอยู่แล้วใช่ไหม?",
-    confirmpassword: "ยืนยันรหัสผ่าน",
-    createbtn: "สร้างบัญชี",
-    firstname: "ชื่อจริง",
-    lastname: "นามสกุล",
-    orcontinue: "หรือดำเนินการต่อด้วย",
-    privacypolicy: "นโยบายความเป็นส่วนตัว",
-    termsnotice: "ฉันยอมรับข้อกำหนดของ",
-    termsofservice: "ข้อกำหนดในการให้บริการ"
   },
   verifyEmail: {
     title: "ยืนยันอีเมลของคุณ",
-    description: "รหัสยืนยันได้ถูกส่งไปยังอีเมลของคุณแล้ว",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    description: "เราได้ส่งรหัสยืนยันไปยังอีเมลของคุณแล้ว",
+    codeLabel: "รหัสยืนยัน",
+    verifyButton: "ยืนยันอีเมล",
+    updateEmailLabel: "แก้ไขอีเมล",
+    updateEmailButton: "อัปเดตอีเมล",
+    resendButton: "ส่งรหัสอีกครั้ง",
+    resendCountdown: "คุณสามารถขอรหัสใหม่ได้ในอีก {{seconds}} วินาที",
+    footerNote: "หากไม่พบอีเมล กรุณาตรวจสอบในโฟลเดอร์สแปม",
     toast: {
-      verified: "ยืนยันอีเมลแล้ว",
-      failed: "การยืนยันล้มเหลว",
-      resent: "รหัสยืนยันถูกส่งใหม่แล้ว",
-      error: "ข้อผิดพลาด",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "อีเมลได้รับการอัปเดตแล้ว",
-      entervalidemail: "กรุณากรอกอีเมลให้ถูกต้อง",
-      invalidemail: "อีเมลไม่ถูกต้อง",
-      sameemail: "อีเมลเดียวกัน",
-      sameemaildesc: "อีเมลใหม่เหมือนกับอีเมลปัจจุบัน"
+      verified: "ยืนยันอีเมลสำเร็จ",
+      failed: "ยืนยันอีเมลไม่สำเร็จ",
+      resent: "ส่งรหัสยืนยันใหม่เรียบร้อยแล้ว",
+      error: "เกิดข้อผิดพลาด",
+      invalidEmail: "อีเมลไม่ถูกต้อง",
+      enterValidEmail: "กรุณากรอกอีเมลให้ถูกต้อง",
+      sameEmail: "อีเมลเหมือนเดิม",
+      sameEmailDesc: "อีเมลใหม่ตรงกับอีเมลปัจจุบัน",
+      emailUpdated: "อัปเดตอีเมลเรียบร้อยแล้ว",
     },
-    codelabel: "รหัสยืนยัน",
-    footernote: "ไม่ได้รับรหัสใช่ไหม? ลองตรวจสอบโฟลเดอร์สแปมหรือจดหมายขยะดู",
-    resendbutton: "ส่งรหัสอีกครั้ง",
-    resendcountdown: "คุณสามารถขอรหัสใหม่ได้ใน {{seconds}} วินาที",
-    updateemailbutton: "อัปเดตอีเมล",
-    updateemaillabel: "อัปเดตอีเมล",
-    verifybutton: "ยืนยันอีเมล"
   },
   dashboardPayment: {
     add: "เพิ่มวิธีการชำระเงิน",
-    description: "เพิ่มบัตรเครดิตหรือบัตรเดบิตใหม่สำหรับชำระค่าสมัครสมาชิกของคุณ",
-    processing: "กำลังประมวลผล...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    description:
+      "เพิ่มบัตรเครดิตหรือเดบิตใหม่เพื่อใช้ชำระค่าบริการรายเดือนของคุณ",
+    processing: "กำลังดำเนินการ...",
+    errorTitle: "เกิดข้อผิดพลาดในการเพิ่มวิธีการชำระเงิน",
+    errorMessage: "เกิดข้อผิดพลาดที่ไม่คาดคิด",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    },
-    errormessage: "เกิดข้อผิดพลาดที่ไม่คาดคิด",
-    errortitle: "เกิดข้อผิดพลาดในการเพิ่มวิธีการชำระเงิน",
-    initerror: {
+      title: "ข้อผิดพลาด",
       description: "ไม่สามารถเริ่มต้นการตั้งค่าการชำระเงินได้",
-      title: "ข้อผิดพลาด"
-    }
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "ปี",
+      priceRange: "ราคา",
+      websites: "เว็บไซต์",
+      updates: "ความถี่อัปเดต",
+      language: "ภาษา",
+      price: "ราคา",
+      edit: "แก้ไข",
+      cancelAlert: "ยกเลิกการแจ้งเตือน",
+      cancelTitle: "ยกเลิกการแจ้งเตือนรถ",
+      cancelDescription:
+        "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการแจ้งเตือนสำหรับ {{brand}} {{model}}? การแจ้งเตือนจะหยุดทันที และหากต้องการติดตามอีกครั้ง คุณจะต้องสร้างการแจ้งเตือนใหม่",
+      keepMyAlert: "เก็บการแจ้งเตือนไว้",
+      confirmCancel: "ยกเลิกการแจ้งเตือน",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "วันหมดอายุ",
+      default: "ค่าเริ่มต้น",
+      setAsDefault: "ตั้งเป็นค่าเริ่มต้น",
+      remove: "ลบออก",
+      setDefaultTitle: "ตั้งเป็นวิธีการชำระเงินหลัก",
+      setDefaultDescription:
+        "คุณต้องการตั้งให้บัตร {{brand}} ลงท้ายด้วย {{last4}} เป็นวิธีการชำระเงินหลักหรือไม่? บัตรนี้จะถูกใช้สำหรับการชำระเงินในอนาคตทั้งหมด",
+      removeTitle: "ลบวิธีการชำระเงิน",
+      removeDescription:
+        "คุณต้องการลบบัตร {{brand}} ที่ลงท้ายด้วย {{last4}} ใช่หรือไม่?",
+      removeWarning:
+        "นี่เป็นวิธีการชำระเงินหลักของคุณ การลบอาจมีผลต่อการสมัครใช้งานที่ยังใช้งานอยู่",
+      cancel: "ยกเลิก",
+      confirmRemove: "ลบบัตร",
+    },
   },
   profile: {
     tabs: {
       alerts: "การแจ้งเตือนของฉัน",
-      payments: "วิธีการชำระเงิน"
+      payments: "วิธีการชำระเงิน",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "การสมัครสมาชิก",
+      memberSince: "เป็นสมาชิกตั้งแต่",
+      subscriptions: "การสมัครใช้งาน",
       methods: "วิธีการชำระเงิน",
       account: "การตั้งค่าบัญชี",
       privacy: "ความเป็นส่วนตัวและความปลอดภัย",
       logout: "ออกจากระบบ",
-      membersince: "เป็นสมาชิกตั้งแต่"
     },
     account: {
       title: "การตั้งค่าบัญชี",
@@ -903,7 +678,7 @@ export const th = {
       email: "อีเมล",
       username: "ชื่อผู้ใช้",
       cancel: "ยกเลิก",
-      save: "บันทึกการเปลี่ยนแปลง"
+      save: "บันทึกการเปลี่ยนแปลง",
     },
     security: {
       title: "ความเป็นส่วนตัวและความปลอดภัย",
@@ -911,830 +686,786 @@ export const th = {
       current: "รหัสผ่านปัจจุบัน",
       new: "รหัสผ่านใหม่",
       confirm: "ยืนยันรหัสผ่านใหม่",
-      update: "อัปเดตรหัสผ่าน"
+      update: "อัปเดตรหัสผ่าน",
     },
     logout: {
       title: "ออกจากระบบ",
-      desc: "คุณแน่ใจหรือว่าต้องการออกจากบัญชีของคุณ?",
-      success: "คุณได้ออกจากระบบเรียบร้อยแล้ว"
+      desc: "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?",
+      success: "ออกจากระบบเรียบร้อยแล้ว",
     },
     alerts: {
-      title: "การสมัครรับการแจ้งเตือนรถยนต์",
-      desc: "จัดการการแจ้งเตือนการค้นหารถยนต์และการตั้งค่าการแจ้งเตือนของคุณ",
+      title: "การสมัครแจ้งเตือนรถ",
+      desc: "จัดการการแจ้งเตือนและการตั้งค่าการค้นหารถของคุณ",
       add: "เพิ่มการแจ้งเตือนใหม่",
-      none: "คุณยังไม่มีการแจ้งเตือนรถยนต์ที่ใช้งานอยู่",
+      none: "ขณะนี้คุณยังไม่มีการแจ้งเตือนรถที่ใช้งานอยู่",
       cta: "สร้างการแจ้งเตือนแรกของคุณ",
-      warning: "⚠️ การเปลี่ยนแปลงการสมัครสมาชิกของคุณจะมีผลในรอบบิลถัดไป และจะดำเนินการหลังจากชำระเงินสำเร็จเท่านั้น หากการชำระเงินล้มเหลว การตั้งค่าการแจ้งเตือนปัจจุบันของคุณจะยังคงเหมือนเดิม"
+      warning:
+        "⚠️ การเปลี่ยนแปลงการสมัครใช้งานจะมีผลในรอบบิลถัดไป และมีผลหลังจากชำระเงินสำเร็จเท่านั้น หากการชำระเงินล้มเหลว การตั้งค่าปัจจุบันจะยังคงเดิม",
     },
     payments: {
       title: "วิธีการชำระเงิน",
-      desc: "จัดการวิธีการชำระเงินสำหรับการเรียกเก็บเงินค่าสมัครสมาชิก",
+      desc: "จัดการวิธีการชำระเงินสำหรับการสมัครใช้งานของคุณ",
       none: "คุณยังไม่มีวิธีการชำระเงินที่บันทึกไว้",
-      encrypted: "ข้อมูลการชำระเงินของคุณได้รับการเข้ารหัสและจัดเก็บอย่างปลอดภัย"
-    }
+      encrypted: "ข้อมูลการชำระเงินของคุณถูกเข้ารหัสและจัดเก็บอย่างปลอดภัย",
+    },
   },
   setupAlerts: {
-    title: "ตั้งค่าการแจ้งเตือนรถยนต์ของคุณ",
-    subtitle: "ตั้งค่า Telegram bot ของคุณเพื่อรับการแจ้งเตือนเกี่ยวกับรถในฝันของคุณ",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "เริ่มใช้บริการแจ้งเตือนรถยนต์ของฉัน",
+    title: "ตั้งค่าการแจ้งเตือนรถของคุณ",
+    subtitle: "ตั้งค่า Telegram bot เพื่อรับการแจ้งเตือนเกี่ยวกับรถในฝันของคุณ",
+    basicPlan: "แพ็กเกจพื้นฐาน",
+    baseTitle: "$79.99 / เดือน",
+    button: "เริ่มใช้บริการแจ้งเตือนรถของฉัน",
     cancel: "ยกเลิกได้ทุกเมื่อ",
     toasts: {
       terms: {
-        title: "ไม่ยอมรับข้อกำหนด",
-        description: "คุณต้องยอมรับข้อตกลงการให้บริการเพื่อดำเนินการต่อ"
+        title: "ยังไม่ได้ยอมรับข้อกำหนด",
+        description:
+          "คุณต้องยอมรับข้อกำหนดการให้บริการก่อนจึงจะดำเนินการต่อได้",
       },
       success: {
-        title: "สร้างการสมัครสมาชิกสำเร็จ",
-        description: "การสมัครสมาชิกของคุณถูกสร้างเรียบร้อยแล้ว"
+        title: "สร้างการสมัครใช้งานสำเร็จ",
+        description: "การสมัครใช้งานของคุณถูกสร้างเรียบร้อยแล้ว",
       },
       error: {
-        title: "เกิดข้อผิดพลาดในการสร้างการสมัครสมาชิก"
+        title: "เกิดข้อผิดพลาดในการสร้างการสมัครใช้งาน",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
+        title: "จำเป็นต้องติดต่อบอทก่อน",
+        description:
+          "คุณต้องเริ่มแชทกับ Telegram bot ของเราและส่งข้อความอย่างน้อยหนึ่งข้อความ กรุณาทำตามคำแนะนำด้านล่าง",
       },
-      contactbot: {
-        description: "คุณต้องเริ่มแชทกับ Telegram bot ของเราและส่งข้อความเพื่อรับการแจ้งเตือนรถยนต์ กรุณาทำตามคำแนะนำด้านล่างเพื่อ ติดต่อกับบอท",
-        title: "ต้องใช้บอทติดต่อ"
-      }
     },
-    basetitle: "$79.99/เดือน",
-    basicplan: "แพ็กเกจพื้นฐาน"
   },
   loginPrompt: {
-    title: "ต้องเข้าสู่ระบบ",
-    description: "คุณต้องเข้าสู่ระบบเพื่อดำเนินการต่อ กรุณาเข้าสู่ระบบหรือสมัครสมาชิก",
+    title: "จำเป็นต้องเข้าสู่ระบบ",
+    description:
+      "คุณต้องเข้าสู่ระบบก่อนจึงจะดำเนินการต่อได้ กรุณาเข้าสู่ระบบหรือสมัครสมาชิก",
     register: "สมัครสมาชิก",
-    login: "เข้าสู่ระบบ"
+    login: "เข้าสู่ระบบ",
   },
   waitlistPrompt: {
     title: "เข้าร่วมรายชื่อรอ",
-    description: "ขณะนี้มีผู้ใช้งานครบตามจำนวนที่กำหนดแล้ว กรุณาลงชื่อในรายชื่อรอเพื่อรับการแจ้งเตือนเมื่อมีที่ว่าง",
-    button: "เข้าร่วมรายชื่อรอ"
+    description:
+      "ขณะนี้เรามีผู้สมัครใช้งานครบจำนวนแล้ว กรุณาเข้าร่วมรายชื่อรอเพื่อให้เราแจ้งคุณเมื่อมีที่ว่าง",
+    button: "เข้าร่วมรายชื่อรอ",
   },
   subscription: {
-    title: "รายละเอียดการสมัครสมาชิก",
-    subTitle: "Edit your subscription details below",
-    error: "กลับไปที่แดชบอร์ด",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "คุณสามารถหยุดพักการสมัครสมาชิกของคุณได้ทุกเมื่อ เมื่อคุณหยุดพักการสมัครสมาชิก การแจ้งเตือนรถยนต์ของคุณจะหยุดจนกว่าคุณจะกลับมาเปิดใช้งานอีกครั้ง",
+    title: "รายละเอียดการสมัครใช้งาน",
+    subTitle: "แก้ไขรายละเอียดการสมัครใช้งานของคุณด้านล่าง",
+    error: "กลับไปยังแดชบอร์ด",
+    notFound: "ไม่พบทการสมัครใช้งาน",
+    notFoundSub: "กลับไปยังแดชบอร์ด",
+    description:
+      "คุณสามารถหยุดพัก (pause) การสมัครใช้งานได้ทุกเมื่อ ในระหว่างที่หยุดพัก คุณจะไม่ได้รับการแจ้งเตือน จนกว่าจะกลับมาเปิดใช้งานอีกครั้ง",
     form: {
       status: {
         label: "สถานะ",
         placeholder: "เลือกสถานะ",
         active: "ใช้งานอยู่",
-        paused: "หยุดชั่วคราว"
-      }
+        paused: "หยุดพักชั่วคราว",
+      },
     },
     actions: {
       save: "บันทึกการเปลี่ยนแปลง",
-      back: "ย้อนกลับ"
+      back: "ย้อนกลับ",
     },
     toasts: {
       success: {
-        title: "การสมัครสมาชิกได้รับการอัปเดตแล้ว",
-        description: "การสมัครสมาชิกของคุณสำหรับ {{brand}} {{model}} ได้รับการอัปเดตเรียบร้อยแล้ว"
+        title: "อัปเดตการสมัครใช้งานเรียบร้อยแล้ว",
+        description:
+          "อัปเดตการสมัครใช้งานสำหรับ {{brand}} {{model}} เรียบร้อยแล้ว",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "ไม่สามารถอัปเดตการสมัครใช้งานได้",
+        description:
+          "ไม่สามารถหยุดพักและเปลี่ยนราคาไปพร้อมกันได้ กรุณาเลือกดำเนินการอย่างใดอย่างหนึ่งในครั้งเดียว",
       },
       error: {
-        title: "เกิดข้อผิดพลาดขณะอัปเดตการสมัครสมาชิก"
+        title: "เกิดข้อผิดพลาดในการอัปเดตการสมัครใช้งาน",
       },
-      priceerror: {
-        description: "คุณหยุดชั่วคราวและอัปเดตราคาสมัครสมาชิกพร้อมกัน กรุณาเลือกอย่างใดอย่างหนึ่งระหว่างหยุดชั่วคราวหรืออัปเดตราคา",
-        title: "ไม่สามารถอัปเดตการสมัครสมาชิกได้"
-      }
     },
-    notfound: "ไม่พบการสมัครสมาชิก",
-    notfoundsub: "กลับไปที่แดชบอร์ด",
-    subtitle: "แก้ไขรายละเอียดการสมัครสมาชิกของคุณด้านล่าง"
   },
   about: {
-    title: "เกี่ยวกับ AMIQUUS",
-    description: "เรากำลังปฏิวัติวิธีที่ผู้คนค้นหารถยนต์มือสองที่ใช่สำหรับตัวเอง ด้วยการนำเทคโนโลยีการตรวจสอบขั้นสูงมาให้ทุกคนได้ใช้",
+    title: "เกี่ยวกับ Amiquus",
+    description:
+      "เรากำลังเปลี่ยนวิธีที่ผู้คนค้นหารถมือสอง ด้วยเทคโนโลยีการติดตามประกาศที่ทันสมัยและใช้งานได้จริงสำหรับทุกคน",
     meta: {
-      title: "เกี่ยวกับเรา | Amiquus - บริการติดตามประกาศขายรถยนต์",
-      description: "เรียนรู้เกี่ยวกับ AMIQUUS ภารกิจของเราในการปฏิวัติประสบการณ์ซื้อขายรถยนต์มือสอง และทีมงานผู้อยู่เบื้องหลังบริการตรวจสอบประกาศขายรถยนต์อัจฉริยะของเรา"
+      title: "เกี่ยวกับเรา | Amiquus - บริการติดตามประกาศขายรถ",
+      description:
+        "ทำความรู้จักกับ Amiquus ภารกิจของเรา และทีมงานเบื้องหลังบริการติดตามประกาศขายรถอัจฉริยะ",
     },
     story: {
       heading: "เรื่องราวของเรา",
-      paragraphs: {
-        0: "AMIQUUS เริ่มต้นขึ้นในปี 2023 เมื่อผู้ก่อตั้งของเรา Alex ใช้เวลาหลายเดือนรีเฟรชเว็บไซต์ประกาศขายรถยนต์เพื่อหารถรุ่นหายากในราคาที่ดี หลังจากพลาดโอกาสหลายครั้งเพราะได้รับการแจ้งเตือนล่าช้า เขาจึงตระหนักว่าต้องมีวิธีที่ดีกว่านี้",
-        1: "อเล็กซ์ได้ร่วมงานกับทีมเล็ก ๆ ที่ประกอบด้วยนักพัฒนาและคนรักรถยนต์ เพื่อสร้างระบบมอนิเตอร์ที่สามารถติดตามประกาศจากหลายเว็บไซต์พร้อมกัน และส่งการแจ้งเตือนทันทีเมื่อพบรายการที่ตรงกับความต้องการ",
-        2: "สิ่งที่เริ่มต้นจากโปรเจกต์ส่วนตัว กลับได้รับความสนใจอย่างรวดเร็วจากเพื่อนและครอบครัว และในช่วงต้นปี 2025 AMIQUUS ก็ได้ถือกำเนิดขึ้นในฐานะบริการที่ทุกคนเข้าถึงได้ ทุกวันนี้ เราช่วยให้ผู้ซื้อรถยนต์ทั่วประเทศประหยัดเวลาและค้นหาข้อเสนอที่ดีกว่าด้วยเทคโนโลยีการติดตามอัจฉริยะของเรา"
-      }
+      paragraphs: [
+        "Amiquus เริ่มต้นขึ้นในปี 2023 เมื่อผู้ก่อตั้งของเรา Alex ใช้เวลาหลายเดือนคอยรีเฟรชหน้าเว็บประกาศขายรถ เพื่อหารุ่นหายากในราคาที่ดี หลังจากพลาดโอกาสดี ๆ หลายครั้งเพราะแจ้งเตือนล่าช้า เขาจึงรู้ว่าต้องมีวิธีที่ดีกว่านี้",
+        "ร่วมกับทีมเล็ก ๆ ที่ประกอบด้วยนักพัฒนาและคนรักรถ Alex ได้สร้างระบบติดตามประกาศที่สามารถติดตามหลายเว็บไซต์พร้อมกัน และส่งการแจ้งเตือนทันทีเมื่อพบรถที่ตรงกับเงื่อนไข",
+        "สิ่งที่เริ่มจากโปรเจกต์ส่วนตัว ได้รับความสนใจจากเพื่อนและครอบครัวอย่างรวดเร็ว และในช่วงต้นปี 2025 Amiquus ก็กลายเป็นบริการที่เปิดให้ทุกคนใช้งาน ทุกวันนี้เราช่วยให้ผู้ซื้อรถทั่วประเทศประหยัดเวลา และได้ดีลที่ดีกว่าด้วยเทคโนโลยีการติดตามประกาศที่ชาญฉลาดของเรา",
+      ],
     },
     mission: {
       heading: "พันธกิจของเรา",
-      items: {
-        0: {
-          description: "หมดปัญหาต้องรีเฟรชหลายเว็บไซต์บ่อยๆ ด้วยการค้นหาอัตโนมัติและรับการแจ้งเตือนทันเวลา",
-          title: "ประหยัดเวลา"
+      items: [
+        {
+          title: "ช่วยคุณประหยัดเวลา",
+          description:
+            "ไม่ต้องคอยนั่งรีเฟรชหลาย ๆ เว็บไซต์เองอีกต่อไป ปล่อยให้ระบบของเราทำแทน และส่งแจ้งเตือนให้คุณตรงเวลา",
         },
-        1: {
-          description: "เป็นคนแรกที่รู้เมื่อมีดีลสุดคุ้มปรากฏขึ้น ให้คุณได้เปรียบในตลาดที่มีการแข่งขันสูงซึ่งเวลาเป็นสิ่งสำคัญ",
-          title: "ค้นหาดีลที่ดีกว่า"
+        {
+          title: "ช่วยให้คุณได้ดีลที่ดีกว่า",
+          description:
+            "เป็นคนแรก ๆ ที่รู้เมื่อมีประกาศดี ๆ ทำให้คุณได้เปรียบในตลาดที่แข่งขันกันสูง",
         },
-        2: {
-          description: "ตัดสินใจอย่างมั่นใจด้วยการติดตามข้อมูลอย่างครบถ้วนจากหลากหลายแพลตฟอร์มประกาศขายรถยนต์ที่เชื่อถือได้",
-          title: "ช้อปอย่างมั่นใจ"
-        }
-      }
+        {
+          title: "ให้คุณซื้อรถได้อย่างมั่นใจ",
+          description:
+            "ตัดสินใจได้อย่างมั่นใจด้วยข้อมูลจากหลายแพลตฟอร์มที่เชื่อถือได้ และการติดตามแบบครบถ้วน",
+        },
+      ],
     },
     team: {
-      heading: "ทีมของเรา",
-      members: {
-        0: {
-          bio: "อดีตวิศวกรซอฟต์แวร์ที่มีใจรักรถยนต์และการสร้างสรรค์นวัตกรรมใหม่ๆ",
+      heading: "ทีมงานของเรา",
+      members: [
+        {
           name: "Alex Morgan",
-          role: "ผู้ก่อตั้งและประธานเจ้าหน้าที่บริหาร"
+          role: "ผู้ก่อตั้ง & CEO",
+          bio: "อดีตวิศวกรซอฟต์แวร์ที่หลงใหลในรถยนต์และการสร้างโซลูชันที่แปลกใหม่",
         },
-        1: {
-          bio: "ผู้เชี่ยวชาญด้านวิทยาศาสตร์ข้อมูลที่เชี่ยวชาญการดึงข้อมูลจากเว็บไซต์และระบบสืบค้นข้อมูล",
+        {
           name: "Sarah Chen",
-          role: "ประธานเจ้าหน้าที่เทคโนโลยี"
+          role: "CTO",
+          bio: "ผู้เชี่ยวชาญด้าน Data Science ที่ถนัดระบบ web scraping และการสืบค้นข้อมูล",
         },
-        2: {
-          bio: "วิศวกรฟูลสแต็กผู้เชี่ยวชาญด้านการพัฒนาระบบแจ้งเตือนประสิทธิภาพสูง",
-          name: "มาร์คัส ลี",
-          role: "หัวหน้าทีมพัฒนา"
+        {
+          name: "Marcus Lee",
+          role: "Lead Developer",
+          bio: "วิศวกร Full-stack ที่มีประสบการณ์สร้างระบบแจ้งเตือนประสิทธิภาพสูง",
         },
-        3: {
-          bio: "อดีตพนักงานขายรถยนต์ที่ทุ่มเทเพื่อช่วยให้ลูกค้าได้รถที่ตรงใจที่สุด",
+        {
           name: "Elena Rodriguez",
-          role: "ความสำเร็จของลูกค้า"
-        }
-      }
+          role: "Customer Success",
+          bio: "อดีตที่ปรึกษาขายรถที่มุ่งมั่นช่วยลูกค้าให้ค้นหารถที่เหมาะสมที่สุดสำหรับพวกเขา",
+        },
+      ],
     },
     join: {
-      heading: "ร่วมงานกับเรา",
-      description: "เรากำลังมองหาคนเก่งที่มีใจรักเทคโนโลยีและอยากเปลี่ยนประสบการณ์ซื้อรถให้ดียิ่งขึ้นอยู่เสมอ ดูตำแหน่งงานที่เปิดรับตอนนี้และมาร่วมเป็นส่วนหนึ่งในภารกิจของเรา",
-      cta: "ดูตำแหน่งงานที่เปิดรับ"
+      heading: "ร่วมเป็นส่วนหนึ่งในทีมของเรา",
+      description:
+        "เรามองหาคนที่มีความสามารถ และหลงใหลในเทคโนโลยีกับการเปลี่ยนแปลงประสบการณ์การซื้อรถอยู่เสมอ ดูตำแหน่งที่เปิดรับและเข้าร่วมภารกิจของเรา",
+      cta: "ดูตำแหน่งงานที่เปิดรับ",
     },
     questions: {
-      heading: "มีคำถามหรือไม่?",
-      description: "เรียนรู้เพิ่มเติมเกี่ยวกับวิธีการทำงานของบริการของเรา ดูตัวเลือกแพ็กเกจราคา หรือ ติดต่อทีมสนับสนุนของเรา",
+      heading: "มีคำถามเพิ่มเติม?",
+      description:
+        "เรียนรู้เพิ่มเติมเกี่ยวกับการทำงานของบริการเรา ดูตัวเลือกแพ็กเกจราคา หรือพูดคุยกับทีมซัพพอร์ต",
       links: {
-        faq: "ดูคำถามที่พบบ่อย",
+        faq: "ไปที่คำถามที่พบบ่อย",
         pricing: "ดูราคา",
-        support: "ติดต่อฝ่ายสนับสนุน"
-      }
-    }
+        support: "ติดต่อฝ่ายช่วยเหลือ",
+      },
+    },
   },
   terms: {
-    metaTitle: "ข้อกำหนดการให้บริการ | Amiquus",
-    metaDescription: "โปรดอ่านข้อกำหนดการให้บริการของ AMIQUUS ที่กำหนดการใช้งานบริการติดตามและแจ้งเตือนรายการรถยนต์ของคุณ",
+    metaTitle: "ข้อกำหนดในการให้บริการ | Amiquus",
+    metaDescription:
+      "อ่านข้อกำหนดในการให้บริการของ Amiquus ซึ่งกำหนดวิธีการใช้งานบริการติดตามและแจ้งเตือนรายการประกาศรถยนต์ของคุณ",
     title: "ข้อกำหนดในการให้บริการ",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "อัปเดตล่าสุด: 21 พฤษภาคม 2025",
+
     sections: {
-      1: {
-        id: "ข้อตกลง",
-        heading: "ข้อตกลงในการใช้บริการ",
-        paragraphs: {
-          0: "ข้อกำหนดการใช้บริการเหล่านี้ถือเป็นข้อตกลงทางกฎหมายที่มีผลผูกพันระหว่างคุณกับ AMIQUUS เกี่ยวกับการเข้าถึงและการใช้เว็บไซต์และบริการของเรา",
-          1: "เมื่อคุณเข้าถึงหรือใช้บริการของเรา แสดงว่าคุณยอมรับข้อตกลงเหล่านี้ หากคุณไม่เห็นด้วยกับข้อกำหนดใด ๆ คุณจะไม่สามารถใช้บริการได้"
-        },
-        list: [
-        ]
+      "1": {
+        id: "agreement",
+        heading: "ข้อตกลงตามข้อกำหนด",
+        paragraphs: [
+          "ข้อกำหนดการใช้บริการนี้เป็นข้อตกลงตามกฎหมายระหว่างคุณและ Amiquus เกี่ยวกับการเข้าถึงและใช้งานเว็บไซต์และบริการของเรา",
+          "เมื่อคุณเข้าถึงหรือใช้บริการของเรา ถือว่าคุณยอมรับข้อกำหนดเหล่านี้ หากคุณไม่เห็นด้วยกับข้อกำหนดใด ๆ กรุณาหยุดใช้งานบริการทันที",
+        ],
+        list: [],
       },
-      2: {
-        id: "การเปลี่ยนแปลง",
+
+      "2": {
+        id: "changes",
         heading: "การเปลี่ยนแปลงข้อกำหนด",
-        paragraphs: {
-          0: "เราขอสงวนสิทธิ์ในการเปลี่ยนแปลงหรือแทนที่ข้อกำหนดเหล่านี้ได้ทุกเมื่อโดยขึ้นอยู่กับดุลยพินิจของเรา หากมีการเปลี่ยนแปลงที่สำคัญ เราจะพยายามแจ้งให้ทราบล่วงหน้าอย่างน้อย 30 วันก่อนที่ข้อกำหนดใหม่จะมีผลบังคับใช้",
-          1: "โดยการเข้าถึงหรือใช้บริการของเราอย่างต่อเนื่องหลังจากที่มีการแก้ไขข้อกำหนดเหล่านั้นมีผลบังคับใช้ แสดงว่าคุณยอมรับข้อกำหนดที่แก้ไขแล้ว หากคุณไม่เห็นด้วยกับข้อกำหนดใหม่ กรุณาหยุดใช้บริการ"
-        },
+        paragraphs: [
+          "Amiquus ขอสงวนสิทธิ์ในการปรับปรุง แก้ไข หรือแทนที่ข้อกำหนดเหล่านี้ทุกเวลา หากมีการเปลี่ยนแปลงสำคัญ เราจะพยายามแจ้งล่วงหน้าอย่างน้อย 30 วัน",
+          "หากคุณยังคงใช้บริการหลังจากข้อกำหนดใหม่มีผล ถือว่าคุณยอมรับข้อกำหนดใหม่ หากไม่เห็นด้วย กรุณาหยุดใช้บริการ",
+        ],
+        list: [],
+      },
+
+      "3": {
+        id: "account",
+        heading: "ข้อกำหนดเกี่ยวกับบัญชีผู้ใช้",
+        paragraphs: ["เพื่อใช้บริการของเรา คุณต้อง:"],
         list: [
-        ]
+          "อายุอย่างน้อย 18 ปี",
+          "กรอกข้อมูลการลงทะเบียนทั้งหมดให้ครบถ้วน",
+          "ให้ข้อมูลที่ถูกต้องและเป็นปัจจุบัน",
+          "รักษาความปลอดภัยของบัญชีและรหัสผ่านของคุณ",
+          "รับผิดชอบต่อทุกการใช้งานภายใต้บัญชีของคุณ",
+          "แจ้งเราทันทีหากพบการใช้งานโดยไม่ได้รับอนุญาต",
+        ],
       },
-      3: {
-        id: "บัญชี",
-        heading: "ข้อกำหนดบัญชี",
-        paragraphs: {
-          0: "ในการใช้บริการของเรา คุณต้อง:"
-        },
-        list: {
-          0: "มีอายุอย่างน้อย 18 ปี",
-          1: "กรอกข้อมูลเพื่อสมัครสมาชิกให้เสร็จสมบูรณ์",
-          2: "กรุณาให้ข้อมูลที่ถูกต้อง ครบถ้วน และเป็นปัจจุบัน",
-          3: "โปรดรับผิดชอบในการรักษาความปลอดภัยของบัญชีและรหัสผ่านของคุณ",
-          4: "โปรดรับผิดชอบต่อทุกกิจกรรมที่เกิดขึ้นภายใต้บัญชีของคุณ",
-          5: "โปรดแจ้งให้เราทราบทันทีหากคุณทราบถึงการละเมิดความปลอดภัยหรือการใช้งานบัญชีของคุณโดยไม่ได้รับอนุญาต"
-        }
+
+      "4": {
+        id: "payment",
+        heading: "ข้อกำหนดเกี่ยวกับการชำระเงิน",
+        paragraphs: [
+          "Amiquus ให้บริการแบบรายเดือนตามการสมัครสมาชิก ซึ่งมีเงื่อนไขดังนี้:",
+        ],
+        list: [
+          "ค่าบริการทั้งหมดไม่รวมภาษี (จะถูกเพิ่มเมื่อจำเป็น)",
+          "ราคาการสมัครสมาชิกอาจมีการเปลี่ยนแปลง โดยจะแจ้งล่วงหน้า 30 วัน",
+          "การสมัครสมาชิกจะต่ออายุอัตโนมัติหากคุณไม่ยกเลิกก่อนรอบบิลถัดไป",
+          "การคืนเงินขึ้นอยู่กับเงื่อนไขตามนโยบายการคืนเงินของเรา",
+          "การชำระเงินทั้งหมดดำเนินการอย่างปลอดภัยด้วย Stripe และ Amiquus จะไม่จัดเก็บข้อมูลบัตรเครดิตของคุณ",
+        ],
       },
-      4: {
-        id: "การชำระเงิน",
-        heading: "เงื่อนไขการชำระเงิน",
-        paragraphs: {
-          0: "Amiquus ให้บริการแบบสมัครสมาชิกพร้อมเงื่อนไขดังต่อไปนี้:"
-        },
-        list: {
-          0: "ค่าธรรมเนียมทั้งหมดไม่รวมภาษี ซึ่งจะถูกเพิ่มเมื่อมีผลบังคับใช้",
-          1: "ราคาการสมัครสมาชิกอาจมีการเปลี่ยนแปลงโดยจะแจ้งให้ทราบล่วงหน้า 30 วัน",
-          2: "การสมัครสมาชิกจะต่ออายุอัตโนมัติ เว้นแต่จะยกเลิกก่อนรอบบิลถัดไป",
-          3: "การคืนเงินจะพิจารณาเป็นกรณีไปตามนโยบายการคืนเงินของเรา",
-          4: "เราใช้ Stripe ในการประมวลผลการชำระเงินอย่างปลอดภัย และข้อมูลการชำระเงินทั้งหมดจะถูกจัดเก็บโดย Stripe"
-        }
+
+      "5": {
+        id: "capacity",
+        heading: "ข้อจำกัดด้านจำนวนผู้สมัครสมาชิก",
+        paragraphs: [
+          "เพื่อให้บริการมีประสิทธิภาพสูงสุด จำนวนผู้สมัครสมาชิกแบบใช้งานพร้อมกันถูกจำกัดไว้ที่ 30 คน เมื่อจำนวนเต็มแล้ว:",
+        ],
+        list: [
+          "ผู้ใช้ใหม่สามารถเข้าร่วมรายชื่อรอ (Waitlist)",
+          "การเรียงลำดับรายชื่อรอจะเป็นแบบมาก่อนได้ก่อน",
+          "เมื่อมีที่ว่าง เราจะส่งการแจ้งเตือนให้ผู้ที่อยู่ในรายชื่อรอตามลำดับ",
+          "Amiquus ขอสงวนสิทธิ์ในการปรับเปลี่ยนจำนวนที่รองรับเมื่อจำเป็น",
+        ],
       },
-      5: {
-        id: "ความจุ",
-        heading: "ขีดจำกัดความจุ",
-        paragraphs: {
-          0: "เพื่อรักษาคุณภาพและความน่าเชื่อถือของบริการ AMIQUUS จำกัดจำนวนการสมัครสมาชิกที่ใช้งานพร้อมกันไว้ที่ 30 รายการ เมื่อถึงขีดจำกัดนี้:"
-        },
-        list: {
-          0: "ผู้ใช้ใหม่สามารถเข้าร่วมรายชื่อรอของเราได้",
-          1: "ลำดับในรายชื่อรอคิวจะถูกจัดตามลำดับก่อนหลัง",
-          2: "เมื่อมีพื้นที่ว่าง ผู้ที่อยู่ในรายชื่อรอจะได้รับการแจ้งเตือนตามลำดับ",
-          3: "เราขอสงวนสิทธิ์ในการเปลี่ยนแปลงขีดจำกัดความจุได้ทุกเมื่อ"
-        }
+
+      "6": {
+        id: "scraping",
+        heading: "ข้อจำกัดเกี่ยวกับการเก็บข้อมูล (Web Scraping)",
+        paragraphs: [
+          "บริการของเราตรวจสอบและประมวลผลข้อมูลจากเว็บไซต์ประกาศรถยนต์หลายแห่ง โดยการใช้บริการของเรา คุณยอมรับว่า:",
+        ],
+        list: [
+          "Amiquus เคารพข้อกำหนดการใช้งานของเว็บไซต์ที่เราติดตาม",
+          "มีการจำกัดอัตราการขอข้อมูล (Rate Limit) และใช้การเก็บข้อมูลอย่างระมัดระวัง",
+          "ความพร้อมใช้งานของเว็บไซต์อาจเปลี่ยนแปลงตามนโยบายของแต่ละเว็บไซต์",
+          "เราไม่รับประกันว่าข้อมูลที่เก็บจะครบถ้วนหรือใหม่ล่าสุดเสมอไป",
+        ],
       },
-      6: {
-        id: "ดึงข้อมูล",
-        heading: "ข้อจำกัดในการดึงข้อมูลเว็บไซต์",
-        paragraphs: {
-          0: "บริการของเราเข้าถึงและประมวลผลข้อมูลจากหลายเว็บไซต์ประกาศขายรถยนต์ โดยการใช้บริการของเรา คุณยอมรับว่า:"
-        },
-        list: {
-          0: "Amiquus เคารพต่อข้อกำหนดการใช้บริการของเว็บไซต์ที่เราตรวจสอบ",
-          1: "เราใช้การจำกัดอัตราและปฏิบัติตามแนวทางการเก็บข้อมูลอย่างสุภาพ",
-          2: "การเข้าถึงเว็บไซต์บางแห่งอาจเปลี่ยนแปลงได้ตามเงื่อนไขและมาตรการทางเทคนิคของแต่ละเว็บไซต์",
-          3: "เราไม่รับประกันความครบถ้วนหรือความทันเวลาของข้อมูลที่ดึงมา"
-        }
-      },
-      7: {
-        id: "เชิงปัญญา",
+
+      "7": {
+        id: "intellectual",
         heading: "ทรัพย์สินทางปัญญา",
-        paragraphs: {
-          0: "บริการของ AMIQUUS รวมถึงเนื้อหาต้นฉบับ ฟีเจอร์ และฟังก์ชันการทำงานทั้งหมด เป็นและจะยังคงเป็นทรัพย์สินเฉพาะของ AMIQUUS บริการของเรานี้ได้รับความคุ้มครองตามกฎหมายลิขสิทธิ์ เครื่องหมายการค้า และกฎหมายอื่น ๆ ของสหรัฐอเมริกาและประเทศอื่น ๆ",
-          1: "เครื่องหมายการค้าและรูปแบบการค้าของเรา ห้ามนำไปใช้กับสินค้า หรือบริการใด ๆ โดยไม่ได้รับความยินยอมเป็นลายลักษณ์อักษรจาก AMIQUUS"
-        },
-        list: [
-        ]
+        paragraphs: [
+          "บริการของ Amiquus รวมถึงเนื้อหา ฟีเจอร์ และฟังก์ชันทั้งหมดเป็นทรัพย์สินของ Amiquus แต่เพียงผู้เดียว",
+          "ห้ามใช้โลโก้ สัญลักษณ์ หรือสื่อที่เป็นเครื่องหมายการค้าของเราโดยไม่ได้รับอนุญาต",
+        ],
+        list: [],
       },
-      8: {
-        id: "การยกเลิก",
-        heading: "การยกเลิก",
-        paragraphs: {
-          0: "เราอาจระงับหรือยกเลิกบัญชีของคุณได้ทันทีโดยไม่ต้องแจ้งให้ทราบล่วงหน้าหรือรับผิดชอบใด ๆ ไม่ว่าด้วยเหตุผลใดก็ตาม รวมถึงแต่ไม่จำกัดเพียงกรณีที่คุณละเมิดข้อกำหนด",
-          1: "เมื่อมีการยกเลิก สิทธิ์ในการใช้บริการของคุณจะสิ้นสุดลงทันที หากคุณต้องการยกเลิกบัญชีของคุณ คุณสามารถหยุดใช้บริการได้เลย หรือ ติดต่อเราเพื่อขอลบบัญชี"
-        },
-        list: [
-        ]
+
+      "8": {
+        id: "termination",
+        heading: "การระงับหรือยุติบัญชี",
+        paragraphs: [
+          "Amiquus สามารถระงับหรือยุติบัญชีของคุณได้ทันทีโดยไม่ต้องแจ้งล่วงหน้า หากพบว่าคุณละเมิดข้อกำหนด",
+          "เมื่อบัญชีถูกยุติ คุณจะไม่สามารถเข้าถึงบริการได้อีก หากต้องการลบบัญชี โปรดติดต่อเรา",
+        ],
+        list: [],
       },
-      9: {
-        id: "ข้อจำกัด",
-        heading: "ข้อจำกัดความรับผิด",
-        paragraphs: {
-          0: "ไม่ว่าในกรณีใดก็ตาม AMIQUUS รวมถึงกรรมการ พนักงาน หุ้นส่วน ตัวแทน ซัพพลายเออร์ หรือบริษัทในเครือ จะไม่รับผิดชอบต่อความเสียหายใด ๆ ที่เกิดขึ้นโดยทางอ้อม บังเอิญ พิเศษ เป็นผลสืบเนื่อง หรือเป็นการลงโทษ รวมถึงแต่ไม่จำกัดเพียง การสูญเสียกำไร ข้อมูล การใช้งาน ชื่อเสียง หรือความสูญเสียที่จับต้องไม่ได้อื่น ๆ ที่เกิดขึ้นจาก:"
-        },
-        list: {
-          0: "การเข้าถึงหรือการใช้หรือไม่สามารถเข้าถึงหรือใช้บริการ",
-          1: "การกระทำหรือเนื้อหาของบุคคลที่สามใด ๆ บนบริการ",
-          2: "เนื้อหาทั้งหมดที่ได้รับจากบริการ",
-          3: "การเข้าถึง การใช้ หรือการเปลี่ยนแปลงข้อมูลหรือเนื้อหาของคุณโดยไม่ได้รับอนุญาต"
-        }
-      },
-      10: {
-        id: "ข้อจำกัดความรับผิดชอบ",
+
+      "9": {
+        id: "limitations",
         heading: "ข้อจำกัดความรับผิดชอบ",
-        paragraphs: {
-          0: "การใช้บริการนี้เป็นความเสี่ยงของคุณเอง บริการนี้ให้ในรูปแบบ ‘ตามสภาพ’ และ ‘ตามที่มีให้ใช้งาน’ โดยไม่มีการรับประกันใด ๆ ไม่ว่าจะโดยชัดแจ้งหรือโดยนัย",
-          1: "Amiquus ไม่รับประกันว่าบริการจะไม่สะดุด ตรงเวลา ปลอดภัย หรือปราศจากข้อผิดพลาด หรือว่าผลลัพธ์ที่ได้จากการใช้บริการจะถูกต้องหรือเชื่อถือได้"
-        },
+        paragraphs: [
+          "Amiquus จะไม่รับผิดชอบต่อความเสียหายใด ๆ ที่เกิดขึ้นโดยอ้อม รวมถึง:",
+        ],
         list: [
-        ]
+          "ไม่สามารถเข้าถึงบริการได้",
+          "การกระทำหรือเนื้อหาจากบุคคลที่สาม",
+          "ข้อมูลที่ไม่ถูกต้องจากระบบ",
+          "การเข้าถึงหรือดัดแปลงข้อมูลโดยไม่ได้รับอนุญาต",
+        ],
       },
-      11: {
-        id: "คุกกี้",
+
+      "10": {
+        id: "disclaimer",
+        heading: "ข้อสงวนสิทธิ์",
+        paragraphs: [
+          "บริการนี้จัดให้ในลักษณะ “ตามที่เป็น” และ “ตามที่มีให้ใช้งาน” โดยไม่รับประกันทุกกรณี",
+          "เราไม่รับประกันว่าระบบจะทำงานต่อเนื่อง ปลอดภัย หรือปราศจากข้อผิดพลาด",
+        ],
+        list: [],
+      },
+
+      "11": {
+        id: "cookies",
         heading: "นโยบายคุกกี้",
-        paragraphs: {
-          0: "นโยบายคุกกี้ของเราอธิบายว่าคุกกี้คืออะไร เราใช้คุกกี้อย่างไร บุคคลที่สามที่เราอาจร่วมงานด้วยอาจใช้คุกกี้บนบริการของเราอย่างไร ตัวเลือกของคุณเกี่ยวกับคุกกี้ และข้อมูลเพิ่มเติมเกี่ยวกับคุกกี้ กรุณาดูรายละเอียดในหัวข้อคุกกี้ในนโยบายความเป็นส่วนตัวของเรา"
-        },
-        list: [
-        ]
+        paragraphs: [
+          "รายละเอียดเพิ่มเติมเกี่ยวกับคุกกี้และวิธีจัดการ สามารถดูได้ในนโยบายความเป็นส่วนตัว",
+        ],
+        list: [],
       },
-      12: {
-        id: "กฎหมายที่ใช้บังคับ",
+
+      "12": {
+        id: "governing-law",
         heading: "กฎหมายที่ใช้บังคับ",
-        paragraphs: {
-          0: "ข้อกำหนดเหล่านี้จะอยู่ภายใต้และตีความตามกฎหมายของสหรัฐอเมริกา โดยไม่คำนึงถึงข้อกำหนดเกี่ยวกับความขัดแย้งของกฎหมาย",
-          1: "การที่เราไม่บังคับใช้สิทธิหรือข้อกำหนดใด ๆ ในข้อกำหนดเหล่านี้ จะไม่ถือว่าเป็นการสละสิทธินั้น หากข้อกำหนดใดในข้อกำหนดเหล่านี้ถูกศาลตัดสินว่าเป็นโมฆะหรือไม่สามารถบังคับใช้ได้ ข้อกำหนดที่เหลือจะยังคงมีผลบังคับใช้อยู่"
-        },
-        list: [
-        ]
+        paragraphs: [
+          "ข้อกำหนดเหล่านี้อยู่ภายใต้กฎหมายของสหรัฐอเมริกา",
+          "หากข้อกำหนดใดไม่สามารถบังคับใช้ได้ ส่วนที่เหลือยังมีผลตามปกติ",
+        ],
+        list: [],
       },
-      13: {
-        id: "ติดต่อ",
+
+      "13": {
+        id: "contact",
         heading: "ติดต่อเรา",
-        paragraphs: {
-          0: "หากคุณมีคำถามเกี่ยวกับข้อกำหนดเหล่านี้ กรุณาติดต่อเรา:"
-        },
-        list: {
-          0: "ทางอีเมล: legal@amiquus.com",
-          1: "โดยการเยี่ยมชมหน้าติดต่อบนเว็บไซต์ของเรา"
-        }
-      }
+        paragraphs: [
+          "หากมีคำถามเกี่ยวกับข้อกำหนดในการให้บริการ กรุณาติดต่อเรา:",
+        ],
+        list: ["อีเมล: legal@amiquus.com", "แบบฟอร์มติดต่อผ่านเว็บไซต์"],
+      },
     },
-    lastupdated: "อัปเดตล่าสุด: 21 พฤษภาคม 2025"
   },
   privacy: {
     metaTitle: "นโยบายความเป็นส่วนตัว | Amiquus",
-    metaDescription: "เรียนรู้เกี่ยวกับวิธีที่ AMIQUUS จัดการข้อมูลส่วนบุคคลของคุณ สิทธิความเป็นส่วนตัว และแนวทางการเก็บรวบรวมข้อมูล",
+    metaDescription:
+      "เรียนรู้วิธีที่ Amiquus ใช้ จัดเก็บ และปกป้องข้อมูลส่วนบุคคลของคุณ",
     title: "นโยบายความเป็นส่วนตัว",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "อัปเดตล่าสุด: 21 พฤษภาคม 2025",
+
     sections: {
-      0: {
-        id: "แนะนำ",
+      "0": {
+        id: "introduction",
         heading: "แนะนำ",
-        paragraphs: {
-          0: "ยินดีต้อนรับสู่ AMIQUUS เราให้ความสำคัญกับความเป็นส่วนตัวของคุณและมุ่งมั่นในการปกป้องข้อมูลส่วนบุคคลของคุณ นโยบายความเป็นส่วนตัวนี้จะอธิบายให้คุณทราบว่าเราดูแลข้อมูลของคุณอย่างไรเมื่อคุณเข้าชมเว็บไซต์ของเรา รวมถึงสิทธิ์ของคุณเกี่ยวกับความเป็นส่วนตัวและวิธีที่กฎหมายคุ้มครองคุณ"
-        }
+        paragraphs: [
+          "Amiquus ให้ความสำคัญกับความเป็นส่วนตัวของคุณ เรารับรองว่าข้อมูลของคุณจะถูกจัดเก็บและใช้อย่างปลอดภัยตามกฎหมายที่เกี่ยวข้อง",
+        ],
       },
-      1: {
-        id: "ข้อมูลที่เราเก็บรวบรวม",
-        heading: "ข้อมูลที่เราเก็บรวบรวม",
-        paragraphs: {
-          0: "เราเก็บรวบรวมข้อมูลหลากหลายประเภทเพื่อวัตถุประสงค์ที่แตกต่างกัน เพื่อให้บริการและพัฒนาการให้บริการของเราแก่คุณ"
-        },
-        list: {
-          0: "ข้อมูลส่วนบุคคล: ที่อยู่อีเมล ชื่อจริง นามสกุล และรูปโปรไฟล์ (หากมีการให้ผ่านการยืนยันตัวตนจากบุคคลที่สาม)",
-          1: "ข้อมูลบัญชี: ข้อมูลเข้าสู่ระบบและการตั้งค่าบัญชีของคุณ",
-          2: "ข้อมูลการใช้งาน: ข้อมูลเกี่ยวกับวิธีที่คุณใช้เว็บไซต์และบริการของเรา",
-          3: "การตั้งค่าการค้นหารถยนต์: เกณฑ์ของรถยนต์ที่คุณตั้งไว้สำหรับติดตาม (ยี่ห้อ รุ่น ช่วงราคา ฯลฯ)",
-          4: "ข้อมูล Telegram: หากคุณเลือกที่จะรับการแจ้งเตือนผ่าน Telegram เราจะจัดเก็บรหัสแชท Telegram และโทเคนบอทของคุณ",
-          5: "ข้อมูลการชำระเงิน: เมื่อคุณทำการสั่งซื้อ ระบบประมวลผลการชำระเงินของเราจะรวบรวมรายละเอียดการชำระเงินที่จำเป็นสำหรับดำเนินธุรกรรมของคุณ AMIQUUS จะไม่จัดเก็บข้อมูลบัตรเครดิตของคุณทั้งหมด"
-        }
+
+      "1": {
+        id: "data-we-collect",
+        heading: "ข้อมูลที่เรารวบรวม",
+        paragraphs: [
+          "เรารวบรวมข้อมูลหลายประเภทเพื่อพัฒนาบริการของเราให้ดีที่สุด:",
+        ],
+        list: [
+          "ข้อมูลส่วนตัว: อีเมล ชื่อ นามสกุล รูปโปรไฟล์",
+          "ข้อมูลบัญชี: การเข้าสู่ระบบและตั้งค่าบัญชี",
+          "ข้อมูลการใช้งานเว็บไซต์",
+          "การตั้งค่าการค้นหารถยนต์ของคุณ",
+          "Telegram Chat ID และ Bot Token (หากใช้การแจ้งเตือนผ่าน Telegram)",
+          "ข้อมูลการชำระเงินผ่าน Stripe (Amiquus ไม่จัดเก็บข้อมูลบัตรเครดิต)",
+        ],
       },
-      2: {
-        id: "วิธีที่เราใช้ข้อมูล",
-        heading: "วิธีที่เราใช้ข้อมูลของคุณ",
-        paragraphs: {
-          0: "เราใช้ข้อมูลส่วนบุคคลของคุณเพื่อวัตถุประสงค์ดังต่อไปนี้:"
-        },
-        list: {
-          0: "เพื่อให้บริการและดูแลรักษาบริการของเรา",
-          1: "เพื่อแจ้งให้คุณทราบเกี่ยวกับการเปลี่ยนแปลงของบริการของเรา",
-          2: "เพื่อให้คุณสามารถใช้งานฟีเจอร์แบบโต้ตอบของบริการของเรา",
-          3: "ให้บริการสนับสนุนลูกค้า",
-          4: "เพื่อรวบรวมการวิเคราะห์หรือข้อมูลที่มีคุณค่า เพื่อให้เราสามารถพัฒนาบริการของเราได้",
-          5: "เพื่อตรวจสอบการใช้งานบริการของเรา",
-          6: "เพื่อตรวจจับ ป้องกัน และแก้ไขปัญหาทางเทคนิค",
-          7: "เพื่อดำเนินการชำระเงินและป้องกันธุรกรรมทุจริต",
-          8: "เพื่อส่งรายการรถยนต์ที่ตรงกับความต้องการของคุณผ่านวิธีการแจ้งเตือนที่คุณเลือก"
-        }
+
+      "2": {
+        id: "how-we-use-data",
+        heading: "วิธีที่เราใช้ข้อมูล",
+        paragraphs: ["เราใช้ข้อมูลของคุณเพื่อ:"],
+        list: [
+          "ให้บริการและดูแลระบบให้ทำงานอย่างถูกต้อง",
+          "แจ้งเตือนเกี่ยวกับการเปลี่ยนแปลงหรือการอัปเดต",
+          "จัดการการสนับสนุนลูกค้า",
+          "วิเคราะห์ข้อมูลเพื่อปรับปรุงระบบ",
+          "ป้องกันการทุจริตและกิจกรรมที่ไม่พึงประสงค์",
+          "ประมวลผลการชำระเงิน",
+          "ส่งรายการประกาศรถยนต์ที่ตรงกับเงื่อนไขของคุณ",
+        ],
       },
-      3: {
-        id: "ที่เก็บข้อมูล",
-        heading: "การจัดเก็บข้อมูลและความปลอดภัย",
-        paragraphs: {
-          0: "เราใช้มาตรการความปลอดภัยที่เหมาะสมเพื่อปกป้องข้อมูลส่วนบุคคลของคุณจากการเข้าถึง แก้ไข เปิดเผย หรือทำลายโดยไม่ได้รับอนุญาต ข้อมูลทั้งหมดจะถูกจัดเก็บไว้บนเซิร์ฟเวอร์ที่ปลอดภัย พร้อมการเข้ารหัสทั้งขณะส่งและขณะจัดเก็บ",
-          1: "เราจะเก็บรักษาข้อมูลส่วนบุคคลของคุณไว้เท่าที่จำเป็นตามวัตถุประสงค์ที่ระบุไว้ในนโยบายความเป็นส่วนตัวนี้ รวมถึงเพื่อปฏิบัติตามข้อกำหนดทางกฎหมาย กฎระเบียบ ภาษี การบัญชี หรือการรายงานต่าง ๆ"
-        }
+
+      "3": {
+        id: "data-storage",
+        heading: "การจัดเก็บและความปลอดภัยของข้อมูล",
+        paragraphs: [
+          "ข้อมูลของคุณจะถูกเก็บไว้บนเซิร์ฟเวอร์ที่มีความปลอดภัยสูง ใช้การเข้ารหัสทั้งระหว่างส่งและจัดเก็บ",
+          "เราจัดเก็บข้อมูลเท่าที่จำเป็นตามนโยบายนี้และตามข้อกำหนดของกฎหมาย",
+        ],
       },
-      4: {
-        id: "กฎหมายคุ้มครองข้อมูลส่วนบุคคล",
-        heading: "สิทธิ์ของคุณภายใต้กฎหมายคุ้มครองข้อมูลส่วนบุคคล (GDPR)",
-        paragraphs: {
-          0: "หากคุณอาศัยอยู่ในเขตเศรษฐกิจยุโรป (EEA) คุณมีสิทธิ์ในการคุ้มครองข้อมูลส่วนบุคคลบางประการ AMIQUUS มุ่งมั่นที่จะดำเนินมาตรการที่เหมาะสมเพื่อให้คุณสามารถแก้ไข ปรับปรุง ลบ หรือจำกัดการใช้ข้อมูลส่วนบุคคลของคุณได้",
-          1: "คุณมีสิทธิ์ในการคุ้มครองข้อมูลส่วนบุคคลดังต่อไปนี้:"
-        },
-        list: {
-          0: "สิทธิ์ในการเข้าถึง แก้ไข หรือ ลบข้อมูลที่เราเก็บไว้เกี่ยวกับคุณ",
-          1: "สิทธิ์ในการแก้ไขข้อมูล",
-          2: "สิทธิในการคัดค้าน",
-          3: "สิทธิ์ในการจำกัด",
-          4: "สิทธิในการพกพาข้อมูล",
-          5: "สิทธิในการเพิกถอนความยินยอม"
-        }
+
+      "4": {
+        id: "gdpr",
+        heading: "สิทธิ์ของคุณภายใต้ GDPR",
+        paragraphs: ["หากคุณอยู่ในเขต EEA คุณมีสิทธิ์ตาม GDPR ดังต่อไปนี้:"],
+        list: [
+          "เข้าถึงข้อมูลของคุณ",
+          "แก้ไขข้อมูลที่ไม่ถูกต้อง",
+          "ขอลบข้อมูล",
+          "จำกัดการประมวลผล",
+          "โอนย้ายข้อมูล",
+          "เพิกถอนความยินยอม",
+        ],
       },
-      5: {
-        id: "คุกกี้",
-        heading: "นโยบายคุกกี้",
-        paragraphs: {
-          0: "คุกกี้คือข้อมูลขนาดเล็กที่ถูกจัดเก็บไว้ในอุปกรณ์ของคุณ เราใช้คุกกี้เพื่อ:"
-        },
-        list: {
-          0: "อยู่ในระบบต่อ",
-          1: "เข้าใจวิธีที่คุณใช้เว็บไซต์ของเรา",
-          2: "จดจำการตั้งค่าของคุณ",
-          3: "ปรับแต่งประสบการณ์ของคุณ"
-        }
+
+      "5": {
+        id: "cookies",
+        heading: "คุกกี้",
+        paragraphs: ["เราใช้คุกกี้เพื่อ:"],
+        list: [
+          "เก็บสถานะการเข้าสู่ระบบของคุณ",
+          "วิเคราะห์การใช้งานระบบ",
+          "จดจำการตั้งค่าของคุณ",
+          "ปรับปรุงประสบการณ์การใช้งาน",
+        ],
       },
-      6: {
-        id: "บุคคลที่สาม",
-        heading: "บริการจากบุคคลที่สาม",
-        paragraphs: {
-          0: "เราอาจว่าจ้างบริษัทหรือบุคคลภายนอกเพื่อช่วยอำนวยความสะดวกในการให้บริการของเรา ให้บริการแทนเรา ดำเนินงานที่เกี่ยวข้องกับบริการ หรือช่วยวิเคราะห์การใช้งานบริการของเรา",
-          1: "บุคคลที่สามเหล่านี้ได้แก่:"
-        },
-        list: {
-          0: "ตัวประมวลผลการชำระเงิน (Stripe)",
-          1: "ผู้ให้บริการวิเคราะห์ข้อมูล",
-          2: "บริการสนับสนุนลูกค้า",
-          3: "ผู้ให้บริการโฮสติ้งและโครงสร้างพื้นฐานคลาวด์"
-        },
-        paragraphs2: {
-          0: "บุคคลภายนอกเหล่านี้จะเข้าถึงข้อมูลส่วนบุคคลของคุณได้เฉพาะเพื่อดำเนินการตามหน้าที่ในนามของเราเท่านั้น และมีข้อผูกมัดที่จะไม่เปิดเผยหรือใช้ข้อมูลดังกล่าวเพื่อวัตถุประสงค์อื่น"
-        }
+
+      "6": {
+        id: "third-party",
+        heading: "ผู้ให้บริการภายนอก",
+        paragraphs: ["เราใช้บริการจากบุคคลที่สาม เช่น:"],
+        list: [
+          "Stripe (ประมวลผลการชำระเงิน)",
+          "เครื่องมือวิเคราะห์",
+          "ระบบสนับสนุนลูกค้า",
+          "ผู้ให้บริการโครงสร้างพื้นฐาน Cloud",
+        ],
+        paragraphs2: [
+          "บุคคลที่สามจะสามารถเข้าถึงข้อมูลของคุณเท่าที่จำเป็นในการให้บริการเท่านั้น",
+        ],
       },
-      7: {
-        id: "การเปลี่ยนแปลง",
-        heading: "การเปลี่ยนแปลงนโยบายความเป็นส่วนตัวนี้",
-        paragraphs: {
-          0: "เราอาจมีการปรับปรุงนโยบายความเป็นส่วนตัวเป็นครั้งคราว หากมีการเปลี่ยนแปลงใด ๆ เราจะแจ้งให้คุณทราบโดยการโพสต์นโยบายความเป็นส่วนตัวฉบับใหม่บนหน้านี้และอัปเดตวันที่ \"แก้ไขล่าสุด\"",
-          1: "ขอแนะนำให้คุณตรวจสอบนโยบายความเป็นส่วนตัวนี้เป็นระยะ ๆ เพื่อดูการเปลี่ยนแปลงใด ๆ การเปลี่ยนแปลงนโยบายความเป็นส่วนตัวนี้จะมีผลเมื่อมีการเผยแพร่บนหน้านี้"
-        }
+
+      "7": {
+        id: "changes",
+        heading: "การเปลี่ยนแปลงนโยบายความเป็นส่วนตัว",
+        paragraphs: [
+          "เราขอสงวนสิทธิ์ในการแก้ไขนโยบายนี้ การเปลี่ยนแปลงจะถูกประกาศบนหน้านี้",
+        ],
       },
-      8: {
-        id: "ติดต่อ",
+
+      "8": {
+        id: "contact",
         heading: "ติดต่อเรา",
-        paragraphs: {
-          0: "หากคุณมีคำถามใด ๆ เกี่ยวกับนโยบายความเป็นส่วนตัวนี้ กรุณาติดต่อเรา:"
-        },
-        list: {
-          0: "ทางอีเมล: privacy@amiquus.com",
-          1: "โดยการเข้าชมหน้าติดต่อบนเว็บไซต์ของเรา"
-        }
-      }
+        paragraphs: [
+          "หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว กรุณาติดต่อเรา:",
+        ],
+        list: ["อีเมล: privacy@amiquus.com", "หน้าติดต่อบนเว็บไซต์"],
+      },
     },
-    lastupdated: "อัปเดตล่าสุด: 21 พฤษภาคม 2025"
   },
   faqs: {
     metaTitle: "คำถามที่พบบ่อย | Amiquus",
-    metaDescription: "ค้นหาคำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับบริการติดตามประกาศขายรถยนต์ของ AMIQUUS การสมัครสมาชิก การตั้งค่าการแจ้งเตือน และอื่นๆ",
+    metaDescription:
+      "ค้นหาคำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับบริการติดตามประกาศรถยนต์ การสมัครสมาชิก การตั้งค่า และการแจ้งเตือนของ Amiquus",
     title: "คำถามที่พบบ่อย",
-    subtitle: "ค้นหาคำตอบอย่างรวดเร็วสำหรับคำถามที่พบบ่อยเกี่ยวกับบริการติดตามประกาศขายรถของเรา",
+    subtitle:
+      "ค้นหาคำตอบอย่างรวดเร็วสำหรับคำถามทั่วไปเกี่ยวกับบริการติดตามประกาศรถยนต์ของเรา",
+
     general: {
       heading: "คำถามทั่วไป",
+
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Amiquus คืออะไร?",
+        answer:
+          "Amiquus คือบริการที่ติดตามหลายเว็บไซต์ประกาศขายรถยนต์ และแจ้งเตือนคุณทันทีเมื่อมีรายการที่ตรงกับเงื่อนไขที่คุณตั้งไว้ ผ่านการแจ้งเตือนทาง Telegram"
       },
+
       howItWorks: {
-        question: "How does it work?",
+        question: "Amiquus ทำงานอย่างไร?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
+          "1. ตั้งค่าการค้นหา เช่น ยี่ห้อ รุ่น ช่วงราคา เป็นต้น",
+          "2. เลือกเว็บไซต์ที่ต้องการให้ระบบติดตาม",
+          "3. เชื่อมต่อบัญชี Telegram ของคุณเพื่อรับการแจ้งเตือน",
+          "4. ระบบจะติดตามเว็บไซต์เหล่านั้นตลอดเวลา",
+          "5. เมื่อมีรายการใหม่ที่ตรงกับเงื่อนไข คุณจะได้รับการแจ้งเตือนทันที"
         ]
       },
+
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Amiquus ติดตามเว็บไซต์ใดบ้าง?",
+        answerIntro: "ปัจจุบันเราติดตามเว็บไซต์หลักดังต่อไปนี้:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (แบบ URL)",
           "Craigslist",
-
           "eBay Motors"
-
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "คุณตั้งค่าหลักเกณฑ์การค้นหา (ยี่ห้อ รุ่น ช่วงราคา ฯลฯ)",
-          1: "คุณเลือกเว็บไซต์ที่ต้องการติดตาม",
-          2: "คุณเชื่อมต่อบัญชี Telegram ของคุณเพื่อรับการแจ้งเตือน",
-          3: "ระบบของเราเฝ้าติดตามเว็บไซต์ที่คุณเลือกอย่างต่อเนื่องเพื่อแจ้งเตือนรายการใหม่",
-          4: "เมื่อมีรถที่ตรงกับความต้องการ ระบบจะแจ้งเตือนคุณทาง Telegram ทันที พร้อมรายละเอียดทั้งหมดและลิงก์ตรง"
-        },
-        question: "ทำงานอย่างไร?"
-      },
-      whatis: {
-        answer: "AMIQUUS คือบริการที่ช่วยตรวจสอบเว็บไซต์ประกาศขายรถยนต์หลายแห่ง เพื่อค้นหารถที่ตรงกับเงื่อนไขเฉพาะของคุณ เมื่อมีประกาศที่ตรงตามต้องการ คุณจะได้รับการแจ้งเตือนทันทีผ่าน Telegram ทำให้คุณเป็นหนึ่งในคนแรก ๆ ที่ติดต่อผู้ขายและคว้าโอกาสดี ๆ ได้ก่อนใคร",
-        question: "Amiquus คืออะไร?"
-      },
-      whichwebsites: {
-        answerintro: "ขณะนี้เรากำลังติดตามแพลตฟอร์มประกาศขายรถยนต์หลักๆ ต่อไปนี้:",
-        list: {
-          0: "ออโต้เทรดเดอร์",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "ทรูคาร์",
-          4: "Facebook Marketplace (ผ่าน URL)",
-          5: "เครกส์ลิสต์",
-          6: "eBay มอเตอร์ส์"
-        },
-        outro: "เรากำลังเพิ่มแพลตฟอร์มใหม่อย่างต่อเนื่องเพื่อให้ครอบคลุมได้มากที่สุด",
-        question: "คุณติดตามเว็บไซต์ประกาศขายรถยนต์เว็บไหนบ้าง?"
+        outro:
+          "เรากำลังเพิ่มเว็บไซต์ใหม่อย่างต่อเนื่องเพื่อให้ครอบคลุมมากยิ่งขึ้น"
       }
     },
+
     subscription: {
       heading: "คำถามเกี่ยวกับการสมัครสมาชิก",
+
       cost: {
         question: "ค่าสมัครสมาชิกเท่าไหร่?",
-        answer: {
-          0: "ราคาเริ่มต้นที่ 79.99 ดอลลาร์ต่อเดือน สำหรับการตรวจสอบเว็บไซต์ 1 แห่ง พร้อมอัปเดตทุก 6 ชั่วโมง หากต้องการเพิ่มเว็บไซต์ จะมีค่าใช้จ่ายเว็บไซต์ละ 4.99 ดอลลาร์ต่อเดือน และคุณยังสามารถอัปเกรดความถี่ในการอัปเดตเพื่อรับการแจ้งเตือนที่รวดเร็วยิ่งขึ้นได้",
-          1: "สำหรับรายละเอียดราคาโดยเฉพาะ กรุณาดูส่วนราคาบนหน้าแรกของเรา"
-        }
+        answer: [
+          "แพ็กเกจเริ่มต้นที่ $79.99 ต่อเดือน สำหรับการติดตาม 1 เว็บไซต์ พร้อมการอัปเดตทุก 6 ชั่วโมง",
+          "เพิ่มเว็บไซต์ที่ต้องการติดตามได้ในราคา $4.99 ต่อเดือนต่อเว็บไซต์",
+          "คุณยังสามารถอัปเกรดความถี่ในการอัปเดตเพื่อรับการแจ้งเตือนที่เร็วขึ้น"
+        ]
       },
+
       cancel: {
-        question: "ฉันจะยกเลิกการสมัครสมาชิกได้อย่างไร?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "เข้าสู่ระบบบัญชีของคุณ",
-          1: "ไปที่หน้า \"โปรไฟล์\"",
-          2: "เลือกแท็บ \"การสมัครสมาชิก\"",
-          3: "คลิกปุ่ม \"ยกเลิกการสมัครสมาชิก\" ถัดจากการสมัครสมาชิกที่คุณต้องการยกเลิก"
-        },
-        note: "การสมัครสมาชิกของคุณจะยังคงใช้งานได้จนถึงสิ้นสุดรอบบิลปัจจุบันของคุณ",
-        stepsintro: "คุณสามารถยกเลิกการสมัครสมาชิกได้ทุกเวลาที่หน้าข้อมูลโปรไฟล์บัญชีของคุณ"
+        question: "ยกเลิกการสมัครสมาชิกอย่างไร?",
+        stepsIntro: "คุณสามารถยกเลิกได้ทุกเวลาโดยทำตามขั้นตอนต่อไปนี้:",
+        steps: [
+          "1. เข้าสู่ระบบบัญชีของคุณ",
+          "2. ไปที่เมนู “โปรไฟล์”",
+          "3. เปิดแท็บ “การสมัครสมาชิก”",
+          "4. กดปุ่ม “ยกเลิกการสมัครสมาชิก” ของแพ็กเกจที่ต้องการ"
+        ],
+        note: "หลังจากยกเลิกแล้ว บริการจะยังคงใช้งานได้จนกว่าจะจบรอบบิลปัจจุบัน"
       },
+
       multiple: {
-        question: "ฉันสามารถสมัครสมาชิกหลายคันสำหรับรุ่นรถที่ต่างกันได้ไหม?",
-        answer: "ใช่ คุณสามารถสร้างการสมัครสมาชิกหลายรายการภายใต้บัญชีเดียวได้ แต่ละการสมัครสมาชิกสามารถติดตามรุ่นรถ แบรนด์ หรือช่วงราคารถที่แตกต่างกันได้ ซึ่งเหมาะมากหากคุณกำลังมองหารถหลายคัน หรือช่วยเพื่อนและครอบครัวในการค้นหารถยนต์"
+        question: "สมัครสมาชิกหลายรายการสำหรับรถหลายรุ่นได้ไหม?",
+        answer:
+          "ได้ คุณสามารถสร้างหลายการสมัครสมาชิกพร้อมกันได้ แต่ละอันสามารถใช้งานคนละเงื่อนไข ค้นหาคนละรุ่น คนละช่วงราคา เหมาะสำหรับการหารถหลายคัน หรือช่วยเปรียบเทียบให้เพื่อนและครอบครัว"
       },
+
       limit: {
-        question: "ทำไมถึงมีการจำกัดจำนวนผู้ติดตาม?",
-        intro: "เราให้บริการจำกัดเพียง 30 สมาชิกที่ใช้งานอยู่ เพื่อให้มั่นใจว่า:",
-        list: {
-          0: "บริการคุณภาพสูงสุดและข้อมูลที่แม่นยำ",
-          1: "การดูแลแบบเฉพาะบุคคลสำหรับสมาชิกแต่ละราย",
-          2: "การแจ้งเตือนส่งถึงไวขึ้นในช่วงเวลาที่มีการลงประกาศจำนวนมาก",
-          3: "การดึงข้อมูลอย่างมีจริยธรรมที่ไม่ทำให้เว็บไซต์เป้าหมายทำงานหนักเกินไป"
-        },
-        outro: "หากจำนวนผู้เข้าร่วมครบแล้ว คุณสามารถเข้าร่วมรายชื่อรอเพื่อรับการแจ้งเตือนเมื่อมีที่ว่าง"
+        question: "ทำไมจำนวนผู้สมัครสมาชิกจึงจำกัดไว้?",
+        intro: "เรา จำกัดจำนวนผู้ใช้ไว้ที่ 30 คนเพื่อให้บริการดีที่สุด:",
+        list: [
+          "ประสิทธิภาพการติดตามข้อมูลสูงสุด",
+          "ระบบแจ้งเตือนทำงานรวดเร็วแม้ช่วงที่มีคนใช้เยอะ",
+          "ป้องกันไม่ให้เว็บไซต์เป้าหมายบล็อกการใช้งาน",
+          "ให้การสนับสนุนผู้ใช้ได้อย่างมีคุณภาพ"
+        ],
+        outro:
+          "หากจำนวนผู้ใช้เต็มแล้ว คุณสามารถเข้าร่วมรายชื่อรอ (Waitlist) เพื่อรับการแจ้งเตือนเมื่อมีที่ว่าง"
       }
     },
+
     technical: {
-      heading: "คำถามทางเทคนิค",
+      heading: "คำถามด้านเทคนิค",
+
       telegram: {
-        question: "ฉันจะตั้งค่าการแจ้งเตือน Telegram ได้อย่างไร?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "สร้างบอท Telegram ด้วย BotFather (มีคำแนะนำระหว่างการตั้งค่า)",
-          1: "คัดลอกโทเคนบอทของคุณจาก BotFather",
-          2: "เริ่มต้นสนทนากับบอตของคุณ",
-          3: "รับรหัสแชทของคุณ (มีคำแนะนำระหว่างการตั้งค่า)",
-          4: "กรุณากรอกโทเคนบอทและรหัสแชทของคุณในหน้าตั้งค่าการสมัครสมาชิก AMIQUUS",
-          5: "ทดสอบการตั้งค่าการแจ้งเตือนของคุณด้วยปุ่ม `ส่งข้อความทดสอบ`"
-        },
-        note: "มีคำแนะนำทีละขั้นตอนพร้อมภาพประกอบให้ในระหว่างขั้นตอนการตั้งค่าการสมัครสมาชิก",
-        stepsintro: "วิธีตั้งค่าการแจ้งเตือน Telegram:"
+        question: "ตั้งค่าการแจ้งเตือน Telegram อย่างไร?",
+        stepsIntro: "ทำตามขั้นตอนต่อไปนี้:",
+        steps: [
+          "1. สร้าง Telegram Bot ผ่าน BotFather",
+          "2. คัดลอก API Token",
+          "3. เริ่มแชทกับ Bot ของคุณเพื่อรับ Chat ID",
+          "4. นำ Token และ Chat ID ไปใส่ในหน้าตั้งค่า Amiquus",
+          "5. ทดสอบด้วยปุ่ม “Send Test Message”"
+        ],
+        note: "มีคู่มือแบบละเอียดพร้อมภาพประกอบใน Dashboard"
       },
+
       frequency: {
-        question: "ฉันจะได้รับการแจ้งเตือนบ่อยแค่ไหน?",
-        intro: "ความถี่ของการแจ้งเตือนขึ้นอยู่กับ:",
-        list: {
-          0: "แพ็กเกจความถี่ในการอัปเดตที่คุณเลือก (ตั้งแต่ทุก 6 ชั่วโมง ถึงทุก 30 นาที)",
-          1: "มีรายการใหม่กี่รายการที่ตรงกับเงื่อนไขของคุณ",
-          2: "ความเคลื่อนไหวของตลาดสำหรับยี่ห้อ/รุ่นที่คุณเลือก"
-        },
-        outro: "คุณจะได้รับการแจ้งเตือนเฉพาะเมื่อพบรายการใหม่ที่ตรงกับเงื่อนไขของคุณ"
+        question: "จะได้รับการแจ้งเตือนบ่อยแค่ไหน?",
+        intro: "ขึ้นอยู่กับหลายปัจจัย ได้แก่:",
+        list: [
+          "แพ็กเกจการอัปเดตที่คุณสมัคร (ทุก 1 ชั่วโมง ถึง ทุก 1 นาที)",
+          "จำนวนรายการที่ตรงกับเงื่อนไข",
+          "ความเคลื่อนไหวของตลาดรถยนต์รุ่นนั้น ๆ"
+        ],
+        outro:
+          "คุณจะได้รับการแจ้งเตือนเฉพาะเมื่อมีรายการใหม่ที่ตรงกับเงื่อนไขเท่านั้น"
       },
+
       privacy: {
-        question: "ข้อมูลส่วนตัวของฉันได้รับการปกป้องอย่างไร?",
-        intro: "เราให้ความสำคัญกับความเป็นส่วนตัวของข้อมูลและใช้มาตรการเหล่านี้:",
-        list: {
-          0: "ข้อมูลถูกเข้ารหัสระหว่างส่งและขณะจัดเก็บ",
-          1: "ชำระเงินอย่างปลอดภัยผ่าน Stripe",
-          2: "ไม่มีการแบ่งปันข้อมูลกับบุคคลที่สาม",
-          3: "คุณสามารถขอหรือขอลบข้อมูลของคุณได้ทุกเมื่อ"
-        },
-        outro: "อ่านนโยบายความเป็นส่วนตัวฉบับเต็มของเราเพื่อดูข้อมูลเพิ่มเติม"
+        question: "ข้อมูลส่วนตัวของฉันปลอดภัยแค่ไหน?",
+        intro: "เราปกป้องข้อมูลของคุณด้วย:",
+        list: [
+          "การเข้ารหัสข้อมูล (Encryption)",
+          "ระบบชำระเงินที่ปลอดภัยด้วย Stripe",
+          "ไม่มีการขายหรือแบ่งปันข้อมูลกับบุคคลที่สาม",
+          "สามารถขอลบหรือดาวน์โหลดข้อมูลของคุณได้ทุกเวลา"
+        ],
+        outro: "ดูรายละเอียดเพิ่มเติมได้ในนโยบายความเป็นส่วนตัว"
       }
     },
+
     support: {
-      heading: "ยังมีคำถามอยู่หรือเปล่า?",
-      description: "หากคุณไม่พบคำตอบสำหรับคำถามของคุณ ทีมสนับสนุนของเราพร้อมช่วยเหลือคุณ!",
+      heading: "ยังมีคำถามอื่นอีกไหม?",
+      description:
+        "หากคุณไม่พบคำตอบ ทีมสนับสนุนของเรายินดีช่วยเหลือคุณทุกเมื่อ",
       button: "ติดต่อฝ่ายสนับสนุน"
     }
   },
   waitlist: {
     metaTitle: "เข้าร่วมรายชื่อรอ - Amiquus",
-    metaDescription: "เข้าร่วมรายชื่อรอของ Amiquus เพื่อรับการแจ้งเตือนเมื่อมีการเปิดให้สมัครสมาชิก",
-    title: "เข้าร่วมรายชื่อรอของเรา",
-    subtitle: "เนื่องจากมีความต้องการใช้บริการสูง เราจึงจำกัดจำนวนการสมัครสมาชิกที่ใช้งานได้ เพื่อให้มั่นใจว่าทุกคนจะได้รับบริการที่มีคุณภาพดีที่สุด",
+    metaDescription:
+      "เข้าร่วมรายชื่อรอของ Amiquus เพื่อรับการแจ้งเตือนเมื่อมีที่ว่างสำหรับการสมัครสมาชิก",
+    title: "เข้าร่วมรายชื่อรอ",
+    subtitle:
+      "เนื่องจากมีความต้องการสูง เราจึงจำกัดจำนวนผู้สมัครสมาชิกเพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุด",
+
     limited: {
-      heading: "มีจำนวนจำกัด",
-      description: "เรา จำกัด ระบบของเราไว้ที่ผู้สมัครสมาชิกที่ใช้งานอยู่เพียง 30 รายเท่านั้นเพื่อให้มั่นใจว่า:",
-      points: {
-        0: "ความน่าเชื่อถือและความเร็วในการดึงข้อมูลที่ยอดเยี่ยมสำหรับผู้ใช้ทุกคน",
-        1: "ลดโอกาสถูกบล็อกโดยเว็บไซต์ลงประกาศขายรถยนต์",
-        2: "การดูแลแบบเฉพาะบุคคลสำหรับสมาชิกแต่ละราย",
-        3: "การกระจายทรัพยากรเซิร์ฟเวอร์อย่างเป็นธรรม"
-      },
-      available: "ขณะนี้มี {{remaining}} ที่ว่างสำหรับสมัครสมาชิก จากทั้งหมด {{capacity}} ที่นั่ง",
-      full: "ขณะนี้มีผู้สมัครสมาชิกครบทุกที่นั่งแล้ว หากต้องการรับการแจ้งเตือนเมื่อมีที่ว่าง กรุณาเข้าร่วมรายชื่อรอ"
+      heading: "จำนวนจำกัด",
+      description:
+        "เราจำกัดระบบให้รองรับเฉพาะ 30 ผู้ใช้เท่านั้น เพื่อให้มั่นใจในคุณภาพของบริการ:",
+      points: [
+        "ตรวจสอบข้อมูลได้เสถียรและรวดเร็ว",
+        "ลดโอกาสถูกบล็อกจากเว็บไซต์เป้าหมาย",
+        "ให้การสนับสนุนลูกค้าได้อย่างมีประสิทธิภาพ",
+        "ใช้ทรัพยากรเซิร์ฟเวอร์ได้อย่างเหมาะสม"
+      ],
+      available:
+        "เหลือ {{remaining}} ที่นั่ง จากทั้งหมด {{capacity}}",
+      full:
+        "ขณะนี้ที่นั่งทั้งหมดเต็มแล้ว กรุณาเข้าร่วมรายชื่อรอเพื่อรับการแจ้งเตือนเมื่อมีที่ว่าง"
     },
+
     success: {
-      title: "คุณอยู่ในรายชื่อรอ",
-      description: "เราจะแจ้งให้คุณทราบทันทีเมื่อมีที่ว่างสำหรับสมัครสมาชิก",
-      message: "ขอบคุณที่สนใจ Amiquus! เราได้เพิ่มคุณเข้าสู่รายชื่อรอแล้ว และจะติดต่อคุณทันทีเมื่อมีที่ว่าง",
+      title: "เข้าร่วมรายชื่อรอสำเร็จ!",
+      description:
+        "เราจะส่งการแจ้งเตือนให้คุณทันทีเมื่อมีที่ว่าง",
+      message:
+        "ขอบคุณที่ให้ความสนใจในบริการของ Amiquus! คุณถูกเพิ่มในรายชื่อรอแล้ว และจะได้รับอีเมลแจ้งเตือนเมื่อสามารถสมัครได้อีกครั้ง",
       button: "กลับสู่หน้าแรก"
     },
+
     cantJoin: {
-      title: "Join the Waitlist",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "เข้าร่วมรายชื่อรอ",
+      description:
+        "เราจะส่งการแจ้งเตือนให้คุณทันทีเมื่อมีที่ว่าง"
     },
+
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "ชื่อ",
+        placeholder: "สมชาย"
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "นามสกุล",
+        placeholder: "ใจดี"
       },
       email: {
         label: "อีเมล",
-        placeholder: "john.doe@example.com",
-        description: "เราจะใช้ที่อยู่อีเมลนี้เพื่อแจ้งให้คุณทราบเมื่อมีที่ว่าง"
+        placeholder: "example@example.com",
+        description:
+          "เราจะส่งการแจ้งเตือนไปยังอีเมลนี้เมื่อมีที่ว่าง"
       },
       submit: "เข้าร่วมรายชื่อรอ",
-      submitting: "กำลังส่ง...",
-      firstname: {
-        label: "ชื่อจริง",
-        placeholder: "จอห์น"
-      },
-      lastname: {
-        label: "นามสกุล",
-        placeholder: "โด"
-      }
-    },
-    cantjoin: {
-      description: "เราจะแจ้งให้คุณทราบทันทีเมื่อมีที่ว่างสำหรับสมัครสมาชิก",
-      title: "เข้าร่วมรายชื่อรอ"
+      submitting: "กำลังส่ง..."
     }
   },
   support: {
-    metaTitle: "ศูนย์ช่วยเหลือ | Amiquus - ศูนย์บริการช่วยเหลือ",
-    metaDescription: "ขอความช่วยเหลือเกี่ยวกับบัญชี AMIQUUS การสมัครสมาชิก หรือการแจ้งเตือนรถยนต์ของคุณ ค้นหาคำตอบได้ที่ศูนย์ช่วยเหลือของเราหรือ ติดต่อทีมสนับสนุนเพื่อขอความช่วยเหลือ",
-    title: "ศูนย์บริการช่วยเหลือ",
-    subtitle: "ค้นหาคำตอบสำหรับคำถามที่พบบ่อย หรือ ติดต่อทีมสนับสนุนของเรา",
+    metaTitle: "ฝ่ายสนับสนุน | Amiquus",
+    metaDescription:
+      "ขอความช่วยเหลือเกี่ยวกับบัญชี การสมัครสมาชิก หรือการแจ้งเตือนของ Amiquus ดูคำถามที่พบบ่อยหรือติดต่อฝ่ายสนับสนุน",
+    title: "ศูนย์ช่วยเหลือ",
+    subtitle:
+      "ค้นหาคำตอบสำหรับคำถามทั่วไป หรือขอความช่วยเหลือจากทีมงานของเรา",
+
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
+      title: "อีเมลสนับสนุน",
+      description: "ส่งอีเมลหาเราและรับการตอบกลับภายใน 24 ชั่วโมง",
       email: "support@amiquus.com"
     },
-    faqHeading: "Frequently Asked Questions",
+
+    faqHeading: "คำถามที่พบบ่อย",
+
     faqs: {
       telegram: {
-        question: "ฉันจะตั้งค่าการแจ้งเตือน Telegram ได้อย่างไร?",
-        intro: "หากต้องการตั้งค่าการแจ้งเตือนผ่าน Telegram กรุณาทำตามขั้นตอนต่อไปนี้:",
-        steps: {
-          0: "สร้างบอท Telegram ด้วย BotFather (ดูวิธีได้ในแดชบอร์ดของเรา)",
-          1: "คัดลอก API token และ chat ID ของคุณ",
-          2: "กรอกข้อมูลเหล่านี้ในหน้าการตั้งค่าบัญชีของคุณใต้ \"การตั้งค่าการแจ้งเตือน\"",
-          3: "ทดสอบการเชื่อมต่อของคุณโดยใช้ปุ่ม \"ส่งข้อความทดสอบ\""
-        },
-        outro: "หากคุณต้องการความช่วยเหลือเพิ่มเติม คู่มือฉบับละเอียดของเราพร้อมให้คุณใช้งานในแดชบอร์ดของคุณ"
+        question: "ตั้งค่าการแจ้งเตือนผ่าน Telegram อย่างไร?",
+        intro: "ทำตามขั้นตอนดังนี้:",
+        steps: [
+          "สร้าง Telegram Bot ผ่าน BotFather",
+          "คัดลอก API Token และ Chat ID",
+          "ใส่ข้อมูลทั้งสองในหน้า “การแจ้งเตือน” ของบัญชี Amiquus",
+          "กดปุ่ม “ส่งข้อความทดสอบ”"
+        ],
+        outro:
+          "ใน Dashboard มีคู่มือพร้อมภาพประกอบให้ใช้งาน"
       },
+
       updates: {
-        question: "รายการรถยนต์มีการอัปเดตบ่อยแค่ไหน?",
-        answer: "ความถี่ในการอัปเดตขึ้นอยู่กับแผนการสมัครสมาชิกของคุณ แผนพื้นฐานจะได้รับการอัปเดตทุก 6 ชั่วโมง ในขณะที่แผนพรีเมียมสามารถรับการอัปเดตได้บ่อยสุดทุก 30 นาที คุณสามารถดูและปรับเปลี่ยนความถี่ในการอัปเดตปัจจุบันของคุณได้ในหน้าการตั้งค่าการสมัครสมาชิก"
+        question: "ระบบอัปเดตรายการประกาศบ่อยแค่ไหน?",
+        answer:
+          "ระยะเวลาการอัปเดตขึ้นอยู่กับแพ็กเกจของคุณ แพ็กเกจพื้นฐานจะอัปเดตทุก 6 ชั่วโมง ส่วนแพ็กเกจพรีเมียมสามารถอัปเดตเร็วสุดทุก 30 นาที"
       },
+
       facebook: {
-        question: "ฉันสามารถติดตาม Facebook Marketplace ได้ไหม?",
-        answer: "ใช่ เรารองรับการติดตาม Facebook Marketplace หากต้องการตั้งค่านี้ คุณจะต้องใส่ URL ของหน้าผลการค้นหาใน Facebook Marketplace ที่มีการตั้งค่าตัวกรองตามที่คุณต้องการ ระบบของเราจะติดตามการค้นหานั้นเพื่อแจ้งเตือนรายการใหม่ ๆ ที่ตรงกับเงื่อนไขของคุณ"
+        question: "สามารถติดตาม Facebook Marketplace ได้ไหม?",
+        answer:
+          "ได้ คุณเพียงแค่ใส่ URL ของหน้าค้นหาใน Facebook Marketplace ที่มีการตั้งค่าตัวกรองไว้แล้ว ระบบจะติดตาม URL นั้นให้"
       },
+
       cancel: {
-        question: "ฉันจะยกเลิกการสมัครสมาชิกได้อย่างไร?",
-        answer: "คุณสามารถยกเลิกการสมัครสมาชิกได้ทุกเมื่อจากหน้าโปรไฟล์บัญชีของคุณ คลิกที่แท็บ \"การสมัครสมาชิก\" ค้นหาการสมัครสมาชิกที่คุณต้องการยกเลิก แล้วคลิกปุ่ม \"ยกเลิกการสมัครสมาชิก\" บริการของคุณจะยังคงใช้งานได้จนถึงสิ้นสุดรอบบิลปัจจุบันของคุณ"
+        question: "ยกเลิกการสมัครสมาชิกอย่างไร?",
+        answer:
+          "ไปที่หน้าโปรไฟล์ → เมนู “การสมัครสมาชิก” → เลือกแพ็กเกจที่ต้องการยกเลิก → กด “ยกเลิกการสมัครสมาชิก”"
       },
+
       full: {
-        question: "จะเกิดอะไรขึ้นถ้าช่องสมัครสมาชิกทั้งหมดเต็มแล้ว?",
-        answer: "เพื่อรักษาคุณภาพการให้บริการที่ยอดเยี่ยมของเรา เราจำกัดจำนวนสมาชิกที่ใช้งานพร้อมกัน หากทุกสิทธิ์ถูกใช้เต็มแล้ว คุณสามารถเข้าร่วมรายชื่อรอคิวได้ เราจะแจ้งให้คุณทราบทันทีเมื่อมีสิทธิ์ว่าง และคุณจะได้รับสิทธิ์ในการจองก่อนที่จะเปิดให้บุคคลทั่วไป"
+        question: "ถ้าที่ว่างเต็มแล้วจะทำอย่างไร?",
+        answer:
+          "เข้าร่วมรายชื่อรอ (Waitlist) แล้วเราจะส่งอีเมลแจ้งเตือนคุณเมื่อมีที่ว่าง"
       }
     },
+
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    },
-    emailsupport: {
-      description: "ส่งอีเมลถึงเรา แล้วเราจะติดต่อกลับภายใน 24 ชั่วโมง",
-      email: "support@amiquus.com",
-      title: "บริการอีเมล"
-    },
-    faqheading: "คำถามที่พบบ่อย",
-    stillneedhelp: {
-      button: "ติดต่อฝ่ายสนับสนุน",
-      description: "หากคุณไม่พบคำตอบสำหรับคำถามของคุณ สามารถติดต่อทีมสนับสนุนของเราได้เลย เรายินดีให้ความช่วยเหลือ!",
-      heading: "ยังต้องการความช่วยเหลืออยู่หรือไม่?"
+      heading: "ต้องการความช่วยเหลือเพิ่มเติม?",
+      description:
+        "หากคุณยังไม่พบคำตอบที่ต้องการ ทีมงานของเรายินดีช่วยเหลือคุณ",
+      button: "ติดต่อฝ่ายสนับสนุน"
     }
   },
   notFound: {
-    title: "404 ไม่พบหน้าที่คุณค้นหา",
-    message: "คุณลืมเพิ่มหน้านี้ในเราเตอร์หรือเปล่า?"
+    title: "404 - ไม่พบหน้าที่ต้องการ",
+    message: "อาจลืมเพิ่มหน้าไว้ในเส้นทางของระบบ (Router)"
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "รหัสยืนยันอีเมลของคุณ - Amiquus",
+      greeting: "สวัสดีค่ะ/ครับ,",
+      message:
+        "ใช้รหัสด้านล่างเพื่อยืนยันการสมัครสมาชิกของคุณ:",
+      expiration: "รหัสนี้หมดอายุภายใน 10 นาที"
     },
+
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "ใบเสร็จการชำระเงินของคุณ – ใบแจ้งหนี้ #",
+        h2Message: "การชำระเงินของคุณสำเร็จแล้ว!",
+        greeting: "สวัสดีค่ะ/ครับ,",
+        paymentMessage: "เราได้รับการชำระเงินจำนวน:",
+        downloadMessage:
+          "คุณสามารถดูหรือดาวน์โหลดใบเสร็จได้จากลิงก์ด้านล่าง:",
+        viewInvoice: "ดูใบเสร็จ",
+        invoiceNumber: "หมายเลขใบแจ้งหนี้:"
       },
+
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "ใบแจ้งหนี้ที่ยังไม่ได้ชำระ –",
+        subjectB: "สำหรับการสมัครสมาชิก Amiquus",
+        h2Message:
+          "กรุณาดำเนินการชำระเงินเพื่อเปิดใช้งานการสมัครสมาชิก",
+        greeting: "สวัสดีค่ะ/ครับ,",
+        messageA: "ใบแจ้งหนี้ของคุณ",
+        messageB:
+          "ยังไม่ได้รับการชำระ กรุณาชำระจำนวน:",
+        paymentMessage: "คลิกปุ่มด้านล่างเพื่อชำระเงินอย่างปลอดภัย:",
+        payInvoice: "ชำระเงิน",
+        ignoreEmail:
+          "หากคุณได้ชำระเงินแล้ว กรุณาไม่ต้องสนใจอีเมลนี้"
       },
+
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
+        subject: "การชำระเงินล้มเหลว – ใบแจ้งหนี้",
+        message: "เราไม่สามารถชำระเงินได้ (ครั้งที่:",
+        attemptsA:
+          "เราจะพยายามอีกครั้งโดยไม่ต้องดำเนินการใด ๆ จากคุณ",
+        attemptsB:
+          "พยายามชำระทั้งหมด 3 ครั้งแล้วแต่ยังไม่สำเร็จ",
+        attemptsC:
+          "ระบบสมัครสมาชิกของคุณถูก ‘หยุดชั่วคราว’",
+        attemptsD:
+          "กรุณาอัปเดตวิธีการชำระเงินเพื่อเปิดใช้งานอีกครั้ง:",
+        viewInvoice: "ดูใบแจ้งหนี้",
+        managePayment: "จัดการวิธีการชำระเงิน"
       }
     },
+
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "คุณเข้าร่วมรายชื่อรอ Amiquus แล้ว!",
+      h2Message: "ยินดีต้อนรับ!",
+      hi: "สวัสดีค่ะ/ครับ",
+      message:
+        "ขอบคุณที่เข้าร่วมรายชื่อรอ เราจะส่งอีเมลแจ้งให้คุณทราบเมื่อมีที่ว่าง",
+      anyQuestions:
+        "หากมีคำถามเพิ่มเติม สามารถตอบกลับอีเมลนี้ได้เลยค่ะ/ครับ"
     },
+
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "ยกเลิก",
-    confirmremove: "ลบการ์ด",
-    default: "ค่าเริ่มต้น",
-    expires: "หมดอายุ",
-    remove: "ลบ",
-    removedescription: "คุณแน่ใจหรือไม่ว่าต้องการลบการ์ด {{brand}} ที่ลงท้ายด้วย {{last4}} ของคุณ?",
-    removetitle: "ลบวิธีการชำระเงิน",
-    removewarning: "นี่คือวิธีการชำระเงินหลักของคุณ การลบออกอาจมีผลต่อการสมัครใช้งานที่ยังใช้งานอยู่ของคุณ",
-    setasdefault: "ตั้งเป็นค่าเริ่มต้น",
-    setdefaultdescription: "คุณต้องการตั้งค่าบัตร {{brand}} ที่ลงท้ายด้วย {{last4}} ให้เป็นวิธีการชำระเงินหลักหรือไม่? บัตรนี้จะถูกใช้สำหรับการชำระเงินค่าสมัครสมาชิกในอนาคตทั้งหมด",
-    setdefaulttitle: "ตั้งค่าวิธีชำระเงินเริ่มต้น"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "ยกเลิกการแจ้งเตือน",
-    canceldescription: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการแจ้งเตือนรถยนต์สำหรับ {{brand}} {{model}}? การดำเนินการนี้จะหยุดการแจ้งเตือนทั้งหมด และคุณจะต้องตั้งค่าการแจ้งเตือนใหม่หากต้องการติดตามรถคันนี้อีกครั้ง",
-    canceltitle: "ยกเลิกการแจ้งเตือนรถยนต์",
-    confirmcancel: "ยกเลิกการแจ้งเตือน",
-    edit: "แก้ไข",
-    keepmyalert: "บันทึกการแจ้งเตือนของฉัน",
-    language: "ภาษา",
-    price: "ราคา",
-    pricerange: "ราคา",
-    updates: "อัปเดต",
-    websites: "เว็บไซต์",
-    years: "ปี"
-  },
-  signUp: {
-    cta: "รับการแจ้งเตือนทันที",
-    heading: "สร้างการแจ้งเตือนรถของคุณ",
-    subheading: "ตั้งค่าการแจ้งเตือนรายการรถยนต์ส่วนตัวของคุณได้ง่ายๆ ในไม่กี่ขั้นตอน",
-    toast: {
-      error: {
-        description: "ไม่สามารถสร้างการสมัครสมาชิกของคุณได้ กรุณาลองใหม่อีกครั้งในภายหลัง",
-        title: "การสมัครสมาชิกไม่สำเร็จ"
-      },
-      success: {
-        description: "การสมัครสมาชิกของคุณถูกสร้างเรียบร้อยแล้ว",
-        title: "สร้างการสมัครสมาชิกสำเร็จ"
-      }
-    },
-    waitlist: {
-      cta: "เข้าร่วมรายชื่อรอ",
-      message: "ขณะนี้มีผู้ใช้บริการเต็มจำนวนแล้ว กรุณาลงชื่อในรายชื่อรอคิวเพื่อรับการแจ้งเตือนเมื่อมีที่ว่าง"
+      thanksMessage: "ขอบคุณที่เลือกใช้บริการ Amiquus!",
+      signature: "ขอแสดงความนับถือ<br/>ทีมงาน Amiquus",
+      team: "— ทีมงาน Amiquus",
+      needHelp: "ต้องการความช่วยเหลือ?",
+      hello: "สวัสดีค่ะ/ครับ"
     }
   }
 };

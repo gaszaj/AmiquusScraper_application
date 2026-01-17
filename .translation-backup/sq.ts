@@ -1,1740 +1,1441 @@
+// === sq.ts === Shqip
 export const sq = {
   navigations: {
     features: "Veçoritë",
     how: "Si funksionon",
     pricing: "Çmimet",
-    getAlerts: "Merr njoftimet",
+    getAlerts: "Merr njoftime",
     waitlist: "Lista e pritjes",
-    faq: "Pyetjet e shpeshta",
+    faq: "Pyetje të shpeshta",
     login: "Hyr",
-    getStarted: "Fillo tani",
-    subscribers: "Abonetët",
+    getStarted: "Fillo",
+    subscribers: "Abonentët",
     theme: "Tema",
     language: "Gjuha",
     myAlerts: "Njoftimet e mia",
     profile: "Profili",
     settings: "Cilësimet",
     logout: "Dil",
-    signUp: "Regjistrohu"
+    signUp: "Regjistrohu",
   },
   hero: {
-    label: "Ndiqni njoftimet për makina të përdorura në kohë reale",
-    title: "Mos e humb më kurrë ofertën perfekte për makinën tënde",
-    subtitle: "Amiquus ju njofton menjëherë sapo makina juaj e ëndrrave bëhet e disponueshme në disa faqe të ndryshme të shpalljeve për makina. Merrni njoftime në Telegram sapo të gjendet një përputhje.",
-    button1: "Vendosni njoftimet tuaja",
+    label: "Ndjek njoftimet e makinave të përdorura në kohë reale!",
+    title: "Mos humbis kurrë ofertën ideale të makinës",
+    subtitle:
+      "Amiquus do të të njoftojë menjëherë kur makina e ëndrrave tënde shfaqet në shumë faqe. Merr njoftime në Telegram sapo të ketë përputhje.",
+    button1: "Konfiguro njoftimet",
     button2: "Shiko si funksionon",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Anulo kur të duash",
-      nosetup: "Nuk kërkohet konfigurim",
+      websites: "Mbi 15 faqe",
       realtime: "Njoftime në kohë reale",
-      websites: "Mbi 15 faqe interneti të monitoruara"
-    }
+      noSetup: "Pa instalim",
+      cancelAnytime: "Anulo kurdo",
+    },
   },
   limited: {
     full: {
       title: "Limiti i abonimit është arritur",
-      description: "Kemi arritur kapacitetin maksimal prej 30 abonentësh aktivë. Bashkohuni në listën e pritjes për t’u njoftuar sapo të lirohet një vend.",
-      buttonText: "Bëhu pjesë e listës së pritjes"
+      description:
+        "Kemi arritur limitin prej 30 abonentësh aktivë. Bashkohu në listën e pritjes për të qenë i informuar kur të lirohet një vend.",
+      buttonText: "Bashkohu në listën e pritjes",
     },
     limited: {
       title: "Disponueshmëri e kufizuar",
-      description: "Kane mbetur vetëm {{remaining}} vende nga gjithsej {{capacity}}. Regjistrohuni tani para se të mbushet kapaciteti!",
-      buttonText: "Fillo tani"
+      description:
+        "{{remaining}}/{{capacity}} vende mbeten. Abono tani para se të mbarojnë!",
+      buttonText: "Fillo tani",
     },
     available: {
-      title: "Abonimet në dispozicion",
-      description: "{{active}} nga {{capacity}} abonime janë aktualisht aktive. Ka ende mjaft hapësirë që të bashkohesh!",
-      buttonText: "Fillo tani"
-    }
+      title: "Abonimet e disponueshme",
+      description:
+        "{{active}}/{{capacity}} abonime janë aktualisht aktive. Shumë vend për ty!",
+      buttonText: "Fillo tani",
+    },
   },
   features: {
     heading: "Pse të zgjedhësh Amiquus?",
-    subheading: "Kurseni kohë dhe mos humbisni kurrë makinën tuaj të përsosur me shërbimin tonë të automatizuar të ndjekjes.",
+    subheading:
+      "Kurso kohë dhe mos humbis kurrë makinën ideale me shërbimin tonë të automatizuar.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Ndjekje e shumë faqeve",
+      description: "Ndjek shumë faqe makinash njëkohësisht pa kontroll manual.",
     },
     notifications: {
-      title: "Njoftime të çastit",
-      description: "Merr njoftime të menjëhershme nëpërmjet Telegram sapo të publikohet për shitje një makinë që përputhet me kriteret e tua."
+      title: "Njoftime të menjëhershme",
+      description:
+        "Merr njoftime të menjëhershme në Telegram kur makina përputhet me kriteret e tua.",
     },
     filters: {
-      title: "Filtra të personalizuar",
-      description: "Vendos kritere të sakta duke përfshirë markën, modelin, vitin, kilometrat dhe gamën e çmimit për të gjetur pikërisht atë që kërkon."
+      title: "Filtra të personalizueshëm",
+      description:
+        "Vendos kritere të sakta: markë, model, vit, kilometrazh, çmim – gjeni saktësisht atë që ju nevojitet.",
     },
     frequency: {
-      title: "Frekuencë e personalizueshme",
-      description: "Zgjidh sa shpesh të kontrollojmë për njoftime të reja, nga përditësimet çdo orë deri te monitorimi në kohë reale."
+      title: "Frekuencë e rregullueshme",
+      description:
+        "Zgjidh sa shpesh të kontrollohen njoftimet e reja – nga çdo orë deri në kohë reale.",
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Mbështetje shumëgjuhëshe",
+      description:
+        "Merr njoftime në gjuhën e preferuar për kuptim më të mirë të njoftimeve.",
     },
     account: {
       title: "Menaxhim i lehtë i llogarisë",
-      description: "Menaxho profile të shumta kërkimi dhe ndrysho cilësimet e abonimit me disa klikime."
+      description:
+        "Menaxho shumë profile kërkimi dhe ndrysho abonimin me disa klikime.",
     },
-    multisite: {
-      description: "Monitoroni disa faqe interneti me njoftime për makina njëkohësisht, pa pasur nevojë t’i kontrolloni secilën manualisht.",
-      title: "Ndjekja në disa faqe"
-    }
   },
   howItWorks: {
     title: "Si funksionon Amiquus",
-    subtitle: "Vendose një herë dhe lëre sistemin tonë të automatizuar të gjejë ofertën perfekte për makinë për ty.",
-    whyTitle: "Why Choose Amiquus?",
+    subtitle:
+      "Konfiguro një herë dhe lëre sistemin tonë të gjejë ofertën ideale për ty",
+    whyTitle: "Pse të zgjedhësh Amiquus?",
     steps: {
       preferences: {
-        title: "Cakto Preferencat Tuaja",
-        description: "Zgjidh markat e makinave, modelet, gamën e çmimeve dhe kriteret e tjera që dëshiron të ndjekësh."
+        title: "Vendos preferencat",
+        description:
+          "Zgjidh markat, modelet, diapazonin e çmimeve dhe kritere të tjera interesante.",
       },
       telegram: {
-        title: "Lidhu me Telegram",
-        description: "Lidheni llogarinë tuaj në Telegram për të marrë njoftime të menjëhershme për njoftimet e reja."
+        title: "Lidh Telegram",
+        description:
+          "Lidh llogarinë tënde Telegram për të marrë njoftime të menjëhershme për njoftime të reja.",
       },
       notifications: {
         title: "Merr njoftime të menjëhershme",
-        description: "Merrni njoftime sapo të shfaqet një makinë që i përshtatet kritereve tuaja në cilëndo nga faqet tona të monitoruara."
+        description:
+          "Ji i njoftuar menjëherë kur një makinë e përshtatshme shfaqet në faqe.",
       },
       findCar: {
-        title: "Find Your Perfect Car",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
+        title: "Gjej makinën ideale",
+        description:
+          "Ji i pari që mëson për njoftimet e reja dhe siguro ofertat më të mira.",
       },
-      findcar: {
-        description: "Jini të parët që merrni njoftime për listimet e reja dhe siguroni ofertat më të mira para të gjithëve të tjerëve.",
-        title: "Gjej makinën tënde perfekte"
-      }
     },
-    features: {
-      0: "Ndiq mbi 15 faqe interneti me shpallje makinash njëkohësisht",
-      1: "Kriteret e personalizueshme të kërkimit me filtrim të avancuar",
-      2: "Njoftime në kohë reale përmes Telegram-it",
-      3: "Njoftime automatike për ulje çmimesh dhe shpallje të reja",
-      4: "Proces i lehtë konfigurimi që zgjat më pak se 5 minuta"
-    },
-    setAlerts: "Set Up Your Alerts",
+    features: [
+      "Ndjekje simultane e mbi 15 faqeve",
+      "Kritere kërkimi të personalizueshme me filtrime të avancuara",
+      "Njoftime në kohë reale përmes Telegram",
+      "Njoftime automatike për ulje çmimesh dhe njoftime të reja",
+      "Konfigurim i lehtë në më pak se 5 minuta",
+    ],
+    setAlerts: "Konfiguro njoftimet",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "U gjet përputhje e re!",
+      description: "BMW Seria 3, 2019, 32 500 € – sapo publikuar në AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram Alert",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
+      title: "Njoftim Telegram",
+      description: "Mercedes Klasa C, 2020, 30 000 km – çmimi ulur me 2 000 €",
     },
-    notificationmockup1: {
-      description: "BMW Seria 3, 2019, $32,500 - Sapo u listua në AutoTrader",
-      title: "U gjet një ndeshje e re!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Class, 2020, 48.000 km - Çmimi u ul me 2.000 $",
-      title: "Telegram njoftim"
-    },
-    setalerts: "Vendosni njoftimet tuaja",
-    whytitle: "Pse të zgjedhësh AMIQUUS?"
   },
   pricing: {
-    title: "E thjeshtë, çmime të qarta",
-    subtitle: "Çmimet tona përshtaten sipas nevojave tuaja specifike. Filloni me një paketë bazë dhe personalizojeni sipas kërkesave tuaja.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Çmime të thjeshta dhe transparente",
+    subtitle:
+      "Çmimet tona bazohen në nevojat e tua. Fillo me planin bazë dhe personalizo.",
+    baseTitle: "Plani bazë: 79,99 €/muaj",
+    includedTitle: "Përfshirë:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Ndjekje e një faqeje",
+      "Përditësime çdo orë",
+      "Filtra të pakufizuara",
+      "Njoftime përmes Telegram",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Çdo faqe shtesë"
-      },
-      1: {
-        name: "Përditësime çdo 30 minuta"
-      },
-      2: {
-        name: "Përditësime çdo 15 minuta"
-      },
-      3: {
-        name: "Përditësime çdo 5 minuta"
-      },
-      4: {
-        name: "Përditësime çdo minutë"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Fillo Tani",
-    addonstitle: "Shtesat:",
-    basetitle: "Paketa Bazë: 79,99 $/muaj",
-    footernote: "Të gjitha planet përfshijnë konfigurime të pakufizuara kërkimi dhe menaxhim të lehtë të abonimit.",
-    includedfeatures: {
-      0: "Monitorim i vetëm i faqes së internetit",
-      1: "Përditësime çdo orë",
-      2: "Filtra të pakufizuar",
-      3: "Njoftime në Telegram"
-    },
-    includedtitle: "Çfarë përfshihet:"
+    addonsTitle: "Shtesa:",
+    addons: [
+      { name: "Çdo faqe shtesë", price: 4.99 },
+      { name: "Përditësime çdo 30 min", price: 2.99 },
+      { name: "Përditësime çdo 15 min", price: 5.99 },
+      { name: "Përditësime çdo 5 min", price: 9.99 },
+      { name: "Përditësime çdo minutë", price: 14.99 },
+    ],
+    footerNote:
+      "Të gjitha planet përfshijnë profile kërkimi të pakufizuara dhe menaxhim të lehtë të abonimit.",
+    button: "Fillo tani",
   },
   signup: {
-    heading: "Create Your Car Alert",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Krijo njoftim makine",
+    subheading:
+      "Konfiguro njoftime të personalizuara për njoftime makinash në disa hapa të thjeshta.",
+    cta: "Merr njoftime tani",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
-      cta: "Join Waitlist"
+      message:
+        "Aktualisht jemi plot. Bashkohu në listën e pritjes për të qenë i informuar kur të lirohet një vend.",
+      cta: "Bashkohu në listën e pritjes",
     },
     toast: {
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "Abonimi u krijua",
+        description: "Abonimi yt u krijua me sukses",
       },
       error: {
-        title: "Subscription failed",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Nuk mund të krijohet abonimi",
+        description: "Nuk mund të krijohet abonimi. Provo përsëri më vonë.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "Sukses",
-        description: "Mënyra juaj e pagesës u vendos me sukses."
+        description: "Metoda jote e pagesës u konfigurua me sukses.",
       },
       error: {
         title: "Gabim",
-        fallback: "Ndodhi një gabim i papritur. Ju lutemi provoni përsëri."
-      }
+        fallback: "Ndodhi një gabim i papritur. Provo përsëri.",
+      },
     },
     button: {
-      submit: "Vendos mënyrën e pagesës",
-      processing: "Po përpunohet..."
-    }
+      submit: "Konfiguro metodën e pagesës",
+      processing: "Përpunohet...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Marka e makinës është e detyrueshme",
-      carmodel: "Modeli i makinës është i detyrueshëm",
-      facebookmarketplaceurl: "URL-ja e Facebook Marketplace është e nevojshme kur zgjidhet Facebook",
-      fueltype: "Lloji i karburantit është i detyrueshëm",
-      maxkilometers: "Kilometrat maksimale duhet të jenë një numër",
-      notificationlanguage: "Gjuha e njoftimit është e detyrueshme",
-      pricemax: "Çmimi maksimal duhet të jetë një numër",
-      pricemin: "Çmimi minimal duhet të jetë një numër",
-      telegramchatid: "Kërkohet ID-ja e bisedës në Telegram",
-      telegramtoken: "Kërkohet token-i i botit të Telegram-it",
-      telegramusername: "Emri i përdoruesit në Telegram është i detyrueshëm",
-      websitesselected: "Duhet të zgjidhet të paktën një faqe interneti",
-      yearmax: "Viti maksimal duhet të jetë një vit i vlefshëm",
-      yearmin: "Viti minimal duhet të jetë një vit i vlefshëm"
-    }
+      carBrand: "Marka e makinës është e detyrueshme",
+      carModel: "Modeli i makinës është i detyrueshëm",
+      fuelType: "Lloji i karburantit është i detyrueshëm",
+      priceMin: "Çmimi minimal duhet të jetë numër",
+      priceMax: "Çmimi maksimal duhet të jetë numër",
+      yearMin: "Viti minimal duhet të jetë i vlefshëm",
+      yearMax: "Viti maksimal duhet të jetë i vlefshëm",
+      maxKilometers: "Kilometrazhi maksimal duhet të jetë numër",
+      telegramUsername: "Emri i përdoruesit Telegram është i detyrueshëm",
+      telegramToken: "Tokeni i botit Telegram është i detyrueshëm",
+      telegramChatId: "ID e bisedës Telegram është e detyrueshme",
+      websitesSelected: "Zgjidh të paktën një faqe",
+      notificationLanguage: "Gjuha e njoftimeve është e detyrueshme",
+      facebookMarketplaceUrl:
+        "URL e Facebook Marketplace është e detyrueshme nëse zgjidhet Facebook",
+    },
   },
   personalInfo: {
     heading: "Të dhënat personale",
-    description: "Ju lutemi plotësoni të dhënat tuaja personale që të mund t’i vendosim njoftimet tuaja saktë.",
+    description: "Jep të dhënat personale për të konfiguruar saktë njoftimet.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Adresa e email-it",
-      firstname: "Emri",
-      lastname: "Mbiemër"
+      firstName: "Emri",
+      lastName: "Mbiemri",
+      email: "Email",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Gjon",
-      lastname: "Duka"
+      firstName: "Artan",
+      lastName: "Hoxha",
+      email: "artan.hoxha@example.al",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Ju lutem, shkruani një email të vlefshëm",
-      firstname: "Emri është i detyrueshëm",
-      lastname: "Mbiemri është i detyrueshëm"
+      firstName: "Emri është i detyrueshëm",
+      lastName: "Mbiemri është i detyrueshëm",
+      email: "Fut një adresë email të vlefshme",
     },
     actions: {
-      login: "Hyni ose regjistrohuni për të vazhduar",
-      continue: "Vazhdo"
-    }
+      login: "Hyr ose regjistrohu për të vazhduar",
+      continue: "Vazhdo",
+    },
   },
   websiteSelection: {
-    heading: "Përzgjedhja e faqes së internetit",
-    description: "Zgjidh cilat faqe interneti dëshiron të monitorosh dhe sa shpesh dëshiron të marrësh përditësime.",
+    heading: "Zgjedhja e faqeve",
+    description:
+      "Zgjidh faqet për ndjekje dhe frekuencën e dëshiruar të përditësimeve.",
     labels: {
-      websites: "Faqet për monitorim",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL e Facebook Marketplace",
-      updatefrequency: "Frekuenca e Përditësimeve"
+      websites: "Faqet për ndjekje",
+      facebookUrl: "URL e Facebook Marketplace",
+      updateFrequency: "Frekuenca e përditësimeve",
     },
     placeholders: {
-      frequency: "Zgjidhni shpeshtësinë"
+      frequency: "Zgjidh frekuencën",
     },
     help: {
-      websites: "Zgjidh një ose më shumë faqe interneti për të monitoruar njoftimet e makinave.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Ngjit këtu URL-në e rezultateve të kërkimit tënd në Facebook Marketplace.",
-      updatefrequency: "Sa shpesh duhet të kontrollojmë për njoftime të reja? Frekuenca më të larta mund të kenë kosto më të lartë.",
-      videodesc: "Shikoni videon më poshtë për udhëzime hap pas hapi.",
-      videotitle: "Keni nevojë për ndihmë për të gjetur linkun tuaj të kërkimit në Facebook Marketplace?"
+      websites:
+        "Zgjidh një ose më shumë faqe për ndjekje të njoftimeve të makinave.",
+      facebookUrl:
+        "Ngjit URL e rezultateve të kërkimit në Facebook Marketplace.",
+      videoTitle:
+        "Ke nevojë për ndihmë për të gjetur lidhjen e Facebook Marketplace?",
+      videoDesc: "Shiko videon më poshtë me udhëzime të hollësishme.",
+      updateFrequency:
+        "Sa shpesh kontrollojmë njoftimet e reja? Frekuencat më të larta mund të jenë më të shtrenjta.",
     },
     errors: {
-      websites: "Duhet të zgjidhet të paktën një faqe interneti",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL i Facebook Marketplace është i detyrueshëm kur zgjidhet Facebook"
+      websites: "Zgjidh të paktën një faqe",
+      facebookUrl:
+        "URL e Facebook Marketplace është e detyrueshme nëse zgjidhet Facebook",
     },
     actions: {
-      previous: "E mëparshme",
-      continue: "Vazhdo"
-    }
+      previous: "I mëparshmi",
+      continue: "Vazhdo",
+    },
   },
   carDetails: {
     heading: "Detajet e makinës",
-    description: "Specifikoni detajet e makinës që po kërkoni. Të gjitha fushat janë opsionale – lërini bosh për të marrë një gamë më të gjerë rezultatesh.",
+    description:
+      "Jep detajet e makinës së kërkuar. Të gjitha fushat janë opsionale – lërë bosh për rezultate më të gjera.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Marka e makinës",
-      carmodel: "Modeli i makinës",
-      fueltype: "Lloji i karburantit",
-      maxkilometers: "Kilometra maksimale",
-      pricemax: "Çmimi maksimal",
-      pricemin: "Çmimi Minimal",
-      yearmax: "Viti Maksimal",
-      yearmin: "Viti Minimal"
+      carBrand: "Marka e makinës",
+      carModel: "Modeli i makinës",
+      fuelType: "Lloji i karburantit",
+      priceMin: "Çmimi minimal",
+      priceMax: "Çmimi maksimal",
+      yearMin: "Viti minimal",
+      yearMax: "Viti maksimal",
+      maxKilometers: "Kilometrazhi maksimal",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Zgjidh markën e makinës",
-      carmodel: "Zgjidh modelin e makinës",
-      carmodeldisabled: "Zgjidh fillimisht markën e makinës",
-      fueltype: "Zgjidh llojin e karburantit",
-      maxkilometers: "Shkruani numrin maksimal të kilometrave",
-      pricemax: "Vendos çmimin maksimal",
-      pricemin: "Shkruani çmimin minimal",
-      yearmax: "Shkruani vitin maksimal",
-      yearmin: "Shkruani vitin minimal"
+      carBrand: "Zgjidh markën",
+      carModel: "Zgjidh modelin",
+      carModelDisabled: "Së pari zgjidh markën",
+      fuelType: "Zgjidh llojin e karburantit",
+      priceMin: "Fut çmimin minimal",
+      priceMax: "Fut çmimin maksimal",
+      yearMin: "Fut vitin minimal",
+      yearMax: "Fut vitin maksimal",
+      maxKilometers: "Fut kilometrazhin maksimal",
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nuk ka modele të disponueshme"
+      noModelsAvailable: "Modelet nuk janë të disponueshme",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Marka e makinës është e detyrueshme",
-      carmodel: "Modeli i makinës është i detyrueshëm",
-      fueltype: "Lloji i karburantit është i detyrueshëm",
-      maxkilometers: "Kilometrat maksimale duhet të jenë një numër",
-      pricemax: "Çmimi maksimal duhet të jetë një numër",
-      pricemin: "Çmimi minimal duhet të jetë një numër",
-      yearmax: "Viti maksimal duhet të jetë një vit i vlefshëm",
-      yearmin: "Viti minimal duhet të jetë një vit i vlefshëm"
+      carBrand: "Marka e makinës është e detyrueshme",
+      carModel: "Modeli i makinës është i detyrueshëm",
+      fuelType: "Lloji i karburantit është i detyrueshëm",
+      priceMin: "Çmimi minimal duhet të jetë numër",
+      priceMax: "Çmimi maksimal duhet të jetë numër",
+      yearMin: "Viti minimal duhet të jetë i vlefshëm",
+      yearMax: "Viti maksimal duhet të jetë i vlefshëm",
+      maxKilometers: "Kilometrazhi maksimal duhet të jetë numër",
     },
     actions: {
-      previous: "E mëparshme",
-      continue: "Vazhdo"
-    }
+      previous: "I mëparshmi",
+      continue: "Vazhdo",
+    },
   },
   telegram: {
-    heading: "Cilësimi i Telegramit",
-    description: "Vendos njoftimet në Telegram duke shtuar token-in e botit dhe ID-në e bisedës.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Nëse keni vështirësi në krijimin e telegram bot-it, na kontaktoni dhe ne do t’ju telefonojmë për t’ju ndihmuar ta krijoni.",
-    contact: "Na kontaktoni",
+    heading: "Konfigurimi i Telegram",
+    description:
+      "Konfiguro njoftimet e Telegram duke dhënë tokenin e botit dhe ID e bisedës.",
+    subHeading: "Konfiguro botin tënd Telegram",
+    info: "Kehtë probleme me krijimin e botit Telegram? Na kontakto, do të të ndihmojmë.",
+    contact: "Na kontakto",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Hapni Telegram dhe kërkoni @BotFather",
-      botstep2: "Dërgo komandën /newbot",
-      botstep3: "Ndiq udhëzimet për të krijuar një bot",
-      botstep4: "Kopjoni tokenin e dhënë nga BotFather",
-      bottitle: "Si të marrësh një Token për Telegram Bot-in:",
-      chatstep1: "Hapni Telegram dhe kërkoni @userinfobot",
-      chatstep2: "Dërgo çdo mesazh te boti",
-      chatstep3: "Boti do të përgjigjet me informacionin tuaj, duke përfshirë edhe Chat ID-në tuaj",
-      chatstep4: "Kopjoni ID-në e bisedës (është një numër)",
-      chattitle: "Si të marrësh ID-në e Chat-it tënd në Telegram:"
+      botTitle: "Si të marrësh tokenin e botit Telegram:",
+      botStep1: "Hap Telegram dhe kërko @BotFather",
+      botStep2: "Dërgo komandën /newbot",
+      botStep3: "Ndiq udhëzimet për krijimin e botit",
+      botStep4: "Kopjo tokenin e dhënë nga BotFather",
+
+      chatTitle: "Si të marrësh ID e bisedës tënde Telegram:",
+      chatStep1: "Hap Telegram dhe kërko @userinfobot",
+      chatStep2: "Dërgo çdo mesazh botit",
+      chatStep3:
+        "Boti do të përgjigjet me informacionet e tua, përfshirë ID e bisedës",
+      chatStep4: "Kopjo ID e bisedës (numrin)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt:
+      "Ke nevojë për ndihmë me konfigurimin e tokenit të botit dhe ID e bisedës?",
+    videoDescription: "Shiko videon më poshtë me udhëzime të hollësishme.",
+
     labels: {
-      token: "Tokeni i Botit Telegram",
-      chatId: "Your Telegram Chat ID",
+      token: "Tokeni i botit Telegram",
+      chatId: "ID e bisedës tënde Telegram",
       language: "Gjuha e njoftimeve",
-      username: "Emri i përdoruesit në Telegram",
-      chatid: "ID-ja juaj e bisedës në Telegram"
+      username: "Emri i përdoruesit Telegram",
     },
+
     placeholders: {
-      token: "Shkruani tokenin e botit nga BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Zgjidh gjuhën e mesazhit në Telegram",
-      username: "Shkruani emrin tuaj të përdoruesit në Telegram",
-      chatid: "Shkruani ID-në tuaj të bisedës në Telegram"
+      token: "Fut tokenin e botit nga BotFather",
+      chatId: "Fut ID e bisedës tënde Telegram",
+      language: "Zgjidh gjuhën e mesazheve Telegram",
+      username: "Fut emrin tënd të përdoruesit Telegram",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Ky është emri i përdoruesit të llogarisë tënde Telegram (pa simbolin @).",
     examples: {
       token: "Shembull: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Mund ta merrni këtë duke i dërguar mesazh @userinfobot në Telegram."
+      chatId: "Merr duke dërguar mesazh @userinfobot në Telegram",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Udhëzime konfigurimi:",
     setupSteps: [
-
-      "Open Telegram and search for \\\"BotFather\\\"",
-
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Hap Telegram dhe kërko "BotFather"',
+      'Kliko "Start" për të filluar bisedën me BotFather',
+      "Fut /newbot dhe ndiq udhëzimet për të krijuar bot të ri",
+      "Zgjidh emër për botin tënd",
+      "Zgjidh emër përdoruesi për botin (duhet të përfundojë me 'bot')",
+      "Kopjo tokenin API të dhënë nga BotFather",
+      "Dërgo mesazh botit të ri për të aktivizuar bisedën",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Si të marrësh ID e bisedës tënde Telegram:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\"userinfobot\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Hap Telegram dhe kërko "userinfobot"',
+      "Dërgo çdo mesazh botit",
+      "Boti do të përgjigjet me informacionet e tua përfshirë ID e bisedës",
+      "Kopjo ID e bisedës tënde",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle:
+      "Ke nevojë për ndihmë me konfigurimin e tokenit të botit dhe ID e bisedës?",
+    helpDescription: "Shiko videon më poshtë me udhëzime të hollësishme.",
+    botTokenLabel: "Tokeni i botit Telegram",
+    botTokenPlaceholder: "Fut tokenin e botit nga BotFather",
+    botTokenExample:
+      "Shembull: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "ID e bisedës tënde Telegram",
+    chatIdPlaceholder: "Fut ID e bisedës tënde Telegram",
+    chatIdDescription: "Merr duke dërguar mesazh @userinfobot në Telegram",
+    languageLabel: "Gjuha e njoftimeve",
+    languagePlaceholder: "Zgjidh gjuhën e mesazheve Telegram",
     languages: {
       en: "Anglisht",
       de: "Gjermanisht",
       fr: "Frëngjisht",
-      es: "Shqip",
-      it: "Shqip"
+      es: "Spanjisht",
+      it: "Italisht",
+      nl: "Holandisht",
+      sv: "Suedisht",
+      da: "Danisht",
+      nb: "Norvegjisht",
+      fi: "Finlandisht",
+      hi: "Hindi",
+      ru: "Rusisht",
+      pl: "Polonisht",
+      sk: "Sllovakisht",
+      sq: "Shqip",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Parapamje e njoftimit Telegram",
+    carAlertTitle: "Njoftim i ri makine!",
+    priceLabel: "Çmimi: {{price}}",
+    kilometresLabel: "Kilometrazh: {{kms}}",
+    locationLabel: "Vendndodhja: {{location}}",
+    viewListing: "Shiko njoftimin →",
     errors: {
-      token: "Kërkohet token-i i botit të Telegram-it",
-      chatId: "Telegram chat ID is required",
-      language: "Gjuha e njoftimit është e detyrueshme",
-      username: "Emri i përdoruesit në Telegram është i detyrueshëm",
-      chatid: "ID-ja e bisedës në Telegram është e detyrueshme"
+      token: "Tokeni i botit Telegram është i detyrueshëm",
+      chatId: "ID e bisedës Telegram është e detyrueshme",
+      language: "Gjuha e njoftimeve është e detyrueshme",
+      username: "Emri i përdoruesit Telegram është i detyrueshëm",
     },
+
     actions: {
-      previous: "E mëparshme",
-      continue: "Vazhdo"
+      previous: "I mëparshmi",
+      continue: "Vazhdo",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Shembull: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Tokeni i Botit Telegram",
-    bottokenplaceholder: "Shkruani tokenin e botit nga BotFather",
-    caralerttitle: "🚗 Njoftim për makinë të re!",
-    chatiddescription: "Mund ta merrni këtë duke i shkruar @userinfobot në Telegram.",
-    chatidlabel: "ID-ja juaj e bisedës në Telegram",
-    chatidplaceholder: "Shkruani ID-në tuaj të bisedës në Telegram",
-    chatidsteps: {
-      0: "Hapni Telegram dhe kërkoni \"userinfobot\"",
-      1: "Dërgo çdo mesazh te boti",
-      2: "Boti do të përgjigjet me informacionin tuaj, përfshirë Chat ID-në tuaj.",
-      3: "Kopjo ID-në tënde të bisedës"
-    },
-    chatidtitle: "Si të merrni Chat ID-në tuaj në Telegram:",
-    confirmcontact: "Kam filluar një bisedë me botin dhe kam dërguar një mesazh",
-    contactbotinstruction: "Filloni një bisedë me Telegram bot-in tonë duke klikuar lidhjen më poshtë dhe duke i dërguar një mesazh:",
-    contactbotnote: "Kjo është e nevojshme për të marrë njoftime për makinat. Nëse je në kompjuter, mund të skanosh kodin QR.",
-    helpdescription: "Shikoni videon më poshtë për një udhëzues hap pas hapi.",
-    helptitle: "Keni nevojë për ndihmë për të vendosur Token-in e Telegram Bot-it dhe Chat ID-në tuaj?",
-    kilometreslabel: "Kilometra: {{kms}}",
-    languagelabel: "Gjuha e njoftimeve",
-    languageplaceholder: "Zgjidh gjuhën e mesazhit në Telegram",
-    locationlabel: "Vendndodhja: {{location}}",
-    previewtitle: "Parapamje e njoftimeve në Telegram",
-    pricelabel: "Çmimi: {{price}}",
-    setupsteps: {
-      0: "Hapni Telegram dhe kërkoni \"BotFather\"",
-      1: "Nisni një bisedë me BotFather duke klikuar “Start”",
-      2: "Shkruani /newbot dhe ndiqni udhëzimet për të krijuar një bot të ri",
-      3: "Zgjidh një emër për bot-in tënd",
-      4: "Zgjidhni një emër përdoruesi për bot-in tuaj (duhet të përfundojë me 'bot')",
-      5: "Kopjoni tokenin API të dhënë nga BotFather",
-      6: "Dërgo një mesazh te boti yt i ri për të aktivizuar chat-in"
-    },
-    setuptitle: "Udhëzime për konfigurimin:",
-    subheading: "Konfiguro Bot-in tënd në Telegram",
-    usernamedescription: "Ky është emri i përdoruesit në llogarinë tuaj në Telegram (pa simbolin @).",
-    videodescription: "Shikoni videon më poshtë për një udhëzues hap pas hapi.",
-    videoprompt: "Keni nevojë për ndihmë për të vendosur Token-in dhe Chat ID-në e Telegram Bot-it tuaj?",
-    viewlisting: "Shiko njoftimin →"
+    contactBotInstruction:
+      "Kliko lidhjen më poshtë për të filluar bisedën me botin tonë Telegram dhe për të dërguar mesazh:",
+    contactBotNote:
+      "Kjo është e nevojshme për të marrë njoftime makinash. Nëse je në kompjuter, skano kod QR.",
+    confirmContact: "Kam filluar bisedën me botin dhe dërgova mesazh",
   },
   review: {
-    title: "Rishiko abonimin tënd",
-    description: "Ju lutemi, kontrolloni detajet e abonimit tuaj para se të vazhdoni me pagesën.",
+    title: "Përmbledhje e abonimit tënd",
+    description: "Rishiko detajet e abonimit para pagesës.",
+
     personal: {
       title: "Të dhënat personale",
       name: "Emri",
-      email: "Email"
+      email: "Email",
     },
+
     monitoring: {
-      title: "Cilësimet e monitorimit",
-      websites: "Faqe interneti",
-      facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL e Facebook",
-      updatefrequency: "Frekuenca e Përditësimit"
+      title: "Cilësimet e ndjekjes",
+      websites: "Faqet",
+      facebookUrl: "URL Facebook",
+      updateFrequency: "Frekuenca e përditësimeve",
     },
+
     specs: {
       title: "Specifikimet e makinës",
-      brand: "Markë",
-      model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Autonomi (km)",
-      price: "Gama e çmimit (€)",
-      fueltype: "Lloji i karburantit",
-      yearrange: "Intervali i viteve"
+      brand: "Marka",
+      model: "Modeli",
+      fuelType: "Karburanti",
+      yearRange: "Viti",
+      mileage: "Kilometrazh (km)",
+      price: "Çmimi (€)",
     },
+
     notification: {
       title: "Cilësimet e njoftimeve",
-      telegram: "Boti në Telegram",
-      language: "Gjuha e njoftimeve"
+      telegram: "Bot Telegram",
+      language: "Gjuha e njoftimeve",
     },
+
     summary: {
       title: "Përmbledhje e abonimit",
-      base: "Abonimi Bazë",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Totali (Mujor)",
-      extrawebsites: "Faqe Shtesë",
-      frequencyupgrade: "Përmirësim i Frekuencës"
+      base: "Abonimi bazë",
+      extraWebsites: "Faqe shtesë",
+      frequencyUpgrade: "Përmirësim frekuence",
+      total: "Total (mujor)",
     },
+
     terms: {
-      checkbox: "Pranoj kushtet",
-      tos: "Kushtet e Shërbimit",
-      privacy: "Politika e Privatësisë",
-      note: "Abonimi juaj do të rinovohet automatikisht çdo muaj. Mund ta anuloni në çdo kohë.",
-      error: "Duhet të pranoni termat dhe kushtet"
+      checkbox: "Pajtohem",
+      tos: "Kushtet e përdorimit",
+      privacy: "Politika e privatësisë",
+      note: "Abonimi yt do të rinovohet automatikisht çdo muaj. Mund ta anulosh kurdo.",
+      error: "Duhet të pajtohesh me kushtet e përdorimit",
     },
+
     actions: {
-      previous: "E mëparshme",
-      submit: "Vazhdo te Pagesa"
-    }
+      previous: "I mëparshmi",
+      submit: "Vazhdo te pagesa",
+    },
   },
   faq: {
-    title: "Pyetjet e bëra shpesh",
-    subtitle: "Gjeni përgjigjet për pyetjet më të shpeshta rreth shërbimit tonë.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "Shpejtësia e njoftimeve varet nga frekuenca e përditësimeve që zgjedhni. Me planin standard të përditësimit çdo orë, do të merrni njoftime brenda një ore nga publikimi i një njoftimi të ri. Për njoftime pothuajse në kohë reale (brenda disa minutave nga publikimi), mund të kaloni në planet tona me përditësime më të shpeshta.",
-        question: "Sa shpejtë do të marr njoftimet pasi të publikohet një listim i ri?"
+    title: "Pyetje të shpeshta",
+    subtitle:
+      "Gjej përgjigje për pyetjet më të zakonshme rreth shërbimit tonë.",
+    contactPrompt: "Ke ende pyetje?",
+    contactLink: "Kontakto mbështetjen",
+    questions: [
+      {
+        question:
+          "Sa shpejt marr njoftim pas publikimit të një njoftimi të ri?",
+        answer:
+          "Shpejtësia e njoftimit varet nga frekuenca e zgjedhur e përditësimeve. Me planin orar, merr njoftim brenda orës nga publikimi. Për njoftime pothuajse të menjëhershme (brenda pak minutash) përmirëso në plane më të shpeshta.",
       },
-      1: {
-        answer: "Po! Mund të krijosh disa profile kërkimi me kritere të ndryshme. Çdo profil llogaritet si një abonim i veçantë, por të gjitha mund t’i menaxhosh nga një llogari e vetme. Kjo është ideale nëse po kërkon për lloje të ndryshme automjetesh njëkohësisht.",
-        question: "A mund të ndjek disa lloje të ndryshme makinash njëkohësisht?"
+      {
+        question: "A mund të ndjek njëkohësisht modele të ndryshme makinash?",
+        answer:
+          "Po! Mund të krijosh profile të shumta kërkimi me kritere të ndryshme. Çdo profil llogaritet si abonim i veçantë, por i menaxhon të gjitha nga një llogari.",
       },
-      2: {
-        answer: "Aktualisht mbështesim platformat kryesore të shpalljeve të makinave, përfshirë AutoTrader, CarGurus, Cars.com dhe Facebook Marketplace. Po zgjerojmë vazhdimisht mbulimin tonë për të përfshirë më shumë faqe interneti, bazuar në kërkesat e përdoruesve dhe popullaritetin rajonal.",
-        question: "Cilat faqe interneti mbështetni aktualisht?"
+      {
+        question: "Cilat faqe mbështetni aktualisht?",
+        answer:
+          "Aktualisht mbështesim platforma të mëdha si AutoTrader, CarGurus, Cars.com dhe Facebook Marketplace. Shtojmë vazhdimisht faqe të reja sipas kërkesës.",
       },
-      3: {
-        answer: "Aspak! Ne ofrojmë udhëzime hap pas hapi me tekst dhe video për të të ndihmuar të vendosësh Telegram bot-in. Shumica e përdoruesve e përfundojnë konfigurimin për më pak se 5 minuta, edhe pa asnjë njohuri teknike.",
-        question: "A më duhet njohuri teknike për të përdorur Telegram botin?"
+      {
+        question: "A më duhen aftësi teknike për botin Telegram?",
+        answer:
+          "Jo! Ofron udhëzime të hollësishme me tekst dhe video. Shumica e përdoruesve konfigurojnë botin në më pak se 5 minuta.",
       },
-      4: {
-        answer: "Po, ju mund t’i ndryshoni kriteret e kërkimit në çdo kohë nga paneli i llogarisë suaj. Ndryshimet hyjnë në fuqi menjëherë dhe njoftimet tuaja do të përditësohen në përputhje me to, pa asnjë ndërprerje të shërbimit.",
-        question: "A mund t’i ndryshoj kriteret e kërkimit pasi të kem vendosur abonimin?"
+      {
+        question:
+          "A mund të ndryshoj kriteret e kërkimit pas konfigurimit të abonimit?",
+        answer:
+          "Po, mund të ndryshosh kriteret kurdo në panelin e kontrollit. Ndryshimet hyjnë në fuqi menjëherë.",
       },
-      5: {
-        answer: "Mund ta anuloni abonimin tuaj në çdo kohë nga paneli i llogarisë suaj. Shkoni te seksioni \"Abonimet\", zgjidhni abonimin që dëshironi të anuloni dhe klikoni butonin \"Anulo Abonimin\". Shërbimi juaj do të vazhdojë deri në fund të periudhës aktuale të faturimit.",
-        question: "Si mund ta anuloj abonimin tim?"
-      }
-    },
-    contactlink: "Kontaktoni ekipin tonë të suportit",
-    contactprompt: "Keni ende pyetje?"
+      {
+        question: "Si të anuloj abonimin?",
+        answer:
+          'Mund ta anulosh abonimin kurdo në seksionin "Abonimet" në panelin e kontrollit. Shërbimi mbetet aktiv deri në fund të periudhës aktuale të faturimit.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
+    brandDescription:
+      "Asistenti yt personal për të gjetur ofertën ideale të makinës së përdorur në kohën e duhur.",
+    quickLinks: "Lidhje të shpejta",
     features: "Veçoritë",
     pricing: "Çmimet",
-    faq: "Pyetjet e bëra shpesh",
-    getStarted: "Get Started",
-    legal: "Ligjore",
-    terms: "Kushtet e Shërbimit",
+    faq: "Pyetje të shpeshta",
+    getStarted: "Fillo",
+    legal: "Informacione ligjore",
+    terms: "Kushtet e përdorimit",
     privacy: "Politika e privatësisë",
     cookies: "Politika e cookies",
-    gdpr: "Përputhshmëria me GDPR",
-    contact: "Kontakto",
+    gdpr: "Përputhshmëri me GDPR",
+    contact: "Kontakt",
     email: "support@amiquus.com",
-    telegram: "Na kontaktoni në Telegram",
+    telegram: "Na kontakto në Telegram",
     copyright: "Të gjitha të drejtat e rezervuara.",
-    about: "Rreth Nesh",
+    about: "Rreth nesh",
     blog: "Blog",
     careers: "Karriera",
     support: "Mbështetje",
-    branddescription: "Asistenti juaj personal për të gjetur ofertën ideale për makinë të përdorur, në kohën e duhur.",
-    brandtitle: "Amiquus",
-    getstarted: "Fillo",
-    quicklinks: "Lidhje të Shpejta"
   },
   login: {
-    title: "Hyni në llogarinë tuaj",
-    description: "Shkruani email-in dhe fjalëkalimin për të hyrë në panelin tuaj të kontrollit",
+    title: "Hyr në llogari",
+    description: "Fut email dhe fjalëkalim për qasje në panelin e kontrollit",
     emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    passwordLabel: "Fjalëkalimi",
+    loginButton: "Hyr",
+    loggingIn: "Po hyhet...",
+    loginWithGoogle: "Hyr me Google",
     or: "ose",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Nuk ke llogari?",
+    registerLink: "Regjistrohu",
+    successTitle: "Hyrje e suksesshme",
+    successMessage: "Ke hyrë me sukses.",
+    errorTitle: "Gabim hyrjeje",
+    genericError: "Kontrollo të dhënat dhe provo përsëri.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Ju lutemi, shkruani një adresë emaili të vlefshme.",
-      shortpassword: "Fjalëkalimi duhet të ketë të paktën 6 karaktere"
+      invalidEmail: "Fut një adresë email të vlefshme",
+      shortPassword: "Fjalëkalimi duhet të ketë të paktën 6 karaktere",
     },
-    emaillabel: "Email",
-    errortitle: "Identifikimi dështoi",
-    genericerror: "Ju lutemi kontrolloni të dhënat tuaja dhe provoni përsëri.",
-    loggingin: "Duke u identifikuar...",
-    loginbutton: "Hyrje",
-    loginwithgoogle: "Hyr me Google",
-    noaccount: "Nuk ke llogari?",
-    passwordlabel: "Fjalëkalimi",
-    registerlink: "Regjistrohu",
-    successmessage: "Jeni identifikuar me sukses.",
-    successtitle: "Hyrja u krye me sukses"
   },
   register: {
-    title: "Krijo një llogari",
-    description: "Regjistrohuni për të filluar ndjekjen e makinës tuaj të ëndrrave",
+    title: "Krijo llogari",
+    description: "Regjistrohu dhe fillo të kërkosh makinën e ëndrrave tënde",
     google: "Regjistrohu me Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
+    orContinue: "Ose vazhdo",
+    firstName: "Emri",
+    lastName: "Mbiemri",
     username: "Emri i përdoruesit",
     email: "Email",
     password: "Fjalëkalimi",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
-    login: "Hyrje",
+    confirmPassword: "Konfirmo fjalëkalimin",
+    termsNotice: "Pajtohem",
+    termsOfService: "Kushtet e përdorimit",
+    privacyPolicy: "Politika e privatësisë",
+    createBtn: "Krijo llogari",
+    alreadyHave: "Ke tashmë llogari?",
+    login: "Hyr",
     and: "dhe",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Fusha të munguara",
+        desc: "Plotëso të gjitha fushat e detyrueshme",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Emër përdoruesi i pavlefshëm",
+        desc: "Emri i përdoruesit duhet të jetë alfanumerik dhe 3–20 karaktere",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Fjalëkalimet nuk përputhen",
+        desc: "Sigurohu që fjalëkalimet përputhen",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Kushtet nuk u pranuan",
+        desc: "Për të vazhduar duhet të pranosh kushtet e përdorimit dhe politikën e privatësisë",
       },
       success: {
-        title: "Regjistrimi u krye me sukses",
-        desc: "Mirësevini në AMIQUUS! Do të ridrejtoheni për të verifikuar adresën tuaj të emailit."
+        title: "Regjistrim i suksesshëm",
+        desc: "Mirë se vini në Amiquus! Do të ridrejtohesh te verifikimi i emailit.",
       },
       failure: {
         title: "Regjistrimi dështoi",
-        desc: "Ju lutemi kontrolloni të dhënat tuaja dhe provoni përsëri."
+        desc: "Kontrollo të dhënat dhe provo përsëri",
       },
-      invalidusername: {
-        desc: "Emri i përdoruesit duhet të jetë alfanumerik dhe të ketë nga 3 deri në 20 karaktere",
-        title: "Emër përdoruesi i pavlefshëm"
-      },
-      missingfields: {
-        desc: "Ju lutemi plotësoni të gjitha fushat e kërkuara",
-        title: "Fusha të munguara"
-      },
-      passwordmismatch: {
-        desc: "Ju lutemi sigurohuni që fjalëkalimet përputhen",
-        title: "Fjalëkalimet nuk përputhen"
-      },
-      termsnotaccepted: {
-        desc: "Duhet të pranoni kushtet dhe politikën e privatësisë për të vazhduar.",
-        title: "Termat nuk janë pranuar"
-      }
     },
-    alreadyhave: "Keni tashmë një llogari?",
-    confirmpassword: "Konfirmo Fjalëkalimin",
-    createbtn: "Krijo llogari",
-    firstname: "Emri",
-    lastname: "Mbiemër",
-    orcontinue: "Ose vazhdo me",
-    privacypolicy: "Politika e Privatësisë",
-    termsnotice: "Pranoj kushtet e",
-    termsofservice: "Kushtet e Shërbimit"
   },
   verifyEmail: {
-    title: "Verifiko Email-in Tënd",
-    description: "Një kod verifikimi është dërguar në emailin tuaj.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "Verifiko email",
+    description: "Kemi dërguar një kod verifikimi në emailin tënd.",
+    codeLabel: "Kodi i verifikimit",
+    verifyButton: "Verifiko email",
+    updateEmailLabel: "Përditëso email",
+    updateEmailButton: "Përditëso email",
+    resendButton: "Ridërgo kodin",
+    resendCountdown: "Mund të ridërgosh kodin pas {{seconds}}s",
+    footerNote: "Kodi nuk erdhi? Kontrollo dosjen spam.",
     toast: {
-      verified: "Emaili u verifikua",
+      verified: "Email i verifikuar",
       failed: "Verifikimi dështoi",
       resent: "Kodi i verifikimit u ridërgua",
       error: "Gabim",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "Emaili u përditësua",
-      entervalidemail: "Ju lutem, shkruani një adresë emaili të vlefshme",
-      invalidemail: "Email i pavlefshëm",
-      sameemail: "E njëjta email",
-      sameemaildesc: "Emaili i ri është i njëjtë me emailin aktual."
+      invalidEmail: "Email i pavlefshëm",
+      enterValidEmail: "Fut një adresë email të vlefshme",
+      sameEmail: "I njëjti email",
+      sameEmailDesc: "Email i ri është i njëjti me aktualin",
+      emailUpdated: "Email u përditësua",
     },
-    codelabel: "Kodi i verifikimit",
-    footernote: "Nuk morët kodin? Kontrolloni dosjen e postës së padëshiruar.",
-    resendbutton: "Dërgo sërish kodin",
-    resendcountdown: "Mund ta ridërgoni kodin pas {{seconds}}s.",
-    updateemailbutton: "Përditëso Email-in",
-    updateemaillabel: "Përditëso Email-in",
-    verifybutton: "Verifiko Email-in"
   },
   dashboardPayment: {
-    add: "Shto Mënyrë Pagesë",
-    description: "Shtoni një kartë të re krediti ose debiti për pagesat e abonimit tuaj.",
-    processing: "Po përpunohet...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "Shto metodë pagese",
+    description:
+      "Shto një kartë krediti ose debiti të re për pagesat e abonimit.",
+    processing: "Përpunohet...",
+    errorTitle: "Gabim në shtimin e metodës së pagesës",
+    errorMessage: "Ndodhi një gabim i papritur",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
+      title: "Gabim",
+      description: "Nuk mund të inicializohet konfigurimi i pagesave",
     },
-    errormessage: "Ndodhi një gabim i papritur",
-    errortitle: "Gabim gjatë shtimit të metodës së pagesës",
-    initerror: {
-      description: "Nuk mund të inicializohet konfigurimi i pagesës",
-      title: "Gabim"
-    }
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Vitet",
+      priceRange: "Çmimi",
+      websites: "Faqet",
+      updates: "Përditësimet",
+      language: "Gjuha",
+      price: "Çmimi",
+      edit: "Ndrysho",
+      cancelAlert: "Anulo njoftimin",
+      cancelTitle: "Anulo njoftimin e makinës",
+      cancelDescription:
+        "Je i sigurt që do të anulosh njoftimin për {{brand}} {{model}}? Kjo do të ndalojë të gjitha njoftimet dhe do të duhet të rikonfigurosh.",
+      keepMyAlert: "Mbaj njoftimin tim",
+      confirmCancel: "Anulo njoftimin",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Skadon",
+      default: "Parazgjedhur",
+      setAsDefault: "Vendos si parazgjedhur",
+      remove: "Hiq",
+      setDefaultTitle: "Vendos metodën e parazgjedhur të pagesës",
+      setDefaultDescription:
+        "Dëshiron të vendosësh kartën {{brand}} që përfundon me {{last4}} si metodë parazgjedhur pagese? Kjo kartë do të përdoret për të gjitha pagesat e ardhshme.",
+      removeTitle: "Hiq metodën e pagesës",
+      removeDescription:
+        "Je i sigurt që do të heqësh kartën {{brand}} që përfundon me {{last4}}?",
+      removeWarning:
+        "Kjo është metoda jote parazgjedhur e pagesës dhe heqja mund të ndikojë në abonimet aktive.",
+      cancel: "Anulo",
+      confirmRemove: "Hiq kartën",
+    },
   },
   profile: {
     tabs: {
       alerts: "Njoftimet e mia",
-      payments: "Mënyrat e pagesës"
+      payments: "Metodat e pagesës",
     },
     sidebar: {
-      memberSince: "Member since",
+      memberSince: "Anëtar që nga",
       subscriptions: "Abonimet",
-      methods: "Mënyrat e pagesës",
+      methods: "Metodat e pagesës",
       account: "Cilësimet e llogarisë",
       privacy: "Privatësia dhe siguria",
-      logout: "Çkyçu",
-      membersince: "Anëtar që prej"
+      logout: "Dil",
     },
     account: {
       title: "Cilësimet e llogarisë",
-      desc: "Përditësoni informacionin dhe preferencat e llogarisë tuaj.",
+      desc: "Përditëso informacionet dhe cilësimet e llogarisë tënde.",
       name: "Emri",
       email: "Email",
       username: "Emri i përdoruesit",
       cancel: "Anulo",
-      save: "Ruaj ndryshimet"
+      save: "Ruaj ndryshimet",
     },
     security: {
-      title: "Privatësia & Siguria",
-      desc: "Menaxho cilësimet e sigurisë dhe preferencat e privatësisë.",
+      title: "Privatësia dhe siguria",
+      desc: "Menaxho cilësimet e sigurisë dhe privatësisë.",
       current: "Fjalëkalimi aktual",
-      new: "Fjalëkalim i ri",
-      confirm: "Konfirmo Fjalëkalimin e Ri",
-      update: "Përditëso Fjalëkalimin"
+      new: "Fjalëkalimi i ri",
+      confirm: "Konfirmo fjalëkalimin e ri",
+      update: "Përditëso fjalëkalimin",
     },
     logout: {
       title: "Dil",
-      desc: "Jeni i sigurt që doni të dilni nga llogaria juaj?",
-      success: "Jeni çkyçur me sukses."
+      desc: "Je i sigurt që do të dalësh?",
+      success: "Ke dalë me sukses.",
     },
     alerts: {
-      title: "Abonime për njoftime për makina",
-      desc: "Menaxho njoftimet dhe preferencat e kërkimit të makinës.",
-      add: "Shto Njoftim të Ri",
-      none: "Nuk keni asnjë alarm aktiv për makina.",
-      cta: "Krijo alarmin tënd të parë",
-      warning: "⚠️ Ndryshimet në abonimin tuaj do të zbatohen në periudhën e ardhshme të faturimit, dhe vetëm pas një pagese të suksesshme. Nëse pagesa dështon, konfigurimi juaj aktual i alarmit do të mbetet i pandryshuar."
+      title: "Abonimet e njoftimeve të makinave",
+      desc: "Menaxho njoftimet dhe cilësimet e njoftimeve.",
+      add: "Shto njoftim të ri",
+      none: "Nuk ke njoftime aktive makinash.",
+      cta: "Krijo njoftimin tënd të parë",
+      warning:
+        "⚠️ Ndryshimet e abonimit do të hyjnë në fuqi në ciklin e ardhshëm të faturimit dhe vetëm pas pagesës së suksesshme. Në rast pagese të dështuar, do të mbahet konfigurimi aktual.",
     },
     payments: {
-      title: "Mënyrat e pagesës",
-      desc: "Menaxhoni mënyrat tuaja të pagesës për faturimin e abonimit.",
-      none: "Nuk keni asnjë mënyrë pagese të ruajtur.",
-      encrypted: "Të dhënat tuaja të pagesës janë të enkriptuara dhe ruhen në mënyrë të sigurt."
-    }
+      title: "Metodat e pagesës",
+      desc: "Menaxho metodat e pagesës për abonimet.",
+      none: "Nuk ke metoda pagese të ruajtura.",
+      encrypted:
+        "Të dhënat e tua të pagesës janë të enkriptuara dhe të ruajtura në mënyrë të sigurt.",
+    },
   },
   setupAlerts: {
-    title: "Vendosni njoftimet për makinën tuaj",
-    subtitle: "Konfiguro Telegram bot-in tënd për të marrë njoftime për makinën tënde të ëndrrave.",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Nis Shërbimin Tim të Sinjalizimit për Makinën",
-    cancel: "Anulo kurdoherë",
+    title: "Konfiguro njoftimet e makinave",
+    subtitle:
+      "Konfiguro botin Telegram për të marrë njoftime për makinën e ëndrrave tënde",
+    basicPlan: "Plani bazë",
+    baseTitle: "79,99 €/muaj",
+    button: "Nis shërbimin e njoftimeve të makinave",
+    cancel: "Anulo kurdo",
     toasts: {
       terms: {
         title: "Kushtet nuk u pranuan",
-        description: "Duhet të pranosh kushtet e shërbimit për të vazhduar"
+        description: "Për të vazhduar duhet të pranosh kushtet e përdorimit",
       },
       success: {
         title: "Abonimi u krijua",
-        description: "Abonimi juaj u krijua me sukses"
+        description: "Abonimi yt u krijua me sukses",
       },
       error: {
-        title: "Gabim gjatë krijimit të abonimit"
+        title: "Gabim në krijimin e abonimit",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
+        title: "Kërkohet kontakt me botin",
+        description:
+          "Për të marrë njoftime makinash duhet të fillosh bisedën me botin tonë Telegram dhe të dërgosh mesazh. Ndiq udhëzimet më poshtë.",
       },
-      contactbot: {
-        description: "Për të marrë njoftime për makinat, duhet të filloni një bisedë me Telegram bot-in tonë dhe të dërgoni një mesazh. Ju lutemi ndiqni udhëzimet më poshtë për të kontaktuar bot-in.",
-        title: "Kërkohet Boti i Kontaktit"
-      }
     },
-    basetitle: "79,99 $/muaj",
-    basicplan: "Plani Bazë"
   },
   loginPrompt: {
-    title: "Kërkohet hyrja",
-    description: "Duhet të jeni i kyçur për të vazhduar. Ju lutemi hyni ose regjistrohuni.",
+    title: "Kërkohet hyrje",
+    description: "Duhet të jesh i kyçur për të vazhduar. Hyr ose regjistrohu.",
     register: "Regjistrohu",
-    login: "Hyrje"
+    login: "Hyr",
   },
   waitlistPrompt: {
-    title: "Bëhu pjesë e listës së pritjes",
-    description: "Aktualisht jemi në kapacitet të plotë. Regjistrohuni në listën e pritjes për t’u njoftuar sapo të lirohet një vend.",
-    button: "Bashkohu në listën e pritjes"
+    title: "Bashkohu në listën e pritjes",
+    description:
+      "Aktualisht jemi plot. Bashkohu në listën e pritjes për të qenë i informuar kur të lirohet një vend.",
+    button: "Bashkohu në listën e pritjes",
   },
   subscription: {
     title: "Detajet e abonimit",
-    subTitle: "Edit your subscription details below",
-    error: "Kthehu te paneli kryesor",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Mund ta pezulloni abonimin tuaj në çdo kohë. Kur pezulloni abonimin, njoftimet për makinën tuaj do të ndalohen derisa t’i rifilloni.",
+    subTitle: "Ndrysho detajet e abonimit më poshtë",
+    error: "Kthehu te paneli i kontrollit",
+    notFound: "Abonimi nuk u gjet",
+    notFoundSub: "Kthehu te paneli i kontrollit",
+    description:
+      "Mund ta pezullosh abonimin kurdo. Pas pezullimit njoftimet do të ndalen derisa të riaktivizohet.",
     form: {
       status: {
-        label: "Status",
+        label: "Statusi",
         placeholder: "Zgjidh statusin",
-        active: "Aktive",
-        paused: "Pezulluar"
-      }
+        active: "Aktiv",
+        paused: "Pezulluar",
+      },
     },
     actions: {
       save: "Ruaj ndryshimet",
-      back: "Prapa"
+      back: "Kthehu",
     },
     toasts: {
       success: {
         title: "Abonimi u përditësua",
-        description: "Abonimi juaj për {{brand}} {{model}} u përditësua me sukses"
+        description:
+          "Abonimi yt për {{brand}} {{model}} u përditësua me sukses",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Nuk mund të përditësohet abonimi",
+        description:
+          "Nuk mund të pezullosh dhe të përditësosh çmimin e abonimit njëkohësisht. Zgjidh njërin.",
       },
       error: {
-        title: "Gabim gjatë përditësimit të abonimit"
+        title: "Gabim në përditësimin e abonimit",
       },
-      priceerror: {
-        description: "Nuk mund të ndaloni dhe të ndryshoni çmimin e abonimit në të njëjtën kohë. Duhet ose ta ndaloni, ose ta ndryshoni çmimin.",
-        title: "Nuk mund të përditësohet abonimi"
-      }
     },
-    notfound: "Abonimi nuk u gjet",
-    notfoundsub: "Kthehu te paneli",
-    subtitle: "Përditësoni detajet e abonimit tuaj më poshtë"
   },
   about: {
-    title: "Rreth AMIQUUS",
-    description: "Po revolucionarizojmë mënyrën si njerëzit gjejnë makinën e tyre të përdorur të përsosur duke sjellë teknologjinë e avancuar të monitorimit për të gjithë.",
+    title: "Rreth nesh",
+    description:
+      "Revolucionizojmë kërkimin e makinës ideale të përdorur me ndjekje të avancuar",
     meta: {
-      title: "Rreth Nesh | Amiquus - Shërbim monitorimi i listimeve të makinave",
-      description: "Njihuni me AMIQUUS, misionin tonë për të revolucionarizuar blerjen e makinave të përdorura dhe ekipin pas shërbimit tonë inteligjent të monitorimit të listimeve të makinave."
+      title:
+        "Rreth nesh | Amiquus - Shërbimi i ndjekjes së njoftimeve të makinave",
+      description:
+        "Njihuni me Amiquus, misionin tonë dhe ekipin pas shërbimit inteligjent të ndjekjes së njoftimeve të makinave.",
     },
     story: {
       heading: "Historia jonë",
-      paragraphs: {
-        0: "AMIQUUS filloi në vitin 2023, kur themeluesi ynë, Alex, kaloi muaj të tërë duke rifreskuar faqet e internetit me njoftime për makina, duke kërkuar një model të rrallë specifik me një çmim të mirë. Pasi humbi disa mundësi për shkak të njoftimeve të vonuara, ai kuptoi se duhej të kishte një mënyrë më të mirë.",
-        1: "Duke punuar me një ekip të vogël zhvilluesish dhe pasionantësh të makinave, Alex ndërtoi një sistem monitorimi që mund të gjurmonte njoftimet në disa faqe njëkohësisht dhe të dërgonte njoftime të menjëhershme sapo të shfaqeshin përputhje.",
-        2: "Ajo që filloi si një projekt personal, tërhoqi shpejt interesin e miqve dhe familjes, dhe në fillim të vitit 2025, AMIQUUS u krijua si një shërbim i hapur për të gjithë. Sot, ndihmojmë blerësit e makinave në të gjithë vendin të kursejnë kohë dhe të gjejnë oferta më të mira me teknologjinë tonë inteligjente të monitorimit."
-      }
+      paragraphs: [
+        "Amiquus filloi në 2023 kur themeluesi Alex kaloi muaj duke rifreskuar faqet në kërkim të një modeli të rrallë me çmim të mirë. Pas humbjes së mundësive, kuptoi se duhej të kishte një mënyrë më të mirë.",
+        "Me një ekip të vogël zhvilluesish dhe entuziastësh makinash Alex krijoi një sistem për ndjekje simultane të shumë faqeve dhe njoftime të menjëhershme.",
+        "Projekti u rrit shpejt dhe në fillim të 2025 Amiquus u hap për të gjithë. Sot ndihmojmë blerës në të gjithë vendin të kursejnë kohë dhe të gjejnë oferta më të mira.",
+      ],
     },
     mission: {
       heading: "Misioni ynë",
-      items: {
-        0: {
-          description: "Eliminoni nevojën për të rifreskuar vazhdimisht disa faqe interneti duke automatizuar procesin e kërkimit dhe duke marrë njoftime në kohë.",
-          title: "Kurseni kohë"
+      items: [
+        {
+          title: "Kurso kohë",
+          description:
+            "Hiq nevojën për rifreskim të vazhdueshëm të faqeve me kërkim të automatizuar dhe njoftime në kohë.",
         },
-        1: {
-          description: "Jini i pari që merr vesh kur shfaqet një ofertë e shkëlqyer, duke ju dhënë avantazh në një treg konkurrues ku koha është gjithçka.",
-          title: "Gjeni oferta më të mira"
+        {
+          title: "Gjej oferta më të mira",
+          description:
+            "Ji i pari që mëson për oferta të shkëlqyera dhe fiton avantazh në treg konkurrues.",
         },
-        2: {
-          description: "Merrni vendime të informuara me monitorim të plotë nëpër disa platforma të besueshme për shitjen e makinave.",
-          title: "Bleni me besim"
-        }
-      }
+        {
+          title: "Bli me siguri",
+          description:
+            "Merr vendime të informuara me pamje të plotë të shumë platformave të besueshme.",
+        },
+      ],
     },
     team: {
       heading: "Ekipi ynë",
-      members: {
-        0: {
-          bio: "Ish-inxhinier software me pasion për makinat dhe ndërtimin e zgjidhjeve inovative.",
+      members: [
+        {
           name: "Alex Morgan",
-          role: "Themelues & CEO"
+          role: "Themelues dhe CEO",
+          bio: "Ish-programues, entuziast makinash dhe zgjidhje inovative.",
         },
-        1: {
-          bio: "Ekspert i shkencës së të dhënave, i specializuar në scraping të faqeve të internetit dhe sisteme të tërheqjes së informacionit.",
+        {
           name: "Sarah Chen",
-          role: "Drejtori Teknik"
+          role: "Drejtuese teknike",
+          bio: "Eksperte të dhënash, e specializuar në web scraping.",
         },
-        2: {
-          bio: "Inxhinier full-stack me ekspertizë në ndërtimin e sistemeve të njoftimeve me performancë të lartë.",
+        {
           name: "Marcus Lee",
-          role: "Zhvillues Kryesor"
+          role: "Drejtues zhvillimi",
+          bio: "Inxhinier full-stack me përvojë në sisteme njoftimesh me performancë të lartë.",
         },
-        3: {
-          bio: "Ish-profesionist i shitjes së makinave, i përkushtuar për t’i ndihmuar klientët të gjejnë automjetin e tyre të përsosur.",
+        {
           name: "Elena Rodriguez",
-          role: "Suksesi i klientit"
-        }
-      }
+          role: "Mbështetje klienti",
+          bio: "Ish-shitëse makinash, e përkushtuar për të gjetur makinën ideale.",
+        },
+      ],
     },
     join: {
-      heading: "Bashkohu me ekipin tonë",
-      description: "Ne jemi gjithmonë në kërkim të individëve të talentuar që kanë pasion për teknologjinë dhe duan të revolucionarizojnë përvojën e blerjes së makinave. Shikoni pozicionet tona të hapura aktualisht dhe bashkohuni me ne në këtë mision.",
-      cta: "Shiko pozicionet e lira"
+      heading: "Bashkohu me ekipin",
+      description:
+        "Gjithmonë kërkojmë talente të pasionuar për të revolucionarizuar teknologjinë dhe blerjen e makinave.",
+      cta: "Shiko pozicionet e hapura",
     },
     questions: {
-      heading: "Keni pyetje?",
-      description: "Mësoni më shumë rreth mënyrës si funksionon shërbimi ynë, shikoni opsionet e çmimeve ose kontaktoni ekipin tonë të suportit.",
+      heading: "Ke pyetje?",
+      description:
+        "Mëso më shumë rreth funksionimit të shërbimit, çmimeve ose kontakto mbështetjen.",
       links: {
-        faq: "Shiko FAQ",
-        pricing: "Shiko Çmimet",
-        support: "Kontakto Mbështetjen"
-      }
-    }
+        faq: "Shko te Pyetjet e shpeshta",
+        pricing: "Shiko çmimet",
+        support: "Kontakto mbështetjen",
+      },
+    },
   },
   terms: {
-    metaTitle: "Kushtet e Shërbimit | Amiquus",
-    metaDescription: "Lexoni Kushtet e Shërbimit të AMIQUUS që rregullojnë përdorimin tuaj të shërbimit tonë për monitorimin dhe njoftimin e listimeve të makinave.",
-    title: "Kushtet e Shërbimit",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "Kushtet e përdorimit | Amiquus",
+    metaDescription:
+      "Lexo kushtet e përdorimit të Amiquus që rregullojnë përdorimin e shërbimit të ndjekjes së njoftimeve të makinave.",
+    title: "Kushtet e përdorimit",
+    lastUpdated: "Përditësimi i fundit: 21 maj 2025",
     sections: {
-      1: {
-        id: "marrëveshje",
-        heading: "Marrëveshje për Kushtet",
-        paragraphs: {
-          0: "Këto Kushte Shërbimi përbëjnë një marrëveshje ligjërisht të detyrueshme midis jush dhe AMIQUUS, lidhur me aksesin dhe përdorimin tuaj të faqes sonë të internetit dhe shërbimeve tona.",
-          1: "Duke hyrë ose duke përdorur shërbimet tona, ju pranoni të jeni të lidhur nga këto Kushte. Nëse nuk pajtoheni me ndonjë pjesë të kushteve, nuk mund të përdorni shërbimin."
-        },
+      "1": {
+        id: "agreement",
+        heading: "Pranimi i kushteve",
+        paragraphs: [
+          "Këto kushte përdorimi përbëjnë një marrëveshje ligjërisht detyruese mes jush dhe Amiquus lidhur me përdorimin e faqes sonë dhe shërbimeve.",
+          "Duke përdorur shërbimet tona, pranoni këto kushte. Nëse nuk pajtoheni me ndonjë pjesë, nuk mund të përdorni shërbimet.",
+        ],
+        list: [],
+      },
+      "2": {
+        id: "changes",
+        heading: "Ndryshimet e kushteve",
+        paragraphs: [
+          "Ruajmë të drejtën për të ndryshuar ose zëvendësuar këto kushte sipas gjykimit tonë. Nëse ndryshimi është thelbësor, do të njoftojmë të paktën 30 ditë para hyrjes në fuqi të kushteve të reja.",
+          "Duke vazhduar përdorimin e shërbimit pas hyrjes në fuqi të ndryshimeve, pranoni kushtet e rishikuara. Nëse nuk pajtoheni me kushtet e reja, duhet të ndaloni përdorimin e shërbimit.",
+        ],
+        list: [],
+      },
+      "3": {
+        id: "account",
+        heading: "Marrëdhëniet me llogarinë",
+        paragraphs: ["Për të përdorur shërbimet tona duhet:"],
         list: [
-        ]
+          "Të jesh mbi 18 vjeç",
+          "Të plotësosh procesin e regjistrimit",
+          "Të japësh informacione të sakta, të plota dhe aktuale",
+          "Të jesh përgjegjës për sigurinë e llogarisë dhe fjalëkalimit tënd",
+          "Të jesh përgjegjës për të gjitha aktivitetet në llogarinë tënde",
+          "Të raportosh menjëherë përdorim të paautorizuar ose abuzim të llogarisë",
+        ],
       },
-      2: {
-        id: "ndryshime",
-        heading: "Ndryshime të Kushteve",
-        paragraphs: {
-          0: "Ne rezervojmë të drejtën, sipas gjykimit tonë të vetëm, të ndryshojmë ose zëvendësojmë këto Kushte në çdo kohë. Nëse një ndryshim është i rëndësishëm, do të bëjmë përpjekje të arsyeshme për të dhënë të paktën 30 ditë njoftim përpara se kushtet e reja të hyjnë në fuqi.",
-          1: "Duke vazhduar të përdorni ose të qaseni në shërbimin tonë pasi këto ndryshime të hyjnë në fuqi, ju pranoni të jeni të lidhur nga kushtet e rishikuara. Nëse nuk pajtoheni me kushtet e reja, ju lutemi ndaloni përdorimin e shërbimit."
-        },
-        list: [
-        ]
-      },
-      3: {
-        id: "llogari",
-        heading: "Kushtet e llogarisë",
-        paragraphs: {
-          0: "Për të përdorur shërbimet tona, duhet:"
-        },
-        list: {
-          0: "Duhet të jesh të paktën 18 vjeç",
-          1: "Përfundoni procesin e regjistrimit",
-          2: "Jepni informacion të saktë, të plotë dhe të përditësuar",
-          3: "Jini të përgjegjshëm për ruajtjen e sigurisë së llogarisë dhe fjalëkalimit tuaj",
-          4: "Jini përgjegjës për të gjitha veprimtaritë që ndodhin nën llogarinë tuaj",
-          5: "Njoftoni menjëherë sapo të merrni vesh për çdo shkelje të sigurisë ose përdorim të paautorizuar të llogarisë suaj."
-        }
-      },
-      4: {
-        id: "pagesë",
+      "4": {
+        id: "payment",
         heading: "Kushtet e pagesës",
-        paragraphs: {
-          0: "AMIQUUS ofron shërbime me abonim sipas kushteve të mëposhtme:"
-        },
-        list: {
-          0: "Të gjitha tarifat janë pa përfshirë taksat, të cilat do të shtohen kur është e aplikueshme.",
-          1: "Çmimet e abonimeve mund të ndryshojnë me njoftim paraprak prej 30 ditësh.",
-          2: "Abonimet rinovohen automatikisht, përveç nëse anulohen para ciklit të ardhshëm të faturimit.",
-          3: "Rimbursimet trajtohen rast pas rasti sipas politikës sonë të rimbursimeve.",
-          4: "Ne përdorim Stripe për përpunimin e sigurt të pagesave dhe të gjitha informacionet e pagesës ruhen nga Stripe."
-        }
+        paragraphs: ["Amiquus ofron shërbime bazuar në abonim me këto kushte:"],
+        list: [
+          "Të gjitha çmimet janë pa taksa, të cilat do të shtohen sipas nevojës",
+          "Çmimet e abonimit mund të ndryshojnë me njoftim 30-ditor",
+          "Abonimet rinovohen automatikisht nëse nuk anulohen para ciklit të ardhshëm të faturimit",
+          "Rimbursimet përpunohen individualisht sipas politikës së rimbursimit",
+          "Për përpunim të sigurt pagesash përdorim Stripe, të gjitha të dhënat e pagesës ruhen te Stripe",
+        ],
       },
-      5: {
-        id: "kapacitet",
+      "5": {
+        id: "capacity",
         heading: "Kufizimet e kapacitetit",
-        paragraphs: {
-          0: "Për të ruajtur cilësinë dhe besueshmërinë e shërbimit, AMIQUUS kufizon numrin e abonimeve aktive në 30. Kur ky limit arrihet:"
-        },
-        list: {
-          0: "Përdoruesit e rinj mund t’i bashkohen listës sonë të pritjes",
-          1: "Pozicioni në listën e pritjes caktohet sipas parimit “kush vjen i pari, shërbehet i pari”.",
-          2: "Kur të ketë kapacitet të lirë, përdoruesit në listën e pritjes do të njoftohen sipas radhës.",
-          3: "Ne rezervojmë të drejtën të ndryshojmë kufizimet e kapacitetit në çdo kohë."
-        }
+        paragraphs: [
+          "Për të siguruar cilësinë e shërbimit, kufizojmë numrin e abonimeve aktive në 30. Kur arrihet kufiri:",
+        ],
+        list: [
+          "Përdoruesit e rinj mund të bashkohen në listën e pritjes",
+          "Vendet në listën e pritjes përcaktohen sipas rendit të mbërritjes",
+          "Kur lirohet një vend, njoftojmë përdoruesit sipas rendit",
+          "Ruajmë të drejtën për të ndryshuar kufizimet e kapacitetit",
+        ],
       },
-      6: {
-        id: "mbledhje të dhënash",
+      "6": {
+        id: "scraping",
         heading: "Kufizimet e web scraping",
-        paragraphs: {
-          0: "Shërbimi ynë merr dhe përpunon të dhëna nga disa faqe interneti të shpalljeve të makinave. Duke përdorur shërbimin tonë, ju pranoni që:"
-        },
-        list: {
-          0: "Amiquus respekton kushtet e përdorimit të faqeve të internetit që ne monitorojmë.",
-          1: "Zbatojmë kufizimin e shpejtësisë dhe praktika të kujdesshme të kërkimit në faqe",
-          2: "Disponueshmëria e disa faqeve të internetit mund të ndryshojë në varësi të kushteve dhe masave të tyre teknike.",
-          3: "Nuk garantojmë për plotësinë apo përditësimin në kohë të të dhënave të mbledhura."
-        }
-      },
-      7: {
-        id: "intelektual",
-        heading: "Pronësia Intelektuale",
-        paragraphs: {
-          0: "Shërbimi Amiquus, duke përfshirë përmbajtjen origjinale, veçoritë dhe funksionalitetin e tij, është dhe do të mbetet pronë ekskluzive e Amiquus. Shërbimi ynë është i mbrojtur nga të drejtat e autorit, markat tregtare dhe ligje të tjera të Shteteve të Bashkuara dhe vendeve të huaja.",
-          1: "Markat tregtare dhe pamja jonë dalluese nuk mund të përdoren në lidhje me asnjë produkt apo shërbim pa miratimin paraprak me shkrim nga AMIQUUS."
-        },
+        paragraphs: [
+          "Shërbimi ynë mbledh dhe përpunon të dhëna nga shumë faqe. Duke përdorur shërbimin, pranon:",
+        ],
         list: [
-        ]
+          "Amiquus respekton kushtet e përdorimit të faqeve të ndjekura",
+          "Përdorim kufizime shpejtësie dhe metoda etike mbledhjeje të dhënash",
+          "Disponueshmëria e disa faqeve mund të ndryshojë",
+          "Nuk garantojmë plotësinë ose aktualitetin e të dhënave të mbledhura",
+        ],
       },
-      8: {
-        id: "përfundim",
-        heading: "Përfundim",
-        paragraphs: {
-          0: "Ne mund t’ju mbyllim ose pezullojmë llogarinë tuaj menjëherë, pa njoftim të mëparshëm apo përgjegjësi, për çfarëdo arsye, përfshirë, pa kufizim, nëse shkelni Kushtet.",
-          1: "Pas përfundimit, e drejta juaj për të përdorur shërbimin do të ndërpritet menjëherë. Nëse dëshironi të mbyllni llogarinë tuaj, mund të ndaloni thjesht përdorimin e shërbimit ose të na kontaktoni për të kërkuar fshirjen e llogarisë."
-        },
+      "7": {
+        id: "intellectual",
+        heading: "Pronësi intelektuale",
+        paragraphs: [
+          "Shërbimi Amiquus, përfshirë përmbajtjen origjinale, veçoritë dhe funksionalitetin, është dhe mbetet pronë ekskluzive e Amiquus. Shërbimi është i mbrojtur me të drejta autori, marka tregtare dhe ligje të tjera.",
+          "Pa pëlqim paraprak me shkrim nga Amiquus nuk mund të përdorësh markat tona tregtare dhe dizajnet.",
+        ],
+        list: [],
+      },
+      "8": {
+        id: "termination",
+        heading: "Përfundimi",
+        paragraphs: [
+          "Mund të përfundojmë ose pezullojmë menjëherë llogarinë tënde pa njoftim paraprak për çfarëdo arsye, përfshirë shkelje të kushteve.",
+          "Pas përfundimit e drejta jote për përdorim të shërbimit përfundon menjëherë. Nëse dëshiron të përfundosh llogarinë, ndalo përdorimin e shërbimit ose na kontakto për heqje.",
+        ],
+        list: [],
+      },
+      "9": {
+        id: "limitations",
+        heading: "Kufizim përgjegjësie",
+        paragraphs: [
+          "Amiquus, drejtorët, punonjësit, partnerët ose furnitorët e tij nuk mbajnë përgjegjësi për dëme indirekte, rastësore, speciale ose ndëshkuese, përfshirë humbje fitimi, të dhënash ose humbje të tjera jomateriale, që rrjedhin nga:",
+        ],
         list: [
-        ]
+          "Qasja në shërbim ose pamundësia e qasjes",
+          "Përmbajtja ose sjellja e palëve të treta në shërbim",
+          "Përmbajtja e marrë nga shërbimi",
+          "Qasja e paautorizuar ose ndryshimi i të dhënave të tua",
+        ],
       },
-      9: {
-        id: "kufizime",
-        heading: "Kufizimi i përgjegjësisë",
-        paragraphs: {
-          0: "Në asnjë rast AMIQUUS, as drejtuesit, punonjësit, partnerët, agjentët, furnizuesit apo bashkëpunëtorët e saj, nuk mbajnë përgjegjësi për asnjë dëm të tërthortë, të rastësishëm, të veçantë, pasues apo ndëshkues, përfshirë pa kufizim, humbjen e fitimit, të dhënave, përdorimit, reputacionit apo humbje të tjera jomateriale, që rrjedhin nga:"
-        },
-        list: {
-          0: "Qasja ose përdorimi juaj ose pamundësia për të pasur qasje ose për të përdorur shërbimin",
-          1: "Çdo sjellje ose përmbajtje e çdo pale të tretë në shërbim",
-          2: "Çdo përmbajtje e marrë nga shërbimi",
-          3: "Qasje, përdorim ose ndryshim i paautorizuar i transmetimeve ose përmbajtjes suaj"
-        }
-      },
-      10: {
-        id: "mohim përgjegjësie",
+      "10": {
+        id: "disclaimer",
         heading: "Mohim përgjegjësie",
-        paragraphs: {
-          0: "Përdorimi i shërbimit është në përgjegjësinë tuaj të plotë. Shërbimi ofrohet në bazë “SIÇ ËSHTË” dhe “SIÇ ËSHTË NË DISPONIM”. Shërbimi ofrohet pa asnjë lloj garancie, të shprehur apo të nënkuptuar.",
-          1: "Amiquus nuk garanton që shërbimi do të jetë i pandërprerë, në kohë, i sigurt apo pa gabime, ose që rezultatet e marra nga përdorimi i shërbimit do të jenë të sakta apo të besueshme."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Përdorimi i shërbimit është në rrezikun tënd. Shërbimi ofrohet “AS IS” dhe “SI DISPONOHET”. Nuk garantojmë që shërbimi do të jetë i pandërprerë, në kohë, i sigurt ose pa gabime.",
+          "Nuk garantojmë që rezultatet e përdorimit të shërbimit do të jenë të sakta ose të besueshme.",
+        ],
+        list: [],
       },
-      11: {
-        id: "biskota",
+      "11": {
+        id: "cookies",
         heading: "Politika e cookies",
-        paragraphs: {
-          0: "Politika jonë e Cookies shpjegon çfarë janë cookies, si i përdorim ato, si palët e treta me të cilat mund të bashkëpunojmë mund të përdorin cookies në shërbimin tonë, zgjedhjet tuaja në lidhje me cookies, si dhe informacione të mëtejshme rreth cookies. Ju lutemi, referojuni seksionit për Cookies në Politikën tonë të Privatësisë."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Politika jonë e cookies shpjegon çfarë janë cookies, si i përdorim, si mund t’i përdorin palët e treta dhe opsionet e tua. Shiko seksionin cookies në politikat tona të privatësisë.",
+        ],
+        list: [],
       },
-      12: {
-        id: "ligji në fuqi",
-        heading: "Ligji në fuqi",
-        paragraphs: {
-          0: "Këto Kushte do të qeverisen dhe interpretohen në përputhje me ligjet e Shteteve të Bashkuara të Amerikës, pa marrë parasysh dispozitat për konfliktin e ligjeve.",
-          1: "Moszbatimi ynë i ndonjë të drejte apo dispozite të këtyre Kushteve nuk do të konsiderohet si heqje dorë nga ato të drejta. Nëse ndonjë dispozitë e këtyre Kushteve shpallet e pavlefshme ose e pazbatueshme nga gjykata, dispozitat e mbetura të këtyre Kushteve do të vazhdojnë të jenë në fuqi."
-        },
-        list: [
-        ]
+      "12": {
+        id: "governing-law",
+        heading: "Ligji qeverisës",
+        paragraphs: [
+          "Këto kushte qeverisen dhe interpretohen sipas ligjeve të Shteteve të Bashkuara pa marrë parasysh konfliktin e ligjeve.",
+          "Nëse nuk ushtrojmë të drejtë ose dispozitë, nuk është heqje dorë. Nëse gjykata shpall ndonjë dispozitë të pavlefshme, dispozitat e mbetura mbeten në fuqi.",
+        ],
+        list: [],
       },
-      13: {
-        id: "kontakto",
-        heading: "Na kontaktoni",
-        paragraphs: {
-          0: "Nëse keni ndonjë pyetje rreth këtyre Kushteve, ju lutemi na kontaktoni:"
-        },
-        list: {
-          0: "Me email: legal@amiquus.com",
-          1: "Duke vizituar faqen e kontaktit në faqen tonë të internetit"
-        }
-      }
+      "13": {
+        id: "contact",
+        heading: "Na kontakto",
+        paragraphs: ["Nëse ke pyetje rreth kushteve, na kontakto:"],
+        list: [
+          "Me email: legal@amiquus.com",
+          "Përmes faqes së kontaktit në faqen tonë",
+        ],
+      },
     },
-    lastupdated: "Përditësuar së fundmi: 21 maj 2025"
   },
   privacy: {
-    metaTitle: "Politika e Privatësisë | Amiquus",
-    metaDescription: "Mësoni si AMIQUUS trajton të dhënat tuaja personale, të drejtat e privatësisë dhe praktikat e mbledhjes së të dhënave.",
+    metaTitle: "Politika e privatësisë | Amiquus",
+    metaDescription:
+      "Mëso si Amiquus përpunon të dhënat e tua personale, të drejtat e tua dhe praktikat e mbledhjes së të dhënave.",
     title: "Politika e privatësisë",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Përditësimi i fundit: 21 maj 2025",
     sections: {
-      0: {
-        id: "prezantim",
-        heading: "Prezantim",
-        paragraphs: {
-          0: "Mirë se vini në AMIQUUS. Ne e respektojmë privatësinë tuaj dhe jemi të përkushtuar për mbrojtjen e të dhënave tuaja personale. Kjo politikë privatësie do t’ju informojë se si kujdesemi për të dhënat tuaja personale kur vizitoni faqen tonë të internetit dhe do t’ju njohë me të drejtat tuaja për privatësinë dhe mënyrën se si ligji ju mbron."
-        }
+      "0": {
+        id: "introduction",
+        heading: "Hyrje",
+        paragraphs: [
+          "Mirë se vini në Amiquus. Vlerësojmë privatësinë tënde dhe jemi të përkushtuar për mbrojtjen e të dhënave të tua personale. Kjo politikë privatësie shpjegon si i përpunojmë të dhënat e tua, të drejtat e tua dhe si të mbron ligji.",
+        ],
       },
-      1: {
-        id: "te-dhënat-që-mbledhim",
+      "1": {
+        id: "data-we-collect",
         heading: "Të dhënat që mbledhim",
-        paragraphs: {
-          0: "Ne mbledhim disa lloje të ndryshme informacioni për qëllime të ndryshme, për t’ju ofruar dhe përmirësuar shërbimin tonë."
-        },
-        list: {
-          0: "Të dhëna personale: Adresa e email-it, emri, mbiemri dhe fotografia e profilit (nëse ofrohet përmes autentifikimit të palës së tretë).",
-          1: "Të dhënat e llogarisë: Kredencialet tuaja të hyrjes dhe preferencat e llogarisë.",
-          2: "Të dhënat e përdorimit: Informacion mbi mënyrën se si përdorni faqen tonë të internetit dhe shërbimet.",
-          3: "Preferencat e kërkimit të makinave: Kriteret e automjetit që vendosni për monitorim (marka, modeli, diapazoni i çmimit, etj.).",
-          4: "Informacion mbi Telegramin: Nëse zgjidhni të merrni njoftime përmes Telegram-it, ne ruajmë ID-në e bisedës suaj në Telegram dhe token-in e botit.",
-          5: "Informacioni i pagesës: Kur kryeni një blerje, procesuesi ynë i pagesave mbledh të dhënat e nevojshme për të përpunuar transaksionin tuaj. AMIQUUS nuk ruan të gjitha informacionet e kartës suaj të kreditit."
-        }
+        paragraphs: [
+          "Mbledhim lloje të ndryshme të dhënash për qëllime të ndryshme për të ofruar dhe përmirësuar shërbimin:",
+        ],
+        list: [
+          "Të dhëna personale: adresa email, emri, mbiemri dhe foto profili (nëse jepet nga palë e tretë).",
+          "Të dhëna llogarie: kredencialet e hyrjes dhe cilësimet e llogarisë.",
+          "Të dhëna përdorimi: informacione se si përdor faqen dhe shërbimet.",
+          "Kriteret e kërkimit: kriteret e makinës të vendosura për ndjekje (markë, model, çmim etj.).",
+          "Të dhëna Telegram: nëse zgjedh njoftime Telegram, ruajmë ID e bisedës tënde dhe tokenin e botit.",
+          "Të dhëna pagese: gjatë blerjes procesori ynë i pagesës mbledh të dhënat e nevojshme. Amiquus nuk ruan të dhëna të plota kartash krediti.",
+        ],
       },
-      2: {
-        id: "si-i-përdorim-të-dhënat",
-        heading: "Si i përdorim të dhënat tuaja",
-        paragraphs: {
-          0: "Ne përdorim të dhënat tuaja personale për qëllimet në vijim:"
-        },
-        list: {
-          0: "Për të ofruar dhe mirëmbajtur shërbimin tonë",
-          1: "Për t’ju njoftuar për ndryshimet në shërbimin tonë",
-          2: "Për t’ju mundësuar të merrni pjesë në veçoritë interaktive të shërbimit tonë",
-          3: "Të ofrojmë mbështetje për klientët",
-          4: "Për të mbledhur analiza ose informacione të vlefshme që të mund të përmirësojmë shërbimin tonë",
-          5: "Për të monitoruar përdorimin e shërbimit tonë",
-          6: "Për të zbuluar, parandaluar dhe zgjidhur çështjet teknike",
-          7: "Për të përpunuar pagesat dhe për të parandaluar transaksionet mashtruese",
-          8: "Për të dërguar njoftime për makina që përputhen me preferencat tuaja përmes mënyrës së zgjedhur të njoftimit"
-        }
+      "2": {
+        id: "how-we-use-data",
+        heading: "Si i përdorim të dhënat e tua",
+        paragraphs: ["Të dhënat e tua personale i përdorim për:"],
+        list: [
+          "Ofrimin dhe mirëmbajtjen e shërbimit",
+          "Njoftimin për ndryshime në shërbim",
+          "Lejimin e veçorive ndërvepruese",
+          "Ofrimin e mbështetjes për klientët",
+          "Mbledhjen e analizave për përmirësimin e shërbimit",
+          "Monitorimin e përdorimit të shërbimit",
+          "Zbulimin, parandalimin dhe zgjidhjen e problemeve teknike",
+          "Përpunimin e pagesave dhe parandalimin e mashtrimit",
+          "Dërgimin e njoftimeve që përputhen me kriteret e tua",
+        ],
       },
-      3: {
-        id: "ruajtja e të dhënave",
-        heading: "Ruajtja e të dhënave dhe siguria",
-        paragraphs: {
-          0: "Zbatojmë masa të përshtatshme sigurie për të mbrojtur të dhënat tuaja personale nga qasja, ndryshimi, zbulimi ose shkatërrimi i paautorizuar. Të gjitha të dhënat ruhen në servera të sigurt me enkriptim gjatë transmetimit dhe në pushim.",
-          1: "Ne i ruajmë të dhënat tuaja personale vetëm për aq kohë sa është e nevojshme për qëllimet e përcaktuara në këtë politikë privatësie, përfshirë përmbushjen e çdo kërkese ligjore, rregullatore, tatimore, kontabël apo raportimi."
-        }
+      "3": {
+        id: "data-storage",
+        heading: "Ruajtja dhe siguria e të dhënave",
+        paragraphs: [
+          "Përdorim masa të përshtatshme sigurie për të mbrojtur kundër qasjes së paautorizuar, ndryshimit ose shkatërrimit. Të gjitha të dhënat ruhen në serverë të sigurt me enkriptim në tranzit dhe në pushim.",
+          "Të dhënat e tua personale i ruajmë vetëm aq gjatë sa është e nevojshme për qëllimet e kësaj politike, përfshirë plotësimin e kërkesave ligjore, rregullatore ose kontabël.",
+        ],
       },
-      4: {
-        id: "rregullorja e përgjithshme për mbrojtjen e të dhënave",
-        heading: "Të drejtat tuaja sipas GDPR",
-        paragraphs: {
-          0: "Nëse jeni banor i Zonës Ekonomike Evropiane (EEA), keni të drejta të caktuara për mbrojtjen e të dhënave. AMIQUUS synon të marrë masa të arsyeshme për t’ju lejuar të korrigjoni, ndryshoni, fshini ose kufizoni përdorimin e të dhënave tuaja personale.",
-          1: "Ju keni të drejtat e mëposhtme për mbrojtjen e të dhënave:"
-        },
-        list: {
-          0: "E drejta për të aksesuar, përditësuar ose fshirë informacionin që kemi për ju",
-          1: "E drejta për përmirësim",
-          2: "E drejta për të kundërshtuar",
-          3: "E drejta e kufizimit",
-          4: "E drejta për transferueshmërinë e të dhënave",
-          5: "E drejta për të tërhequr pëlqimin"
-        }
+      "4": {
+        id: "gdpr",
+        heading: "Të drejtat e tua sipas GDPR",
+        paragraphs: [
+          "Nëse banon në Zonën Ekonomike Evropiane (EEA), ke disa të drejta mbrojtjeje të të dhënave. Amiquus synon të të lejojë të korrigjosh, ndryshosh, fshish ose kufizosh përdorimin e të dhënave të tua.",
+          "Ke këto të drejta:",
+        ],
+        list: [
+          "Të drejtën për qasje, përditësim ose fshirje të të dhënave",
+          "Të drejtën për korrigjim",
+          "Të drejtën për kundërshtim",
+          "Të drejtën për kufizim",
+          "Të drejtën për portabilitet të të dhënave",
+          "Të drejtën për të tërhequr pëlqimin",
+        ],
       },
-      5: {
-        id: "biskota",
+      "5": {
+        id: "cookies",
         heading: "Politika e cookies",
-        paragraphs: {
-          0: "Cookies janë pjesë të vogla të të dhënave që ruhen në pajisjen tuaj. Ne përdorim cookies për të:"
-        },
-        list: {
-          0: "Qëndro i kyçur",
-          1: "Kuptoni si e përdorni faqen tonë të internetit",
-          2: "Mbaj mend preferencat e tua",
-          3: "Përshtatni përvojën tuaj"
-        }
+        paragraphs: [
+          "Cookies janë të dhëna të vogla të ruajtura në pajisjen tënde. I përdorim për:",
+        ],
+        list: [
+          "Mbajtjen e hyrjes",
+          "Kuptimin e përdorimit të faqes",
+          "Ruajtjen e preferencave",
+          "Personalizimin e përvojës",
+        ],
       },
-      6: {
-        id: "palë e tretë",
-        heading: "Shërbime të palëve të treta",
-        paragraphs: {
-          0: "Mund të punësojmë kompani dhe individë të palës së tretë për të lehtësuar shërbimin tonë, për të ofruar shërbimin në emrin tonë, për të kryer detyra të lidhura me shërbimin ose për të na ndihmuar në analizimin e mënyrës se si përdoret shërbimi ynë.",
-          1: "Palët e treta përfshijnë:"
-        },
-        list: {
-          0: "Procesorë pagesash (Stripe)",
-          1: "Ofruesit e analizave",
-          2: "Shërbime të mbështetjes për klientët",
-          3: "Ofrues të hostimit dhe infrastrukturës cloud"
-        },
-        paragraphs2: {
-          0: "Palët e treta kanë akses në të dhënat tuaja personale vetëm për të kryer këto detyra në emrin tonë dhe janë të detyruara të mos i zbulojnë apo përdorin për asnjë qëllim tjetër."
-        }
+      "6": {
+        id: "third-party",
+        heading: "Palët e treta",
+        paragraphs: [
+          "Mund të punësojmë palë të treta për të kryer shërbimin, detyrat ose analizën e përdorimit.",
+          "Këto palë të treta përfshijnë:",
+        ],
+        list: [
+          "Procesorë pagesash (Stripe)",
+          "Ofrues analizash",
+          "Shërbime mbështetjeje klienti",
+          "Hostim dhe ofrues cloud",
+        ],
+        paragraphs2: [
+          "Këto palë të treta kanë qasje në të dhënat e tua vetëm për të kryer detyrat dhe nuk mund t’i zbulojnë ose përdorin për qëllime të tjera.",
+        ],
       },
-      7: {
-        id: "ndryshime",
-        heading: "Ndryshime në këtë Politikë të Privatësisë",
-        paragraphs: {
-          0: "Ne mund ta përditësojmë politikën tonë të privatësisë herë pas here. Do t’ju njoftojmë për çdo ndryshim duke publikuar politikën e re të privatësisë në këtë faqe dhe duke përditësuar datën \"Përditësimi i fundit\".",
-          1: "Ju këshillojmë të rishikoni këtë politikë privatësie herë pas here për çdo ndryshim të mundshëm. Ndryshimet në këtë politikë privatësie hyjnë në fuqi sapo të publikohen në këtë faqe."
-        }
+      "7": {
+        id: "changes",
+        heading: "Ndryshimet e politikës së privatësisë",
+        paragraphs: [
+          "Mund të përditësojmë periodikisht politikën e privatësisë. Do të të njoftojmë duke publikuar politikën e re në këtë faqe dhe duke përditësuar datën “Përditësimi i fundit”.",
+          "Rekomandojmë kontroll periodik të politikës. Ndryshimet hyjnë në fuqi pas publikimit.",
+        ],
       },
-      8: {
-        id: "kontakto",
-        heading: "Na kontaktoni",
-        paragraphs: {
-          0: "Nëse keni ndonjë pyetje rreth kësaj politike të privatësisë, ju lutemi na kontaktoni:"
-        },
-        list: {
-          0: "Me email: privacy@amiquus.com",
-          1: "Duke vizituar faqen e kontaktit në faqen tonë të internetit"
-        }
-      }
+      "8": {
+        id: "contact",
+        heading: "Na kontakto",
+        paragraphs: [
+          "Nëse ke pyetje rreth politikës së privatësisë, na kontakto:",
+        ],
+        list: [
+          "Me email: privacy@amiquus.com",
+          "Përmes faqes së kontaktit në faqen tonë",
+        ],
+      },
     },
-    lastupdated: "Përditësuar së fundmi: 21 maj 2025"
   },
   faqs: {
-    metaTitle: "Pyetjet e bëra shpesh | Amiquus",
-    metaDescription: "Gjeni përgjigjet për pyetjet më të shpeshta rreth shërbimit të monitorimit të listimeve të makinave AMIQUUS, abonimeve, konfigurimit të njoftimeve dhe më shumë.",
-    title: "Pyetjet e bëra shpesh",
-    subtitle: "Gjeni përgjigje të shpejta për pyetjet më të zakonshme rreth shërbimit tonë të monitorimit të listimeve të makinave",
+    metaTitle: "Pyetje të shpeshta | Amiquus",
+    metaDescription:
+      "Gjej përgjigje për pyetjet më të shpeshta rreth shërbimit të ndjekjes së njoftimeve të makinave Amiquus.",
+    title: "Pyetje të shpeshta",
+    subtitle:
+      "Përgjigje të shpejta për pyetjet e zakonshme rreth shërbimit tonë të ndjekjes së njoftimeve të makinave",
     general: {
       heading: "Pyetje të përgjithshme",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Çfarë është Amiquus?",
+        answer:
+          "Amiquus është shërbim që ndjek shumë faqe makinash sipas kritereve të tua. Kur përputhet, merr njoftim të menjëhershëm në Telegram.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Si funksionon?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
+          "Vendos kritere kërkimi (markë, model, çmim etj.)",
+          "Zgjidh faqet për ndjekje",
+          "Lidh Telegram për njoftime",
+          "Sistemi ynë ndjek vazhdimisht faqet e zgjedhura",
+          "Kur përputhet, merr njoftim të menjëhershëm në Telegram me detaje dhe lidhje",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Cilat faqe ndjek?",
+        answerIntro: "Aktualisht ndjekim këto platforma të mëdha:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (përmes URL)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
+        outro: "Vazhdimisht shtojmë platforma të reja për mbulim më të gjerë.",
       },
-      howitworks: {
-        answer: {
-          0: "Vendosni kriteret tuaja të kërkimit (markë, model, interval çmimi, etj.)",
-          1: "Ju zgjidhni cilat faqe interneti dëshironi të monitoroni",
-          2: "Lidhni llogarinë tuaj në Telegram për njoftime",
-          3: "Sistemi ynë monitoron vazhdimisht faqet tuaja të përzgjedhura për njoftime të reja",
-          4: "Kur shfaqet një makinë që përputhet, merrni menjëherë njoftim në Telegram me të gjitha detajet dhe një lidhje direkte."
-        },
-        question: "Si funksionon?"
-      },
-      whatis: {
-        answer: "Amiquus është një shërbim që monitoron disa faqe interneti me shpallje makinash për automjete që përputhen me kriteret tuaja specifike. Kur shfaqet një shpallje e përshtatshme, ju merrni menjëherë një njoftim në Telegram, duke ju mundësuar të jeni ndër të parët që kontaktoni shitësit dhe siguroni oferta të shkëlqyera.",
-        question: "Çfarë është Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Aktualisht monitorojmë platformat kryesore të shpalljeve të makinave:",
-        list: {
-          0: "AutoTregtar",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (nëpërmjet URL-së)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Ne vazhdimisht po shtojmë platforma të reja për të ofruar mbulim sa më gjithëpërfshirës.",
-        question: "Cilat faqe interneti për shitjen e makinave monitoroni?"
-      }
     },
     subscription: {
-      heading: "Pyetjet për abonimin",
+      heading: "Pyetje për abonimin",
       cost: {
-        question: "Sa kushton një abonim?",
-        answer: {
-          0: "Çmimet tona fillojnë nga 79.99 $ në muaj për monitorimin e një faqeje interneti me përditësime çdo 6 orë. Faqet shtesë kushtojnë 4.99 $ secila në muaj. Mund të përmirësoni gjithashtu shpeshtësinë e përditësimeve për njoftime më të shpejta.",
-          1: "Për detaje të veçanta mbi çmimet, ju lutemi shikoni seksionin tonë të çmimeve në faqen kryesore."
-        }
+        question: "Sa kushton abonimi?",
+        answer: [
+          "Çmimet nisin nga 79,99 €/muaj për ndjekje të një faqeje me përditësime çdo 6 orë. Faqe shtesë kushtojnë 4,99 €/muaj. Përmirëso për njoftime më të shpejta.",
+          "Detajet e çmimeve gjenden në seksionin e çmimeve në faqen kryesore.",
+        ],
       },
       cancel: {
-        question: "Si ta anuloj abonimin tim?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Hyr në llogarinë tënde",
-          1: "Shko te faqja \"Profili\"",
-          2: "Zgjidhni skedën \"Abonimet\"",
-          3: "Kliko butonin \"Anulo Abonimin\" pranë abonimit që dëshiron të anulosh."
-        },
-        note: "Abonimi juaj do të mbetet aktiv deri në fund të periudhës suaj aktuale të faturimit.",
-        stepsintro: "Abonimin tuaj mund ta anuloni në çdo kohë nga faqja e profilit të llogarisë suaj:"
+        question: "Si të anuloj abonimin?",
+        stepsIntro: "Mund ta anulosh abonimin kurdo nga faqja e profilit:",
+        steps: [
+          "Hyr në llogarinë tënde",
+          'Shko te faqja "Profili"',
+          'Zgjidh skedën "Abonimet"',
+          'Kliko "Anulo abonimin" te abonimi i dëshiruar',
+        ],
+        note: "Abonimi mbetet aktiv deri në fund të periudhës aktuale të faturimit.",
       },
       multiple: {
-        question: "A mund të kem disa abonime për modele të ndryshme makinash?",
-        answer: "Po, mund të krijoni disa abonime nën një llogari të vetme. Çdo abonim mund të ndjekë modele të ndryshme makinash, marka ose kategori çmimesh. Kjo është veçanërisht e dobishme nëse po kërkoni për disa automjete ose po ndihmoni miqtë dhe familjarët tuaj në kërkimin e makinës."
+        question: "A mund të kem abonime të shumta për modele të ndryshme?",
+        answer:
+          "Po, nën një llogari mund të krijosh abonime të shumta. Çdo abonim mund të ndjek modele ose marka të ndryshme. Ideale për kërkim të shumë makinave ose ndihmë për miqtë.",
       },
       limit: {
-        question: "Pse ka një kufizim në numrin e abonentëve?",
-        intro: "Shërbimin tonë e kufizojmë në 30 abonentë aktivë për të siguruar:",
-        list: {
-          0: "Shërbim i cilësisë më të lartë dhe saktësi maksimale e të dhënave",
-          1: "Mbështetje e personalizuar për çdo abonent",
-          2: "Dërgim më i shpejtë i njoftimeve gjatë orëve me më shumë publikime",
-          3: "Scraping etik që nuk ngarkon faqet e synuara të internetit"
-        },
-        outro: "Nëse kemi arritur kapacitetin, mund të regjistroheni në listën e pritjes që të njoftoheni sapo të lirohet një vend."
-      }
+        question: "Pse ka limit abonentësh?",
+        intro: "Kufizojmë shërbimin në 30 abonentë aktivë sepse:",
+        list: [
+          "Cilësi më e lartë shërbimi dhe saktësi të dhënash për të gjithë përdoruesit",
+          "Mbështetje e personalizuar për çdo abonent",
+          "Dërgim më i shpejtë i njoftimeve në orët e pikut",
+          "Scraping etik pa mbingarkesë të faqeve të synuara",
+        ],
+        outro:
+          "Nëse jemi plot, bashkohu në listën e pritjes – do të të njoftojmë kur të lirohet vend.",
+      },
     },
     technical: {
-      heading: "Pyetje Teknike",
+      heading: "Pyetje teknike",
       telegram: {
-        question: "Si t’i vendos njoftimet në Telegram?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Krijoni një bot Telegram duke përdorur BotFather (udhëzimet jepen gjatë konfigurimit)",
-          1: "Kopjo tokenin e botit nga BotFather",
-          2: "Filloni një bisedë me botin tuaj",
-          3: "Merr ID-në tënde të chat-it (udhëzimet jepen gjatë konfigurimit)",
-          4: "Shkruani tokenin e botit dhe ID-në e bisedës në cilësimet e abonimit tuaj në AMIQUUS.",
-          5: "Testoni konfigurimin e njoftimeve tuaja duke përdorur butonin `Dërgo Mesazh Testues`"
-        },
-        note: "Udhëzime të detajuara hap pas hapi me pamje nga ekrani ofrohen gjatë procesit të konfigurimit të abonimit.",
-        stepsintro: "Për të vendosur njoftimet në Telegram:"
+        question: "Si të konfiguroj njoftimet Telegram?",
+        stepsIntro: "Për të konfiguruar njoftimet Telegram:",
+        steps: [
+          "Krijo bot Telegram përmes BotFather (udhëzime në panelin e kontrollit)",
+          "Kopjo tokenin e botit dhe ID e bisedës",
+          'Fut të dhënat në seksionin "Cilësimet e njoftimeve" në cilësimet e Llogarisë',
+          'Testo lidhjen me butonin "Dërgo mesazh test"',
+        ],
+        note: "Udhëzime të hollësishme me pamje ekrani janë të disponueshme gjatë konfigurimit të abonimit.",
       },
       frequency: {
         question: "Sa shpesh do të marr njoftime?",
-        intro: "Shpeshtësia e njoftimeve varet nga:",
-        list: {
-          0: "Paketa e zgjedhur e shpeshtësisë së përditësimeve (nga çdo 6 orë deri në çdo 30 minuta)",
-          1: "Sa njoftime të reja përputhen me kriteret tuaja",
-          2: "Sa aktiv është tregu për markën/modelin që keni zgjedhur"
-        },
-        outro: "Njoftimet do t’i merrni vetëm kur të gjenden njoftime të reja që përputhen me kriteret tuaja."
+        intro: "Frekuenca e njoftimeve varet nga:",
+        list: [
+          "Paketa e zgjedhur e frekuencës (nga orare në minutore)",
+          "Numri i njoftimeve të reja që përputhen me kriteret e tua",
+          "Aktiviteti i tregut për markën/modelin e zgjedhur",
+        ],
+        outro:
+          "Njoftimet i merr vetëm për njoftime të reja që përputhen me kriteret e tua.",
       },
       privacy: {
-        question: "Si mbrohen të dhënat e mia personale?",
-        intro: "Ne AMIQUUS, privatësinë e të dhënave e marrim seriozisht dhe zbatojmë këto masa:",
-        list: {
-          0: "Të dhëna të enkriptuara gjatë transmetimit dhe në pushim",
-          1: "Pagesa të sigurta përmes Stripe",
-          2: "Nuk ka ndarje të të dhënave me palë të treta",
-          3: "Mund të kërkoni ose të fshini të dhënat tuaja në çdo kohë"
-        },
-        outro: "Lexoni të plotë Politikën tonë të Privatësisë për më shumë informacion."
-      }
+        question: "Si mbrohet privatësia ime?",
+        intro: "Privatësinë e marrim seriozisht dhe përdorim:",
+        list: [
+          "Enkriptim të dhënash në tranzit dhe në pushim",
+          "Pagesa të sigurta përmes Stripe",
+          "Asnjë ndarje të dhënash me palë të treta",
+          "Mund të kërkosh ose fshish të dhënat e tua kurdo",
+        ],
+        outro: "Më shumë informacione në politikën e plotë të privatësisë.",
+      },
     },
     support: {
-      heading: "Keni ende pyetje?",
-      description: "Nëse nuk e gjetët përgjigjen për pyetjen tuaj, ekipi ynë i suportit është këtu për t’ju ndihmuar!",
-      button: "Kontakto Mbështetjen"
-    }
+      heading: "Ende ke pyetje?",
+      description:
+        "Nëse nuk e gjete përgjigjen, ekipi ynë i mbështetjes është gati të të ndihmojë!",
+      button: "Kontakto mbështetjen",
+    },
   },
   waitlist: {
-    metaTitle: "Bashkohu në listën e pritjes – Amiquus",
-    metaDescription: "Bashkohuni me listën e pritjes për AMIQUUS që të njoftoheni sapo abonimet të jenë të disponueshme.",
+    metaTitle: "Bashkohu në listën e pritjes - Amiquus",
+    metaDescription:
+      "Bashkohu në listën e pritjes të Amiquus dhe ji i informuar kur abonimet të jenë të disponueshme.",
     title: "Bashkohu në listën tonë të pritjes",
-    subtitle: "Për shkak të kërkesës së lartë, kufizojmë numrin e abonimeve aktive për të siguruar cilësinë më të mirë të shërbimit për të gjithë përdoruesit.",
+    subtitle:
+      "Për shkak të kërkesës së lartë kufizojmë numrin e abonimeve aktive për të siguruar cilësinë më të mirë.",
     limited: {
       heading: "Disponueshmëri e kufizuar",
-      description: "Ne kufizojmë sistemin tonë në vetëm 30 abonentë aktivë për të siguruar:",
-      points: {
-        0: "Besueshmëri dhe shpejtësi e jashtëzakonshme në scraping për të gjithë përdoruesit",
-        1: "Shanse të ulëta për t’u bllokuar nga faqet e internetit të shpalljeve të makinave",
-        2: "Mbështetje e personalizuar për çdo abonent",
-        3: "Shpërndarje e drejtë e burimeve të serverit"
-      },
-      available: "{{remaining}} vende abonimi nga gjithsej {{capacity}} janë aktualisht të disponueshme.",
-      full: "Të gjitha vendet për abonim janë aktualisht të zëna. Bashkohuni në listën e pritjes për t’u njoftuar sapo të lirohet një vend."
+      description: "Kufizojmë sistemin vetëm në 30 abonentë aktivë:",
+      points: [
+        "Besueshmëri dhe shpejtësi e jashtëzakonshme scraping për të gjithë përdoruesit",
+        "Rrezik më i ulët bllokimi nga faqet",
+        "Mbështetje e personalizuar për çdo abonent",
+        "Shpërndarje e drejtë e burimeve të serverit",
+      ],
+      available:
+        "{{remaining}}/{{capacity}} vende abonimi janë aktualisht të disponueshme.",
+      full: "Të gjitha vendet e abonimit janë aktualisht të zëna. Bashkohu në listën e pritjes për të qenë i informuar kur të lirohet një vend.",
     },
     success: {
-      title: "Jeni në listën e pritjes!",
-      description: "Do të ju njoftojmë sapo të lirohet një vend abonimi.",
-      message: "Faleminderit për interesimin tuaj për AMIQUUS! Ju kemi shtuar në listën e pritjes dhe do t’ju kontaktojmë sapo të kemi një vend të lirë.",
-      button: "Kthehu te faqja kryesore"
+      title: "Je në listën e pritjes!",
+      description:
+        "Do të të njoftojmë menjëherë kur të lirohet një vend abonimi",
+      message:
+        "Faleminderit për interesin ndaj Amiquus! Të shtuam në listën e pritjes dhe do të të kontaktojmë kur të ketë vend të disponueshëm.",
+      button: "Kthehu në faqen kryesore",
     },
     cantJoin: {
-      title: "Join the Waitlist",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Bashkohu në listën e pritjes",
+      description:
+        "Do të të njoftojmë menjëherë kur të lirohet një vend abonimi",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Emri",
+        placeholder: "Artan",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Mbiemri",
+        placeholder: "Hoxha",
       },
       email: {
         label: "Email",
-        placeholder: "john.doe@example.com",
-        description: "Do ta përdorim këtë email për t’ju njoftuar sapo të lirohet një vend."
+        placeholder: "artan.hoxha@example.al",
+        description:
+          "Do të përdorim këtë email për të të njoftuar kur të lirohet vend",
       },
       submit: "Bashkohu në listën e pritjes",
-      submitting: "Duke dërguar...",
-      firstname: {
-        label: "Emri",
-        placeholder: "Gjon"
-      },
-      lastname: {
-        label: "Mbiemri",
-        placeholder: "Duka"
-      }
+      submitting: "Dërgohet...",
     },
-    cantjoin: {
-      description: "Do të ju njoftojmë sapo të lirohet një vend për abonim.",
-      title: "Bëhu pjesë e listës së pritjes"
-    }
   },
   support: {
-    metaTitle: "Mbështetje | Amiquus - Qendra e Ndihmës",
-    metaDescription: "Merrni ndihmë për llogarinë tuaj AMIQUUS, abonimin ose njoftimet për makinë. Shfletoni qendrën tonë të ndihmës ose kontaktoni ekipin tonë të suportit për asistencë.",
-    title: "Qendra e Mbështetjes",
-    subtitle: "Gjeni përgjigje për pyetjet më të shpeshta ose kontaktoni ekipin tonë të suportit",
+    metaTitle: "Mbështetje | Amiquus - Qendra e ndihmës",
+    metaDescription:
+      "Merr ndihmë me llogarinë tënde Amiquus, abonimin ose njoftimet. Shfleto qendrën e ndihmës ose kontakto mbështetjen.",
+    title: "Qendra e mbështetjes",
+    subtitle:
+      "Gjej përgjigje për pyetje të zakonshme ose kontakto ekipin tonë të mbështetjes",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "Mbështetje me email",
+      description: "Na dërgo email, do të përgjigjemi brenda 24 orëve",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Pyetje të shpeshta",
     faqs: {
       telegram: {
-        question: "Si t’i vendos njoftimet në Telegram?",
-        intro: "Për të vendosur njoftimet në Telegram, ndiqni këto hapa:",
-        steps: {
-          0: "Krijoni një bot në Telegram duke përdorur BotFather (udhëzimet gjenden në panelin tonë të kontrollit)",
-          1: "Kopjoni tokenin tuaj API dhe ID-në e bisedës",
-          2: "Shkruani këto të dhëna te cilësimet e llogarisë suaj nën \"Preferencat e Njoftimeve\"",
-          3: "Testoni lidhjen tuaj duke përdorur butonin \"Dërgo Mesazh Testues\""
-        },
-        outro: "Nëse ke nevojë për më shumë ndihmë, udhëzuesi ynë i detajuar është i disponueshëm në panelin tënd."
+        question: "Si të konfiguroj njoftimet Telegram?",
+        intro: "Për të konfiguruar njoftimet Telegram ndiq:",
+        steps: [
+          "Krijo bot Telegram përmes BotFather (udhëzime në panelin e kontrollit)",
+          "Kopjo tokenin API dhe ID e bisedës",
+          'Fut të dhënat në seksionin "Cilësimet e njoftimeve" në cilësimet e llogarisë',
+          'Testo lidhjen me butonin "Dërgo mesazh test"',
+        ],
+        outro:
+          "Nëse ke nevojë për ndihmë të mëtejshme, udhëzues i hollësishëm është i disponueshëm në panelin e kontrollit.",
       },
       updates: {
-        question: "Sa shpesh përditësohen njoftimet për makina?",
-        answer: "Frekuenca e përditësimeve varet nga plani juaj i abonimit. Planet Bazë marrin përditësime çdo 6 orë, ndërsa planet Premium mund të marrin përditësime çdo 30 minuta. Frekuencën aktuale të përditësimeve mund ta shikoni dhe ta ndryshoni në cilësimet e abonimit."
+        question: "Sa shpesh përditësohen njoftimet?",
+        answer:
+          "Frekuenca e përditësimeve varet nga paketa e abonimit. Planet bazë përditësohen çdo 6 orë, planet premium mund çdo 30 minuta. Frekuencën aktuale mund ta shohësh dhe ndryshosh në cilësimet e abonimit.",
       },
       facebook: {
-        question: "A mund të monitoroj Facebook Marketplace?",
-        answer: "Po, ne mbështesim monitorimin e Facebook Marketplace. Për ta vendosur këtë, duhet të jepni URL-në e faqes së rezultateve të kërkimit në Facebook Marketplace me filtrat tuaj të dëshiruar të aplikuar. Sistemi ynë do të monitorojë më pas atë kërkim specifik për njoftime të reja që përputhen me kriteret tuaja."
+        question: "A mund të ndjek Facebook Marketplace?",
+        answer:
+          "Po, mbështesim ndjekjen e Facebook Marketplace. Jep URL e rezultateve të filtruar të kërkimit. Sistemi pastaj do të ndjekë atë faqe kërkimi për njoftime të reja që përputhen me kriteret e tua.",
       },
       cancel: {
-        question: "Si mund ta anuloj abonimin tim?",
-        answer: "Abonimin tuaj mund ta anuloni në çdo kohë nga faqja e profilit të llogarisë suaj. Klikoni te skeda \"Abonimet\", gjeni abonimin që dëshironi të anuloni dhe klikoni butonin \"Anulo Abonimin\". Shërbimi juaj do të vazhdojë deri në fund të periudhës aktuale të faturimit."
+        question: "Si të anuloj abonimin?",
+        answer:
+          'Mund ta anulosh abonimin kurdo nga faqja e profilit. Kliko skedën "Abonimet", gjej abonimin dhe kliko "Anulo abonimin". Shërbimi mbetet aktiv deri në fund të periudhës së faturimit.',
       },
       full: {
-        question: "Çfarë ndodh nëse të gjitha vendet e abonimit janë të zëna?",
-        answer: "Për të ruajtur cilësinë e lartë të shërbimit tonë, kufizojmë numrin e abonimeve aktive. Nëse të gjitha vendet janë të zëna, mund të bashkoheni në listën e pritjes. Do t’ju njoftojmë sapo të lirohet një vend dhe do të keni përparësi për ta marrë para se ta hapim për publikun e gjerë."
-      }
+        question: "Çfarë ndodh kur të gjitha vendet janë zënë?",
+        answer:
+          "Për të mbajtur cilësinë e shërbimit kufizojmë numrin e abonimeve aktive. Nëse të gjitha vendet janë zënë, mund të bashkohesh në listën e pritjes. Kur lirohet vend, të njoftojmë dhe ke prioritet para publikut.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
+      heading: "Ende ke nevojë për ndihmë?",
+      description:
+        "Nëse nuk e gjete përgjigjen, kontakto ekipin tonë të mbështetjes. Jemi këtu për të ndihmuar!",
+      button: "Kontakto mbështetjen",
     },
-    emailsupport: {
-      description: "Na dërgoni një email dhe do t’ju kthejmë përgjigje brenda 24 orëve.",
-      email: "support@amiquus.com",
-      title: "Mbështetje me email"
-    },
-    faqheading: "Pyetjet e bëra shpesh",
-    stillneedhelp: {
-      button: "Kontakto Mbështetjen",
-      description: "Nëse nuk e gjetët përgjigjen për pyetjen tuaj, mos hezitoni të kontaktoni ekipin tonë të suportit. Jemi këtu për t’ju ndihmuar!",
-      heading: "Ende keni nevojë për ndihmë?"
-    }
   },
   notFound: {
     title: "404 Faqja nuk u gjet",
-    message: "A ke harruar ta shtosh faqen në router?"
+    message: "Harrove të shtosh faqen në router?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Kodi i verifikimit të email-it Amiquus",
+      greeting: "Përshëndetje,",
+      message: "Përdor kodin më poshtë për të përfunduar regjistrimin tënd:",
+      expiration: "Ky kod skadon pas 10 minutash.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Pagesa e marrë Amiquus – Fatura #",
+        h2Message: "Pagesa jote e abonimit Amiquus ishte e suksesshme!",
+        greeting: "Përshëndetje,",
+        paymentMessage: "Kemi marrë pagesën tënde në shumën prej",
+        downloadMessage:
+          "Mund të shikosh ose shkarkosh faturën përmes lidhjes më poshtë:",
+        viewInvoice: "Shiko faturën",
+        invoiceNumber: "Fatura #:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Pagesa në pritje – Fatura",
+        subjectB: "për abonimin tënd Amiquus",
+        h2Message:
+          "Nevojitet veprim: Përfundo pagesën për abonimin tënd Amiquus",
+        greeting: "Përshëndetje,",
+        messageA: "Fatura jote",
+        messageB:
+          "ende nuk është paguar. Për të aktivizuar abonimin, përfundo pagesën në shumën prej",
+        paymentMessage:
+          "Mund të përfundosh pagesën në mënyrë të sigurt përmes lidhjes më poshtë:",
+        payInvoice: "Paguaj faturën",
+        ignoreEmail:
+          "Nëse e ke bërë tashmë pagesën, mund ta injorosh këtë email.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Pagesa dështoi – Fatura",
+        message: "Nuk mundëm të përpunojmë pagesën tënde të fundit (përpjekja",
+        attemptsA:
+          "Do të provojmë përsëri së shpejti. Për momentin nuk kërkohet asnjë veprim.",
+        attemptsB:
+          "Kemi provuar të tërheqim pagesën tre herë, por të gjitha përpjekjet kanë dështuar.",
+        attemptsC:
+          "Si rezultat, abonimi yt është <strong>pezulluar përkohësisht</strong>. Nuk do të marrësh njoftime derisa ta riaktivizosh.",
+        attemptsD:
+          "Të lutemi përditëso metodën tënde të pagesës dhe riaktivizo abonimin nga profili yt:",
+        viewInvoice: "Shiko faturën",
+        managePayment: "Menaxho metodat e pagesës",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Je në listën e pritjes të Amiquus!",
+      h2Message: "Je në listë!",
+      hi: "Përshëndetje",
+      message:
+        "Faleminderit që u bashkove me listën e pritjes të Amiquus. Do të njoftohesh sapo të lirohet një vend.",
+      anyQuestions: "Nëse ke pyetje, mos hezito t’i përgjigjesh këtij email-i.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Anulo",
-    confirmremove: "Hiq Kartën",
-    default: "Parazgjedhur",
-    expires: "Skadon",
-    remove: "Hiq",
-    removedescription: "A jeni i sigurt që doni të hiqni kartën tuaj {{brand}} që përfundon me {{last4}}?",
-    removetitle: "Hiq Metodën e Pagesës",
-    removewarning: "Kjo është metoda juaj e parazgjedhur e pagesës dhe heqja e saj mund të ndikojë në abonimet tuaja aktive.",
-    setasdefault: "Cakto si parazgjedhje",
-    setdefaultdescription: "Dëshironi të vendosni kartën {{brand}} me numër që përfundon me {{last4}} si mënyrën tuaj të paracaktuar të pagesës? Kjo kartë do të përdoret për të gjitha pagesat e ardhshme të abonimit.",
-    setdefaulttitle: "Cakto Metodën e Pagesës si Parazgjedhje"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Anulo Alarmimin",
-    canceldescription: "A jeni i sigurt që doni të anuloni alarm-in për makinën {{brand}} {{model}}? Kjo do të ndalojë të gjitha njoftimet dhe do t’ju duhet të krijoni një alarm të ri nëse doni të monitoroni sërish këtë makinë.",
-    canceltitle: "Anulo njoftimin për makinën",
-    confirmcancel: "Anulo Alarmimin",
-    edit: "Përditëso",
-    keepmyalert: "Mbaj Njoftimin Tim",
-    language: "Gjuha",
-    price: "Çmimi",
-    pricerange: "Çmimi",
-    updates: "Përditësime",
-    websites: "Faqe interneti",
-    years: "Vite"
-  },
-  signUp: {
-    cta: "Merr njoftime tani",
-    heading: "Krijo Alarm për Makinën tënde",
-    subheading: "Vendos njoftimet tuaja të personalizuara për shpalljet e makinave në vetëm disa hapa.",
-    toast: {
-      error: {
-        description: "Nuk mundëm të krijojmë abonimin tuaj. Ju lutemi, provoni përsëri më vonë.",
-        title: "Dështoi abonimi"
-      },
-      success: {
-        description: "Abonimi juaj u krijua me sukses",
-        title: "Abonimi u krijua"
-      }
+      thanksMessage: "Faleminderit që zgjodhe Amiquus!",
+      signature: "Me respekt,<br/>Ekipi i Amiquus",
+      team: "— Ekipi Amiquus",
+      needHelp: "Kërkon ndihmë?",
+      hello: "Përshëndetje",
     },
-    waitlist: {
-      cta: "Bashkohu në listën e pritjes",
-      message: "Aktualisht jemi në kapacitet të plotë. Ju lutemi regjistrohuni në listën e pritjes për t’u njoftuar sapo të hapet një vend."
-    }
-  }
+  },
 };

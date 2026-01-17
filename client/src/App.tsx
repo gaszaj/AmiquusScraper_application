@@ -11,15 +11,12 @@ import Login from "@/pages/login";
 import Register from "@/pages/Register";
 import VerifyEmail from "@/pages/verify-email";
 import SubscriptionPage from "@/pages/subscription";
-import Dashboard from "@/pages/dashboard";
 import About from "@/pages/about";
 import Terms from "@/pages/terms";
 import Privacy from "@/pages/privacy";
 import FAQ from "@/pages/faq";
-import Checkout from "@/pages/checkout";
 import Subscribe from "@/pages/subscribe";
 import SetupAlerts from "@/pages/setup-alerts";
-import Profile from "@/pages/Profile";
 import NewProfile from "@/pages/new-profile";
 import Waitlist from "@/pages/waitlist";
 import Blog from "@/pages/blog";
@@ -41,7 +38,6 @@ function Router() {
       <ProtectedRoute path="/verify-email" component={VerifyEmail} />
       <ProtectedRoute path="/test-dodo" component={DodoTestPage} />
       <ProtectedRoute path="/dashboard" component={NewProfile} />
-      <Route path="/checkout" component={Checkout} />
       <Route path="/subscribe" component={Subscribe} />
       <Route path="/setup-alerts" component={SetupAlerts} />
       <ProtectedRoute path="/profile" component={NewProfile} />

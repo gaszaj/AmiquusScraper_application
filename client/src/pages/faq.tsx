@@ -9,7 +9,7 @@ import { useLanguage } from "@/components/language-provider";
 import { useEffect, useState } from "react";
 import { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 import { newcomerDefault } from "@/data/newcomer-default";
-import { additionalWebsitePrice, globalBasePrice } from "@shared/pricing";
+import { additionalWebsitePrice, currencyCode, currencyLocale, currencySymbol, globalBasePrice } from "@shared/pricing";
 
 export default function FAQ() {
   const { t } = useLanguage();
@@ -52,25 +52,36 @@ export default function FAQ() {
     }).format(value);
   }
 
-  // Replaces 79.99/79,99 and 4.99/4,99 (with or without $ / spaces)
+  function escapeRegExp(value: string) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+  
   function replacePricesInString(
     text: string,
     locale: string,
     currency: string,
+    currencySymbol: string,
   ) {
     const base = formatMoney(globalBasePrice, locale, currency);
     const addWebsite = formatMoney(additionalWebsitePrice, locale, currency);
-
-    return (
-      text
-        // base price
-        .replace(/\$?\s*79[.,]99\b/g, base)
-        .replace(/\b79[.,]99\s*\$/g, base)
-        // additional website price
-        .replace(/\$?\s*4[.,]99\b/g, addWebsite)
-        .replace(/\b4[.,]99\s*\$/g, addWebsite)
+  
+    const symbol = escapeRegExp(currencySymbol);
+  
+    const basePriceRegex = new RegExp(
+      `(?:${symbol}\\s*)?79[.,]99\\b|\\b79[.,]99\\s*(?:${symbol})?`,
+      "g",
     );
+  
+    const addWebsiteRegex = new RegExp(
+      `(?:${symbol}\\s*)?4[.,]99\\b|\\b4[.,]99\\s*(?:${symbol})?`,
+      "g",
+    );
+  
+    return text
+      .replace(basePriceRegex, base)
+      .replace(addWebsiteRegex, addWebsite);
   }
+  
 
   return (
     <>
@@ -149,7 +160,7 @@ export default function FAQ() {
                   {t("faqs.subscription.cost.answer", {
                     returnObjects: true,
                   }).map((p: string, idx: number) => {
-                    const processedText = replacePricesInString(p, "en-US", "USD");
+                    const processedText = replacePricesInString(p, currencyLocale, currencyCode, currencySymbol);
       
                     return (
                       <p className="mb-2" key={idx}>

@@ -123,19 +123,19 @@ export const lv = {
     setAlerts: "Iestatīt brīdinājumus",
     notificationMockup1: {
       title: "Jauna sakritība!",
-      description: "BMW 3 sērija, 2019, $32,500 – jauns AutoTrader sludinājums",
+      description: "BMW 3 sērija, 2019, €32,500 – jauns AutoTrader sludinājums",
     },
     notificationMockup2: {
       title: "Telegram paziņojums",
       description:
-        "Mercedes C klase, 2020, 30,000 jūdzes – cena samazināta par $2,000",
+        "Mercedes C klase, 2020, 30,000 jūdzes – cena samazināta par €2,000",
     },
   },
   pricing: {
     title: "Vienkāršas un caurspīdīgas cenas",
     subtitle:
       "Cenas balstītas uz jūsu vajadzībām. Sāciet ar bāzes paketi un pielāgojiet pēc vajadzības.",
-    baseTitle: "Bāzes pakete: $79.99/mēn.",
+    baseTitle: "Bāzes pakete: €79.99/mēn.",
     includedTitle: "Iekļauts:",
     includedFeatures: [
       "1 vietnes izsekošana",
@@ -715,7 +715,7 @@ export const lv = {
     title: "Auto brīdinājumu iestatīšana",
     subtitle: "Iestatiet Telegram botu, lai saņemtu paziņojumus par sapņu auto",
     basicPlan: "Bāzes plāns",
-    baseTitle: "$79.99/mēn.",
+    baseTitle: "€79.99/mēn.",
     button: "Aktivizēt manu auto brīdinājumu pakalpojumu",
     cancel: "Atceļams jebkurā laikā",
     toasts: {

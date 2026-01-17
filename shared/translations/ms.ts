@@ -123,19 +123,19 @@ export const ms = {
     setAlerts: "Tetapkan Amaran",
     notificationMockup1: {
       title: "Padanan Baru!",
-      description: "BMW Siri 3, 2019, $32,500 – iklan AutoTrader baru",
+      description: "BMW Siri 3, 2019, €32,500 – iklan AutoTrader baru",
     },
     notificationMockup2: {
       title: "Pemberitahuan Telegram",
       description:
-        "Mercedes Kelas C, 2020, 30,000 batu – harga diturunkan $2,000",
+        "Mercedes Kelas C, 2020, 30,000 batu – harga diturunkan €2,000",
     },
   },
   pricing: {
     title: "Harga Mudah dan Telus",
     subtitle:
       "Harga berdasarkan keperluan anda. Mulakan dengan pakej asas dan sesuaikan mengikut keperluan.",
-    baseTitle: "Pakej Asas: $79.99/bln.",
+    baseTitle: "Pakej Asas: €79.99/bln.",
     includedTitle: "Termasuk:",
     includedFeatures: [
       "1 pengesanan laman",
@@ -720,7 +720,7 @@ export const ms = {
     subtitle:
       "Tetapkan bot Telegram untuk mendapat pemberitahuan tentang kereta impian",
     basicPlan: "Pelan Asas",
-    baseTitle: "$79.99/bln.",
+    baseTitle: "€79.99/bln.",
     button: "Aktifkan Perkhidmatan Amaran Kereta Saya",
     cancel: "Boleh dibatalkan pada bila-bila masa",
     toasts: {
@@ -1185,7 +1185,7 @@ export const ms = {
       cost: {
         question: "Berapa kos langganan?",
         answer: [
-          "Harga kami bermula dari $79.99 sebulan untuk pemantauan satu laman web dengan kemas kini setiap 6 jam. Laman web tambahan berharga $4.99 setiap satu sebulan. Anda juga boleh menaik taraf kekerapan kemas kini untuk notifikasi yang lebih pantas.",
+          "Harga kami bermula dari €79.99 sebulan untuk pemantauan satu laman web dengan kemas kini setiap 6 jam. Laman web tambahan berharga €4.99 setiap satu sebulan. Anda juga boleh menaik taraf kekerapan kemas kini untuk notifikasi yang lebih pantas.",
           "Untuk butiran harga yang lebih khusus, sila lihat bahagian harga di halaman utama kami.",
         ],
       },

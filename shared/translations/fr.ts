@@ -124,19 +124,19 @@ export const fr = {
     setAlerts: "Configurer les alertes",
     notificationMockup1: {
       title: "Nouvelle correspondance trouvée !",
-      description: "BMW Série 3, 2019, 32 500 $ – Publiée récemment sur AutoTrader",
+      description: "BMW Série 3, 2019, 32 500 € – Publiée récemment sur AutoTrader",
     },
     notificationMockup2: {
       title: "Alerte Telegram",
       description:
-        "Mercedes Classe C, 2020, 30 000 km – Prix baissé de 2 000 $",
+        "Mercedes Classe C, 2020, 30 000 km – Prix baissé de 2 000 €",
     },
   },
   pricing: {
     title: "Tarifs simples et transparents",
     subtitle:
       "Nos prix sont basés sur vos besoins. Commencez avec le forfait de base et personnalisez-le.",
-    baseTitle: "Forfait de base : 79,99 $/mois",
+    baseTitle: "Forfait de base : 79,99 €/mois",
     includedTitle: "Ce qui est inclus :",
     includedFeatures: [
       "Suivi d'un site web",
@@ -437,7 +437,7 @@ export const fr = {
       fuelType: "Type de carburant",
       yearRange: "Année",
       mileage: "Kilomètres (km)",
-      price: "Prix ($)",
+      price: "Prix (€)",
     },
 
     notification: {
@@ -718,7 +718,7 @@ export const fr = {
     subtitle:
       "Configurez votre bot Telegram pour recevoir des notifications sur la voiture de vos rêves",
     basicPlan: "Forfait de base",
-    baseTitle: "79,99 $/mois",
+    baseTitle: "79,99 €/mois",
     button: "Lancer le service d'alertes voiture",
     cancel: "Annulez à tout moment",
     toasts: {
@@ -1182,7 +1182,7 @@ export const fr = {
       cost: {
         question: "Combien coûte l'abonnement ?",
         answer: [
-          "Les prix commencent à 79,99 $/mois pour suivre un site web avec mises à jour toutes les 6 heures. Sites web supplémentaires coûtent 4,99 $ par mois. Passez à des fréquences plus rapides pour des notifications plus rapides.",
+          "Les prix commencent à 79,99 €/mois pour suivre un site web avec mises à jour toutes les 6 heures. Sites web supplémentaires coûtent 4,99 € par mois. Passez à des fréquences plus rapides pour des notifications plus rapides.",
           "Pour les détails des prix, consultez la section tarifs sur la page d'accueil.",
         ],
       },

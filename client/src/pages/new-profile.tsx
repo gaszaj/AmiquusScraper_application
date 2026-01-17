@@ -22,13 +22,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -55,6 +48,7 @@ import {
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLanguage } from "@/components/language-provider";
+import { currencySymbol } from "@shared/pricing";
 
 const publicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 
@@ -220,8 +214,8 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
             <CardDescription>
               {t("dashboard.subscriptionCard.years")}: {subscription.yearMin}-
               {subscription.yearMax},{" "}
-              {t("dashboard.subscriptionCard.priceRange")}: $
-              {subscription.priceMin}-${subscription.priceMax}
+              {t("dashboard.subscriptionCard.priceRange")}: {currencySymbol}
+              {subscription.priceMin}-{currencySymbol}{subscription.priceMax}
             </CardDescription>
           </div>
           <Badge
@@ -262,7 +256,7 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
             <span className="font-medium">
               {t("dashboard.subscriptionCard.price")}:
             </span>
-            <span>${(subscription.price / 100).toFixed(2)}/month</span>
+            <span>{currencySymbol}{(subscription.price / 100).toFixed(2)}/month</span>
           </div>
         </div>
       </CardContent>

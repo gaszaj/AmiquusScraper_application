@@ -27,6 +27,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { WEBSITE_OPTIONS, FREQUENCY_OPTIONS } from "@/lib/constants";
 import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 import { useLanguage } from "@/components/language-provider";
+import { currencySymbol } from "@shared/pricing";
 
 
 interface WebsiteSelectionProps {
@@ -284,7 +285,7 @@ export default function WebsiteSelection({
                       <SelectItem key={option.id} value={option.id}>
                         {option.name}
                         {option.additionalPrice > 0 &&
-                          ` (+$${option.additionalPrice})`}
+                          ` (+${currencySymbol}${option.additionalPrice})`}
                       </SelectItem>
                     ))}
                   </SelectContent>

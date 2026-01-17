@@ -1,692 +1,533 @@
+// === sk.ts === Slovenčina
 export const sk = {
   navigations: {
     features: "Funkcie",
     how: "Ako to funguje",
-    pricing: "Cenník",
+    pricing: "Ceny",
     getAlerts: "Získať upozornenia",
     waitlist: "Čakacia listina",
-    faq: "Často kladené otázky",
+    faq: "FAQ",
     login: "Prihlásiť sa",
     getStarted: "Začať",
-    subscribers: "Odberatelia",
-    theme: "Téma",
+    subscribers: "Predplatitelia",
+    theme: "Motív",
     language: "Jazyk",
     myAlerts: "Moje upozornenia",
     profile: "Profil",
     settings: "Nastavenia",
     logout: "Odhlásiť sa",
-    signUp: "Registrovať sa"
+    signUp: "Registrovať sa",
   },
   hero: {
-    label: "Sledujte inzeráty ojazdených áut v reálnom čase",
-    title: "Už nikdy nezmeškajte svoju ideálnu ponuku na auto",
-    subtitle: "Amiquus vás okamžite upozorní, keď sa váš vysnívaný automobil objaví na viacerých webových stránkach s inzerciou áut. Dostávajte upozornenia cez Telegram hneď, ako sa nájde zhoda.",
-    button1: "Nastavte si upozornenia",
+    label: "Sledujte inzeráty ojazdených vozidiel v reálnom čase!",
+    title: "Nikdy nezmeškajte ideálnu ponuku auta",
+    subtitle:
+      "Amiquus vás okamžite upozorní, keď sa váš vysnívaný automobil objaví na viacerých weboch. Dostávajte upozornenia na Telegram ihneď po zhode.",
+    button1: "Nastaviť upozornenia",
     button2: "Pozrite sa, ako to funguje",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Zrušiť kedykoľvek",
-      nosetup: "Nie je potrebné žiadne nastavenie",
+      websites: "Viac ako 15 webov",
       realtime: "Upozornenia v reálnom čase",
-      websites: "Sledovanie viac ako 15 webových stránok"
-    }
+      noSetup: "Bez inštalácie",
+      cancelAnytime: "Zrušiť kedykoľvek",
+    },
   },
   limited: {
     full: {
-      title: "Bol dosiahnutý limit predplatného",
-      description: "Dosiahli sme kapacitu 30 aktívnych predplatiteľov. Pridajte sa na čakaciu listinu, aby ste boli informovaní, keď sa uvoľní miesto.",
-      buttonText: "Pridajte sa na čakaciu listinu"
+      title: "Limit predplatného dosiahnutý",
+      description:
+        "Dosiahli sme limit 30 aktívnych predplatiteľov. Pripojte sa k čakacej listine, aby ste boli informovaní, keď sa uvoľní miesto.",
+      buttonText: "Pripojiť sa k čakacej listine",
     },
     limited: {
       title: "Obmedzená dostupnosť",
-      description: "Zostáva už len {{remaining}} miest z celkového počtu {{capacity}}. Prihláste sa teraz, kým máme ešte voľné miesta!",
-      buttonText: "Začať teraz"
+      description:
+        "{{remaining}}/{{capacity}} miest zostáva. Prihláste sa teraz, kým sa vypredajú!",
+      buttonText: "Začať teraz",
     },
     available: {
-      title: "Dostupné predplatné",
-      description: "{{active}} z {{capacity}} predplatných je momentálne aktívnych. Stále je dosť miesta, aby ste sa mohli pridať!",
-      buttonText: "Začať teraz"
-    }
+      title: "Predplatné dostupné",
+      description:
+        "{{active}}/{{capacity}} predplatných je momentálne aktívnych. Veľa miesta pre vás!",
+      buttonText: "Začať teraz",
+    },
   },
   features: {
     heading: "Prečo si vybrať Amiquus?",
-    subheading: "Ušetrite čas a nikdy nezmeškajte svoje ideálne auto s našou automatizovanou službou sledovania.",
+    subheading:
+      "Ušetrite čas a nikdy nezmeškajte ideálne auto s našou automatizovanou službou.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Sledovanie viacerých webov",
+      description:
+        "Sledujte viaceré auto weby naraz bez manuálneho kontrolovania.",
     },
     notifications: {
       title: "Okamžité upozornenia",
-      description: "Dostávajte okamžité upozornenia cez Telegram, keď sa objaví auto zodpovedajúce vašim kritériám na predaj."
+      description:
+        "Dostávajte okamžité upozornenia na Telegram, keď auto zodpovedá vašim kritériám.",
     },
     filters: {
-      title: "Vlastné filtre",
-      description: "Nastavte presné kritériá vrátane značky, modelu, roku, najazdených kilometrov a cenového rozpätia, aby ste našli presne to, čo hľadáte."
+      title: "Prispôsobiteľné filtre",
+      description:
+        "Nastavte presné kritériá: značka, model, rok, najazdené km, cena – nájdite presne to, čo potrebujete.",
     },
     frequency: {
-      title: "Prispôsobiteľná frekvencia",
-      description: "Vyberte, ako často budeme kontrolovať nové inzeráty, od hodinových aktualizácií až po sledovanie v reálnom čase."
+      title: "Nastaviteľná frekvencia",
+      description:
+        "Vyberte, ako často kontrolovať nové inzeráty – od hodinovej po reálny čas.",
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Viacjazyčná podpora",
+      description:
+        "Dostávajte upozornenia v preferovanom jazyku pre lepšie porozumenie inzerátom.",
     },
     account: {
       title: "Jednoduchá správa účtu",
-      description: "Spravujte viacero vyhľadávacích profilov a upravujte nastavenia predplatného len niekoľkými kliknutiami."
+      description:
+        "Spravujte viac vyhľadávacích profilov a meňte predplatné v niekoľkých kliknutiach.",
     },
-    multisite: {
-      description: "Sledujte viaceré webové stránky s inzerciami áut naraz bez nutnosti manuálne kontrolovať každú zvlášť.",
-      title: "Sledovanie na viacerých stránkach"
-    }
   },
   howItWorks: {
     title: "Ako funguje Amiquus",
-    subtitle: "Nastavte raz a nechajte náš automatizovaný systém, aby pre vás našiel tú najlepšiu ponuku auta.",
-    whyTitle: "Why Choose Amiquus?",
+    subtitle: "Nastavte raz a nechajte náš systém nájsť ideálnu ponuku za vás",
+    whyTitle: "Prečo si vybrať Amiquus?",
     steps: {
       preferences: {
-        title: "Nastavte si svoje preferencie",
-        description: "Vyberte značky áut, modely, cenové rozpätie a ďalšie kritériá, ktoré chcete sledovať."
+        title: "Nastavte preferencie",
+        description:
+          "Vyberte značky, modely, cenové rozpätie a ďalšie zaujímavé kritériá.",
       },
       telegram: {
-        title: "Pripojiť Telegram",
-        description: "Prepojte svoj Telegram účet, aby ste okamžite dostávali upozornenia na nové inzeráty."
+        title: "Pripojte Telegram",
+        description:
+          "Pripojte svoj Telegram účet pre okamžité upozornenia na nové inzeráty.",
       },
       notifications: {
         title: "Dostávajte okamžité upozornenia",
-        description: "Dostávajte upozornenia hneď, ako sa na niektorej z našich sledovaných webových stránok objaví auto, ktoré zodpovedá vašim kritériám."
+        description:
+          "Buďte upozornení ihneď, ako sa na webe objaví vhodné auto.",
       },
       findCar: {
-        title: "Find Your Perfect Car",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
+        title: "Nájdite ideálne auto",
+        description:
+          "Buďte prvý, kto sa dozvie o nových inzerátoch a získajte najlepšie ponuky.",
       },
-      findcar: {
-        description: "Buďte prví, kto sa dozvie o nových ponukách na AMIQUUS a získajte tie najlepšie ponuky skôr než ostatní.",
-        title: "Nájdite svoje ideálne auto"
-      }
     },
-    features: {
-      0: "Sledujte viac ako 15 webových stránok s inzerciou áut naraz",
-      1: "Prispôsobiteľné vyhľadávacie kritériá s pokročilým filtrovaním",
-      2: "Oznámenia v reálnom čase cez Telegram",
-      3: "Automatické upozornenia na zníženie ceny a nové inzeráty",
-      4: "Jednoduchý proces nastavenia, ktorý trvá menej než 5 minút"
-    },
-    setAlerts: "Set Up Your Alerts",
+    features: [
+      "Súbežné sledovanie viac ako 15 webov",
+      "Prispôsobiteľné vyhľadávacie kritériá s pokročilým filtrováním",
+      "Upozornenia v reálnom čase cez Telegram",
+      "Automatické upozornenia na zníženie ceny a nové inzeráty",
+      "Jednoduché nastavenie do 5 minút",
+    ],
+    setAlerts: "Nastaviť upozornenia",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Nájdená nová zhoda!",
+      description: "BMW radu 3, 2019, 32 500 € – novo zverejnené na AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram Alert",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
+      title: "Upozornenie na Telegram",
+      description:
+        "Mercedes triedy C, 2020, 30 000 km – cena znížená o 2 000 €",
     },
-    notificationmockup1: {
-      description: "BMW 3 Series, 2019, $32,500 – Práve pridané na AutoTrader",
-      title: "Našli sme novú zhodu!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-trieda, 2020, 30 000 míľ – Cena znížená o 2 000 $",
-      title: "Telegram upozornenie"
-    },
-    setalerts: "Nastavte si upozornenia",
-    whytitle: "Prečo si vybrať Amiquus?"
   },
   pricing: {
-    title: "Jednoduché, transparentné ceny",
-    subtitle: "Naše ceny sú prispôsobené vašim konkrétnym potrebám. Začnite so základným balíkom a upravte si ho podľa svojich požiadaviek.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Jednoduché a transparentné ceny",
+    subtitle:
+      "Naše ceny sú založené na vašich potrebách. Začnite so základným plánom a prispôsobte.",
+    baseTitle: "Základný plán: 79,99 €/mesiac",
+    includedTitle: "Zahrnuté:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Sledovanie jedného webu",
+      "Aktualizácie každú hodinu",
+      "Neobmedzené filtre",
+      "Upozornenia cez Telegram",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Každá ďalšia webová stránka"
-      },
-      1: {
-        name: "Aktualizácie každých 30 minút"
-      },
-      2: {
-        name: "Aktualizácie každých 15 minút"
-      },
-      3: {
-        name: "Aktualizácie každých 5 minút"
-      },
-      4: {
-        name: "Aktualizácie každú minútu"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
+    addonsTitle: "Doplnky:",
+    addons: [
+      { name: "Každý ďalší web", price: 4.99 },
+      { name: "Aktualizácie každých 30 min", price: 2.99 },
+      { name: "Aktualizácie každých 15 min", price: 5.99 },
+      { name: "Aktualizácie každých 5 min", price: 9.99 },
+      { name: "Aktualizácie každú minútu", price: 14.99 },
+    ],
+    footerNote:
+      "Všetky plány zahŕňajú neobmedzené vyhľadávacie profily a jednoduchú správu predplatného.",
     button: "Začať teraz",
-    addonstitle: "Doplnky:",
-    basetitle: "Základný balík: 79,99 $/mesiac",
-    footernote: "Všetky plány zahŕňajú neobmedzené konfigurácie vyhľadávania a jednoduchú správu predplatného.",
-    includedfeatures: {
-      0: "Jedno monitorovanie webovej stránky",
-      1: "Hodinové aktualizácie",
-      2: "Neobmedzené filtre",
-      3: "Telegram notifikácie"
-    },
-    includedtitle: "Čo je súčasťou:"
   },
   signup: {
-    heading: "Create Your Car Alert",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Vytvoriť upozornenie na auto",
+    subheading:
+      "Nastavte si personalizované upozornenia na inzeráty áut v niekoľkých jednoduchých krokoch.",
+    cta: "Získať upozornenia teraz",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
-      cta: "Join Waitlist"
+      message:
+        "Momentálne sme plní. Pripojte sa k čakacej listine, aby ste boli informovaní, keď sa uvoľní miesto.",
+      cta: "Pripojiť sa k čakacej listine",
     },
     toast: {
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "Predplatné vytvorené",
+        description: "Vaše predplatné bolo úspešne vytvorené",
       },
       error: {
-        title: "Subscription failed",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Nie je možné vytvoriť predplatné",
+        description:
+          "Nie je možné vytvoriť predplatné. Skúste to prosím neskôr.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
         title: "Úspech",
-        description: "Váš spôsob platby bol úspešne nastavený."
+        description: "Vaša platobná metóda bola úspešne nastavená.",
       },
       error: {
         title: "Chyba",
-        fallback: "Vyskytla sa neočakávaná chyba. Skúste to znova."
-      }
+        fallback: "Vyskytla sa neočakávaná chyba. Skúste to znova.",
+      },
     },
     button: {
-      submit: "Nastavte spôsob platby",
-      processing: "Spracováva sa..."
-    }
+      submit: "Nastaviť platobnú metódu",
+      processing: "Spracúva sa...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Značka auta je povinná",
-      carmodel: "Model vozidla je povinný",
-      facebookmarketplaceurl: "URL pre Facebook Marketplace je povinný, keď je vybraný Facebook.",
-      fueltype: "Typ paliva je povinný",
-      maxkilometers: "Maximálny počet kilometrov musí byť číslo",
-      notificationlanguage: "Je potrebné zvoliť jazyk upozornení.",
-      pricemax: "Maximálna cena musí byť číslo",
-      pricemin: "Minimálna cena musí byť číslo",
-      telegramchatid: "Je potrebné zadať Telegram chat ID.",
-      telegramtoken: "Je vyžadovaný token pre Telegram bota",
-      telegramusername: "Používateľské meno na Telegrame je povinné",
-      websitesselected: "Musí byť vybraná aspoň jedna webová stránka.",
-      yearmax: "Maximálny rok musí byť platný rok",
-      yearmin: "Minimálny rok musí byť platný rok"
-    }
+      carBrand: "Značka auta je povinná",
+      carModel: "Model auta je povinný",
+      fuelType: "Typ paliva je povinný",
+      priceMin: "Minimálna cena musí byť číslo",
+      priceMax: "Maximálna cena musí byť číslo",
+      yearMin: "Minimálny rok musí byť platný",
+      yearMax: "Maximálny rok musí byť platný",
+      maxKilometers: "Maximálne najazdené km musí byť číslo",
+      telegramUsername: "Telegram používateľské meno je povinné",
+      telegramToken: "Telegram bot token je povinný",
+      telegramChatId: "Telegram chat ID je povinné",
+      websitesSelected: "Vyberte aspoň jeden web",
+      notificationLanguage: "Jazyk upozornení je povinný",
+      facebookMarketplaceUrl:
+        "URL Facebook Marketplace je povinné, ak je vybraný Facebook",
+    },
   },
   personalInfo: {
     heading: "Osobné údaje",
-    description: "Prosím, zadajte svoje osobné údaje, aby sme vám mohli správne nastaviť notifikácie.",
+    description: "Poskytnite osobné údaje pre správne nastavenie upozornení.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Emailová adresa",
-      firstname: "Meno",
-      lastname: "Priezvisko"
+      firstName: "Meno",
+      lastName: "Priezvisko",
+      email: "E-mail",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Ján",
-      lastname: "Jeleň"
+      firstName: "Ján",
+      lastName: "Novák",
+      email: "jan.novak@example.sk",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Zadajte platný e-mail",
-      firstname: "Meno je povinné",
-      lastname: "Priezvisko je povinné"
+      firstName: "Meno je povinné",
+      lastName: "Priezvisko je povinné",
+      email: "Zadajte platnú e-mailovú adresu",
     },
     actions: {
-      login: "Prihláste sa alebo zaregistrujte pre pokračovanie",
-      continue: "Pokračovať"
-    }
+      login: "Prihláste sa alebo registrujte pre pokračovanie",
+      continue: "Pokračovať",
+    },
   },
   websiteSelection: {
-    heading: "Výber webovej stránky",
-    description: "Vyberte si, ktoré webové stránky chcete sledovať a ako často chcete dostávať aktualizácie.",
+    heading: "Výber webov",
+    description:
+      "Vyberte weby na sledovanie a požadovanú frekvenciu aktualizácií.",
     labels: {
-      websites: "Webstránky na sledovanie",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "URL Facebook Marketplace",
-      updatefrequency: "Frekvencia aktualizácií"
+      websites: "Weby na sledovanie",
+      facebookUrl: "URL Facebook Marketplace",
+      updateFrequency: "Frekvencia aktualizácií",
     },
     placeholders: {
-      frequency: "Vyberte frekvenciu"
+      frequency: "Vyberte frekvenciu",
     },
     help: {
-      websites: "Vyberte jednu alebo viac webových stránok na sledovanie inzerátov áut.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Vložte sem URL výsledkov vyhľadávania na Facebook Marketplace.",
-      updatefrequency: "Ako často by sme mali kontrolovať nové inzeráty? Vyššia frekvencia môže znamenať vyššie náklady.",
-      videodesc: "Pozrite si video nižšie pre podrobné inštrukcie krok za krokom.",
-      videotitle: "Potrebujete pomocť s vyhľadaním vášho odkazu na vyhľadávanie na Facebook Marketplace?"
+      websites: "Vyberte jeden alebo viac webov na sledovanie inzerátov áut.",
+      facebookUrl: "Vložte URL výsledkov vyhľadávania na Facebook Marketplace.",
+      videoTitle:
+        "Potrebujete pomoc s nájdením odkazu na Facebook Marketplace?",
+      videoDesc: "Pozrite si video nižšie s podrobnými inštrukciami.",
+      updateFrequency:
+        "Ako často kontrolujeme nové inzeráty? Vyššie frekvencie môžu byť drahšie.",
     },
     errors: {
-      websites: "Je potrebné vybrať aspoň jednu webovú stránku.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "URL Facebook Marketplace je povinný, keď je vybraný Facebook"
+      websites: "Vyberte aspoň jeden web",
+      facebookUrl:
+        "URL Facebook Marketplace je povinné, ak je vybraný Facebook",
     },
     actions: {
-      previous: "Predchádzajúce",
-      continue: "Pokračovať"
-    }
+      previous: "Predchádzajúci",
+      continue: "Pokračovať",
+    },
   },
   carDetails: {
-    heading: "Podrobnosti o vozidle",
-    description: "Zadajte podrobnosti o aute, ktoré hľadáte. Všetky polia sú voliteľné – nechajte ktorékoľvek prázdne pre širší výber výsledkov.",
+    heading: "Detaily auta",
+    description:
+      "Uveďte detaily hľadaného auta. Všetky polia sú voliteľné – nechajte prázdne pre širšie výsledky.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Značka auta",
-      carmodel: "Model auta",
-      fueltype: "Typ paliva",
-      maxkilometers: "Maximálny počet kilometrov",
-      pricemax: "Maximálna cena",
-      pricemin: "Minimálna cena",
-      yearmax: "Maximálny rok",
-      yearmin: "Minimálny rok"
+      carBrand: "Značka auta",
+      carModel: "Model auta",
+      fuelType: "Typ paliva",
+      priceMin: "Minimálna cena",
+      priceMax: "Maximálna cena",
+      yearMin: "Minimálny rok",
+      yearMax: "Maximálny rok",
+      maxKilometers: "Maximálne najazdené km",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Vyberte značku auta",
-      carmodel: "Vyberte model auta",
-      carmodeldisabled: "Najskôr vyberte značku auta",
-      fueltype: "Vyberte typ paliva",
-      maxkilometers: "Zadajte maximálny počet kilometrov",
-      pricemax: "Zadajte maximálnu cenu",
-      pricemin: "Zadajte minimálnu cenu",
-      yearmax: "Zadajte maximálny rok",
-      yearmin: "Zadajte minimálny rok"
+      carBrand: "Vyberte značku",
+      carModel: "Vyberte model",
+      carModelDisabled: "Najprv vyberte značku",
+      fuelType: "Vyberte typ paliva",
+      priceMin: "Zadajte minimálnu cenu",
+      priceMax: "Zadajte maximálnu cenu",
+      yearMin: "Zadajte minimálny rok",
+      yearMax: "Zadajte maximálny rok",
+      maxKilometers: "Zadajte maximálne najazdené km",
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Nie sú dostupné žiadne modely"
+      noModelsAvailable: "Modely nie sú dostupné",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Značka auta je povinná",
-      carmodel: "Model vozidla je povinný",
-      fueltype: "Typ paliva je povinný",
-      maxkilometers: "Maximálny počet kilometrov musí byť číslo",
-      pricemax: "Maximálna cena musí byť číslo",
-      pricemin: "Minimálna cena musí byť číslo",
-      yearmax: "Maximálny rok musí byť platný rok",
-      yearmin: "Minimálny rok musí byť platný rok"
+      carBrand: "Značka auta je povinná",
+      carModel: "Model auta je povinný",
+      fuelType: "Typ paliva je povinný",
+      priceMin: "Minimálna cena musí byť číslo",
+      priceMax: "Maximálna cena musí byť číslo",
+      yearMin: "Minimálny rok musí byť platný",
+      yearMax: "Maximálny rok musí byť platný",
+      maxKilometers: "Maximálne najazdené km musí byť číslo",
     },
     actions: {
-      previous: "Predchádzajúce",
-      continue: "Pokračovať"
-    }
+      previous: "Predchádzajúci",
+      continue: "Pokračovať",
+    },
   },
   telegram: {
     heading: "Nastavenie Telegramu",
-    description: "Nastavte upozornenia na Telegrame zadaním tokenu bota a ID chatu.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Ak máte problémy s vytvorením telegram bota, kontaktujte nás a zavoláme vám, aby sme vám pomohli s jeho vytvorením.",
+    description:
+      "Nastavte upozornenia Telegramu zadaním tokenu bota a chat ID.",
+    subHeading: "Nastavte svojho Telegram bota",
+    info: "Máte problémy s vytvorením Telegram bota? Kontaktujte nás, pomôžeme.",
     contact: "Kontaktujte nás",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Otvorte Telegram a vyhľadajte @BotFather",
-      botstep2: "Zadajte príkaz /newbot",
-      botstep3: "Postupujte podľa pokynov na vytvorenie bota",
-      botstep4: "Skopírujte token, ktorý poskytol BotFather",
-      bottitle: "Ako získať token pre Telegram bota:",
-      chatstep1: "Otvorte Telegram a vyhľadajte @userinfobot",
-      chatstep2: "Pošlite akúkoľvek správu botovi",
-      chatstep3: "Bot vám odpovie s vašimi informáciami vrátane vášho Chat ID",
-      chatstep4: "Skopírujte ID chatu (je to číslo)",
-      chattitle: "Ako získať svoj Telegram Chat ID:"
+      botTitle: "Ako získať token Telegram bota:",
+      botStep1: "Otvorte Telegram a vyhľadajte @BotFather",
+      botStep2: "Pošlite príkaz /newbot",
+      botStep3: "Postupujte podľa inštrukcií na vytvorenie bota",
+      botStep4: "Skopírujte token poskytnutý BotFather",
+
+      chatTitle: "Ako získať svoje Telegram chat ID:",
+      chatStep1: "Otvorte Telegram a vyhľadajte @userinfobot",
+      chatStep2: "Pošlite botovi akúkoľvek správu",
+      chatStep3: "Bot odpovie vašimi informáciami vrátane chat ID",
+      chatStep4: "Skopírujte chat ID (číslo)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "Potrebujete pomoc s nastavením tokenu bota a chat ID?",
+    videoDescription: "Pozrite si video nižšie s podrobnými inštrukciami.",
+
     labels: {
       token: "Token Telegram bota",
-      chatId: "Your Telegram Chat ID",
-      language: "Jazyk notifikácií",
+      chatId: "Vaše Telegram chat ID",
+      language: "Jazyk upozornení",
       username: "Telegram používateľské meno",
-      chatid: "Váš Telegram Chat ID"
     },
+
     placeholders: {
-      token: "Zadajte svoj token bota od BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Vyberte jazyk správy pre Telegram",
-      username: "Zadajte svoje používateľské meno na Telegrame",
-      chatid: "Zadajte svoj Telegram chat ID"
+      token: "Zadajte token bota od BotFather",
+      chatId: "Zadajte svoje Telegram chat ID",
+      language: "Vyberte jazyk správ Telegramu",
+      username: "Zadajte svoje Telegram používateľské meno",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "Toto je používateľské meno vášho Telegram účtu (bez symbolu @).",
     examples: {
-      token: "Rozumiem! Prosím, zadajte text, ktorý chcete preložiť.",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Toto získate, ak napíšete správu @userinfobot na Telegrame."
+      token: "Príklad: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId: "Získajte odoslaním správy @userinfobot v Telegrame",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Inštrukcie na nastavenie:",
     setupSteps: [
-
-      "Open Telegram and search for \\\"BotFather\\\"",
-
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Otvorte Telegram a vyhľadajte "BotFather"',
+      'Kliknite na "Start" pre začatie konverzácie s BotFather',
+      "Zadajte /newbot a postupujte podľa inštrukcií na vytvorenie nového bota",
+      "Vyberte názov pre svojho bota",
+      "Vyberte používateľské meno pre bota (musí končiť na 'bot')",
+      "Skopírujte API token poskytnutý BotFather",
+      "Pošlite správu novému botovi pre aktiváciu konverzácie",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Ako získať svoje Telegram chat ID:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\"userinfobot\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Otvorte Telegram a vyhľadajte "userinfobot"',
+      "Pošlite botovi akúkoľvek správu",
+      "Bot odpovie vašimi informáciami vrátane chat ID",
+      "Skopírujte svoje chat ID",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle: "Potrebujete pomoc s nastavením tokenu bota a chat ID?",
+    helpDescription: "Pozrite si video nižšie s podrobnými inštrukciami.",
+    botTokenLabel: "Token Telegram bota",
+    botTokenPlaceholder: "Zadajte token bota od BotFather",
+    botTokenExample: "Príklad: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Vaše Telegram chat ID",
+    chatIdPlaceholder: "Zadajte svoje Telegram chat ID",
+    chatIdDescription: "Získajte odoslaním správy @userinfobot v Telegrame",
+    languageLabel: "Jazyk upozornení",
+    languagePlaceholder: "Vyberte jazyk správ Telegramu",
     languages: {
       en: "Angličtina",
       de: "Nemčina",
       fr: "Francúzština",
-      es: "Slovenčina",
-      it: "Slovenčina"
+      es: "Španielčina",
+      it: "Taliančina",
+      nl: "Holandčina",
+      sv: "Švédčina",
+      da: "Dánčina",
+      nb: "Nórčina",
+      fi: "Fínčina",
+      hi: "Hindčina",
+      ru: "Ruština",
+      cs: "Čeština",
+      pl: "Poľština",
+      sk: "Slovenčina",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Náhľad upozornenia na Telegram",
+    carAlertTitle: "Nové upozornenie na auto!",
+    priceLabel: "Cena: {{price}}",
+    kilometresLabel: "Najazdené: {{kms}}",
+    locationLabel: "Lokalita: {{location}}",
+    viewListing: "Zobraziť inzerát →",
     errors: {
       token: "Token Telegram bota je povinný",
-      chatId: "Telegram chat ID is required",
-      language: "Je potrebné vybrať jazyk upozornenia.",
-      username: "Používateľské meno na Telegrame je povinné",
-      chatid: "Telegram chat ID je povinný"
+      chatId: "Telegram chat ID je povinné",
+      language: "Jazyk upozornení je povinný",
+      username: "Telegram používateľské meno je povinné",
     },
+
     actions: {
-      previous: "Predchádzajúce",
-      continue: "Pokračovať"
+      previous: "Predchádzajúci",
+      continue: "Pokračovať",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Príklad: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Token Telegram bota",
-    bottokenplaceholder: "Zadajte svoj token bota od BotFather",
-    caralerttitle: "🚗 Nové vozidlo!",
-    chatiddescription: "Toto získate, ak napíšete správu @userinfobot na Telegrame.",
-    chatidlabel: "Váš Telegram Chat ID",
-    chatidplaceholder: "Zadajte svoj Telegram chat ID",
-    chatidsteps: {
-      0: "Otvorte Telegram a vyhľadajte \"userinfobot\"",
-      1: "Pošli akúkoľvek správu botovi",
-      2: "Bot vám odpovie s vašimi informáciami vrátane vášho Chat ID",
-      3: "Skopírujte svoje ID chatu"
-    },
-    chatidtitle: "Ako získať svoj Telegram Chat ID:",
-    confirmcontact: "Začal som chat s botom a poslal správu.",
-    contactbotinstruction: "Začnite chat s naším Telegram botom kliknutím na odkaz nižšie a pošlite mu správu:",
-    contactbotnote: "Toto je potrebné na prijímanie upozornení na autá. Ak ste na počítači, môžete naskenovať QR kód.",
-    helpdescription: "Pozrite si video nižšie pre podrobný návod krok za krokom.",
-    helptitle: "Potrebujete pomoc s nastavením vášho Telegram Bot Tokenu a Chat ID?",
-    kilometreslabel: "Kilometre: {{kms}}",
-    languagelabel: "Jazyk upozornení",
-    languageplaceholder: "Vyberte jazyk správy pre Telegram",
-    locationlabel: "Poloha: {{location}}",
-    previewtitle: "Náhľad upozornení Telegram",
-    pricelabel: "Cena: {{price}}",
-    setupsteps: {
-      0: "Otvorte Telegram a vyhľadajte \"BotFather\"",
-      1: "Začnite chat s BotFather kliknutím na „Štart“",
-      2: "Napíš /newbot a postupuj podľa pokynov na vytvorenie nového bota",
-      3: "Zvoľte meno pre svojho bota",
-      4: "Zvoľte používateľské meno pre svojho bota (musí končiť na 'bot')",
-      5: "Skopírujte API token poskytnutý BotFatherom",
-      6: "Pošlite správu svojmu novému botovi, aby ste aktivovali chat"
-    },
-    setuptitle: "Pokyny na nastavenie:",
-    subheading: "Nastavte svojho Telegram bota",
-    usernamedescription: "Toto je používateľské meno na vašom Telegram účte (bez znaku @).",
-    videodescription: "Pozrite si video nižšie pre podrobný návod krok za krokom.",
-    videoprompt: "Potrebujete pomoc s nastavením vášho Telegram Bot Tokenu a Chat ID?",
-    viewlisting: "Zobraziť inzerát →"
+    contactBotInstruction:
+      "Kliknite na odkaz nižšie pre začatie konverzácie s naším Telegram botom a odoslanie správy:",
+    contactBotNote:
+      "Toto je potrebné pre prijímanie upozornení na autá. Ak ste na počítači, naskenujte QR kód.",
+    confirmContact: "Začal som konverzáciu s botom a odoslal som správu",
   },
   review: {
-    title: "Skontrolujte svoje predplatné",
-    description: "Pred pokračovaním k platbe si, prosím, skontrolujte podrobnosti svojho predplatného.",
+    title: "Súhrn vášho predplatného",
+    description: "Pred platbou skontrolujte detaily predplatného.",
+
     personal: {
       title: "Osobné údaje",
       name: "Meno",
-      email: "E-mail"
+      email: "E-mail",
     },
+
     monitoring: {
-      title: "Nastavenia monitorovania",
-      websites: "Webstránky",
+      title: "Nastavenia sledovania",
+      websites: "Weby",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook URL",
-      updatefrequency: "Frekvencia aktualizácií"
+      updateFrequency: "Frekvencia aktualizácií",
     },
+
     specs: {
       title: "Špecifikácie auta",
       brand: "Značka",
       model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Dojazd (km)",
-      price: "Cenové rozpätie (€)",
-      fueltype: "Typ paliva",
-      yearrange: "Rozsah rokov"
+      fuelType: "Palivo",
+      yearRange: "Rok",
+      mileage: "Najazdené (km)",
+      price: "Cena (€)",
     },
+
     notification: {
       title: "Nastavenia upozornení",
-      telegram: "Telegram Bot",
-      language: "Jazyk upozornení"
+      telegram: "Telegram bot",
+      language: "Jazyk upozornení",
     },
+
     summary: {
       title: "Súhrn predplatného",
       base: "Základné predplatné",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Spolu (mesačne)",
-      extrawebsites: "Ďalšie webové stránky",
-      frequencyupgrade: "Aktualizácia frekvencie"
+      extraWebsites: "Ďalšie weby",
+      frequencyUpgrade: "Upgrade frekvencie",
+      total: "Celkom (mesačne)",
     },
+
     terms: {
-      checkbox: "Súhlasím s",
-      tos: "Podmienky poskytovania služby",
+      checkbox: "Súhlasím",
+      tos: "Podmienky používania",
       privacy: "Zásady ochrany osobných údajov",
-      note: "Vaše predplatné sa bude automaticky obnovovať každý mesiac. Predplatné môžete kedykoľvek zrušiť.",
-      error: "Musíte súhlasiť so zmluvnými podmienkami"
+      note: "Vaše predplatné bude automaticky predlžované mesačne. Môžete kedykoľvek zrušiť.",
+      error: "Musíte súhlasiť s podmienkami používania",
     },
+
     actions: {
-      previous: "Predchádzajúce",
-      submit: "Prejsť k platbe"
-    }
+      previous: "Predchádzajúci",
+      submit: "Prejsť k platbe",
+    },
   },
   faq: {
     title: "Často kladené otázky",
     subtitle: "Nájdite odpovede na najčastejšie otázky o našej službe.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "Rýchlosť upozornení závisí od zvolenej frekvencie aktualizácií. Pri predvolenom hodinovom pláne dostanete upozornenia do jednej hodiny od zverejnenia nového inzerátu. Pre takmer okamžité upozornenia (v priebehu niekoľkých minút po zverejnení) môžete prejsť na naše častejšie aktualizačné plány.",
-        question: "Ako rýchlo dostanem upozornenia po zverejnení novej ponuky?"
+    contactPrompt: "Máte stále otázky?",
+    contactLink: "Kontaktujte podporu",
+    questions: [
+      {
+        question:
+          "Ako rýchlo dostanem upozornenie po zverejnení nového inzerátu?",
+        answer:
+          "Rýchlosť upozornenia závisí od zvolenej frekvencie aktualizácií. S hodinovým plánom dostanete upozornenie do hodiny od zverejnenia. Pre takmer okamžité upozornenia (do niekoľkých minút) upgradujte na častejšie plány.",
       },
-      1: {
-        answer: "Áno! Môžete si vytvoriť viacero vyhľadávacích profilov s rôznymi kritériami. Každý profil sa počíta ako samostatné predplatné, ale všetky ich môžete spravovať z jedného účtu. Je to ideálne, ak hľadáte rôzne typy vozidiel súčasne.",
-        question: "Môžem naraz sledovať viaceré rôzne typy áut?"
+      {
+        question: "Môžem súčasne sledovať viacero rôznych modelov áut?",
+        answer:
+          "Áno! Môžete vytvoriť viac vyhľadávacích profilov s rôznymi kritériami. Každý profil sa počíta ako samostatné predplatné, ale spravujete ich všetky z jedného účtu.",
       },
-      2: {
-        answer: "Momentálne podporujeme hlavné platformy na inzerciu áut vrátane AutoTrader, CarGurus, Cars.com a Facebook Marketplace. Neustále rozširujeme našu ponuku, aby sme podľa požiadaviek používateľov a regionálnej obľúbenosti zahrnuli viac webových stránok.",
-        question: "Ktoré webové stránky momentálne podporujete?"
+      {
+        question: "Ktoré weby momentálne podporujete?",
+        answer:
+          "Momentálne podporujeme veľké platformy ako AutoTrader, CarGurus, Cars.com a Facebook Marketplace. Na požiadanie neustále pridávame nové weby.",
       },
-      3: {
-        answer: "Vôbec nie! Poskytujeme podrobné návody krok za krokom s textovými aj video inštrukciami, ktoré vám pomôžu nastaviť Telegram bota. Väčšina používateľov zvládne nastavenie za menej než 5 minút, aj bez technických znalostí.",
-        question: "Potrebujem technické znalosti na používanie Telegram bota?"
+      {
+        question: "Potrebujem technické zručnosti pre Telegram bota?",
+        answer:
+          "Nie! Poskytujeme podrobné inštrukcie v texte aj videu. Väčšina používateľov nastaví bota do 5 minút.",
       },
-      4: {
-        answer: "Áno, svoje kritériá vyhľadávania môžete kedykoľvek upraviť vo svojom účte na ovládacom paneli. Zmeny sa prejavia okamžite a vaše notifikácie sa podľa toho aktualizujú bez akéhokoľvek prerušenia služby.",
-        question: "Môžem zmeniť kritériá vyhľadávania po nastavení predplatného?"
+      {
+        question:
+          "Môžem zmeniť vyhľadávacie kritériá po nastavení predplatného?",
+        answer:
+          "Áno, kritériá môžete kedykoľvek zmeniť v ovládacom paneli. Zmeny sa prejavia okamžite.",
       },
-      5: {
-        answer: "Svoje predplatné môžete kedykoľvek zrušiť v ovládacom paneli svojho účtu. Prejdite do sekcie „Predplatné“, vyberte predplatné, ktoré chcete zrušiť, a kliknite na tlačidlo „Zrušiť predplatné“. Vaša služba zostane aktívna až do konca aktuálneho fakturačného obdobia.",
-        question: "Ako zruším svoje predplatné?"
-      }
-    },
-    contactlink: "Kontaktujte náš tím podpory",
-    contactprompt: "Stále máte otázky?"
+      {
+        question: "Ako zrušiť predplatné?",
+        answer:
+          'Predplatné môžete kedykoľvek zrušiť v sekcii "Predplatné" v ovládacom paneli. Služba zostane aktívna do konca aktuálneho fakturačného obdobia.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
+    brandDescription:
+      "Váš osobný asistent na nájdenie ideálnej ponuky ojazdeného auta v správny čas.",
+    quickLinks: "Rýchle odkazy",
     features: "Funkcie",
-    pricing: "Cenník",
-    faq: "Často kladené otázky",
-    getStarted: "Get Started",
-    legal: "Právne",
+    pricing: "Ceny",
+    faq: "FAQ",
+    getStarted: "Začať",
+    legal: "Právne informácie",
     terms: "Podmienky používania",
     privacy: "Zásady ochrany osobných údajov",
-    cookies: "Zásady používania súborov cookie",
+    cookies: "Zásady cookies",
     gdpr: "Súlad s GDPR",
-    contact: "Kontakt",
+    contact: "Kontakty",
     email: "support@amiquus.com",
     telegram: "Kontaktujte nás na Telegrame",
     copyright: "Všetky práva vyhradené.",
@@ -694,207 +535,151 @@ export const sk = {
     blog: "Blog",
     careers: "Kariéra",
     support: "Podpora",
-    branddescription: "Váš osobný asistent na hľadanie tej najlepšej ponuky jazdeného auta v správnom čase.",
-    brandtitle: "Amiquus",
-    getstarted: "Začať",
-    quicklinks: "Rýchle odkazy"
   },
   login: {
-    title: "Prihláste sa do svojho účtu",
-    description: "Zadajte svoj e-mail a heslo pre prístup k svojmu ovládaciemu panelu.",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    title: "Prihlásiť sa do účtu",
+    description: "Zadajte e-mail a heslo pre prístup k ovládaciemu panelu",
+    emailLabel: "E-mail",
+    passwordLabel: "Heslo",
+    loginButton: "Prihlásiť sa",
+    loggingIn: "Prihlasovanie...",
+    loginWithGoogle: "Prihlásiť sa cez Google",
     or: "alebo",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Nemáte účet?",
+    registerLink: "Registrovať",
+    successTitle: "Úspešné prihlásenie",
+    successMessage: "Úspešne ste sa prihlásili.",
+    errorTitle: "Chyba prihlásenia",
+    genericError: "Skontrolujte údaje a skúste to znova.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Zadajte platnú e-mailovú adresu.",
-      shortpassword: "Heslo musí mať aspoň 6 znakov"
+      invalidEmail: "Zadajte platnú e-mailovú adresu",
+      shortPassword: "Heslo musí mať aspoň 6 znakov",
     },
-    emaillabel: "E-mail",
-    errortitle: "Prihlásenie zlyhalo",
-    genericerror: "Skontrolujte svoje prihlasovacie údaje a skúste to znova.",
-    loggingin: "Prihlasovanie...",
-    loginbutton: "Prihlásiť sa",
-    loginwithgoogle: "Prihlásiť sa cez Google",
-    noaccount: "Nemáte účet?",
-    passwordlabel: "Heslo",
-    registerlink: "Zaregistrovať sa",
-    successmessage: "Boli ste úspešne prihlásený.",
-    successtitle: "Prihlásenie úspešné"
   },
   register: {
     title: "Vytvoriť účet",
-    description: "Zaregistrujte sa a začnite sledovať svoje vysnívané auto",
-    google: "Zaregistrujte sa cez Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
+    description: "Registrujte sa a začnite hľadať auto svojich snov",
+    google: "Registrovať cez Google",
+    orContinue: "Alebo pokračovať",
+    firstName: "Meno",
+    lastName: "Priezvisko",
     username: "Používateľské meno",
     email: "E-mail",
     password: "Heslo",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "Potvrdiť heslo",
+    termsNotice: "Súhlasím",
+    termsOfService: "Podmienky používania",
+    privacyPolicy: "Zásady ochrany osobných údajov",
+    createBtn: "Vytvoriť účet",
+    alreadyHave: "Už máte účet?",
     login: "Prihlásiť sa",
     and: "a",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Chýbajúce polia",
+        desc: "Vyplňte všetky povinné polia",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Neplatné používateľské meno",
+        desc: "Používateľské meno musí byť alfanumerické a 3–20 znakov",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Heslá sa nezhodujú",
+        desc: "Uistite sa, že sa hesla zhodujú",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Podmienky neboli prijaté",
+        desc: "Pre pokračovanie musíte prijať podmienky používania a zásady ochrany osobných údajov",
       },
       success: {
         title: "Registrácia úspešná",
-        desc: "Vitajte v AMIQUUS! Budete presmerovaní na overenie vašej e-mailovej adresy."
+        desc: "Vitajte v Amiquus! Budete presmerovaní na overenie e-mailu.",
       },
       failure: {
         title: "Registrácia zlyhala",
-        desc: "Skontrolujte svoje údaje a skúste to znova."
+        desc: "Skontrolujte údaje a skúste to znova",
       },
-      invalidusername: {
-        desc: "Používateľské meno musí byť alfanumerické a mať 3 až 20 znakov.",
-        title: "Neplatné používateľské meno"
-      },
-      missingfields: {
-        desc: "Prosím, vyplňte všetky povinné polia",
-        title: "Chýbajúce polia"
-      },
-      passwordmismatch: {
-        desc: "Uistite sa, že sa vaše heslá zhodujú.",
-        title: "Heslá sa nezhodujú"
-      },
-      termsnotaccepted: {
-        desc: "Musíte súhlasiť s podmienkami a zásadami ochrany osobných údajov, aby ste mohli pokračovať.",
-        title: "Podmienky neboli akceptované"
-      }
     },
-    alreadyhave: "Už máte účet?",
-    confirmpassword: "Potvrďte heslo",
-    createbtn: "Vytvoriť účet",
-    firstname: "Meno",
-    lastname: "Priezvisko",
-    orcontinue: "Alebo pokračujte s",
-    privacypolicy: "Zásady ochrany osobných údajov",
-    termsnotice: "Súhlasím s",
-    termsofservice: "Podmienky používania"
   },
   verifyEmail: {
-    title: "Overte svoj e-mail",
-    description: "Overovací kód bol odoslaný na váš e-mail.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "Overiť e-mail",
+    description: "Na váš e-mail sme odoslali overovací kód.",
+    codeLabel: "Overovací kód",
+    verifyButton: "Overiť e-mail",
+    updateEmailLabel: "Aktualizovať e-mail",
+    updateEmailButton: "Aktualizovať e-mail",
+    resendButton: "Znovu odoslať kód",
+    resendCountdown: "Kód môžete znovu odoslať za {{seconds}}s",
+    footerNote: "Kód nedorazil? Skontrolujte spam priečinok.",
     toast: {
-      verified: "E-mail bol overený",
+      verified: "E-mail overený",
       failed: "Overenie zlyhalo",
       resent: "Overovací kód bol znovu odoslaný",
       error: "Chyba",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-mail aktualizovaný",
-      entervalidemail: "Zadajte platnú e-mailovú adresu.",
-      invalidemail: "Neplatný e-mail",
-      sameemail: "Rovnaký e-mail",
-      sameemaildesc: "Nový e-mail je rovnaký ako aktuálny e-mail."
+      invalidEmail: "Neplatný e-mail",
+      enterValidEmail: "Zadajte platnú e-mailovú adresu",
+      sameEmail: "Rovnaký e-mail",
+      sameEmailDesc: "Nový e-mail je rovnaký ako aktuálny",
+      emailUpdated: "E-mail aktualizovaný",
     },
-    codelabel: "Overovací kód",
-    footernote: "Nedostali ste kód? Skontrolujte si priečinok so spamom.",
-    resendbutton: "Znova odoslať kód",
-    resendcountdown: "Kód môžete odoslať znova o {{seconds}}s",
-    updateemailbutton: "Aktualizovať e‑mail",
-    updateemaillabel: "Aktualizovať e-mail",
-    verifybutton: "Overte e-mail"
   },
   dashboardPayment: {
-    add: "Pridať spôsob platby",
-    description: "Pridajte novú kreditnú alebo debetnú kartu na platby za predplatné.",
-    processing: "Spracováva sa...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "Pridať platobnú metódu",
+    description:
+      "Pridajte novú kreditnú alebo debetnú kartu pre platby predplatného.",
+    processing: "Spracúva sa...",
+    errorTitle: "Chyba pridania platobnej metódy",
+    errorMessage: "Vyskytla sa neočakávaná chyba",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
+      title: "Chyba",
+      description: "Nie je možné inicializovať nastavenia platieb",
     },
-    errormessage: "Vyskytla sa neočakávaná chyba",
-    errortitle: "Chyba pri pridávaní platobnej metódy",
-    initerror: {
-      description: "Nepodarilo sa inicializovať nastavenie platby",
-      title: "Chyba"
-    }
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Roky",
+      priceRange: "Cena",
+      websites: "Weby",
+      updates: "Aktualizácie",
+      language: "Jazyk",
+      price: "Cena",
+      edit: "Upraviť",
+      cancelAlert: "Zrušiť upozornenie",
+      cancelTitle: "Zrušiť upozornenie na auto",
+      cancelDescription:
+        "Naozaj chcete zrušiť upozornenie pre {{brand}} {{model}}? Tým sa zastavia všetky upozornenia a budete musieť upozornenie nastaviť znova.",
+      keepMyAlert: "Ponechať moje upozornenie",
+      confirmCancel: "Zrušiť upozornenie",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Expiruje",
+      default: "Predvolená",
+      setAsDefault: "Nastaviť ako predvolenú",
+      remove: "Odstrániť",
+      setDefaultTitle: "Nastaviť predvolenú platobnú metódu",
+      setDefaultDescription:
+        "Chcete nastaviť kartu {{brand}} končiacu na {{last4}} ako predvolenú platobnú metódu? Táto karta bude použitá pre všetky budúce platby.",
+      removeTitle: "Odstrániť platobnú metódu",
+      removeDescription:
+        "Naozaj chcete odstrániť kartu {{brand}} končiacu na {{last4}}?",
+      removeWarning:
+        "Toto je vaša predvolená platobná metóda a odstránenie môže ovplyvniť aktívne predplatné.",
+      cancel: "Zrušiť",
+      confirmRemove: "Odstrániť kartu",
+    },
   },
   profile: {
     tabs: {
       alerts: "Moje upozornenia",
-      payments: "Spôsoby platby"
+      payments: "Platobné metódy",
     },
     sidebar: {
-      memberSince: "Member since",
+      memberSince: "Člen od",
       subscriptions: "Predplatné",
-      methods: "Spôsoby platby",
+      methods: "Platobné metódy",
       account: "Nastavenia účtu",
       privacy: "Súkromie a bezpečnosť",
       logout: "Odhlásiť sa",
-      membersince: "Člen od"
     },
     account: {
       title: "Nastavenia účtu",
@@ -903,838 +688,746 @@ export const sk = {
       email: "E-mail",
       username: "Používateľské meno",
       cancel: "Zrušiť",
-      save: "Uložiť zmeny"
+      save: "Uložiť zmeny",
     },
     security: {
       title: "Súkromie a bezpečnosť",
-      desc: "Spravujte svoje bezpečnostné nastavenia a nastavenia súkromia.",
+      desc: "Spravujte nastavenia bezpečnosti a súkromia.",
       current: "Aktuálne heslo",
       new: "Nové heslo",
-      confirm: "Potvrďte nové heslo",
-      update: "Aktualizovať heslo"
+      confirm: "Potvrdiť nové heslo",
+      update: "Aktualizovať heslo",
     },
     logout: {
       title: "Odhlásiť sa",
-      desc: "Ste si istý, že sa chcete odhlásiť zo svojho účtu?",
-      success: "Boli ste úspešne odhlásený."
+      desc: "Naozaj sa chcete odhlásiť?",
+      success: "Úspešne ste sa odhlásili.",
     },
     alerts: {
-      title: "Odobery upozornení na autá",
-      desc: "Spravujte svoje upozornenia na vyhľadávanie áut a nastavenia notifikácií.",
+      title: "Predplatné upozornení na autá",
+      desc: "Spravujte svoje upozornenia a nastavenia upozornení.",
       add: "Pridať nové upozornenie",
       none: "Nemáte žiadne aktívne upozornenia na autá.",
       cta: "Vytvorte svoje prvé upozornenie",
-      warning: "⚠️ Zmeny vášho predplatného sa prejavia v nasledujúcom fakturačnom období a až po úspešnej platbe. Ak platba zlyhá, vaše aktuálne nastavenie upozornení zostane nezmenené."
+      warning:
+        "⚠️ Zmeny predplatného sa prejavia v ďalšom fakturačnom cykle a len po úspešnej platbe. Pri neúspešnej platbe zostane aktuálna konfigurácia.",
     },
     payments: {
-      title: "Spôsoby platby",
-      desc: "Spravujte svoje platobné metódy pre fakturáciu predplatného.",
+      title: "Platobné metódy",
+      desc: "Spravujte platobné metódy pre predplatné.",
       none: "Nemáte uložené žiadne platobné metódy.",
-      encrypted: "Vaše platobné údaje sú šifrované a bezpečne uložené."
-    }
+      encrypted: "Vaše platobné údaje sú šifrované a bezpečne uložené.",
+    },
   },
   setupAlerts: {
-    title: "Nastavte si upozornenia na svoj automobil",
-    subtitle: "Nakonfigurujte svojho Telegram bota, aby ste dostávali upozornenia o svojom vysnívanom aute",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Spustiť moju službu upozornenia na auto",
+    title: "Nastaviť upozornenia na autá",
+    subtitle:
+      "Nastavte Telegram bota pre prijímanie upozornení na vaše vysnívané auto",
+    basicPlan: "Základný plán",
+    baseTitle: "79,99 €/mesiac",
+    button: "Spustiť službu upozornení na autá",
     cancel: "Zrušiť kedykoľvek",
     toasts: {
       terms: {
-        title: "Podmienky neboli akceptované",
-        description: "Musíte súhlasiť s podmienkami služby, aby ste mohli pokračovať."
+        title: "Podmienky neboli prijaté",
+        description: "Pre pokračovanie musíte prijať podmienky používania",
       },
       success: {
-        title: "Predplatné bolo vytvorené",
-        description: "Vaše predplatné bolo úspešne vytvorené"
+        title: "Predplatné vytvorené",
+        description: "Vaše predplatné bolo úspešne vytvorené",
       },
       error: {
-        title: "Chyba pri vytváraní predplatného"
+        title: "Chyba vytvorenia predplatného",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
+        title: "Vyžaduje sa kontakt s botom",
+        description:
+          "Pre prijímanie upozornení na autá musíte začať konverzáciu s naším Telegram botom a odoslať správu. Postupujte podľa inštrukcií nižšie.",
       },
-      contactbot: {
-        description: "Aby ste mohli dostávať upozornenia na autá, musíte začať chat s naším Telegram botom a poslať správu. Postupujte podľa pokynov nižšie na kontaktovanie bota.",
-        title: "Vyžaduje sa kontaktný bot"
-      }
     },
-    basetitle: "79,99 $/mesiac",
-    basicplan: "Základný balík"
   },
   loginPrompt: {
-    title: "Prihlásenie je vyžadované",
-    description: "Pre pokračovanie musíte byť prihlásený. Prihláste sa alebo sa zaregistrujte.",
-    register: "Zaregistrovať sa",
-    login: "Prihlásenie"
+    title: "Vyžaduje sa prihlásenie",
+    description:
+      "Pre pokračovanie musíte byť prihlásení. Prihláste sa alebo registrujte.",
+    register: "Registrovať",
+    login: "Prihlásiť sa",
   },
   waitlistPrompt: {
-    title: "Pridajte sa na čakaciu listinu",
-    description: "Momentálne máme plnú kapacitu. Pridajte sa na čakací zoznam, aby ste boli informovaní, keď sa uvoľní miesto.",
-    button: "Pridajte sa na čakaciu listinu"
+    title: "Pripojiť sa k čakacej listine",
+    description:
+      "Momentálne sme plní. Pripojte sa k čakacej listine, aby ste boli informovaní, keď sa uvoľní miesto.",
+    button: "Pripojiť sa k čakacej listine",
   },
   subscription: {
-    title: "Podrobnosti predplatného",
-    subTitle: "Edit your subscription details below",
-    error: "Vrátiť sa na nástenku",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Svoje predplatné môžete kedykoľvek pozastaviť. Keď pozastavíte svoje predplatné, vaše upozornenia na auto sa zastavia, kým ich znova neaktivujete.",
+    title: "Detaily predplatného",
+    subTitle: "Upravte detaily predplatného nižšie",
+    error: "Späť na ovládací panel",
+    notFound: "Predplatné nenájdené",
+    notFoundSub: "Späť na ovládací panel",
+    description:
+      "Predplatné môžete kedykoľvek pozastaviť. Pri pozastavení sa upozornenia zastavia do opätovnej aktivácie.",
     form: {
       status: {
         label: "Stav",
         placeholder: "Vyberte stav",
         active: "Aktívne",
-        paused: "Pozastavené"
-      }
+        paused: "Pozastavené",
+      },
     },
     actions: {
       save: "Uložiť zmeny",
-      back: "Späť"
+      back: "Späť",
     },
     toasts: {
       success: {
-        title: "Predplatné bolo aktualizované",
-        description: "Vaše predplatné pre {{brand}} {{model}} bolo úspešne aktualizované."
+        title: "Predplatné aktualizované",
+        description:
+          "Vaše predplatné pre {{brand}} {{model}} bolo úspešne aktualizované",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Nie je možné aktualizovať predplatné",
+        description:
+          "Nie je možné pozastaviť a aktualizovať cenu predplatného súčasne. Vyberte jedno.",
       },
       error: {
-        title: "Chyba pri aktualizácii predplatného"
+        title: "Chyba aktualizácie predplatného",
       },
-      priceerror: {
-        description: "Predplatné nemôžete naraz pozastaviť aj upraviť cenu. Musíte ho buď pozastaviť, alebo upraviť cenu.",
-        title: "Nie je možné aktualizovať predplatné"
-      }
     },
-    notfound: "Predplatné nebolo nájdené",
-    notfoundsub: "Späť na nástenku",
-    subtitle: "Upravte svoje údaje o predplatnom nižšie"
   },
   about: {
-    title: "O spoločnosti Amiquus",
-    description: "Revolucionizujeme spôsob, akým ľudia nachádzajú svoje ideálne jazdené auto, tým, že prinášame pokročilú monitorovaciu technológiu pre každého.",
+    title: "O nás",
+    description:
+      "Revolučná hľadanie ideálneho ojazdeného auta s pokročilým sledovaním",
     meta: {
-      title: "O nás | Amiquus - Služba na sledovanie inzerátov áut",
-      description: "Zistite viac o AMIQUUS, našom poslaní revolučne zmeniť nákup ojazdených áut a o tíme, ktorý stojí za našou inteligentnou službou monitorovania automobilových inzerátov."
+      title: "O nás | Amiquus - Služba sledovania inzerátov áut",
+      description:
+        "Zoznámte sa s Amiquus, našou misiou a tímom za inteligentnou službou sledovania inzerátov áut.",
     },
     story: {
       heading: "Náš príbeh",
-      paragraphs: {
-        0: "AMIQUUS vznikol v roku 2023, keď náš zakladateľ Alex strávil mesiace obnovovaním stránok s inzerciou áut v snahe nájsť konkrétny vzácny model za dobrú cenu. Po tom, čo premeškal viacero príležitostí kvôli oneskoreným notifikáciám, si uvedomil, že musí existovať lepší spôsob.",
-        1: "V spolupráci s malým tímom vývojárov a automobilových nadšencov Alex vytvoril monitorovací systém, ktorý dokázal súčasne sledovať inzeráty na viacerých stránkach a okamžite posielať notifikácie, keď sa objavili zodpovedajúce ponuky.",
-        2: "To, čo sa začalo ako osobný projekt, si rýchlo získalo záujem priateľov a rodiny, a začiatkom roku 2025 vznikol AMIQUUS ako služba dostupná pre každého. Dnes pomáhame kupujúcim áut po celom Slovensku šetriť čas a nájsť lepšie ponuky vďaka našej inteligentnej monitorovacej technológii."
-      }
+      paragraphs: [
+        "Amiquus začal v roku 2023, keď zakladateľ Alex mesiace obnovoval weby pri hľadaní vzácneho modelu za dobrú cenu. Po zmeškaných príležitostiach si uvedomil, že musí existovať lepší spôsob.",
+        "S malým tímom vývojárov a automobilových nadšencov Alex vytvoril systém na súbežné sledovanie viacerých webov a okamžité upozornenia.",
+        "Projekt rýchlo rástol a na začiatku roku 2025 sa Amiquus otvoril pre všetkých. Dnes pomáhame kupujúcim po celej krajine šetriť čas a nachádzať lepšie ponuky.",
+      ],
     },
     mission: {
-      heading: "Naše poslanie",
-      items: {
-        0: {
-          description: "Odstráňte potrebu neustále obnovovať viacero webových stránok automatizovaním vyhľadávacieho procesu a prijímaním včasných notifikácií.",
-          title: "Ušetrite čas"
+      heading: "Naša misia",
+      items: [
+        {
+          title: "Ušetrite čas",
+          description:
+            "Odstráňte potrebu neustáleho obnovovania webov s automatizovaným hľadaním a včasnými upozorneniami.",
         },
-        1: {
-          description: "Buďte prví, kto sa dozvie o skvelej ponuke, čo vám dáva výhodu na konkurenčnom trhu, kde je čas rozhodujúci.",
-          title: "Nájdite lepšie ponuky"
+        {
+          title: "Nájdite lepšie ponuky",
+          description:
+            "Buďte prvý, kto sa dozvie o skvelých ponukách a získajte výhodu na konkurenčnom trhu.",
         },
-        2: {
-          description: "Robte informované rozhodnutia vďaka komplexnému monitorovaniu naprieč viacerými overenými platformami na predaj áut.",
-          title: "Nakupujte s istotou"
-        }
-      }
+        {
+          title: "Kupujte s istotou",
+          description:
+            "Prijímajte informované rozhodnutia s úplným prehľadom viacerých dôveryhodných platforiem.",
+        },
+      ],
     },
     team: {
       heading: "Náš tím",
-      members: {
-        0: {
-          bio: "Bývalý softvérový inžinier s vášňou pre autá a tvorbu inovatívnych riešení.",
-          name: "Alex Morgan, tu je návod",
-          role: "Zakladateľ a generálny riaditeľ"
+      members: [
+        {
+          name: "Alex Morgan",
+          role: "Zakladateľ a CEO",
+          bio: "Bývalý programátor, nadšenec pre autá a inovatívne riešenia.",
         },
-        1: {
-          bio: "Odborník na dátovú vedu so špecializáciou na web scraping a systémy na získavanie informácií.",
-          name: "Sarah Chen, tu je návod",
-          role: "Technický riaditeľ"
+        {
+          name: "Sarah Chen",
+          role: "Technický riaditeľ",
+          bio: "Expert na dáta, špecializujúci sa na web scraping.",
         },
-        2: {
-          bio: "Full-stack inžinier so skúsenosťami s vývojom vysokovýkonných notifikačných systémov.",
+        {
           name: "Marcus Lee",
-          role: "Hlavný vývojár"
+          role: "Vedúci vývoja",
+          bio: "Full-stack inžinier s skúsenosťami s vysoko výkonnými systémami upozornení.",
         },
-        3: {
-          bio: "Bývalý predajca áut, zameraný na pomoc zákazníkom pri hľadaní ich ideálneho vozidla.",
-          name: "Elena Rodriguez, tu je návod",
-          role: "Úspech zákazníka"
-        }
-      }
+        {
+          name: "Elena Rodriguez",
+          role: "Podpora zákazníkov",
+          bio: "Bývalý predajca áut, oddaný nájdeniu ideálneho auta.",
+        },
+      ],
     },
     join: {
-      heading: "Pridaj sa k nášmu tímu",
-      description: "Stále hľadáme talentovaných ľudí, ktorých nadchýna technológia a chcú revolučne zmeniť spôsob, akým si ľudia kupujú autá. Pozrite si naše aktuálne voľné pozície a pridajte sa k našej misii.",
-      cta: "Zobraziť voľné pozície"
+      heading: "Pripojte sa k tímu",
+      description:
+        "Vždy hľadáme vášnivé talenty na revolúciu v technológiách a nákupe áut.",
+      cta: "Zobraziť otvorené pozície",
     },
     questions: {
       heading: "Máte otázky?",
-      description: "Zistite viac o tom, ako AMIQUUS funguje, prezrite si možnosti cien alebo kontaktujte náš tím podpory.",
+      description:
+        "Dozveďte sa viac o fungovaní služby, cenách alebo kontaktujte podporu.",
       links: {
         faq: "Navštívte FAQ",
         pricing: "Zobraziť ceny",
-        support: "Kontaktujte podporu"
-      }
-    }
+        support: "Kontaktovať podporu",
+      },
+    },
   },
   terms: {
     metaTitle: "Podmienky používania | Amiquus",
-    metaDescription: "Prečítajte si Podmienky služby AMIQUUS, ktoré upravujú vaše používanie našej služby monitorovania a notifikácií o inzerátoch na autá.",
+    metaDescription:
+      "Zoznámte sa s podmienkami používania Amiquus, ktoré upravujú používanie služby sledovania inzerátov áut.",
     title: "Podmienky používania",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Posledná aktualizácia: 21. mája 2025",
     sections: {
-      1: {
-        id: "dohoda",
-        heading: "Súhlas s podmienkami",
-        paragraphs: {
-          0: "Tieto Podmienky poskytovania služieb predstavujú právne záväznú dohodu medzi vami a spoločnosťou AMIQUUS, ktorá sa týka vášho prístupu k našej webovej stránke a službám a ich používania.",
-          1: "Prístupom k našim službám alebo ich používaním súhlasíte s týmito Podmienkami. Ak nesúhlasíte s ktoroukoľvek časťou podmienok, nesmiete službu používať."
-        },
-        list: [
-        ]
+      "1": {
+        id: "agreement",
+        heading: "Prijatie podmienok",
+        paragraphs: [
+          "Tieto podmienky používania predstavujú právne záväznú zmluvu medzi vami a Amiquus ohľadom používania našej webovej stránky a služieb.",
+          "Používaním našich služieb tieto podmienky prijímate. Ak s akoukoľvek časťou nesúhlasíte, nesmiete služby používať.",
+        ],
+        list: [],
       },
-      2: {
-        id: "zmeny",
+      "2": {
+        id: "changes",
         heading: "Zmeny podmienok",
-        paragraphs: {
-          0: "Vyhradzujeme si právo podľa vlastného uváženia kedykoľvek upraviť alebo nahradiť tieto Podmienky. Ak bude zmena podstatná, vynaložíme primerané úsilie, aby sme poskytli aspoň 30-dňové oznámenie pred nadobudnutím účinnosti nových podmienok.",
-          1: "Pokračovaním v prístupe alebo používaní našej služby po nadobudnutí účinnosti týchto zmien súhlasíte s tým, že budete viazaní upravenými podmienkami. Ak s novými podmienkami nesúhlasíte, prestaňte službu používať."
-        },
+        paragraphs: [
+          "Vyhrazujeme si právo tieto podmienky podľa vlastného uváženia meniť alebo nahrádzať. Ak je zmena podstatná, poskytneme oznámenie aspoň 30 dní pred nadobudnutím účinnosti nových podmienok.",
+          "Pokračovaním v používaní služby po nadobudnutí účinnosti zmien prijímate revidované podmienky. Ak s novými podmienkami nesúhlasíte, musíte prestať službu používať.",
+        ],
+        list: [],
+      },
+      "3": {
+        id: "account",
+        heading: "Vzťahy s účtom",
+        paragraphs: ["Pre používanie našich služieb musíte:"],
         list: [
-        ]
+          "Byť starší ako 18 rokov",
+          "Dokončiť proces registrácie",
+          "Poskytnúť presné, úplné a aktuálne informácie",
+          "Byť zodpovedný za bezpečnosť svojho účtu a hesla",
+          "Byť zodpovedný za všetku aktivitu svojho účtu",
+          "Okamžite hlásiť neoprávnené použitie alebo zneužitie účtu",
+        ],
       },
-      3: {
-        id: "účet",
-        heading: "Podmienky účtu",
-        paragraphs: {
-          0: "Ak chcete používať naše služby, musíte:"
-        },
-        list: {
-          0: "Musíte mať aspoň 18 rokov",
-          1: "Dokončite registráciu",
-          2: "Poskytnite presné, úplné a aktuálne informácie",
-          3: "Buďte zodpovední za bezpečnosť svojho účtu a hesla.",
-          4: "Buďte zodpovední za všetky aktivity, ktoré sa uskutočnia pod vaším účtom",
-          5: "Okamžite nás informujte, ak sa dozviete o akomkoľvek narušení bezpečnosti alebo neoprávnenom použití vášho účtu."
-        }
-      },
-      4: {
-        id: "platba",
+      "4": {
+        id: "payment",
         heading: "Platobné podmienky",
-        paragraphs: {
-          0: "Amiquus ponúka predplatné služby za nasledujúcich podmienok:"
-        },
-        list: {
-          0: "Všetky poplatky sú uvedené bez dane, ktorá bude pripočítaná, ak to bude relevantné.",
-          1: "Ceny predplatného sa môžu zmeniť s 30-dňovým predchádzajúcim oznámením.",
-          2: "Predplatné sa automaticky obnovuje, pokiaľ ho nezrušíte pred začiatkom ďalšieho fakturačného obdobia.",
-          3: "Vrátenia sa posudzujú individuálne podľa našich pravidiel pre vrátenie peňazí.",
-          4: "Používame Stripe na bezpečné spracovanie platieb a všetky platobné údaje sú uložené u Stripe."
-        }
+        paragraphs: [
+          "Amiquus poskytuje služby na základe predplatného s týmito podmienkami:",
+        ],
+        list: [
+          "Všetky ceny sú bez daní, ktoré sa pridávajú podľa potreby",
+          "Ceny predplatného sa môžu zmeniť s 30-dňovým oznámením",
+          "Predplatné sa automaticky predlžujú, ak nie sú zrušené pred ďalším fakturačným cyklom",
+          "Vrátenie peňazí sa spracováva individuálne podľa zásad vrátenia",
+          "Pre bezpečné spracovanie platieb používame Stripe, všetky platobné údaje sú uložené u Stripe",
+        ],
       },
-      5: {
-        id: "kapacita",
-        heading: "Kapacitné obmedzenia",
-        paragraphs: {
-          0: "Aby bola zachovaná kvalita a spoľahlivosť služby, AMIQUUS obmedzuje počet aktívnych predplatných na 30. Keď je tento limit dosiahnutý:"
-        },
-        list: {
-          0: "Noví používatelia sa môžu pridať na náš čakací zoznam.",
-          1: "Poradie na čakacej listine je určené podľa poradia prihlásenia.",
-          2: "Keď bude kapacita dostupná, používatelia na čakacej listine budú informovaní v poradí.",
-          3: "Vyhradzujeme si právo kedykoľvek upraviť kapacitné obmedzenia."
-        }
+      "5": {
+        id: "capacity",
+        heading: "Obmedzenia kapacity",
+        paragraphs: [
+          "Pre zabezpečenie kvality služby obmedzujeme počet aktívnych predplatných na 30. Keď je limit dosiahnutý:",
+        ],
+        list: [
+          "Noví používatelia sa môžu pripojiť k čakacej listine",
+          "Miesta na čakacej listine sa určujú podľa poradia príchodu",
+          "Keď sa uvoľní miesto, informujeme používateľov v poradí",
+          "Vyhrazujeme si právo meniť obmedzenia kapacity",
+        ],
       },
-      6: {
-        id: "získavanie údajov",
+      "6": {
+        id: "scraping",
         heading: "Obmedzenia web scrapingu",
-        paragraphs: {
-          0: "Naša služba pristupuje k údajom a spracúva ich z viacerých webových stránok s inzerciou áut. Používaním našej služby beriete na vedomie, že:"
-        },
-        list: {
-          0: "Amiquus rešpektuje podmienky používania webových stránok, ktoré monitorujeme.",
-          1: "Zavádzame obmedzovanie rýchlosti a dodržiavame zásady ohľaduplného prehľadávania",
-          2: "Dostupnosť niektorých webových stránok sa môže meniť v závislosti od ich podmienok a technických opatrení.",
-          3: "Nezaručujeme úplnosť ani aktuálnosť získaných údajov."
-        }
+        paragraphs: [
+          "Naša služba získava a spracováva dáta z viacerých webov. Používaním služby uznávate:",
+        ],
+        list: [
+          "Amiquus dodržiava podmienky používania sledovaných webov",
+          "Používame obmedzenia rýchlosti a etické metódy zberu dát",
+          "Dostupnosť určitých webov sa môže zmeniť",
+          "Nezaručujeme úplnosť alebo aktuálnosť zhromaždených dát",
+        ],
       },
-      7: {
-        id: "intelektuálny",
+      "7": {
+        id: "intellectual",
         heading: "Duševné vlastníctvo",
-        paragraphs: {
-          0: "Služba AMIQUUS, vrátane jej pôvodného obsahu, funkcií a funkcionality, je a zostane výhradným vlastníctvom spoločnosti AMIQUUS. Naša služba je chránená autorskými právami, ochrannými známkami a ďalšími zákonmi Spojených štátov amerických a zahraničných krajín.",
-          1: "Naše ochranné známky a dizajn nesmú byť použité v súvislosti so žiadnym produktom alebo službou bez predchádzajúceho písomného súhlasu spoločnosti AMIQUUS."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Služba Amiquus, vrátane pôvodného obsahu, funkcií a funkčnosti, je a zostáva výhradným vlastníctvom Amiquus. Služba je chránená autorskými právami, ochrannými známkami a ďalšími zákonmi.",
+          "Bez predchádzajúceho písomného súhlasu Amiquus nesmiete používať naše ochranné známky a dizajny.",
+        ],
+        list: [],
       },
-      8: {
-        id: "ukončenie",
+      "8": {
+        id: "termination",
         heading: "Ukončenie",
-        paragraphs: {
-          0: "Váš účet môžeme okamžite ukončiť alebo pozastaviť bez predchádzajúceho upozornenia či zodpovednosti, z akéhokoľvek dôvodu, vrátane (bez obmedzenia) porušenia Podmienok.",
-          1: "Po ukončení vám okamžite zaniká právo používať službu. Ak si želáte zrušiť svoj účet, môžete jednoducho prestať službu používať alebo nás kontaktovať so žiadosťou o vymazanie účtu."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Môžeme okamžite ukončiť alebo pozastaviť váš účet bez predchádzajúceho upozornenia z akéhokoľvek dôvodu, vrátane porušenia podmienok.",
+          "Pri ukončení vaše právo na používanie služby okamžite zaniká. Ak chcete ukončiť účet, prestaňte službu používať alebo nás kontaktujte pre odstránenie.",
+        ],
+        list: [],
       },
-      9: {
-        id: "obmedzenia",
+      "9": {
+        id: "limitations",
         heading: "Obmedzenie zodpovednosti",
-        paragraphs: {
-          0: "Za žiadnych okolností nenesie AMIQUUS ani jeho riaditelia, zamestnanci, partneri, zástupcovia, dodávatelia alebo pridružené osoby zodpovednosť za akékoľvek nepriame, náhodné, osobitné, následné alebo represívne škody, vrátane, bez obmedzenia, straty zisku, údajov, použitia, dobrej povesti alebo iných nehmotných strát, ktoré vzniknú v dôsledku:"
-        },
-        list: {
-          0: "Váš prístup k službe, jej používanie alebo neschopnosť pristupovať k službe či ju používať",
-          1: "Akékoľvek správanie alebo obsah tretej strany na službe",
-          2: "Akýkoľvek obsah získaný zo služby",
-          3: "Neoprávnený prístup, použitie alebo zmena vašich prenosov alebo obsahu"
-        }
-      },
-      10: {
-        id: "vylúčenie zodpovednosti",
-        heading: "Vyhlásenie o vylúčení zodpovednosti",
-        paragraphs: {
-          0: "Používanie služby je na vlastné riziko. Služba je poskytovaná v stave „TAK AKO JE“ a „AKO JE DOSTUPNÁ“. Služba je poskytovaná bez akýchkoľvek záruk, výslovných alebo predpokladaných.",
-          1: "Amiquus nezaručuje, že služba bude nepretržitá, včasná, bezpečná alebo bez chýb, ani že výsledky získané používaním služby budú presné alebo spoľahlivé."
-        },
+        paragraphs: [
+          "Amiquus, jeho riaditelia, zamestnanci, partneri alebo dodávatelia nenesú zodpovednosť za nepriame, náhodné, zvláštne alebo trestné škody, vrátane straty zisku, dát alebo iných nehmotných strát, vyplývajúcich z:",
+        ],
         list: [
-        ]
+          "Prístupu k službe alebo nemožnosti prístupu",
+          "Obsahu alebo správania tretích strán v službe",
+          "Obsahu získaného zo služby",
+          "Neoprávneného prístupu alebo zmeny vašich dát",
+        ],
       },
-      11: {
-        id: "súbory cookie",
-        heading: "Zásady používania súborov cookie",
-        paragraphs: {
-          0: "Naša politika používania súborov cookie vysvetľuje, čo sú súbory cookie, ako ich používame, ako môžu tretie strany, s ktorými spolupracujeme, používať súbory cookie v našej službe, vaše možnosti týkajúce sa súborov cookie a ďalšie informácie o súboroch cookie. Prosím, pozrite si časť o súboroch cookie v našich Zásadách ochrany osobných údajov."
-        },
-        list: [
-        ]
+      "10": {
+        id: "disclaimer",
+        heading: "Vylúčenie zodpovednosti",
+        paragraphs: [
+          "Používanie služby je na vaše vlastné riziko. Služba je poskytovaná „TAK AKO JE“ a „PODĽA DOSTUPNOSTI“. Nezaručujeme, že služba bude neprerušená, včasná, bezpečná alebo bezchybná.",
+          "Nezaručujeme, že výsledky používania služby budú presné alebo spoľahlivé.",
+        ],
+        list: [],
       },
-      12: {
-        id: "rozhodné právo",
+      "11": {
+        id: "cookies",
+        heading: "Zásady cookies",
+        paragraphs: [
+          "Naše zásady cookies vysvetľujú, čo sú cookies, ako ich používame, ako ich môžu používať tretie strany a vaše možnosti. Pozrite si sekciu cookies v našich zásadách ochrany osobných údajov.",
+        ],
+        list: [],
+      },
+      "12": {
+        id: "governing-law",
         heading: "Rozhodné právo",
-        paragraphs: {
-          0: "Tieto podmienky sa riadia a vykladajú v súlade so zákonmi Spojených štátov amerických, bez ohľadu na ustanovenia o kolízii právnych predpisov.",
-          1: "Naše nepresadzovanie akéhokoľvek práva alebo ustanovenia týchto Podmienok sa nebude považovať za vzdanie sa týchto práv. Ak ktorékoľvek ustanovenie týchto Podmienok bude súdom vyhlásené za neplatné alebo nevymáhateľné, ostatné ustanovenia týchto Podmienok zostávajú v platnosti."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Tieto podmienky sa riadia a vykladajú v súlade so zákonmi Spojených štátov bez ohľadu na kolíziu zákonov.",
+          "Ak nevyužijeme právo alebo ustanovenie, nejde o vzdanie sa. Ak súd vyhlási akékoľvek ustanovenie za neplatné, zostávajúce ustanovenia zostávajú v platnosti.",
+        ],
+        list: [],
       },
-      13: {
-        id: "kontakt",
+      "13": {
+        id: "contact",
         heading: "Kontaktujte nás",
-        paragraphs: {
-          0: "Ak máte akékoľvek otázky týkajúce sa týchto Podmienok, kontaktujte nás:"
-        },
-        list: {
-          0: "E-mailom: legal@amiquus.com",
-          1: "Návštevou kontaktnej stránky na našej webovej stránke"
-        }
-      }
+        paragraphs: ["Ak máte otázky k podmienkam, kontaktujte nás:"],
+        list: [
+          "E-mailom: legal@amiquus.com",
+          "Prostredníctvom stránky kontaktov na našom webe",
+        ],
+      },
     },
-    lastupdated: "Naposledy aktualizované: 21. mája 2025"
   },
   privacy: {
     metaTitle: "Zásady ochrany osobných údajov | Amiquus",
-    metaDescription: "Zistite, ako AMIQUUS spracúva vaše osobné údaje, práva na súkromie a postupy pri zhromažďovaní údajov.",
+    metaDescription:
+      "Zistite, ako Amiquus spracováva vaše osobné údaje, vaše práva a postupy zberu dát.",
     title: "Zásady ochrany osobných údajov",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Posledná aktualizácia: 21. mája 2025",
     sections: {
-      0: {
-        id: "úvod",
+      "0": {
+        id: "introduction",
         heading: "Úvod",
-        paragraphs: {
-          0: "Vitajte v AMIQUUS. Rešpektujeme vaše súkromie a zaväzujeme sa chrániť vaše osobné údaje. Táto zásada ochrany osobných údajov vás informuje o tom, ako sa staráme o vaše osobné údaje, keď navštívite našu webovú stránku, a oboznámi vás s vašimi právami na súkromie a tým, ako vás zákon chráni."
-        }
+        paragraphs: [
+          "Vitajte v Amiquus. Oceňujeme vaše súkromie a sme odhodlaní chrániť vaše osobné údaje. Tieto zásady ochrany osobných údajov vysvetľujú, ako spracovávame vaše údaje, vaše práva a ako vás zákon chráni.",
+        ],
       },
-      1: {
-        id: "údaje-ktoré-zhromažďujeme",
-        heading: "Informácie, ktoré zhromažďujeme",
-        paragraphs: {
-          0: "Zhromažďujeme viacero rôznych typov informácií na rôzne účely, aby sme vám mohli poskytovať a zlepšovať naše služby."
-        },
-        list: {
-          0: "Osobné údaje: E-mailová adresa, meno, priezvisko a profilová fotografia (ak je poskytnutá prostredníctvom autentifikácie tretej strany).",
-          1: "Údaje o účte: Vaše prihlasovacie údaje a nastavenia účtu.",
-          2: "Údaje o používaní: Informácie o tom, ako používate našu webovú stránku a služby.",
-          3: "Preferencie vyhľadávania áut: Kritériá vozidla, ktoré nastavujete na sledovanie (značka, model, cenové rozpätie atď.).",
-          4: "Informácie o Telegrame: Ak sa rozhodnete prijímať upozornenia cez Telegram, ukladáme váš Telegram chat ID a token bota.",
-          5: "Platobné informácie: Keď uskutočníte nákup, náš platobný procesor zhromažďuje platobné údaje potrebné na spracovanie vašej transakcie. AMIQUUS neukladá úplné informácie o vašej kreditnej karte."
-        }
+      "1": {
+        id: "data-we-collect",
+        heading: "Údaje, ktoré zbierame",
+        paragraphs: [
+          "Zbierame rôzne typy údajov pre rôzne účely, aby sme poskytovali a zlepšovali službu:",
+        ],
+        list: [
+          "Osobné údaje: e-mailová adresa, meno, priezvisko a profilová fotka (ak poskytnutá treťou stranou).",
+          "Údaje o účte: prihlasovacie údaje a nastavenia účtu.",
+          "Údaje o používaní: informácie o tom, ako používate web a služby.",
+          "Vyhľadávacie kritériá: kritériá auta nastavené na sledovanie (značka, model, cena atď.).",
+          "Údaje Telegram: ak zvolíte upozornenia Telegram, ukladáme vaše chat ID a token bota.",
+          "Platobné údaje: pri nákupe náš platobný procesor zbiera potrebné údaje. Amiquus neukladá úplné údaje kreditných kariet.",
+        ],
       },
-      2: {
-        id: "ako-používame-údaje",
+      "2": {
+        id: "how-we-use-data",
         heading: "Ako používame vaše údaje",
-        paragraphs: {
-          0: "Vaše osobné údaje používame na nasledujúce účely:"
-        },
-        list: {
-          0: "Za poskytovanie a udržiavanie našej služby",
-          1: "Aby sme vás informovali o zmenách našej služby",
-          2: "Aby ste sa mohli zúčastniť interaktívnych funkcií našej služby",
-          3: "Poskytovať zákaznícku podporu",
-          4: "Zhromažďovať analýzy alebo cenné informácie, aby sme mohli zlepšiť našu službu",
-          5: "Na monitorovanie používania našej služby",
-          6: "Na zisťovanie, predchádzanie a riešenie technických problémov",
-          7: "Na spracovanie platieb a predchádzanie podvodným transakciám",
-          8: "Na zasielanie ponúk áut, ktoré zodpovedajú vašim preferenciám, prostredníctvom vami zvoleného spôsobu notifikácie"
-        }
+        paragraphs: ["Vaše osobné údaje používame na:"],
+        list: [
+          "Poskytovanie a údržbu služby",
+          "Oznámenie zmien v službe",
+          "Povolenie interaktívnych funkcií",
+          "Poskytovanie zákazníckej podpory",
+          "Zbieranie analýz na zlepšenie služby",
+          "Sledovanie používania služby",
+          "Detekciu, prevenciu a riešenie technických problémov",
+          "Spracovanie platieb a prevenciu podvodov",
+          "Odosielanie upozornení zodpovedajúcich vašim kritériám",
+        ],
       },
-      3: {
-        id: "ukladanie dát",
-        heading: "Ukladanie dát a bezpečnosť",
-        paragraphs: {
-          0: "Zavádzame primerané bezpečnostné opatrenia na ochranu vašich osobných údajov pred neoprávneným prístupom, zmenou, zverejnením alebo zničením. Všetky údaje sú uložené na zabezpečených serveroch so šifrovaním počas prenosu aj v pokoji.",
-          1: "Vaše osobné údaje uchovávame len po dobu nevyhnutnú na účely uvedené v týchto zásadách ochrany osobných údajov, vrátane splnenia akýchkoľvek zákonných, regulačných, daňových, účtovných alebo výkazníckych požiadaviek."
-        }
+      "3": {
+        id: "data-storage",
+        heading: "Ukladanie a bezpečnosť údajov",
+        paragraphs: [
+          "Používame príslušné bezpečnostné opatrenia na ochranu pred neoprávneným prístupom, zmenou alebo zničením. Všetky údaje sú uložené na bezpečných serveroch so šifrovaním pri prenose aj v pokoji.",
+          "Vaše osobné údaje uchovávame len po dobu potrebnú pre účely týchto zásad, vrátane plnenia právnych, regulačných alebo účtovných požiadaviek.",
+        ],
       },
-      4: {
-        id: "všeobecné nariadenie o ochrane údajov",
+      "4": {
+        id: "gdpr",
         heading: "Vaše práva podľa GDPR",
-        paragraphs: {
-          0: "Ak ste obyvateľom Európskeho hospodárskeho priestoru (EHP), máte určité práva na ochranu osobných údajov. AMIQUUS sa snaží prijať primerané opatrenia, aby vám umožnil opraviť, upraviť, vymazať alebo obmedziť používanie vašich osobných údajov.",
-          1: "Máte nasledujúce práva na ochranu údajov:"
-        },
-        list: {
-          0: "Právo na prístup, aktualizáciu alebo vymazanie informácií, ktoré o vás máme",
-          1: "Právo na opravu",
-          2: "Právo namietať",
-          3: "Právo na obmedzenie",
-          4: "Právo na prenosnosť údajov",
-          5: "Právo odvolať súhlas"
-        }
+        paragraphs: [
+          "Ak žijete v Európskom hospodárskom priestore (EHP), máte určité práva na ochranu údajov. Amiquus sa snaží umožniť vám opravovať, meniť, mazať alebo obmedzovať používanie vašich údajov.",
+          "Máte nasledujúce práva:",
+        ],
+        list: [
+          "Právo na prístup, aktualizáciu alebo zmazanie údajov",
+          "Právo na opravu",
+          "Právo na námietku",
+          "Právo na obmedzenie",
+          "Právo na prenosnosť údajov",
+          "Právo odvolať súhlas",
+        ],
       },
-      5: {
-        id: "súbory cookie",
-        heading: "Zásady používania súborov cookie",
-        paragraphs: {
-          0: "Súbory cookie sú malé kúsky údajov uložené vo vašom zariadení. Súbory cookie používame na:"
-        },
-        list: {
-          0: "Zostaňte prihlásení",
-          1: "Pochopte, ako používate našu webovú stránku",
-          2: "Zapamätaj si svoje nastavenia",
-          3: "Prispôsobte si svoje prostredie"
-        }
+      "5": {
+        id: "cookies",
+        heading: "Zásady cookies",
+        paragraphs: [
+          "Cookies sú malé údaje uložené vo vašom zariadení. Používame ich na:",
+        ],
+        list: [
+          "Udržiavanie prihlásenia",
+          "Porozumenie používaniu webu",
+          "Ukladanie preferencií",
+          "Personalizáciu zážitku",
+        ],
       },
-      6: {
-        id: "tretia strana",
-        heading: "Služby tretích strán",
-        paragraphs: {
-          0: "Môžeme zamestnávať tretie strany a jednotlivcov na uľahčenie našej služby, poskytovanie služby v našom mene, vykonávanie úloh súvisiacich so službou alebo na pomoc pri analýze, ako sa naša služba používa.",
-          1: "Tieto tretie strany zahŕňajú:"
-        },
-        list: {
-          0: "Platobné procesory (Stripe)",
-          1: "Poskytovatelia analytiky",
-          2: "Služby zákazníckej podpory",
-          3: "Poskytovatelia hostingu a cloudovej infraštruktúry"
-        },
-        paragraphs2: {
-          0: "Tieto tretie strany majú prístup k vašim osobným údajom iba za účelom vykonávania týchto úloh v našom mene a sú povinné ich nezverejniť ani nepoužiť na iný účel."
-        }
+      "6": {
+        id: "third-party",
+        heading: "Tretie strany",
+        paragraphs: [
+          "Môžeme zamestnávať tretie strany na vykonávanie služby, úloh alebo analýzy používania.",
+          "Tieto tretie strany zahŕňajú:",
+        ],
+        list: [
+          "Platobné procesory (Stripe)",
+          "Poskytovatelia analýz",
+          "Služby zákazníckej podpory",
+          "Hosting a cloudoví poskytovatelia",
+        ],
+        paragraphs2: [
+          "Tieto tretie strany majú prístup k vašim údajom len na vykonanie úloh a nesmú ich zverejňovať alebo používať na iné účely.",
+        ],
       },
-      7: {
-        id: "zmeny",
-        heading: "Zmeny týchto zásad ochrany osobných údajov",
-        paragraphs: {
-          0: "Našu politiku ochrany osobných údajov môžeme z času na čas aktualizovať. O všetkých zmenách vás budeme informovať zverejnením novej politiky ochrany osobných údajov na tejto stránke a aktualizovaním dátumu „Posledná aktualizácia“.",
-          1: "Odporúčame vám pravidelne si prečítať tieto zásady ochrany osobných údajov kvôli možným zmenám. Zmeny týchto zásad ochrany osobných údajov nadobúdajú účinnosť zverejnením na tejto stránke."
-        }
+      "7": {
+        id: "changes",
+        heading: "Zmeny zásad ochrany osobných údajov",
+        paragraphs: [
+          "Zásady ochrany osobných údajov môžeme pravidelne aktualizovať. Informujeme vás zverejnením nových zásad na tejto stránke a aktualizáciou dátumu „Posledná aktualizácia“.",
+          "Odporúčame pravidelne kontrolovať zásady. Zmeny nadobúdajú účinnosť pri zverejnení.",
+        ],
       },
-      8: {
-        id: "kontakt",
+      "8": {
+        id: "contact",
         heading: "Kontaktujte nás",
-        paragraphs: {
-          0: "Ak máte akékoľvek otázky týkajúce sa týchto zásad ochrany osobných údajov, kontaktujte nás:"
-        },
-        list: {
-          0: "E-mailom: privacy@amiquus.com",
-          1: "Návštevou kontaktnej stránky na našej webovej stránke"
-        }
-      }
+        paragraphs: [
+          "Ak máte otázky k zásadám ochrany osobných údajov, kontaktujte nás:",
+        ],
+        list: [
+          "E-mailom: privacy@amiquus.com",
+          "Prostredníctvom stránky kontaktov na našom webe",
+        ],
+      },
     },
-    lastupdated: "Naposledy aktualizované: 21. mája 2025"
   },
   faqs: {
-    metaTitle: "Často kladené otázky | Amiquus",
-    metaDescription: "Nájdite odpovede na najčastejšie otázky o službe monitorovania automobilových inzerátov AMIQUUS, predplatnom, nastavení upozornení a ďalších témach.",
+    metaTitle: "FAQ | Amiquus",
+    metaDescription:
+      "Nájdite odpovede na najčastejšie otázky o službe sledovania inzerátov áut Amiquus.",
     title: "Často kladené otázky",
-    subtitle: "Nájdite rýchle odpovede na časté otázky o našej službe monitorovania inzerátov na autá",
+    subtitle:
+      "Rýchle odpovede na bežné otázky o našej službe sledovania inzerátov áut",
     general: {
       heading: "Všeobecné otázky",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Čo je Amiquus?",
+        answer:
+          "Amiquus je služba, ktorá sleduje viaceré weby s autami podľa vašich kritérií. Pri zhode dostanete okamžité upozornenie na Telegram.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Ako to funguje?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
+          "Nastavte vyhľadávacie kritériá (značka, model, cena atď.)",
+          "Vyberte weby na sledovanie",
+          "Pripojte Telegram pre upozornenia",
+          "Náš systém neustále sleduje vybrané weby",
+          "Pri zhode dostanete okamžité upozornenie na Telegram s detailmi a odkazom",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Ktoré weby sledujete?",
+        answerIntro: "Momentálne sledujeme nasledujúce veľké platformy:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (cez URL)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
+        outro: "Pre širšie pokrytie neustále pridávame nové platformy.",
       },
-      howitworks: {
-        answer: {
-          0: "Nastavíte si svoje kritériá vyhľadávania (značka, model, cenové rozpätie atď.)",
-          1: "Vy si vyberáte, ktoré webové stránky chcete sledovať.",
-          2: "Prepojíte svoj Telegram účet pre notifikácie",
-          3: "Náš systém nepretržite monitoruje vaše vybrané webové stránky pre nové inzeráty.",
-          4: "Keď sa objaví vyhovujúce auto, okamžite dostanete notifikáciu na Telegrame so všetkými detailmi a priamym odkazom."
-        },
-        question: "Ako to funguje?"
-      },
-      whatis: {
-        answer: "Amiquus je služba, ktorá monitoruje viaceré webové stránky s inzerciou áut a vyhľadáva vozidlá podľa vašich špecifických kritérií. Keď sa objaví zodpovedajúci inzerát, okamžite dostanete notifikáciu cez Telegram, vďaka čomu môžete byť medzi prvými, ktorí kontaktujú predajcu a získajú skvelú ponuku.",
-        question: "Čo je Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Aktuálne monitorujeme nasledujúce hlavné platformy na inzerciu áut:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "CarGurus",
-          3: "TrueCar",
-          4: "Facebook Marketplace (cez URL)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Neustále pridávame nové platformy, aby sme zabezpečili čo najkomplexnejšie pokrytie.",
-        question: "Ktoré webové stránky s inzerciou áut sledujete?"
-      }
     },
     subscription: {
-      heading: "Otázky o predplatnom",
+      heading: "Otázky k predplatnému",
       cost: {
         question: "Koľko stojí predplatné?",
-        answer: {
-          0: "Naše ceny začínajú od 79,99 $ mesačne za monitorovanie jednej webovej stránky s aktualizáciami každých 6 hodín. Každá ďalšia stránka stojí 4,99 $ mesačne. Môžete si tiež zvýšiť frekvenciu aktualizácií pre rýchlejšie upozornenia.",
-          1: "Pre konkrétne informácie o cenách si pozrite našu sekciu cien na úvodnej stránke."
-        }
+        answer: [
+          "Ceny začínajú na 79,99 €/mesiac za sledovanie jedného webu s aktualizáciami každých 6 hodín. Ďalšie weby stoja 4,99 €/mesiac. Upgradujte pre rýchlejšie upozornenia.",
+          "Podrobnosti o cenách nájdete v sekcii cien na hlavnej stránke.",
+        ],
       },
       cancel: {
-        question: "Ako zruším svoje predplatné?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Prihláste sa do svojho účtu",
-          1: "Prejdite na stránku „Profil“",
-          2: "Vyberte kartu „Predplatné“",
-          3: "Kliknite na tlačidlo „Zrušiť predplatné“ vedľa predplatného, ktoré chcete zrušiť."
-        },
-        note: "Vaše predplatné zostane aktívne až do konca vášho aktuálneho fakturačného obdobia.",
-        stepsintro: "Svoje predplatné môžete kedykoľvek zrušiť na stránke profilu svojho účtu:"
+        question: "Ako zrušiť predplatné?",
+        stepsIntro: "Predplatné môžete kedykoľvek zrušiť zo stránky profilu:",
+        steps: [
+          "Prihláste sa do svojho účtu",
+          'Prejdite na stránku "Profil"',
+          'Vyberte kartu "Predplatné"',
+          'Kliknite na "Zrušiť predplatné" pri požadovanom predplatnom',
+        ],
+        note: "Predplatné zostane aktívne do konca aktuálneho fakturačného obdobia.",
       },
       multiple: {
-        question: "Môžem mať viacero predplatných na rôzne modely áut?",
-        answer: "Áno, v rámci jedného účtu môžete vytvoriť viacero predplatných. Každé predplatné môže sledovať rôzne modely áut, značky alebo cenové kategórie. Je to obzvlášť užitočné, ak hľadáte viac vozidiel alebo pomáhate priateľom a rodine s hľadaním auta."
+        question: "Môžem mať viac predplatných pre rôzne modely?",
+        answer:
+          "Áno, pod jedným účtom môžete vytvoriť viac predplatných. Každé môže sledovať rôzne modely alebo značky. Ideálne pre hľadanie viacerých áut alebo pomoc priateľom.",
       },
       limit: {
-        question: "Prečo existuje obmedzenie počtu odberateľov?",
-        intro: "Našu službu obmedzujeme na 30 aktívnych predplatiteľov, aby sme zabezpečili:",
-        list: {
-          0: "Najvyššia kvalita služieb a presnosť údajov",
-          1: "Personalizovaná podpora pre každého predplatiteľa",
-          2: "Rýchlejšie doručovanie notifikácií počas špičkových časov pridávania inzerátov",
-          3: "Etické získavanie údajov, ktoré nepreťažuje cieľové webové stránky"
-        },
-        outro: "Ak sme dosiahli kapacitu, môžete sa pridať na náš čakací zoznam, aby ste boli informovaní, keď sa uvoľní miesto."
-      }
+        question: "Prečo je limit predplatiteľov?",
+        intro: "Službu obmedzujeme na 30 aktívnych predplatiteľov, pretože:",
+        list: [
+          "Najvyššia kvalita služby a presnosť dát pre všetkých používateľov",
+          "Personalizovaná podpora pre každého predplatiteľa",
+          "Rýchlejšie doručovanie upozornení v špičkách",
+          "Etické scraping bez preťažovania cieľových webov",
+        ],
+        outro:
+          "Ak sme plní, pripojte sa k čakacej listine – informujeme vás, keď sa uvoľní miesto.",
+      },
     },
     technical: {
       heading: "Technické otázky",
       telegram: {
-        question: "Ako si nastavím upozornenia na Telegrame?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Vytvorte Telegram bota pomocou BotFather (pokyny sú uvedené počas nastavenia)",
-          1: "Skopírujte svoj token bota z BotFather",
-          2: "Začnite konverzáciu so svojím botom",
-          3: "Získajte svoje chatovacie ID (pokyny sú uvedené počas nastavenia)",
-          4: "Zadajte svoj token bota a ID chatu v nastaveniach predplatného AMIQUUS.",
-          5: "Otestujte svoje nastavenie notifikácií pomocou tlačidla `Odoslať testovaciu správu`"
-        },
-        note: "Podrobné krok za krokom návody s obrázkami obrazovky sú k dispozícii počas procesu nastavenia predplatného.",
-        stepsintro: "Na nastavenie upozornení v Telegrame:"
+        question: "Ako nastaviť upozornenia Telegram?",
+        stepsIntro: "Pre nastavenie upozornení Telegram:",
+        steps: [
+          "Vytvorte Telegram bota cez BotFather (inštrukcie v ovládacom paneli)",
+          "Skopírujte token bota a chat ID",
+          'Zadajte údaje v sekcii "Nastavenia upozornení" v nastaveniach účtu',
+          'Otestujte pripojenie tlačidlom "Odoslať testovaciu správu"',
+        ],
+        note: "Podrobné inštrukcie so snímkami obrazovky sú dostupné pri nastavovaní predplatného.",
       },
       frequency: {
-        question: "Ako často budem dostávať notifikácie?",
+        question: "Ako často budem dostávať upozornenia?",
         intro: "Frekvencia upozornení závisí od:",
-        list: {
-          0: "Vami zvolený balík frekvencie aktualizácií (od každých 6 hodín do každých 30 minút)",
-          1: "Koľko nových inzerátov zodpovedá vašim kritériám",
-          2: "Ako je aktívny trh pre vašu vybranú značku/model"
-        },
-        outro: "Oznámenia dostanete len vtedy, keď sa nájdu nové ponuky, ktoré zodpovedajú vašim kritériám."
+        list: [
+          "Zvoleného balíka frekvencie (od hodinovej po minútovú)",
+          "Počtu nových inzerátov zodpovedajúcich vašim kritériám",
+          "Trhovej aktivity pre vybranú značku/model",
+        ],
+        outro:
+          "Upozornenia dostanete len pri nových inzerátoch zodpovedajúcich vašim kritériám.",
       },
       privacy: {
-        question: "Ako sú moje osobné údaje chránené?",
-        intro: "Ochranu vašich údajov berieme vážne a uplatňujeme tieto opatrenia:",
-        list: {
-          0: "Šifrované dáta počas prenosu aj uloženia",
-          1: "Bezpečné platby cez Stripe",
-          2: "Žiadne zdieľanie údajov s tretími stranami",
-          3: "Kedykoľvek môžete požiadať o svoje údaje alebo ich vymazať"
-        },
-        outro: "Prečítajte si naše úplné Zásady ochrany osobných údajov pre viac informácií."
-      }
+        question: "Ako je chránené moje súkromie?",
+        intro: "Súkromie berieme vážne a používame:",
+        list: [
+          "Šifrovanie údajov pri prenose aj v pokoji",
+          "Bezpečné platby cez Stripe",
+          "Žiadne zdieľanie údajov s tretími stranami",
+          "Môžete kedykoľvek požiadať alebo zmazať svoje údaje",
+        ],
+        outro: "Viac informácií v úplných zásadách ochrany osobných údajov.",
+      },
     },
     support: {
       heading: "Stále máte otázky?",
-      description: "Ak ste nenašli odpoveď na svoju otázku, náš tím podpory je tu, aby vám pomohol!",
-      button: "Kontaktujte podporu"
-    }
+      description:
+        "Ak ste nenašli odpoveď, náš tím podpory je pripravený pomôcť!",
+      button: "Kontaktovať podporu",
+    },
   },
   waitlist: {
-    metaTitle: "Pridajte sa na čakaciu listinu – Amiquus",
-    metaDescription: "Pridajte sa na čakací zoznam AMIQUUS, aby ste boli informovaní, keď budú predplatné dostupné.",
-    title: "Pridajte sa na náš zoznam čakateľov",
-    subtitle: "Vzhľadom na vysoký dopyt obmedzujeme počet aktívnych predplatných, aby sme všetkým používateľom zabezpečili najvyššiu kvalitu služby.",
+    metaTitle: "Pripojiť sa k čakacej listine - Amiquus",
+    metaDescription:
+      "Pripojte sa k čakacej listine Amiquus a buďte informovaní, keď budú predplatné dostupné.",
+    title: "Pripojte sa k našej čakacej listine",
+    subtitle:
+      "Kvôli vysokej dopytu obmedzujeme počet aktívnych predplatných pre zabezpečenie najlepšej kvality.",
     limited: {
       heading: "Obmedzená dostupnosť",
-      description: "Obmedzujeme náš systém na iba 30 aktívnych predplatiteľov, aby sme zaistili:",
-      points: {
-        0: "Výnimočná spoľahlivosť a rýchlosť získavania dát pre všetkých používateľov",
-        1: "Znížené riziko zablokovania zo strany webových stránok s inzerciou áut",
-        2: "Personalizovaná podpora pre každého predplatiteľa",
-        3: "Spravodlivé rozdelenie serverových zdrojov"
-      },
-      available: "Zostáva {{remaining}} z celkových {{capacity}} dostupných predplatiteľských miest.",
-      full: "Všetky miesta na predplatné sú momentálne obsadené. Pridajte sa na čakaciu listinu, aby ste boli informovaní, keď sa uvoľní miesto."
+      description: "Obmedzujeme systém len na 30 aktívnych predplatiteľov:",
+      points: [
+        "Výnimočná spoľahlivosť a rýchlosť scrapingu pre všetkých používateľov",
+        "Menšie riziko blokovania webmi",
+        "Personalizovaná podpora pre každého predplatiteľa",
+        "Spravodlivé rozdelenie serverových zdrojov",
+      ],
+      available:
+        "{{remaining}}/{{capacity}} miest pre predplatné je momentálne dostupných.",
+      full: "Všetky miesta pre predplatné sú momentálne obsadené. Pripojte sa k čakacej listine, aby ste boli informovaní, keď sa uvoľní miesto.",
     },
     success: {
       title: "Ste na čakacej listine!",
-      description: "Dáme vám vedieť, hneď ako sa uvoľní miesto na predplatné.",
-      message: "Ďakujeme za váš záujem o Amiquus! Pridali sme vás na náš čakací zoznam a budeme vás kontaktovať, hneď ako sa uvoľní miesto.",
-      button: "Späť na hlavnú stránku"
+      description:
+        "Okamžite vás informujeme, keď sa uvoľní miesto pre predplatné",
+      message:
+        "Ďakujeme za záujem o Amiquus! Pridali sme vás na čakaciu listinu a budeme vás kontaktovať, keď bude miesto dostupné.",
+      button: "Späť na hlavnú stránku",
     },
     cantJoin: {
-      title: "Join the Waitlist",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Pripojiť sa k čakacej listine",
+      description:
+        "Okamžite vás informujeme, keď sa uvoľní miesto pre predplatné",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Meno",
+        placeholder: "Ján",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Priezvisko",
+        placeholder: "Novák",
       },
       email: {
         label: "E-mail",
-        placeholder: "john.doe@example.com",
-        description: "Tento e-mail použijeme na to, aby sme vás informovali, keď sa uvoľní miesto."
+        placeholder: "jan.novak@example.sk",
+        description:
+          "Tento e-mail použijeme na informovanie, keď sa uvoľní miesto",
       },
-      submit: "Pridajte sa na čakaciu listinu",
-      submitting: "Odosielanie...",
-      firstname: {
-        label: "Meno",
-        placeholder: "Ján"
-      },
-      lastname: {
-        label: "Priezvisko",
-        placeholder: "Jeleň"
-      }
+      submit: "Pripojiť sa k čakacej listine",
+      submitting: "Odosiela sa...",
     },
-    cantjoin: {
-      description: "Dáme vám vedieť, hneď ako sa uvoľní miesto na predplatné.",
-      title: "Pridajte sa na čakaciu listinu"
-    }
   },
   support: {
     metaTitle: "Podpora | Amiquus - Centrum pomoci",
-    metaDescription: "Získajte pomoc so svojím účtom AMIQUUS, predplatným alebo upozorneniami na auto. Prezrite si naše centrum pomoci alebo kontaktujte náš tím podpory pre asistenciu.",
+    metaDescription:
+      "Získajte pomoc s vaším účtom Amiquus, predplatným alebo upozorneniami. Preskúmajte centrum pomoci alebo kontaktujte podporu.",
     title: "Centrum podpory",
-    subtitle: "Nájdite odpovede na časté otázky alebo kontaktujte náš tím podpory",
+    subtitle:
+      "Nájdite odpovede na bežné otázky alebo kontaktujte náš tím podpory",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "E-mailová podpora",
+      description: "Pošlite nám e-mail, odpovieme do 24 hodín",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "Často kladené otázky",
     faqs: {
       telegram: {
-        question: "Ako si nastavím upozornenia v Telegrame?",
-        intro: "Ak chcete nastaviť upozornenia cez Telegram, postupujte podľa týchto krokov:",
-        steps: {
-          0: "Vytvorte Telegram bota pomocou BotFather-a (návod nájdete v našom dashboarde)",
-          1: "Skopírujte svoj API token a ID chatu",
-          2: "Zadajte tieto údaje v nastaveniach svojho účtu v časti „Preferencie upozornení“",
-          3: "Otestujte svoje pripojenie pomocou tlačidla „Odoslať testovaciu správu“"
-        },
-        outro: "Ak potrebujete ďalšiu pomoc, náš podrobný sprievodca je dostupný vo vašom ovládacom paneli."
+        question: "Ako nastaviť upozornenia Telegram?",
+        intro: "Pre nastavenie upozornení Telegram postupujte takto:",
+        steps: [
+          "Vytvorte Telegram bota cez BotFather (inštrukcie v ovládacom paneli)",
+          "Skopírujte API token a chat ID",
+          'Zadajte údaje v sekcii "Nastavenia upozornení" v nastaveniach účtu',
+          'Otestujte pripojenie tlačidlom "Odoslať testovaciu správu"',
+        ],
+        outro:
+          "Ak potrebujete ďalšiu pomoc, podrobný sprievodca je dostupný v ovládacom paneli.",
       },
       updates: {
-        question: "Ako často sa aktualizujú inzeráty na autá?",
-        answer: "Frekvencia aktualizácií závisí od vášho predplatného. Základné plány dostávajú aktualizácie každých 6 hodín, zatiaľ čo prémiové plány môžu získavať aktualizácie už každých 30 minút. Aktuálnu frekvenciu aktualizácií si môžete pozrieť a upraviť v nastaveniach predplatného."
+        question: "Ako často sa aktualizujú inzeráty?",
+        answer:
+          "Frekvencia aktualizácií závisí od balíka predplatného. Základné plány sa aktualizujú každých 6 hodín, prémiové plány môžu každých 30 minút. Aktuálnu frekvenciu môžete vidieť a zmeniť v nastaveniach predplatného.",
       },
       facebook: {
         question: "Môžem sledovať Facebook Marketplace?",
-        answer: "Áno, podporujeme sledovanie Facebook Marketplace. Na nastavenie tejto funkcie budete musieť zadať URL adresu stránky s výsledkami vyhľadávania na Facebook Marketplace s použitými požadovanými filtrami. Náš systém potom bude sledovať toto konkrétne vyhľadávanie pre nové inzeráty, ktoré zodpovedajú vašim kritériám."
+        answer:
+          "Áno, podporujeme sledovanie Facebook Marketplace. Poskytnite URL filtrovaných výsledkov vyhľadávania. Systém potom bude sledovať túto vyhľadávaciu stránku pre nové inzeráty zodpovedajúce vašim kritériám.",
       },
       cancel: {
-        question: "Ako zruším svoje predplatné?",
-        answer: "Svoje predplatné môžete kedykoľvek zrušiť na stránke profilu svojho účtu. Kliknite na kartu „Predplatné“, vyhľadajte predplatné, ktoré chcete zrušiť, a kliknite na tlačidlo „Zrušiť predplatné“. Vaša služba zostane aktívna až do konca aktuálneho fakturačného obdobia."
+        question: "Ako zrušiť predplatné?",
+        answer:
+          'Predplatné môžete kedykoľvek zrušiť zo stránky profilu. Kliknite na kartu "Predplatné", nájdite predplatné a kliknite na "Zrušiť predplatné". Služba zostane aktívna do konca fakturačného obdobia.',
       },
       full: {
-        question: "Čo sa stane, ak sú všetky odberateľské sloty obsadené?",
-        answer: "Aby sme zachovali vysokú kvalitu našich služieb, obmedzujeme počet aktívnych predplatných. Ak sú všetky miesta obsadené, môžete sa pridať na náš čakací zoznam. Dáme vám vedieť hneď, ako sa uvoľní miesto, a budete mať prednostné právo si ho uplatniť predtým, než ho sprístupníme širokej verejnosti."
-      }
+        question: "Čo sa stane, keď sú všetky miesta obsadené?",
+        answer:
+          "Pre udržanie kvality služby obmedzujeme počet aktívnych predplatných. Ak sú všetky miesta obsadené, môžete sa pripojiť k čakacej listine. Keď sa uvoľní miesto, informujeme vás a získate prioritu pred verejnosťou.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
+      heading: "Stále potrebujete pomoc?",
+      description:
+        "Ak ste nenašli odpoveď, kontaktujte náš tím podpory. Sme tu, aby sme pomohli!",
+      button: "Kontaktovať podporu",
     },
-    emailsupport: {
-      description: "Pošlite nám e-mail a ozveme sa vám do 24 hodín.",
-      email: "support@amiquus.com",
-      title: "E-mailová podpora"
-    },
-    faqheading: "Najčastejšie kladené otázky",
-    stillneedhelp: {
-      button: "Kontaktujte podporu",
-      description: "Ak ste nenašli odpoveď na svoju otázku, neváhajte kontaktovať náš tím podpory. Sme tu, aby sme vám pomohli!",
-      heading: "Stále potrebujete pomoc?"
-    }
   },
   notFound: {
-    title: "404 Stránka nebola nájdená",
-    message: "Zabudli ste pridať stránku do routera?"
+    title: "404 Stránka nenájdená",
+    message: "Zabudli ste pridať stránku do routera?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Overovací kód e-mailu Amiquus",
+      greeting: "Dobrý deň,",
+      message: "Pre dokončenie registrácie použite nasledujúci kód:",
+      expiration: "Kód vyprší za 10 minút.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Platba prijatá Amiquus – Faktúra #",
+        h2Message: "Vaša platba predplatného Amiquus bola úspešná!",
+        greeting: "Dobrý deň,",
+        paymentMessage: "Prijali sme vašu platbu",
+        downloadMessage:
+          "Faktúru môžete zobraziť alebo stiahnuť na nasledujúcom odkaze:",
+        viewInvoice: "Zobraziť faktúru",
+        invoiceNumber: "Číslo faktúry:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Platba čakajúca – Faktúra",
+        subjectB: "pre predplatné Amiquus",
+        h2Message: "Vyžaduje sa akcia: Zaplaťte predplatné Amiquus",
+        greeting: "Dobrý deň,",
+        messageA: "Vaša faktúra",
+        messageB:
+          "ešte nebola zaplatená. Zaplaťte, aby ste aktivovali predplatné",
+        paymentMessage: "Môžete bezpečne zaplatiť na nasledujúcom odkaze:",
+        payInvoice: "Zaplaťte faktúru",
+        ignoreEmail: "Ak ste už zaplatili, ignorujte túto správu.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Platba zlyhala – Faktúra",
+        message: "Nemohli sme spracovať vašu poslednú platbu (pokus",
+        attemptsA:
+          "Skúsime to znova čoskoro. Momentálne nie je potrebná akcia.",
+        attemptsB:
+          "Skúšali sme odobrať z vašej platobnej metódy trikrát, ale všetky zlyhali.",
+        attemptsC:
+          "V dôsledku toho je vaše predplatné <strong>dočasne pozastavené</strong>. Nebudete dostávať aktualizácie, kým nebude znova aktivované.",
+        attemptsD: "Aktualizujte platobnú metódu a znova aktivujte profil:",
+        viewInvoice: "Zobraziť faktúru",
+        managePayment: "Spravovať platobné metódy",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Ste na čakacej listine Amiquus!",
+      h2Message: "Ste na listine!",
+      hi: "Ahoj",
+      message:
+        "Ďakujeme za pripojenie sa k čakacej listine Amiquus. Informujeme vás, keď sa uvoľní miesto.",
+      anyQuestions: "Máte otázky? Neváhajte odpovedať na túto správu.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Zrušiť",
-    confirmremove: "Odstrániť kartu",
-    default: "Predvolené",
-    expires: "Platnosť do",
-    remove: "Odstrániť",
-    removedescription: "Ste si istý, že chcete odstrániť svoju kartu {{brand}}, ktorá končí na {{last4}}?",
-    removetitle: "Odstrániť platobnú metódu",
-    removewarning: "Toto je vaša predvolená platobná metóda a jej odstránenie môže ovplyvniť vaše aktívne predplatné.",
-    setasdefault: "Nastaviť ako predvolené",
-    setdefaultdescription: "Chcete nastaviť kartu {{brand}} končiacu na {{last4}} ako svoju predvolenú platobnú metódu? Táto karta bude použitá na všetky budúce platby za predplatné.",
-    setdefaulttitle: "Nastaviť predvolený spôsob platby"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Zrušiť upozornenie",
-    canceldescription: "Ste si istý, že chcete zrušiť upozornenie na auto {{brand}} {{model}}? Týmto zastavíte všetky notifikácie a ak budete chcieť toto auto opäť sledovať, budete si musieť nastaviť nové upozornenie.",
-    canceltitle: "Zrušiť upozornenie na auto",
-    confirmcancel: "Zrušiť upozornenie",
-    edit: "Upraviť",
-    keepmyalert: "Uložiť moje upozornenie",
-    language: "Jazyk",
-    price: "Cena",
-    pricerange: "Cena",
-    updates: "Aktualizácie",
-    websites: "Webstránky",
-    years: "Roky"
-  },
-  signUp: {
-    cta: "Dostávajte upozornenia teraz",
-    heading: "Vytvorte si upozornenie na auto",
-    subheading: "Nastavte si personalizované upozornenia na inzeráty áut v niekoľkých jednoduchých krokoch.",
-    toast: {
-      error: {
-        description: "Nepodarilo sa nám vytvoriť vaše predplatné. Skúste to prosím znova neskôr.",
-        title: "Predplatné zlyhalo"
-      },
-      success: {
-        description: "Vaše predplatné bolo úspešne vytvorené.",
-        title: "Predplatné bolo vytvorené"
-      }
+      thanksMessage: "Ďakujeme za výber Amiquus!",
+      signature: "S pozdravom,<br/>Tím Amiquus",
+      team: "— Tím Amiquus",
+      needHelp: "Potrebujete pomoc?",
+      hello: "Ahoj",
     },
-    waitlist: {
-      cta: "Pridajte sa na čakaciu listinu",
-      message: "Momentálne máme plnú kapacitu. Pridajte sa na čakací zoznam, aby ste boli informovaní, keď sa uvoľní miesto."
-    }
-  }
+  },
 };

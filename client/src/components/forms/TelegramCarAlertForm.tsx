@@ -33,7 +33,8 @@ import WaitlistPromptModal from "@/components/modals/waitlist-prompt";
 import { apiRequest } from "@/lib/queryClient";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice, additionalWebsitePrice } from "@shared/pricing";
+import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
+import { PaymentModal } from "../subscription/PaymentModal";
 import { buildAlertSchema } from "@/lib/buildAlertSchema";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
@@ -70,6 +71,7 @@ export default function TelegramCarAlertForm({
   const [showLogin, setShowLogin] = useState(false);
   const [showWaitList, setShowWaitList] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(true);
 
   // form fields
   const [carBrands, setCarBrands] = useState<string[]>([]);
@@ -215,7 +217,7 @@ export default function TelegramCarAlertForm({
     return (
       data?.brands_and_models[brand] ||
       newcomerDefault.brands_and_models[
-        brand as keyof typeof newcomerDefault.brands_and_models
+      brand as keyof typeof newcomerDefault.brands_and_models
       ] ||
       []
     );
@@ -436,8 +438,8 @@ export default function TelegramCarAlertForm({
                                 form.watch("carBrand")
                                   ? t("carDetails.placeholders.carModel")
                                   : t(
-                                      "carDetails.placeholders.carModelDisabled",
-                                    )
+                                    "carDetails.placeholders.carModelDisabled",
+                                  )
                               }
                             />
                           </SelectTrigger>
@@ -628,14 +630,14 @@ export default function TelegramCarAlertForm({
                                       onCheckedChange={(checked) => {
                                         return checked
                                           ? field.onChange([
-                                              ...field.value,
-                                              "facebook",
-                                            ])
+                                            ...field.value,
+                                            "facebook",
+                                          ])
                                           : field.onChange(
-                                              field.value?.filter(
-                                                (value) => value !== "facebook",
-                                              ),
-                                            );
+                                            field.value?.filter(
+                                              (value) => value !== "facebook",
+                                            ),
+                                          );
                                       }}
                                     />
                                   </FormControl>
@@ -661,14 +663,14 @@ export default function TelegramCarAlertForm({
                                       onCheckedChange={(checked) => {
                                         return checked
                                           ? field.onChange([
-                                              ...field.value,
-                                              site,
-                                            ])
+                                            ...field.value,
+                                            site,
+                                          ])
                                           : field.onChange(
-                                              field.value?.filter(
-                                                (value) => value !== site,
-                                              ),
-                                            );
+                                            field.value?.filter(
+                                              (value) => value !== site,
+                                            ),
+                                          );
                                       }}
                                     />
                                   </FormControl>
@@ -978,7 +980,7 @@ export default function TelegramCarAlertForm({
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-neutral-700 dark:text-neutral-300">
                     {/* get selected websites length */}
-                    {t("setupAlerts.basicPlan")}(
+                    {t("setupAlerts.basicPlan")} (
                     {form.watch("websitesSelected")?.length || 0}{" "}
                     {t("review.monitoring.websites")})
                   </span>
@@ -1011,8 +1013,7 @@ export default function TelegramCarAlertForm({
                       {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                     </span>
                     <span className="text-neutral-900 dark:text-white font-medium">
-                      $
-                      {(
+                    {currencySymbol}{(
                         FREQUENCY_OPTIONS.find(
                           (f) => f.id === form.watch("updateFrequency"),
                         )?.additionalPrice || 0
@@ -1026,7 +1027,7 @@ export default function TelegramCarAlertForm({
                       {t("review.summary.total")}
                     </span>
                     <span className="text-primary dark:text-primary font-bold text-xl">
-                      ${totalPrice.toFixed(2)}
+                    {currencySymbol}{totalPrice.toFixed(2)}
                     </span>
                   </div>
                 </div>
@@ -1101,6 +1102,13 @@ export default function TelegramCarAlertForm({
           onClose={() => setShowWaitList(false)}
         />
       )}
+      <PaymentModal
+        paymentForm={form}
+        showModal={showPaymentModal}
+        setShowModal={setShowPaymentModal}
+        totalPrice={totalPrice}
+        fixedTitle={fixedTitle}
+      />
     </section>
   );
 }

@@ -8,7 +8,7 @@ import { storage } from "../storage";
 const DODO_PAYMENTS_API_KEY = process.env['DODO_PAYMENTS_API_KEY'];
 const DODO_PAYMENTS_ENVIRONMENT = process.env['DODO_PAYMENTS_ENVIRONMENT'] || "test_mode";
 
-const client = new DodoPayments({
+export const client = new DodoPayments({
     bearerToken: DODO_PAYMENTS_API_KEY || "",
     environment: DODO_PAYMENTS_ENVIRONMENT as 'test_mode' | 'live_mode',
 });

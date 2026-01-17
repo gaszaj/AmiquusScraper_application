@@ -124,19 +124,19 @@ export const hu = {
     notificationMockup1: {
       title: "Új találat!",
       description:
-        "BMW 3 Series, 2019, $32,500 – Frissen közzétéve az AutoTraderen",
+        "BMW 3 Series, 2019, €32,500 – Frissen közzétéve az AutoTraderen",
     },
     notificationMockup2: {
       title: "Telegram értesítés",
       description:
-        "Mercedes C-Class, 2020, 30,000 mérföld – Az ár $2,000-rel csökkent",
+        "Mercedes C-Class, 2020, 30,000 mérföld – Az ár €2,000-rel csökkent",
     },
   },
   pricing: {
     title: "Egyszerű, átlátható árak",
     subtitle:
       "Áraink az Ön specifikus igényein alapulnak. Kezdje az alapcsomaggal és szabja testre a követelményeknek megfelelően.",
-    baseTitle: "Alapcsomag: $79.99/hó",
+    baseTitle: "Alapcsomag: €79.99/hó",
     includedTitle: "Tartalmazza:",
     includedFeatures: [
       "Egy oldal nyomon követése",
@@ -726,7 +726,7 @@ export const hu = {
     subtitle:
       "Állítsa be Telegram botját, hogy értesítéseket kapjon álmai autójáról",
     basicPlan: "Alapcsomag",
-    baseTitle: "$79.99/hó",
+    baseTitle: "€79.99/hó",
     button: "Indítsa el autó értesítési szolgáltatásomat",
     cancel: "Bármikor lemondható",
     toasts: {
@@ -1188,8 +1188,8 @@ export const hu = {
       cost: {
         question: "Mennyibe kerül az előfizetés?",
         answer: [
-          "Előfizetési áraink havi $79.99-tól indulnak egy weboldal figyelése esetén, 6 óránkénti frissítéssel.",
-          "További weboldalak figyelése havi $4.99-ért érhető el.",
+          "Előfizetési áraink havi €79.99-tól indulnak egy weboldal figyelése esetén, 6 óránkénti frissítéssel.",
+          "További weboldalak figyelése havi €4.99-ért érhető el.",
         ],
       },
       cancel: {

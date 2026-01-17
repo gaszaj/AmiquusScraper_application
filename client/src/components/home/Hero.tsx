@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BellRing, Search, Bell, Car, MessageSquare } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import heroImage from "@/images/hero-image.webp"
+import { currencySymbol } from "@shared/pricing";
 
 interface HeroProps {
   onGetStarted?: () => void;
@@ -94,7 +95,7 @@ export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
                   </div>
                   <div>
                     <h4 className="font-medium text-neutral-900 dark:text-white">New Match!</h4>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">BMW 3 Series, 2019, {currencySymbol}32,500 - Just listed on AutoTrader</p>
                   </div>
                 </div>
               </div>
@@ -106,7 +107,7 @@ export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
                   </div>
                   <div>
                     <h4 className="font-medium text-neutral-900 dark:text-white">Telegram Alert</h4>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by {currencySymbol}2,000</p>
                   </div>
                 </div>
               </div>
@@ -131,7 +132,7 @@ export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
                     </div>
                     <div>
                       <h4 className="font-medium text-neutral-900 dark:text-white">New Match!</h4>
-                      <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader</p>
+                      <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">BMW 3 Series, 2019, {currencySymbol}32,500 - Just listed on AutoTrader</p>
                     </div>
                   </div>
                 </div>
@@ -143,7 +144,7 @@ export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
                     </div>
                     <div>
                       <h4 className="font-medium text-neutral-900 dark:text-white">Telegram Alert</h4>
-                      <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000</p>
+                      <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">Mercedes C-Class, 2020, 30,000 miles - Price dropped by {currencySymbol}2,000</p>
                     </div>
                   </div>
                 </div>

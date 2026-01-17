@@ -457,7 +457,7 @@ export default function TelegramCarAlertForm() {
                   Basic Plan (3 websites)
                 </span>
                 <span className="text-neutral-900 dark:text-white font-medium">
-                  $9.99/month
+                €9.99/month
                 </span>
               </div>
               <div className="flex justify-between items-center mb-4">
@@ -465,7 +465,7 @@ export default function TelegramCarAlertForm() {
                   Additional websites (2)
                 </span>
                 <span className="text-neutral-900 dark:text-white font-medium">
-                  $9.98/month
+                €9.98/month
                 </span>
               </div>
               <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
@@ -474,7 +474,7 @@ export default function TelegramCarAlertForm() {
                     Total
                   </span>
                   <span className="text-primary dark:text-primary font-bold text-xl">
-                    $19.97/month
+                  €19.97/month
                   </span>
                 </div>
               </div>

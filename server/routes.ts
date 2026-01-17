@@ -5,6 +5,7 @@ import session from "express-session";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
+import { client as dodoClient } from "./routes/dodo";
 
 import bcrypt from "bcrypt";
 import {
@@ -23,6 +24,7 @@ import {
 import { emailService } from "./email-service";
 import Stripe from "stripe";
 import { sendTestEmail } from "./emailit-setup";
+import { createOrFindCustomer } from "./helpers/payments";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   console.warn(
@@ -47,19 +49,6 @@ const JSON_BASE_URL =
 const BEARER_TOKEN = process.env.BEARER_TOKEN || "";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Session setup
-  // app.use(
-  //   session({
-  //     secret: process.env.SESSION_SECRET || "amiquus-secret-key",
-  //     resave: false,
-  //     saveUninitialized: false,
-  //     cookie: {
-  //       secure: process.env.NODE_ENV === "production",
-  //       maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
-  //     },
-  //     store: storage.sessionStore, // Use PostgreSQL to store sessions
-  //   }),
-  // );
   app.set("trust proxy", 1);
 
   app.use(
@@ -160,19 +149,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 });
 
                 if (user) {
-                  // create Stripe customer
-                  const stripeCustomer = await stripe.customers.create({
-                    email: user.email,
-                    name: `${user.firstName} ${user.lastName}`,
-                    metadata: {
-                      userId: user.id.toString(),
-                    },
-                  });
+                  const dodoCustomer = await createOrFindCustomer(email, `${user.firstName} ${user.lastName}`, user.id);
 
-                  await storage.updateUserStripeCustomerId(
+                  await storage.updateUserDodoCustomerId(
                     user.id,
-                    stripeCustomer.id,
-                  );
+                    dodoCustomer.customer_id,
+                  )
                 }
               }
             }
@@ -260,20 +242,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(500).json({ message: "Registration failed" });
       }
 
-      // create stipe customer
-      const stripeCustomer = await stripe.customers.create({
-        email: user.email,
-        name: `${user.firstName} ${user.lastName}`,
-        metadata: {
-          userId: user.id.toString(),
-        },
-      });
-
       // Send email with code
       await emailService.sendVerificationEmail(user.email, verificationCode, data.language);
-
-      // update user with stripe customer id
-      await storage.updateUserStripeCustomerId(user.id, stripeCustomer.id);
 
       // Remove password from response
       const {
@@ -340,6 +310,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
         verificationCode: null,
         verificationCodeExpiry: null,
       });
+
+      if (!user.dodoCustomerId) {
+        const dodoCustomer = await createOrFindCustomer(user.email, `${user.firstName} ${user.lastName}`, user.id);
+
+        await storage.updateUserDodoCustomerId(
+          user.id,
+          dodoCustomer.customer_id,
+        );
+      }
 
       return res.status(200).json({
         message: "Email verified successfully",
