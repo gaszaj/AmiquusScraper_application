@@ -10,6 +10,8 @@ import { Separator } from "@/components/ui/separator";
 import { useLanguage } from "@/components/language-provider";
 import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 
 
 interface PaymentModalProps {
@@ -29,6 +31,7 @@ export const PaymentModal = ({
     fixedTitle,
 }: PaymentModalProps) => {
     const { t, language } = useLanguage();
+    const { toast } = useToast();
     const [totalAfterDiscount, setTotalAfterDiscount] = useState<number>(0);
     const [discount, setDiscount] = useState<Discount | null>(null);
     const [discountCode, setDiscountCode] = useState<string>("");
@@ -56,21 +59,106 @@ export const PaymentModal = ({
         }
     }, [discount, totalPrice]);
 
+    function formatDiscountLabel(discount: Discount) {
+        if (discount.type === "percentage") {
+            // basis points -> percent
+            const pct = discount.amount / 100; // 540 -> 5.4
+            return `${pct}%`;
+        }
+
+        // cents -> USD
+        const usd = (discount.amount / 100).toFixed(2);
+        return `$${usd}`;
+    }
+
+    function formatCyclesText(cycles?: number) {
+        if (!cycles) return "Applies to all billing cycles.";
+        if (cycles === 1) return "Applies to 1 billing cycle.";
+        return `Applies to ${cycles} billing cycles.`;
+    }
+
     const applyPromoCode = async () => {
-        setIsApplying(true);
-        try {
-            // change line
-            const response = await fetch(`/api/dodo/validate-discount?code=${discountCode}`);
-            if (!response.ok) {
-                throw new Error("Invalid promo code");
-            }
-            const discountData: Discount = await response.json();
-            setDiscount(discountData);
-            setIsDiscountValid(true);
-        } catch (error) {
-            console.error("Error validating promo code:", error);
+        const code = discountCode?.trim();
+
+        if (!code) {
+            toast({
+                title: "Enter a Promo Code",
+                description: "Please enter a promo code to apply.",
+                variant: "destructive",
+            });
+            return;
+        }
+
+        const fail = (title: string, description: string) => {
             setIsDiscountValid(false);
             setDiscount(null);
+            toast({ title, description, variant: "destructive" });
+        };
+
+        setIsApplying(true);
+
+        try {
+            const response = await apiRequest(
+                "GET",
+                `/api/dodo/validate-discount?code=${encodeURIComponent(code)}`
+            );
+
+            if (!response.ok) {
+                fail(
+                    "Invalid Promo Code",
+                    "That promo code doesn’t look valid. Please try again, or contact support if you believe this is an error."
+                );
+                return;
+            }
+
+            const discountData: Discount = await response.json();
+
+            if (discountData.type !== "percentage") {
+                fail("Unsupported Promo Code", "Only percentage-based promo codes are supported.");
+                return;
+            }
+
+
+            const now = Date.now();
+
+            // Expiry check
+            if (discountData.expires_at) {
+                const expiresAt = new Date(discountData.expires_at).getTime();
+                if (!Number.isNaN(expiresAt) && expiresAt < now) {
+                    fail("Promo Code Expired", "This promo code has expired.");
+                    return;
+                }
+            }
+
+            // Usage limit check
+            if (
+                typeof discountData.usage_limit === "number" &&
+                typeof discountData.times_used === "number" &&
+                discountData.times_used >= discountData.usage_limit
+            ) {
+                fail("Usage Limit Reached", "This promo code has reached its usage limit.");
+                return;
+            }
+
+            // Success
+            setDiscount(discountData);
+            setIsDiscountValid(true);
+
+            const label = formatDiscountLabel(discountData);
+            const cyclesText = formatCyclesText(
+                discountData.subscription_cycles ?? undefined
+            );
+
+            toast({
+                title: "Promo Code Applied",
+                description: `Discount applied: ${label}. ${cyclesText}`,
+                variant: "default",
+            });
+        } catch (err: any) {
+            fail(
+                "Error Applying Promo Code",
+                err?.message || "Something went wrong. Please try again."
+            );
         } finally {
             setIsApplying(false);
         }
@@ -153,7 +241,7 @@ export const PaymentModal = ({
                                     {FREQUENCY_LABELS[paymentForm.watch("updateFrequency")]})
                                 </p>
                                 <p className="text-foreground font-medium text-[0.95rem]">
-                                {currencySymbol}{(
+                                    {currencySymbol}{(
                                         FREQUENCY_OPTIONS.find(
                                             (f) => f.id === paymentForm.watch("updateFrequency"),
                                         )?.additionalPrice || 0
@@ -167,7 +255,7 @@ export const PaymentModal = ({
                                     SubTotal
                                 </p>
                                 <p className="text-foreground font-semibold text-[1.2rem]">
-                                {currencySymbol}{totalPrice.toFixed(2)}
+                                    {currencySymbol}{totalPrice.toFixed(2)}
                                 </p>
                             </div>
                             {discount && (
@@ -186,7 +274,7 @@ export const PaymentModal = ({
                                     {t("review.summary.total")}
                                 </p>
                                 <p className="text-primary font-semibold text-lg">
-                                {currencySymbol}{totalAfterDiscount.toFixed(2)}
+                                    {currencySymbol}{totalAfterDiscount.toFixed(2)}
                                 </p>
                             </div>
                         </div>

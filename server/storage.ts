@@ -1,5 +1,5 @@
 import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { eq, and, ne } from "drizzle-orm";
 import {
   users,
   User,
@@ -26,6 +26,10 @@ export interface IStorage {
   updateUserDodoCustomerId(userId: number, customerId: string): Promise<User>;
   getUserByStripeCustomerId(stripeCustomerId: string): Promise<User | undefined>;
   updateUserStripeCustomerId(userId: number, customerId: string): Promise<User>;
+
+  // Promocodes operations
+  isPromoCodeUsedByAnotherUser(currentUserId: number,
+    promoCode: string): Promise<boolean>;
 
   // Subscription operations
   createSubscription(subscription: InsertSubscription): Promise<Subscription>;
@@ -70,7 +74,7 @@ export class DrizzleStorage implements IStorage {
       console.log("Fallback to memory session store");
     }
   }
-  
+
   async getUser(id: number) {
     const result = await db
       .select()
@@ -161,6 +165,28 @@ export class DrizzleStorage implements IStorage {
     return updated;
   }
 
+  async isPromoCodeUsedByAnotherUser(
+    currentUserId: number,
+    promoCode: string
+  ): Promise<boolean> {
+    const code = promoCode.trim();
+    if (!code) return false;
+
+    const rows = await db
+      .select({ id: subscriptions.id })
+      .from(subscriptions)
+      .where(
+        and(
+          eq(subscriptions.promoCode, code),
+          ne(subscriptions.userId, currentUserId),
+          eq(subscriptions.codeApplied, true)
+        )
+      )
+      .limit(1);
+
+    return rows.length > 0;
+  }
+
   async updateUserDodoCustomerId(
     userId: number,
     customerId: string,
@@ -220,7 +246,7 @@ export class DrizzleStorage implements IStorage {
   }
 
   async updateSubscriptionStripeId(id: number, stripeSubscriptionId: string): Promise<Subscription> {
-     const [updated] = await db
+    const [updated] = await db
       .update(subscriptions)
       .set({ stripeSubscriptionId })
       .where(eq(subscriptions.id, id))
