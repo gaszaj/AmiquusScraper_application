@@ -121,19 +121,19 @@ export const ja = {
     setAlerts: "アラートを設定",
     notificationMockup1: {
       title: "新しい一致！",
-      description: "BMW 3シリーズ、2019年、$32,500 – AutoTraderに新しく投稿",
+      description: "BMW 3シリーズ、2019年、€32,500 – AutoTraderに新しく投稿",
     },
     notificationMockup2: {
       title: "Telegram通知",
       description:
-        "Mercedes Cクラス、2020年、30,000マイル – 価格が$2,000下がりました",
+        "Mercedes Cクラス、2020年、30,000マイル – 価格が€2,000下がりました",
     },
   },
   pricing: {
     title: "シンプルで透明な料金",
     subtitle:
       "料金はお客様の特定のニーズに基づいています。基本パッケージから始め、必要に応じてカスタマイズ。",
-    baseTitle: "基本パッケージ: $79.99/月",
+    baseTitle: "基本パッケージ: €79.99/月",
     includedTitle: "含まれるもの:",
     includedFeatures: [
       "1サイトの追跡",
@@ -706,7 +706,7 @@ export const ja = {
     title: "車アラート設定",
     subtitle: "夢の車について通知を受けるためにTelegramボットを設定",
     basicPlan: "基本プラン",
-    baseTitle: "$79.99/月",
+    baseTitle: "€79.99/月",
     button: "私の車アラートサービスを開始",
     cancel: "いつでもキャンセル可能",
     toasts: {
@@ -1161,8 +1161,8 @@ export const ja = {
       cost: {
         question: "サブスクリプション料金はいくらですか？",
         answer: [
-          "1サイト監視・6時間ごとの更新で月額$79.99から利用できます。",
-          "監視サイトの追加は1サイトにつき月額$4.99です。",
+          "1サイト監視・6時間ごとの更新で月額€79.99から利用できます。",
+          "監視サイトの追加は1サイトにつき月額€4.99です。",
         ],
       },
       cancel: {

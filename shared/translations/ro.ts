@@ -123,18 +123,18 @@ export const ro = {
     setAlerts: "Setați alerte",
     notificationMockup1: {
       title: "Potrivire nouă!",
-      description: "BMW Seria 3, 2019, $32,500 – anunț nou pe AutoTrader",
+      description: "BMW Seria 3, 2019, €32,500 – anunț nou pe AutoTrader",
     },
     notificationMockup2: {
       title: "Notificare Telegram",
-      description: "Mercedes Clasa C, 2020, 30.000 mile – preț redus cu $2.000",
+      description: "Mercedes Clasa C, 2020, 30.000 mile – preț redus cu €2.000",
     },
   },
   pricing: {
     title: "Prețuri simple și transparente",
     subtitle:
       "Prețurile bazate pe nevoile dvs. Începeți cu pachetul de bază și personalizați după necesitate.",
-    baseTitle: "Pachet de bază: $79.99/lună",
+    baseTitle: "Pachet de bază: €79.99/lună",
     includedTitle: "Inclus:",
     includedFeatures: [
       "1 urmărire site",
@@ -721,7 +721,7 @@ export const ro = {
     subtitle:
       "Setați botul Telegram pentru a primi notificări despre mașina visurilor",
     basicPlan: "Plan de bază",
-    baseTitle: "$79.99/lună",
+    baseTitle: "€79.99/lună",
     button: "Activați serviciul meu de alerte auto",
     cancel: "Poate fi anulat oricând",
     toasts: {
@@ -1186,7 +1186,7 @@ export const ro = {
       cost: {
         question: "Cât costă un abonament?",
         answer: [
-          "Prețurile noastre încep de la 79,99 $ pe lună pentru monitorizarea unui singur site, cu actualizări la fiecare 6 ore. Site-urile suplimentare costă 4,99 $ fiecare pe lună. Poți, de asemenea, să îți upgradezi frecvența de actualizare pentru notificări mai rapide.",
+          "Prețurile noastre încep de la 79,99 € pe lună pentru monitorizarea unui singur site, cu actualizări la fiecare 6 ore. Site-urile suplimentare costă 4,99 € fiecare pe lună. Poți, de asemenea, să îți upgradezi frecvența de actualizare pentru notificări mai rapide.",
           "Pentru detalii specifice de preț, te rugăm să consulți secțiunea de prețuri de pe pagina principală.",
         ],
       },

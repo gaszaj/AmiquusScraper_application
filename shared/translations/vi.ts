@@ -124,18 +124,18 @@ export const vi = {
     notificationMockup1: {
       title: "Đã tìm thấy tin đăng mới!",
       description:
-        "BMW 3 Series, 2019, 32.500$ – Vừa được đăng trên AutoTrader",
+        "BMW 3 Series, 2019, 32.500€ – Vừa được đăng trên AutoTrader",
     },
     notificationMockup2: {
       title: "Thông báo Telegram",
-      description: "Mercedes C-Class, 2020, 30.000 km – Vừa giảm giá 2.000$",
+      description: "Mercedes C-Class, 2020, 30.000 km – Vừa giảm giá 2.000€",
     },
   },
   pricing: {
     title: "Bảng giá đơn giản, minh bạch",
     subtitle:
       "Giá được xây dựng dựa trên nhu cầu của bạn. Bắt đầu với gói cơ bản và tuỳ chỉnh thêm theo yêu cầu.",
-    baseTitle: "Gói cơ bản: 79,99$/tháng",
+    baseTitle: "Gói cơ bản: 79,99€/tháng",
     includedTitle: "Bao gồm:",
     includedFeatures: [
       "Theo dõi 1 website",
@@ -715,7 +715,7 @@ export const vi = {
     title: "Thiết lập thông báo xe của bạn",
     subtitle: "Cấu hình Telegram bot để nhận thông báo về chiếc xe mơ ước.",
     basicPlan: "Gói cơ bản",
-    baseTitle: "79,99$/tháng",
+    baseTitle: "79,99€/tháng",
     button: "Bắt đầu dịch vụ thông báo xe",
     cancel: "Có thể hủy bất cứ lúc nào",
     toasts: {
@@ -1185,8 +1185,8 @@ export const vi = {
       cost: {
         question: "Gói đăng ký có giá bao nhiêu?",
         answer: [
-          "Gói cơ bản: $79.99/tháng cho 1 website, cập nhật mỗi 6 giờ.",
-          "Mỗi website thêm: $4.99/tháng.",
+          "Gói cơ bản: €79.99/tháng cho 1 website, cập nhật mỗi 6 giờ.",
+          "Mỗi website thêm: €4.99/tháng.",
           "Bạn có thể nâng cấp tần suất cập nhật để nhận thông báo nhanh hơn.",
         ],
       },

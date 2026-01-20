@@ -123,19 +123,19 @@ export const lt = {
     setAlerts: "Nustatyti įspėjimus",
     notificationMockup1: {
       title: "Naujas atitikmuo!",
-      description: "BMW 3 serija, 2019, $32,500 – naujas AutoTrader skelbimas",
+      description: "BMW 3 serija, 2019, €32,500 – naujas AutoTrader skelbimas",
     },
     notificationMockup2: {
       title: "Telegram pranešimas",
       description:
-        "Mercedes C klasė, 2020, 30,000 mylių – kaina sumažinta $2,000",
+        "Mercedes C klasė, 2020, 30,000 mylių – kaina sumažinta €2,000",
     },
   },
   pricing: {
     title: "Paprastos ir skaidrios kainos",
     subtitle:
       "Kainos pagrįstos jūsų poreikiais. Pradėkite nuo bazinio paketo ir pritaikykite pagal poreikį.",
-    baseTitle: "Bazinis paketas: $79.99/mėn.",
+    baseTitle: "Bazinis paketas: €79.99/mėn.",
     includedTitle: "Įskaičiuota:",
     includedFeatures: [
       "1 svetainės sekimas",
@@ -717,7 +717,7 @@ export const lt = {
     subtitle:
       "Nustatykite Telegram botą, kad gautumėte pranešimus apie svajonių automobilį",
     basicPlan: "Bazinis planas",
-    baseTitle: "$79.99/mėn.",
+    baseTitle: "€79.99/mėn.",
     button: "Aktyvuoti mano automobilių įspėjimų paslaugą",
     cancel: "Galima atšaukti bet kada",
     toasts: {

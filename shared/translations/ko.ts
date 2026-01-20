@@ -117,19 +117,19 @@ export const ko = {
     setAlerts: "알림 설정",
     notificationMockup1: {
       title: "새로운 일치!",
-      description: "BMW 3 시리즈, 2019년, $32,500 - AutoTrader에 새로 게시됨",
+      description: "BMW 3 시리즈, 2019년, €32,500 - AutoTrader에 새로 게시됨",
     },
     notificationMockup2: {
       title: "Telegram 알림",
       description:
-        "Mercedes C 클래스, 2020년, 30,000 마일 - 가격이 $2,000 하락",
+        "Mercedes C 클래스, 2020년, 30,000 마일 - 가격이 €2,000 하락",
     },
   },
   pricing: {
     title: "간단하고 투명한 요금",
     subtitle:
       "요금은 특정 요구사항에 기반합니다. 기본 패키지부터 시작하여 필요에 따라 맞춤.",
-    baseTitle: "기본 패키지: $79.99/월",
+    baseTitle: "기본 패키지: €79.99/월",
     includedTitle: "포함:",
     includedFeatures: [
       "1개 사이트 추적",
@@ -696,7 +696,7 @@ export const ko = {
     title: "차량 알림 설정",
     subtitle: "꿈의 차량에 대한 알림을 받기 위해 Telegram 봇을 설정하세요",
     basicPlan: "기본 플랜",
-    baseTitle: "$79.99/월",
+    baseTitle: "€79.99/월",
     button: "내 차량 알림 서비스 활성화",
     cancel: "언제든지 취소 가능",
     toasts: {
@@ -1148,8 +1148,8 @@ export const ko = {
       cost: {
         question: "구독 비용은 얼마인가요?",
         answer: [
-          "1개의 사이트 모니터링 및 6시간 간격 업데이트 기준 월 $79.99부터 시작합니다.",
-          "추가 웹사이트 모니터링은 사이트당 월 $4.99입니다.",
+          "1개의 사이트 모니터링 및 6시간 간격 업데이트 기준 월 €79.99부터 시작합니다.",
+          "추가 웹사이트 모니터링은 사이트당 월 €4.99입니다.",
         ],
       },
       cancel: {

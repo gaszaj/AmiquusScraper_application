@@ -123,19 +123,19 @@ export const en = {
     setAlerts: "Set Up Your Alerts",
     notificationMockup1: {
       title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader",
+      description: "BMW 3 Series, 2019, €32,500 - Just listed on AutoTrader",
     },
     notificationMockup2: {
       title: "Telegram Alert",
       description:
-        "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000",
+        "Mercedes C-Class, 2020, 30,000 miles - Price dropped by €2,000",
     },
   },
   pricing: {
     title: "Simple, Transparent Pricing",
     subtitle:
       "Our pricing is based on your specific needs. Start with a base package and customize it to fit your requirements.",
-    baseTitle: "Base Package: $79.99/month",
+    baseTitle: "Base Package: €79.99/month",
     includedTitle: "What's Included:",
     includedFeatures: [
       "One website monitoring",
@@ -718,7 +718,7 @@ export const en = {
     subtitle:
       " Configure your Telegram bot to receive notifications about your dream car",
     basicPlan: "Basic Plan",
-    baseTitle: "$79.99/month",
+    baseTitle: "€79.99/month",
     button: "Start My Car Alert Service",
     cancel: "Cancel anytime",
     toasts: {
@@ -1306,7 +1306,7 @@ export const en = {
       cost: {
         question: "How much does a subscription cost?",
         answer: [
-          "Our pricing starts at $79.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
+          "Our pricing starts at €79.99 per month for monitoring one website with updates every 6 hours. Additional websites cost €4.99 each per month. You can also upgrade your update frequency for faster notifications.",
           "For specific pricing details, please view our pricing section on the homepage.",
         ],
       },

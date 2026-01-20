@@ -1,8 +1,10 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
-import {registerStripeRoutes} from "./routes/stripe";
+import {registerDodoRoutes} from "./routes/dodo";
 import { setupVite, serveStatic, log } from "./vite";
 import stripeWebhookHandler from "./routes/webhook"; // create this module
+import dodoWebhookHandler from "./routes/dodoWebhook";
+import { startSubscriptionRetryJob } from "./jobs/subscriptionRetryJob";
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -10,6 +12,8 @@ const app = express();
 
 // ✅ Register Stripe webhook BEFORE body parsing
 app.use("/api/stripe-webhook", stripeWebhookHandler);
+// ✅ Register Dodo webhook BEFORE body parsing
+app.use("/api/dodo/webhook", dodoWebhookHandler);
 
 // ✅ Then use JSON parsing for everything else
 app.use(express.json());
@@ -47,7 +51,10 @@ app.use((req, res, next) => {
 
 (async () => {
   const server = await registerRoutes(app);
-  registerStripeRoutes(app);
+  registerDodoRoutes(app);
+
+  // start subscription retry job
+  startSubscriptionRetryJob();
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;

@@ -1,5 +1,5 @@
 import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { eq, and, ne } from "drizzle-orm";
 import {
   users,
   User,
@@ -22,8 +22,15 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   updateUser(id: number, data: Partial<InsertUser>): Promise<User>;
   updateUserGoogleId(userId: number, googleId: string): Promise<User>;
+  getUserByDodoCustomerId(dodoCustomerId: string): Promise<User | undefined>;
+  updateUserDodoCustomerId(userId: number, customerId: string): Promise<User>;
   getUserByStripeCustomerId(stripeCustomerId: string): Promise<User | undefined>;
   updateUserStripeCustomerId(userId: number, customerId: string): Promise<User>;
+  getOnHoldSubscriptions(): Promise<Subscription[]>;
+
+  // Promocodes operations
+  isPromoCodeUsedByAnotherUser(currentUserId: number,
+    promoCode: string): Promise<boolean>;
 
   // Subscription operations
   createSubscription(subscription: InsertSubscription): Promise<Subscription>;
@@ -68,7 +75,7 @@ export class DrizzleStorage implements IStorage {
       console.log("Fallback to memory session store");
     }
   }
-  
+
   async getUser(id: number) {
     const result = await db
       .select()
@@ -137,6 +144,15 @@ export class DrizzleStorage implements IStorage {
     return result[0];
   }
 
+  async getUserByDodoCustomerId(dodoCustomerId: string): Promise<User | undefined> {
+    const result = await db
+      .select()
+      .from(users)
+      .where(eq(users.dodoCustomerId, dodoCustomerId))
+      .limit(1);
+    return result[0];
+  }
+
   async updateUserStripeCustomerId(
     userId: number,
     customerId: string,
@@ -144,6 +160,48 @@ export class DrizzleStorage implements IStorage {
     const [updated] = await db
       .update(users)
       .set({ stripeCustomerId: customerId })
+      .where(eq(users.id, userId))
+      .returning();
+
+    return updated;
+  }
+
+  async getOnHoldSubscriptions(): Promise<Subscription[]> {
+    return db
+      .select()
+      .from(subscriptions)
+      .where(eq(subscriptions.status, "on_hold"));
+  }
+
+  async isPromoCodeUsedByAnotherUser(
+    currentUserId: number,
+    promoCode: string
+  ): Promise<boolean> {
+    const code = promoCode.trim();
+    if (!code) return false;
+
+    const rows = await db
+      .select({ id: subscriptions.id })
+      .from(subscriptions)
+      .where(
+        and(
+          eq(subscriptions.promoCode, code),
+          ne(subscriptions.userId, currentUserId),
+          eq(subscriptions.codeApplied, true)
+        )
+      )
+      .limit(1);
+
+    return rows.length > 0;
+  }
+
+  async updateUserDodoCustomerId(
+    userId: number,
+    customerId: string,
+  ): Promise<User> {
+    const [updated] = await db
+      .update(users)
+      .set({ dodoCustomerId: customerId })
       .where(eq(users.id, userId))
       .returning();
 
@@ -196,7 +254,7 @@ export class DrizzleStorage implements IStorage {
   }
 
   async updateSubscriptionStripeId(id: number, stripeSubscriptionId: string): Promise<Subscription> {
-     const [updated] = await db
+    const [updated] = await db
       .update(subscriptions)
       .set({ stripeSubscriptionId })
       .where(eq(subscriptions.id, id))

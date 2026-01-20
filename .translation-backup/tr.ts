@@ -24,16 +24,10 @@ export const tr = {
     button1: "Uyarılarını Ayarla",
     button2: "Nasıl Çalıştığını Gör",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "İstediğiniz zaman iptal edin",
-      nosetup: "Kurulum gerektirmez",
-      realtime: "Anlık bildirimler",
-      websites: "15’ten fazla web sitesi takip ediliyor"
+      websites: "15+ web sitesi izleniyor",
+      realtime: "Gerçek zamanlı uyarılar",
+      noSetup: "Kurulum gerekmiyor",
+      cancelAnytime: "İstediğiniz zaman iptal edin"
     }
   },
   limited: {
@@ -57,8 +51,8 @@ export const tr = {
     heading: "Neden Amiquus'u Seçmelisiniz?",
     subheading: "Zaman kazanın ve otomatik takip servisimizle hayalinizdeki arabayı asla kaçırmayın.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Çoklu Site İzleme",
+      description: "Her birini manuel olarak kontrol etmek zorunda kalmadan aynı anda birden fazla araç ilanı web sitesini izleyin."
     },
     notifications: {
       title: "Anında Bildirimler",
@@ -73,61 +67,12 @@ export const tr = {
       description: "Yeni ilanları ne sıklıkla kontrol etmemizi istediğinizi seçin; saatlik güncellemelerden anlık takibe kadar seçenekler mevcut."
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Çoklu Dil Desteği",
+      description: "İlanları daha kolay anlamak için bildirimleri tercih ettiğiniz dilde alın."
     },
     account: {
       title: "Kolay Hesap Yönetimi",
       description: "Birden fazla arama profilini yönetin ve abonelik ayarlarınızı birkaç tıkla değiştirin."
-    },
-    multisite: {
-      description: "Birden fazla otomobil ilan sitesini aynı anda, her birini tek tek kontrol etmeden takip edin.",
-      title: "Çoklu Site Takibi"
     }
   },
   howItWorks: {
@@ -148,12 +93,8 @@ export const tr = {
         description: "Kriterlerinize uygun bir araç, izlediğimiz herhangi bir sitede yayınlandığında anında bildirim alın."
       },
       findCar: {
-        title: "Find Your Perfect Car",
+        title: "Mükemmel arabanızı bulun",
         description: "Be the first to know about new listings and secure the best deals before anyone else."
-      },
-      findcar: {
-        description: "Yeni ilanlardan ilk sen haberdar ol, en iyi fırsatları herkesten önce kap!",
-        title: "Mükemmel Aracını Bul"
       }
     },
     features: {
@@ -163,25 +104,15 @@ export const tr = {
       3: "Otomatik fiyat düşüşü ve yeni ilan bildirimleri",
       4: "Kolayca kurulabilen ve 5 dakikadan kısa süren bir işlem"
     },
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "Uyarılarınızı ayarlayın",
     notificationMockup1: {
       title: "New Match Found!",
       description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
-      title: "Telegram Alert",
+      title: "Telegram uyarısı",
       description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    },
-    notificationmockup1: {
-      description: "BMW 3 Serisi, 2019, $32.500 - AutoTrader’da yeni listelendi",
-      title: "Yeni Eşleşme Bulundu!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-Serisi, 2020, 30.000 mil - Fiyatı 2.000 $ düştü",
-      title: "Telegram Uyarısı"
-    },
-    setalerts: "Uyarılarını Ayarla",
-    whytitle: "Neden Amiquus'u Seçmelisiniz?"
+    }
   },
   pricing: {
     title: "Basit ve Şeffaf Fiyatlandırma",
@@ -218,33 +149,23 @@ export const tr = {
       }
     },
     footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Hemen Başlayın",
-    addonstitle: "Eklentiler:",
-    basetitle: "Temel Paket: 79,99 $/ay",
-    footernote: "Tüm planlar sınırsız arama yapılandırması ve kolay abonelik yönetimi içerir.",
-    includedfeatures: {
-      0: "Bir web sitesi izleme",
-      1: "Saatlik güncellemeler",
-      2: "Sınırsız filtreler",
-      3: "Telegram bildirimleri"
-    },
-    includedtitle: "Neler Dahil?"
+    button: "Hemen Başlayın"
   },
   signup: {
-    heading: "Create Your Car Alert",
+    heading: "Araç uyarınızı oluşturun",
     subheading: "Set up your personalized car listing notifications in just a few steps.",
     cta: "Get Alerts Now",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
+      message: "Şu anda tam kapasitedeyiz. Bir yer açıldığında bilgilendirilmek için bekleme listemize katılın.",
       cta: "Join Waitlist"
     },
     toast: {
       success: {
-        title: "Subscription created",
+        title: "Abonelik oluşturuldu",
         description: "Your subscription has been created successfully"
       },
       error: {
-        title: "Subscription failed",
+        title: "Abonelik başarısız oldu",
         description: "We couldn't create your subscription. Please try again later."
       }
     }
@@ -280,21 +201,7 @@ export const tr = {
       telegramChatId: "Telegram chat ID is required",
       websitesSelected: "At least one website must be selected",
       notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Araba markası zorunludur",
-      carmodel: "Araba modeli gerekli",
-      facebookmarketplaceurl: "Facebook seçildiğinde Facebook Marketplace URL’si gereklidir.",
-      fueltype: "Yakıt türü zorunludur",
-      maxkilometers: "Maksimum kilometre bir sayı olmalıdır.",
-      notificationlanguage: "Bildirim dili seçilmelidir.",
-      pricemax: "Maksimum fiyat bir sayı olmalıdır",
-      pricemin: "Minimum fiyat bir sayı olmalıdır",
-      telegramchatid: "Telegram sohbet kimliği gerekli",
-      telegramtoken: "Telegram bot tokenı gerekli",
-      telegramusername: "Telegram kullanıcı adı zorunludur",
-      websitesselected: "En az bir web sitesi seçilmelidir.",
-      yearmax: "Maksimum yıl geçerli bir yıl olmalıdır.",
-      yearmin: "Minimum yıl geçerli bir yıl olmalıdır."
+      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
     }
   },
   personalInfo: {
@@ -303,23 +210,17 @@ export const tr = {
     labels: {
       firstName: "First Name",
       lastName: "Last Name",
-      email: "E-posta Adresi",
-      firstname: "Adı",
-      lastname: "Soyadı"
+      email: "E-posta Adresi"
     },
     placeholders: {
       firstName: "John",
       lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "John, işte nasıl",
-      lastname: "Geyik"
+      email: "john.doe@example.com"
     },
     errors: {
       firstName: "First name is required",
       lastName: "Last name is required",
-      email: "Lütfen geçerli bir e-posta adresi girin.",
-      firstname: "Ad zorunludur",
-      lastname: "Soyadı zorunludur"
+      email: "Lütfen geçerli bir e-posta adresi girin."
     },
     actions: {
       login: "Devam etmek için giriş yapın veya kayıt olun",
@@ -332,9 +233,7 @@ export const tr = {
     labels: {
       websites: "İzlenecek web siteleri",
       facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace URL'si",
-      updatefrequency: "Güncelleme Sıklığı"
+      updateFrequency: "Update Frequency"
     },
     placeholders: {
       frequency: "Frekans seçin"
@@ -344,16 +243,11 @@ export const tr = {
       facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
       videoTitle: "Need help finding your Facebook Marketplace search link?",
       videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Facebook Marketplace arama sonuçlarınızın URL’sini buraya yapıştırın.",
-      updatefrequency: "Yeni ilanları ne sıklıkla kontrol etmeliyiz? Daha yüksek sıklıklar daha fazla maliyete yol açabilir.",
-      videodesc: "Aşağıdaki videoyu izleyerek adım adım talimatları öğrenebilirsiniz.",
-      videotitle: "Facebook Marketplace arama bağlantınızı bulmakta yardıma mı ihtiyacınız var?"
+      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
     },
     errors: {
       websites: "En az bir web sitesi seçilmelidir.",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook seçildiğinde Facebook Marketplace URL’si gereklidir."
+      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
     },
     actions: {
       previous: "Önceki",
@@ -371,15 +265,7 @@ export const tr = {
       priceMax: "Maximum Price",
       yearMin: "Minimum Year",
       yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Araba Markası",
-      carmodel: "Araba Modeli",
-      fueltype: "Yakıt Tipi",
-      maxkilometers: "Maksimum Kilometre",
-      pricemax: "Maksimum Fiyat",
-      pricemin: "Minimum Fiyat",
-      yearmax: "Maksimum Yıl",
-      yearmin: "Minimum Yıl"
+      maxKilometers: "Max Kilometers"
     },
     placeholders: {
       carBrand: "Select Car Brand",
@@ -390,20 +276,10 @@ export const tr = {
       priceMax: "Enter maximum price",
       yearMin: "Enter minimum year",
       yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Araba Markası Seç",
-      carmodel: "Araba Modeli Seç",
-      carmodeldisabled: "Önce araç markasını seçin",
-      fueltype: "Yakıt Tipi Seçin",
-      maxkilometers: "Maksimum kilometreyi girin",
-      pricemax: "Maksimum fiyatı girin",
-      pricemin: "Minimum fiyatı girin",
-      yearmax: "Maksimum yılı girin",
-      yearmin: "Minimum yılı girin"
+      maxKilometers: "Enter maximum kilometers"
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Kullanılabilir model yok"
+      noModelsAvailable: "No Models Available"
     },
     errors: {
       carBrand: "Car brand is required",
@@ -413,15 +289,7 @@ export const tr = {
       priceMax: "Maximum price must be a number",
       yearMin: "Minimum year must be a valid year",
       yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Araba markası zorunludur",
-      carmodel: "Araba modeli zorunludur",
-      fueltype: "Yakıt tipi zorunludur",
-      maxkilometers: "Maksimum kilometre sayısı bir sayı olmalıdır.",
-      pricemax: "Maksimum fiyat bir sayı olmalıdır",
-      pricemin: "Minimum fiyat bir sayı olmalıdır",
-      yearmax: "Maksimum yıl geçerli bir yıl olmalıdır.",
-      yearmin: "Minimum yıl geçerli bir yıl olmalıdır."
+      maxKilometers: "Max kilometers must be a number"
     },
     actions: {
       previous: "Önceki",
@@ -444,17 +312,7 @@ export const tr = {
       chatStep1: "Open Telegram and search for @userinfobot",
       chatStep2: "Send any message to the bot",
       chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Telegram’ı açın ve @BotFather’ı arayın",
-      botstep2: "Komutu gönder /newbot",
-      botstep3: "Bot oluşturmak için talimatları izleyin",
-      botstep4: "BotFather tarafından sağlanan token’ı kopyalayın",
-      bottitle: "Telegram Bot Token’ı Nasıl Alırsınız:",
-      chatstep1: "Telegram’ı açın ve @userinfobot hesabını arayın",
-      chatstep2: "Bota herhangi bir mesaj gönderin",
-      chatstep3: "Bot, Chat ID’niz dahil olmak üzere bilgilerinizi size iletecek.",
-      chatstep4: "Sohbet Kimliğini kopyalayın (bu bir sayıdır)",
-      chattitle: "Telegram Sohbet Kimliğinizi Nasıl Alırsınız:"
+      chatStep4: "Copy the Chat ID (it's a number)"
     },
     videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
     videoDescription: "Watch the video below for a step-by-step guide.",
@@ -462,28 +320,25 @@ export const tr = {
       token: "Telegram Bot Tokeni",
       chatId: "Your Telegram Chat ID",
       language: "Bildirim Dili",
-      username: "Telegram Kullanıcı Adı",
-      chatid: "Telegram Sohbet Kimliğiniz"
+      username: "Telegram Kullanıcı Adı"
     },
     placeholders: {
       token: "BotFather’dan bot token’ınızı girin",
       chatId: "Enter your Telegram chat ID",
       language: "Telegram Mesaj Dili Seçin",
-      username: "Telegram kullanıcı adınızı girin",
-      chatid: "Telegram sohbet kimliğinizi girin"
+      username: "Telegram kullanıcı adınızı girin"
     },
     usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
     examples: {
       token: "Örnek: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Bunu Telegram’da @userinfobot hesabına mesaj atarak alabilirsiniz."
+      chatId: "You can get this by messaging @userinfobot on Telegram"
     },
     setupTitle: "Setup Instructions:",
     setupSteps: [
 
-      "Open Telegram and search for \\\"BotFather\\\"",
+      "Open Telegram and search for \\\\\\\"BotFather\\\\\\\"",
 
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
+      "Start a chat with BotFather by clicking \\\\\\\"Start\\\\\\\"",
 
       "Type /newbot and follow the instructions to create a new bot",
 
@@ -499,7 +354,7 @@ export const tr = {
     chatIdTitle: "How to get your Telegram Chat ID:",
     chatIdSteps: [
 
-      "Open Telegram and search for \\\"userinfobot\\\"",
+      "Open Telegram and search for \\\\\\\"userinfobot\\\\\\\"",
 
       "Send any message to the bot",
 
@@ -535,8 +390,7 @@ export const tr = {
       token: "Telegram bot token’ı gerekli",
       chatId: "Telegram chat ID is required",
       language: "Bildirim dili seçilmelidir.",
-      username: "Telegram kullanıcı adı zorunludur",
-      chatid: "Telegram sohbet kimliği gerekli"
+      username: "Telegram kullanıcı adı zorunludur"
     },
     actions: {
       previous: "Önceki",
@@ -544,47 +398,7 @@ export const tr = {
     },
     contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
     contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Örnek: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    bottokenlabel: "Telegram Bot Tokeni",
-    bottokenplaceholder: "BotFather’dan bot token’ınızı girin",
-    caralerttitle: "🚗 Yeni Araç!",
-    chatiddescription: "Bunu Telegram’da @userinfobot hesabına mesaj atarak alabilirsiniz.",
-    chatidlabel: "Telegram Sohbet Kimliğiniz",
-    chatidplaceholder: "Telegram sohbet kimliğinizi girin",
-    chatidsteps: {
-      0: "Telegram’ı açın ve \"userinfobot\"u arayın",
-      1: "Bota herhangi bir mesaj gönderin",
-      2: "Bot, Chat ID’niz dahil olmak üzere bilgilerinizi size iletecek.",
-      3: "Sohbet Kimliğini Kopyala"
-    },
-    chatidtitle: "Telegram Sohbet Kimliğinizi Nasıl Alırsınız?",
-    confirmcontact: "Bot ile bir sohbet başlattım ve bir mesaj gönderdim.",
-    contactbotinstruction: "Aşağıdaki bağlantıya tıklayarak Telegram botumuzla sohbet başlatabilir ve ona bir mesaj gönderebilirsiniz:",
-    contactbotnote: "Araba bildirimleri alabilmek için bu gereklidir. Masaüstü kullanıyorsanız QR kodunu tarayabilirsiniz.",
-    helpdescription: "Aşağıdaki videoyu izleyerek adım adım rehbere ulaşabilirsiniz.",
-    helptitle: "Telegram Bot Token ve Chat ID’nizi nasıl ayarlayacağınız konusunda yardıma mı ihtiyacınız var?",
-    kilometreslabel: "Kilometre: {{kms}}",
-    languagelabel: "Bildirim Dili",
-    languageplaceholder: "Telegram Mesaj Dili Seçin",
-    locationlabel: "Konum: {{location}}",
-    previewtitle: "Telegram Bildirimlerini Önizle",
-    pricelabel: "Fiyat: {{price}}",
-    setupsteps: {
-      0: "Telegram’ı açın ve \"BotFather\"ı arayın",
-      1: "\"Başlat\"a tıklayarak BotFather ile sohbet başlatın",
-      2: "/newbot yazın ve yeni bir bot oluşturmak için talimatları izleyin",
-      3: "Botunuz için bir isim seçin",
-      4: "Botunuz için bir kullanıcı adı seçin (sonu 'bot' ile bitmeli)",
-      5: "BotFather tarafından sağlanan API anahtarını kopyalayın",
-      6: "Yeni botunuza mesaj göndererek sohbeti başlatın."
-    },
-    setuptitle: "Kurulum Talimatları:",
-    subheading: "Telegram Botunuzu Kurun",
-    usernamedescription: "Bu, Telegram hesabınızdaki kullanıcı adıdır (@ simgesi olmadan).",
-    videodescription: "Aşağıdaki videoyu izleyerek adım adım rehberimize ulaşabilirsiniz.",
-    videoprompt: "Telegram Bot Token ve Chat ID’nizi nasıl ayarlayacağınız konusunda yardıma mı ihtiyacınız var?",
-    viewlisting: "İlanı Görüntüle →"
+    confirmContact: "I have started a chat with the bot and sent a message"
   },
   review: {
     title: "Aboneliğini Gözden Geçir",
@@ -598,9 +412,7 @@ export const tr = {
       title: "İzleme Ayarları",
       websites: "Web siteleri",
       facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook URL",
-      updatefrequency: "Güncelleme Sıklığı"
+      updateFrequency: "Update Frequency"
     },
     specs: {
       title: "Araba Özellikleri",
@@ -609,9 +421,7 @@ export const tr = {
       fuelType: "Fuel Type",
       yearRange: "Year Range",
       mileage: "Menzil (km)",
-      price: "Fiyat Aralığı (€)",
-      fueltype: "Yakıt Tipi",
-      yearrange: "Yıl Aralığı"
+      price: "Fiyat Aralığı (€)"
     },
     notification: {
       title: "Bildirim Ayarları",
@@ -623,9 +433,7 @@ export const tr = {
       base: "Temel Abonelik",
       extraWebsites: "Additional Websites",
       frequencyUpgrade: "Frequency Upgrade",
-      total: "Toplam (Aylık)",
-      extrawebsites: "Ekstra Web Siteleri",
-      frequencyupgrade: "Frekans Yükseltme"
+      total: "Toplam (Aylık)"
     },
     terms: {
       checkbox: "Kabul ediyorum",
@@ -669,9 +477,7 @@ export const tr = {
         answer: "Aboneliğinizi istediğiniz zaman hesap panelinizden iptal edebilirsiniz. \"Abonelikler\" bölümüne gidin, iptal etmek istediğiniz aboneliği seçin ve \"Aboneliği İptal Et\" butonuna tıklayın. Hizmetiniz mevcut fatura döneminizin sonuna kadar devam edecektir.",
         question: "Aboneliğimi nasıl iptal edebilirim?"
       }
-    },
-    contactlink: "Destek ekibimizle iletişime geçin",
-    contactprompt: "Hâlâ sorularınız mı var?"
+    }
   },
   footer: {
     brandTitle: "Amiquus",
@@ -693,11 +499,7 @@ export const tr = {
     about: "Hakkımızda",
     blog: "Blog",
     careers: "Kariyerler",
-    support: "Destek",
-    branddescription: "Mükemmel zamanda, en iyi ikinci el araba fırsatını bulmanız için kişisel asistanınız.",
-    brandtitle: "Amiquus",
-    getstarted: "Başlayın",
-    quicklinks: "Hızlı Bağlantılar"
+    support: "Destek"
   },
   login: {
     title: "Hesabınıza giriş yapın",
@@ -716,21 +518,8 @@ export const tr = {
     genericError: "Please check your credentials and try again.",
     errors: {
       invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Lütfen geçerli bir e-posta adresi giriniz.",
-      shortpassword: "Şifre en az 6 karakter olmalı"
-    },
-    emaillabel: "E-posta",
-    errortitle: "Giriş başarısız",
-    genericerror: "Lütfen bilgilerinizi kontrol edip tekrar deneyin.",
-    loggingin: "Giriş yapılıyor...",
-    loginbutton: "Giriş Yap",
-    loginwithgoogle: "Google ile giriş yap",
-    noaccount: "Hesabın yok mu?",
-    passwordlabel: "Parola",
-    registerlink: "Kayıt Ol",
-    successmessage: "Başarıyla giriş yaptınız.",
-    successtitle: "Giriş başarılı"
+      shortPassword: "Password must be at least 6 characters"
+    }
   },
   register: {
     title: "Hesap oluştur",
@@ -774,33 +563,8 @@ export const tr = {
       failure: {
         title: "Kayıt başarısız",
         desc: "Lütfen bilgilerinizi kontrol edip tekrar deneyin."
-      },
-      invalidusername: {
-        desc: "Kullanıcı adı yalnızca harf ve rakamlardan oluşmalı ve 3 ile 20 karakter arasında olmalıdır.",
-        title: "Geçersiz kullanıcı adı"
-      },
-      missingfields: {
-        desc: "Lütfen tüm gerekli alanları doldurun.",
-        title: "Eksik alanlar"
-      },
-      passwordmismatch: {
-        desc: "Lütfen şifrelerinizin eşleştiğinden emin olun.",
-        title: "Şifreler eşleşmiyor"
-      },
-      termsnotaccepted: {
-        desc: "Devam etmek için şartları ve gizlilik politikasını kabul etmelisiniz.",
-        title: "Şartlar kabul edilmedi"
       }
-    },
-    alreadyhave: "Zaten bir hesabınız var mı?",
-    confirmpassword: "Şifreyi Onayla",
-    createbtn: "Hesap oluştur",
-    firstname: "Adı",
-    lastname: "Soyadı",
-    orcontinue: "Veya bununla devam et",
-    privacypolicy: "Gizlilik Politikası",
-    termsnotice: "Kabul ediyorum",
-    termsofservice: "Hizmet Şartları"
+    }
   },
   verifyEmail: {
     title: "E-posta Adresinizi Doğrulayın",
@@ -821,20 +585,8 @@ export const tr = {
       enterValidEmail: "Please enter a valid email address",
       sameEmail: "Same email",
       sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-posta güncellendi",
-      entervalidemail: "Lütfen geçerli bir e-posta adresi giriniz.",
-      invalidemail: "Geçersiz e-posta",
-      sameemail: "Aynı e-posta",
-      sameemaildesc: "Yeni e-posta adresi mevcut e-posta adresiyle aynı."
-    },
-    codelabel: "Doğrulama Kodu",
-    footernote: "Kodu almadınız mı? Spam klasörünüzü kontrol edin.",
-    resendbutton: "Kodu Yeniden Gönder",
-    resendcountdown: "Kodu tekrar gönderebilmek için {{seconds}} saniye bekleyin.",
-    updateemailbutton: "E-postayı Güncelle",
-    updateemaillabel: "E-postayı Güncelle",
-    verifybutton: "E-postanızı Doğrulayın"
+      emailUpdated: "Email updated"
+    }
   },
   dashboardPayment: {
     add: "Ödeme Yöntemi Ekle",
@@ -845,12 +597,6 @@ export const tr = {
     initError: {
       title: "Error",
       description: "Unable to initialize payment setup"
-    },
-    errormessage: "Beklenmeyen bir hata oluştu",
-    errortitle: "Ödeme yöntemi eklenirken bir hata oluştu",
-    initerror: {
-      description: "Ödeme kurulumu başlatılamadı",
-      title: "Hata"
     }
   },
   dashboard: {
@@ -893,8 +639,7 @@ export const tr = {
       methods: "Ödeme yöntemleri",
       account: "Hesap ayarları",
       privacy: "Gizlilik ve güvenlik",
-      logout: "Çıkış Yap",
-      membersince: "Üye seit"
+      logout: "Çıkış Yap"
     },
     account: {
       title: "Hesap Ayarları",
@@ -955,14 +700,8 @@ export const tr = {
       contactBot: {
         title: "Contact Bot Required",
         description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      },
-      contactbot: {
-        description: "Araba bildirimleri alabilmek için Telegram botumuzla sohbet başlatıp bir mesaj göndermeniz gerekiyor. Lütfen botla iletişime geçmek için aşağıdaki adımları takip edin.",
-        title: "İletişim Botu Gerekli"
       }
-    },
-    basetitle: "79,99 $/ay",
-    basicplan: "Temel Plan"
+    }
   },
   loginPrompt: {
     title: "Giriş Gerekli",
@@ -1005,15 +744,8 @@ export const tr = {
       },
       error: {
         title: "Abonelik güncellenirken bir hata oluştu"
-      },
-      priceerror: {
-        description: "Abonelik ücretini aynı anda duraklatıyor ve güncelliyorsunuz. Ücreti ya duraklatmanız ya da güncellemeniz gerekiyor.",
-        title: "Abonelik Güncellenemiyor"
       }
-    },
-    notfound: "Abonelik bulunamadı",
-    notfoundsub: "Kontrol paneline geri dön",
-    subtitle: "Abonelik bilgilerinizi aşağıdan düzenleyin"
+    }
   },
   about: {
     title: "Amiquus Hakkında",
@@ -1241,8 +973,7 @@ export const tr = {
           1: "Web sitemizdeki iletişim sayfasını ziyaret ederek"
         }
       }
-    },
-    lastupdated: "Son güncelleme: 21 Mayıs 2025"
+    }
   },
   privacy: {
     metaTitle: "Gizlilik Politikası | Amiquus",
@@ -1363,8 +1094,7 @@ export const tr = {
           1: "Web sitemizdeki iletişim sayfasını ziyaret ederek"
         }
       }
-    },
-    lastupdated: "Son güncelleme: 21 Mayıs 2025"
+    }
   },
   faqs: {
     metaTitle: "Sıkça Sorulan Sorular | Amiquus",
@@ -1408,34 +1138,6 @@ export const tr = {
 
         ],
         outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      },
-      howitworks: {
-        answer: {
-          0: "Arama kriterlerinizi belirleyin (marka, model, fiyat aralığı vb.)",
-          1: "Hangi web sitelerini takip etmek istediğinizi siz seçiyorsunuz",
-          2: "Bildirimler için Telegram hesabınızı bağlıyorsunuz",
-          3: "Sistemimiz, seçtiğiniz web sitelerini yeni ilanlar için sürekli olarak izler.",
-          4: "Uygun bir araç bulunduğunda, tüm detaylar ve doğrudan bağlantı ile birlikte anında Telegram bildirimi alırsınız."
-        },
-        question: "Nasıl çalışır?"
-      },
-      whatis: {
-        answer: "AMIQUUS, belirlediğiniz özel kriterlere uygun araçları bulmak için birden fazla otomobil ilan sitesini sizin yerinize takip eden bir servistir. Uygun bir ilan yayınlandığında, anında Telegram üzerinden bildirim alırsınız; böylece satıcılarla ilk iletişime geçenlerden biri olabilir ve avantajlı fırsatları yakalayabilirsiniz.",
-        question: "Amiquus nedir?"
-      },
-      whichwebsites: {
-        answerintro: "Şu anda aşağıdaki başlıca otomobil ilan platformlarını takip ediyoruz:",
-        list: {
-          0: "AutoTrader",
-          1: "Cars.com",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (URL ile)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Daha kapsamlı bir içerik sunabilmek için sürekli olarak yeni platformlar ekliyoruz.",
-        question: "Hangi araba ilan sitelerini takip ediyorsunuz?"
       }
     },
     subscription: {
@@ -1456,8 +1158,7 @@ export const tr = {
           2: "\"Abonelikler\" sekmesini seçin",
           3: "İptal etmek istediğiniz aboneliğin yanındaki \"Aboneliği İptal Et\" butonuna tıklayın."
         },
-        note: "Aboneliğiniz, mevcut fatura döneminizin sonuna kadar aktif kalacaktır.",
-        stepsintro: "Aboneliğinizi dilediğiniz zaman hesap profil sayfanızdan iptal edebilirsiniz:"
+        note: "Aboneliğiniz, mevcut fatura döneminizin sonuna kadar aktif kalacaktır."
       },
       multiple: {
         question: "Farklı araba modelleri için birden fazla abonelik alabilir miyim?",
@@ -1488,8 +1189,7 @@ export const tr = {
           4: "Bot tokenınızı ve sohbet ID’nizi AMIQUUS abonelik ayarlarınıza girin.",
           5: "Bildirim ayarlarınızı `Test Mesajı Gönder` butonunu kullanarak test edin"
         },
-        note: "Abonelik kurulum sürecinde, ekran görüntüleriyle adım adım detaylı yönergeler sunulmaktadır.",
-        stepsintro: "Telegram bildirimlerini ayarlamak için:"
+        note: "Abonelik kurulum sürecinde, ekran görüntüleriyle adım adım detaylı yönergeler sunulmaktadır."
       },
       frequency: {
         question: "Bildirimleri ne sıklıkla alacağım?",
@@ -1543,7 +1243,7 @@ export const tr = {
       button: "Anasayfaya Dön"
     },
     cantJoin: {
-      title: "Join the Waitlist",
+      title: "Bekleme listesine katılın",
       description: " We'll notify you as soon as a subscription spot becomes available"
     },
     form: {
@@ -1561,19 +1261,7 @@ export const tr = {
         description: "Bu e-posta adresini, bir yer açıldığında sizi bilgilendirmek için kullanacağız."
       },
       submit: "Bekleme Listesine Katıl",
-      submitting: "Gönderiliyor...",
-      firstname: {
-        label: "Adı",
-        placeholder: "John"
-      },
-      lastname: {
-        label: "Soyadı",
-        placeholder: "Geyik"
-      }
-    },
-    cantjoin: {
-      description: "Bir abonelik hakkı boşaldığında sizi bilgilendireceğiz.",
-      title: "Bekleme Listesine Katıl"
+      submitting: "Gönderiliyor..."
     }
   },
   support: {
@@ -1620,17 +1308,6 @@ export const tr = {
       heading: "Still need help?",
       description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
       button: "Contact Support"
-    },
-    emailsupport: {
-      description: "Bize e-posta gönderin, 24 saat içinde size geri dönüş yapalım.",
-      email: "support@amiquus.com",
-      title: "E-posta Desteği"
-    },
-    faqheading: "Sıkça Sorulan Sorular",
-    stillneedhelp: {
-      button: "Destek ile İletişime Geç",
-      description: "Sorunuzun cevabını bulamadıysanız, destek ekibimize dilediğiniz zaman ulaşabilirsiniz. Size yardımcı olmak için buradayız!",
-      heading: "Hâlâ yardıma mı ihtiyacınız var?"
     }
   },
   notFound: {
@@ -1689,52 +1366,6 @@ export const tr = {
       team: "— The Amiquus Team",
       needHelp: "Need help?",
       hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "İptal Et",
-    confirmremove: "Kartı Kaldır",
-    default: "Varsayılan",
-    expires: "Son Kullanma Tarihi",
-    remove: "Kaldır",
-    removedescription: "{{last4}} ile biten {{brand}} kartınızı silmek istediğinizden emin misiniz?",
-    removetitle: "Ödeme Yöntemini Kaldır",
-    removewarning: "Bu, varsayılan ödeme yönteminizdir ve kaldırılması aktif aboneliklerinizi etkileyebilir.",
-    setasdefault: "Varsayılan Olarak Ayarla",
-    setdefaultdescription: "{{brand}} kartınızın {{last4}} ile bitenini varsayılan ödeme yöntemi olarak ayarlamak ister misiniz? Bu kart, tüm gelecekteki abonelik ödemelerinizde kullanılacaktır.",
-    setdefaulttitle: "Varsayılan Ödeme Yöntemini Ayarla"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Uyarıyı İptal Et",
-    canceldescription: "{{brand}} {{model}} için oluşturduğunuz araç uyarısını iptal etmek istediğinizden emin misiniz? Bu işlem tüm bildirimleri durduracak ve aracı tekrar takip etmek isterseniz yeni bir uyarı oluşturmanız gerekecek.",
-    canceltitle: "Araba Uyarısını İptal Et",
-    confirmcancel: "Uyarıyı İptal Et",
-    edit: "Düzenle",
-    keepmyalert: "Uyarımı Sakla",
-    language: "Dil",
-    price: "Fiyat",
-    pricerange: "Fiyat",
-    updates: "Güncellemeler",
-    websites: "Web siteleri",
-    years: "Yıl"
-  },
-  signUp: {
-    cta: "Şimdi Bildirim Al",
-    heading: "Aracınız için uyarı oluşturun",
-    subheading: "Kişiselleştirilmiş araç ilanı bildirimlerinizi sadece birkaç adımda ayarlayın.",
-    toast: {
-      error: {
-        description: "Aboneliğinizi oluşturamadık. Lütfen daha sonra tekrar deneyin.",
-        title: "Abonelik başarısız oldu"
-      },
-      success: {
-        description: "Aboneliğiniz başarıyla oluşturuldu",
-        title: "Abonelik oluşturuldu"
-      }
-    },
-    waitlist: {
-      cta: "Bekleme Listesine Katıl",
-      message: "Şu anda tam kapasiteyiz. Bir yer açıldığında haberdar olmak için lütfen bekleme listemize katılın."
     }
   }
 };

@@ -2,7 +2,7 @@ export const ar = {
   navigations: {
     features: "المميزات",
     how: "كيف يعمل",
-    pricing: "التسعير",
+    pricing: "الأسعار",
     getAlerts: "احصل على التنبيهات",
     waitlist: "قائمة الانتظار",
     faq: "الأسئلة الشائعة",
@@ -15,1488 +15,1381 @@ export const ar = {
     profile: "الملف الشخصي",
     settings: "الإعدادات",
     logout: "تسجيل الخروج",
-    signUp: "التسجيل"
+    signUp: "إنشاء حساب",
   },
   hero: {
-    label: "Track used car listings in real-time",
-    title: "Never Miss Your Perfect Car Deal Again",
-    subtitle: "Amiquus alerts you instantly when your dream car becomes available across multiple car listing websites. Get notifications via Telegram the moment a match is found.",
-    button1: "Set Up Your Alerts",
-    button2: "See How It Works",
+    label: "تابع إعلانات السيارات المستعملة في الوقت الفعلي!",
+    title: "لا تفوّت عرض سيارتك المثالية مرة أخرى",
+    subtitle:
+      "يقوم Amiquus بتنبيهك فورًا عندما تصبح سيارتك المناسبة متاحة عبر عدة مواقع لإعلانات السيارات. استلم الإشعارات عبر تيليجرام بمجرد العثور على تطابق.",
+    button1: "إعداد تنبيهاتك",
+    button2: "كيف يعمل",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    }
+      websites: "أكثر من 15 موقعًا متابعًا",
+      realtime: "تنبيهات في الوقت الفعلي",
+      noSetup: "لا حاجة لإعداد معقد",
+      cancelAnytime: "يمكن الإلغاء في أي وقت",
+    },
   },
   limited: {
     full: {
-      title: "Subscription Limit Reached",
-      description: "We've reached our capacity of 30 active subscribers. Join our waitlist to be notified when a spot opens up.",
-      buttonText: "Join Waitlist"
+      title: "تم الوصول إلى الحد الأقصى للاشتراكات",
+      description:
+        "لقد وصلنا إلى سعة 30 مشتركًا نشطًا. انضم إلى قائمة الانتظار ليتم إعلامك عند توفر مكان جديد.",
+      buttonText: "انضم إلى قائمة الانتظار",
     },
     limited: {
-      title: "Limited Availability",
-      description: "Only {{remaining}} slots remaining out of {{capacity}}. Subscribe now before we reach capacity!",
-      buttonText: "Get Started Now"
+      title: "توافر محدود",
+      description:
+        "متبقٍ فقط {{remaining}} من أصل {{capacity}} اشتراك. اشترك الآن قبل امتلاء السعة!",
+      buttonText: "ابدأ الآن",
     },
     available: {
-      title: "Subscriptions Available",
-      description: "{{active}} of {{capacity}} subscriptions are currently active. Plenty of room for you to join!",
-      buttonText: "Get Started Now"
-    }
+      title: "الاشتراكات متاحة",
+      description:
+        "لدينا حاليًا {{active}} من أصل {{capacity}} اشتراك نشط. المكان متاح لانضمامك!",
+      buttonText: "ابدأ الآن",
+    },
   },
   features: {
-    heading: "Why Choose Amiquus?",
-    subheading: "Save time and never miss out on your perfect car with our automated tracking service.",
+    heading: "لماذا Amiquus؟",
+    subheading:
+      "وفّر وقتك ولا تفوّت سيارتك المثالية مع خدمة التتبع التلقائي لدينا.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "تتبع عدة مواقع",
+      description:
+        "راقب عدة مواقع لإعلانات السيارات في نفس الوقت دون الحاجة لزيارتها يدويًا واحدة تلو الأخرى.",
     },
     notifications: {
-      title: "Instant Notifications",
-      description: "Receive immediate alerts via Telegram when a car matching your criteria is listed for sale."
+      title: "تنبيهات فورية",
+      description:
+        "استلم تنبيهات مباشرة عبر تيليجرام عند نشر سيارة تطابق معاييرك.",
     },
     filters: {
-      title: "Custom Filters",
-      description: "Set precise criteria including brand, model, year, mileage, and price range to find exactly what you want."
+      title: "فلاتر مخصصة",
+      description:
+        "حدّد معايير دقيقة مثل الماركة، الموديل، سنة الصنع، عدد الكيلومترات، ونطاق السعر للحصول على ما تريد بالضبط.",
     },
     frequency: {
-      title: "Customizable Frequency",
-      description: "Choose how often we check for new listings, from hourly updates to real-time monitoring."
+      title: "تكرار قابل للتخصيص",
+      description:
+        "اختر عدد مرات فحص الإعلانات الجديدة، من تحديثات كل ساعة إلى مراقبة شبه فورية.",
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings."
+      title: "دعم لغات متعددة",
+      description:
+        "استقبل التنبيهات بلغتك المفضلة لقراءة أسهل وفهم أوضح لبيانات السيارات.",
     },
     account: {
-      title: "Easy Account Management",
-      description: "Manage multiple search profiles and modify your subscription settings with a few clicks."
-    }
+      title: "إدارة حساب سهلة",
+      description:
+        "أدر ملفات بحث متعددة وعدّل إعدادات اشتراكك بسهولة خلال ثوانٍ.",
+    },
   },
   howItWorks: {
-    title: "How Amiquus Works",
-    subtitle: "Set up once and let our automated system find the perfect car deal for you",
-    whyTitle: "Why Choose Amiquus?",
+    title: "كيف يعمل Amiquus",
+    subtitle:
+      "اضبط إعداداتك مرة واحدة ودع نظامنا الآلي يجد أفضل عروض السيارات لك",
+    whyTitle: "لماذا تختار Amiquus؟",
     steps: {
       preferences: {
-        title: "Set Your Preferences",
-        description: "Select car brands, models, price range, and other criteria you're interested in monitoring."
+        title: "حدد تفضيلاتك",
+        description:
+          "اختر ماركات السيارات، الموديلات، نطاق السعر، والمعايير الأخرى التي ترغب بمراقبتها.",
       },
       telegram: {
-        title: "Connect Telegram",
-        description: "Link your Telegram account to receive instant notifications about new listings."
+        title: "قم بربط تيليجرام",
+        description:
+          "اربط حساب تيليجرام الخاص بك لتلقي التنبيهات الفورية حول الإعلانات الجديدة.",
       },
       notifications: {
-        title: "Get Instant Notifications",
-        description: "Receive alerts the moment a car matching your criteria appears on any of our monitored websites."
+        title: "استلم التنبيهات فورًا",
+        description:
+          "استقبل إشعارات بمجرد ظهور سيارة تطابق معاييرك في أي من المواقع التي نراقبها.",
       },
       findCar: {
-        title: "Find Your Perfect Car",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
-      }
+        title: "اعثر على سيارتك المثالية",
+        description:
+          "كن أول من يعرف عن الإعلانات الجديدة واحصل على أفضل العروض قبل الآخرين.",
+      },
     },
     features: [
-
-      "Track over 15 car listing websites simultaneously",
-
-      "Customizable search criteria with advanced filtering",
-
-      "Real-time notifications via Telegram",
-
-      "Automatic price drop and new listing alerts",
-
-      "Easy setup process that takes less than 5 minutes"
-
+      "تتبع أكثر من 15 موقعًا لإعلانات السيارات في وقت واحد",
+      "معايير بحث مخصصة مع فلاتر متقدمة",
+      "تنبيهات فورية عبر تيليجرام",
+      "تنبيهات تلقائية عند إضافة إعلان جديد أو انخفاض السعر",
+      "عملية إعداد سهلة تستغرق أقل من 5 دقائق",
     ],
-    setAlerts: "Set Up Your Alerts",
+    setAlerts: "إعداد التنبيهات",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "تم العثور على تطابق جديد!",
+      description:
+        "BMW الفئة 3، 2019، 32,500 دولار - تم إدراجها الآن على AutoTrader",
     },
     notificationMockup2: {
-      title: "Telegram Alert",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
-    }
+      title: "تنبيه تيليجرام",
+      description:
+        "Mercedes C-Class، 2020، 30,000 ميل - تم تخفيض السعر بمقدار 2,000 دولار",
+    },
   },
   pricing: {
-    title: "Simple, Transparent Pricing",
-    subtitle: "Our pricing is based on your specific needs. Start with a base package and customize it to fit your requirements.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "أسعار بسيطة وشفافة",
+    subtitle:
+      "تسعيرنا يعتمد على احتياجاتك المحددة. ابدأ بحزمة أساسية وعدّلها بما يناسبك.",
+    baseTitle: "الحزمة الأساسية: 79.99$ / شهريًا",
+    includedTitle: "يتضمن:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "مراقبة موقع واحد",
+      "تحديثات كل ساعة",
+      "فلاتر غير محدودة",
+      "تنبيهات عبر تيليجرام",
     ],
-    addonsTitle: "Add-ons:",
+    addonsTitle: "إضافات:",
     addons: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
+      { name: "كل موقع إضافي", price: 4.99 },
+      { name: "تحديثات كل 30 دقيقة", price: 2.99 },
+      { name: "تحديثات كل 15 دقيقة", price: 5.99 },
+      { name: "تحديثات كل 5 دقائق", price: 9.99 },
+      { name: "تحديثات كل دقيقة", price: 14.99 },
     ],
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Get Started Now"
+    footerNote: "جميع الخطط تشمل إعدادات بحث غير محدودة وإدارة اشتراك سهلة.",
+    button: "ابدأ الآن",
   },
   signup: {
-    heading: "Create Your Car Alert",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "أنشئ تنبيه سيارتك",
+    subheading: "اضبط تنبيهاتك المخصصة لإعلانات السيارات في خطوات بسيطة.",
+    cta: "احصل على التنبيهات الآن",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
-      cta: "Join Waitlist"
+      message:
+        "نحن حاليًا في السعة الكاملة. يرجى الانضمام إلى قائمة الانتظار ليتم إشعارك عند توفر مكان.",
+      cta: "انضم إلى قائمة الانتظار",
     },
     toast: {
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "تم إنشاء الاشتراك",
+        description: "تم إنشاء اشتراكك بنجاح.",
       },
       error: {
-        title: "Subscription failed",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "فشل الاشتراك",
+        description: "تعذر إنشاء اشتراكك. يرجى المحاولة مرة أخرى لاحقًا.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
-        title: "Success",
-        description: "Your payment method has been successfully set up."
+        title: "تم بنجاح",
+        description: "تم إعداد طريقة الدفع الخاصة بك بنجاح.",
       },
       error: {
-        title: "Error",
-        fallback: "An unexpected error occurred. Please try again."
-      }
+        title: "حدث خطأ",
+        fallback: "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+      },
     },
     button: {
-      submit: "Set up payment method",
-      processing: "Processing..."
-    }
+      submit: "إعداد طريقة الدفع",
+      processing: "جارٍ المعالجة...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected"
-    }
+      carBrand: "حقل ماركة السيارة مطلوب",
+      carModel: "حقل موديل السيارة مطلوب",
+      fuelType: "نوع الوقود مطلوب",
+      priceMin: "يجب أن يكون الحد الأدنى للسعر رقمًا",
+      priceMax: "يجب أن يكون الحد الأقصى للسعر رقمًا",
+      yearMin: "يجب أن تكون سنة البداية سنة صحيحة",
+      yearMax: "يجب أن تكون سنة النهاية سنة صحيحة",
+      maxKilometers: "الحد الأقصى للكيلومترات يجب أن يكون رقمًا",
+      telegramUsername: "اسم مستخدم تيليجرام مطلوب",
+      telegramToken: "رمز بوت تيليجرام مطلوب",
+      telegramChatId: "معرّف محادثة تيليجرام مطلوب",
+      websitesSelected: "يجب اختيار موقع واحد على الأقل",
+      notificationLanguage: "لغة التنبيهات مطلوبة",
+      facebookMarketplaceUrl: "رابط فيسبوك ماركت بليس مطلوب عند اختيار فيسبوك",
+    },
   },
   personalInfo: {
-    heading: "Personal Information",
-    description: "Please provide your personal details so we can set up your notifications correctly.",
+    heading: "المعلومات الشخصية",
+    description:
+      "يرجى تزويدنا ببياناتك الشخصية حتى نتمكن من إعداد التنبيهات بشكل صحيح.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Email Address"
+      firstName: "الاسم الأول",
+      lastName: "اسم العائلة",
+      email: "البريد الإلكتروني",
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com"
+      firstName: "محمد",
+      lastName: "أحمد",
+      email: "you@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
-      email: "Please enter a valid email"
+      firstName: "الاسم الأول مطلوب",
+      lastName: "اسم العائلة مطلوب",
+      email: "يرجى إدخال بريد إلكتروني صالح",
     },
     actions: {
-      login: "Login or Sign Up to Continue",
-      continue: "Continue"
-    }
+      login: "تسجيل الدخول أو إنشاء حساب للمتابعة",
+      continue: "متابعة",
+    },
   },
   websiteSelection: {
-    heading: "Website Selection",
-    description: "Choose which websites you want to monitor and how frequently you want updates.",
+    heading: "اختيار المواقع",
+    description: "اختر المواقع التي تريد مراقبتها وعدد مرات التحديث.",
     labels: {
-      websites: "Websites to monitor",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency"
+      websites: "المواقع المطلوب مراقبتها",
+      facebookUrl: "رابط فيسبوك ماركت بليس",
+      updateFrequency: "تكرار التحديث",
     },
     placeholders: {
-      frequency: "Select frequency"
+      frequency: "اختر التكرار",
     },
     help: {
-      websites: "Select one or more websites to monitor for car listings.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more."
+      websites: "اختر موقعًا واحدًا أو أكثر لمراقبة إعلانات السيارات.",
+      facebookUrl:
+        "الصق هنا رابط نتائج بحث فيسبوك ماركت بليس مع الفلاتر التي حددتها.",
+      videoTitle: "تحتاج مساعدة في إيجاد رابط بحث فيسبوك ماركت بليس؟",
+      videoDesc: "شاهد الفيديو أدناه لشرح الخطوات خطوة بخطوة.",
+      updateFrequency:
+        "كلما زادت عدد مرات التحديث، زادت سرعة تنبيهاتك (قد يؤثر على السعر).",
     },
     errors: {
-      websites: "At least one website must be selected",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected"
+      websites: "يجب اختيار موقع واحد على الأقل",
+      facebookUrl: "رابط فيسبوك ماركت بليس مطلوب عند اختيار فيسبوك",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "السابق",
+      continue: "متابعة",
+    },
   },
   carDetails: {
-    heading: "Car Details",
-    description: "Specify the car details you are looking for. All fields are optional - leave any blank to get a wider range of results.",
+    heading: "تفاصيل السيارة",
+    description:
+      "حدد تفاصيل السيارة التي تبحث عنها. جميع الحقول اختيارية — اترك أي حقل فارغ للحصول على نطاق أوسع من النتائج.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers"
+      carBrand: "ماركة السيارة",
+      carModel: "موديل السيارة",
+      fuelType: "نوع الوقود",
+      priceMin: "الحد الأدنى للسعر",
+      priceMax: "الحد الأقصى للسعر",
+      yearMin: "أدنى سنة",
+      yearMax: "أقصى سنة",
+      maxKilometers: "الحد الأقصى للكيلومترات",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers"
+      carBrand: "اختر ماركة السيارة",
+      carModel: "اختر الموديل",
+      carModelDisabled: "اختر الماركة أولًا",
+      fuelType: "اختر نوع الوقود",
+      priceMin: "أدخل الحد الأدنى للسعر",
+      priceMax: "أدخل الحد الأقصى للسعر",
+      yearMin: "أدخل أدنى سنة",
+      yearMax: "أدخل أقصى سنة",
+      maxKilometers: "أدخل الحد الأقصى للكيلومترات",
     },
     options: {
-      noModelsAvailable: "No Models Available"
+      noModelsAvailable: "لا توجد موديلات متاحة",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number"
+      carBrand: "حقل ماركة السيارة مطلوب",
+      carModel: "حقل موديل السيارة مطلوب",
+      fuelType: "نوع الوقود مطلوب",
+      priceMin: "يجب أن يكون الحد الأدنى للسعر رقمًا",
+      priceMax: "يجب أن يكون الحد الأقصى للسعر رقمًا",
+      yearMin: "يجب أن تكون سنة البداية صحيحة",
+      yearMax: "يجب أن تكون سنة النهاية صحيحة",
+      maxKilometers: "الحد الأقصى للكيلومترات يجب أن يكون رقمًا",
     },
     actions: {
-      previous: "Previous",
-      continue: "Continue"
-    }
+      previous: "السابق",
+      continue: "متابعة",
+    },
   },
   telegram: {
-    heading: "Telegram Setup",
-    description: "Set up Telegram notifications by providing your bot token and chat ID.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "If you have issues creating the telegram bot, contact us and we will call you and help you create one.",
-    contact: "Contact Us",
+    heading: "إعداد تيليجرام",
+    description:
+      "قم بإعداد تنبيهات تيليجرام عن طريق إدخال رمز البوت ومعرّف المحادثة.",
+    subHeading: "إعداد بوت تيليجرام الخاص بك",
+    info: "إذا واجهت صعوبة في إنشاء البوت، تواصل معنا وسنتصل بك لمساعدتك خطوة بخطوة.",
+    contact: "اتصل بنا",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)"
+      botTitle: "كيفية الحصول على رمز بوت تيليجرام:",
+      botStep1: "افتح تيليجرام وابحث عن @BotFather",
+      botStep2: "أرسل الأمر /newbot",
+      botStep3: "اتبع التعليمات لإنشاء بوت جديد",
+      botStep4: "انسخ الرمز (Token) الذي يقدمه BotFather",
+
+      chatTitle: "كيفية الحصول على معرّف محادثة تيليجرام:",
+      chatStep1: "افتح تيليجرام وابحث عن @userinfobot",
+      chatStep2: "أرسل أي رسالة إلى البوت",
+      chatStep3:
+        "سيقوم البوت بالرد بمعلوماتك بما في ذلك معرّف المحادثة (Chat ID)",
+      chatStep4: "انسخ معرّف المحادثة (رقم)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt: "تحتاج مساعدة في إعداد رمز بوت تيليجرام ومعرّف المحادثة؟",
+    videoDescription: "شاهد الفيديو أدناه لشرح الخطوات خطوة بخطوة.",
+
     labels: {
-      token: "Telegram Bot Token",
-      chatId: "Your Telegram Chat ID",
-      language: "Notification Language",
-      username: "Telegram Username"
+      token: "رمز بوت تيليجرام",
+      chatId: "معرّف محادثة تيليجرام",
+      language: "لغة التنبيهات",
+      username: "اسم مستخدم تيليجرام",
     },
+
     placeholders: {
-      token: "Enter your bot token from BotFather",
-      chatId: "Enter your Telegram chat ID",
-      language: "Select Telegram Message Language",
-      username: "Enter your Telegram username"
+      token: "أدخل رمز البوت من BotFather",
+      chatId: "أدخل معرّف محادثة تيليجرام",
+      language: "اختر لغة رسائل تيليجرام",
+      username: "أدخل اسم مستخدم تيليجرام بدون @",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "هذا هو اسم المستخدم في حساب تيليجرام الخاص بك (بدون علامة @).",
     examples: {
-      token: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram"
+      token: "مثال: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+      chatId: "يمكنك الحصول عليه من خلال مراسلة @userinfobot على تيليجرام",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "خطوات الإعداد:",
     setupSteps: [
-
-      "Open Telegram and search for \\\"BotFather\\\"",
-
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'افتح تيليجرام وابحث عن "BotFather"',
+      'ابدأ المحادثة مع BotFather بالضغط على "Start"',
+      "اكتب /newbot واتبع التعليمات لإنشاء بوت جديد",
+      "اختر اسمًا للبوت",
+      "اختر اسم مستخدم للبوت ينتهي بـ 'bot'",
+      "انسخ رمز الـ API الذي يقدمه BotFather",
+      "أرسل رسالة إلى البوت الجديد لتفعيل المحادثة",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "كيفية الحصول على معرّف محادثة تيليجرام:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\"userinfobot\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'افتح تيليجرام وابحث عن "userinfobot"',
+      "أرسل أي رسالة إلى البوت",
+      "سيقوم البوت بالرد بمعلوماتك بما فيها Chat ID",
+      "انسخ Chat ID الخاص بك",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle: "تحتاج مساعدة في إعداد رمز بوت تيليجرام ومعرّف المحادثة؟",
+    helpDescription: "شاهد الفيديو أدناه للحصول على شرح خطوة بخطوة.",
+    botTokenLabel: "رمز بوت تيليجرام",
+    botTokenPlaceholder: "أدخل رمز البوت من BotFather",
+    botTokenExample: "مثال: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "معرّف محادثة تيليجرام",
+    chatIdPlaceholder: "أدخل معرّف محادثة تيليجرام",
+    chatIdDescription:
+      "يمكنك الحصول عليه من خلال مراسلة @userinfobot على تيليجرام",
+    languageLabel: "لغة التنبيهات",
+    languagePlaceholder: "اختر لغة رسائل تيليجرام",
     languages: {
       en: "English",
       de: "Deutsch",
       fr: "Français",
       es: "Español",
-      it: "Italiano"
+      it: "Italiano",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "معاينة تنبيهات تيليجرام",
+    carAlertTitle: "🚗 تنبيه سيارة جديد!",
+    priceLabel: "السعر: {{price}}",
+    kilometresLabel: "الكيلومترات: {{kms}}",
+    locationLabel: "الموقع: {{location}}",
+    viewListing: "عرض الإعلان →",
     errors: {
-      token: "Telegram bot token is required",
-      chatId: "Telegram chat ID is required",
-      language: "Notification language is required",
-      username: "Telegram username is required"
+      token: "رمز بوت تيليجرام مطلوب",
+      chatId: "معرّف محادثة تيليجرام مطلوب",
+      language: "لغة التنبيهات مطلوبة",
+      username: "اسم مستخدم تيليجرام مطلوب",
     },
+
     actions: {
-      previous: "Previous",
-      continue: "Continue"
+      previous: "السابق",
+      continue: "متابعة",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message"
+    contactBotInstruction:
+      "ابدأ محادثة مع بوت تيليجرام الخاص بنا من خلال الرابط أدناه وأرسل له رسالة:",
+    contactBotNote:
+      "هذا مطلوب لاستلام تنبيهات السيارات. يمكنك مسح رمز QR إذا كنت تستخدم الكمبيوتر.",
+    confirmContact: "لقد بدأت محادثة مع البوت وأرسلت له رسالة",
   },
   review: {
-    title: "Review Your Subscription",
-    description: "Please review your subscription details before proceeding to payment.",
+    title: "مراجعة اشتراكك",
+    description: "يرجى مراجعة تفاصيل اشتراكك قبل المتابعة إلى الدفع.",
     personal: {
-      title: "Personal Information",
-      name: "Name",
-      email: "Email"
+      title: "المعلومات الشخصية",
+      name: "الاسم",
+      email: "البريد الإلكتروني",
     },
     monitoring: {
-      title: "Monitoring Settings",
-      websites: "Websites",
-      facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency"
+      title: "إعدادات المراقبة",
+      websites: "المواقع",
+      facebookUrl: "رابط فيسبوك",
+      updateFrequency: "تكرار التحديث",
     },
     specs: {
-      title: "Car Specifications",
-      brand: "Brand",
-      model: "Model",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Mileage Range (km)",
-      price: "Price Range (€)"
+      title: "مواصفات السيارة",
+      brand: "الماركة",
+      model: "الموديل",
+      fuelType: "نوع الوقود",
+      yearRange: "نطاق السنوات",
+      mileage: "نطاق الكيلومترات (كم)",
+      price: "نطاق السعر (€)",
     },
     notification: {
-      title: "Notification Settings",
-      telegram: "Telegram Bot",
-      language: "Notification Language"
+      title: "إعدادات التنبيهات",
+      telegram: "بوت تيليجرام",
+      language: "لغة التنبيهات",
     },
     summary: {
-      title: "Subscription Summary",
-      base: "Base Subscription",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
-      total: "Total (Monthly)"
+      title: "ملخص الاشتراك",
+      base: "الاشتراك الأساسي",
+      extraWebsites: "مواقع إضافية",
+      frequencyUpgrade: "ترقية التكرار",
+      total: "الإجمالي (شهريًا)",
     },
     terms: {
-      checkbox: "I agree to the",
-      tos: "Terms of Service",
-      privacy: "Privacy Policy",
-      note: "Your subscription will renew automatically each month. You can cancel anytime.",
-      error: "You must agree to the terms and conditions"
+      checkbox: "أوافق على",
+      tos: "شروط الخدمة",
+      privacy: "سياسة الخصوصية",
+      note: "سيُجدد اشتراكك تلقائيًا كل شهر. يمكنك الإلغاء في أي وقت.",
+      error: "يجب الموافقة على الشروط والأحكام",
     },
     actions: {
-      previous: "Previous",
-      submit: "Proceed to Payment"
-    }
+      previous: "السابق",
+      submit: "المتابعة إلى الدفع",
+    },
   },
   faq: {
-    title: "Frequently Asked Questions",
-    subtitle: "Find answers to the most common questions about our service.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
+    title: "الأسئلة الشائعة",
+    subtitle: "اعثر على إجابات لأكثر الأسئلة شيوعًا حول خدمتنا.",
+    contactPrompt: "ما زلت تملك أسئلة؟",
+    contactLink: "تواصل مع فريق الدعم",
     questions: [
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]",
-
-      "[object Object]"
-
-    ]
+      {
+        question: "كم يستغرق وصول التنبيهات بعد نشر إعلان جديد؟",
+        answer:
+          "سرعة التنبيه تعتمد على تكرار التحديث الذي اخترته. في الخطة الافتراضية (تحديث كل ساعة) ستصلك التنبيهات خلال ساعة من نشر الإعلان. للحصول على تنبيهات شبه فورية (خلال دقائق)، يمكنك الترقية لخطط التحديث الأسرع.",
+      },
+      {
+        question: "هل يمكنني تتبع عدة أنواع من السيارات في نفس الوقت؟",
+        answer:
+          "نعم! يمكنك إنشاء عدة ملفات بحث بمعايير مختلفة. كل ملف يُعد اشتراكًا منفصلًا، لكن يمكنك إدارتها جميعًا من حساب واحد.",
+      },
+      {
+        question: "ما هي المواقع التي تدعمونها حاليًا؟",
+        answer:
+          "ندعم حاليًا منصات رئيسية مثل AutoTrader وCarGurus وCars.com وفيسبوك ماركت بليس وغيرها، ونعمل على إضافة المزيد بناءً على طلب المستخدمين وانتشار المواقع في بلدك.",
+      },
+      {
+        question: "هل أحتاج خبرة تقنية لاستخدام بوت تيليجرام؟",
+        answer:
+          "أبدًا! نوفر تعليمات خطوة بخطوة مكتوبة ومرئية. أغلب المستخدمين ينهون الإعداد خلال أقل من 5 دقائق.",
+      },
+      {
+        question: "هل يمكنني تغيير معايير البحث بعد إعداد الاشتراك؟",
+        answer:
+          "نعم، يمكنك تعديل معايير البحث في أي وقت من لوحة التحكم. التغييرات تُطبق مباشرة بدون انقطاع للخدمة.",
+      },
+      {
+        question: "كيف يمكنني إلغاء الاشتراك؟",
+        answer:
+          'يمكنك إلغاء اشتراكك في أي وقت من لوحة التحكم في صفحة "الاشتراكات". تستمر الخدمة حتى نهاية دورة الفوترة الحالية.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
-    features: "Features",
-    pricing: "Pricing",
-    faq: "FAQ",
-    getStarted: "Get Started",
-    legal: "Legal",
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    cookies: "Cookie Policy",
-    gdpr: "GDPR Compliance",
-    contact: "Contact",
+    brandDescription:
+      "مساعدك الشخصي للعثور على أفضل عروض السيارات المستعملة في الوقت المناسب.",
+    quickLinks: "روابط سريعة",
+    features: "المميزات",
+    pricing: "الأسعار",
+    faq: "الأسئلة الشائعة",
+    getStarted: "ابدأ الآن",
+    legal: "الشؤون القانونية",
+    terms: "شروط الخدمة",
+    privacy: "سياسة الخصوصية",
+    cookies: "سياسة الكوكيز",
+    gdpr: "امتثال GDPR",
+    contact: "تواصل معنا",
     email: "support@amiquus.com",
-    telegram: "Contact us on Telegram",
-    copyright: "All rights reserved.",
-    about: "About Us",
-    blog: "Blog",
-    careers: "Careers",
-    support: "Support"
+    telegram: "تواصل معنا عبر تيليجرام",
+    copyright: "جميع الحقوق محفوظة.",
+    about: "من نحن",
+    blog: "المدونة",
+    careers: "الوظائف",
+    support: "الدعم",
   },
   login: {
-    title: "Log in to your account",
-    description: "Enter your email and password to access your dashboard",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
-    or: "or",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    title: "تسجيل الدخول إلى حسابك",
+    description: "أدخل بريدك الإلكتروني وكلمة المرور للوصول إلى لوحة التحكم.",
+    emailLabel: "البريد الإلكتروني",
+    passwordLabel: "كلمة المرور",
+    loginButton: "تسجيل الدخول",
+    loggingIn: "جارٍ تسجيل الدخول...",
+    loginWithGoogle: "تسجيل الدخول باستخدام جوجل",
+    or: "أو",
+    noAccount: "ليس لديك حساب؟",
+    registerLink: "إنشاء حساب",
+    successTitle: "تم تسجيل الدخول بنجاح",
+    successMessage: "تم تسجيل دخولك بنجاح.",
+    errorTitle: "فشل تسجيل الدخول",
+    genericError: "يرجى التحقق من بيانات الدخول والمحاولة مرة أخرى.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters"
-    }
+      invalidEmail: "يرجى إدخال بريد إلكتروني صالح",
+      shortPassword: "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    },
   },
   register: {
-    title: "Create an account",
-    description: "Sign up to start tracking your dream car",
-    google: "Sign up with Google",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
-    username: "Username",
-    email: "Email",
-    password: "Password",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
-    login: "Log in",
-    and: "and",
+    title: "إنشاء حساب",
+    description: "سجل لبدء تتبع سيارة أحلامك.",
+    google: "التسجيل باستخدام جوجل",
+    orContinue: "أو المتابعة عبر",
+    firstName: "الاسم الأول",
+    lastName: "اسم العائلة",
+    username: "اسم المستخدم",
+    email: "البريد الإلكتروني",
+    password: "كلمة المرور",
+    confirmPassword: "تأكيد كلمة المرور",
+    termsNotice: "أوافق على",
+    termsOfService: "شروط الخدمة",
+    privacyPolicy: "سياسة الخصوصية",
+    createBtn: "إنشاء الحساب",
+    alreadyHave: "لديك حساب بالفعل؟",
+    login: "تسجيل الدخول",
+    and: "و",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "حقول ناقصة",
+        desc: "يرجى تعبئة جميع الحقول المطلوبة.",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "اسم مستخدم غير صالح",
+        desc: "يجب أن يكون اسم المستخدم أحرفًا وأرقامًا بين 3 و20 خانة.",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "كلمتا المرور غير متطابقتين",
+        desc: "يرجى التأكد من تطابق كلمتي المرور.",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "الشروط غير مقبولة",
+        desc: "يجب الموافقة على الشروط وسياسة الخصوصية للمتابعة.",
       },
       success: {
-        title: "Registration successful",
-        desc: "Welcome to Amiquus! You will be redirected to verify your email address."
+        title: "تم التسجيل بنجاح",
+        desc: "مرحبًا بك في Amiquus! سيتم توجيهك للتحقق من بريدك الإلكتروني.",
       },
       failure: {
-        title: "Registration failed",
-        desc: "Please check your information and try again"
-      }
-    }
+        title: "فشل التسجيل",
+        desc: "يرجى التحقق من المعلومات والمحاولة مرة أخرى.",
+      },
+    },
   },
   verifyEmail: {
-    title: "Verify Your Email",
-    description: "A verification code has been sent to your email.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "تأكيد بريدك الإلكتروني",
+    description: "تم إرسال رمز التحقق إلى بريدك الإلكتروني.",
+    codeLabel: "رمز التحقق",
+    verifyButton: "تأكيد البريد الإلكتروني",
+    updateEmailLabel: "تحديث البريد الإلكتروني",
+    updateEmailButton: "تحديث البريد الإلكتروني",
+    resendButton: "إعادة إرسال الرمز",
+    resendCountdown: "يمكنك إعادة إرسال الرمز خلال {{seconds}} ثانية",
+    footerNote: "لم تستلم الرمز؟ تحقق من مجلد الرسائل غير المرغوبة (Spam).",
     toast: {
-      verified: "Email verified",
-      failed: "Verification failed",
-      resent: "Verification code resent",
-      error: "Error",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated"
-    }
+      verified: "تم التحقق من البريد الإلكتروني",
+      failed: "فشل التحقق",
+      resent: "تمت إعادة إرسال رمز التحقق",
+      error: "خطأ",
+      invalidEmail: "بريد إلكتروني غير صالح",
+      enterValidEmail: "يرجى إدخال بريد إلكتروني صالح",
+      sameEmail: "نفس البريد الإلكتروني",
+      sameEmailDesc: "البريد الجديد هو نفسه البريد الحالي",
+      emailUpdated: "تم تحديث البريد الإلكتروني",
+    },
   },
   dashboardPayment: {
-    add: "Add Payment Method",
-    description: "Add a new credit or debit card for your subscription payments.",
-    processing: "Processing...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "إضافة طريقة دفع",
+    description: "أضف بطاقة ائتمان أو خصم جديدة لمدفوعات اشتراكك.",
+    processing: "جارٍ المعالجة...",
+    errorTitle: "خطأ في إضافة طريقة الدفع",
+    errorMessage: "حدث خطأ غير متوقع.",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
-    }
+      title: "خطأ",
+      description: "تعذر تهيئة إعداد الدفع.",
+    },
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "السنوات",
+      priceRange: "السعر",
+      websites: "المواقع",
+      updates: "التحديثات",
+      language: "اللغة",
+      price: "السعر",
+      edit: "تعديل",
+      cancelAlert: "إلغاء التنبيه",
+      cancelTitle: "إلغاء تنبيه السيارة",
+      cancelDescription:
+        "هل أنت متأكد أنك تريد إلغاء تنبيه {{brand}} {{model}}؟ سيؤدي ذلك إلى إيقاف جميع التنبيهات وستحتاج لإعداد تنبيه جديد إذا رغبت في مراقبة هذه السيارة مرة أخرى.",
+      keepMyAlert: "الاحتفاظ بالتنبيه",
+      confirmCancel: "إلغاء التنبيه",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "تنتهي في",
+      default: "الافتراضية",
+      setAsDefault: "تعيين كافتراضية",
+      remove: "إزالة",
+      setDefaultTitle: "تعيين طريقة الدفع الافتراضية",
+      setDefaultDescription:
+        "هل تريد تعيين بطاقة {{brand}} المنتهية بـ {{last4}} كطريقة الدفع الافتراضية لجميع المدفوعات المستقبلية؟",
+      removeTitle: "إزالة طريقة الدفع",
+      removeDescription:
+        "هل أنت متأكد أنك تريد إزالة بطاقة {{brand}} المنتهية بـ {{last4}}؟",
+      removeWarning:
+        "هذه هي طريقة الدفع الافتراضية وقد يؤثر حذفها على اشتراكاتك النشطة.",
+      cancel: "إلغاء",
+      confirmRemove: "إزالة البطاقة",
+    },
   },
   profile: {
     tabs: {
-      alerts: "My Alerts",
-      payments: "Payment Methods"
+      alerts: "تنبيهاتي",
+      payments: "طرق الدفع",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Subscriptions",
-      methods: "Payment methods",
-      account: "Account settings",
-      privacy: "Privacy & security",
-      logout: "Log out"
+      memberSince: "عضو منذ",
+      subscriptions: "الاشتراكات",
+      methods: "طرق الدفع",
+      account: "إعدادات الحساب",
+      privacy: "الخصوصية والأمان",
+      logout: "تسجيل الخروج",
     },
     account: {
-      title: "Account Settings",
-      desc: "Update your account information and preferences.",
-      name: "Name",
-      email: "Email",
-      username: "Username",
-      cancel: "Cancel",
-      save: "Save Changes"
+      title: "إعدادات الحساب",
+      desc: "قم بتحديث معلومات حسابك وتفضيلاتك.",
+      name: "الاسم",
+      email: "البريد الإلكتروني",
+      username: "اسم المستخدم",
+      cancel: "إلغاء",
+      save: "حفظ التغييرات",
     },
     security: {
-      title: "Privacy & Security",
-      desc: "Manage your security settings and privacy preferences.",
-      current: "Current Password",
-      new: "New Password",
-      confirm: "Confirm New Password",
-      update: "Update Password"
+      title: "الخصوصية والأمان",
+      desc: "أدر إعدادات الأمان وتفضيلات الخصوصية.",
+      current: "كلمة المرور الحالية",
+      new: "كلمة المرور الجديدة",
+      confirm: "تأكيد كلمة المرور الجديدة",
+      update: "تحديث كلمة المرور",
     },
     logout: {
-      title: "Log Out",
-      desc: "Are you sure you want to log out of your account?",
-      success: "You have been successfully logged out."
+      title: "تسجيل الخروج",
+      desc: "هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟",
+      success: "تم تسجيل خروجك بنجاح.",
     },
     alerts: {
-      title: "Car Alert Subscriptions",
-      desc: "Manage your car search alerts and notification preferences.",
-      add: "Add New Alert",
-      none: "You don't have any active car alerts.",
-      cta: "Create your first alert",
-      warning: "⚠️ Changes to your subscription will be applied in the next billing period, and only after a successful payment. If the payment fails, your current alert setup will remain unchanged."
+      title: "اشتراكات تنبيهات السيارات",
+      desc: "أدر تنبيهات بحث السيارات وتفضيلات الإشعارات.",
+      add: "إضافة تنبيه جديد",
+      none: "لا توجد لديك أي تنبيهات سيارات نشطة.",
+      cta: "أنشئ أول تنبيه لك",
+      warning:
+        "⚠️ سيتم تطبيق تغييرات الاشتراك في دورة الفوترة التالية فقط وبعد نجاح الدفع. في حال فشل الدفع، سيظل إعداد التنبيه الحالي كما هو.",
     },
     payments: {
-      title: "Payment Methods",
-      desc: "Manage your payment methods for subscription billing.",
-      none: "You don't have any payment methods saved.",
-      encrypted: "Your payment information is encrypted and securely stored."
-    }
+      title: "طرق الدفع",
+      desc: "أدر طرق الدفع الخاصة بفواتير الاشتراك.",
+      none: "لا توجد طرق دفع محفوظة.",
+      encrypted: "معلومات الدفع الخاصة بك مشفرة ويتم تخزينها بشكل آمن.",
+    },
   },
   setupAlerts: {
-    title: "Set Up Your Car Alerts",
-    subtitle: " Configure your Telegram bot to receive notifications about your dream car",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Start My Car Alert Service",
-    cancel: "Cancel anytime",
+    title: "إعداد تنبيهات السيارات",
+    subtitle: "قم بضبط بوت تيليجرام لاستلام تنبيهات حول سيارة أحلامك.",
+    basicPlan: "الخطة الأساسية",
+    baseTitle: "79.99$/شهريًا",
+    button: "بدء خدمة تنبيه السيارات",
+    cancel: "يمكن الإلغاء في أي وقت",
     toasts: {
       terms: {
-        title: "Terms not accepted",
-        description: "You must agree to the terms of service to continue"
+        title: "لم يتم قبول الشروط",
+        description: "يجب الموافقة على شروط الخدمة للمتابعة.",
       },
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "تم إنشاء الاشتراك",
+        description: "تم إنشاء اشتراكك بنجاح.",
       },
       error: {
-        title: "Error creating subscription"
+        title: "خطأ في إنشاء الاشتراك",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
-      }
-    }
+        title: "مطلوب الاتصال بالبوت",
+        description:
+          "يجب أن تبدأ محادثة مع بوت تيليجرام الخاص بنا وترسل له رسالة لاستلام تنبيهات السيارات. يرجى اتباع التعليمات أدناه.",
+      },
+    },
   },
   loginPrompt: {
-    title: "Login Required",
-    description: "You must be logged in to continue. Please log in or register.",
-    register: "Register",
-    login: "Login"
+    title: "تسجيل الدخول مطلوب",
+    description: "يجب تسجيل الدخول للمتابعة. يرجى تسجيل الدخول أو إنشاء حساب.",
+    register: "إنشاء حساب",
+    login: "تسجيل الدخول",
   },
   waitlistPrompt: {
-    title: "Join the Waitlist",
-    description: "We're currently at full capacity. Join the waitlist to be notified when a slot becomes available.",
-    button: "Join Waitlist"
+    title: "انضم إلى قائمة الانتظار",
+    description:
+      "نحن حاليًا في السعة الكاملة. انضم إلى قائمة الانتظار ليتم إعلامك عند توفر مكان.",
+    button: "انضم إلى قائمة الانتظار",
   },
   subscription: {
-    title: "Subscription Details",
-    subTitle: "Edit your subscription details below",
-    error: "Go back to dashboard",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "You can pause your subscription at any time. When you pause your subscription, your car alerts will stop until you resume them.",
+    title: "تفاصيل الاشتراك",
+    subTitle: "قم بتعديل تفاصيل اشتراكك أدناه",
+    error: "العودة إلى لوحة التحكم",
+    notFound: "الاشتراك غير موجود",
+    notFoundSub: "العودة إلى لوحة التحكم",
+    description:
+      "يمكنك إيقاف اشتراكك مؤقتًا في أي وقت. عند الإيقاف، ستتوقف تنبيهات السيارات حتى تقوم بإعادة تفعيله.",
     form: {
       status: {
-        label: "Status",
-        placeholder: "Select Status",
-        active: "Active",
-        paused: "Paused"
-      }
+        label: "الحالة",
+        placeholder: "اختر الحالة",
+        active: "نشط",
+        paused: "موقوف مؤقتًا",
+      },
     },
     actions: {
-      save: "Save Changes",
-      back: "Back"
+      save: "حفظ التغييرات",
+      back: "رجوع",
     },
     toasts: {
       success: {
-        title: "Subscription Updated",
-        description: "Your subscription for {{brand}} {{model}} has been updated successfully"
+        title: "تم تحديث الاشتراك",
+        description: "تم تحديث اشتراكك لـ {{brand}} {{model}} بنجاح.",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "لا يمكن تحديث الاشتراك",
+        description:
+          "لا يمكنك إيقاف الاشتراك مؤقتًا وتغيير السعر في نفس الوقت. يرجى اختيار إجراء واحد.",
       },
       error: {
-        title: "Error updating subscription"
-      }
-    }
+        title: "خطأ في تحديث الاشتراك",
+      },
+    },
   },
   about: {
-    title: "About Amiquus",
-    description: "We're revolutionizing how people find their perfect used car by bringing advanced monitoring technology to everyone",
+    title: "حول Amiquus",
+    description:
+      "نحن نعيد تعريف كيفية العثور على السيارة المستعملة المناسبة من خلال تقنيات مراقبة متقدمة للجميع.",
     meta: {
-      title: "About Us | Amiquus - Car Listing Monitoring Service",
-      description: "Learn about Amiquus, our mission to revolutionize used car shopping, and the team behind our intelligent car listing monitoring service."
+      title: "من نحن | Amiquus - خدمة مراقبة إعلانات السيارات",
+      description:
+        "تعرّف على Amiquus، مهمتنا في تطوير تجربة شراء السيارات المستعملة، والفريق وراء نظام مراقبة الإعلانات الذكي.",
     },
     story: {
-      heading: "Our Story",
+      heading: "قصتنا",
       paragraphs: [
-
-        "Amiquus began in 2023 when our founder, Alex, spent months refreshing car listing websites trying to find a specific rare model at a good price. After missing several opportunities due to delayed notifications, he realized there had to be a better way.",
-
-        "Working with a small team of developers and car enthusiasts, Alex built a monitoring system that could track listings across multiple sites simultaneously and send instant notifications when matches appeared.",
-
-        "What started as a personal project quickly gained interest from friends and family, and by early 2025, Amiquus was born as a service available to everyone. Today, we help car buyers across the country save time and find better deals with our intelligent monitoring technology."
-
-      ]
+        "بدأت فكرة Amiquus في عام 2023 عندما قضى مؤسسنا أليكس أشهرًا في تحديث مواقع إعلانات السيارات بحثًا عن موديل نادر بسعر مناسب. بعد أن فاته عدة عروض بسبب التأخير في الإشعارات، أدرك أنه يجب أن تكون هناك طريقة أفضل.",
+        "بالعمل مع فريق صغير من المطورين وعشاق السيارات، قام أليكس ببناء نظام يمكنه مراقبة عدة مواقع في وقت واحد وإرسال تنبيهات فورية عند ظهور تطابق.",
+        "ما بدأ كمشروع شخصي تحول سريعًا إلى خدمة مطلوبة، وبحلول 2025 أصبح Amiquus متاحًا للجميع. اليوم نساعد مشتري السيارات على توفير الوقت والعثور على عروض أفضل من خلال تقنيتنا الذكية.",
+      ],
     },
     mission: {
-      heading: "Our Mission",
+      heading: "مهمتنا",
       items: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          title: "توفير الوقت",
+          description:
+            "إلغاء الحاجة إلى تحديث عدة مواقع يدويًا من خلال أتمتة عملية البحث وإرسال التنبيهات في الوقت المناسب.",
+        },
+        {
+          title: "العثور على أفضل العروض",
+          description:
+            "تمكينك من أن تكون أول من يعرف عن العروض الجيدة في سوق تنافسي يعتمد على السرعة.",
+        },
+        {
+          title: "الشراء بثقة",
+          description:
+            "مساعدتك على اتخاذ قرارات أفضل من خلال مراقبة شاملة عبر منصات موثوقة متعددة.",
+        },
+      ],
     },
     team: {
-      heading: "Our Team",
+      heading: "فريقنا",
       members: [
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]",
-
-        "[object Object]"
-
-      ]
+        {
+          name: "Alex Morgan",
+          role: "المؤسس والرئيس التنفيذي",
+          bio: "مهندس برمجيات سابق شغوف بالسيارات وبناء الحلول المبتكرة.",
+        },
+        {
+          name: "Sarah Chen",
+          role: "المديرة التقنية (CTO)",
+          bio: "خبيرة في علوم البيانات متخصصة في جمع وتحليل البيانات من الويب.",
+        },
+        {
+          name: "Marcus Lee",
+          role: "المطور الرئيسي",
+          bio: "مهندس برمجيات متكامل متخصص في أنظمة التنبيهات عالية الأداء.",
+        },
+        {
+          name: "Elena Rodriguez",
+          role: "نجاح العملاء",
+          bio: "متخصصة سابقة في مبيعات السيارات مكرسة لمساعدة العملاء في العثور على المركبة المناسبة.",
+        },
+      ],
     },
     join: {
-      heading: "Join Our Team",
-      description: "We're always looking for talented individuals who are passionate about technology and revolutionizing the car buying experience. Check out our current openings and join us on our mission.",
-      cta: "View Open Positions"
+      heading: "انضم إلى فريقنا",
+      description:
+        "نبحث دائمًا عن مواهب شغوفة بالتقنية وتغيير تجربة شراء السيارات. اطّلع على الوظائف المتاحة وانضم إلينا.",
+      cta: "عرض الوظائف المتاحة",
     },
     questions: {
-      heading: "Have Questions?",
-      description: "Learn more about how our service works, view pricing options, or get in touch with our support team.",
+      heading: "لديك أسئلة؟",
+      description:
+        "تعرّف أكثر على كيفية عمل خدمتنا، استعرض خطط الأسعار، أو تواصل مع فريق الدعم.",
       links: {
-        faq: "Visit FAQ",
-        pricing: "View Pricing",
-        support: "Contact Support"
-      }
-    }
+        faq: "زيارة الأسئلة الشائعة",
+        pricing: "عرض الأسعار",
+        support: "التواصل مع الدعم",
+      },
+    },
   },
   terms: {
-    metaTitle: "Terms of Service | Amiquus",
-    metaDescription: "Read the Amiquus Terms of Service that govern your use of our car listing monitoring and notification service.",
-    title: "Terms of Service",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "شروط الخدمة | Amiquus",
+    metaDescription:
+      "اطلع على شروط استخدام خدمة Amiquus لمراقبة إعلانات السيارات وتنبيهاتها.",
+    title: "شروط الخدمة",
+    lastUpdated: "آخر تحديث: 21 مايو 2025",
     sections: {
-      1: {
+      "1": {
         id: "agreement",
-        heading: "Agreement to Terms",
+        heading: "الموافقة على الشروط",
         paragraphs: [
-
-          "These Terms of Service constitute a legally binding agreement made between you and Amiquus, concerning your access to and use of our website and services.",
-
-          "By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service."
-
+          "تشكل هذه الشروط اتفاقًا قانونيًا ملزمًا بينك وبين Amiquus يتعلق باستخدامك لموقعنا وخدماتنا.",
+          "باستخدامك لخدماتنا، فإنك توافق على الالتزام بهذه الشروط. إذا لم توافق على أي جزء منها، يجب عليك التوقف عن استخدام الخدمة.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      2: {
+      "2": {
         id: "changes",
-        heading: "Changes to Terms",
+        heading: "تغييرات على الشروط",
         paragraphs: [
-          "  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.",
-          "By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service."
+          "نحتفظ بالحق في تعديل هذه الشروط في أي وقت. إذا كان التعديل جوهريًا، سنبذل جهدًا لإشعارك قبل 30 يومًا من سريان الشروط الجديدة.",
+          "باستمرارك في استخدام الخدمة بعد سريان التعديلات، فإنك توافق على الشروط المعدلة.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      3: {
+      "3": {
         id: "account",
-        heading: "Account Terms",
-        paragraphs: [
-          "To use our services, you must:"
-        ],
+        heading: "شروط الحساب",
+        paragraphs: ["لاستخدام خدماتنا يجب عليك:"],
         list: [
-
-          "Be at least 18 years old",
-
-          "Complete the registration process",
-
-          "Provide accurate, complete, and up-to-date information",
-
-          "Be responsible for maintaining the security of your account and password",
-
-          "Be responsible for all activities that occur under your account",
-
-          "Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account"
-
-        ]
+          "أن لا يقل عمرك عن 18 عامًا",
+          "إكمال عملية التسجيل",
+          "تقديم معلومات صحيحة ومكتملة ومحدّثة",
+          "الحفاظ على سرية بيانات تسجيل الدخول",
+          "تحمل المسؤولية الكاملة عن جميع الأنشطة التي تتم عبر حسابك",
+          "إبلاغنا فورًا في حال حدوث أي خرق أمني أو استخدام غير مصرح به لحسابك",
+        ],
       },
-      4: {
+      "4": {
         id: "payment",
-        heading: "Payment Terms",
-        paragraphs: [
-
-          " Amiquus offers subscription-based services with the following terms:"
-
-        ],
+        heading: "شروط الدفع",
+        paragraphs: ["يقدم Amiquus خدمات اشتراك وفق الشروط التالية:"],
         list: [
-
-          "All fees are exclusive of taxes, which will be added when applicable",
-
-          "Subscription prices are subject to change with 30 days' notice",
-
-          "Subscriptions automatically renew unless canceled before the next billing cycle",
-
-          "Refunds are handled on a case-by-case basis according to our refund policy",
-
-          "We use Stripe for secure payment processing, and all payment information is stored by Stripe"
-
-        ]
+          "جميع الرسوم لا تشمل الضرائب، وسيتم إضافتها عند الاقتضاء",
+          "قد تتغير أسعار الاشتراك مع إشعار مسبق لمدة 30 يومًا",
+          "يتم تجديد الاشتراكات تلقائيًا ما لم يتم إلغاؤها قبل دورة الفوترة التالية",
+          "تُعالَج طلبات استرداد الأموال وفقًا لسياستنا الخاصة بالاسترداد",
+          "نعتمد على Stripe لمعالجة المدفوعات بشكل آمن، ولا نقوم بتخزين بيانات بطاقاتك كاملة",
+        ],
       },
-      5: {
+      "5": {
         id: "capacity",
-        heading: "Capacity Limits",
+        heading: "حدود السعة",
         paragraphs: [
-
-          "In order to maintain service quality and reliability, Amiquus limits the number of active subscriptions to 30. When this limit is reached:"
-
+          "لضمان جودة الخدمة، يحد Amiquus عدد الاشتراكات النشطة إلى 30 فقط. عند الوصول لهذا الحد:",
         ],
         list: [
-
-          "New users may join our waitlist",
-
-          "Waitlist position is determined on a first-come, first-served basis",
-
-          "When capacity becomes available, waitlisted users will be notified in order",
-
-          "We reserve the right to modify capacity limits at any time"
-
-        ]
+          "يمكن للمستخدمين الجدد الانضمام إلى قائمة الانتظار",
+          "يتم ترتيب الأولوية حسب أسبقية التسجيل",
+          "سنقوم بإشعار المشتركين في قائمة الانتظار عند توفر أماكن شاغرة",
+          "نحتفظ بالحق في تعديل حدود السعة في أي وقت",
+        ],
       },
-      6: {
+      "6": {
         id: "scraping",
-        heading: "Web Scraping Limitations",
+        heading: "قيود جمع البيانات من المواقع",
         paragraphs: [
-
-          "Our service accesses and processes data from multiple car listing websites. By using our service, you acknowledge that:"
-
+          "تصل خدمتنا إلى بيانات من مواقع متعددة لإعلانات السيارات. باستخدامك للخدمة، فإنك تقر بما يلي:",
         ],
         list: [
-
-          "Amiquus respects the terms of service of the websites we monitor",
-
-          "We implement rate limiting and respectful crawling practices",
-
-          "The availability of certain websites may change based on their terms and technical measures",
-
-          "We make no guarantees regarding the completeness or timeliness of scraped data"
-
-        ]
+          "يحترم Amiquus شروط استخدام المواقع التي نراقبها",
+          "نطبق حدودًا للطلبات وممارسات جمع بيانات مسؤولة",
+          "قد تتغير إمكانية الوصول لبعض المواقع حسب شروطها أو إجراءاتها التقنية",
+          "لا نضمن كمال أو آنية جميع البيانات المجمّعة",
+        ],
       },
-      7: {
+      "7": {
         id: "intellectual",
-        heading: "Intellectual Property",
+        heading: "الملكية الفكرية",
         paragraphs: [
-
-          "The Amiquus service, including its original content, features, and functionality, are and will remain the exclusive property of Amiquus. Our service is protected by copyright, trademark, and other laws of both the United States and foreign countries.",
-
-          "Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Amiquus."
-
+          "تعد خدمة Amiquus ومحتواها ووظائفها ملكية حصرية لـ Amiquus ومحميّة بموجب قوانين الملكية الفكرية.",
+          "لا يجوز استخدام العلامات التجارية أو الهوية البصرية الخاصة بنا دون موافقة خطية مسبقة.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      8: {
+      "8": {
         id: "termination",
-        heading: "Termination",
+        heading: "إنهاء الخدمة",
         paragraphs: [
-          "   We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including, without limitation, if you breach the Terms.",
-          " Upon termination, your right to use the service will immediately cease. If you wish to terminate your account, you may simply discontinue using the service or contact us to request account deletion."
+          "يجوز لنا إيقاف أو تعليق حسابك فورًا، دون إشعار مسبق، إذا خالفت هذه الشروط أو لأي سبب نراه مناسبًا.",
+          "عند الإنهاء، سيتوقف حقك في استخدام الخدمة. يمكنك طلب حذف حسابك بالتواصل معنا.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      9: {
+      "9": {
         id: "limitations",
-        heading: "Limitation of Liability",
+        heading: "تحديد المسؤولية",
         paragraphs: [
-          "In no event shall Amiquus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:"
+          "لن يكون Amiquus أو موظفوه أو شركاؤه مسؤولين عن أي أضرار غير مباشرة أو تبعية أو خاصة ناتجة عن:",
         ],
         list: [
-
-          "Your access to or use of or inability to access or use the service",
-
-          "Any conduct or content of any third party on the service",
-
-          "Any content obtained from the service",
-
-          "Unauthorized access, use, or alteration of your transmissions or content"
-
-        ]
+          "استخدامك أو عدم قدرتك على استخدام الخدمة",
+          "أي سلوك أو محتوى لطرف ثالث على الخدمة",
+          "أي محتوى يتم الحصول عليه عبر الخدمة",
+          "الوصول غير المصرح به إلى بياناتك أو تغييرها",
+        ],
       },
-      10: {
+      "10": {
         id: "disclaimer",
-        heading: "Disclaimer",
+        heading: "إخلاء المسؤولية",
         paragraphs: [
-
-          " Your use of the service is at your sole risk. The service is provided on an `AS IS` and `AS AVAILABLE` basis. The service is provided without warranties of any kind, whether express or implied.",
-
-          "Amiquus does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that the results that may be obtained from the use of the service will be accurate or reliable."
-
+          "يتم تقديم الخدمة كما هي (AS IS) ووفق المتاح (AS AVAILABLE) بدون أي ضمانات من أي نوع، صريحة أو ضمنية.",
+          "لا يضمن Amiquus أن تكون الخدمة دون انقطاع أو خالية من الأخطاء أو أن النتائج ستكون دقيقة دائمًا.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      11: {
+      "11": {
         id: "cookies",
-        heading: "Cookies Policy",
+        heading: "سياسة الكوكيز",
         paragraphs: [
-          "Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our service, your choices regarding cookies, and further information about cookies. Please refer to the Cookies section in our Privacy Policy."
+          "توضح سياسة الكوكيز لدينا كيفية استخدامنا للكوكيز وكيف يمكن للأطراف الثالثة استخدامها ضمن خدمتنا. يرجى الرجوع لقسم الكوكيز في سياسة الخصوصية.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      12: {
+      "12": {
         id: "governing-law",
-        heading: "Governing Law",
+        heading: "القانون الواجب التطبيق",
         paragraphs: [
-          "    These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.",
-          " Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
+          "تخضع هذه الشروط لقوانين الولايات المتحدة (دون اعتبار لتعارض القوانين).",
+          "عدم تطبيقنا لأي حق من هذه الشروط لا يعد تنازلاً عنه. إذا اعتُبر أي بند غير صالح، تبقى باقي البنود سارية.",
         ],
-        list: [
-        ]
+        list: [],
       },
-      13: {
+      "13": {
         id: "contact",
-        heading: "Contact Us",
+        heading: "اتصل بنا",
         paragraphs: [
-          "  If you have any questions about these Terms, please contact us:"
+          "إذا كان لديك أي أسئلة حول هذه الشروط، يمكنك التواصل معنا:",
         ],
         list: [
-
-          "By email: legal@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "عبر البريد الإلكتروني: legal@amiquus.com",
+          "عبر صفحة التواصل على موقعنا",
+        ],
+      },
+    },
   },
   privacy: {
-    metaTitle: "Privacy Policy | Amiquus",
-    metaDescription: "Learn about how Amiquus handles your personal data, privacy rights, and data collection practices.",
-    title: "Privacy Policy",
-    lastUpdated: "Last updated: May 21, 2025",
+    metaTitle: "سياسة الخصوصية | Amiquus",
+    metaDescription:
+      "اعرف كيف يتعامل Amiquus مع بياناتك الشخصية وحقوقك المتعلقة بالخصوصية وكيفية حمايتها.",
+    title: "سياسة الخصوصية",
+    lastUpdated: "آخر تحديث: 21 مايو 2025",
     sections: {
-      0: {
+      "0": {
         id: "introduction",
-        heading: "Introduction",
+        heading: "مقدمة",
         paragraphs: [
-
-          "Welcome to Amiquus. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you."
-
-        ]
+          "مرحبًا بك في Amiquus. نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية تعاملنا مع بياناتك عند استخدام موقعنا وخدماتنا.",
+        ],
       },
-      1: {
+      "1": {
         id: "data-we-collect",
-        heading: "Information We Collect",
+        heading: "المعلومات التي نجمعها",
         paragraphs: [
-
-          "We collect several different types of information for various purposes to provide and improve our service to you:"
-
+          "نجمع عدة أنواع من المعلومات لأغراض مختلفة بهدف تقديم وتحسين خدماتنا:",
         ],
         list: [
-
-          "Personal Data: Email address, first name, last name, and profile picture (if provided through third-party authentication).",
-
-          "Account Data: Your login credentials and account preferences.",
-
-          "Usage Data: Information on how you use our website and services.",
-
-          "Car Search Preferences: The vehicle criteria you set for monitoring (brand, model, price range, etc.).",
-
-          "Telegram Information: If you choose to receive notifications via Telegram, we store your Telegram chat ID and bot token.",
-
-          "Payment Information: When you make a purchase, our payment processor collects payment details necessary to process your transaction. Amiquus does not store your full credit card information."
-
-        ]
+          "بيانات شخصية: البريد الإلكتروني، الاسم الأول، اسم العائلة، صورة الملف الشخصي (إذا تم تقديمها عبر تسجيل خارجي).",
+          "بيانات الحساب: بيانات تسجيل الدخول وتفضيلات الحساب.",
+          "بيانات الاستخدام: معلومات حول كيفية استخدامك لموقعنا وخدماتنا.",
+          "تفضيلات البحث عن السيارات: المعايير التي تحددها للمراقبة (الماركة، الموديل، نطاق السعر، إلخ).",
+          "معلومات تيليجرام: معرّف المحادثة ورمز البوت إذا اخترت تلقي التنبيهات عبر تيليجرام.",
+          "معلومات الدفع: تتم معالجتها بواسطة مزود الدفع (Stripe) ولا نخزن بيانات بطاقتك كاملة.",
+        ],
       },
-      2: {
+      "2": {
         id: "how-we-use-data",
-        heading: "How We Use Your Data",
-        paragraphs: [
-
-          "We use your personal data for the following purposes:"
-
-        ],
+        heading: "كيف نستخدم بياناتك",
+        paragraphs: ["نستخدم بياناتك للأغراض التالية:"],
         list: [
-
-          "To provide and maintain our service",
-
-          "To notify you about changes to our service",
-
-          "To allow you to participate in interactive features of our service",
-
-          "To provide customer support",
-
-          "To gather analysis or valuable information so that we can improve our service",
-
-          "To monitor the usage of our service",
-
-          "To detect, prevent and address technical issues",
-
-          "To process payments and prevent fraudulent transactions",
-
-          "To send car listings that match your preferences via your chosen notification method"
-
-        ]
+          "تقديم الخدمة وصيانتها",
+          "إخطارك بأي تغييرات على الخدمة",
+          "تمكينك من استخدام المزايا التفاعلية",
+          "تقديم دعم العملاء",
+          "تحليل وتحسين أداء الخدمة",
+          "مراقبة الاستخدام والكشف عن المشكلات الفنية",
+          "معالجة المدفوعات ومنع الاحتيال",
+          "إرسال إعلانات السيارات المطابقة لتفضيلاتك عبر وسيلة التنبيه التي اخترتها",
+        ],
       },
-      3: {
+      "3": {
         id: "data-storage",
-        heading: "Data Storage and Security",
+        heading: "تخزين البيانات وأمانها",
         paragraphs: [
-
-          "We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. All data is stored on secure servers with encryption in transit and at rest.",
-
-          "We retain your personal data only for as long as necessary for the purposes set out in this privacy policy, including for the purposes of satisfying any legal, regulatory, tax, accounting, or reporting requirements."
-
-        ]
+          "نطبق إجراءات أمان مناسبة لحماية بياناتك من الوصول أو التغيير أو الكشف أو الإتلاف غير المصرح به.",
+          "نحتفظ ببياناتك فقط المدة اللازمة للأغراض المذكورة في هذه السياسة أو وفق المتطلبات القانونية.",
+        ],
       },
-      4: {
+      "4": {
         id: "gdpr",
-        heading: "Your GDPR Rights",
+        heading: "حقوقك بموجب GDPR",
         paragraphs: [
-
-          "If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Amiquus aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your personal data.",
-
-          "You have the following data protection rights:"
-
+          "إذا كنت مقيمًا في المنطقة الاقتصادية الأوروبية (EEA)، فلديك حقوق معينة بشأن بياناتك الشخصية، ونسعى لتمكينك من ممارستها.",
+          "من هذه الحقوق:",
         ],
         list: [
-
-          "The right to access, update or delete the information we have on you",
-
-          "The right of rectification",
-
-          "The right to object",
-
-          "The right of restriction",
-
-          "The right to data portability",
-
-          "The right to withdraw consent"
-
-        ]
+          "الحق في الوصول إلى البيانات أو تحديثها أو حذفها",
+          "الحق في التصحيح",
+          "الحق في الاعتراض",
+          "الحق في تقييد المعالجة",
+          "الحق في نقل البيانات",
+          "الحق في سحب الموافقة",
+        ],
       },
-      5: {
+      "5": {
         id: "cookies",
-        heading: "Cookies Policy",
-        paragraphs: [
-
-          "Cookies are small pieces of data stored on your device. We use cookies to:"
-
-        ],
+        heading: "سياسة الكوكيز",
+        paragraphs: ["نستخدم الكوكيز (ملفات تعريف الارتباط) للأغراض التالية:"],
         list: [
-
-          "Keep you signed in",
-
-          "Understand how you use our website",
-
-          "Remember your preferences",
-
-          "Customize your experience"
-
-        ]
+          "الحفاظ على تسجيل دخولك",
+          "فهم كيفية استخدامك لموقعنا",
+          "تذكر تفضيلاتك",
+          "تخصيص تجربتك",
+        ],
       },
-      6: {
+      "6": {
         id: "third-party",
-        heading: "Third-Party Services",
+        heading: "الخدمات الخارجية",
         paragraphs: [
-
-          "We may employ third-party companies and individuals to facilitate our service, provide the service on our behalf, perform service-related tasks, or assist us in analyzing how our service is used.",
-
-          "These third parties include:"
-
+          "قد نستعين بشركات أو مزودين خارجيين لتقديم الخدمة نيابة عنا أو مساعدتنا في تحليل استخدامها.",
+          "تشمل هذه الأطراف:",
         ],
         list: [
-
-          "Payment processors (Stripe)",
-
-          "Analytics providers",
-
-          "Customer support services",
-
-          "Hosting and cloud infrastructure providers"
-
+          "مزودي خدمات الدفع (Stripe)",
+          "مقدمي تحليلات الاستخدام",
+          "خدمات دعم العملاء",
+          "مقدمي الاستضافة والبنية التحتية",
         ],
         paragraphs2: [
-
-          "These third parties have access to your personal data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
-
-        ]
+          "يُسمح لهذه الأطراف بالوصول إلى بياناتك فقط لأداء المهام المطلوبة، ويلتزمون بعدم استخدامها لأي غرض آخر.",
+        ],
       },
-      7: {
+      "7": {
         id: "changes",
-        heading: "Changes to This Privacy Policy",
+        heading: "تغييرات سياسة الخصوصية",
         paragraphs: [
-
-          "We may update our privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the 'Last updated' date.",
-
-          "You are advised to review this privacy policy periodically for any changes. Changes to this privacy policy are effective when they are posted on this page."
-
-        ]
+          'قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنقوم بنشر أي تحديث هنا مع تعديل تاريخ "آخر تحديث".',
+          "ننصحك بمراجعة هذه السياسة دوريًا. تعتبر التغييرات سارية بمجرد نشرها.",
+        ],
       },
-      8: {
+      "8": {
         id: "contact",
-        heading: "Contact Us",
+        heading: "اتصل بنا",
         paragraphs: [
-
-          "If you have any questions about this privacy policy, please contact us:"
-
+          "إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يمكنك التواصل معنا:",
         ],
         list: [
-
-          "By email: privacy@amiquus.com",
-
-          "By visiting the contact page on our website"
-
-        ]
-      }
-    }
+          "عبر البريد الإلكتروني: privacy@amiquus.com",
+          "عبر صفحة التواصل على موقعنا",
+        ],
+      },
+    },
   },
   faqs: {
-    metaTitle: "Frequently Asked Questions | Amiquus",
-    metaDescription: "Find answers to the most common questions about Amiquus car listing monitoring service, subscriptions, notification setup, and more.",
-    title: "Frequently Asked Questions",
-    subtitle: "Find quick answers to common questions about our car listing monitoring service",
+    metaTitle: "الأسئلة الشائعة | Amiquus",
+    metaDescription:
+      "اعثر على إجابات عن الأسئلة المتعلقة بخدمة مراقبة إعلانات السيارات، الاشتراكات، وإعداد التنبيهات.",
+    title: "الأسئلة الشائعة",
+    subtitle:
+      "إجابات سريعة لأكثر الأسئلة شيوعًا حول خدمة مراقبة إعلانات السيارات",
     general: {
-      heading: "General Questions",
+      heading: "أسئلة عامة",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "ما هو Amiquus؟",
+        answer:
+          "Amiquus هي خدمة تراقب عدة مواقع لإعلانات السيارات بحثًا عن سيارات تطابق معاييرك المحددة، وترسل لك تنبيهًا فوريًا عبر تيليجرام مع تفاصيل الإعلان ورابطه.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "كيف تعمل الخدمة؟",
         answer: [
-
-          "You set up your search criteria (make, model, price range, etc.)",
-
-          "You select which websites to monitor",
-
-          "You connect your Telegram account for notifications",
-
-          "Our system continuously monitors your selected websites for new listings",
-
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-
-        ]
+          "تقوم بضبط معايير البحث (الماركة، الموديل، السعر، إلخ)",
+          "تختار المواقع التي ترغب في مراقبتها",
+          "تربط حسابك بتيليجرام لاستلام التنبيهات",
+          "نظامنا يراقب باستمرار المواقع المحددة",
+          "عند ظهور سيارة مطابقة، تستلم تنبيهًا فوريًا مع التفاصيل والرابط",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "ما هي المواقع التي تراقبونها؟",
+        answerIntro: "نراقب حاليًا مجموعة من أهم منصات إعلانات السيارات، منها:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (عبر الرابط)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
-      }
+        outro: "نعمل باستمرار على إضافة منصات جديدة لتوفير تغطية أوسع.",
+      },
     },
     subscription: {
-      heading: "Subscription Questions",
+      heading: "أسئلة حول الاشتراك",
       cost: {
-        question: "How much does a subscription cost?",
+        question: "كم تبلغ تكلفة الاشتراك؟",
         answer: [
-
-          "Our pricing starts at $9.99 per month for monitoring one website with updates every 6 hours. Additional websites cost $4.99 each per month. You can also upgrade your update frequency for faster notifications.",
-
-          "For specific pricing details, please view our pricing section on the homepage."
-
-        ]
+          "تبدأ خططنا من 79.99$ شهريًا لمراقبة موقع واحد مع تحديثات كل 6 ساعات. كل موقع إضافي يُحتسب برسوم إضافية، ويمكنك ترقية تكرار التحديث للحصول على تنبيهات أسرع.",
+          "لمزيد من التفاصيل، يرجى مراجعة قسم الأسعار في الصفحة الرئيسية.",
+        ],
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
+        question: "كيف يمكنني إلغاء الاشتراك؟",
+        stepsIntro: "يمكنك إلغاء اشتراكك في أي وقت من خلال لوحة التحكم:",
         steps: [
-
-          "Log in to your account",
-
-          "Navigate to the \"Profile\" page",
-
-          "Select the \"Subscriptions\" tab",
-
-          "Click the \"Cancel Subscription\" button next to the subscription you wish to cancel"
-
+          "تسجيل الدخول إلى حسابك",
+          'الانتقال إلى صفحة "الملف الشخصي"',
+          'اختيار تبويب "الاشتراكات"',
+          'الضغط على "إلغاء الاشتراك" بجوار الاشتراك المطلوب',
         ],
-        note: "Your subscription will remain active until the end of your current billing period."
+        note: "سيظل اشتراكك فعالًا حتى نهاية دورة الفوترة الحالية.",
       },
       multiple: {
-        question: "Can I have multiple subscriptions for different car models?",
-        answer: "Yes, you can create multiple subscriptions under a single account. Each subscription can track different car models, brands, or price ranges. This is particularly useful if you're searching for multiple vehicles or helping friends and family with their car search."
+        question: "هل يمكنني امتلاك عدة اشتراكات لعدة سيارات مختلفة؟",
+        answer:
+          "نعم، يمكنك إنشاء عدة اشتراكات من نفس الحساب، كل واحد بمعايير مختلفة لسيارات متعددة.",
       },
       limit: {
-        question: "Why is there a limit on the number of subscribers?",
-        intro: "We limit our service to 30 active subscribers to ensure:",
+        question: "لماذا يوجد حد لعدد المشتركين؟",
+        intro: "نحدد عدد المشتركين النشطين بـ 30 من أجل:",
         list: [
-
-          "The highest quality of service and data accuracy",
-
-          "Personalized support for each subscriber",
-
-          "Faster notification delivery during peak listing times",
-
-          "Ethical scraping that doesn't overload the target websites"
-
+          "ضمان أعلى جودة للخدمة والدقة",
+          "تقديم دعم مخصص لكل مشترك",
+          "تسريع إرسال التنبيهات",
+          "الحفاظ على جمع بيانات أخلاقي دون إثقال المواقع",
         ],
-        outro: "If we've reached capacity, you can join our waitlist to be notified when a spot becomes available."
-      }
+        outro:
+          "في حال امتلاء السعة، يمكنك الانضمام لقائمة الانتظار ليتم إشعارك عند توفر مكان.",
+      },
     },
     technical: {
-      heading: "Technical Questions",
+      heading: "أسئلة تقنية",
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        stepsIntro: "To set up Telegram notifications:",
+        question: "كيف أقوم بإعداد تنبيهات تيليجرام؟",
+        stepsIntro: "لإعداد تنبيهات تيليجرام، اتبع الخطوات التالية:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions provided during setup)",
-
-          "Copy your bot token from BotFather",
-
-          "Start a conversation with your bot",
-
-          "Get your chat ID (instructions provided during setup)",
-
-          "Enter your bot token and chat ID in your Amiquus subscription settings",
-
-          "Test your notification setup using the `Send Test Message` button"
-
+          "إنشاء بوت عبر BotFather (نوفّر التعليمات في لوحة التحكم)",
+          "نسخ رمز البوت (Token)",
+          "بدء محادثة مع البوت",
+          "الحصول على Chat ID",
+          "إدخال البيانات في إعدادات حسابك في Amiquus",
+          'اختبار التنبيهات باستخدام زر "إرسال رسالة تجريبية"',
         ],
-        note: "Detailed step-by-step instructions with screenshots are provided during the subscription setup process."
+        note: "نوفر دليلاً مفصلاً بالصور داخل لوحة التحكم.",
       },
       frequency: {
-        question: "How often will I receive notifications?",
-        intro: "The frequency of notifications depends on:",
+        question: "كل كم من الوقت تُرسل التنبيهات؟",
+        intro: "يعتمد تكرار التنبيهات على:",
         list: [
-
-          "Your chosen update frequency package (from every 6 hours to every 30 minutes)",
-
-          "How many new listings match your criteria",
-
-          "How active the market is for your selected make/model"
-
+          "الخطة التي اخترتها (من كل ساعة حتى دقيقة واحدة)",
+          "عدد الإعلانات الجديدة المطابقة لمعاييرك",
+          "نشاط السوق للسيارة المطلوبة",
         ],
-        outro: "You'll only receive notifications when new listings that match your criteria are found."
+        outro: "لن نرسل لك سوى التنبيهات ذات الصلة بمعاييرك.",
       },
       privacy: {
-        question: "How is my personal data protected?",
-        intro: "We take data privacy seriously and apply these measures:",
+        question: "كيف تتم حماية بياناتي؟",
+        intro: "نأخذ خصوصيتك على محمل الجد ونطبق تدابير تشمل:",
         list: [
-
-          "Encrypted data in transit and at rest",
-
-          "Secure payments via Stripe",
-
-          "No third-party data sharing",
-
-          "You can request or delete your data anytime"
-
+          "تشفير البيانات أثناء النقل وفي التخزين",
+          "مدفوعات آمنة عبر Stripe",
+          "عدم مشاركة بياناتك مع أطراف غير مصرح لها",
+          "إمكانية طلب حذف بياناتك",
         ],
-        outro: "Read our full Privacy Policy for more."
-      }
+        outro: "راجع سياسة الخصوصية الكاملة لمزيد من التفاصيل.",
+      },
     },
     support: {
-      heading: "Still have questions?",
-      description: "If you couldn't find the answer to your question, our support team is here to help!",
-      button: "Contact Support"
-    }
+      heading: "هل ما زلت تحتاج إلى مساعدة؟",
+      description: "إذا لم تجد إجابتك هنا، يسعد فريق الدعم لدينا بمساعدتك.",
+      button: "التواصل مع الدعم",
+    },
   },
   waitlist: {
-    metaTitle: "Join the Waitlist - Amiquus",
-    metaDescription: "Join the Amiquus waitlist to be notified when subscriptions become available.",
-    title: "Join Our Waitlist",
-    subtitle: "Due to high demand, we limit the number of active subscriptions to ensure the best service quality for all users.",
+    metaTitle: "انضم إلى قائمة الانتظار - Amiquus",
+    metaDescription:
+      "انضم إلى قائمة انتظار Amiquus لتصلك رسالة عند توفر اشتراكات جديدة.",
+    title: "انضم إلى قائمة الانتظار",
+    subtitle:
+      "نظرًا للطلب العالي، نحدد عدد الاشتراكات النشطة للحفاظ على جودة الخدمة.",
     limited: {
-      heading: "Limited Availability",
-      description: "We limit our system to only 30 active subscribers to ensure:",
+      heading: "توافر محدود",
+      description: "نحد النظام إلى 30 مشتركًا نشطًا فقط لضمان:",
       points: [
-
-        "Exceptional scraping reliability and speed for all users",
-
-        "Reduced chances of being blocked by car listing websites",
-
-        "Personalized support for each subscriber",
-
-        "Fair distribution of server resources"
-
+        "موثوقية وسرعة عالية في جمع البيانات",
+        "تقليل احتمالية حظر الطلبات من مواقع الإعلانات",
+        "دعم شخصي لكل مشترك",
+        "استخدام عادل لموارد الخادم",
       ],
-      available: "{{remaining}} subscription spots out of {{capacity}} currently available.",
-      full: "All subscription spots are currently filled. Join the waitlist to be notified when a spot becomes available."
+      available: "متاح حاليًا {{remaining}} اشتراكات من أصل {{capacity}}.",
+      full: "جميع أماكن الاشتراك ممتلئة حاليًا. انضم إلى قائمة الانتظار ليتم إعلامك عند توفر مكان.",
     },
     success: {
-      title: "You're on the waitlist!",
-      description: "We'll notify you as soon as a subscription spot becomes available",
-      message: "Thank you for your interest in Amiquus! We've added you to our waitlist and will contact you as soon as we have an opening.",
-      button: "Return to Homepage"
+      title: "لقد انضممت إلى قائمة الانتظار!",
+      description: "سنقوم بإشعارك فور توفر مكان للاشتراك.",
+      message:
+        "شكرًا لاهتمامك بـ Amiquus! تمت إضافتك إلى قائمة الانتظار وسنتواصل معك عند توفر فرصة.",
+      button: "العودة إلى الصفحة الرئيسية",
     },
     cantJoin: {
-      title: "Join the Waitlist",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "انضم إلى قائمة الانتظار",
+      description: "سنقوم بإشعارك فور توفر مكان للاشتراك.",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "الاسم الأول",
+        placeholder: "محمد",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "اسم العائلة",
+        placeholder: "أحمد",
       },
       email: {
-        label: "Email",
-        placeholder: "john.doe@example.com",
-        description: "We'll use this email to notify you when a spot becomes available"
+        label: "البريد الإلكتروني",
+        placeholder: "you@example.com",
+        description: "سنستخدم هذا البريد لإعلامك عند توفر مكان.",
       },
-      submit: "Join Waitlist",
-      submitting: "Submitting..."
-    }
+      submit: "انضم إلى قائمة الانتظار",
+      submitting: "جارٍ الإرسال...",
+    },
   },
   support: {
-    metaTitle: "Support | Amiquus - Help Center",
-    metaDescription: "Get help with your Amiquus account, subscription, or car alerts. Browse our help center or contact our support team for assistance.",
-    title: "Support Center",
-    subtitle: "Find answers to common questions or get in touch with our support team",
+    metaTitle: "الدعم | Amiquus - مركز المساعدة",
+    metaDescription:
+      "احصل على المساعدة لحساب Amiquus الخاص بك، الاشتراكات، وتنبيهات السيارات.",
+    title: "مركز الدعم",
+    subtitle: "اعثر على إجابات لأسئلتك أو تواصل مع فريق الدعم.",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
+      title: "الدعم عبر البريد",
+      description: "أرسل لنا رسالة وسنرد عليك خلال 24 ساعة.",
+      email: "support@amiquus.com",
     },
-    faqHeading: "Frequently Asked Questions",
+    faqHeading: "الأسئلة الشائعة",
     faqs: {
       telegram: {
-        question: "How do I set up Telegram notifications?",
-        intro: "To set up Telegram notifications, follow these steps:",
+        question: "كيف أقوم بإعداد تنبيهات تيليجرام؟",
+        intro: "لإعداد تنبيهات تيليجرام، اتبع الخطوات:",
         steps: [
-
-          "Create a Telegram bot using BotFather (instructions in our dashboard)",
-
-          "Copy your API token and chat ID",
-
-          "Enter these details in your account settings under \"Notification Preferences\"",
-
-          "Test your connection using the \"Send Test Message\" button"
-
+          "إنشاء بوت تيليجرام عبر BotFather (التعليمات في لوحة التحكم)",
+          "نسخ رمز API ومعرّف المحادثة",
+          'إدخال البيانات في قسم "تفضيلات التنبيه" في حسابك',
+          'استخدام زر "إرسال رسالة تجريبية" لاختبار الاتصال',
         ],
-        outro: "If you need more help, our detailed guide is available in your dashboard."
+        outro: "إذا احتجت مساعدة إضافية، يوجد دليل مفصل في لوحة التحكم.",
       },
       updates: {
-        question: "How often are car listings updated?",
-        answer: "The update frequency depends on your subscription plan. Basic plans receive updates every 6 hours, while Premium plans can get updates as frequently as every 30 minutes. You can view and modify your current update frequency in your subscription settings."
+        question: "كل كم يتم تحديث إعلانات السيارات؟",
+        answer:
+          "يعتمد ذلك على خطة الاشتراك الخاصة بك. الخطط الأساسية تحصل على تحديثات أقل، بينما الخطط الأعلى توفر تحديثات أكثر تكرارًا.",
       },
       facebook: {
-        question: "Can I monitor Facebook Marketplace?",
-        answer: "Yes, we support Facebook Marketplace monitoring. To set this up, you'll need to provide the URL to the Facebook Marketplace search results page with your desired filters applied. Our system will then monitor that specific search for new listings that match your criteria."
+        question: "هل يمكنني مراقبة فيسبوك ماركت بليس؟",
+        answer:
+          "نعم، يمكنك ذلك عبر تزويدنا برابط صفحة نتائج البحث في فيسبوك ماركت بليس مع الفلاتر المطلوبة، وسنقوم بمراقبتها.",
       },
       cancel: {
-        question: "How do I cancel my subscription?",
-        answer: "You can cancel your subscription at any time from your account profile page. Click on the \"Subscriptions\" tab, locate the subscription you wish to cancel, and click the \"Cancel Subscription\" button. Your service will continue until the end of your current billing period."
+        question: "كيف ألغي اشتراكي؟",
+        answer:
+          'من صفحة الملف الشخصي > "الاشتراكات" > اختر الاشتراك > اضغط "إلغاء الاشتراك".',
       },
       full: {
-        question: "What happens if all subscription slots are full?",
-        answer: "To maintain our high quality of service, we limit the number of active subscriptions. If all slots are full, you can join our waitlist. We'll notify you as soon as a slot becomes available, and you'll have priority to claim it before we open it to the general public."
-      }
+        question: "ماذا يحدث إذا كانت جميع الأماكن ممتلئة؟",
+        answer:
+          "يمكنك الانضمام إلى قائمة الانتظار وسيتم إعلامك تلقائيًا عند توفر مكان.",
+      },
     },
     stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    }
+      heading: "ما زلت تحتاج مساعدة؟",
+      description: "إذا لم تجد الجواب، تواصل مع فريق الدعم وسنساعدك بسرور.",
+      button: "التواصل مع الدعم",
+    },
   },
   notFound: {
-    title: "404 Page Not Found",
-    message: "Did you forget to add the page to the router?"
+    title: "404 - الصفحة غير موجودة",
+    message: "هل نسيت إضافة الصفحة إلى نظام التوجيه؟",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "رمز تأكيد البريد الإلكتروني لحسابك في Amiquus",
+      greeting: "مرحبًا،",
+      message: "استخدم رمز التحقق أدناه لإكمال عملية التسجيل:",
+      expiration: "سينتهي صلاحية هذا الرمز خلال 10 دقائق.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "إيصال دفع Amiquus الخاص بك – فاتورة رقم",
+        h2Message: "تم دفع اشتراكك في Amiquus بنجاح!",
+        greeting: "مرحبًا،",
+        paymentMessage: "لقد استلمنا دفعتك بقيمة",
+        downloadMessage: "يمكنك عرض أو تنزيل الفاتورة من الرابط التالي:",
+        viewInvoice: "عرض الفاتورة",
+        invoiceNumber: "رقم الفاتورة:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "دفعة معلّقة – الفاتورة",
+        subjectB: "الخاصة باشتراكك في Amiquus",
+        h2Message: "إجراء مطلوب: أكمل دفع اشتراك Amiquus الخاص بك",
+        greeting: "مرحبًا،",
+        messageA: "فاتورتك",
+        messageB: "لا تزال غير مدفوعة. لتفعيل اشتراكك، يرجى إكمال الدفع بقيمة",
+        paymentMessage: "يمكنك إتمام الدفع بأمان عبر الرابط التالي:",
+        payInvoice: "دفع الفاتورة",
+        ignoreEmail: "إذا كنت قد أكملت الدفع بالفعل، يمكنك تجاهل هذه الرسالة.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "فشل الدفع – الفاتورة",
+        message: "تعذر علينا معالجة دفعتك الأخيرة (محاولة",
+        attemptsA: "سنحاول إعادة خصم المبلغ قريبًا. لا داعي لأي إجراء الآن.",
+        attemptsB: "حاولنا خصم المبلغ 3 مرات ولم تنجح جميع المحاولات.",
+        attemptsC:
+          "نتيجة لذلك، تم <strong>إيقاف اشتراكك مؤقتًا</strong>. لن تستلم المزيد من التنبيهات حتى تعيد تفعيله.",
+        attemptsD:
+          "يرجى تحديث طريقة الدفع وإعادة تفعيل الاشتراك من صفحة الملف الشخصي:",
+        viewInvoice: "عرض الفاتورة",
+        managePayment: "إدارة طرق الدفع",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "لقد انضممت إلى قائمة انتظار Amiquus!",
+      h2Message: "أنت الآن على القائمة!",
+      hi: "مرحبًا",
+      message:
+        "شكرًا لانضمامك إلى قائمة الانتظار. سنخبرك فور توفر مكان للاشتراك.",
+      anyQuestions: "إذا كانت لديك أي أسئلة، يمكنك الرد على هذه الرسالة.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  }
+      thanksMessage: "شكرًا لاختيارك Amiquus!",
+      signature: "مع أطيب التحيات،<br/>فريق Amiquus",
+      team: "— فريق Amiquus",
+      needHelp: "تحتاج مساعدة؟",
+      hello: "مرحبًا",
+    },
+  },
 };

@@ -1,7 +1,7 @@
 import { Check, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/language-provider";
-import { globalAddons } from "@shared/pricing";
+import { currencySymbol, globalAddons } from "@shared/pricing";
 
 interface PricingProps {
   onGetStarted: () => void;
@@ -84,7 +84,7 @@ export default function Pricing({ onGetStarted }: PricingProps) {
                         <span>{addon.name}</span>
                       </div>
                       <span className="font-medium">
-                        ${addon.price.toFixed(2)}/mo
+                      {currencySymbol}{addon.price.toFixed(2)}/mo
                       </span>
                     </li>
                   ))}

@@ -12,6 +12,7 @@ export const users = pgTable("users", {
   firstName: text("first_name"),
   lastName: text("last_name"),
   stripeCustomerId: text("stripe_customer_id").unique(),
+  dodoCustomerId: text("dodo_customer_id").unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   // 👇 New fields for email verification
   isEmailVerified: boolean("is_email_verified").default(false).notNull(),
@@ -62,6 +63,7 @@ export const subscriptions = pgTable("subscriptions", {
   id: serial("id").primaryKey(),
   userId: integer("user_id").notNull().references(() => users.id),
   stripeSubscriptionId: text("stripe_subscription_id"),
+  dodoSubscriptionId: text("dodo_subscription_id"),
   websitesSelected: json("websites_selected").notNull(),
   facebookMarketplaceUrl: text("facebook_marketplace_url"),
   updateFrequency: frequencyEnum("update_frequency").notNull().default('hourly'),
@@ -77,9 +79,17 @@ export const subscriptions = pgTable("subscriptions", {
   priceMax: integer("price_max"),
   telegramUsername: text("telegram_username").notNull(),
   notificationLanguage: languageEnum("notification_language").notNull().default('en'),
+  promoCode: text("promo_code"),
+  discountId: text("discount_id"),
+  codeApplied: boolean("code_applied").default(false).notNull(),
   price: integer("price").notNull(),
   stripePriceId: text("stripe_price_id"),
+  dodoPriceId: text("dodo_price_id"),
+  jsonUserId: text("json_user_id").unique(),
   status: text("status").notNull().default("active"),
+  invoiceAttempts: integer("invoice_attempts").default(0).notNull(),
+  lastInvoiceAttemptAt: timestamp("last_invoice_attempt_at"),
+  lastPaymentId: text("last_payment_id"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
@@ -110,7 +120,8 @@ export const subscriptionFormSchema = z.object({
   telegramUsername: z.string().min(1, "Telegram username is required"),
   notificationLanguage: z.enum(['en', 'es', 'fr', 'de', 'it', 'pt', 'ru']),
   price: z.number().min(1, "Price calculation failed"),
-  stripePriceId: z.string().optional(),
+  promoCode: z.string().optional(),
+  dodoPriceId: z.string().optional(),
 });
 
 export const alertSchema = z.object({

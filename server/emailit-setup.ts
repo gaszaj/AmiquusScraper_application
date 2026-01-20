@@ -1,16 +1,16 @@
+import { SENDER_EMAIL } from "@shared/config";
 import nodemailer from "nodemailer";
-
-export const SENDER_EMAIL = "info@amiquus.com";
 
 export const transporter = nodemailer.createTransport({
   host: "smtp.emailit.com",
-  port: 587,
-  secure: false, // TLS
+  port: 465,
+  secure: true, // ✅ SSL on 465
   auth: {
     user: SENDER_EMAIL,
     pass: process.env.EMAILIT_API_KEY,
   },
 });
+
 
 // Test connection
 transporter.verify((error, success) => {

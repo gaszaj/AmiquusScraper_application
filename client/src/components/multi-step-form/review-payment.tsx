@@ -21,7 +21,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { useAuth } from "@/hooks/use-auth";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice, additionalWebsitePrice } from "@shared/pricing";
+import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
 
 interface ReviewPaymentProps {
   formData: Partial<AlertFormSchema>;
@@ -269,8 +269,8 @@ export default function ReviewPayment({
         <CardContent className="space-y-4">
           <div className="flex justify-between">
             <span>{t("review.summary.base")}:</span>
-            {/* <span>${(9.99).toFixed(2)}</span> */}
-            <span>${globalBasePrice}</span>
+            {/* <span>{currencySymbol}{(9.99).toFixed(2)}</span> */}
+            <span>{currencySymbol}{globalBasePrice}</span>
           </div>
 
           {formData.websitesSelected &&
@@ -280,7 +280,7 @@ export default function ReviewPayment({
                   {t("review.summary.extraWebsites")} ({formData.websitesSelected.length - 1})
                 </span>
                 <span>
-                  ${((formData.websitesSelected.length - 1) * additionalWebsitePrice).toFixed(2)}
+                {currencySymbol}{((formData.websitesSelected.length - 1) * additionalWebsitePrice).toFixed(2)}
                 </span>
               </div>
             )}
@@ -292,7 +292,7 @@ export default function ReviewPayment({
                 ({FREQUENCY_LABELS[formData.updateFrequency]})
               </span>
               <span>
-                ${(
+              {currencySymbol}{(
                   FREQUENCY_OPTIONS.find((f) => f.id === formData.updateFrequency)?.additionalPrice || 0
                 ).toFixed(2)}
               </span>
@@ -301,7 +301,7 @@ export default function ReviewPayment({
 
           <div className="flex justify-between pt-4 border-t border-primary-200 font-bold">
              <span>{t("review.summary.total")}:</span>
-            <span>${calculatedPrice.toFixed(2)}</span>
+            <span>{currencySymbol}{calculatedPrice.toFixed(2)}</span>
           </div>
         </CardContent>
         <CardFooter className="flex flex-col items-start">

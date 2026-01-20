@@ -18,15 +18,15 @@ import {
 } from "@shared/schema";
 import { newcomerDefault } from "@/data/newcomer-default";
 import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
-import PaymentScreen from "@/components/subscription/PaymentScreen";
 import { useLanguage } from "@/components/language-provider";
 import { globalBasePrice } from "@shared/pricing";
+import { PaymentModalHome } from "@/components/subscription/PaymentModalHome";
 
-interface SignupProps {
+interface StepsSetupAlertProps {
   embedded?: boolean;
 }
 
-export default function Signup({ embedded = false }: SignupProps) {
+export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertProps) {
   const { t, language } = useLanguage();
   const [location, setLocation] = useLocation();
   const { user } = useAuth();
@@ -34,7 +34,7 @@ export default function Signup({ embedded = false }: SignupProps) {
   const [loadingJson, setLoadingJson] = useState(false);
 
   const { toast } = useToast();
-  const [clientSecret, setClientSecret] = useState<string | null>(null);
+   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [showWaitList, setShowWaitList] = useState(false);
 
   // form fields
@@ -83,7 +83,7 @@ export default function Signup({ embedded = false }: SignupProps) {
     return (
       jsonData?.brands_and_models[brand] ||
       newcomerDefault.brands_and_models[
-        brand as keyof typeof newcomerDefault.brands_and_models
+      brand as keyof typeof newcomerDefault.brands_and_models
       ] ||
       []
     );
@@ -130,107 +130,31 @@ export default function Signup({ embedded = false }: SignupProps) {
     return !val || num === 0 ? null : num;
   };
 
+
+  const form = {
+    carBrand: formData.carBrand || "",
+    carModel: formData.carModel || "",
+    fuelType: formData.fuelType || "",
+    priceMin: formData.priceMin || "",
+    priceMax: formData.priceMax || "",
+    yearMin: formData.yearMin || "",
+    yearMax: formData.yearMax || "",
+    maxKilometers: formData.maxKilometers || "",
+    telegramUsername: formData.telegramUsername || "",
+    websitesSelected: formData.websitesSelected || [],
+    facebookMarketplaceUrl: formData.facebookMarketplaceUrl || "",
+    updateFrequency: formData.updateFrequency || "hourly",
+    notificationLanguage: formData.notificationLanguage || language,
+  }
+
+  const formPrice = formData.price || globalBasePrice;
+
+  const rawTitle = t("setupAlerts.baseTitle");
+
+  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, globalBasePrice);
+
   const handleSubmit = async () => {
-    if (user) {
-      const subscriptionData = {
-        userId: user.id,
-        websitesSelected: formData.websitesSelected,
-        facebookMarketplaceUrl: formData.facebookMarketplaceUrl || "",
-        updateFrequency: formData.updateFrequency,
-        brand: formData.carBrand,
-        model: formData.carModel,
-        fuelType: formData.fuelType,
-        yearMin: parseNullableNumber(formData.yearMin),
-        yearMax: parseNullableNumber(formData.yearMax),
-        mileageMin: null,
-        mileageMax: parseNullableNumber(formData.maxKilometers),
-        priceMin: parseNullableNumber(formData.priceMin),
-        priceMax: parseNullableNumber(formData.priceMax),
-        telegramUsername: formData.telegramUsername,
-        notificationLanguage: formData.notificationLanguage,
-        price: formData.price || globalBasePrice,
-        // price: formData.price || 9.99,
-      };
-
-      try {
-        if (user.stripeCustomerId) {
-          const customerResponse = await fetch(
-            `/api/customer/payment-methods?customerId=${user.stripeCustomerId}`,
-          );
-
-          if (!customerResponse.ok) {
-            throw new Error("Failed to fetch payment methods");
-          }
-
-          const data = await customerResponse.json();
-
-          if (!data.hasPaymentMethod) {
-            // use "/api/set-alerts-intent"
-            const response = await apiRequest(
-              "POST",
-              "/api/set-alerts-intent",
-              subscriptionData,
-            );
-
-            if (response.ok) {
-              const data = await response.json();
-              setClientSecret(data.clientSecret);
-            } else {
-              const errorData = await response.json();
-              throw new Error(
-                errorData.message || "Failed to create subscription",
-              );
-            }
-          } else {
-            //subscribe direct
-            const response = await apiRequest(
-              "POST",
-              "/api/subscriptions",
-              subscriptionData,
-            );
-
-            if (response.ok) {
-              const data = await response.json();
-              toast({
-                title: t("signup.toast.success.title"),
-                description: t("signup.toast.success.description"),
-                variant: "default",
-              });
-              // go to dashboard
-              window.location.href = "/dashboard";
-            }
-          }
-        } else {
-          // post to "/api/set-alerts-intent"
-          const response = await apiRequest(
-            "POST",
-            "/api/set-alerts-intent",
-            subscriptionData,
-          );
-
-          if (response.ok) {
-            const data = await response.json();
-            setClientSecret(data.clientSecret);
-          } else {
-            const errorData = await response.json();
-            throw new Error(
-              errorData.message || "Failed to create subscription",
-            );
-          }
-        }
-      } catch (error) {
-        console.error("Failed to create subscription:", error);
-        toast({
-          title: t("signup.toast.error.title"),
-          description: t("signup.toast.error.description"),
-          variant: "destructive",
-        });
-      }
-    } else {
-      // Save form data in session storage and redirect to login/register
-      sessionStorage.setItem("pendingSubscription", JSON.stringify(formData));
-      setLocation("/login");
-    }
+    setShowPaymentModal(true);
   };
 
   const renderStep = () => {
@@ -328,13 +252,18 @@ export default function Signup({ embedded = false }: SignupProps) {
           <>
             {user && (
               <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden">
-                {clientSecret && <PaymentScreen clientSecret={clientSecret} />}
-                {!clientSecret && (
-                  <div className="sm:p-8 p-4">
-                    <FormProgress currentStep={currentStep} totalSteps={5} />
-                    {renderStep()}
-                  </div>
-                )}
+                <div className="sm:p-8 p-4">
+                  <FormProgress currentStep={currentStep} totalSteps={5} />
+                  {renderStep()}
+                </div>
+                <PaymentModalHome
+                  paymentForm={form}
+                  showModal={showPaymentModal}
+                  setShowModal={setShowPaymentModal}
+                  totalPrice={formPrice}
+                  userId={user.id}
+                  fixedTitle={fixedTitle}
+                />
               </div>
             )}
             {!user && (

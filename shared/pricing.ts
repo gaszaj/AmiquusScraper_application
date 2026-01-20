@@ -57,8 +57,15 @@ const hourlyUpdatesPrice = 0;
 const thirtyMinUpdatesPrice = getAddonPrice("30min_updates");
 const fifteenMinUpdatesPrice = getAddonPrice("15min_updates");
 const oneMinUpdatesPrice = getAddonPrice("1min_updates");
+// Currency settings
+const currencySymbol = "€";
+const currencyLocale = "de-DE";
+const currencyCode = "EUR";
+const payment_frequency_interval = "Day"; //Day, Week, Month, Year
+const subscription_period_interval = "Day"; //Day, Week, Month, Year 
 
-export { additionalWebsitePrice, fiveMinUpdatesPrice, hourlyUpdatesPrice, thirtyMinUpdatesPrice, fifteenMinUpdatesPrice, oneMinUpdatesPrice };
+
+export { additionalWebsitePrice, fiveMinUpdatesPrice, hourlyUpdatesPrice, thirtyMinUpdatesPrice, fifteenMinUpdatesPrice, oneMinUpdatesPrice, currencySymbol, currencyLocale, currencyCode, payment_frequency_interval, subscription_period_interval };
 
 // const addOns = [
 //   { name: "Each additional website", price: 4.99 },

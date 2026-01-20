@@ -123,19 +123,19 @@ export const et = {
     setAlerts: "Seadistage teavitused",
     notificationMockup1: {
       title: "Leitud uus vaste!",
-      description: "BMW 3 Series, 2019, $32,500 – Äsja avaldatud AutoTraderis",
+      description: "BMW 3 Series, 2019, €32,500 – Äsja avaldatud AutoTraderis",
     },
     notificationMockup2: {
       title: "Telegrami teavitus",
       description:
-        "Mercedes C-Class, 2020, 30,000 miili – Hind langes $2,000 võrra",
+        "Mercedes C-Class, 2020, 30,000 miili – Hind langes €2,000 võrra",
     },
   },
   pricing: {
     title: "Lihtne, läbipaistev hind",
     subtitle:
       "Meie hinnad põhinevad teie spetsiifilistel vajadustel. Alustage baaspaketiga ja kohandage vastavalt nõuetele.",
-    baseTitle: "Baaspakett: $79.99/kuu",
+    baseTitle: "Baaspakett: €79.99/kuu",
     includedTitle: "Mis on kaasatud:",
     includedFeatures: [
       "Ühe saidi jälgimine",
@@ -721,7 +721,7 @@ export const et = {
     subtitle:
       "Seadistage oma Telegrami bot, et saada teavitusi oma unistuste autost",
     basicPlan: "Baasplaan",
-    baseTitle: "$79.99/kuu",
+    baseTitle: "€79.99/kuu",
     button: "Käivitage minu auto teavituste teenus",
     cancel: "Tühistage igal ajal",
     toasts: {
@@ -1178,7 +1178,7 @@ export const et = {
       cost: {
         question: "Kui palju tellimus maksab?",
         answer: [
-          "Meie hinnad algavad $79.99 kuus ühe jälgitava veebisaidi eest, uuendustega iga 6 tunni tagant. Lisaveebisaidid maksavad $4.99 kuus.",
+          "Meie hinnad algavad €79.99 kuus ühe jälgitava veebisaidi eest, uuendustega iga 6 tunni tagant. Lisaveebisaidid maksavad €4.99 kuus.",
           "Täpset hinnakirja leiate avalehelt.",
         ],
       },

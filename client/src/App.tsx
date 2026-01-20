@@ -6,21 +6,17 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
-import Signup from "@/pages/signup";
 import Login from "@/pages/login";
 import Register from "@/pages/Register";
 import VerifyEmail from "@/pages/verify-email";
 import SubscriptionPage from "@/pages/subscription";
-import Dashboard from "@/pages/dashboard";
 import About from "@/pages/about";
 import Terms from "@/pages/terms";
 import Privacy from "@/pages/privacy";
 import FAQ from "@/pages/faq";
-import Checkout from "@/pages/checkout";
 import Subscribe from "@/pages/subscribe";
 import SetupAlerts from "@/pages/setup-alerts";
-import Profile from "@/pages/Profile";
-import NewProfile from "@/pages/new-profile";
+import Dashboard from "@/pages/dashboard";
 import Waitlist from "@/pages/waitlist";
 import Blog from "@/pages/blog";
 import Careers from "@/pages/careers";
@@ -30,6 +26,7 @@ import { ProtectedRoute } from "@/lib/protected-route";
 import { LanguageProvider } from "@/components/language-provider";
 import CheckSubscriptionPage from "@/pages/check-subscription";
 import Refund from "@/pages/refund";
+import DodoTestPage from "./pages/test";
 
 function Router() {
   return (
@@ -38,11 +35,11 @@ function Router() {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <ProtectedRoute path="/verify-email" component={VerifyEmail} />
-      <ProtectedRoute path="/dashboard" component={NewProfile} />
-      <Route path="/checkout" component={Checkout} />
+      <ProtectedRoute path="/test-dodo" component={DodoTestPage} />
+      <ProtectedRoute path="/dashboard" component={Dashboard} />
       <Route path="/subscribe" component={Subscribe} />
       <Route path="/setup-alerts" component={SetupAlerts} />
-      <ProtectedRoute path="/profile" component={NewProfile} />
+      <ProtectedRoute path="/profile" component={Dashboard} />
       <ProtectedRoute path="/edit/:id" component={SubscriptionPage} />
       {/* <Route path="/old-profile" component={Profile} /> */}
       {/* <Route path="/test-profile" component={NewProfile} /> */}

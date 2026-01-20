@@ -3,1738 +3,1419 @@ export const et = {
     features: "Funktsioonid",
     how: "Kuidas see töötab",
     pricing: "Hinnad",
-    getAlerts: "Hangi teateid",
-    waitlist: "Ootejärjekord",
+    getAlerts: "Saage teavitusi",
+    waitlist: "Ootenimekiri",
     faq: "KKK",
     login: "Logi sisse",
     getStarted: "Alusta",
     subscribers: "Tellijad",
     theme: "Teema",
     language: "Keel",
-    myAlerts: "Minu teated",
+    myAlerts: "Minu teavitused",
     profile: "Profiil",
     settings: "Seaded",
     logout: "Logi välja",
-    signUp: "Registreeru"
+    signUp: "Registreeru",
   },
   hero: {
-    label: "Jälgi kasutatud autode kuulutusi reaalajas",
-    title: "Ära jää enam kunagi oma unistuste auto pakkumisest ilma",
-    subtitle: "Amiquus annab sulle koheselt teada, kui sinu unistuste auto ilmub müüki mitmele autoportaalile. Saa teavitused Telegrami kaudu kohe, kui sobiv pakkumine leitakse.",
-    button1: "Seadista oma teavitused",
-    button2: "Vaata, kuidas see töötab",
+    label: "Jälgige müüdud autosid reaalajas!",
+    title: "Ärge kunagi jätke kasutamata täiuslikku autoostu",
+    subtitle:
+      "Amiquus teavitab teid kohe, kui teie unistuste auto ilmub mitmele auto müügisaidile. Saate teavitusi Telegrami kaudu kohe, kui leitakse vaste.",
+    button1: "Seadistage teavitused",
+    button2: "Vaadake, kuidas see töötab",
     trustIndicators: {
-      websites: "15+ websites tracked",
-      realtime: "Real-time alerts",
-      noSetup: "No setup required",
-      cancelAnytime: "Cancel anytime"
-    },
-    trustindicators: {
-      cancelanytime: "Tühista igal ajal",
-      nosetup: "Seadistamine pole vajalik",
+      websites: "Jälgib üle 15 saidi",
       realtime: "Reaalajas teavitused",
-      websites: "Jälgitakse üle 15 veebilehe"
-    }
+      noSetup: "Ei vaja seadistamist",
+      cancelAnytime: "Tühistage igal ajal",
+    },
   },
   limited: {
     full: {
-      title: "Tellimuse limiit on saavutatud",
-      description: "Oleme jõudnud oma 30 aktiivse tellija piirini. Liitu ootenimekirjaga, et saada teavitus, kui koht vabaneb.",
-      buttonText: "Liitu ootenimekirjaga"
+      title: "Tellimuste limiit on saavutatud",
+      description:
+        "Oleme saavutanud 30 aktiivse tellija mahupiirangu. Liituge ootenimekirjaga, et saada teade, kui koht vabaneb.",
+      buttonText: "Liituge ootenimekirjaga",
     },
     limited: {
       title: "Piiratud saadavus",
-      description: "Alles on vaid {{remaining}} kohta {{capacity}}-st. Liitu kohe, enne kui kohad täituvad!",
-      buttonText: "Alusta kohe"
+      description:
+        "Alles on vaid {{remaining}} kohta {{capacity}}st. Tellige kohe, enne kui mahupiirang täitub!",
+      buttonText: "Alustage kohe",
     },
     available: {
-      title: "Saadaval tellimused",
-      description: "{{active}} {{capacity}}st tellimusest on hetkel aktiivne. Ruumi liitujatele jagub!",
-      buttonText: "Alusta kohe"
-    }
+      title: "Tellimused saadaval",
+      description:
+        "{{active}}/{{capacity}} tellimust on hetkel aktiivsed. Palju kohti liitumiseks!",
+      buttonText: "Alustage kohe",
+    },
   },
   features: {
     heading: "Miks valida Amiquus?",
-    subheading: "Säästa aega ja ära jää kunagi ilma oma ideaalautost tänu meie automaatsele jälgimisteenusele.",
+    subheading:
+      "Säästke aega ja ärge jätke kunagi kasutamata täiuslikku autot meie automatiseeritud jälgimisteenusega.",
     multiSite: {
-      title: "Multi-Site Tracking",
-      description: "Monitor multiple car listing websites simultaneously without having to check each one manually."
+      title: "Mitme saidi jälgimine",
+      description:
+        "Jälgige mitut auto müügisaidi korraga ilma käsitsi kontrollimiseta.",
     },
     notifications: {
-      title: "Kohesed teavitused",
-      description: "Saad kohe teateid Telegrami kaudu, kui müüki ilmub sinu kriteeriumitele vastav auto."
+      title: "Kohene teavitused",
+      description:
+        "Saate kohene teavitusi Telegrami kaudu, kui teie kriteeriumidele vastav auto müüki ilmub.",
     },
     filters: {
       title: "Kohandatud filtrid",
-      description: "Sea täpsed otsingukriteeriumid, sh mark, mudel, aasta, läbisõit ja hinnavahemik, et leida just see, mida soovid."
+      description:
+        "Määrake täpsed kriteeriumid, sh mark, mudel, aasta, läbisõit ja hinnavahemik, et leida täpselt see, mida soovite.",
     },
     frequency: {
       title: "Kohandatav sagedus",
-      description: "Vali, kui tihti me uusi kuulutusi kontrollime – alates tunnipõhistest uuendustest kuni reaalajas jälgimiseni."
+      description:
+        "Valige, kui tihti kontrollime uusi kuulutusi – tunnipõhised uuendused kuni reaalaja jälgimiseni.",
     },
     languages: {
-      title: "Multiple Language Support",
-      description: "Receive notifications in your preferred language for easier understanding of listings.",
-      en: "English",
-      sl: "Slovenščina",
-      hr: "Hrvatski",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      ar: "العربية",
-      pt: "Português",
-      it: "Italiano",
-      nl: "Nederlands",
-      sv: "Svenska",
-      da: "Dansk",
-      nb: "Norsk",
-      fi: "Suomi",
-      hi: "हिन्दी",
-      ru: "Русский",
-      tr: "Türkçe",
-      cs: "Čeština",
-      pl: "Polski",
-      sk: "Slovenčina",
-      sq: "Shqip",
-      hy: "Հայերեն",
-      az: "Azərbaycan dili",
-      bn: "বাংলা",
-      be: "Беларуская",
-      bs: "Bosanski",
-      bg: "Български",
-      el: "Ελληνικά",
-      et: "Eesti",
-      ka: "ქართული",
-      hu: "Magyar",
-      he: "עברית",
-      ja: "日本語",
-      ko: "한국어",
-      lv: "Latviešu",
-      lt: "Lietuvių",
-      ms: "Bahasa Melayu",
-      ro: "Română",
-      mn: "Монгол",
-      sr: "Српски",
-      my: "မြန်မာစာ",
-      mk: "Македонски",
-      th: "ไทย",
-      uk: "Українська",
-      vi: "Tiếng Việt"
+      title: "Mitmekeelne tugi",
+      description:
+        "Saate teavitusi eelistatud keeles kuulutuste lihtsamaks mõistmiseks.",
     },
     account: {
       title: "Lihtne konto haldamine",
-      description: "Halda mitut otsinguprofiili ja muuda oma tellimuse seadeid vaid paari klikiga."
+      description:
+        "Hallake mitut otsinguprofiili ja muutke tellimuse seadeid paari klikiga.",
     },
-    multisite: {
-      description: "Jälgi mitut auto kuulutuste veebilehte korraga, ilma et peaksid igaüht eraldi käsitsi kontrollima.",
-      title: "Mitme saidi jälgimine"
-    }
   },
   howItWorks: {
-    title: "Kuidas AMIQUUS töötab",
-    subtitle: "Seadista korra ja lase meie automatiseeritud süsteemil leida sulle ideaalne autotehing.",
-    whyTitle: "Why Choose Amiquus?",
+    title: "Kuidas Amiquus töötab",
+    subtitle:
+      "Seadistage üks kord ja laske meie automatiseeritud süsteemil leida teile täiuslik autoost",
+    whyTitle: "Miks valida Amiquus?",
     steps: {
       preferences: {
-        title: "Seadista oma eelistused",
-        description: "Vali autobrändid, mudelid, hinnavahemik ja muud kriteeriumid, mida soovid jälgida."
+        title: "Määrake eelistused",
+        description:
+          "Valige automargid, mudelid, hinnavahemikud ja muud kriteeriumid, mida soovite jälgida.",
       },
       telegram: {
-        title: "Ühenda Telegram",
-        description: "Seo oma Telegrami konto, et saada koheseid teavitusi uutest kuulutustest."
+        title: "Ühendage Telegram",
+        description:
+          "Ühendage oma Telegrami konto, et saada kohene teavitusi uute kuulutuste kohta.",
       },
       notifications: {
-        title: "Saate kohesed teavitused",
-        description: "Saad teavituse kohe, kui mõnel meie jälgitaval veebilehel ilmub sinu kriteeriumitele vastav auto."
+        title: "Saage kohene teavitusi",
+        description:
+          "Saate teavitusi kohe, kui teie kriteeriumidele vastav auto ilmub mõnel jälgitaval saidil.",
       },
       findCar: {
-        title: "Find Your Perfect Car",
-        description: "Be the first to know about new listings and secure the best deals before anyone else."
+        title: "Leidke oma täiuslik auto",
+        description:
+          "Olge esimene, kes saab uute kuulutuste kohta teada ja tagage parimad pakkumised enne teisi.",
       },
-      findcar: {
-        description: "Ole esimene, kes saab teada uutest kuulutustest ja kindlusta parimad pakkumised enne kõiki teisi.",
-        title: "Leia oma ideaalne auto"
-      }
     },
-    features: {
-      0: "Jälgi üle 15 auto kuulutuste veebilehe korraga",
-      1: "Kohandatavad otsingukriteeriumid ja täpsemad filtrid",
-      2: "Reaalajas teavitused Telegrami kaudu",
-      3: "Automaatne hinnalanguse ja uute kuulutuste teavitus",
-      4: "Lihtne seadistusprotsess, mis võtab vähem kui 5 minutit"
-    },
-    setAlerts: "Set Up Your Alerts",
+    features: [
+      "Jälgige üle 15 auto müügisaidi korraga",
+      "Kohandatud otsingukriteeriumid täiustatud filtreerimisega",
+      "Reaalajas teavitused Telegrami kaudu",
+      "Automaatsed teavitused hinnalanguste ja uute kuulutuste kohta",
+      "Lihtne seadistusprotsess, mis võtab alla 5 minuti",
+    ],
+    setAlerts: "Seadistage teavitused",
     notificationMockup1: {
-      title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      title: "Leitud uus vaste!",
+      description: "BMW 3 Series, 2019, $32,500 – Äsja avaldatud AutoTraderis",
     },
     notificationMockup2: {
-      title: "Telegram Alert",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
+      title: "Telegrami teavitus",
+      description:
+        "Mercedes C-Class, 2020, 30,000 miili – Hind langes $2,000 võrra",
     },
-    notificationmockup1: {
-      description: "BMW 3. seeria, 2019, $32,500 – Äsja lisatud AutoTraderisse",
-      title: "Leiti uus sobivus!"
-    },
-    notificationmockup2: {
-      description: "Mercedes C-klass, 2020, 30 000 miili – Hind langetatud 2 000 $ võrra",
-      title: "Telegrami teavitus"
-    },
-    setalerts: "Seadista oma teavitused",
-    whytitle: "Miks valida Amiquus?"
   },
   pricing: {
-    title: "Lihtne ja läbipaistev hinnakujundus",
-    subtitle: "Meie hinnad põhinevad sinu konkreetsetel vajadustel. Alusta baaspaketist ja kohanda seda vastavalt oma soovidele.",
-    baseTitle: "Base Package: $9.99/month",
-    includedTitle: "What's Included:",
+    title: "Lihtne, läbipaistev hind",
+    subtitle:
+      "Meie hinnad põhinevad teie spetsiifilistel vajadustel. Alustage baaspaketiga ja kohandage vastavalt nõuetele.",
+    baseTitle: "Baaspakett: $79.99/kuu",
+    includedTitle: "Mis on kaasatud:",
     includedFeatures: [
-
-      "One website monitoring",
-
-      "Hourly updates",
-
-      "Unlimited filters",
-
-      "Telegram notifications"
-
+      "Ühe saidi jälgimine",
+      "Uuendused iga tund",
+      "Piiramatud filtrid",
+      "Telegrami teavitused",
     ],
-    addonsTitle: "Add-ons:",
-    addons: {
-      0: {
-        name: "Iga lisaveebileht"
-      },
-      1: {
-        name: "Uuendused iga 30 minuti järel"
-      },
-      2: {
-        name: "15-minutilised uuendused"
-      },
-      3: {
-        name: "5-minutilised uuendused"
-      },
-      4: {
-        name: "1-minutilised uuendused"
-      }
-    },
-    footerNote: "All plans include unlimited search configurations and easy subscription management.",
-    button: "Alusta kohe",
-    addonstitle: "Lisad:",
-    basetitle: "Põhipakett: 79,99 $/kuu",
-    footernote: "Kõik paketid sisaldavad piiramatuid otsinguseadeid ja lihtsat tellimuse haldamist.",
-    includedfeatures: {
-      0: "Ühe veebilehe jälgimine",
-      1: "Tunnipõhised uuendused",
-      2: "Piiramatud filtrid",
-      3: "Telegrami teavitused"
-    },
-    includedtitle: "Mis on hinna sees:"
+    addonsTitle: "Lisad:",
+    addons: [
+      { name: "Iga lisasaidi eest", price: 4.99 },
+      { name: "Uuendused iga 30 minuti järel", price: 2.99 },
+      { name: "Uuendused iga 15 minuti järel", price: 5.99 },
+      { name: "Uuendused iga 5 minuti järel", price: 9.99 },
+      { name: "Uuendused iga minuti järel", price: 14.99 },
+    ],
+    footerNote:
+      "Kõik plaanid sisaldavad piiramatuid otsingukonfiguratsioone ja lihtsat tellimuse haldamist.",
+    button: "Alustage kohe",
   },
   signup: {
-    heading: "Create Your Car Alert",
-    subheading: "Set up your personalized car listing notifications in just a few steps.",
-    cta: "Get Alerts Now",
+    heading: "Looge auto teavitus",
+    subheading:
+      "Seadistage oma kohandatud auto kuulutuste teavitused vaid paari sammuga.",
+    cta: "Saage teavitusi kohe",
     waitlist: {
-      message: "We are currently at full capacity. Please join our waitlist to be notified when a spot opens up.",
-      cta: "Join Waitlist"
+      message:
+        "Oleme hetkel täisvõimsusel. Liituge ootenimekirjaga, et saada teade, kui koht vabaneb.",
+      cta: "Liituge ootenimekirjaga",
     },
     toast: {
       success: {
-        title: "Subscription created",
-        description: "Your subscription has been created successfully"
+        title: "Tellimus loodud",
+        description: "Teie tellimus loodi edukalt",
       },
       error: {
-        title: "Subscription failed",
-        description: "We couldn't create your subscription. Please try again later."
-      }
-    }
+        title: "Tellimus ebaõnnestus",
+        description:
+          "Me ei suutnud teie tellimust luua. Palun proovige hiljem uuesti.",
+      },
+    },
   },
   payment: {
     toast: {
       success: {
-        title: "Õnnestus",
-        description: "Teie makseviis on edukalt seadistatud."
+        title: "Edu",
+        description: "Teie makseviis seadistati edukalt.",
       },
       error: {
         title: "Viga",
-        fallback: "Tekkis ootamatu viga. Palun proovige uuesti."
-      }
+        fallback: "Tekkis ootamatu viga. Palun proovige uuesti.",
+      },
     },
     button: {
-      submit: "Määra makseviis",
-      processing: "Töötlen..."
-    }
+      submit: "Seadistage makseviis",
+      processing: "Töötlemine...",
+    },
   },
   alertSchema: {
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      telegramUsername: "Telegram username is required",
-      telegramToken: "Telegram bot token is required",
-      telegramChatId: "Telegram chat ID is required",
-      websitesSelected: "At least one website must be selected",
-      notificationLanguage: "Notification language is required",
-      facebookMarketplaceUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      carbrand: "Autobränd on kohustuslik",
-      carmodel: "Auto mudel on kohustuslik",
-      facebookmarketplaceurl: "Facebook Marketplace’i URL on kohustuslik, kui on valitud Facebook",
-      fueltype: "Kütuse tüüp on kohustuslik",
-      maxkilometers: "Maksimaalsed kilomeetrid peavad olema arv",
-      notificationlanguage: "Teavituse keel on kohustuslik",
-      pricemax: "Maksimaalne hind peab olema number",
-      pricemin: "Miinimumhind peab olema number",
-      telegramchatid: "Telegrami vestluse ID on vajalik",
-      telegramtoken: "Telegrami boti token on vajalik",
-      telegramusername: "Telegrami kasutajanimi on kohustuslik",
-      websitesselected: "Vähemalt üks veebileht peab olema valitud",
-      yearmax: "Maksimaalne aasta peab olema kehtiv aasta",
-      yearmin: "Minimaalne aasta peab olema kehtiv aasta"
-    }
+      carBrand: "Auto mark on kohustuslik",
+      carModel: "Auto mudel on kohustuslik",
+      fuelType: "Kütuse tüüp on kohustuslik",
+      priceMin: "Miinimumhind peab olema number",
+      priceMax: "Maksimumhind peab olema number",
+      yearMin: "Miinimumaasta peab olema kehtiv aasta",
+      yearMax: "Maksimumaasta peab olema kehtiv aasta",
+      maxKilometers: "Maksimaalne läbisõit peab olema number",
+      telegramUsername: "Telegrami kasutajanimi on kohustuslik",
+      telegramToken: "Telegrami boti token on kohustuslik",
+      telegramChatId: "Telegrami vestluse ID on kohustuslik",
+      websitesSelected: "Peate valima vähemalt ühe saidi",
+      notificationLanguage: "Teavituste keel on kohustuslik",
+      facebookMarketplaceUrl:
+        "Facebook Marketplace'i URL on kohustuslik, kui Facebook on valitud",
+    },
   },
   personalInfo: {
     heading: "Isikuandmed",
-    description: "Palun sisestage oma isikuandmed, et saaksime teie teavitused õigesti seadistada.",
+    description:
+      "Palun sisestage oma isikuandmed, et saaksime teie teavitused õigesti seadistada.",
     labels: {
-      firstName: "First Name",
-      lastName: "Last Name",
+      firstName: "Eesnimi",
+      lastName: "Perekonnanimi",
       email: "E-posti aadress",
-      firstname: "Eesnimi",
-      lastname: "Perekonnanimi"
     },
     placeholders: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com",
-      firstname: "Jaan",
-      lastname: "Hirv"
+      firstName: "Jaan",
+      lastName: "Tamm",
+      email: "jaan.tamm@example.com",
     },
     errors: {
-      firstName: "First name is required",
-      lastName: "Last name is required",
+      firstName: "Eesnimi on kohustuslik",
+      lastName: "Perekonnanimi on kohustuslik",
       email: "Palun sisestage kehtiv e-posti aadress",
-      firstname: "Eesnimi on kohustuslik",
-      lastname: "Perekonnanimi on kohustuslik"
     },
     actions: {
-      login: "Logi sisse või loo konto, et jätkata",
-      continue: "Jätka"
-    }
+      login: "Logige sisse või registreeruge jätkamiseks",
+      continue: "Jätka",
+    },
   },
   websiteSelection: {
-    heading: "Veebisaidi valik",
-    description: "Vali, milliseid veebisaite soovid jälgida ja kui tihti soovid uuendusi saada.",
+    heading: "Saitide valik",
+    description:
+      "Valige, milliseid saite soovite jälgida ja kui tihti soovite uuendusi saada.",
     labels: {
-      websites: "Jälgitavad veebilehed",
-      facebookUrl: "Facebook Marketplace URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebook Marketplace’i URL",
-      updatefrequency: "Uuendamise sagedus"
+      websites: "Jälgitavad saidid",
+      facebookUrl: "Facebook Marketplace'i URL",
+      updateFrequency: "Uuendamise sagedus",
     },
     placeholders: {
-      frequency: "Vali sagedus"
+      frequency: "Valige sagedus",
     },
     help: {
-      websites: "Vali üks või mitu veebisaiti, millelt jälgida autokuulutusi.",
-      facebookUrl: "Paste the URL of your Facebook Marketplace search results here.",
-      videoTitle: "Need help finding your Facebook Marketplace search link?",
-      videoDesc: "Watch the video below for step-by-step instructions.",
-      updateFrequency: "How often should we check for new listings? Higher frequencies may cost more.",
-      facebookurl: "Aseta siia oma Facebook Marketplace’i otsingutulemuste URL.",
-      updatefrequency: "Kui tihti peaksime uusi kuulutusi kontrollima? Suurem sagedus võib kaasa tuua kõrgemad kulud.",
-      videodesc: "Vaata allolevat videot samm-sammuliste juhiste saamiseks.",
-      videotitle: "Kas vajad abi oma Facebook Marketplace’i otselingi leidmisel?"
+      websites: "Valige üks või mitu saiti auto kuulutuste jälgimiseks.",
+      facebookUrl:
+        "Sisestage siia Facebook Marketplace'i otsingutulemuste URL.",
+      videoTitle:
+        "Kas vajate abi Facebook Marketplace'i otsingulingi leidmisel?",
+      videoDesc: "Vaadake allolevat videot samm-sammult juhiste saamiseks.",
+      updateFrequency:
+        "Kui tihti peaksime uusi kuulutusi kontrollima? Kõrgemad sagedused võivad maksta rohkem.",
     },
     errors: {
-      websites: "Vähemalt üks veebisait tuleb valida",
-      facebookUrl: "Facebook Marketplace URL is required when Facebook is selected",
-      facebookurl: "Facebook Marketplace’i URL on kohustuslik, kui on valitud Facebook"
+      websites: "Peate valima vähemalt ühe saidi",
+      facebookUrl:
+        "Facebook Marketplace'i URL on kohustuslik, kui Facebook on valitud",
     },
     actions: {
       previous: "Eelmine",
-      continue: "Jätka"
-    }
+      continue: "Jätka",
+    },
   },
   carDetails: {
-    heading: "Auto andmed",
-    description: "Täpsusta otsitava auto andmed. Kõik väljad on vabatahtlikud – jäta mõni tühjaks, et saada laiem valik tulemusi.",
+    heading: "Auto üksikasjad",
+    description:
+      "Määrake otsitava auto üksikasjad. Kõik väljad on valikulised – jätke tühjaks laiema tulemuste vahemiku jaoks.",
     labels: {
-      carBrand: "Car Brand",
-      carModel: "Car Model",
-      fuelType: "Fuel Type",
-      priceMin: "Minimum Price",
-      priceMax: "Maximum Price",
-      yearMin: "Minimum Year",
-      yearMax: "Maximum Year",
-      maxKilometers: "Max Kilometers",
-      carbrand: "Autobränd",
-      carmodel: "Auto mudel",
-      fueltype: "Kütuse tüüp",
-      maxkilometers: "Maksimaalsed kilomeetrid",
-      pricemax: "Maksimaalne hind",
-      pricemin: "Minimaalne hind",
-      yearmax: "Maksimaalne aasta",
-      yearmin: "Minimaalne aasta"
+      carBrand: "Auto mark",
+      carModel: "Auto mudel",
+      fuelType: "Kütuse tüüp",
+      priceMin: "Miinimumhind",
+      priceMax: "Maksimumhind",
+      yearMin: "Miinimumaasta",
+      yearMax: "Maksimumaasta",
+      maxKilometers: "Maksimaalne läbisõit",
     },
     placeholders: {
-      carBrand: "Select Car Brand",
-      carModel: "Select Car Model",
-      carModelDisabled: "Select Car Brand First",
-      fuelType: "Select Fuel Type",
-      priceMin: "Enter minimum price",
-      priceMax: "Enter maximum price",
-      yearMin: "Enter minimum year",
-      yearMax: "Enter maximum year",
-      maxKilometers: "Enter maximum kilometers",
-      carbrand: "Vali auto mark",
-      carmodel: "Vali automudelit",
-      carmodeldisabled: "Vali esmalt auto mark",
-      fueltype: "Vali kütuse tüüp",
-      maxkilometers: "Sisesta maksimaalne kilomeetrite arv",
-      pricemax: "Sisesta maksimaalne hind",
-      pricemin: "Sisesta minimaalne hind",
-      yearmax: "Sisesta maksimaalne aasta",
-      yearmin: "Sisesta minimaalne aasta"
+      carBrand: "Valige auto mark",
+      carModel: "Valige auto mudel",
+      carModelDisabled: "Esmalt valige auto mark",
+      fuelType: "Valige kütuse tüüp",
+      priceMin: "Sisestage miinimumhind",
+      priceMax: "Sisestage maksimumhind",
+      yearMin: "Sisestage miinimumaasta",
+      yearMax: "Sisestage maksimumaasta",
+      maxKilometers: "Sisestage maksimaalne läbisõit",
     },
     options: {
-      noModelsAvailable: "No Models Available",
-      nomodelsavailable: "Mudeleid pole saadaval"
+      noModelsAvailable: "Mudeleid pole saadaval",
     },
     errors: {
-      carBrand: "Car brand is required",
-      carModel: "Car model is required",
-      fuelType: "Fuel type is required",
-      priceMin: "Minimum price must be a number",
-      priceMax: "Maximum price must be a number",
-      yearMin: "Minimum year must be a valid year",
-      yearMax: "Maximum year must be a valid year",
-      maxKilometers: "Max kilometers must be a number",
-      carbrand: "Autobränd on kohustuslik",
-      carmodel: "Auto mudel on kohustuslik",
-      fueltype: "Kütuse tüüp on kohustuslik",
-      maxkilometers: "Maksimaalsed kilomeetrid peavad olema arv",
-      pricemax: "Maksimaalne hind peab olema number",
-      pricemin: "Miinimumhind peab olema number",
-      yearmax: "Maksimaalne aasta peab olema kehtiv aasta",
-      yearmin: "Minimaalne aasta peab olema kehtiv aasta"
+      carBrand: "Auto mark on kohustuslik",
+      carModel: "Auto mudel on kohustuslik",
+      fuelType: "Kütuse tüüp on kohustuslik",
+      priceMin: "Miinimumhind peab olema number",
+      priceMax: "Maksimumhind peab olema number",
+      yearMin: "Miinimumaasta peab olema kehtiv aasta",
+      yearMax: "Maksimumaasta peab olema kehtiv aasta",
+      maxKilometers: "Maksimaalne läbisõit peab olema number",
     },
     actions: {
       previous: "Eelmine",
-      continue: "Jätka"
-    }
+      continue: "Jätka",
+    },
   },
   telegram: {
     heading: "Telegrami seadistamine",
-    description: "Seadista Telegrami teavitused, sisestades oma boti tokeni ja vestluse ID.",
-    subHeading: "Set Up Your Telegram Bot",
-    info: "Kui sul tekib probleeme Telegrami boti loomisel, võta meiega ühendust ja me helistame sulle ning aitame boti loomisel.",
-    contact: "Võta meiega ühendust",
+    description:
+      "Seadistage Telegrami teavitused, sisestades boti tokeni ja vestluse ID.",
+    subHeading: "Seadistage oma Telegrami bot",
+    info: "Kui teil on Telegrami boti loomisel probleeme, võtke meiega ühendust ja helistame teile, et aidata seda luua.",
+    contact: "Võtke meiega ühendust",
     instructions: {
-      botTitle: "How to get a Telegram Bot Token:",
-      botStep1: "Open Telegram and search for @BotFather",
-      botStep2: "Send the command /newbot",
-      botStep3: "Follow the instructions to create a bot",
-      botStep4: "Copy the token provided by BotFather",
-      chatTitle: "How to get your Telegram Chat ID:",
-      chatStep1: "Open Telegram and search for @userinfobot",
-      chatStep2: "Send any message to the bot",
-      chatStep3: "The bot will reply with your information including your Chat ID",
-      chatStep4: "Copy the Chat ID (it's a number)",
-      botstep1: "Ava Telegram ja otsi @BotFather",
-      botstep2: "Sisesta käsk /newbot",
-      botstep3: "Järgi juhiseid, et luua bot",
-      botstep4: "Kopeeri BotFatheri antud token",
-      bottitle: "Kuidas saada Telegrami boti token?",
-      chatstep1: "Ava Telegram ja otsi @userinfobot",
-      chatstep2: "Saada botile suvaline sõnum",
-      chatstep3: "Bot vastab teie andmetega, sealhulgas teie Chat ID-ga",
-      chatstep4: "Kopeeri vestluse ID (see on number)",
-      chattitle: "Kuidas saada oma Telegrami vestluse ID:"
+      botTitle: "Kuidas saada Telegrami boti token:",
+      botStep1: "Avage Telegram ja leidke @BotFather",
+      botStep2: "Saate käsu /newbot",
+      botStep3: "Järgige boti loomise juhiseid",
+      botStep4: "Kopeerige BotFatheri antud token",
+
+      chatTitle: "Kuidas saada oma Telegrami vestluse ID:",
+      chatStep1: "Avage Telegram ja leidke @userinfobot",
+      chatStep2: "Saate botile suvalise sõnumi",
+      chatStep3: "Bot vastab teabega, sh teie vestluse ID-ga",
+      chatStep4: "Kopeerige vestluse ID (see on number)",
     },
-    videoPrompt: "Need help setting up your Telegram Bot Token and Chat ID?",
-    videoDescription: "Watch the video below for a step-by-step guide.",
+
+    videoPrompt:
+      "Kas vajate abi Telegrami boti tokeni ja vestluse ID seadistamisel?",
+    videoDescription:
+      "Vaadake allolevat videot samm-sammult juhiste saamiseks.",
+
     labels: {
       token: "Telegrami boti token",
-      chatId: "Your Telegram Chat ID",
-      language: "Teavituse keel",
+      chatId: "Teie Telegrami vestluse ID",
+      language: "Teavituste keel",
       username: "Telegrami kasutajanimi",
-      chatid: "Sinu Telegrami vestluse ID"
     },
+
     placeholders: {
-      token: "Sisesta oma boti token BotFatherist",
-      chatId: "Enter your Telegram chat ID",
-      language: "Vali Telegrami sõnumi keel",
-      username: "Sisesta oma Telegrami kasutajanimi",
-      chatid: "Sisesta oma Telegrami vestluse ID"
+      token: "Sisestage BotFatheri antud boti token",
+      chatId: "Sisestage oma Telegrami vestluse ID",
+      language: "Valige Telegrami sõnumite keel",
+      username: "Sisestage Telegrami kasutajanimi",
     },
-    usernameDescription: "This is the username on your Telegram account (without the @ symbol).",
+    usernameDescription:
+      "See on teie Telegrami konto kasutajanimi (ilma @ märgita).",
     examples: {
       token: "Näide: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-      chatId: "You can get this by messaging @userinfobot on Telegram",
-      chatid: "Selle saad, kui saadad sõnumi @userinfobot’ile Telegramis."
+      chatId: "Saate selle, saates sõnumi @userinfobot'ile Telegramis",
     },
-    setupTitle: "Setup Instructions:",
+    setupTitle: "Seadistusjuhised:",
     setupSteps: [
-
-      "Open Telegram and search for \\\"BotFather\\\"",
-
-      "Start a chat with BotFather by clicking \\\"Start\\\"",
-
-      "Type /newbot and follow the instructions to create a new bot",
-
-      "Choose a name for your bot",
-
-      "Choose a username for your bot (must end in 'bot')",
-
-      "Copy the API token provided by BotFather",
-
-      "Send a message to your new bot to activate the chat"
-
+      'Avage Telegram ja leidke "BotFather"',
+      'Alustage BotFatheriga vestlust, klõpsates "Start"',
+      "Sisestage /newbot ja järgige uue boti loomise juhiseid",
+      "Valige oma botile nimi",
+      "Valige botile kasutajanimi (peab lõppema 'bot'iga)",
+      "Kopeerige BotFatheri antud API token",
+      "Saate sõnumi oma uuele botile, et aktiveerida vestlus",
     ],
-    chatIdTitle: "How to get your Telegram Chat ID:",
+    chatIdTitle: "Kuidas saada oma Telegrami vestluse ID:",
     chatIdSteps: [
-
-      "Open Telegram and search for \\\"userinfobot\\\"",
-
-      "Send any message to the bot",
-
-      "The bot will reply with your information including your Chat ID",
-
-      "Copy your Chat ID"
-
+      'Avage Telegram ja leidke "userinfobot"',
+      "Saate botile suvalise sõnumi",
+      "Bot vastab teabega, sh teie vestluse ID-ga",
+      "Kopeerige oma vestluse ID",
     ],
-    helpTitle: "Need help setting up your Telegram Bot Token and Chat ID?",
-    helpDescription: "Watch the video below for a step-by-step guide.",
-    botTokenLabel: "Telegram Bot Token",
-    botTokenPlaceholder: "Enter your bot token from BotFather",
-    botTokenExample: "Example: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
-    chatIdLabel: "Your Telegram Chat ID",
-    chatIdPlaceholder: "Enter your Telegram chat ID",
-    chatIdDescription: "You can get this by messaging @userinfobot on Telegram",
-    languageLabel: "Notification Language",
-    languagePlaceholder: "Select Telegram Message Language",
+    helpTitle:
+      "Kas vajate abi Telegrami boti tokeni ja vestluse ID seadistamisel?",
+    helpDescription: "Vaadake allolevat videot samm-sammult juhiste saamiseks.",
+    botTokenLabel: "Telegrami boti token",
+    botTokenPlaceholder: "Sisestage BotFatheri antud boti token",
+    botTokenExample: "Näide: 5432109876:ABCDefGhIJklMNoPqrSTuvWXyz1234567890",
+    chatIdLabel: "Teie Telegrami vestluse ID",
+    chatIdPlaceholder: "Sisestage oma Telegrami vestluse ID",
+    chatIdDescription: "Saate selle, saates sõnumi @userinfobot'ile Telegramis",
+    languageLabel: "Teavituste keel",
+    languagePlaceholder: "Valige Telegrami sõnumite keel",
     languages: {
-      en: "Inglise keel",
-      de: "Saksa keel",
-      fr: "Prantsuse keel",
-      es: "Eesti",
-      it: "Eesti"
+      en: "Inglise",
+      de: "Saksa",
+      fr: "Prantsuse",
+      es: "Hispaania",
+      it: "Itaalia",
     },
-    previewTitle: "Preview Telegram Notifications",
-    carAlertTitle: "🚗 New Car Alert!",
-    priceLabel: "Price: {{price}}",
-    kilometresLabel: "Kilometres: {{kms}}",
-    locationLabel: "Location: {{location}}",
-    viewListing: "View Listing →",
+    previewTitle: "Telegrami teavituste eelvaade",
+    carAlertTitle: "Uus auto teavitus!",
+    priceLabel: "Hind: {{price}}",
+    kilometresLabel: "Läbisõit: {{kms}}",
+    locationLabel: "Asukoht: {{location}}",
+    viewListing: "Vaata kuulutust →",
     errors: {
-      token: "Telegrami boti token on vajalik",
-      chatId: "Telegram chat ID is required",
-      language: "Teavituse keel on kohustuslik",
+      token: "Telegrami boti token on kohustuslik",
+      chatId: "Telegrami vestluse ID on kohustuslik",
+      language: "Teavituste keel on kohustuslik",
       username: "Telegrami kasutajanimi on kohustuslik",
-      chatid: "Telegrami vestluse ID on kohustuslik"
     },
+
     actions: {
       previous: "Eelmine",
-      continue: "Jätka"
+      continue: "Jätka",
     },
-    contactBotInstruction: "Start a chat with our Telegram bot by clicking the link below and sending it a message:",
-    contactBotNote: "This is required to receive car alerts. You can scan the QR code if you're on desktop.",
-    confirmContact: "I have started a chat with the bot and sent a message",
-    bottokenexample: "Muidugi! Palun edasta tekst, mida soovid tõlkida eesti keelde.",
-    bottokenlabel: "Telegram Boti Token",
-    bottokenplaceholder: "Sisesta oma boti token BotFatherilt",
-    caralerttitle: "🚗 Uus auto!",
-    chatiddescription: "Selle saad, kui saadad sõnumi @userinfobot Telegramis.",
-    chatidlabel: "Sinu Telegrami vestluse ID",
-    chatidplaceholder: "Sisesta oma Telegrami vestluse ID",
-    chatidsteps: {
-      0: "Ava Telegram ja otsi \"userinfobot\"",
-      1: "Saada botile suvaline sõnum",
-      2: "Bot vastab sulle sinu andmetega, sealhulgas sinu Chat ID-ga",
-      3: "Kopeeri oma vestluse ID"
-    },
-    chatidtitle: "Kuidas saada oma Telegrami vestluse ID:",
-    confirmcontact: "Olen alustanud vestlust botiga ja saatnud sõnumi.",
-    contactbotinstruction: "Alusta vestlust meie Telegrami botiga, klõpsates alloleval lingil ja saates sellele sõnumi:",
-    contactbotnote: "See on vajalik autoalarmi teadete saamiseks. Kui oled arvutis, saad skaneerida QR-koodi.",
-    helpdescription: "Vaata allolevat videot, et saada samm-sammuline juhend.",
-    helptitle: "Kas vajad abi oma Telegrami boti tokeni ja Chat ID seadistamisel?",
-    kilometreslabel: "Kilomeetrid: {{kms}}",
-    languagelabel: "Teavituse keel",
-    languageplaceholder: "Vali Telegrami sõnumi keel",
-    locationlabel: "Asukoht: {{location}}",
-    previewtitle: "Telegrami teadete eelvaade",
-    pricelabel: "Hind: {{price}}",
-    setupsteps: {
-      0: "Ava Telegram ja otsi \"BotFather\"",
-      1: "Alusta vestlust BotFatheriga, klõpsates „Start“",
-      2: "Tippige /newbot ja järgige juhiseid, et luua uus bot",
-      3: "Vali oma botile nimi",
-      4: "Vali oma botile kasutajanimi (peab lõppema sõnaga 'bot')",
-      5: "Kopeeri BotFatheri poolt antud API token",
-      6: "Saada oma uuele botile sõnum, et vestlus aktiveerida"
-    },
-    setuptitle: "Seadistamise juhised:",
-    subheading: "Seadista oma Telegrami bot",
-    usernamedescription: "See on sinu Telegrami konto kasutajanimi (ilma @-märgita).",
-    videodescription: "Vaata allolevat videot samm-sammult juhiste saamiseks.",
-    videoprompt: "Kas vajad abi oma Telegrami boti tokeni ja Chat ID seadistamisel?",
-    viewlisting: "Vaata kuulutust →"
+    contactBotInstruction:
+      "Alustage meie Telegrami botiga vestlust, klõpsates alloleval lingil ja saates talle sõnumi:",
+    contactBotNote:
+      "See on vajalik auto teavituste saamiseks. Arvutis olles saate skannida QR-koodi.",
+    confirmContact: "Alustasin botiga vestlust ja saatsin sõnumi",
   },
   review: {
-    title: "Vaadake üle oma tellimus",
-    description: "Palun vaadake oma tellimuse andmed enne maksmisega jätkamist üle.",
+    title: "Teie tellimuse ülevaade",
+    description:
+      "Palun vaadake oma tellimuse üksikasjad üle enne makse juurde liikumist.",
+
     personal: {
       title: "Isikuandmed",
       name: "Nimi",
-      email: "E-post"
+      email: "E-post",
     },
+
     monitoring: {
       title: "Jälgimise seaded",
-      websites: "Veebilehed",
-      facebookUrl: "Facebook URL",
-      updateFrequency: "Update Frequency",
-      facebookurl: "Facebooki URL",
-      updatefrequency: "Uuendamise sagedus"
+      websites: "Saidid",
+      facebookUrl: "Facebooki URL",
+      updateFrequency: "Uuendamise sagedus",
     },
+
     specs: {
-      title: "Auto tehnilised andmed",
-      brand: "Bränd",
+      title: "Auto spetsifikatsioonid",
+      brand: "Mark",
       model: "Mudel",
-      fuelType: "Fuel Type",
-      yearRange: "Year Range",
-      mileage: "Sõiduulatus (km)",
+      fuelType: "Kütuse tüüp",
+      yearRange: "Aastate vahemik",
+      mileage: "Läbisõidu vahemik (km)",
       price: "Hinnavahemik (€)",
-      fueltype: "Kütuse tüüp",
-      yearrange: "Aastavahemik"
     },
+
     notification: {
       title: "Teavituste seaded",
       telegram: "Telegrami bot",
-      language: "Teavituse keel"
+      language: "Teavituste keel",
     },
+
     summary: {
       title: "Tellimuse kokkuvõte",
-      base: "Põhitellimus",
-      extraWebsites: "Additional Websites",
-      frequencyUpgrade: "Frequency Upgrade",
+      base: "Baastellimus",
+      extraWebsites: "Lisasaidid",
+      frequencyUpgrade: "Sageduse uuendus",
       total: "Kokku (kuus)",
-      extrawebsites: "Lisaveebilehed",
-      frequencyupgrade: "Sageduse uuendus"
     },
+
     terms: {
-      checkbox: "Nõustun sellega,",
-      tos: "Kasutustingimused",
-      privacy: "Privaatsuspoliitika",
-      note: "Sinu tellimus pikeneb automaatselt iga kuu. Saad tellimuse igal ajal tühistada.",
-      error: "Peate nõustuma tingimustega"
+      checkbox: "Nõustun",
+      tos: "Kasutustingimustega",
+      privacy: "Privaatsuspoliitikaga",
+      note: "Teie tellimus uueneb automaatselt iga kuu. Saate igal ajal tühistada.",
+      error: "Peate nõustuma tingimuste ja eeskirjadega",
     },
+
     actions: {
       previous: "Eelmine",
-      submit: "Jätka maksmist"
-    }
+      submit: "Liikuge makse juurde",
+    },
   },
   faq: {
     title: "Korduma kippuvad küsimused",
-    subtitle: "Leia vastused kõige levinumatele küsimustele meie teenuse kohta.",
-    contactPrompt: "Still have questions?",
-    contactLink: "Contact our support team",
-    questions: {
-      0: {
-        answer: "Teavituste kiirus sõltub sinu valitud uuenduste sagedusest. Vaikimisi tunniplaaniga saad teavitused uue kuulutuse lisamisest kuni tunni jooksul. Peaaegu reaalajas teavituste (mõne minuti jooksul pärast kuulutuse lisamist) saamiseks saad uuendada meie sagedasema uuendamise plaanile.",
-        question: "Kui kiiresti saan teavituse pärast uue kuulutuse lisamist?"
+    subtitle:
+      "Leidke vastused meie teenuse kohta kõige sagedamini esitatud küsimustele.",
+    contactPrompt: "On teil veel küsimusi?",
+    contactLink: "Võtke ühendust meie tugimeeskonnaga",
+    questions: [
+      {
+        question:
+          "Kui kiiresti saan teavitusi pärast uue kuulutuse avaldamist?",
+        answer:
+          "Teavituste kiirus sõltub valitud uuendamise sagedusest. Vaikimisi plaaniga (tunnipõhine) saate teavitusi tunni jooksul pärast uue kuulutuse avaldamist. Peaaegu reaalajas (minutite jooksul pärast avaldamist) saate uuendada meie sagedasemate uuendamise plaanidega.",
       },
-      1: {
-        answer: "Jah! Saad luua mitu otsinguprofiili erinevate kriteeriumitega. Iga profiil arvestatakse eraldi tellimusena, kuid kõiki saad hallata ühest kontost. See on ideaalne, kui otsid korraga erinevat tüüpi sõidukeid.",
-        question: "Kas ma saan korraga jälgida mitut erinevat tüüpi autot?"
+      {
+        question: "Kas saan korraga jälgida mitut erinevat tüüpi autot?",
+        answer:
+          "Jah! Saate luua mitu otsinguprofiili erinevate kriteeriumidega. Iga profiil loetakse eraldi tellimuseks, kuid saate neid kõiki ühest kontost hallata. Ideaalse, kui otsite korraga erinevaid sõidukitüüpe.",
       },
-      2: {
-        answer: "Praegu toetame peamisi autokuulutuste platvorme, sealhulgas AutoTrader, CarGurus, Cars.com ja Facebook Marketplace. Laiendame pidevalt oma katvust, et lisada rohkem veebilehti vastavalt kasutajate soovidele ja piirkondlikule populaarsusele.",
-        question: "Milliseid veebisaite te praegu toetate?"
+      {
+        question: "Milliseid saite te hetkel toetate?",
+        answer:
+          "Toetame hetkel peamisi auto müügiplatvorme, sh AutoTrader, CarGurus, Cars.com ja Facebook Marketplace. Laiendame pidevalt katvust, et lisada rohkem saite kasutajate taotluste ja piirkondliku populaarsuse põhjal.",
       },
-      3: {
-        answer: "Üldsegi mitte! Pakume samm-sammult juhiseid nii teksti kui ka videote abil, et aidata sul Telegrami boti seadistada. Enamik kasutajaid saab seadistamisega hakkama vähem kui 5 minutiga, isegi ilma tehnilise taustata.",
-        question: "Kas mul on vaja tehnilisi teadmisi, et kasutada Telegrami boti?"
+      {
+        question:
+          "Kas mul on vaja tehnilisi teadmisi Telegrami boti kasutamiseks?",
+        answer:
+          "Mitte üldse! Pakume samm-sammult juhiseid teksti ja video vormis, et aidata teil Telegrami boti seadistada. Enamik kasutajaid lõpetab seadistamise alla 5 minutiga, isegi ilma tehnilise kogemuseta.",
       },
-      4: {
-        answer: "Jah, saad oma otsingukriteeriume igal ajal muuta oma konto juhtpaneelil. Muudatused jõustuvad kohe ning sinu teavitused uuenevad vastavalt ilma teenuse katkestuseta.",
-        question: "Kas ma saan pärast tellimuse seadistamist oma otsingukriteeriume muuta?"
+      {
+        question:
+          "Kas saan otsingukriteeriume muuta pärast tellimuse seadistamist?",
+        answer:
+          "Jah, saate otsingukriteeriume igal ajal konto armatuurlaualt muuta. Muudatused jõustuvad kohe ja teie teavitused uuendatakse vastavalt ilma teenuse katkestuseta.",
       },
-      5: {
-        answer: "Saad oma tellimuse igal ajal tühistada oma konto juhtpaneelil. Mine jaotisse „Tellimused“, vali tellimus, mida soovid tühistada, ja klõpsa nupul „Tühista tellimus“. Sinu teenus jääb aktiivseks kuni praeguse arveldusperioodi lõpuni.",
-        question: "Kuidas saan oma tellimuse tühistada?"
-      }
-    },
-    contactlink: "Võta ühendust meie klienditoega",
-    contactprompt: "Kas sul on veel küsimusi?"
+      {
+        question: "Kuidas tühistada tellimus?",
+        answer:
+          'Saate tellimuse igal ajal konto armatuurlaualt tühistada. Minge jaotisesse "Tellimused", valige tühistatav tellimus ja klõpsake nuppu "Tühista tellimus". Teie teenus jätkub kuni praeguse makseperioodi lõpuni.',
+      },
+    ],
   },
   footer: {
     brandTitle: "Amiquus",
-    brandDescription: "Your personal assistant for finding the perfect used car deal at the perfect time.",
-    quickLinks: "Quick Links",
+    brandDescription:
+      "Teie isiklik abiline täiusliku kasutatud auto leidmiseks õigel ajal.",
+    quickLinks: "Kiirlingid",
     features: "Funktsioonid",
-    pricing: "Hinnakiri",
+    pricing: "Hinnad",
     faq: "KKK",
-    getStarted: "Get Started",
+    getStarted: "Alusta",
     legal: "Õiguslik",
     terms: "Kasutustingimused",
     privacy: "Privaatsuspoliitika",
     cookies: "Küpsiste poliitika",
-    gdpr: "Vastavus GDPR-iga",
+    gdpr: "GDPR vastavus",
     contact: "Kontakt",
     email: "support@amiquus.com",
-    telegram: "Võta meiega ühendust Telegramis",
+    telegram: "Võtke meiega ühendust Telegramis",
     copyright: "Kõik õigused kaitstud.",
     about: "Meist",
     blog: "Blogi",
     careers: "Karjäär",
     support: "Tugi",
-    branddescription: "Sinu isiklik abiline, kes aitab leida ideaalse kasutatud auto pakkumise just õigel ajal.",
-    brandtitle: "Amiquus",
-    getstarted: "Alusta",
-    quicklinks: "Kiirlingid"
   },
   login: {
-    title: "Logi sisse oma kontole",
-    description: "Sisesta oma e-posti aadress ja parool, et pääseda oma juhtpaneelile",
-    emailLabel: "Email",
-    passwordLabel: "Password",
-    loginButton: "Log in",
-    loggingIn: "Logging in...",
-    loginWithGoogle: "Log in with Google",
+    title: "Logige sisse oma kontole",
+    description: "Sisestage oma e-post ja parool armatuurlauale pääsemiseks",
+    emailLabel: "E-post",
+    passwordLabel: "Parool",
+    loginButton: "Logi sisse",
+    loggingIn: "Sisselogimine...",
+    loginWithGoogle: "Logige sisse Google'iga",
     or: "või",
-    noAccount: "Don't have an account?",
-    registerLink: "Register",
-    successTitle: "Login successful",
-    successMessage: "You have been logged in successfully.",
-    errorTitle: "Login failed",
-    genericError: "Please check your credentials and try again.",
+    noAccount: "Pole kontot?",
+    registerLink: "Registreeru",
+    successTitle: "Edukas sisselogimine",
+    successMessage: "Logisite sisse edukalt.",
+    errorTitle: "Sisselogimine ebaõnnestus",
+    genericError: "Palun kontrollige oma andmeid ja proovige uuesti.",
     errors: {
-      invalidEmail: "Please enter a valid email address",
-      shortPassword: "Password must be at least 6 characters",
-      invalidemail: "Palun sisestage kehtiv e-posti aadress",
-      shortpassword: "Parool peab olema vähemalt 6 tähemärki"
+      invalidEmail: "Palun sisestage kehtiv e-posti aadress",
+      shortPassword: "Parool peab olema vähemalt 6 tähemärki",
     },
-    emaillabel: "E-post",
-    errortitle: "Sisselogimine ebaõnnestus",
-    genericerror: "Palun kontrolli oma andmeid ja proovi uuesti.",
-    loggingin: "Sisselogimine...",
-    loginbutton: "Logi sisse",
-    loginwithgoogle: "Logi sisse Google’iga",
-    noaccount: "Kas sul pole kontot?",
-    passwordlabel: "Parool",
-    registerlink: "Registreeru",
-    successmessage: "Olete edukalt sisse logitud.",
-    successtitle: "Sisselogimine õnnestus"
   },
   register: {
-    title: "Loo konto",
-    description: "Registreeru, et alustada oma unistuste auto jälgimist",
-    google: "Registreeru Google’iga",
-    orContinue: "Or continue with",
-    firstName: "First Name",
-    lastName: "Last Name",
+    title: "Looge konto",
+    description: "Registreeruge, et alustada oma unistuste auto jälgimist",
+    google: "Registreeruge Google'iga",
+    orContinue: "Või jätkake",
+    firstName: "Eesnimi",
+    lastName: "Perekonnanimi",
     username: "Kasutajanimi",
     email: "E-post",
     password: "Parool",
-    confirmPassword: "Confirm Password",
-    termsNotice: "I agree to the",
-    termsOfService: "Terms of Service",
-    privacyPolicy: "Privacy Policy",
-    createBtn: "Create account",
-    alreadyHave: "Already have an account?",
+    confirmPassword: "Kinnitage parool",
+    termsNotice: "Nõustun",
+    termsOfService: "Kasutustingimustega",
+    privacyPolicy: "Privaatsuspoliitikaga",
+    createBtn: "Looge konto",
+    alreadyHave: "On juba konto?",
     login: "Logi sisse",
     and: "ja",
     toast: {
       missingFields: {
-        title: "Missing fields",
-        desc: "Please fill in all required fields"
+        title: "Puuduvad väljad",
+        desc: "Palun täitke kõik kohustuslikud väljad",
       },
       invalidUsername: {
-        title: "Invalid username",
-        desc: "Username must be alphanumeric and between 3 and 20 characters"
+        title: "Kehtetu kasutajanimi",
+        desc: "Kasutajanimi peab olema tähtnumbriline ja 3–20 tähemärki pikk",
       },
       passwordMismatch: {
-        title: "Passwords don't match",
-        desc: "Please make sure your passwords match"
+        title: "Paroolid ei kattu",
+        desc: "Palun veenduge, et paroolid kattuvad",
       },
       termsNotAccepted: {
-        title: "Terms not accepted",
-        desc: "You must accept the terms and privacy policy to continue"
+        title: "Tingimusi pole aktsepteeritud",
+        desc: "Peate aktsepteerima tingimused ja privaatsuspoliitika jätkamiseks",
       },
       success: {
         title: "Registreerimine õnnestus",
-        desc: "Tere tulemast Amiquusesse! Sind suunatakse edasi, et kinnitada oma e-posti aadress."
+        desc: "Tere tulemast Amiquusesse! Teid suunatakse e-posti kinnitamisele.",
       },
       failure: {
         title: "Registreerimine ebaõnnestus",
-        desc: "Palun kontrolli oma andmeid ja proovi uuesti."
+        desc: "Palun kontrollige oma andmeid ja proovige uuesti",
       },
-      invalidusername: {
-        desc: "Kasutajanimi peab olema tähtede ja numbritega ning 3 kuni 20 tähemärki pikk.",
-        title: "Kehtetu kasutajanimi"
-      },
-      missingfields: {
-        desc: "Palun täitke kõik nõutud väljad",
-        title: "Puuduvad väljad"
-      },
-      passwordmismatch: {
-        desc: "Palun veendu, et sinu paroolid ühtivad",
-        title: "Paroolid ei ühti"
-      },
-      termsnotaccepted: {
-        desc: "Peate nõustuma tingimuste ja privaatsuspoliitikaga, et jätkata",
-        title: "Tingimusi ei ole aktsepteeritud"
-      }
     },
-    alreadyhave: "Kas sul on juba konto?",
-    confirmpassword: "Kinnita parool",
-    createbtn: "Loo konto",
-    firstname: "Eesnimi",
-    lastname: "Perekonnanimi",
-    orcontinue: "Või jätka sellega",
-    privacypolicy: "Privaatsuspoliitika",
-    termsnotice: "Nõustun sellega,",
-    termsofservice: "Kasutustingimused"
   },
   verifyEmail: {
-    title: "Kinnita oma e-posti aadress",
-    description: "Kinnituskood on saadetud sinu e-posti aadressile.",
-    codeLabel: "Verification Code",
-    verifyButton: "Verify Email",
-    updateEmailLabel: "Update Email",
-    updateEmailButton: "Update Email",
-    resendButton: "Resend Code",
-    resendCountdown: "You can resend the code in {{seconds}}s",
-    footerNote: "Didn’t receive the code? Check your spam folder.",
+    title: "E-posti kinnitamine",
+    description: "Teie e-posti aadressile saadeti kinnitamiskood.",
+    codeLabel: "Kinnitamiskood",
+    verifyButton: "Kinnitage e-post",
+    updateEmailLabel: "Uuendage e-post",
+    updateEmailButton: "Uuendage e-post",
+    resendButton: "Saada kood uuesti",
+    resendCountdown: "Saate koodi uuesti saata {{seconds}}s pärast",
+    footerNote: "Ei saanud koodi? Kontrollige rämpsposti kausta.",
     toast: {
-      verified: "E-post on kinnitatud",
+      verified: "E-post kinnitatud",
       failed: "Kinnitamine ebaõnnestus",
-      resent: "Kinnituskood saadeti uuesti",
+      resent: "Kinnitamiskood saadeti uuesti",
       error: "Viga",
-      invalidEmail: "Invalid email",
-      enterValidEmail: "Please enter a valid email address",
-      sameEmail: "Same email",
-      sameEmailDesc: "The new email is the same as the current email",
-      emailUpdated: "Email updated",
-      emailupdated: "E-post uuendatud",
-      entervalidemail: "Palun sisestage kehtiv e-posti aadress",
-      invalidemail: "Vigane e-posti aadress",
-      sameemail: "Sama e-post",
-      sameemaildesc: "Uus e-posti aadress on sama, mis praegune e-posti aadress."
+      invalidEmail: "Kehtetu e-post",
+      enterValidEmail: "Palun sisestage kehtiv e-posti aadress",
+      sameEmail: "Sama e-post",
+      sameEmailDesc: "Uus e-posti aadress on sama mis praegune",
+      emailUpdated: "E-post uuendatud",
     },
-    codelabel: "Kinnituskood",
-    footernote: "Kas sa ei saanud koodi? Kontrolli rämpsposti kausta.",
-    resendbutton: "Saada kood uuesti",
-    resendcountdown: "Saate koodi uuesti saata {{seconds}} sekundi pärast",
-    updateemailbutton: "Uuenda e-posti aadress",
-    updateemaillabel: "Uuenda e-posti",
-    verifybutton: "Kinnita e-post"
   },
   dashboardPayment: {
-    add: "Lisa makseviis",
-    description: "Lisa uus krediit- või deebetkaart oma tellimuse maksete jaoks.",
-    processing: "Töötlen...",
-    errorTitle: "Error adding payment method",
-    errorMessage: "An unexpected error occurred",
+    add: "Lisage makseviis",
+    description: "Lisage uus krediit- või deebetkaart tellimuse maksmiseks.",
+    processing: "Töötlemine...",
+    errorTitle: "Viga makseviisi lisamisel",
+    errorMessage: "Tekkis ootamatu viga",
     initError: {
-      title: "Error",
-      description: "Unable to initialize payment setup"
+      title: "Viga",
+      description: "Makse seadistust ei saanud algatada",
     },
-    errormessage: "Tekkis ootamatu viga",
-    errortitle: "Viga makseviisi lisamisel",
-    initerror: {
-      description: "Makse seadistuse alustamine ebaõnnestus",
-      title: "Viga"
-    }
   },
   dashboard: {
     subscriptionCard: {
-      years: "Years",
-      priceRange: "Price",
-      websites: "Websites",
-      updates: "Updates",
-      language: "Language",
-      price: "Price",
-      edit: "Edit",
-      cancelAlert: "Cancel Alert",
-      cancelTitle: "Cancel Car Alert",
-      cancelDescription: "Are you sure you want to cancel your car alert for {{brand}} {{model}}? This will stop all notifications and you'll need to set up a new alert if you want to monitor this car again.",
-      keepMyAlert: "Keep My Alert",
-      confirmCancel: "Cancel Alert"
+      years: "Aastad",
+      priceRange: "Hind",
+      websites: "Saidid",
+      updates: "Uuendused",
+      language: "Keel",
+      price: "Hind",
+      edit: "Muuda",
+      cancelAlert: "Tühista teavitus",
+      cancelTitle: "Tühista auto teavitus",
+      cancelDescription:
+        "Kas olete kindel, et soovite tühistada {{brand}} {{model}} auto teavituse? See peatab kõik teavitused ja peate uue teavituse seadistama, kui soovite seda autot uuesti jälgida.",
+      keepMyAlert: "Säilita teavitus",
+      confirmCancel: "Tühista teavitus",
     },
     paymentMethodCard: {
-      expires: "Expires",
-      default: "Default",
-      setAsDefault: "Set as Default",
-      remove: "Remove",
-      setDefaultTitle: "Set Default Payment Method",
-      setDefaultDescription: "Would you like to set the {{brand}} card ending in {{last4}} as your default payment method? This card will be used for all future subscription payments.",
-      removeTitle: "Remove Payment Method",
-      removeDescription: "Are you sure you want to remove your {{brand}} card ending in {{last4}}?",
-      removeWarning: "This is your default payment method and removing it may affect your active subscriptions.",
-      cancel: "Cancel",
-      confirmRemove: "Remove Card"
-    }
+      expires: "Aegub",
+      default: "Vaikimisi",
+      setAsDefault: "Määra vaikimisi",
+      remove: "Eemalda",
+      setDefaultTitle: "Määra makseviis vaikimisi",
+      setDefaultDescription:
+        "Kas soovite määrata kaardi {{brand}}, mis aegub {{last4}}, vaikimisi makseviisiks? Seda kaarti kasutatakse kõigi tulevaste tellimuse maksete jaoks.",
+      removeTitle: "Eemalda makseviis",
+      removeDescription:
+        "Kas olete kindel, et soovite eemaldada kaardi {{brand}}, mis aegub {{last4}}?",
+      removeWarning:
+        "See on teie vaikimisi makseviis ja selle eemaldamine võib mõjutada teie aktiivseid tellimusi.",
+      cancel: "Tühista",
+      confirmRemove: "Eemalda kaart",
+    },
   },
   profile: {
     tabs: {
       alerts: "Minu teavitused",
-      payments: "Makseviisid"
+      payments: "Makseviisid",
     },
     sidebar: {
-      memberSince: "Member since",
-      subscriptions: "Tellijad",
+      memberSince: "Liige alates",
+      subscriptions: "Tellimused",
       methods: "Makseviisid",
       account: "Konto seaded",
       privacy: "Privaatsus ja turvalisus",
       logout: "Logi välja",
-      membersince: "Liige alates"
     },
     account: {
       title: "Konto seaded",
-      desc: "Uuenda oma konto andmeid ja eelistusi.",
+      desc: "Uuendage konto teavet ja eelistusi.",
       name: "Nimi",
       email: "E-post",
       username: "Kasutajanimi",
       cancel: "Tühista",
-      save: "Salvesta muudatused"
+      save: "Salvestka muudatused",
     },
     security: {
       title: "Privaatsus ja turvalisus",
-      desc: "Halda oma turvaseadeid ja privaatsuseelistusi.",
+      desc: "Hallake turvaseadeid ja privaatsuse eelistusi.",
       current: "Praegune parool",
       new: "Uus parool",
-      confirm: "Kinnita uus parool",
-      update: "Uuenda parool"
+      confirm: "Kinnitage uus parool",
+      update: "Uuendage parool",
     },
     logout: {
       title: "Logi välja",
-      desc: "Kas olete kindel, et soovite oma kontolt välja logida?",
-      success: "Olete edukalt välja logitud."
+      desc: "Kas olete kindel, et soovite kontolt välja logida?",
+      success: "Logisite välja edukalt.",
     },
     alerts: {
-      title: "Autohoiatusete tellimused",
-      desc: "Halda oma autootsingu teavitusi ja märguannete eelistusi.",
-      add: "Lisa uus teavitus",
-      none: "Sul ei ole ühtegi aktiivset autohoiatust.",
-      cta: "Loo oma esimene teavitus",
-      warning: "⚠️ Muudatused sinu tellimuses jõustuvad järgmises arveldusperioodis ja alles pärast edukat makset. Kui makse ebaõnnestub, jääb sinu praegune teavituste seadistus muutumatuks."
+      title: "Auto teavituste tellimused",
+      desc: "Hallake auto otsingute teavitusi ja teavituste eelistusi.",
+      add: "Lisage uus teavitus",
+      none: "Teil pole aktiivseid auto teavitusi.",
+      cta: "Looge esimene teavitus",
+      warning:
+        "⚠️ Teie tellimuse muudatused rakenduvad järgmisel arveldusperioodil ja ainult eduka makse järel. Kui makse ebaõnnestub, jääb teie praegune teavituste konfiguratsioon muutmata.",
     },
     payments: {
       title: "Makseviisid",
-      desc: "Halda oma makseviise tellimuse arveldamiseks.",
-      none: "Sul ei ole salvestatud ühtegi makseviisi.",
-      encrypted: "Teie makseandmed on krüpteeritud ja turvaliselt salvestatud."
-    }
+      desc: "Hallake tellimuse arveldamise makseviise.",
+      none: "Teil pole salvestatud makseviise.",
+      encrypted: "Teie makseandmed on krüpteeritud ja turvaliselt salvestatud.",
+    },
   },
   setupAlerts: {
-    title: "Seadista oma auto teavitused",
-    subtitle: "Seadista oma Telegrami bot, et saada teavitusi oma unistuste autost",
-    basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
-    button: "Käivita minu auto teavitusteenus",
-    cancel: "Tühista igal ajal",
+    title: "Auto teavituste seadistamine",
+    subtitle:
+      "Seadistage oma Telegrami bot, et saada teavitusi oma unistuste autost",
+    basicPlan: "Baasplaan",
+    baseTitle: "$79.99/kuu",
+    button: "Käivitage minu auto teavituste teenus",
+    cancel: "Tühistage igal ajal",
     toasts: {
       terms: {
-        title: "Tingimusi ei ole aktsepteeritud",
-        description: "Peate nõustuma teenusetingimustega, et jätkata."
+        title: "Tingimusi pole aktsepteeritud",
+        description: "Peate nõustuma kasutustingimustega jätkamiseks",
       },
       success: {
-        title: "Tellijimus loodud",
-        description: "Teie tellimus on edukalt loodud"
+        title: "Tellimus loodud",
+        description: "Teie tellimus loodi edukalt",
       },
       error: {
-        title: "Tõrge tellimuse loomisel"
+        title: "Viga tellimuse loomisel",
       },
       contactBot: {
-        title: "Contact Bot Required",
-        description: "You must start a chat with our Telegram bot and send a message to receive car alerts. Please follow the instructions below to contact the bot."
+        title: "Vajalik boti kontakt",
+        description:
+          "Peate alustama meie Telegrami botiga vestlust ja saatma talle sõnumi, et saada auto teavitusi. Palun järgige allolevaid juhiseid boti kontakteerumiseks.",
       },
-      contactbot: {
-        description: "Autoteadete saamiseks pead alustama vestlust meie Telegrami botiga ja saatma sõnumi. Palun järgi allolevaid juhiseid, et botiga ühendust võtta.",
-        title: "Vajalik on kontaktbot"
-      }
     },
-    basetitle: "79,99 $/kuu",
-    basicplan: "Põhipakett"
   },
   loginPrompt: {
-    title: "Sisselogimine vajalik",
-    description: "Jätkamiseks peate olema sisse logitud. Palun logige sisse või registreeruge.",
-    register: "Registreeru",
-    login: "Logi sisse"
+    title: "Vajalik sisselogimine",
+    description:
+      "Peate jätkamiseks sisse logima. Palun logige sisse või registreeruge.",
+    register: "Registreeruge",
+    login: "Logi sisse",
   },
   waitlistPrompt: {
-    title: "Liitu ootenimekirjaga",
-    description: "Hetkel on kõik kohad täis. Liitu ootenimekirjaga, et saada teavitus, kui vabaneb koht.",
-    button: "Liitu ootenimekirjaga"
+    title: "Liituge ootenimekirjaga",
+    description:
+      "Oleme hetkel täisvõimsusel. Liituge ootenimekirjaga, et saada teade, kui koht vabaneb.",
+    button: "Liituge ootenimekirjaga",
   },
   subscription: {
-    title: "Tellige andmed",
-    subTitle: "Edit your subscription details below",
-    error: "Mine tagasi juhtpaneelile",
-    notFound: "Subscription not found",
-    notFoundSub: "Go back to dashboard",
-    description: "Saad oma tellimuse igal ajal peatada. Kui peatad tellimuse, siis sinu auto teavitused peatuvad, kuni need uuesti aktiveerid.",
+    title: "Tellimuse üksikasjad",
+    subTitle: "Muutke oma tellimuse üksikasju allpool",
+    error: "Tagasi armatuurlauale",
+    notFound: "Tellimust ei leitud",
+    notFoundSub: "Tagasi armatuurlauale",
+    description:
+      "Saate tellimuse igal ajal peatada. Kui peatate tellimuse, peatuvad teie auto teavitused kuni taasalustamiseni.",
     form: {
       status: {
         label: "Olek",
-        placeholder: "Vali staatus",
+        placeholder: "Valige olek",
         active: "Aktiivne",
-        paused: "Peatatud"
-      }
+        paused: "Peatatud",
+      },
     },
     actions: {
       save: "Salvesta muudatused",
-      back: "Tagasi"
+      back: "Tagasi",
     },
     toasts: {
       success: {
-        title: "Tellijat uuendati",
-        description: "Teie tellimus brändile {{brand}} {{model}} on edukalt uuendatud"
+        title: "Tellimus uuendatud",
+        description: "Teie {{brand}} {{model}} tellimus uuendati edukalt",
       },
       priceError: {
-        title: "Cannot Update Subscription",
-        description: "You pause and update your subscription price at the same time. You either need to pause or update the price."
+        title: "Tellimust ei saa uuendada",
+        description:
+          "Te ei saa tellimust korraga peatada ja hinda uuendada. Peate kas peatama või hinda uuendama.",
       },
       error: {
-        title: "Tõrge tellimuse uuendamisel"
+        title: "Viga tellimuse uuendamisel",
       },
-      priceerror: {
-        description: "Sa peatad ja uuendad oma tellimuse hinda samaaegselt. Pead kas peatama või uuendama hinna.",
-        title: "Ei saa tellimust uuendada"
-      }
     },
-    notfound: "Telli­must ei leitud",
-    notfoundsub: "Tagasi juhtpaneelile",
-    subtitle: "Muuda oma tellimuse andmeid allpool"
   },
   about: {
     title: "Amiquusest",
-    description: "Me muudame revolutsiooniliselt seda, kuidas inimesed leiavad oma ideaalse kasutatud auto, tuues kõigile kättesaadavaks täiustatud jälgimistehnoloogia.",
+    description:
+      "Revolutsioonime täiusliku kasutatud auto otsingut, tuues täiustatud jälgimistehnoloogia kõigile",
     meta: {
-      title: "Meist | Amiquus - Autokuulutuste jälgimisteenus",
-      description: "Tutvu AMIQUUSega, meie missiooniga muuta kasutatud autode ostmine revolutsiooniliseks ning tiimiga, kes seisab meie nutika autokuulutuste jälgimisteenuse taga."
+      title: "Meist | Amiquus – Auto kuulutuste jälgimisteenus",
+      description:
+        "Saage teada Amiquusest, meie missioonist revolutsioneerida kasutatud autode ostmist ja meeskonnast meie nutika auto kuulutuste jälgimisteenuse taga.",
     },
     story: {
       heading: "Meie lugu",
-      paragraphs: {
-        0: "Amiquus sai alguse 2023. aastal, kui meie asutaja Alex veetis kuid autokuulutuste veebilehti värskendades, otsides kindlat haruldast mudelit hea hinnaga. Pärast mitme võimaluse maha magamist aeglaste teavituste tõttu sai ta aru, et peab olema parem viis.",
-        1: "Töötades koos väikese arendajate ja autohuviliste tiimiga, lõi Alex jälgimissüsteemi, mis suutis samaaegselt jälgida kuulutusi mitmel veebilehel ning saata koheseid teavitusi, kui ilmusid sobivad pakkumised.",
-        2: "Mis algas isikliku projektina, äratas kiiresti sõprade ja pere huvi ning 2025. aasta alguseks sündis AMIQUUS teenusena, mis on kõigile kättesaadav. Täna aitame autoostjatel üle kogu Eesti säästa aega ja leida paremaid pakkumisi meie nutika jälgimistehnoloogia abil."
-      }
+      paragraphs: [
+        "Amiquus algas 2023. aastal, kui meie asutaja Aleksej veetis kuid auto müügisaite uuendades, püüdes leida konkreetset haruldast mudelit hea hinnaga. Pärast mitme võimaluse kaotamist aeglasemate teavituste tõttu mõistis ta, et peab olema parem viis.",
+        "Koos väikese arendajate ja autoentusiastide meeskonnaga lõi Aleksej jälgimissüsteemi, mis suudab korraga mitmel saidil kuulutusi jälgida ja saata kohene teavitusi vaste ilmumisel.",
+        "See, mis algas isikliku projektina, köitis kiiresti sõprade ja pere tähelepanu ning 2025. aasta alguseks sündis Amiquus teenusena kõigile. Täna aitame autoostjaid kogu riigis säästa aega ja leida parimaid pakkumisi meie nutika jälgimistehnoloogiaga.",
+      ],
     },
     mission: {
       heading: "Meie missioon",
-      items: {
-        0: {
-          description: "Vabane vajadusest pidevalt mitmel veebilehel lehte värskendada, automatiseeri otsinguprotsess ja saa õigel ajal teavitusi.",
-          title: "Säästa aega"
+      items: [
+        {
+          title: "Aja säästmine",
+          description:
+            "Kõrvaldage vajadus mitme saidi pidevaks uuendamiseks, automatiseerides otsinguprotsessi ja saates õigeaegseid teavitusi.",
         },
-        1: {
-          description: "Ole esimene, kes saab teada suurepärasest pakkumisest – see annab sulle eelise konkurentsitihedal turul, kus ajastus on kõik.",
-          title: "Leia paremaid pakkumisi"
+        {
+          title: "Parimate pakkumiste leidmine",
+          description:
+            "Olge esimene, kes saab suurepärasest pakkumisest teada, andes teile eelise konkurentsitihedal turul, kus aeg on kõik.",
         },
-        2: {
-          description: "Tee teadlikke otsuseid, jälgides põhjalikult mitmeid usaldusväärseid autoportaalide platvorme.",
-          title: "Osta kindlalt"
-        }
-      }
+        {
+          title: "Ostmine kindlustundega",
+          description:
+            "Tehke teadlikke otsuseid täieliku jälgimisega mitmel usaldusväärsel auto müügiplatvormil.",
+        },
+      ],
     },
     team: {
-      heading: "Meie tiim",
-      members: {
-        0: {
-          bio: "Endine tarkvarainsener, kellel on kirg autode ja innovatiivsete lahenduste loomise vastu.",
-          name: "Alex Morgan",
-          role: "Asutaja ja tegevjuht"
+      heading: "Meie meeskond",
+      members: [
+        {
+          name: "Aleksej Morgan",
+          role: "Asutaja ja tegevjuht",
+          bio: "Endine tarkvarainsener kirgliku autohuviga ja uuenduslike lahenduste loojana.",
         },
-        1: {
-          bio: "Andmeteaduse ekspert, kes on spetsialiseerunud veebikraapimisele ja infootsingu süsteemidele.",
-          name: "Sarah Chen",
-          role: "Tehnoloogiajuht"
+        {
+          name: "Sara Chen",
+          role: "Tehniline juht",
+          bio: "Andmeteaduse ekspert, spetsialiseerunud veebi kraapimisele ja info hankimise süsteemidele.",
         },
-        2: {
-          bio: "Full-stack arendaja, kellel on kogemus suure jõudlusega teavitussüsteemide loomisel.",
-          name: "Marcus Lee",
-          role: "Pead arendaja"
+        {
+          name: "Markus Li",
+          role: "Juhtiv arendaja",
+          bio: "Täispinu insener kogemustega kõrge jõudlusega teavitussüsteemide ehitamisel.",
         },
-        3: {
-          bio: "Endine automüügispetsialist, kes on pühendunud klientide aitamisele nende ideaalse sõiduki leidmisel.",
+        {
           name: "Elena Rodriguez",
-          role: "Kliendi edu"
-        }
-      }
+          role: "Kliendi edu",
+          bio: "Endine auto müügispetsialist, pühendunud klientide abistamisele täiusliku sõiduki leidmisel.",
+        },
+      ],
     },
     join: {
-      heading: "Liitu meie meeskonnaga",
-      description: "Otsime alati andekaid inimesi, keda paelub tehnoloogia ning kes soovivad muuta auto ostmise kogemust. Vaata meie praeguseid vabu töökohti ja liitu AMIQUUS missiooniga.",
-      cta: "Vaata vabu töökohti"
+      heading: "Liituge meie meeskonnaga",
+      description:
+        "Otsime alati andekaid inimesi, kes on kirglikud tehnoloogia ja autoostu kogemuse revolutsioneerimise suhtes. Vaadake meie praeguseid avatud positsioone ja liituge meie missiooniga.",
+      cta: "Vaadake avatud positsioone",
     },
     questions: {
-      heading: "Kas teil on küsimusi?",
-      description: "Uuri lähemalt, kuidas meie teenus töötab, vaata hinnavalikuid või võta ühendust meie tugitiimiga.",
+      heading: "On teil küsimusi?",
+      description:
+        "Saage rohkem teada, kuidas meie teenus töötab, vaadake hinnavõimalusi või võtke ühendust meie tugimeeskonnaga.",
       links: {
-        faq: "Külasta KKK-d",
-        pricing: "Vaata hindu",
-        support: "Võta ühendust klienditoega"
-      }
-    }
+        faq: "Külastage KKK",
+        pricing: "Vaadake hindu",
+        support: "Võtke ühendust toega",
+      },
+    },
   },
   terms: {
     metaTitle: "Kasutustingimused | Amiquus",
-    metaDescription: "Lugege AMIQUUS-i kasutustingimusi, mis reguleerivad teie kasutust meie autokuulutuste jälgimis- ja teavitusteenuses.",
+    metaDescription:
+      "Lugege Amiquuse kasutustingimusi, mis reguleerivad meie autokuulutuste jälgimise ja teavitusteenuse kasutamist.",
     title: "Kasutustingimused",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Viimati uuendatud: 21. mai 2025",
     sections: {
-      1: {
-        id: "leping",
+      "1": {
+        id: "agreement",
         heading: "Nõustumine tingimustega",
-        paragraphs: {
-          0: "Käesolevad kasutustingimused moodustavad teie ja AMIQUUS-e vahel õiguslikult siduva kokkuleppe, mis reguleerib teie juurdepääsu meie veebisaidile ja teenuste kasutamist.",
-          1: "Teenustele juurdepääsul või nende kasutamisel nõustud nende Tingimustega. Kui sa ei nõustu mõne tingimuse osaga, ei tohi teenusele ligi pääseda."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Käesolevad kasutustingimused moodustavad õiguslikult siduva lepingu teie ja Amiquuse vahel seoses meie veebisaidi ja teenuste kasutamisega.",
+          "Meie teenusele juurdepääsuga või selle kasutamisega nõustute te nende tingimustega. Kui te ei nõustu tingimuste mis tahes osaga, ei tohi te teenust kasutada.",
+        ],
+        list: [],
       },
-      2: {
-        id: "muudatused",
-        heading: "Tingimuste muudatused",
-        paragraphs: {
-          0: "Jätame endale õiguse oma äranägemisel neid Tingimusi igal ajal muuta või asendada. Kui muudatus on oluline, teeme mõistlikke jõupingutusi, et anda vähemalt 30 päeva ette teada enne uute tingimuste jõustumist.",
-          1: "Jätkates AMIQUUS teenusele juurdepääsu või selle kasutamist pärast nende muudatuste jõustumist, nõustud uuendatud tingimustega. Kui sa ei nõustu uute tingimustega, palun lõpeta teenuse kasutamine."
-        },
-        list: [
-        ]
+      "2": {
+        id: "changes",
+        heading: "Tingimuste muutmine",
+        paragraphs: [
+          "Jätame endale õiguse neid tingimusi igal ajal oma äranägemisel muuta või asendada. Kui muudatus on oluline, teeme mõistlikke jõupingutusi, et teavitada teid vähemalt 30 päeva enne uute tingimuste jõustumist.",
+          "Teenuse kasutamise jätkamine pärast muudatuste jõustumist tähendab, et nõustute muudetud tingimustega. Kui te ei nõustu, lõpetage teenuse kasutamine.",
+        ],
+        list: [],
       },
-      3: {
-        id: "konto",
+      "3": {
+        id: "account",
         heading: "Konto tingimused",
-        paragraphs: {
-          0: "Meie teenuste kasutamiseks peate:"
-        },
-        list: {
-          0: "Peate olema vähemalt 18-aastane",
-          1: "Lõpeta registreerimisprotsess",
-          2: "Esitage täpset, täielikku ja ajakohast teavet",
-          3: "Ole vastutav oma konto ja parooli turvalisuse eest",
-          4: "Ole vastutav kõigi tegevuste eest, mis toimuvad sinu konto all",
-          5: "Teavita meid kohe, kui saad teada turvarikkumisest või oma konto volitamata kasutamisest."
-        }
+        paragraphs: ["Meie teenuse kasutamiseks peate:"],
+        list: [
+          "Oma vanuselt olema vähemalt 18 aastat",
+          "Lõpetama registreerimisprotsessi",
+          "Andma täpset, täielikku ja ajakohast teavet",
+          "Tagama oma konto ja parooli turvalisuse",
+          "Vastutama kõigi tegevuste eest, mis toimuvad teie konto alt",
+          "Teavitama meid viivitamatult turvarikkumistest või volitamata kasutusest",
+        ],
       },
-      4: {
-        id: "makse",
+      "4": {
+        id: "payment",
         heading: "Makse tingimused",
-        paragraphs: {
-          0: "Amiquus pakub tellimuspõhiseid teenuseid järgmiste tingimustega:"
-        },
-        list: {
-          0: "Kõik tasud on maksudeta, mis lisatakse vajadusel.",
-          1: "Tellijahinnad võivad muutuda 30-päevase etteteatamisega.",
-          2: "Tellijmused uuenevad automaatselt, kui neid ei tühistata enne järgmist arveldusperioodi.",
-          3: "Tagasimakseid käsitletakse juhtumipõhiselt vastavalt meie tagasimaksepoliitikale.",
-          4: "Kasutame Stripe’i turvaliseks maksete töötlemiseks ning kõik makseandmed talletab Stripe."
-        }
+        paragraphs: [
+          "Amiquus pakub tellimuspõhiseid teenuseid järgmiste tingimustega:",
+        ],
+        list: [
+          "Kõik tasud ei sisalda makse, mis lisatakse vajadusel",
+          "Tellimuste hinnad võivad muutuda 30-päevase etteteatamisega",
+          "Tellimused uuenevad automaatselt, välja arvatud juhul, kui need tühistatakse enne järgmise arveldustsükli algust",
+          "Tagasimakseid käsitletakse juhtumipõhiselt vastavalt meie tagasimaksepoliitikale",
+          "Me kasutame Stripe’i turvaliseks maksete töötlemiseks ning kõik makseandmed salvestatakse Stripe’i poolt",
+        ],
       },
-      5: {
-        id: "mahutavus",
+      "5": {
+        id: "capacity",
         heading: "Mahupiirangud",
-        paragraphs: {
-          0: "Teenuse kvaliteedi ja töökindluse tagamiseks piirab AMIQUUS aktiivsete tellimuste arvu 30-le. Kui see piir on täis:"
-        },
-        list: {
-          0: "Uued kasutajad võivad liituda meie ootenimekirjaga",
-          1: "Ootenimekirja koht määratakse põhimõttel „kes ees, see mees“.",
-          2: "Kui vabu kohti tekib, teavitatakse ootenimekirjas olevaid kasutajaid järjekorras.",
-          3: "Jätame endale õiguse muuta mahupiiranguid igal ajal."
-        }
-      },
-      6: {
-        id: "andmete kogumine",
-        heading: "Veebikraapimise piirangud",
-        paragraphs: {
-          0: "Meie teenus pääseb ligi andmetele ja töötleb neid mitmelt auto kuulutuste veebilehelt. Kasutades meie teenust, kinnitate, et:"
-        },
-        list: {
-          0: "Amiquus austab meie jälgitavate veebisaitide kasutustingimusi.",
-          1: "Rakendame päringupiiranguid ja järgime viisakat veebisirvimise tava",
-          2: "Teatud veebisaitide kättesaadavus võib muutuda vastavalt nende tingimustele ja tehnilistele meetmetele.",
-          3: "Me ei anna mingeid garantiisid kogutud andmete täielikkuse ega ajakohasuse osas."
-        }
-      },
-      7: {
-        id: "intellektuaalne",
-        heading: "Intellektuaalne omand",
-        paragraphs: {
-          0: "AMIQUUS teenus, sealhulgas selle originaalsisu, funktsioonid ja toimivus, kuuluvad ja jäävad kuuluma eranditult AMIQUUS-ile. Meie teenust kaitsevad autoriõigused, kaubamärgid ning Ameerika Ühendriikide ja teiste riikide seadused.",
-          1: "Meie kaubamärke ja kujundust ei tohi kasutada ühegi toote või teenuse juures ilma AMIQUUS-e eelneva kirjaliku loata."
-        },
+        paragraphs: [
+          "Teenuse kvaliteedi ja töökindluse tagamiseks piirab Amiquus aktiivsete tellimuste arvu 30-ni. Kui see limiit on täis:",
+        ],
         list: [
-        ]
+          "Saavad uued kasutajad liituda ootenimekirjaga",
+          "Koht ootenimekirjas määratakse saabumisjärjekorra alusel",
+          "Kui vabaneb koht, teavitatakse kasutajaid ootenimekirja järjekorras",
+          "Jätame endale õiguse mahupiiranguid igal ajal muuta",
+        ],
       },
-      8: {
-        id: "lõpetamine",
-        heading: "Lõpetamine",
-        paragraphs: {
-          0: "Võime teie konto viivitamatult lõpetada või peatada ilma eelneva teavituse või vastutuseta, mis tahes põhjusel, sealhulgas, kuid mitte ainult juhul, kui rikute Tingimusi.",
-          1: "Lepingu lõpetamisel lõpeb teie õigus teenust kasutada koheselt. Kui soovite oma konto lõpetada, võite lihtsalt teenuse kasutamise lõpetada või võtta meiega ühendust konto kustutamise taotlemiseks."
-        },
+      "6": {
+        id: "scraping",
+        heading: "Veebiskreipimise piirangud",
+        paragraphs: [
+          "Meie teenus kasutab ja töötleb andmeid mitmetelt autokuulutuste veebisaitidelt. Teenust kasutades nõustute, et:",
+        ],
         list: [
-        ]
+          "Amiquus järgib jälgitavate veebisaitide kasutustingimusi",
+          "Rakendame päringupiiranguid ja eetilisi skreipimispraktikaid",
+          "Mõne veebisaidi saadavus võib muutuda nende enda tingimuste või tehniliste meetmete tõttu",
+          "Me ei garanteeri kogutud andmete täielikkust ega ajakohasust",
+        ],
       },
-      9: {
-        id: "piirangud",
+      "7": {
+        id: "intellectual",
+        heading: "Intellektuaalomand",
+        paragraphs: [
+          "Amiquuse teenus, sealhulgas originaalsisu, funktsioonid ja toimingud, on ja jäävad Amiquuse ainuomandiks. Teenust kaitsevad autoriõiguse, kaubamärgi ja muude riiklike ning rahvusvaheliste seaduste sätted.",
+          "Meie kaubamärke ja visuaalset identiteeti ei tohi kasutada ilma eelneva kirjaliku loata.",
+        ],
+        list: [],
+      },
+      "8": {
+        id: "termination",
+        heading: "Konto lõpetamine",
+        paragraphs: [
+          "Võime teie konto viivitamatult lõpetada või peatada ilma eelneva hoiatuseta mis tahes põhjusel, sealhulgas tingimuste rikkumise tõttu.",
+          "Pärast lõpetamist lõpevad teie õigused teenust kasutada koheselt. Kui soovite oma konto sulgeda, lõpetage teenuse kasutamine või esitage meile kustutamistaotlus.",
+        ],
+        list: [],
+      },
+      "9": {
+        id: "limitations",
         heading: "Vastutuse piirang",
-        paragraphs: {
-          0: "Mitte mingil juhul ei vastuta AMIQUUS ega tema juhid, töötajad, partnerid, esindajad, tarnijad ega sidusettevõtted ühegi kaudse, juhusliku, erilise, tuleneva või karistusliku kahju eest, sealhulgas, kuid mitte ainult, kasumi, andmete, kasutusvõimaluse, hea nime või muu mittevaralise kahju kaotuse eest, mis tuleneb:"
-        },
-        list: {
-          0: "Teie juurdepääs teenusele või selle kasutamine või võimetus teenusele ligi pääseda või seda kasutada",
-          1: "Kolmanda isiku käitumine või sisu teenuses",
-          2: "Kogu teenusest saadud sisu",
-          3: "Volitamata juurdepääs, kasutamine või teie edastuste või sisu muutmine"
-        }
+        paragraphs: [
+          "Amiquus ega selle direktorid, töötajad, partnerid, tarnijad ega sidusettevõtted ei vastuta mingil juhul kaudsete, juhuslike, erakorraliste või karistuslike kahjude eest, sealhulgas, kuid mitte ainult, kasumi, andmete, maine või muude mittemateriaalsete kahjude kaotuse eest, mis tulenevad:",
+        ],
+        list: [
+          "Teie juurdepääsust teenusele või teenuse kasutamise võimatusest",
+          "Kolmandate isikute käitumisest või sisust teenuses",
+          "Teenuse kaudu saadud sisust",
+          "Volitamata juurdepääsust või teie andmete muutmisest",
+        ],
       },
-      10: {
-        id: "vastutusest loobumine",
+      "10": {
+        id: "disclaimer",
         heading: "Vastutusest loobumine",
-        paragraphs: {
-          0: "Teenuse kasutamine toimub täielikult teie enda vastutusel. Teenust pakutakse põhimõttel „NII NAGU ON“ ja „NII NAGU SAADAVAL“. Teenust osutatakse ilma igasuguste garantiideta, olgu need otsesed või kaudsed.",
-          1: "Amiquus ei garanteeri, et teenus on katkestusteta, õigeaegne, turvaline või veavaba, ega ka seda, et teenuse kasutamisel saadud tulemused on täpsed või usaldusväärsed."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Te kasutate teenust omal vastutusel. Teenus on saadaval põhimõttel „NAGU ON” ja „NAGU SAADAVAL”, ilma otseste või kaudsete garantiideta.",
+          "Amiquus ei garanteeri, et teenus on katkestusteta, õigeaegne, turvaline või vigadeta.",
+        ],
+        list: [],
       },
-      11: {
-        id: "küpsised",
+      "11": {
+        id: "cookies",
         heading: "Küpsiste poliitika",
-        paragraphs: {
-          0: "Meie küpsiste poliitika selgitab, mis on küpsised, kuidas me küpsiseid kasutame, kuidas meie koostööpartnerid võivad küpsiseid meie teenuses kasutada, teie valikud seoses küpsistega ning lisateavet küpsiste kohta. Palun tutvuge meie privaatsuspoliitika küpsiste jaotisega."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Meie küpsiste poliitika selgitab, mis on küpsised, kuidas me neid kasutame, kuidas partnerid neid võivad kasutada ning millised on teie valikud. Lisateavet leiate privaatsuspoliitikast.",
+        ],
+        list: [],
       },
-      12: {
-        id: "kohaldatav õigus",
+      "12": {
+        id: "governing-law",
         heading: "Kohaldatav õigus",
-        paragraphs: {
-          0: "Neid tingimusi reguleeritakse ja tõlgendatakse vastavalt Ameerika Ühendriikide seadustele, sõltumata kollisiooninormidest.",
-          1: "Meiepoolne suutmatus jõustada mõnda nende Tingimuste õigust või sätet ei tähenda loobumist sellest õigusest. Kui kohus tunnistab mõne nende Tingimuste sätte kehtetuks või jõustamatuks, jäävad ülejäänud sätted kehtima."
-        },
-        list: [
-        ]
+        paragraphs: [
+          "Neid tingimusi reguleeritakse ja tõlgendatakse Ameerika Ühendriikide seaduste kohaselt, arvestamata seaduste kollisiooni põhimõtteid.",
+          "Meie õiguste mittetäitmine ei tähenda nendest loobumist.",
+        ],
+        list: [],
       },
-      13: {
-        id: "kontakt",
-        heading: "Võta meiega ühendust",
-        paragraphs: {
-          0: "Kui teil on nende Tingimuste kohta küsimusi, võtke meiega ühendust:"
-        },
-        list: {
-          0: "E-posti teel: legal@amiquus.com",
-          1: "Külastades meie veebilehe kontaktlehte"
-        }
-      }
+      "13": {
+        id: "contact",
+        heading: "Võtke meiega ühendust",
+        paragraphs: [
+          "Kui teil on nende tingimuste kohta küsimusi, võtke meiega ühendust:",
+        ],
+        list: ["E-post: legal@amiquus.com", "Veebisaidi kontaktilehe kaudu"],
+      },
     },
-    lastupdated: "Viimati uuendatud: 21. mai 2025"
   },
   privacy: {
     metaTitle: "Privaatsuspoliitika | Amiquus",
-    metaDescription: "Tutvu, kuidas AMIQUUS käsitleb sinu isikuandmeid, privaatsusõigusi ja andmete kogumise tavasid.",
+    metaDescription:
+      "Tutvuge sellega, kuidas Amiquus käsitleb teie isikuandmeid, teie privaatsusõigusi ja andmete kogumise põhimõtteid.",
     title: "Privaatsuspoliitika",
-    lastUpdated: "Last updated: May 21, 2025",
+    lastUpdated: "Viimati uuendatud: 21. mai 2025",
     sections: {
-      0: {
-        id: "sissejuhatus",
+      "0": {
+        id: "introduction",
         heading: "Sissejuhatus",
-        paragraphs: {
-          0: "Tere tulemast Amiquusesse. Me austame teie privaatsust ja oleme pühendunud teie isikuandmete kaitsmisele. See privaatsuspoliitika annab teile teavet selle kohta, kuidas me hoolitseme teie isikuandmete eest, kui külastate meie veebisaiti, ning tutvustab teie privaatsusõigusi ja selgitab, kuidas seadus teid kaitseb."
-        }
+        paragraphs: [
+          "Tere tulemast Amiquusesse. Me austame teie privaatsust ning oleme pühendunud teie isikuandmete kaitsmisele. See privaatsuspoliitika selgitab, kuidas me töötleme teie isikuandmeid, kui külastate meie veebisaiti, ja millised on teie õigused.",
+        ],
       },
-      1: {
-        id: "andmed-mida-kogume",
-        heading: "Teave, mida me kogume",
-        paragraphs: {
-          0: "Kogume mitut erinevat tüüpi teavet erinevatel eesmärkidel, et pakkuda ja täiustada meie teenust teile."
-        },
-        list: {
-          0: "Isikuandmed: e-posti aadress, eesnimi, perekonnanimi ja profiilipilt (kui see on esitatud kolmanda osapoole autentimise kaudu).",
-          1: "Konto andmed: Sinu sisselogimisandmed ja konto eelistused.",
-          2: "Kasutusandmed: Teave selle kohta, kuidas kasutate meie veebisaiti ja teenuseid.",
-          3: "Autootsingu eelistused: Sõiduki kriteeriumid, mille oled jälgimiseks seadnud (mark, mudel, hinnavahemik jm).",
-          4: "Telegrami teave: Kui valid teavituste saamise Telegrami kaudu, salvestame sinu Telegrami vestluse ID ja boti tokeni.",
-          5: "Makseinfo: Kui sooritate ostu, kogub meie maksetöötleja teie tehingu töötlemiseks vajalikud makseandmed. AMIQUUS ei salvesta teie täielikke krediitkaardi andmeid."
-        }
+      "1": {
+        id: "data-we-collect",
+        heading: "Andmed, mida kogume",
+        paragraphs: [
+          "Kogume mitut tüüpi teavet, et pakkuda ja täiustada meie teenust:",
+        ],
+        list: [
+          "Isikuandmed: e-posti aadress, eesnimi, perekonnanimi ja profiilipilt (kui kolmanda osapoole kaudu edastatud).",
+          "Kontoandmed: sisselogimise andmed ja kasutaja eelistused.",
+          "Kasutusandmed: info selle kohta, kuidas kasutate meie saiti ja teenust.",
+          "Autode otsingu-eelistused: teie seatud kriteeriumid (mark, mudel, hinnavahemik jms).",
+          "Telegrami teave: kui valite märguanded Telegrami kaudu, salvestame teie vestluse ID ja bot'i tokeni.",
+          "Makseandmed: kui sooritate makse, kogub meie makseteenuse pakkuja vajalikku infot, mitte Amiquus.",
+        ],
       },
-      2: {
-        id: "kuidas-me-kasutame-andmeid",
+      "2": {
+        id: "how-we-use-data",
         heading: "Kuidas me teie andmeid kasutame",
-        paragraphs: {
-          0: "Kasutame teie isikuandmeid järgmistel eesmärkidel:"
-        },
-        list: {
-          0: "Teenuse pakkumiseks ja hooldamiseks",
-          1: "Et teavitada sind meie teenuse muudatustest",
-          2: "Et võimaldada sul osaleda meie teenuse interaktiivsetes funktsioonides",
-          3: "Pakkuda kliendituge",
-          4: "Analüüside või väärtusliku teabe kogumiseks, et saaksime oma teenust paremaks muuta",
-          5: "Meie teenuse kasutamise jälgimiseks",
-          6: "Tehniliste probleemide tuvastamiseks, ennetamiseks ja lahendamiseks",
-          7: "Makse töötlemiseks ja petturlike tehingute ennetamiseks",
-          8: "Autokuulutuste saatmine, mis vastavad sinu eelistustele, valitud teavitamisviisi kaudu"
-        }
+        paragraphs: ["Kasutame isikuandmeid järgmisteks eesmärkideks:"],
+        list: [
+          "Teenuse pakkumiseks ja hooldamiseks",
+          "Teavitamiseks teenuse muudatustest",
+          "Interaktiivsete funktsioonide võimaldamiseks",
+          "Kasutajatoe pakkumiseks",
+          "Analüütika kogumiseks ja teenuse täiustamiseks",
+          "Teenuse kasutuse jälgimiseks",
+          "Tehniliste probleemide tuvastamiseks ja lahendamiseks",
+          "Maksude töötlemiseks ja pettuste ennetamiseks",
+          "Autokuulutuste saatmiseks vastavalt teie eelistustele",
+        ],
       },
-      3: {
-        id: "andmesalvestus",
-        heading: "Andmete salvestamine ja turvalisus",
-        paragraphs: {
-          0: "Rakendame asjakohaseid turvameetmeid, et kaitsta teie isikuandmeid volitamata juurdepääsu, muutmise, avalikustamise või hävitamise eest. Kõik andmed salvestatakse turvalistes serverites, kasutades krüpteerimist nii andmete edastamisel kui ka puhkeolekus.",
-          1: "Säilitame teie isikuandmeid ainult nii kaua, kui see on vajalik käesolevas privaatsuspoliitikas sätestatud eesmärkidel, sealhulgas mis tahes õiguslike, regulatiivsete, maksualaste, raamatupidamislike või aruandluskohustuste täitmiseks."
-        }
+      "3": {
+        id: "data-storage",
+        heading: "Andmete säilitamine ja turvalisus",
+        paragraphs: [
+          "Rakendame turvameetmeid, et kaitsta teie isikuandmeid volitamata juurdepääsu, muutmise või hävimise eest. Kõik andmed salvestatakse turvalistes serverites, kasutades krüpteerimist.",
+          "Säilitame teie isikuandmeid vaid seni, kuni see on vajalik privaatsuspoliitikas kirjeldatud eesmärkide täitmiseks.",
+        ],
       },
-      4: {
-        id: "andmekaitse üldmäärus",
+      "4": {
+        id: "gdpr",
         heading: "Teie GDPR õigused",
-        paragraphs: {
-          0: "Kui oled Euroopa Majanduspiirkonna (EMP) elanik, on sul teatud andmekaitseõigused. AMIQUUS püüab võtta mõistlikke meetmeid, et võimaldada sul oma isikuandmeid parandada, muuta, kustutada või piirata nende kasutamist.",
-          1: "Teil on järgmised andmekaitseõigused:"
-        },
-        list: {
-          0: "Õigus pääseda ligi, uuendada või kustutada meie valduses olevaid andmeid teie kohta",
-          1: "Õigust andmete parandamisele",
-          2: "Õigus esitada vastuväiteid",
-          3: "Õigus piirangule",
-          4: "Õigus andmete ülekantavusele",
-          5: "Õigus nõusoleku tagasivõtmiseks"
-        }
+        paragraphs: [
+          "Kui elate Euroopa Majanduspiirkonnas (EMP), on teil järgmised andmekaitseõigused:",
+          "Teil on õigus:",
+        ],
+        list: [
+          "Ligipääsule oma isikuandmetele",
+          "Nende parandamisele",
+          "Töötlemise piiramisele",
+          "Töötlemisele vastuväidete esitamisele",
+          "Andmete ülekandmisele",
+          "Nõusoleku tagasivõtmisele",
+        ],
       },
-      5: {
-        id: "küpsised",
+      "5": {
+        id: "cookies",
         heading: "Küpsiste poliitika",
-        paragraphs: {
-          0: "Küpsised on väikesed andmeosad, mis salvestatakse teie seadmesse. Kasutame küpsiseid selleks, et:"
-        },
-        list: {
-          0: "Jäta mind sisse logituks",
-          1: "Saage aru, kuidas te meie veebisaiti kasutate",
-          2: "Jäta oma eelistused meelde",
-          3: "Kohanda oma kogemust"
-        }
+        paragraphs: [
+          "Küpsised on väikesed andmefailid, mis salvestatakse teie seadmesse. Kasutame küpsiseid, et:",
+        ],
+        list: [
+          "Hoida teid sisse logituna",
+          "Mõista, kuidas te meie veebilehte kasutate",
+          "Mäletada teie eelistusi",
+          "Pakkuda isikupärastatud kasutuskogemust",
+        ],
       },
-      6: {
-        id: "kolmas osapool",
-        heading: "Kolmandate osapoolte teenused",
-        paragraphs: {
-          0: "Võime kaasata kolmandaid ettevõtteid ja üksikisikuid, et hõlbustada meie teenuse osutamist, pakkuda teenust meie nimel, täita teenusega seotud ülesandeid või aidata meil analüüsida, kuidas meie teenust kasutatakse.",
-          1: "Need kolmandad osapooled hõlmavad:"
-        },
-        list: {
-          0: "Makseprotsessorid (Stripe)",
-          1: "Analüütikapakkujad",
-          2: "Klienditoe teenused",
-          3: "Majutuse ja pilveinfrastruktuuri teenusepakkujad"
-        },
-        paragraphs2: {
-          0: "Kolmandatel osapooltel on juurdepääs teie isikuandmetele ainult nende ülesannete täitmiseks meie nimel ning nad on kohustatud neid mitte avaldama ega kasutama muul eesmärgil."
-        }
+      "6": {
+        id: "third-party",
+        heading: "Kolmandad osapooled",
+        paragraphs: [
+          "Võime kaasata kolmandaid osapooli teenuse osutamiseks või analüüsimiseks.",
+          "Need võivad hõlmata:",
+        ],
+        list: [
+          "Makseprotsessoreid (Stripe)",
+          "Analüütikateenuseid",
+          "Kasutajatoe pakkujaid",
+          "Hostinguteenuseid ja pilveinfrastruktuuri",
+        ],
+        paragraphs2: [
+          "Kolmandatel osapooltel on juurdepääs isikuandmetele ainult ulatuses, mis on vajalik ülesannete täitmiseks, ja neil on keelatud andmeid muuks otstarbeks kasutada.",
+        ],
       },
-      7: {
-        id: "muudatused",
-        heading: "Muudatused selles privaatsuspoliitikas",
-        paragraphs: {
-          0: "Võime aeg-ajalt oma privaatsuspoliitikat uuendada. Kõigist muudatustest anname teada, postitades uue privaatsuspoliitika sellele lehele ja uuendades kuupäeva „Viimati uuendatud“.",
-          1: "Soovitame teil seda privaatsuspoliitikat aeg-ajalt üle vaadata võimalike muudatuste osas. Selle privaatsuspoliitika muudatused jõustuvad, kui need on sellel lehel avaldatud."
-        }
+      "7": {
+        id: "changes",
+        heading: "Privaatsuspoliitika muutmine",
+        paragraphs: [
+          "Võime oma privaatsuspoliitikat aeg-ajalt uuendada. Teavitame teid muudatustest, avaldades uue poliitika sellel lehel.",
+          "Soovitame aeg-ajalt üle vaadata privaatsuspoliitika muudatused.",
+        ],
       },
-      8: {
-        id: "kontakt",
-        heading: "Võta meiega ühendust",
-        paragraphs: {
-          0: "Kui teil on küsimusi selle privaatsuspoliitika kohta, võtke meiega ühendust:"
-        },
-        list: {
-          0: "E-posti teel: privacy@amiquus.com",
-          1: "Külastades meie veebilehe kontaktlehte"
-        }
-      }
+      "8": {
+        id: "contact",
+        heading: "Võtke meiega ühendust",
+        paragraphs: [
+          "Kui teil on küsimusi privaatsuspoliitika kohta, võtke meiega ühendust:",
+        ],
+        list: [
+          "E-post: privacy@amiquus.com",
+          "Meie veebisaidi kontaktilehe kaudu",
+        ],
+      },
     },
-    lastupdated: "Viimati uuendatud: 21. mai 2025"
   },
   faqs: {
-    metaTitle: "Korduma kippuvad küsimused | Amiquus",
-    metaDescription: "Leia vastused kõige levinumatele küsimustele AMIQUUS-i autokuulutuste jälgimisteenuse, tellimuste, teavituste seadistamise ja muu kohta.",
-    title: "Korduma kippuvad küsimused",
-    subtitle: "Leia kiireid vastuseid levinud küsimustele meie autokuulutuste jälgimisteenuse kohta",
+    metaTitle: "KKK | Amiquus",
+    metaDescription:
+      "Leia vastused sagedamini küsitud küsimustele Amiquuse autokuulutuste jälgimisteenuse kohta.",
+    title: "Korduma Kippuvad Küsimused",
+    subtitle: "Kiired vastused meie autokuulutuste jälgimise teenuse kohta",
     general: {
       heading: "Üldised küsimused",
       whatIs: {
-        question: "What is Amiquus?",
-        answer: "Amiquus is a service that monitors multiple car listing websites for vehicles that match your specific criteria. When a matching listing appears, you receive an instant notification via Telegram, allowing you to be among the first to contact sellers and secure great deals."
+        question: "Mis on Amiquus?",
+        answer:
+          "Amiquus on teenus, mis jälgib mitut autokuulutuste veebisaiti ja saadab teile koheseid teavitusi Telegrami kaudu, kui leitakse teie kriteeriumidele vastav kuulutus.",
       },
       howItWorks: {
-        question: "How does it work?",
+        question: "Kuidas see töötab?",
         answer: [
-          "You set up your search criteria (make, model, price range, etc.)",
-          "You select which websites to monitor",
-          "You connect your Telegram account for notifications",
-          "Our system continuously monitors your selected websites for new listings",
-          "When a matching car appears, you receive an instant Telegram notification with all details and a direct link"
-        ]
+          "Määrate oma otsingukriteeriumid (mark, mudel, hind jne)",
+          "Valite veebisaidid, mida jälgitakse",
+          "Ühendate oma Telegrami konto",
+          "Meie süsteem jälgib platvorme pidevalt",
+          "Kui ilmub sobiv kuulutus, saadetakse teile teavitus",
+        ],
       },
       whichWebsites: {
-        question: "Which car listing websites do you monitor?",
-        answerIntro: "We currently monitor the following major car listing platforms:",
+        question: "Milliseid veebisaite te jälgite?",
+        answerIntro: "Praegu jälgime järgmisi suuremaid platvorme:",
         list: [
-
           "AutoTrader",
-
           "Cars.com",
-
           "CarGurus",
-
           "TrueCar",
-
-          "Facebook Marketplace (via URL)",
-
+          "Facebook Marketplace (URL-i alusel)",
           "Craigslist",
-
-          "eBay Motors"
-
+          "eBay Motors",
         ],
-        outro: "We're continuously adding more platforms to provide the most comprehensive coverage possible."
+        outro: "Lisame pidevalt uusi platvorme, et tagada ulatuslik katvus.",
       },
-      howitworks: {
-        answer: {
-          0: "Seadista oma otsingukriteeriumid (mark, mudel, hinnavahemik jne.)",
-          1: "Sina valid, milliseid veebisaite jälgida",
-          2: "Ühendad oma Telegrami konto teadete saamiseks",
-          3: "Meie süsteem jälgib pidevalt sinu valitud veebilehti uute kuulutuste jaoks",
-          4: "Kui ilmub sobiv auto, saad kohe Telegrami teavituse kõigi detailide ja otselingiga."
-        },
-        question: "Kuidas see töötab?"
-      },
-      whatis: {
-        answer: "AMIQUUS on teenus, mis jälgib mitut auto kuulutuste veebilehte, et leida sõidukeid, mis vastavad sinu konkreetsetele kriteeriumitele. Kui ilmub sobiv kuulutus, saad kohe teavituse Telegrami kaudu, võimaldades sul olla üks esimestest, kes müüjatega ühendust võtab ja häid diile kindlustab.",
-        question: "Mis on Amiquus?"
-      },
-      whichwebsites: {
-        answerintro: "Praegu jälgime järgmisi peamisi auto kuulutuste platvorme:",
-        list: {
-          0: "AutoTrader",
-          1: "AMIQUUS",
-          2: "AMIQUUS",
-          3: "TrueCar",
-          4: "Facebook Marketplace (veebiaadressi kaudu)",
-          5: "Craigslist",
-          6: "eBay Motors"
-        },
-        outro: "Lisame pidevalt uusi platvorme, et tagada võimalikult lai ja põhjalik katvus.",
-        question: "Milliseid auto müügikuulutuste veebilehti te jälgite?"
-      }
     },
     subscription: {
-      heading: "Tellige küsimused",
+      heading: "Tellimused",
       cost: {
-        question: "Kui palju maksab tellimus?",
-        answer: {
-          0: "Meie hinnad algavad 79,99 $ kuus ühe veebilehe monitoorimise eest, kus uuendused toimuvad iga 6 tunni järel. Iga lisaveebileht maksab 4,99 $ kuus. Samuti saad tõsta uuenduste sagedust, et saada teavitusi kiiremini.",
-          1: "Konkreetsete hindade kohta leiad teavet meie hinnakirja jaotisest avalehel."
-        }
+        question: "Kui palju tellimus maksab?",
+        answer: [
+          "Meie hinnad algavad $79.99 kuus ühe jälgitava veebisaidi eest, uuendustega iga 6 tunni tagant. Lisaveebisaidid maksavad $4.99 kuus.",
+          "Täpset hinnakirja leiate avalehelt.",
+        ],
       },
       cancel: {
-        question: "Kuidas ma saan oma tellimuse tühistada?",
-        stepsIntro: "You can cancel your subscription at any time from your account profile page:",
-        steps: {
-          0: "Logi sisse oma kontole",
-          1: "Liigu lehele „Profiil“",
-          2: "Valige vahekaart „Tellijad“",
-          3: "Klõpsa tellimuse kõrval nupule \"Tühista tellimus\", mida soovid lõpetada."
-        },
-        note: "Sinu tellimus jääb aktiivseks kuni sinu praeguse arveldusperioodi lõpuni.",
-        stepsintro: "Saad oma tellimuse igal ajal tühistada oma konto profiililehel."
+        question: "Kuidas ma saan tellimuse tühistada?",
+        stepsIntro: "Tellimuse tühistamiseks toimige järgmiselt:",
+        steps: [
+          "Logige oma kontole",
+          "Avage „Profile“ leht",
+          "Valige vahekaart „Subscriptions“",
+          "Klõpsake „Cancel Subscription“",
+        ],
+        note: "Tellimus jääb aktiivseks kuni jooksva arveldusperioodi lõpuni.",
       },
       multiple: {
-        question: "Kas ma saan tellida mitu erinevate automudelite tellimust?",
-        answer: "Jah, ühe konto all saad luua mitu tellimust. Iga tellimus saab jälgida erinevaid automudeleid, -brände või hinnaklasse. See on eriti kasulik, kui otsid mitut autot või aitad sõpru ja peret auto leidmisel."
+        question: "Kas ma saan omada mitut tellimust?",
+        answer:
+          "Jah. Võite luua mitu tellimust erinevate autode või otsingukriteeriumide jaoks.",
       },
       limit: {
-        question: "Miks on tellijate arvule piirang?",
-        intro: "Piirame oma teenuse 30 aktiivse tellijaga, et tagada:",
-        list: {
-          0: "Kõrgeim teenuse kvaliteet ja andmete täpsus",
-          1: "Personaalne tugi igale tellijale",
-          2: "Kiirem teavituste kohaletoimetamine tipptundidel",
-          3: "Eetiline andmete kogumine, mis ei koorma sihtveebisaite üle"
-        },
-        outro: "Kui oleme täituvuse saavutanud, saate liituda meie ootenimekirjaga, et saada teavitus, kui koht vabaneb."
-      }
+        question: "Miks on tellimuste arv piiratud?",
+        intro: "Piirame teenust 30 aktiivse kasutajaga, et:",
+        list: [
+          "Tagada andmete maksimaalne täpsus",
+          "Pakkuda personaalset tuge",
+          "Saata teavitusi kiiremini",
+          "Teha eetilist ja stabiilset skreipimist",
+        ],
+        outro: "Kui limiit on täis, saate liituda ootenimekirjaga.",
+      },
     },
     technical: {
       heading: "Tehnilised küsimused",
       telegram: {
-        question: "Kuidas seadistada Telegrami teavitusi?",
-        stepsIntro: "To set up Telegram notifications:",
-        steps: {
-          0: "Loo Telegrami bot BotFatheri abil (juhised antakse seadistamise käigus)",
-          1: "Kopeeri oma boti token BotFatherist",
-          2: "Alusta vestlust oma botiga",
-          3: "Hangi oma vestluse ID (juhised antakse seadistamise käigus)",
-          4: "Sisesta oma boti token ja vestluse ID AMIQUUS-i tellimuse seadetes",
-          5: "Testi oma teavituste seadistust nupuga `Saada testteade`"
-        },
-        note: "Üksikasjalikud samm-sammulised juhised koos ekraanipiltidega on saadaval tellimuse seadistamise protsessi käigus.",
-        stepsintro: "Telegrami teavituste seadistamiseks:"
+        question: "Kuidas seadistan Telegrami teavitused?",
+        stepsIntro: "Toimige järgmiselt:",
+        steps: [
+          "Looge Telegrami bot BotFatheri kaudu",
+          "Kopeerige bot'i token",
+          "Alustage vestlust oma botiga",
+          "Leidke oma chat ID",
+          "Sisestage token ja chat ID Amiquuse seadetes",
+          "Testige ühendust nuppu „Send Test Message“ abil",
+        ],
+        note: "Üksikasjalik juhend on saadaval teie juhtpaneelis.",
       },
       frequency: {
-        question: "Kui tihti ma saan teavitusi?",
+        question: "Kui sageli ma teavitusi saan?",
         intro: "Teavituste sagedus sõltub:",
-        list: {
-          0: "Teie valitud uuendussageduse pakett (alates iga 6 tunni tagant kuni iga 30 minuti tagant)",
-          1: "Mitu uut kuulutust vastab sinu kriteeriumidele",
-          2: "Kui aktiivne on turg sinu valitud margi/mudeli jaoks"
-        },
-        outro: "Teavitusi saad ainult siis, kui leitakse uusi kuulutusi, mis vastavad sinu kriteeriumidele."
+        list: [
+          "Valitud uuendussagedusest",
+          "Teie otsingukriteeriumide sobivusest",
+          "Turutegevuse aktiivsusest",
+        ],
+        outro: "Teavitusi saadetakse ainult uute sobivate kuulutuste korral.",
       },
       privacy: {
-        question: "Kuidas minu isikuandmeid kaitstakse?",
-        intro: "Võtame andmete privaatsust tõsiselt ja rakendame järgmisi meetmeid:",
-        list: {
-          0: "Krüpteeritud andmed edastamisel ja salvestamisel",
-          1: "Turvalised maksed Stripe’i kaudu",
-          2: "Andmete jagamist kolmandate osapooltega ei toimu",
-          3: "Saate oma andmeid igal ajal küsida või kustutada"
-        },
-        outro: "Loe meie täielikku privaatsuspoliitikat lisateabe saamiseks."
-      }
+        question: "Kuidas kaitstakse minu andmeid?",
+        intro: "Kasutame järgmisi turvameetmeid:",
+        list: [
+          "Andmete krüpteerimine edastamisel ja säilitamisel",
+          "Turvalised maksed Stripe’i kaudu",
+          "Andmete mittejagamine kolmandate osapooltega",
+          "Õigus oma andmeid kustutada või alla laadida",
+        ],
+        outro: "Vaadake täielikku privaatsuspoliitikat.",
+      },
     },
     support: {
-      heading: "Kas sul on veel küsimusi?",
-      description: "Kui sa ei leidnud oma küsimusele vastust, on meie klienditugi valmis sind aitama!",
-      button: "Võta ühendust klienditoega"
-    }
+      heading: "Kas teil on veel küsimusi?",
+      description:
+        "Kui te ei leidnud otsitavat teavet, on meie tugimeeskond valmis teid aitama!",
+      button: "Võtke ühendust",
+    },
   },
   waitlist: {
     metaTitle: "Liitu ootenimekirjaga – Amiquus",
-    metaDescription: "Liitu AMIQUUS-i ootenimekirjaga, et saada teavitus, kui tellimused muutuvad kättesaadavaks.",
+    metaDescription:
+      "Liitu Amiquuse ootenimekirjaga ja saa teavitus, kui tellimiskoht vabaneb.",
     title: "Liitu meie ootenimekirjaga",
-    subtitle: "Suure nõudluse tõttu piirame aktiivsete tellimuste arvu, et tagada kõigile kasutajatele parim teenuse kvaliteet.",
+    subtitle:
+      "Kõrge nõudluse tõttu piirame aktiivsete tellimuste arvu, et tagada parim teenuse kvaliteet.",
     limited: {
       heading: "Piiratud saadavus",
-      description: "Piirame oma süsteemi vaid 30 aktiivse tellijaga, et tagada:",
-      points: {
-        0: "Erakordne andmete kogumise töökindlus ja kiirus kõigile kasutajatele",
-        1: "Väiksem tõenäosus, et autokuulutuste veebilehed blokeerivad",
-        2: "Personaalne tugi igale tellijale",
-        3: "Serveri ressursside õiglane jaotus"
-      },
-      available: "{{remaining}} tellimiskohta {{capacity}} võimalikust on hetkel saadaval.",
-      full: "Kõik tellimiskohad on hetkel täidetud. Liitu ootenimekirjaga, et saada teavitus, kui koht vabaneb."
+      description: "Piirame süsteemi ainult 30 aktiivse tellijaga, et tagada:",
+      points: [
+        "Usaldusväärne ja kiire andmete skreipimine kõikidele kasutajatele",
+        "Väiksem risk autokuulutuste saitidelt blokkimiseks",
+        "Personaalne kasutajatugi",
+        "Serveriressursside õiglane jaotus",
+      ],
+      available: "{{remaining}} vaba kohta {{capacity}} tellimuse hulgast.",
+      full: "Kõik tellimiskohad on hetkel täidetud. Liitu ootenimekirjaga ja saad teavituse, kui koht vabaneb.",
     },
     success: {
       title: "Olete ootenimekirjas!",
-      description: "Anname teile teada, kui tellimiskoht vabaneb.",
-      message: "Aitäh huvi eest Amiquuse vastu! Oleme teid lisanud ootenimekirja ja võtame teiega ühendust niipea, kui vabaneb koht.",
-      button: "Tagasi avalehele"
+      description: "Anname teile teada kohe, kui tellimiskoht vabaneb.",
+      message:
+        "Aitäh huvi eest Amiquuse vastu! Olete edukalt lisatud ootenimekirja ja võtame teiega ühendust esimesel võimalusel.",
+      button: "Tagasi avalehele",
     },
     cantJoin: {
-      title: "Join the Waitlist",
-      description: " We'll notify you as soon as a subscription spot becomes available"
+      title: "Liitu ootenimekirjaga",
+      description: "Anname teile teada niipea, kui koht on saadaval.",
     },
     form: {
       firstName: {
-        label: "First Name",
-        placeholder: "John"
+        label: "Eesnimi",
+        placeholder: "Jaan",
       },
       lastName: {
-        label: "Last Name",
-        placeholder: "Doe"
+        label: "Perekonnanimi",
+        placeholder: "Tamm",
       },
       email: {
         label: "E-post",
-        placeholder: "john.doe@example.com",
-        description: "Kasutame seda e-posti aadressi, et teavitada sind, kui koht vabaneb."
+        placeholder: "email@example.com",
+        description:
+          "Kasutame seda e-posti aadressi teile teada andmiseks, kui koht vabaneb.",
       },
-      submit: "Liitu ootenimekirjaga",
-      submitting: "Esitamine...",
-      firstname: {
-        label: "Eesnimi",
-        placeholder: "Jaan"
-      },
-      lastname: {
-        label: "Perekonnanimi",
-        placeholder: "Hirv"
-      }
+      submit: "Liitu nimekirjaga",
+      submitting: "Saadan...",
     },
-    cantjoin: {
-      description: "Anname teile teada, kui tellimiskohale avaneb vaba koht.",
-      title: "Liitu ootenimekirjaga"
-    }
   },
   support: {
     metaTitle: "Tugi | Amiquus – Abikeskus",
-    metaDescription: "Saate abi oma AMIQUUS konto, tellimuse või autohoiatusete kohta. Sirvige meie abikeskust või võtke abi saamiseks ühendust meie tugitiimiga.",
-    title: "Klienditugi",
-    subtitle: "Leia vastused levinud küsimustele või võta ühendust meie tugitiimiga",
+    metaDescription:
+      "Saage abi oma kontoga, tellimusega või autoteavituste seadistamisega. Külastage meie abikeskust või võtke ühendust tugitiimiga.",
+    title: "Abikeskus",
+    subtitle:
+      "Leidke vastused korduma kippuvatele küsimustele või võtke ühendust tugitiimiga",
     emailSupport: {
-      title: "Email Support",
-      description: "Send us an email and we'll get back to you within 24 hours",
-      email: "support@amiquus.com"
-    },
-    faqHeading: "Frequently Asked Questions",
-    faqs: {
-      telegram: {
-        question: "Kuidas seadistada Telegrami teavitusi?",
-        intro: "Telegrami teavituste seadistamiseks järgi neid samme:",
-        steps: {
-          0: "Loo Telegrami bot BotFatheri abil (juhised on meie juhtpaneelil)",
-          1: "Kopeeri oma API token ja vestluse ID",
-          2: "Sisesta need andmed oma konto seadetes jaotises \"Teavituseelistused\"",
-          3: "Testi oma ühendust nupuga \"Saada testteade\""
-        },
-        outro: "Kui vajad rohkem abi, leiad meie üksikasjaliku juhendi oma juhtpaneelilt."
-      },
-      updates: {
-        question: "Kui tihti autokuulutusi uuendatakse?",
-        answer: "Uuenduste sagedus sõltub sinu tellimuspaketist. Põhipaketid saavad uuendusi iga 6 tunni järel, samas kui Premium paketid võivad saada uuendusi lausa iga 30 minuti tagant. Oma praegust uuenduste sagedust saad vaadata ja muuta tellimuse seadetes."
-      },
-      facebook: {
-        question: "Kas ma saan jälgida Facebook Marketplace’i?",
-        answer: "Jah, toetame Facebook Marketplace’i jälgimist. Selle seadistamiseks tuleb sul esitada Facebook Marketplace’i otsingutulemuste lehe URL koos soovitud filtritega. Meie süsteem jälgib seejärel just seda otsingut, et leida uusi kuulutusi, mis vastavad sinu kriteeriumitele."
-      },
-      cancel: {
-        question: "Kuidas saan oma tellimuse tühistada?",
-        answer: "Saad oma tellimuse igal ajal tühistada oma konto profiililehel. Klõpsa vahekaardil „Tellimused“, leia tellimus, mida soovid tühistada, ning vajuta nupule „Tühista tellimus“. Sinu teenus jääb aktiivseks kuni sinu praeguse arveldusperioodi lõpuni."
-      },
-      full: {
-        question: "Mis juhtub, kui kõik tellimiskohad on täis?",
-        answer: "Selleks, et hoida meie teenuse kõrget kvaliteeti, piirame aktiivsete tellimuste arvu. Kui kõik kohad on täis, saate liituda meie ootenimekirjaga. Anname teile teada kohe, kui vabaneb koht, ning teil on eelis see endale saada enne, kui avame selle laiemale avalikkusele."
-      }
-    },
-    stillNeedHelp: {
-      heading: "Still need help?",
-      description: "If you couldn't find the answer to your question, feel free to reach out to our support team. We're here to help!",
-      button: "Contact Support"
-    },
-    emailsupport: {
+      title: "E-posti tugi",
       description: "Saatke meile e-kiri ja vastame teile 24 tunni jooksul",
       email: "support@amiquus.com",
-      title: "E-posti tugi"
     },
-    faqheading: "Korduma kippuvad küsimused",
-    stillneedhelp: {
-      button: "Võta ühendust klienditoega",
-      description: "Kui sa ei leidnud oma küsimusele vastust, võta julgelt ühendust meie tugitiimiga. Oleme siin, et sind aidata!",
-      heading: "Kas vajad veel abi?"
-    }
+    faqHeading: "Korduma kippuvad küsimused",
+    faqs: {
+      telegram: {
+        question: "Kuidas seadistan Telegrami teavitused?",
+        intro: "Selleks toimige nii:",
+        steps: [
+          "Looge Telegrami bot BotFatheri kaudu",
+          "Kopeerige API token ja chat ID",
+          "Lisage need oma konto seadetes jaotuses „Notification Preferences“",
+          "Testige ühendust nupuga „Send Test Message“",
+        ],
+        outro: "Üksikasjalik juhend on saadaval teie juhtpaneelis.",
+      },
+      updates: {
+        question: "Kui sageli autokuulutusi uuendatakse?",
+        answer:
+          "Uuenduste sagedus sõltub teie tellimusest. Baasplaan uuendab iga 6 tunni järel, Premium võib uuendada iga 30 minuti järel.",
+      },
+      facebook: {
+        question: "Kas saan jälgida Facebook Marketplace'i?",
+        answer:
+          "Jah. Saate jälgida kindlat Marketplace’i otsingut, lisades URL-i oma Amiquuse seadistusse.",
+      },
+      cancel: {
+        question: "Kuidas ma tellimuse tühistan?",
+        answer:
+          "Tellimust saab tühistada profiililehelt. Minge „Subscriptions“ ja klõpsake „Cancel Subscription“.",
+      },
+      full: {
+        question: "Mis saab siis, kui kõik kohad on täis?",
+        answer:
+          "Saate liituda ootenimekirjaga ja teid teavitatakse esimesena, kui koht vabaneb.",
+      },
+    },
+    stillNeedHelp: {
+      heading: "Vajate veel abi?",
+      description:
+        "Kui te ei leidnud vajalikku teavet, kirjutage meile. Oleme valmis aitama!",
+      button: "Võtke ühendust",
+    },
   },
   notFound: {
-    title: "404 Lehte ei leitud",
-    message: "Kas unustasid lehe marsruuterisse lisada?"
+    title: "404 – Lehte ei leitud",
+    message: "Kas unustasite selle lehe routerisse lisada?",
   },
   emails: {
     verification: {
-      subject: "Your Amiquus Email Verification Code",
-      greeting: "Hi there,",
-      message: "Use the verification code below to complete your sign-up:",
-      expiration: "This code will expire in 10 minutes."
+      subject: "Teie Amiquuse kinnituskood",
+      greeting: "Tere!",
+      message:
+        "Kasutage allolevat kinnituskoodi, et lõpule viia oma registreerimine:",
+      expiration: "Kood aegub 10 minuti jooksul.",
     },
     invoice: {
       success: {
-        subject: "Your Amiquus Payment Receipt – Invoice #",
-        h2Message: "Your Amiquus Subscription Payment Was Successful!",
-        greeting: "Hi there,",
-        paymentMessage: "We’ve received your payment of",
-        downloadMessage: "You can view or download your invoice using the link below:",
-        viewInvoice: "View Invoice",
-        invoiceNumber: "Invoice #:"
+        subject: "Amiquus – Maksekviitung (Arve #)",
+        h2Message: "Teie Amiquuse tellimuse makse õnnestus!",
+        greeting: "Tere!",
+        paymentMessage: "Oleme kätte saanud teie makse summas",
+        downloadMessage:
+          "Arvet saate vaadata või alla laadida alloleva lingi kaudu:",
+        viewInvoice: "Vaata arvet",
+        invoiceNumber: "Arve nr:",
       },
       pending: {
-        subjectA: "Payment Pending – Invoice",
-        subjectB: "for Your Amiquus Subscription",
-        h2Message: "Action Required: Complete Your Payment for Amiquus Subscription",
-        greeting: "Hi there,",
-        messageA: "Your invoice",
-        messageB: "is still unpaid. To activate your subscription, please complete the payment of",
-        paymentMessage: "You can securely pay using the link below:",
-        payInvoice: "Pay Invoice",
-        ignoreEmail: "If you’ve already made this payment, you can ignore this email."
+        subjectA: "Makse ootab – Arve",
+        subjectB: "teie Amiquuse tellimuse eest",
+        h2Message: "Nõutav tegevus: lõpetage oma tellimuse makse",
+        greeting: "Tere!",
+        messageA: "Teie arve",
+        messageB:
+          "on endiselt tasumata. Tellimuse aktiveerimiseks tasuge summa:",
+        paymentMessage: "Turvalise makse saate teha alloleva lingi kaudu:",
+        payInvoice: "Maksa arvet",
+        ignoreEmail: "Kui olete juba maksnud, võite selle kirja ignoreerida.",
       },
       failed: {
-        subject: "Payment Failed – Invoice",
-        message: "We were unable to process your recent payment (attempt",
-        attemptsA: "We will retry your payment shortly. No action is needed for now.",
-        attemptsB: "We attempted to charge your payment method 3 times but all attempts failed.",
-        attemptsC: "As a result, your subscription has been <strong>paused</strong>. You won’t receive further updates until you reactivate it.",
-        attemptsD: "Please update your payment method and resume your subscription from your profile:",
-        viewInvoice: "View Invoice",
-        managePayment: "Manage Payment Methods"
-      }
+        subject: "Makse ebaõnnestus – Arve",
+        message: "Meil ei õnnestunud teie viimast makset töödelda (katse nr",
+        attemptsA: "Püüame peagi uuesti. Teilt ei nõuta midagi.",
+        attemptsB: "Oleme proovinud 3 korda, kuid makse ei õnnestunud.",
+        attemptsC: "Teie tellimus on ajutiselt <strong>peatatud</strong>.",
+        attemptsD: "Uuendage oma maksemeetod ja jätkake tellimust:",
+        viewInvoice: "Vaata arvet",
+        managePayment: "Halda maksemeetodeid",
+      },
     },
     waitlist: {
-      subject: "You’re on the Amiquus Waitlist!",
-      h2Message: "You're On the List!",
-      hi: "Hi",
-      message: "Thanks for joining the Amiquus waitlist. We’ll let you know as soon as a spot becomes available.",
-      anyQuestions: "If you have any questions, feel free to reply to this email."
+      subject: "Olete lisatud Amiquuse ootenimekirja!",
+      h2Message: "Olete nimekirjas!",
+      hi: "Tere",
+      message:
+        "Aitäh, et liitusite Amiquuse ootenimekirjaga! Anname teile teada niipea, kui koht vabaneb.",
+      anyQuestions: "Kui teil on küsimusi, saate sellele e-kirjale vastata.",
     },
     common: {
-      thanksMessage: "Thank you for choosing Amiquus!",
-      signature: "Best regards,<br/>The Amiquus Team",
-      team: "— The Amiquus Team",
-      needHelp: "Need help?",
-      hello: "Hello"
-    }
-  },
-  dashboardPaymentMethodCard: {
-    cancel: "Tühista",
-    confirmremove: "Eemalda kaart",
-    default: "Vaikimisi",
-    expires: "Aegub",
-    remove: "Eemalda",
-    removedescription: "Kas oled kindel, et soovid eemaldada oma {{brand}} kaardi, mille lõpus on {{last4}}?",
-    removetitle: "Eemalda makseviis",
-    removewarning: "See on sinu vaikimisi makseviis ja selle eemaldamine võib mõjutada sinu aktiivseid tellimusi.",
-    setasdefault: "Määra vaikimisi",
-    setdefaultdescription: "Kas soovite määrata {{brand}} kaardi, mille lõpus on {{last4}}, oma vaikimisi makseviisiks? Seda kaarti kasutatakse kõigi tulevaste tellimusmaksete jaoks.",
-    setdefaulttitle: "Määra vaikimisi makseviis"
-  },
-  dashboardSubscriptionCard: {
-    cancelalert: "Tühista hoiatus",
-    canceldescription: "Kas oled kindel, et soovid tühistada oma auto teavituse {{brand}} {{model}} jaoks? Sellega lõpetatakse kõik teavitused ja kui soovid seda autot uuesti jälgida, pead looma uue teavituse.",
-    canceltitle: "Tühista autohoiatus",
-    confirmcancel: "Tühista hoiatus",
-    edit: "Muuda",
-    keepmyalert: "Hoia minu märguanne",
-    language: "Keel",
-    price: "Hind",
-    pricerange: "Hind",
-    updates: "Uuendused",
-    websites: "Veebilehed",
-    years: "Aastad"
-  },
-  signUp: {
-    cta: "Saage teavitused kohe",
-    heading: "Loo oma autohoiatus",
-    subheading: "Seadista oma isikupärastatud autokuulutuste teavitused vaid mõne sammuga.",
-    toast: {
-      error: {
-        description: "Me ei saanud teie tellimust luua. Palun proovige hiljem uuesti.",
-        title: "Tellige ei õnnestunud"
-      },
-      success: {
-        description: "Teie tellimus on edukalt loodud",
-        title: "Tellige edukalt loodud"
-      }
+      thanksMessage: "Aitäh, et kasutate Amiquust!",
+      signature: "Lugupidamisega,<br/>Amiquuse tiim",
+      team: "— Amiquuse tiim",
+      needHelp: "Vajate abi?",
+      hello: "Tere",
     },
-    waitlist: {
-      cta: "Liitu ootenimekirjaga",
-      message: "Hetkel on kõik kohad täis. Liitu ootenimekirjaga, et saada teavitus, kui koht vabaneb."
-    }
-  }
+  },
 };

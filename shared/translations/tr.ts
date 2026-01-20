@@ -107,17 +107,17 @@ export const tr = {
     setAlerts: "Uyarılarınızı ayarlayın",
     notificationMockup1: {
       title: "New Match Found!",
-      description: "BMW 3 Series, 2019, $32,500 - Just listed on AutoTrader"
+      description: "BMW 3 Series, 2019, €32,500 - Just listed on AutoTrader"
     },
     notificationMockup2: {
       title: "Telegram uyarısı",
-      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by $2,000"
+      description: "Mercedes C-Class, 2020, 30,000 miles - Price dropped by €2,000"
     }
   },
   pricing: {
     title: "Basit ve Şeffaf Fiyatlandırma",
     subtitle: "Fiyatlarımız, sizin özel ihtiyaçlarınıza göre belirlenir. Temel bir paketle başlayıp, gereksinimlerinize göre özelleştirebilirsiniz.",
-    baseTitle: "Base Package: $9.99/month",
+    baseTitle: "Base Package: €9.99/month",
     includedTitle: "What's Included:",
     includedFeatures: [
 
@@ -682,7 +682,7 @@ export const tr = {
     title: "Araba Uyarılarını Ayarla",
     subtitle: "Telegram botunuzu, hayalinizdeki araba hakkında bildirim almak için yapılandırın.",
     basicPlan: "Basic Plan",
-    baseTitle: "$9.99/month",
+    baseTitle: "€9.99/month",
     button: "Araba Uyarı Servisimi Başlat",
     cancel: "İstediğiniz zaman iptal edin",
     toasts: {
@@ -1145,7 +1145,7 @@ export const tr = {
       cost: {
         question: "Abonelik ücreti ne kadar?",
         answer: {
-          0: "Fiyatlarımız, her 6 saatte bir güncelleme ile tek bir web sitesinin izlenmesi için aylık 79,99 $’dan başlamaktadır. Ek web siteleri aylık her biri 4,99 $’dır. Daha hızlı bildirimler almak için güncelleme sıklığını da artırabilirsiniz.",
+          0: "Fiyatlarımız, her 6 saatte bir güncelleme ile tek bir web sitesinin izlenmesi için aylık 79,99 €’dan başlamaktadır. Ek web siteleri aylık her biri 4,99 €’dır. Daha hızlı bildirimler almak için güncelleme sıklığını da artırabilirsiniz.",
           1: "Detaylı fiyat bilgileri için ana sayfadaki fiyatlandırma bölümümüzü inceleyebilirsiniz."
         }
       },
