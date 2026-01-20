@@ -14,7 +14,6 @@ import About from "@/pages/about";
 import Terms from "@/pages/terms";
 import Privacy from "@/pages/privacy";
 import FAQ from "@/pages/faq";
-import Subscribe from "@/pages/subscribe";
 import SetupAlerts from "@/pages/setup-alerts";
 import Dashboard from "@/pages/dashboard";
 import Waitlist from "@/pages/waitlist";
@@ -37,7 +36,6 @@ function Router() {
       <ProtectedRoute path="/verify-email" component={VerifyEmail} />
       <ProtectedRoute path="/test-dodo" component={DodoTestPage} />
       <ProtectedRoute path="/dashboard" component={Dashboard} />
-      <Route path="/subscribe" component={Subscribe} />
       <Route path="/setup-alerts" component={SetupAlerts} />
       <ProtectedRoute path="/profile" component={Dashboard} />
       <ProtectedRoute path="/edit/:id" component={SubscriptionPage} />
