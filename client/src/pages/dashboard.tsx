@@ -1,5 +1,5 @@
-import { useEffect, useState, Dispatch, SetStateAction } from "react";
-import { Link } from "wouter";
+import { useEffect, useState, Dispatch, SetStateAction, useRef } from "react";
+import { Link, useLocation } from "wouter";
 import {
   Card,
   CardContent,
@@ -39,7 +39,6 @@ import { useAuth } from "@/hooks/use-auth";
 import { queryClient, apiRequest } from "@/lib/queryClient";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { User as UserType, Subscription } from "@shared/schema";
-import { useLocation } from "wouter";
 import {
   useElements,
   useStripe,
@@ -187,6 +186,7 @@ interface SubscriptionCardProps {
 
 function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
   const { t } = useLanguage();
+  const { toast } = useToast();
   const [location, navigate] = useLocation();
   const [isConfirmingCancel, setIsConfirmingCancel] = useState(false);
 
@@ -202,6 +202,30 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
   const cancelAction = () => {
     setIsConfirmingCancel(false);
   };
+
+  const handleUpdatePaymentMethod = async () => {
+    try {
+      const res = await apiRequest(
+        "POST",
+        `/api/subscriptions/${encodeURIComponent(subscription.dodoSubscriptionId as string)}/update-payment-method-in`
+      );
+
+      const data = await res.json();
+
+      if (!res.ok || !data?.paymentLink) {
+        throw new Error(data?.message || "Unable to start payment update.");
+      }
+
+      window.location.href = data.paymentLink;
+    } catch (e: any) {
+      toast({
+        title: "Unable to update payment method",
+        description: e?.message || "Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
 
   return (
     <Card className="mb-4">
@@ -260,50 +284,63 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-end space-x-2 pt-2">
+      <CardFooter className="flex flex-wrap gap-2 justify-end space-x-2 pt-2">
         <Button
           variant="outline"
           size="sm"
           className="text-sm"
-          //gp to "/edit/:id"
-          onClick={() => navigate(`/edit/${subscription.id}`)}
+          onClick={handleUpdatePaymentMethod}
         >
-          <Edit2 className="h-3.5 w-3.5 mr-1" />
-          {t("dashboard.subscriptionCard.edit")}
+          <CreditCard className="h-3.5 w-3.5 mr-1" />
+          Update Payment Method
         </Button>
-        <Dialog open={isConfirmingCancel} onOpenChange={setIsConfirmingCancel}>
-          <DialogTrigger asChild>
-            <Button
-              variant="destructive"
-              size="sm"
-              className="text-sm"
-              onClick={handleCancelClick}
-            >
-              {t("dashboard.subscriptionCard.cancelAlert")}
-            </Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>
-                {t("dashboard.subscriptionCard.cancelTitle")}
-              </DialogTitle>
-              <DialogDescription>
-                {t("dashboard.subscriptionCard.cancelDescription", {
-                  brand: subscription.brand,
-                  model: subscription.model,
-                })}
-              </DialogDescription>
-            </DialogHeader>
-            <DialogFooter className="mt-4">
-              <Button variant="outline" onClick={cancelAction}>
-                {t("dashboard.subscriptionCard.keepMyAlert")}
+        {subscription.status === "active" && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="text-sm"
+            //gp to "/edit/:id"
+            onClick={() => navigate(`/edit/${subscription.id}`)}
+          >
+            <Edit2 className="h-3.5 w-3.5 mr-1" />
+            {t("dashboard.subscriptionCard.edit")}
+          </Button>
+        )}
+        {subscription.status === "active" && (
+          <Dialog open={isConfirmingCancel} onOpenChange={setIsConfirmingCancel}>
+            <DialogTrigger asChild>
+              <Button
+                variant="destructive"
+                size="sm"
+                className="text-sm"
+                onClick={handleCancelClick}
+              >
+                {t("dashboard.subscriptionCard.cancelAlert")}
               </Button>
-              <Button variant="destructive" onClick={confirmCancel}>
-                {t("dashboard.subscriptionCard.confirmCancel")}
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>
+                  {t("dashboard.subscriptionCard.cancelTitle")}
+                </DialogTitle>
+                <DialogDescription>
+                  {t("dashboard.subscriptionCard.cancelDescription", {
+                    brand: subscription.brand,
+                    model: subscription.model,
+                  })}
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter className="mt-4">
+                <Button variant="outline" onClick={cancelAction}>
+                  {t("dashboard.subscriptionCard.keepMyAlert")}
+                </Button>
+                <Button variant="destructive" onClick={confirmCancel}>
+                  {t("dashboard.subscriptionCard.confirmCancel")}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        )}
       </CardFooter>
     </Card>
   );
@@ -489,7 +526,7 @@ function PaymentMethodCard({
   );
 }
 
-export default function NewProfile() {
+export default function Dashboard() {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState("subscriptions");
   const { toast } = useToast();
@@ -510,6 +547,50 @@ export default function NewProfile() {
     queryKey: ["/api/payment-methods"],
     enabled: isAuthenticated && !!user,
   });
+
+  const [, setLocation] = useLocation();
+  const handledReturnRef = useRef(false);
+
+  useEffect(() => {
+    if (handledReturnRef.current) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const subscriptionId = params.get("subscription_id");
+    const status = params.get("status"); // active | failed
+
+    if (!subscriptionId || !status) return;
+
+    handledReturnRef.current = true;
+
+    // Refresh subscriptions so UI updates
+    queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
+
+    const normalized = status.toLowerCase();
+
+    if (normalized === "active") {
+      toast({
+        title: "Subscription activated",
+        description: "Payment successful — your subscription is now active.",
+        variant: "default",
+      });
+    } else if (normalized === "failed") {
+      toast({
+        title: "Payment failed",
+        description:
+          "Your payment didn’t go through. Please update your payment method and try again.",
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Subscription update",
+        description: `Status: ${status}`,
+      });
+    }
+
+    // ✅ Clean URL so refresh doesn't re-trigger toast
+    setLocation("/dashboard", { replace: true });
+  }, [setLocation, toast]);
+
 
   // Remove payment method mutation
   const removePaymentMethodMutation = useMutation({
@@ -564,7 +645,7 @@ export default function NewProfile() {
 
   const handleCancelSubscription = async (id: any) => {
     try {
-      await deleteSubscription(id);
+      await cancelSubscription(id);
       // run query to refresh subscriptions list
       queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
 
@@ -760,7 +841,7 @@ export default function NewProfile() {
                         }
                       }}
                     >
-                       {t("profile.account.save")}
+                      {t("profile.account.save")}
                     </Button>
                   </DialogFooter>
                 </DialogContent>
@@ -770,14 +851,14 @@ export default function NewProfile() {
                 <DialogTrigger asChild>
                   <Button variant="outline" className="w-full justify-start">
                     <ShieldAlert className="mr-2 h-4 w-4" />
-                     {t("profile.sidebar.privacy")}
+                    {t("profile.sidebar.privacy")}
                   </Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
                     <DialogTitle> {t("profile.security.title")}</DialogTitle>
                     <DialogDescription>
-                       {t("profile.security.desc")}
+                      {t("profile.security.desc")}
                     </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4 py-2">
@@ -809,7 +890,7 @@ export default function NewProfile() {
                             ?.click()
                         }
                       >
-                         {t("profile.account.cancel")}
+                        {t("profile.account.cancel")}
                       </Button>
                     </DialogClose>
                     <Button
@@ -877,13 +958,13 @@ export default function NewProfile() {
                     className="w-full justify-start text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300"
                   >
                     <LogOut className="mr-2 h-4 w-4" />
-                     {t("profile.sidebar.logout")}
+                    {t("profile.sidebar.logout")}
                   </Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
                     <DialogTitle>
-                       {t("profile.logout.title")}</DialogTitle>
+                      {t("profile.logout.title")}</DialogTitle>
                     <DialogDescription>
                       {t("profile.logout.desc")}
                     </DialogDescription>
@@ -900,7 +981,7 @@ export default function NewProfile() {
                           ?.click()
                       }
                     >
-                       {t("profile.account.cancel")}
+                      {t("profile.account.cancel")}
                     </Button>
                     <Button
                       variant="destructive"
@@ -934,13 +1015,13 @@ export default function NewProfile() {
             onValueChange={setActiveTab}
             className="w-full"
           >
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="subscriptions">
-                 {t("profile.tabs.alerts")}
+            <TabsList className="grid w-full grid-cols-1">
+              <TabsTrigger value="subscriptions" className="w-full">
+                {t("profile.tabs.alerts")}
               </TabsTrigger>
-              <TabsTrigger value="payment">
-                 {t("profile.tabs.payments")}
-              </TabsTrigger>
+              {/* <TabsTrigger value="payment">
+                {t("profile.tabs.payments")}
+              </TabsTrigger> */}
             </TabsList>
 
             {/* Subscriptions Tab */}
@@ -961,7 +1042,7 @@ export default function NewProfile() {
                   <CardDescription>
                     {t("profile.alerts.desc")}
                     <br />
-                     <br/>
+                    <br />
                     <span className="text-sm text-muted-foreground">
                       {t("profile.alerts.warning")}
                     </span>
@@ -984,11 +1065,11 @@ export default function NewProfile() {
                     ) : (
                       <div className="text-center py-8">
                         <p className="text-muted-foreground">
-                           {t("profile.alerts.none")}
+                          {t("profile.alerts.none")}
                         </p>
                         <Link href="/setup-alerts">
                           <Button className="mt-4">
-                             {t("profile.alerts.cta")}
+                            {t("profile.alerts.cta")}
                           </Button>
                         </Link>
                       </div>
@@ -1009,7 +1090,7 @@ export default function NewProfile() {
                     <AddPaymentMethodDialog />
                   </div>
                   <CardDescription>
-                     {t("profile.payments.desc")}
+                    {t("profile.payments.desc")}
                   </CardDescription>
                 </CardHeader>
                 {isLoadingPayments ? (
@@ -1030,7 +1111,7 @@ export default function NewProfile() {
                     ) : (
                       <div className="text-center py-8">
                         <p className="text-muted-foreground">
-                           {t("profile.payments.none")}
+                          {t("profile.payments.none")}
                         </p>
                         <AddPaymentMethodDialog />
                       </div>
@@ -1054,9 +1135,9 @@ export default function NewProfile() {
   );
 }
 
-export async function deleteSubscription(subscriptionId: number) {
-  const res = await fetch(`/api/subscriptions/${subscriptionId}`, {
-    method: "DELETE",
+export async function cancelSubscription(subscriptionId: number) {
+  const res = await fetch(`/api/subscriptions/${subscriptionId}/cancel`, {
+    method: "POST",
     credentials: "include", // send cookies if using session-based auth
     headers: {
       "Content-Type": "application/json",
@@ -1065,7 +1146,7 @@ export async function deleteSubscription(subscriptionId: number) {
 
   if (!res.ok) {
     const errorText = await res.text();
-    throw new Error(errorText || "Failed to delete subscription");
+    throw new Error(errorText || "Failed to cancel subscription");
   }
 
   return res.json();

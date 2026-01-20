@@ -26,6 +26,7 @@ export interface IStorage {
   updateUserDodoCustomerId(userId: number, customerId: string): Promise<User>;
   getUserByStripeCustomerId(stripeCustomerId: string): Promise<User | undefined>;
   updateUserStripeCustomerId(userId: number, customerId: string): Promise<User>;
+  getOnHoldSubscriptions(): Promise<Subscription[]>;
 
   // Promocodes operations
   isPromoCodeUsedByAnotherUser(currentUserId: number,
@@ -163,6 +164,13 @@ export class DrizzleStorage implements IStorage {
       .returning();
 
     return updated;
+  }
+
+  async getOnHoldSubscriptions(): Promise<Subscription[]> {
+    return db
+      .select()
+      .from(subscriptions)
+      .where(eq(subscriptions.status, "on_hold"));
   }
 
   async isPromoCodeUsedByAnotherUser(

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link, useLocation } from "wouter";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AlertFormSchema, alertSchema, Subscription } from "@shared/schema";
 import { Loader2 } from "lucide-react";
@@ -25,11 +26,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
-import { useLocation } from "wouter";
 import { useLanguage } from "@/components/language-provider";
 import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
-import { buildAlertSchema } from "@/lib/buildAlertSchema";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { apiRequest } from "@/lib/queryClient";
 
 export type NewComerResponse = {
   websites: {
@@ -53,6 +52,7 @@ export default function EditSubscriptionPage({
   subscription: Subscription;
 }) {
   const { t, language } = useLanguage();
+  const [location, navigate] = useLocation();
   const [data, setData] = useState<NewComerResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
@@ -66,7 +66,6 @@ export default function EditSubscriptionPage({
   const [websites, setWebsites] = useState<string[]>([]);
   // const [websiteNotInJson, setWebsiteNotInJson] = useState<string[]>([]);
 
-  const [location, navigate] = useLocation();
   const [subStatus, setSubStatus] = useState(subscription.status || "active");
 
   const parseNullableNumber = (val: string | number | undefined) => {
@@ -82,7 +81,7 @@ export default function EditSubscriptionPage({
       fuelType: subscription.fuelType as string || "",
       priceMin: subscription.priceMin ? String(subscription.priceMin) : "",
       priceMax: subscription.priceMax ? String(subscription.priceMax) : "",
-      yearMin:  subscription.yearMin ? String(subscription.yearMin) : "",
+      yearMin: subscription.yearMin ? String(subscription.yearMin) : "",
       yearMax: subscription.yearMax ? String(subscription.yearMax) : "",
       maxKilometers: subscription.mileageMax ? String(subscription.mileageMax) : "",
       telegramUsername: subscription.telegramUsername as string || "",
@@ -163,7 +162,7 @@ export default function EditSubscriptionPage({
       setModels(loadModels(subscription.brand as string));
       setSubStatus(subscription.status);
     }
-  }, [subscription]);
+  }, [subscription, data]);
 
   // websites not in json are websites that are not in the json file but are in the database
   // useEffect(() => {
@@ -183,7 +182,7 @@ export default function EditSubscriptionPage({
     return (
       data?.brands_and_models[brand] ||
       newcomerDefault.brands_and_models[
-        brand as keyof typeof newcomerDefault.brands_and_models
+      brand as keyof typeof newcomerDefault.brands_and_models
       ] ||
       []
     );
@@ -191,27 +190,30 @@ export default function EditSubscriptionPage({
 
   const currentYear = new Date().getFullYear();
 
+  const rawTitle = t("setupAlerts.baseTitle");
+
+  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, globalBasePrice);
+
   const onSubmit = async (values: AlertFormSchema) => {
     setSubmitting(true);
     const unitAmountInCents = Math.round(totalPrice * 100);
 
     // prevent pause if price changes
-    if (unitAmountInCents !== subscription.price) {
-      if (subStatus === "paused") {
-        toast({
-          title: t("subscription.toasts.priceError.title"),
-          description: t("subscription.toasts.priceError.description"),
-          variant: "destructive",
-        });
-        setSubmitting(false);
-        return;
-      }
-    }
+    // if (unitAmountInCents !== subscription.price) {
+    //   if (subStatus === "paused") {
+    //     toast({
+    //       title: t("subscription.toasts.priceError.title"),
+    //       description: t("subscription.toasts.priceError.description"),
+    //       variant: "destructive",
+    //     });
+    //     setSubmitting(false);
+    //     return;
+    //   }
+    // }
 
     try {
       const updateData = {
         ...subscription,
-        status: subStatus,
         brand: values.carBrand,
         model: values.carModel,
         fuelType: values.fuelType,
@@ -228,14 +230,11 @@ export default function EditSubscriptionPage({
         price: unitAmountInCents,
       } as Subscription;
 
-      const res = await fetch(`/api/subscriptions/${subscription.id}`, {
-        method: "PUT",
-        credentials: "include", // important for session-based auth
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updateData),
-      });
+      const res = await apiRequest(
+        "PUT",
+        `/api/subscriptions/${subscription.id}`,
+        updateData
+      );
 
       if (!res.ok) {
         const errorText = await res.text();
@@ -250,7 +249,7 @@ export default function EditSubscriptionPage({
         }),
       });
 
-      window.location.href = "/dashboard";
+      navigate("/dashboard");
     } catch (error: any) {
       toast({
         title: t("subscription.toasts.error.title"),
@@ -265,9 +264,9 @@ export default function EditSubscriptionPage({
   return (
     <div className="py-12 px-6 max-w-4xl mx-auto">
       <p className="mb-9 text-base text-neutral-600 dark:text-neutral-400">
-        {t("subscription.description")}
+        {/* {t("subscription.description")}
         <br />
-        <br />
+        <br /> */}
         <span className="text-sm text-muted-foreground">
           {t("profile.alerts.warning")}
         </span>
@@ -275,7 +274,7 @@ export default function EditSubscriptionPage({
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           {/* status */}
-          <div className="flex flex-col gap-2">
+          {/* <div className="flex flex-col gap-2">
             <FormLabel>{t("subscription.form.status.label")}</FormLabel>
             <Select
               onValueChange={(value) => setSubStatus(value)}
@@ -298,7 +297,7 @@ export default function EditSubscriptionPage({
                 </SelectItem>
               </SelectContent>
             </Select>
-          </div>
+          </div> */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FormField
               control={form.control}
@@ -543,14 +542,14 @@ export default function EditSubscriptionPage({
                                   onCheckedChange={(checked) => {
                                     return checked
                                       ? field.onChange([
-                                          ...field.value,
-                                          "facebook",
-                                        ])
+                                        ...field.value,
+                                        "facebook",
+                                      ])
                                       : field.onChange(
-                                          field.value?.filter(
-                                            (value) => value !== "facebook",
-                                          ),
-                                        );
+                                        field.value?.filter(
+                                          (value) => value !== "facebook",
+                                        ),
+                                      );
                                   }}
                                 />
                               </FormControl>
@@ -578,10 +577,10 @@ export default function EditSubscriptionPage({
                                     return checked
                                       ? field.onChange([...field.value, site])
                                       : field.onChange(
-                                          field.value?.filter(
-                                            (value) => value !== site,
-                                          ),
-                                        );
+                                        field.value?.filter(
+                                          (value) => value !== site,
+                                        ),
+                                      );
                                   }}
                                 />
                               </FormControl>
@@ -807,7 +806,7 @@ export default function EditSubscriptionPage({
                 {t("review.monitoring.websites")})
               </span>
               <span className="text-neutral-900 dark:text-white font-medium">
-                {t("setupAlerts.baseTitle")}
+                {fixedTitle}
               </span>
             </div>
             <div className="flex justify-between items-center mb-4">
@@ -833,7 +832,7 @@ export default function EditSubscriptionPage({
                   {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                 </span>
                 <span className="text-neutral-900 dark:text-white font-medium">
-                {currencySymbol}{(
+                  {currencySymbol}{(
                     FREQUENCY_OPTIONS.find(
                       (f) => f.id === form.watch("updateFrequency"),
                     )?.additionalPrice || 0
@@ -847,7 +846,7 @@ export default function EditSubscriptionPage({
                   {t("review.summary.total")}
                 </span>
                 <span className="text-primary dark:text-primary font-bold text-xl">
-                {currencySymbol}{totalPrice.toFixed(2)}
+                  {currencySymbol}{totalPrice.toFixed(2)}
                 </span>
               </div>
             </div>
@@ -898,25 +897,3 @@ export async function updateSubscription(
 
   return res.json();
 }
-
-// const handleEditSubscription = async (subscription: Subscription) => {
-//   try {
-//     console.log("Updating subscription:", subscription);
-//     await updateSubscription(subscription.id, subscription);
-//     // run query to refresh subscriptions list
-//     queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
-
-//     toast({
-//       title: "Subscription Updated",
-//       description: `Your subscription for ${subscription.brand} ${subscription.model} has been updated.`,
-//       variant: "default",
-//     });
-//   } catch (error) {
-//     console.error("Failed to update subscription:", error);
-//     toast({
-//       title: "Error",
-//       description: "Failed to update subscription. Please try again.",
-//       variant: "destructive",
-//     });
-//   }
-// };

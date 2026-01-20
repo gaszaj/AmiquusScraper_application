@@ -54,11 +54,7 @@ export type NewComerResponse = {
   };
 };
 
-export default function TelegramCarAlertForm({
-  setClientSecret,
-}: {
-  setClientSecret: Dispatch<SetStateAction<string | null>>;
-}) {
+export default function TelegramCarAlertForm() {
   const { t, language } = useLanguage();
   const [data, setData] = useState<NewComerResponse | null>(null);
   const [loading, setLoading] = useState(true);
@@ -224,133 +220,6 @@ export default function TelegramCarAlertForm({
 
   const currentYear = new Date().getFullYear();
 
-  const parseNullableNumber = (val: string | number | undefined) => {
-    const num = Number(val);
-    return !val || num === 0 ? null : num;
-  };
-
-  // const onSubmit = async (values: AlertFormSchema) => {
-  //   if (!hasContactBot) {
-  //     toast({
-  //       title: t("setupAlerts.toasts.contactBot.title"),
-  //       description: t("setupAlerts.toasts.contactBot.description"),
-  //       variant: "destructive",
-  //     });
-  //     return;
-  //   }
-
-  //   if (!termsAgreed) {
-  //     toast({
-  //       title: t("setupAlerts.toasts.terms.title"),
-  //       description: t("setupAlerts.toasts.terms.description"),
-  //       variant: "destructive",
-  //     });
-  //     return;
-  //   }
-
-  //   if (!user) {
-  //     setShowLogin(true);
-  //     return;
-  //   }
-
-  //   const subscriptionData = {
-  //     userId: user.id,
-  //     websitesSelected: values.websitesSelected,
-  //     facebookMarketplaceUrl: values.facebookMarketplaceUrl || "",
-  //     updateFrequency: values.updateFrequency,
-  //     brand: values.carBrand,
-  //     model: values.carModel,
-  //     fuelType: values.fuelType,
-  //     yearMin: parseNullableNumber(values.yearMin),
-  //     yearMax: parseNullableNumber(values.yearMax),
-  //     mileageMin: null,
-  //     mileageMax: parseNullableNumber(values.maxKilometers),
-  //     priceMin: parseNullableNumber(values.priceMin),
-  //     priceMax: parseNullableNumber(values.priceMax),
-  //     telegramUsername: values.telegramUsername,
-  //     notificationLanguage: values.notificationLanguage,
-  //     price: totalPrice,
-  //   };
-
-  //   setSubmitting(true);
-
-  //   try {
-  //     if (user.stripeCustomerId) {
-  //       const customerResponse = await fetch(
-  //         `/api/customer/payment-methods?customerId=${user.stripeCustomerId}`,
-  //       );
-
-  //       if (!customerResponse.ok) {
-  //         throw new Error("Failed to fetch payment methods");
-  //       }
-
-  //       const data = await customerResponse.json();
-
-  //       if (!data.hasPaymentMethod) {
-  //         // use "/api/set-alerts-intent"
-  //         const response = await apiRequest(
-  //           "POST",
-  //           "/api/set-alerts-intent",
-  //           subscriptionData,
-  //         );
-
-  //         if (response.ok) {
-  //           const data = await response.json();
-  //           setClientSecret(data.clientSecret);
-  //         } else {
-  //           const errorData = await response.json();
-  //           throw new Error(
-  //             errorData.message || "Failed to create subscription",
-  //           );
-  //         }
-  //       } else {
-  //         //subscribe direct
-  //         const response = await apiRequest(
-  //           "POST",
-  //           "/api/subscriptions",
-  //           subscriptionData,
-  //         );
-
-  //         if (response.ok) {
-  //           const data = await response.json();
-  //           toast({
-  //             title: t("setupAlerts.toasts.success.title"),
-  //             description: t("setupAlerts.toasts.success.description"),
-  //             variant: "default",
-  //           });
-  //           // go to dashboard
-  //           window.location.href = "/dashboard";
-  //         }
-
-  //         console.log("response", data);
-  //       }
-  //     } else {
-  //       // post to "/api/set-alerts-intent"
-  //       const response = await apiRequest(
-  //         "POST",
-  //         "/api/set-alerts-intent",
-  //         subscriptionData,
-  //       );
-
-  //       if (response.ok) {
-  //         const data = await response.json();
-  //         setClientSecret(data.clientSecret);
-  //       } else {
-  //         const errorData = await response.json();
-  //         throw new Error(errorData.message || "Failed to create subscription");
-  //       }
-  //     }
-  //   } catch (error) {
-  //     toast({
-  //       title: t("setupAlerts.toasts.error.title"),
-  //       description:
-  //         error instanceof Error ? error.message : "Please try again",
-  //       variant: "destructive",
-  //     });
-  //   } finally {
-  //     setSubmitting(false);
-  //   }
-  // };
 
   const onSubmit = async (values: AlertFormSchema) => {
     if (!hasContactBot) {
@@ -1007,7 +876,7 @@ export default function TelegramCarAlertForm({
                   <span className="text-neutral-700 dark:text-neutral-300">
                     {/* get selected websites length */}
                     {t("setupAlerts.basicPlan")} (
-                    {form.watch("websitesSelected")?.length || 0}{" "}
+                    {form.watch("websitesSelected")?.length || 0} {" "}
                     {t("review.monitoring.websites")})
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
@@ -1123,13 +992,16 @@ export default function TelegramCarAlertForm({
           onClose={() => setShowWaitList(false)}
         />
       )}
-      <PaymentModal
-        paymentForm={form}
-        showModal={showPaymentModal}
-        setShowModal={setShowPaymentModal}
-        totalPrice={totalPrice}
-        fixedTitle={fixedTitle}
-      />
+      {user?.id && (
+        <PaymentModal
+          paymentForm={form}
+          showModal={showPaymentModal}
+          setShowModal={setShowPaymentModal}
+          totalPrice={totalPrice}
+          fixedTitle={fixedTitle}
+          userId={user.id}
+        />
+      )}
     </section>
   );
 }

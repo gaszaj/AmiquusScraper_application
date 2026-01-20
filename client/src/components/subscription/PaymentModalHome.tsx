@@ -16,7 +16,7 @@ import { parseNullableNumber } from "@/lib/payments";
 
 
 interface PaymentModalProps {
-    paymentForm: UseFormReturn<AlertFormSchema, any, AlertFormSchema>;
+    paymentForm: AlertFormSchema;
     showModal: boolean;
     setShowModal: Dispatch<SetStateAction<boolean>>;
     totalPrice: number;
@@ -25,7 +25,7 @@ interface PaymentModalProps {
 }
 
 
-export const PaymentModal = ({
+export const PaymentModalHome = ({
     paymentForm,
     showModal,
     setShowModal,
@@ -170,7 +170,7 @@ export const PaymentModal = ({
     };
 
     const handleProceedToPayment = async () => {
-        const formData = paymentForm.getValues();
+        const formData = paymentForm;
 
         const payload = {
             userId,
@@ -275,7 +275,7 @@ export const PaymentModal = ({
                             <p className="text-muted-foreground text-[0.95rem]">
                                 {/* get selected websites length */}
                                 {t("setupAlerts.basicPlan")} (
-                                {paymentForm.watch("websitesSelected")?.length || 0}{" "}
+                                {paymentForm.websitesSelected?.length || 0}{" "}
                                 {t("review.monitoring.websites")})
                             </p>
                             <p className="text-foreground font-medium text-[0.95rem]">
@@ -286,7 +286,7 @@ export const PaymentModal = ({
                             <p className="text-muted-foreground text-[0.95rem]">
                                 {t("review.summary.extraWebsites")} (
                                 {Math.max(
-                                    (paymentForm.watch("websitesSelected")?.length || 1) - 1,
+                                    (paymentForm.websitesSelected?.length || 1) - 1,
                                     0,
                                 )}
                                 )
@@ -294,22 +294,22 @@ export const PaymentModal = ({
                             <p className="text-foreground font-medium text-[0.95rem]">
                                 {(
                                     Math.max(
-                                        (paymentForm.watch("websitesSelected")?.length || 1) - 1,
+                                        (paymentForm.websitesSelected?.length || 1) - 1,
                                         0,
                                     ) * additionalWebsitePrice
                                 ).toFixed(2)}
                             </p>
                         </div>
-                        {paymentForm.watch("updateFrequency") !== "hourly" && (
+                        {paymentForm.updateFrequency !== "hourly" && (
                             <div className="flex justify-between items-center">
                                 <p className="text-muted-foreground text-[0.95rem]">
                                     {t("websiteSelection.labels.updateFrequency")} (
-                                    {FREQUENCY_LABELS[paymentForm.watch("updateFrequency")]})
+                                    {FREQUENCY_LABELS[paymentForm.updateFrequency]})
                                 </p>
                                 <p className="text-foreground font-medium text-[0.95rem]">
                                     {currencySymbol}{(
                                         FREQUENCY_OPTIONS.find(
-                                            (f) => f.id === paymentForm.watch("updateFrequency"),
+                                            (f) => f.id === paymentForm.updateFrequency,
                                         )?.additionalPrice || 0
                                     ).toFixed(2)}
                                 </p>

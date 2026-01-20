@@ -1,0 +1,1 @@
+ALTER TABLE "subscriptions" ADD COLUMN "discount_id" text;

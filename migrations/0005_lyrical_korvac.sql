@@ -1,0 +1,1 @@
+ALTER TABLE "subscriptions" ADD COLUMN "invoice_attempts" integer DEFAULT 0 NOT NULL;
