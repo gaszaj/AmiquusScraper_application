@@ -486,7 +486,7 @@ export const lt = {
       {
         question: "Kurios svetainės šiuo metu palaikomos?",
         answer:
-          "Šiuo metu palaikome pagrindines automobilių pardavimo platformas, įskaitant AutoTrader, CarGurus, Cars.com ir Facebook Marketplace. Plečiame aprėptį pagal vartotojų prašymus ir regioninį populiarumą.",
+          "Šiuo metu palaikome pagrindines automobilių pardavimo platformas, įskaitant Avto.net ir Facebook Marketplace. Plečiame aprėptį pagal vartotojų prašymus ir regioninį populiarumą.",
       },
       {
         question: "Ar Telegram botto naudojimui reikalingos techninės žinios?",

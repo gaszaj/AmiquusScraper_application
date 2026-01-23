@@ -18,7 +18,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What websites do you currently support?",
-    answer: "We currently support major car listing platforms including AutoTrader, CarGurus, Cars.com, and Facebook Marketplace. We're constantly expanding our coverage to include more websites based on user demand and regional popularity."
+    answer: "We currently support major car listing platforms including Avto.net, and Facebook Marketplace. We're constantly expanding our coverage to include more websites based on user demand and regional popularity."
   },
   {
     question: "Do I need technical knowledge to use the Telegram bot?",
@@ -48,24 +48,24 @@ const FAQ: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-title font-bold mb-4">Frequently Asked Questions</h2>
           <p className="text-neutral-600 max-w-2xl mx-auto">Find answers to the most common questions about our service.</p>
         </div>
-        
+
         <div className="max-w-3xl mx-auto space-y-6">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-neutral-50 rounded-xl overflow-hidden shadow-sm">
-              <button 
+              <button
                 className="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none"
                 onClick={() => toggleItem(index)}
                 aria-expanded={openItem === index}
               >
                 <span>{faq.question}</span>
-                <ChevronDownIcon 
+                <ChevronDownIcon
                   className={cn(
                     "h-5 w-5 text-neutral-400 transition-transform duration-200",
                     openItem === index ? "transform rotate-180" : ""
-                  )} 
+                  )}
                 />
               </button>
-              <div 
+              <div
                 className={cn(
                   "overflow-hidden transition-all duration-300",
                   openItem === index ? "max-h-96" : "max-h-0"
@@ -78,11 +78,11 @@ const FAQ: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
           <p className="text-neutral-600 mb-4">Still have questions?</p>
           <a href="mailto:support@amiquus.com" className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center">
-            Contact our support team 
+            Contact our support team
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>

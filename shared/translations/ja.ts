@@ -478,7 +478,7 @@ export const ja = {
       {
         question: "現在どのサイトがサポートされていますか？",
         answer:
-          "現在、AutoTrader、CarGurus、Cars.com、Facebook Marketplaceを含む主要な自動車販売プラットフォームをサポート。ユーザー要求と地域人気に基づいてカバレッジを継続的に拡大。",
+          "現在、avto.net、Facebook Marketplaceを含む主要な自動車販売プラットフォームをサポート。ユーザー要求と地域人気に基づいてカバレッジを継続的に拡大。",
       },
       {
         question: "Telegramボットを使用するために技術知識が必要ですか？",

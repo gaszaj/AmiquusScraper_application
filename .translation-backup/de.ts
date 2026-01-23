@@ -487,7 +487,7 @@ export const de = {
       {
         question: "Welche Websites unterstützt ihr derzeit?",
         answer:
-          "Wir unterstützen derzeit die wichtigsten Plattformen, einschließlich AutoTrader, CarGurus, Cars.com und Facebook Marketplace. Wir fügen ständig neue Websites nach Anfrage hinzu.",
+          "Wir unterstützen derzeit die wichtigsten Plattformen, einschließlich Avto.net und Facebook Marketplace. Wir fügen ständig neue Websites nach Anfrage hinzu.",
       },
       {
         question: "Benötige ich technische Kenntnisse, um den Telegram-Bot zu nutzen?",

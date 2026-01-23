@@ -497,7 +497,7 @@ export const pl = {
       {
         question: "Które strony obecnie wspieracie?",
         answer:
-          "Obecnie wspieramy duże platformy takie jak AutoTrader, CarGurus, Cars.com i Facebook Marketplace. Na żądanie stale dodajemy nowe strony.",
+          "Obecnie wspieramy duże platformy takie jak Avto.net i Facebook Marketplace. Na żądanie stale dodajemy nowe strony.",
       },
       {
         question: "Czy potrzebuję umiejętności technicznych do bota Telegram?",

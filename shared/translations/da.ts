@@ -488,7 +488,7 @@ export const da = {
       {
         question: "Hvilke sider understøtter I i øjeblikket?",
         answer:
-          "Vi understøtter i øjeblikket de store platforme, herunder AutoTrader, CarGurus, Cars.com og Facebook Marketplace. Vi tilføjer løbende nye sider på anmodning.",
+          "Vi understøtter i øjeblikket de store platforme, herunder Avto.net og Facebook Marketplace. Vi tilføjer løbende nye sider på anmodning.",
       },
       {
         question: "Har jeg brug for tekniske færdigheder til Telegram-botten?",

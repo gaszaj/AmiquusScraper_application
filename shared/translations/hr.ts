@@ -489,7 +489,7 @@ export const hr = {
       {
         question: "Koje web stranice trenutno podržavate?",
         answer:
-          "Trenutno podržavamo glavne platforme, uključujući AutoTrader, CarGurus, Cars.com i Facebook Marketplace. Stalno dodajemo nove web stranice prema zahtjevima.",
+          "Trenutno podržavamo glavne platforme, uključujući Avto.net i Facebook Marketplace. Stalno dodajemo nove web stranice prema zahtjevima.",
       },
       {
         question: "Trebam li tehničko znanje za korištenje Telegram bota?",

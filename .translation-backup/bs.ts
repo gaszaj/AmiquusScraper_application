@@ -490,7 +490,7 @@ export const bs = {
       {
         question: "Koje sajtove trenutno podržavate?",
         answer:
-          "Trenutno podržavamo glavne platforme za prodaju automobila, uključujući AutoTrader, CarGurus, Cars.com i Facebook Marketplace. Stalno proširujemo naše pokrivanje da uključimo više sajtova na osnovu zahtjeva korisnika i regionalne popularnosti.",
+          "Trenutno podržavamo glavne platforme za prodaju automobila, uključujući Avto.net i Facebook Marketplace. Stalno proširujemo naše pokrivanje da uključimo više sajtova na osnovu zahtjeva korisnika i regionalne popularnosti.",
       },
       {
         question:

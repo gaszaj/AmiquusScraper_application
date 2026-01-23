@@ -610,8 +610,8 @@ export default function TelegramCarAlertForm() {
                         <SelectItem value="hourly">Hourly</SelectItem>
                         <SelectItem value="30min">Every 30 minutes</SelectItem>
                         <SelectItem value="15min">Every 15 minutes</SelectItem>
-                        <SelectItem value="5min">Every 5 minutes</SelectItem>
-                        <SelectItem value="1min">Every 1 minute</SelectItem>
+                        <SelectItem value="5min">Fastest</SelectItem>
+                        {/* <SelectItem value="1min">Every 1 minute</SelectItem> */}
                       </SelectContent>
                     </Select>
                     <FormMessage />

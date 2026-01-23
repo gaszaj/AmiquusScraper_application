@@ -490,7 +490,7 @@ export const et = {
       {
         question: "Milliseid saite te hetkel toetate?",
         answer:
-          "Toetame hetkel peamisi auto müügiplatvorme, sh AutoTrader, CarGurus, Cars.com ja Facebook Marketplace. Laiendame pidevalt katvust, et lisada rohkem saite kasutajate taotluste ja piirkondliku populaarsuse põhjal.",
+          "Toetame hetkel peamisi auto müügiplatvorme, sh Avto.net ja Facebook Marketplace. Laiendame pidevalt katvust, et lisada rohkem saite kasutajate taotluste ja piirkondliku populaarsuse põhjal.",
       },
       {
         question:

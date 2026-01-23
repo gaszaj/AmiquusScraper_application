@@ -497,7 +497,7 @@ export const az = {
       {
         question: "Hazırda hansı saytları dəstəkləyirsiniz:",
         answer:
-          "Hazırda AutoTrader, CarGurus, Cars.com və Facebook Marketplace kimi böyük platformaları dəstəkləyirik. Tələbə görə daim yeni saytlar əlavə edirik:",
+          "Hazırda Avto.net və Facebook Marketplace kimi böyük platformaları dəstəkləyirik. Tələbə görə daim yeni saytlar əlavə edirik:",
       },
       {
         question: "Telegram botu üçün texniki bacarıqlar lazımdırmı?",

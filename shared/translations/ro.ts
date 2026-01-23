@@ -490,7 +490,7 @@ export const ro = {
       {
         question: "Ce site-uri sunt suportate în prezent?",
         answer:
-          "În prezent suportăm platformele principale de vânzări auto, inclusiv AutoTrader, CarGurus, Cars.com și Facebook Marketplace. Extindem acoperirea pe baza cererilor utilizatorilor și popularității regionale.",
+          "În prezent suportăm platformele principale de vânzări auto, inclusiv Avto.net și Facebook Marketplace. Extindem acoperirea pe baza cererilor utilizatorilor și popularității regionale.",
       },
       {
         question: "Utilizarea botului Telegram necesită cunoștințe tehnice?",

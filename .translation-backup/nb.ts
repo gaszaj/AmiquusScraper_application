@@ -491,7 +491,7 @@ export const nb = {
       {
         question: "Hvilke sider støtter dere for øyeblikket?",
         answer:
-          "Vi støtter for øyeblikket de store plattformene, inkludert AutoTrader, CarGurus, Cars.com og Facebook Marketplace. Vi legger kontinuerlig til nye sider på forespørsel.",
+          "Vi støtter for øyeblikket de store plattformene, inkludert Avto.net og Facebook Marketplace. Vi legger kontinuerlig til nye sider på forespørsel.",
       },
       {
         question: "Trenger jeg tekniske ferdigheter for Telegram-boten?",

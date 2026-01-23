@@ -498,7 +498,7 @@ export const sq = {
       {
         question: "Cilat faqe mbështetni aktualisht?",
         answer:
-          "Aktualisht mbështesim platforma të mëdha si AutoTrader, CarGurus, Cars.com dhe Facebook Marketplace. Shtojmë vazhdimisht faqe të reja sipas kërkesës.",
+          "Aktualisht mbështesim platforma të mëdha si Avto.net dhe Facebook Marketplace. Shtojmë vazhdimisht faqe të reja sipas kërkesës.",
       },
       {
         question: "A më duhen aftësi teknike për botin Telegram?",

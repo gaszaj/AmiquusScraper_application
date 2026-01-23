@@ -28,7 +28,7 @@ import { useToast } from "@/hooks/use-toast";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLanguage } from "@/components/language-provider";
 import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
-import { apiRequest } from "@/lib/queryClient";
+import { apiRequest, queryClient } from "@/lib/queryClient";
 
 export type NewComerResponse = {
   websites: {
@@ -240,6 +240,8 @@ export default function EditSubscriptionPage({
         const errorText = await res.text();
         throw new Error(errorText || "Failed to update subscription");
       }
+
+      queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
 
       toast({
         title: t("subscription.toasts.success.title"),
@@ -674,8 +676,8 @@ export default function EditSubscriptionPage({
                     <SelectItem value="hourly">Hourly</SelectItem>
                     <SelectItem value="30min">Every 30 minutes</SelectItem>
                     <SelectItem value="15min">Every 15 minutes</SelectItem>
-                    <SelectItem value="5min">Every 5 minutes</SelectItem>
-                    <SelectItem value="1min">Every 1 minute</SelectItem>
+                    <SelectItem value="5min">Fastest</SelectItem>
+                    {/* <SelectItem value="1min">Every 1 minute</SelectItem> */}
                   </SelectContent>
                 </Select>
                 <FormMessage />

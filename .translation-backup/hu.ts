@@ -493,7 +493,7 @@ export const hu = {
       {
         question: "Mely oldalakat támogatják jelenleg?",
         answer:
-          "Jelenleg a fő autós eladási platformokat támogatjuk, beleértve az AutoTrader-t, CarGurus-t, Cars.com-ot és a Facebook Marketplace-t. Folyamatosan bővítjük a lefedettséget további oldalakkal a felhasználói kérések és regionális népszerűség alapján.",
+          "Jelenleg a fő autós eladási platformokat támogatjuk, beleértve az AutoTrader-t, CarGurus-t-ot és a Facebook Marketplace-t. Folyamatosan bővítjük a lefedettséget további oldalakkal a felhasználói kérések és regionális népszerűség alapján.",
       },
       {
         question:

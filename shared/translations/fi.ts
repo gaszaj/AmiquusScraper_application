@@ -489,7 +489,7 @@ export const fi = {
       {
         question: "Mitkä sivustot ovat tällä hetkellä tuettuja?",
         answer:
-          "Tuemme tällä hetkellä suuria alustoja, kuten AutoTrader, CarGurus, Cars.com ja Facebook Marketplace. Lisäämme jatkuvasti uusia sivustoja pyynnöstä.",
+          "Tuemme tällä hetkellä suuria alustoja, kuten Avto.net ja Facebook Marketplace. Lisäämme jatkuvasti uusia sivustoja pyynnöstä.",
       },
       {
         question: "Tarvitsenko teknisiä taitoja Telegram-bottiin?",

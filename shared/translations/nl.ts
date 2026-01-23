@@ -491,7 +491,7 @@ export const nl = {
       {
         question: "Welke sites ondersteunen jullie momenteel?",
         answer:
-          "We ondersteunen momenteel de belangrijkste platforms, waaronder AutoTrader, CarGurus, Cars.com en Facebook Marketplace. We voegen voortdurend nieuwe sites toe op verzoek.",
+          "We ondersteunen momenteel de belangrijkste platforms, waaronder Avto.net en Facebook Marketplace. We voegen voortdurend nieuwe sites toe op verzoek.",
       },
       {
         question: "Heb ik technische kennis nodig voor de Telegram-bot?",

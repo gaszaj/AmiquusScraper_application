@@ -488,7 +488,7 @@ export const sl = {
       {
         question: "Katera spletna mesta trenutno podpirate?",
         answer:
-          "Trenutno podpiramo glavne platforme, vključno z AutoTrader, CarGurus, Cars.com in Facebook Marketplace. Nenehno dodajamo nova spletna mesta glede na povpraševanje.",
+          "Trenutno podpiramo glavne platforme, vključno z Avto.net in Facebook Marketplace. Nenehno dodajamo nova spletna mesta glede na povpraševanje.",
       },
       {
         question: "Ali potrebujem tehnično znanje za uporabo Telegram bota?",
