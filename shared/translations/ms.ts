@@ -488,7 +488,7 @@ export const ms = {
       {
         question: "Laman web manakah yang disokong kini?",
         answer:
-          "Kini kami menyokong platform jualan kereta utama, termasuk AutoTrader, CarGurus, Cars.com dan Facebook Marketplace. Kami mengembangkan liputan berdasarkan permintaan pengguna dan populariti serantau.",
+          "Kini kami menyokong platform jualan kereta utama, termasuk Avto.net dan Facebook Marketplace. Kami mengembangkan liputan berdasarkan permintaan pengguna dan populariti serantau.",
       },
       {
         question:

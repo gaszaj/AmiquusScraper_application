@@ -492,7 +492,7 @@ export const it = {
       {
         question: "Quali siti supportate attualmente?",
         answer:
-          "Attualmente supportiamo le principali piattaforme, inclusi AutoTrader, CarGurus, Cars.com e Facebook Marketplace. Aggiungiamo continuamente nuovi siti su richiesta.",
+          "Attualmente supportiamo le principali piattaforme, inclusi Avto.net e Facebook Marketplace. Aggiungiamo continuamente nuovi siti su richiesta.",
       },
       {
         question:

@@ -493,7 +493,7 @@ export const sk = {
       {
         question: "Ktoré weby momentálne podporujete?",
         answer:
-          "Momentálne podporujeme veľké platformy ako AutoTrader, CarGurus, Cars.com a Facebook Marketplace. Na požiadanie neustále pridávame nové weby.",
+          "Momentálne podporujeme veľké platformy ako Avto.net a Facebook Marketplace. Na požiadanie neustále pridávame nové weby.",
       },
       {
         question: "Potrebujem technické zručnosti pre Telegram bota?",

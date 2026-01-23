@@ -469,7 +469,7 @@ export const ko = {
       {
         question: "현재 어떤 사이트가 지원되나요?",
         answer:
-          "현재 AutoTrader, CarGurus, Cars.com, Facebook Marketplace를 포함한 주요 자동차 판매 플랫폼을 지원합니다. 사용자 요청과 지역 인기에 따라 지속적으로 범위를 확대합니다.",
+          "현재 Avto.net, Facebook Marketplace를 포함한 주요 자동차 판매 플랫폼을 지원합니다. 사용자 요청과 지역 인기에 따라 지속적으로 범위를 확대합니다.",
       },
       {
         question: "Telegram 봇을 사용하기 위해 기술 지식이 필요하나요?",

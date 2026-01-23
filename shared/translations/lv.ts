@@ -484,7 +484,7 @@ export const lv = {
       {
         question: "Kuras vietnes pašlaik tiek atbalstītas?",
         answer:
-          "Pašlaik atbalstām galvenās auto tirdzniecības platformas, tostarp AutoTrader, CarGurus, Cars.com un Facebook Marketplace. Paplašinām pārklājumu, balstoties uz lietotāju pieprasījumiem un reģionālo popularitāti.",
+          "Pašlaik atbalstām galvenās auto tirdzniecības platformas, tostarp Avto.net un Facebook Marketplace. Paplašinām pārklājumu, balstoties uz lietotāju pieprasījumiem un reģionālo popularitāti.",
       },
       {
         question:

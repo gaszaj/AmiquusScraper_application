@@ -462,7 +462,7 @@ export const tr = {
         question: "Aynı anda birden fazla farklı araç tipini takip edebilir miyim?"
       },
       2: {
-        answer: "Şu anda AutoTrader, CarGurus, Cars.com ve Facebook Marketplace dahil olmak üzere başlıca araç listeleme platformlarını destekliyoruz. Kullanıcı talepleri ve bölgesel popülerliğe göre daha fazla web sitesini kapsayacak şekilde hizmet alanımızı sürekli genişletiyoruz.",
+        answer: "Şu anda Avto.net ve Facebook Marketplace dahil olmak üzere başlıca araç listeleme platformlarını destekliyoruz. Kullanıcı talepleri ve bölgesel popülerliğe göre daha fazla web sitesini kapsayacak şekilde hizmet alanımızı sürekli genişletiyoruz.",
         question: "Şu anda hangi web sitelerini destekliyorsunuz?"
       },
       3: {

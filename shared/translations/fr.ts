@@ -487,7 +487,7 @@ export const fr = {
       {
         question: "Quels sites web supportez-vous actuellement ?",
         answer:
-          "Nous supportons actuellement les principales plateformes, y compris AutoTrader, CarGurus, Cars.com et Facebook Marketplace. Nous ajoutons constamment de nouveaux sites selon les demandes.",
+          "Nous supportons actuellement les principales plateformes, y compris Avto.net et Facebook Marketplace. Nous ajoutons constamment de nouveaux sites selon les demandes.",
       },
       {
         question: "Ai-je besoin de connaissances techniques pour utiliser le bot Telegram ?",

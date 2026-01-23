@@ -61,7 +61,7 @@ export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
             </div>
 
             {/* Trust indicators */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-neutral-600 dark:text-neutral-400 text-sm">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-neutral-600 dark:text-neutral-400 text-sm">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-primary dark:text-primary" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
@@ -86,13 +86,13 @@ export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
                 </svg>
                 <span>{t("hero.trustIndicators.cancelAnytime")}</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Image & notification section */}
           <div className="relative mt-8 lg:mt-0">
             {/* Mobile notification cards - visible only on small screens */}
-            <div className="lg:hidden space-y-4 mb-8">
+            {/* <div className="lg:hidden space-y-4 mb-8">
               <div className="bg-white dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-200 dark:border-neutral-800 p-4 rounded-lg shadow-xl">
                 <div className="flex items-start gap-3">
                   <div className="bg-primary/20 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-full shrink-0">
@@ -116,7 +116,7 @@ export default function Hero({ onGetStarted, onHowItWorks }: HeroProps) {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Desktop image and notification cards - hidden on small screens */}
             <div className="relative hidden lg:block">

@@ -486,7 +486,7 @@ export const en = {
       {
         question: "What websites do you currently support?",
         answer:
-          "We currently support major car listing platforms including AutoTrader, CarGurus, Cars.com, and Facebook Marketplace. We're constantly expanding our coverage to include more websites based on user demand and regional popularity.",
+          "We currently support major car listing platforms including Avto.net, and Facebook Marketplace. We're constantly expanding our coverage to include more websites based on user demand and regional popularity.",
       },
       {
         question: "Do I need technical knowledge to use the Telegram bot?",

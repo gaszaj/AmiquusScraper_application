@@ -38,16 +38,16 @@ export const FREQUENCY_OPTIONS = [
   },
   {
     id: "5min",
-    name: "Every 5 minutes",
+    name: "Fastest",
     minutes: 5,
     additionalPrice: fiveMinUpdatesPrice,
   },
-  {
-    id: "1min",
-    name: "Every 1 minute",
-    minutes: 1,
-    additionalPrice: oneMinUpdatesPrice,
-  },
+  // {
+  //   id: "1min",
+  //   name: "Every 1 minute",
+  //   minutes: 1,
+  //   additionalPrice: oneMinUpdatesPrice,
+  // },
 ];
 
 // Mapping of frequency options to display labels
@@ -55,7 +55,7 @@ export const FREQUENCY_LABELS: Record<string, string> = {
   hourly: "Every 1 hour",
   "30min": "Every 30 minutes",
   "15min": "Every 15 minutes",
-  "5min": "Every 5 minutes",
+  "5min": "Fastest",
   "1min": "Every 1 minute",
 };
 

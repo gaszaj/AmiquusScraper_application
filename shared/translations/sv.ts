@@ -488,7 +488,7 @@ export const sv = {
       {
         question: "Vilka sajter stödjer ni för närvarande?",
         answer:
-          "Vi stödjer för närvarande de stora plattformarna, inklusive AutoTrader, CarGurus, Cars.com och Facebook Marketplace. Vi lägger kontinuerligt till nya sajter på begäran.",
+          "Vi stödjer för närvarande de stora plattformarna, inklusive Avto.net och Facebook Marketplace. Vi lägger kontinuerligt till nya sajter på begäran.",
       },
       {
         question: "Behöver jag tekniska kunskaper för Telegram-boten?",

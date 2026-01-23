@@ -489,7 +489,7 @@ export const cs = {
       {
         question: "Které weby momentálně podporujete?",
         answer:
-          "Momentálně podporujeme velké platformy jako AutoTrader, CarGurus, Cars.com a Facebook Marketplace. Na požádání neustále přidáváme nové weby.",
+          "Momentálně podporujeme velké platformy jako Avto.net a Facebook Marketplace. Na požádání neustále přidáváme nové weby.",
       },
       {
         question: "Potřebuji technické dovednosti pro Telegram bota?",

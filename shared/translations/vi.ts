@@ -484,7 +484,7 @@ export const vi = {
       {
         question: "Hiện tại hỗ trợ những website nào?",
         answer:
-          "Hiện chúng tôi hỗ trợ các nền tảng lớn như AutoTrader, CarGurus, Cars.com và Facebook Marketplace. Chúng tôi liên tục mở rộng sang nhiều website khác dựa trên nhu cầu và mức độ phổ biến ở từng khu vực.",
+          "Hiện chúng tôi hỗ trợ các nền tảng lớn như Avto.net và Facebook Marketplace. Chúng tôi liên tục mở rộng sang nhiều website khác dựa trên nhu cầu và mức độ phổ biến ở từng khu vực.",
       },
       {
         question: "Tôi có cần kiến thức kỹ thuật để dùng Telegram bot không?",
