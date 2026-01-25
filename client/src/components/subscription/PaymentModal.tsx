@@ -105,7 +105,7 @@ export const PaymentModal = ({
         try {
             const response = await apiRequest(
                 "GET",
-                `/api/validate-discount?code=${encodeURIComponent(code)}`
+                `/api/dodo/validate-discount?code=${encodeURIComponent(code)}`
             );
 
             if (!response.ok) {
@@ -175,7 +175,6 @@ export const PaymentModal = ({
         const payload = {
             userId,
             websitesSelected: formData.websitesSelected,
-            facebookMarketplaceUrl: formData.facebookMarketplaceUrl || "",
             updateFrequency: formData.updateFrequency,
             brand: formData.carBrand,
             model: formData.carModel,
@@ -201,7 +200,7 @@ export const PaymentModal = ({
             // Proceed to payment with subscriptionData
             const response = await apiRequest(
                 "POST",
-                "/api/create-checkout-session",
+                "/api/dodo/create-checkout-session",
                 payload
             );
 

@@ -35,8 +35,15 @@ import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLanguage } from "@/components/language-provider";
 import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
 import { PaymentModal } from "../subscription/PaymentModal";
-import { buildAlertSchema } from "@/lib/buildAlertSchema";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import facebookVideo from "@/assets/facebook_vid.mp4";
+import svg1 from "@/assets/1.svg";
+import svg2 from "@/assets/2.svg";
+import svg3 from "@/assets/3.svg";
+import svg4 from "@/assets/4.svg";
+import svg5 from "@/assets/5.svg";
+import svg6 from "@/assets/6.svg";
+import svg7 from "@/assets/7.svg";
+import svg8 from "@/assets/8.svg";
 
 export type NewComerResponse = {
   websites: {
@@ -654,18 +661,21 @@ export default function TelegramCarAlertForm() {
                       {t("websiteSelection.help.videoDesc")}
                     </p>
                     <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                      <iframe
-                        width="100%"
-                        height="315"
-                        ata-cmp-vendor="s30"
-                        src="about:blank"
-                        class="cmplazyload"
-                        data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
-                        title="How to copy Facebook Marketplace search link"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
+                      <video
+                        src={facebookVideo}
+                        controls
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
+                        <img src={svg1} alt="Step 1" className="" />
+                        <img src={svg2} alt="Step 2" className="" />
+                        <img src={svg3} alt="Step 3" className="" />
+                        <img src={svg4} alt="Step 4" className="" />
+                        <img src={svg5} alt="Step 5" className="" />
+                        <img src={svg6} alt="Step 6" className="" />
+                        <img src={svg7} alt="Step 7" className="" />
+                        <img src={svg8} alt="Step 8" className="" />
+                      </div>
                     </div>
                   </div>
                 </>

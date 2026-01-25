@@ -104,7 +104,7 @@ export default function Register() {
     } catch (error: any) {
       toast({
         title: t("register.toast.failure.title"),
-        description: t("register.toast.failure.desc"),
+        description: error.message || t("register.toast.failure.desc"),
         variant: "destructive",
       });
       setIsRegistering(false);
@@ -326,7 +326,7 @@ export default function Register() {
                 {isRegistering ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    {t("register.creating")}
+                    {/* {t("register.creating")} */}
                   </>
                 ) : (
                  t("register.createBtn")

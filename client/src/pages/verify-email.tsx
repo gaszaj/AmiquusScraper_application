@@ -146,6 +146,9 @@ export default function VerifyEmail() {
             <CardDescription className="text-center dark:text-neutral-300">
               {t("verifyEmail.description")}
             </CardDescription>
+            <p className="mt-2 text-center text-sm text-neutral-500 dark:text-neutral-400">
+              Check your spam folder if you don't see the email.
+            </p>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
