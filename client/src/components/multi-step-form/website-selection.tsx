@@ -28,6 +28,15 @@ import { WEBSITE_OPTIONS, FREQUENCY_OPTIONS } from "@/lib/constants";
 import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 import { useLanguage } from "@/components/language-provider";
 import { currencySymbol } from "@shared/pricing";
+import facebookVideo from "@/assets/facebook_vid.mp4";
+import svg1 from "@/assets/1.svg";
+import svg2 from "@/assets/2.svg";
+import svg3 from "@/assets/3.svg";
+import svg4 from "@/assets/4.svg";
+import svg5 from "@/assets/5.svg";
+import svg6 from "@/assets/6.svg";
+import svg7 from "@/assets/7.svg";
+import svg8 from "@/assets/8.svg";
 
 
 interface WebsiteSelectionProps {
@@ -74,7 +83,7 @@ export default function WebsiteSelection({
     });
 
   type WebsiteSelectionFormData = z.infer<typeof websiteSelectionSchema>;
-  
+
   useEffect(() => {
     fetch("/api/newcommer")
       .then((res) => res.json())
@@ -135,7 +144,7 @@ export default function WebsiteSelection({
             render={({ field }) => (
               <FormItem>
                 <div className="mb-4">
-                   <FormLabel>{t("websiteSelection.labels.websites")}</FormLabel>
+                  <FormLabel>{t("websiteSelection.labels.websites")}</FormLabel>
                   <FormDescription>
                     {t("websiteSelection.help.websites")}
                   </FormDescription>
@@ -155,14 +164,14 @@ export default function WebsiteSelection({
                                   onCheckedChange={(checked) => {
                                     return checked
                                       ? field.onChange([
-                                          ...field.value,
-                                          "facebook",
-                                        ])
+                                        ...field.value,
+                                        "facebook",
+                                      ])
                                       : field.onChange(
-                                          field.value?.filter(
-                                            (value) => value !== "facebook",
-                                          ),
-                                        );
+                                        field.value?.filter(
+                                          (value) => value !== "facebook",
+                                        ),
+                                      );
                                   }}
                                 />
                               </FormControl>
@@ -189,10 +198,10 @@ export default function WebsiteSelection({
                                     return checked
                                       ? field.onChange([...field.value, site])
                                       : field.onChange(
-                                          field.value?.filter(
-                                            (value) => value !== site,
-                                          ),
-                                        );
+                                        field.value?.filter(
+                                          (value) => value !== site,
+                                        ),
+                                      );
                                   }}
                                 />
                               </FormControl>
@@ -240,21 +249,24 @@ export default function WebsiteSelection({
                   {t("websiteSelection.help.videoTitle")}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                {t("websiteSelection.help.videoDesc")}
+                  {t("websiteSelection.help.videoDesc")}
                 </p>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="315"
-                    ata-cmp-vendor="s30"
-                     src="about:blank" 
-                    class="cmplazyload"
-                    data-cmp-src="https://www.youtube.com/embed/jNQXAC9IVRw?si=68o2DzZ_OjDcvKEM"
-                    title="How to copy Facebook Marketplace search link"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  <video
+                    src={facebookVideo}
+                    controls
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
+                    <img src={svg1} alt="Step 1" className="" />
+                    <img src={svg2} alt="Step 2" className="" />
+                    <img src={svg3} alt="Step 3" className="" />
+                    <img src={svg4} alt="Step 4" className="" />
+                    <img src={svg5} alt="Step 5" className="" />
+                    <img src={svg6} alt="Step 6" className="" />
+                    <img src={svg7} alt="Step 7" className="" />
+                    <img src={svg8} alt="Step 8" className="" />
+                  </div>
                 </div>
               </div>
             </>
@@ -267,7 +279,7 @@ export default function WebsiteSelection({
             render={({ field }) => (
               <FormItem>
                 <FormLabel>                  {t("websiteSelection.labels.updateFrequency")}
-</FormLabel>
+                </FormLabel>
                 <FormDescription>
                   {t("websiteSelection.help.updateFrequency")}
                 </FormDescription>
