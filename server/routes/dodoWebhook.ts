@@ -74,6 +74,12 @@ router.post('/', express.raw({ type: "application/json" }),
                 await handleSubscriptionCancelled(cancellationData);
             } else if (unwrapped.type === 'subscription.expired') {
                 //Subscription has expired at the end of its billing period.
+                console.log('Subscription expired webhook received', unwrapped.data.subscription_id);
+                const expiredData = unwrapped.data;
+
+                // Update subscription status in your database, 
+                //change to expired handler
+                await handleSubscriptionCancelled(expiredData);
             } else if (unwrapped.type === 'subscription.plan_changed') {
                 //Subscription plan has been changed.
 
