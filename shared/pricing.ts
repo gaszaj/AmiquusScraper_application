@@ -62,7 +62,7 @@ const currencySymbol = "€";
 const currencyLocale = "de-DE";
 const currencyCode = "EUR";
 const payment_frequency_interval = "Day"; //Day, Week, Month, Year
-const subscription_period_interval = "Day"; //Day, Week, Month, Year 
+const subscription_period_interval = "Year"; //Day, Week, Month, Year 
 
 
 export { additionalWebsitePrice, fiveMinUpdatesPrice, hourlyUpdatesPrice, thirtyMinUpdatesPrice, fifteenMinUpdatesPrice, oneMinUpdatesPrice, currencySymbol, currencyLocale, currencyCode, payment_frequency_interval, subscription_period_interval };

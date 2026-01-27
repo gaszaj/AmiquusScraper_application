@@ -105,7 +105,7 @@ export const PaymentModal = ({
         try {
             const response = await apiRequest(
                 "GET",
-                `/api/dodo/validate-discount?code=${encodeURIComponent(code)}`
+                `/api/validate-discount?code=${encodeURIComponent(code)}`
             );
 
             if (!response.ok) {
@@ -200,7 +200,7 @@ export const PaymentModal = ({
             // Proceed to payment with subscriptionData
             const response = await apiRequest(
                 "POST",
-                "/api/dodo/create-checkout-session",
+                "/api/create-checkout-session",
                 payload
             );
 

@@ -11,7 +11,7 @@ export default function DodoTestPage() {
         setError(null);
 
         try {
-            const res = await fetch("/api/dodo/customers", {
+            const res = await fetch("/api//customers", {
                 method: "GET",
                 credentials: "include", // IMPORTANT: sends auth cookies/session
                 headers: {
