@@ -112,6 +112,20 @@ export default function TelegramCarAlertForm() {
       notificationLanguage: language,
     },
   });
+
+  useEffect(() => {
+    const existing = localStorage.getItem("affonso_referral");
+    if (existing) {
+      return;
+    }
+
+    const referral =
+    window.affonso_referral;
+  
+    if (referral) {
+      localStorage.setItem("affonso_referral", referral);
+    }
+  }, []);
   
   useEffect(() => {
     fetch("/api/newcommer")
