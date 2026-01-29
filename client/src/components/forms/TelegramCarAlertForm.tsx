@@ -116,7 +116,16 @@ export default function TelegramCarAlertForm() {
   const [referralId, setReferralId] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    setReferralId(window.affonso_referral);
+    if (typeof window === "undefined") return;
+  
+    const referral =
+      window.affonso_referral ||
+      new URLSearchParams(window.location.search).get("ref");
+  
+    if (referral) {
+      localStorage.setItem("affonso_referral", referral);
+      setReferralId(referral)
+    }
   }, []);
 
   useEffect(() => {
