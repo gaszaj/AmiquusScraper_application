@@ -65,12 +65,12 @@ function App() {
       return;
     }
 
-    const referral =
-    window.affonso_referral
-  
     // const referral =
-    //   window.affonso_referral ||
-    //   new URLSearchParams(window.location.search).get("via");
+    // window.affonso_referral
+  
+    const referral =
+      window.affonso_referral ||
+      new URLSearchParams(window.location.search).get("via");
   
     if (referral) {
       localStorage.setItem("affonso_referral", referral);
