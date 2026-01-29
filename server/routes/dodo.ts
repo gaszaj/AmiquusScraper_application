@@ -134,6 +134,8 @@ export function registerDodoRoutes(app: Express) {
             // Convert to cents
             const amountCents = data.totalBeforeDiscount ? data.totalBeforeDiscount * 100 : 0;
 
+            const referralId = typeof data.referralId === "string" ? data.referralId : undefined;
+
             // create product
             const product = await client.products.create({
                 name: `Amiquus Subscription - ${data.brand}`,
@@ -153,6 +155,7 @@ export function registerDodoRoutes(app: Express) {
                 tax_category: "saas",
                 metadata: {
                     userId: user.id.toString(),
+                    ...(referralId ? { affonso_referral: referralId } : {}),
                 },
             });
 
@@ -221,6 +224,7 @@ export function registerDodoRoutes(app: Express) {
                 metadata: {
                     userSubscriptionId: subscription.id.toString(),
                     userId: user.id.toString(),
+                    ...(referralId ? { affonso_referral: referralId } : {}),
                 },
                 return_url: `${amiquusDomain}/dashboard`,
             });
@@ -228,6 +232,7 @@ export function registerDodoRoutes(app: Express) {
             return res.status(200).json({
                 message: "Checkout session created successfully. You will be redirected shortly.",
                 checkoutUrl: session.checkout_url,
+                // checkoutUrl: referralId ? `${session.checkout_url}?metadata_affonso_referral=referralId` : session.checkout_url,
                 sessionId: session.session_id,
             });
         } catch (error: any) {

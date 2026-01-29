@@ -112,6 +112,12 @@ export default function TelegramCarAlertForm() {
       notificationLanguage: language,
     },
   });
+  
+  const [referralId, setReferralId] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    setReferralId(window.affonso_referral);
+  }, []);
 
   useEffect(() => {
     fetch("/api/newcommer")
@@ -1014,6 +1020,7 @@ export default function TelegramCarAlertForm() {
           totalPrice={totalPrice}
           fixedTitle={fixedTitle}
           userId={user.id}
+          referralId={referralId}
         />
       )}
     </section>
