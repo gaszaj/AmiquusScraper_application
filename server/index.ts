@@ -2,7 +2,6 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import {registerDodoRoutes} from "./routes/dodo";
 import { setupVite, serveStatic, log } from "./vite";
-import stripeWebhookHandler from "./routes/webhook"; // create this module
 import dodoWebhookHandler from "./routes/dodoWebhook";
 import { startSubscriptionRetryJob } from "./jobs/subscriptionRetryJob";
 import dotenv from 'dotenv';
@@ -10,8 +9,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
 
-// ✅ Register Stripe webhook BEFORE body parsing
-app.use("/api/stripe-webhook", stripeWebhookHandler);
 // ✅ Register Dodo webhook BEFORE body parsing
 app.use("/api/dodo/webhook", dodoWebhookHandler);
 
