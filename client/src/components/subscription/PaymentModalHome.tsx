@@ -219,6 +219,11 @@ export const PaymentModalHome = ({
                 return;
             }
 
+            // ✅ clear referral AFTER checkout session is created
+            if (referralId) {
+                localStorage.removeItem("affonso_referral");
+            }
+
             // redirect to Dodo checkout
             window.location.href = data.checkoutUrl;
         } catch (error) {
