@@ -22,7 +22,6 @@ interface PaymentModalProps {
     totalPrice: number;
     fixedTitle: any;
     userId: number;
-    referralId: string | undefined;
 }
 
 
@@ -33,7 +32,6 @@ export const PaymentModal = ({
     totalPrice,
     fixedTitle,
     userId,
-    referralId,
 }: PaymentModalProps) => {
     const { t, language } = useLanguage();
     const { toast } = useToast();
@@ -173,6 +171,11 @@ export const PaymentModal = ({
 
     const handleProceedToPayment = async () => {
         const formData = paymentForm.getValues();
+
+        const referralId =
+            typeof window !== "undefined"
+                ? localStorage.getItem("affonso_referral") || undefined
+                : undefined;
 
         const payload = {
             userId,
