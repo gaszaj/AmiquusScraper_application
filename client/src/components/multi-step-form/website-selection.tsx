@@ -37,6 +37,18 @@ import svg5 from "@/assets/5.svg";
 import svg6 from "@/assets/6.svg";
 import svg7 from "@/assets/7.svg";
 import svg8 from "@/assets/8.svg";
+import { StepsCarousel } from "@/components/StepsCarousel";
+
+const stepImages = [
+  { src: svg1, alt: "Step 1" },
+  { src: svg2, alt: "Step 2" },
+  { src: svg3, alt: "Step 3" },
+  { src: svg4, alt: "Step 4" },
+  { src: svg5, alt: "Step 5" },
+  { src: svg6, alt: "Step 6" },
+  { src: svg7, alt: "Step 7" },
+  { src: svg8, alt: "Step 8" },
+];
 
 
 interface WebsiteSelectionProps {
@@ -257,16 +269,7 @@ export default function WebsiteSelection({
                     controls
                     className="w-full h-full object-cover"
                   />
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
-                    <img src={svg1} alt="Step 1" className="" />
-                    <img src={svg2} alt="Step 2" className="" />
-                    <img src={svg3} alt="Step 3" className="" />
-                    <img src={svg4} alt="Step 4" className="" />
-                    <img src={svg5} alt="Step 5" className="" />
-                    <img src={svg6} alt="Step 6" className="" />
-                    <img src={svg7} alt="Step 7" className="" />
-                    <img src={svg8} alt="Step 8" className="" />
-                  </div>
+                   <StepsCarousel images={stepImages} className="mt-4 z-10" />
                 </div>
               </div>
             </>
