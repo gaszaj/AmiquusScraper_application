@@ -45,6 +45,12 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
 
   const [currentStep, setCurrentStep] = useState(1);
 
+  const [referralId, setReferralId] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    setReferralId(window.affonso_referral);
+  }, []);
+
   useEffect(() => {
     async function checkStats() {
       try {
@@ -263,6 +269,7 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
                   totalPrice={formPrice}
                   userId={user.id}
                   fixedTitle={fixedTitle}
+                  referralId={referralId}
                 />
               </div>
             )}

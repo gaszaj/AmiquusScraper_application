@@ -22,6 +22,7 @@ interface PaymentModalProps {
     totalPrice: number;
     fixedTitle: any;
     userId: number;
+    referralId: string | undefined;
 }
 
 
@@ -32,6 +33,7 @@ export const PaymentModalHome = ({
     totalPrice,
     fixedTitle,
     userId,
+    referralId,
 }: PaymentModalProps) => {
     const { t, language } = useLanguage();
     const { toast } = useToast();
@@ -193,6 +195,7 @@ export const PaymentModalHome = ({
             price: totalAfterDiscount,
             promoCode: discount ? discount.code : null,
             discountId: discount ? discount.discount_id : null,
+            referralId,
         };
 
         setSubmitting(true);
