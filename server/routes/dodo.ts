@@ -415,7 +415,7 @@ export function registerDodoRoutes(app: Express) {
                         payment_frequency_interval: payment_frequency_interval,
                         price: data.price,
                         purchasing_power_parity: false,
-                        subscription_period_count: 1,
+                        subscription_period_count: 20,
                         subscription_period_interval: subscription_period_interval,
                         type: "recurring_price",
                     },

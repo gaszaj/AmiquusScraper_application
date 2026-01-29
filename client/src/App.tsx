@@ -26,6 +26,7 @@ import { LanguageProvider } from "@/components/language-provider";
 import CheckSubscriptionPage from "@/pages/check-subscription";
 import Refund from "@/pages/refund";
 import DodoTestPage from "./pages/test";
+import { useEffect } from "react";
 
 function Router() {
   return (
@@ -57,6 +58,22 @@ function Router() {
 }
 
 function App() {
+
+  useEffect(() => {
+    const existing = localStorage.getItem("affonso_referral");
+    if (existing) {
+      return;
+    }
+  
+    const referral =
+      window.affonso_referral ||
+      new URLSearchParams(window.location.search).get("via");
+  
+    if (referral) {
+      localStorage.setItem("affonso_referral", referral);
+    }
+  }, []);
+  
   return (
     <AuthProvider>
       <LanguageProvider>

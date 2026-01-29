@@ -45,20 +45,6 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
 
   const [currentStep, setCurrentStep] = useState(1);
 
-  const [referralId, setReferralId] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-  
-    const referral =
-      window.affonso_referral ||
-      new URLSearchParams(window.location.search).get("ref");
-  
-    if (referral) {
-      localStorage.setItem("affonso_referral", referral);
-      setReferralId(referral)
-    }
-  }, []);
 
   useEffect(() => {
     async function checkStats() {
@@ -278,7 +264,6 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
                   totalPrice={formPrice}
                   userId={user.id}
                   fixedTitle={fixedTitle}
-                  referralId={referralId}
                 />
               </div>
             )}

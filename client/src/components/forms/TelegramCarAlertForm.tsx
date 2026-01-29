@@ -113,21 +113,6 @@ export default function TelegramCarAlertForm() {
     },
   });
   
-  const [referralId, setReferralId] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-  
-    const referral =
-      window.affonso_referral ||
-      new URLSearchParams(window.location.search).get("ref");
-  
-    if (referral) {
-      localStorage.setItem("affonso_referral", referral);
-      setReferralId(referral)
-    }
-  }, []);
-
   useEffect(() => {
     fetch("/api/newcommer")
       .then((res) => res.json())
@@ -1029,7 +1014,6 @@ export default function TelegramCarAlertForm() {
           totalPrice={totalPrice}
           fixedTitle={fixedTitle}
           userId={user.id}
-          referralId={referralId}
         />
       )}
     </section>
