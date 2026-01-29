@@ -679,7 +679,7 @@ export default function TelegramCarAlertForm() {
                         controls
                         className="w-full h-full object-cover"
                       />
-                    <StepsCarousel images={stepImages} className="mt-4 z-10" />
+                      <StepsCarousel images={stepImages} className="mt-4 z-10" />
                     </div>
                   </div>
                 </>
