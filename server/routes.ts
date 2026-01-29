@@ -36,10 +36,6 @@ const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
   : undefined;
 
-// const stripe = new Stripe(
-//   "sk_test_51R7GaAKTt4KB6Gxyd5O4LaQXsU7DzgMeb67B6rE7yQXWycIXrgDL3WPeERnYKXvFDWQWkle8HdMJekxnZO1CZW9c00bXzlIHDs",
-// );
-
 const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || "";
 
 export const JSON_BASE_URL =
@@ -622,64 +618,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Subscription routes
-  // list payment methods
-  app.get("/api/customer/payment-methods", async (req, res) => {
-    const { customerId } = req.query;
-
-    if (!stripe) {
-      return res.status(500).json({ message: "Stripe is not configured" });
-    }
-
-    if (!customerId || typeof customerId !== "string") {
-      return res.status(400).json({ error: "Customer ID is required" });
-    }
-
-    const paymentMethods = await stripe.customers.listPaymentMethods(
-      customerId,
-      { limit: 1 },
-    );
-    if (!paymentMethods) {
-      return res.status(200).json({ hasPaymentMethod: false });
-    }
-    if (paymentMethods.data.length === 0) {
-      return res.status(200).json({ hasPaymentMethod: false });
-    }
-    const paymentMethod = paymentMethods.data[0];
-    if (!paymentMethod) {
-      return res.status(200).json({ hasPaymentMethod: false });
-    }
-    return res.status(200).json({
-      hasPaymentMethod: true,
-      paymentMethod,
-    });
-  });
-
-  app.get("/api/customers", async (req, res) => {
-    if (!stripe) {
-      return res.status(500).json({ message: "Stripe is not configured" });
-    }
-
-    try {
-      const customers = await stripe.customers.list({
-        limit: 100, // max 100 per request
-      });
-
-      // You can format it if needed:
-      const simplified = customers.data.map((cust) => ({
-        id: cust.id,
-        name: cust.name,
-        email: cust.email,
-        created: cust.created,
-        metadata: cust.metadata,
-      }));
-
-      res.status(200).json({ customers: simplified });
-    } catch (error: any) {
-      console.error("Error fetching Stripe customers:", error);
-      res.status(500).json({ message: "Failed to retrieve customers" });
-    }
-  });
-
   app.get("/api/subscriptions", async (req, res) => {
     try {
       if (!req.isAuthenticated()) {

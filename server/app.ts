@@ -1,14 +1,15 @@
 
 import express, { Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
-import { registerStripeRoutes } from "./routes/stripe";
-import stripeWebhookHandler from "./routes/webhook";
+import dodoWebhookHandler from "./routes/dodoWebhook";
+import { startSubscriptionRetryJob } from "./jobs/subscriptionRetryJob";
+import { registerDodoRoutes } from "./routes/dodo";
 
 export const createApp = async () => {
   const app = express();
 
-  // Stripe webhook must come first
-  app.use("/api/stripe-webhook", stripeWebhookHandler);
+  // ✅ Register Dodo webhook BEFORE body parsing
+  app.use("/api/dodo/webhook", dodoWebhookHandler);
 
   // Middlewares
   app.use(express.json());
@@ -41,8 +42,11 @@ export const createApp = async () => {
     next();
   });
 
-   registerRoutes(app);
-  registerStripeRoutes(app);
+  registerRoutes(app);
+  registerDodoRoutes(app);
+
+  // start subscription retry job
+  startSubscriptionRetryJob();
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || 500;
