@@ -181,7 +181,12 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>{t("footer.email")}</span>
+                <a
+                  href="mailto:support@amiquus.com"
+                  className="hover:text-neutral-900 dark:hover:text-white transition underline-offset-2 hover:underline"
+                >
+                  {t("footer.email")}
+                </a>
               </li>
               <li className="flex items-start">
                 <svg
@@ -201,7 +206,7 @@ export default function Footer() {
                 <span>
                   {t("footer.telegram")}
                   <br />
-                  @AmiquusSupport
+                  @AmiquusSupport_bot
                 </span>
               </li>
             </ul>
