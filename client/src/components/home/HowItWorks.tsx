@@ -1,14 +1,22 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { 
-  Check, Sparkles, Settings, BellRing, 
-  MousePointer, Radio, CarFront, Mail, 
-  Search, ListFilter, Bell, MessageSquare 
+import { useState, useEffect } from "react";
+import {
+  Check, Sparkles, Settings, BellRing,
+  MousePointer, Radio, CarFront, Mail,
+  Search, ListFilter, Bell, MessageSquare
 } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import whyChooseUsImage from "@/images/why-choose-img.webp"
+import { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
+
 
 export default function HowItWorks() {
+  const [data, setData] = useState<NewComerResponse | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  const websitesCount = data?.websites.website_names.length ?? 0;
+
   const { t } = useLanguage();
   const steps = [
     {
@@ -37,6 +45,18 @@ export default function HowItWorks() {
     },
   ];
 
+  useEffect(() => {
+    fetch("/api/newcommer")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching data:", err);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <section id="how-it-works" className="py-20 bg-neutral-100 dark:bg-neutral-950">
@@ -51,7 +71,7 @@ export default function HowItWorks() {
         {/* Steps for all screen sizes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           {steps.map((step, index) => (
-            <div 
+            <div
               key={index}
               className="group relative overflow-hidden rounded-xl bg-white dark:bg-neutral-900 shadow-md dark:shadow-none dark:border dark:border-neutral-800 transition-all duration-300 hover:shadow-xl dark:hover:border-neutral-700 p-6"
             >
@@ -59,7 +79,7 @@ export default function HowItWorks() {
               <div className="absolute top-4 right-4 bg-accent text-white dark:text-neutral-900 font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm">
                 {index + 1}
               </div>
-              
+
               <div className="flex flex-col items-start gap-4">
                 <div className={`p-4 rounded-2xl ${step.color}`}>
                   {step.icon}
@@ -81,14 +101,23 @@ export default function HowItWorks() {
                 {t("howItWorks.whyTitle")}
               </h3>
               <ul className="space-y-4">
-                {t("howItWorks.features", { returnObjects: true }).map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="mt-1 bg-accent/20 p-1 rounded-full">
-                      <Check className="h-4 w-4 text-accent" />
-                    </div>
-                    <span className="text-primary-50">{feature}</span>
-                  </li>
-                ))}
+                {t("howItWorks.features", { returnObjects: true }).map(
+                  (feature: string, index: number) => {
+                    const text =
+                      websitesCount && typeof feature === "string"
+                        ? feature.replace(/\b15\b/g, websitesCount.toString())
+                        : feature;
+
+                    return (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="mt-1 bg-accent/20 p-1 rounded-full">
+                          <Check className="h-4 w-4 text-accent" />
+                        </div>
+                        <span className="text-primary-50">{text}</span>
+                      </li>
+                    );
+                  }
+                )}
               </ul>
               <div className="mt-8">
                 <Link href="/setup-alerts">
@@ -98,7 +127,7 @@ export default function HowItWorks() {
                 </Link>
               </div>
             </div>
-            
+
             {/* Notification mockup */}
             <div className="relative">
               <div className="relative mx-auto max-w-sm">
