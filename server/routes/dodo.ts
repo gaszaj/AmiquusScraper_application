@@ -608,6 +608,12 @@ export function registerDodoRoutes(app: Express) {
                 cancel_at_next_billing_date: true
             });
 
+             // Update DB immediately
+             await storage.updateSubscription(subscriptionId, {
+                status: "cancelled_on",
+                updatedAt: new Date(),
+            });
+
             return res.status(200).json({
                 message: "Cancellation scheduled for end of billing period.",
                 cancelMethod,

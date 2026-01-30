@@ -12,11 +12,14 @@ import {
 import { Bell, User, Settings, LogOut } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 
-export function UserProfile() {
+export function UserProfile({handleMobileMenuClose}: {
+  handleMobileMenuClose: () => void
+}) {
   const { t } = useLanguage();
   const { user, isAuthenticated, logout } = useAuth();
 
   const handleLogout = () => {
+    handleMobileMenuClose()
     logout();
   };
 
@@ -41,7 +44,7 @@ export function UserProfile() {
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild onClick={handleMobileMenuClose}>
               <Link
                 href="/dashboard"
                 className="flex items-center gap-2 cursor-pointer"
@@ -50,7 +53,7 @@ export function UserProfile() {
                 <span> {t("navigations.myAlerts")}</span>
               </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild onClick={handleMobileMenuClose}>
               <Link
                 href="/profile"
                 className="flex items-center gap-2 cursor-pointer"
@@ -59,7 +62,7 @@ export function UserProfile() {
                 <span>{t("navigations.profile")}</span>
               </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild onClick={handleMobileMenuClose}>
               <Link
                 href="/profile"
                 className="flex items-center gap-2 cursor-pointer"
@@ -79,7 +82,7 @@ export function UserProfile() {
           </>
         ) : (
           <>
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild onClick={handleMobileMenuClose}>
               <Link
                 href="/login"
                 className="flex items-center gap-2 cursor-pointer"
@@ -87,7 +90,7 @@ export function UserProfile() {
                 <span>{t("navigations.login")}</span>
               </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild onClick={handleMobileMenuClose}>
               <Link
                 href="/register"
                 className="flex items-center gap-2 cursor-pointer"

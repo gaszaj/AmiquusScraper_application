@@ -30,6 +30,7 @@ import {
   CheckCircle2,
   CreditCard,
   Edit2,
+  Info,
   LogOut,
   PlusCircle,
   Settings,
@@ -297,15 +298,26 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
         </div>
       </CardContent>
       <CardFooter className="flex flex-wrap gap-2 justify-end space-x-2 pt-2">
-        <Button
-          variant="outline"
-          size="sm"
-          className="text-sm"
-          onClick={handleUpdatePaymentMethod}
-        >
-          <CreditCard className="h-3.5 w-3.5 mr-1" />
-          Update Payment Method
-        </Button>
+        {subscription.status === "cancelled_on" && (
+          <div className="flex items-center gap-2 rounded-md bg-amber-50 px-3 py-2 text-sm text-amber-700 dark:bg-amber-900/20 dark:text-amber-300">
+            <Info className="h-4 w-4" />
+            <span>
+              Subscription will remain active until the end of the current billing
+              period.
+            </span>
+          </div>
+        )}
+        {subscription.status != "cancelled_on" && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="text-sm"
+            onClick={handleUpdatePaymentMethod}
+          >
+            <CreditCard className="h-3.5 w-3.5 mr-1" />
+            Update Payment Method
+          </Button>
+        )}
         {subscription.status === "active" && (
           <Button
             variant="outline"
@@ -769,7 +781,7 @@ export default function Dashboard() {
       style: "currency",
       currency,
     }).format(amount);
-  
+
 
 
   return (

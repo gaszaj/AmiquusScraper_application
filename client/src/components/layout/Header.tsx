@@ -9,6 +9,7 @@ import { SubscriptionCounter } from "@/components/SubscriptionCounter";
 import { useToast } from "@/hooks/use-toast";
 import ScrollToTopLink from "@/components/ScrollToTopLink";
 import { useLanguage } from "@/components/language-provider";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const { t } = useLanguage();
@@ -161,22 +162,15 @@ export default function Header() {
           {!showFullMenu && (
             <button
               type="button"
-              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white p-2 rounded-md"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white p-2 rounded-md transition"
               onClick={toggleMobileMenu}
             >
-              <svg
-                className="size-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           )}
 
@@ -225,7 +219,7 @@ export default function Header() {
               </>
             )} */}
 
-            <UserProfile />
+            <UserProfile handleMobileMenuClose={handleMobileMenuClose} />
           </div>
         </div>
       </div>
@@ -328,7 +322,7 @@ export default function Header() {
               </ScrollToTopLink>
             </>
           )}
-          {isAuthenticated && <UserProfile />}
+          {isAuthenticated && <UserProfile handleMobileMenuClose={handleMobileMenuClose} />}
         </div>
       </div>
     </header>
