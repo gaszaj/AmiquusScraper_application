@@ -55,11 +55,11 @@ export function registerDodoRoutes(app: Express) {
             }
 
             // check if discount has been used by other users
-            const taken = await storage.isPromoCodeUsedByAnotherUser(userId, code);
+            // const taken = await storage.isPromoCodeUsedByAnotherUser(userId, code);
 
-            if (taken) {
-                return res.status(400).json({ message: "This promo code can’t be used on your account." });
-            }
+            // if (taken) {
+            //     return res.status(400).json({ message: "This promo code can’t be used on your account." });
+            // }
 
             return res.status(200).json(discount);
         } catch (error: any) {
@@ -167,11 +167,12 @@ export function registerDodoRoutes(app: Express) {
 
                 if (discount) {
                     // check if discount has been used by other users
-                    const taken = await storage.isPromoCodeUsedByAnotherUser(userId, data.promoCode);
+                    // const taken = await storage.isPromoCodeUsedByAnotherUser(userId, data.promoCode);
 
-                    if (!taken) {
-                        isValidCode = true;
-                    }
+                    // if (!taken) {
+                    //     isValidCode = true;
+                    // }
+                    isValidCode = true;
                 }
             }
 
@@ -557,8 +558,16 @@ export function registerDodoRoutes(app: Express) {
             const userId = user.id;
             const subscriptionId = parseInt(req.params.id, 10);
 
+            const { cancelMethod } = req.body as {
+                cancelMethod?: "now" | "billing_end";
+            };
+
             if (!userId) {
                 return res.status(401).json({ message: "User not authenticated." });
+            }
+
+            if (!cancelMethod || !["now", "billing_end"].includes(cancelMethod)) {
+                return res.status(400).json({ message: "Invalid cancel method." });
             }
 
             const subscription = await storage.getSubscription(subscriptionId);
@@ -573,26 +582,66 @@ export function registerDodoRoutes(app: Express) {
                 return res.status(400).json({ message: "Dodo subscription ID not found." });
             }
 
-            // cancel in dodo
+            if (cancelMethod === "now") {
+                // Cancel immediately in Dodo
+                await client.subscriptions.update(dodoSubscriptionId, {
+                    status: "cancelled",
+                });
+
+                // Update DB immediately
+                await storage.updateSubscription(subscriptionId, {
+                    status: "cancelled",
+                    updatedAt: new Date(),
+                });
+
+                console.log(
+                    `[✅] Subscription #${subscriptionId} cancelled for user ${user.email}`,
+                );
+
+                return res.status(200).json({
+                    message: "Subscription cancelled immediately.",
+                    cancelMethod,
+                });
+            }
+
             await client.subscriptions.update(dodoSubscriptionId, {
-                status: "cancelled",
+                cancel_at_next_billing_date: true
             });
 
-            // update in db
-            await storage.updateSubscription(subscriptionId, {
-                status: "cancelled",
-                updatedAt: new Date(),
+            return res.status(200).json({
+                message: "Cancellation scheduled for end of billing period.",
+                cancelMethod,
             });
-
-            console.log(
-                `[✅] Subscription #${subscriptionId} cancelled for user ${user.email}`,
-            );
-
-            return res
-                .status(200)
-                .json({ message: "Subscription cancelled successfully" });
         } catch (error: any) {
             console.error("❌ Error canceling subscription:", error);
+            return res.status(500).json({ message: error?.message || "Server error" });
+        }
+    });
+
+    // GET customer wallet(s)
+    app.get("/api/customer/wallets", isAuthenticated, async (req, res) => {
+        try {
+            const authUser = req.user as any;
+            const userId = authUser?.id;
+
+            if (!userId) return res.status(401).json({ message: "User not authenticated." });
+
+            const user = await storage.getUser(userId);
+            if (!user) return res.status(404).json({ message: "User not found." });
+
+            const customerId = user.dodoCustomerId;
+            if (!customerId) {
+                return res.status(400).json({ message: "No Dodo customer ID found for this user." });
+            }
+
+            const wallets = await client.customers.wallets.list(customerId);
+
+            return res.status(200).json({
+                items: wallets?.items ?? [],
+                total_balance_usd: wallets?.total_balance_usd ?? null,
+            });
+        } catch (error: any) {
+            console.error("❌ Error fetching wallets:", error);
             return res.status(500).json({ message: error?.message || "Server error" });
         }
     });

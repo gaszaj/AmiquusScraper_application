@@ -23,6 +23,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import {
   AlertCircle,
@@ -34,6 +35,7 @@ import {
   Settings,
   ShieldAlert,
   User,
+  Wallet,
 } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { queryClient, apiRequest } from "@/lib/queryClient";
@@ -181,7 +183,7 @@ function AddPaymentMethodDialog() {
 
 interface SubscriptionCardProps {
   subscription: Subscription;
-  onCancel: (id: number) => void;
+  onCancel: (id: number, cancelMethod: "now" | "billing_end" | "") => void;
 }
 
 function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
@@ -189,13 +191,23 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
   const { toast } = useToast();
   const [location, navigate] = useLocation();
   const [isConfirmingCancel, setIsConfirmingCancel] = useState(false);
+  const [cancelMethod, setCancelMethod] = useState<"now" | "billing_end" | "">("")
 
   const handleCancelClick = () => {
     setIsConfirmingCancel(true);
   };
 
   const confirmCancel = () => {
-    onCancel(subscription.id);
+    if (!cancelMethod) {
+      toast({
+        title: "Choose a cancellation option",
+        description:
+          "Please select how you want to cancel your subscription before continuing.",
+        variant: "destructive",
+      });
+      return;
+    }
+    onCancel(subscription.id, cancelMethod);
     setIsConfirmingCancel(false);
   };
 
@@ -324,18 +336,63 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
                   {t("dashboard.subscriptionCard.cancelTitle")}
                 </DialogTitle>
                 <DialogDescription>
-                  {t("dashboard.subscriptionCard.cancelDescription", {
-                    brand: subscription.brand,
-                    model: subscription.model,
-                  })}
+                  Choose how you want to cancel{" "}
+                  <span className="font-medium">
+                    {subscription.brand} {subscription.model}
+                  </span>
+                  .
                 </DialogDescription>
               </DialogHeader>
+              <div className="mt-4 space-y-3">
+                <RadioGroup
+                  value={cancelMethod}
+                  onValueChange={(v) => setCancelMethod(v as "now" | "billing_end")}
+                  className="space-y-3"
+                >
+                  <div className="flex items-start gap-3 rounded-lg border p-3">
+                    <RadioGroupItem value="billing_end" id="cancel-billing-end" className="mt-1" />
+                    <div className="space-y-1">
+                      <Label htmlFor="cancel-billing-end" className="font-medium">
+                        Stop at end of billing period (recommended)
+                      </Label>
+                      <p className="text-sm text-muted-foreground">
+                        You’ll keep getting notifications until your current paid period ends.
+                        After that, we’ll automatically turn off alerts.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 rounded-lg border p-3">
+                    <RadioGroupItem value="now" id="cancel-now" className="mt-1" />
+                    <div className="space-y-1">
+                      <Label htmlFor="cancel-now" className="font-medium">
+                        Stop immediately
+                      </Label>
+                      <p className="text-sm text-muted-foreground">
+                        Notifications stop right away. You won’t receive alerts for the rest of this billing period.
+                      </p>
+                    </div>
+                  </div>
+                </RadioGroup>
+                <div className="rounded-lg bg-muted/40 p-3 text-sm text-muted-foreground">
+                  {cancelMethod === "billing_end" ? (
+                    <>
+                      We’ll keep alerts active until the end of your billing period, then set your subscription
+                      to inactive automatically.
+                    </>
+                  ) : (
+                    <>
+                      We’ll disable alerts immediately by marking your subscription inactive right now.
+                    </>
+                  )}
+                </div>
+              </div>
               <DialogFooter className="mt-4">
                 <Button variant="outline" onClick={cancelAction}>
                   {t("dashboard.subscriptionCard.keepMyAlert")}
                 </Button>
                 <Button variant="destructive" onClick={confirmCancel}>
-                  {t("dashboard.subscriptionCard.confirmCancel")}
+                  Confirm cancellation
                 </Button>
               </DialogFooter>
             </DialogContent>
@@ -354,6 +411,14 @@ interface PaymentMethod {
   expYear: number;
   isDefault: boolean;
 }
+
+type WalletItem = {
+  customer_id: string;
+  currency: string; // "EUR"
+  balance: number;
+  created_at: string;
+  updated_at: string;
+};
 
 interface PaymentMethodCardProps {
   method: PaymentMethod;
@@ -551,6 +616,11 @@ export default function Dashboard() {
   const [, setLocation] = useLocation();
   const handledReturnRef = useRef(false);
 
+  const [walletItems, setWalletItems] = useState<WalletItem[]>([]);
+  const [totalBalanceUsd, setTotalBalanceUsd] = useState<number | null>(null);
+  const [walletOpen, setWalletOpen] = useState(false);
+  const [walletLoading, setWalletLoading] = useState(false);
+
   useEffect(() => {
     if (handledReturnRef.current) return;
 
@@ -643,9 +713,9 @@ export default function Dashboard() {
     },
   });
 
-  const handleCancelSubscription = async (id: any) => {
+  const handleCancelSubscription = async (id: number, cancelMethod: "now" | "billing_end" | "") => {
     try {
-      await cancelSubscription(id);
+      await cancelSubscription(id, cancelMethod);
       // run query to refresh subscriptions list
       queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
 
@@ -671,6 +741,36 @@ export default function Dashboard() {
   const handleSetDefaultPaymentMethod = (id: any) => {
     setDefaultPaymentMethodMutation.mutate(id);
   };
+
+
+  const fetchWallets = async () => {
+    setWalletLoading(true);
+    try {
+      const res = await apiRequest("GET", "/api/customer/wallets");
+      const json = await res.json();
+
+      if (!res.ok) throw new Error(json?.message || "Unable to fetch wallet balance.");
+
+      setWalletItems(Array.isArray(json.items) ? json.items : []);
+      setTotalBalanceUsd(typeof json.total_balance_usd === "number" ? json.total_balance_usd : null);
+    } catch (e: any) {
+      toast({
+        title: "Unable to fetch wallet",
+        description: e?.message || "Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setWalletLoading(false);
+    }
+  };
+
+  const formatMoney = (amount: number, currency: string) =>
+    new Intl.NumberFormat("en-IE", {
+      style: "currency",
+      currency,
+    }).format(amount);
+  
+
 
   return (
     <div className="container mx-auto py-12 mt-20 px-4">
@@ -721,6 +821,65 @@ export default function Dashboard() {
               )}
             </CardContent>
             <CardFooter className="flex flex-col space-y-2">
+              <Dialog open={walletOpen} onOpenChange={setWalletOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start"
+                    onClick={() => {
+                      setWalletOpen(true);
+                      fetchWallets();
+                    }}
+                  >
+                    <Wallet className="mr-2 h-4 w-4" />
+                    Check wallet balance
+                  </Button>
+                </DialogTrigger>
+
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Wallet balance</DialogTitle>
+                  </DialogHeader>
+
+                  <div className="space-y-3">
+                    {walletLoading ? (
+                      <p className="text-sm text-muted-foreground">Loading wallet…</p>
+                    ) : walletItems.length === 0 ? (
+                      <p className="text-sm text-muted-foreground">
+                        No wallet credits NotFound
+                      </p>
+                    ) : (
+                      <div className="space-y-2">
+                        {walletItems.map((w, idx) => (
+                          <div key={idx} className="rounded-lg border p-3">
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm font-medium">Wallet Balance</span>
+                              <span className="text-sm font-semibold">
+                                {formatMoney(w.balance, w.currency)}
+                              </span>
+                            </div>
+
+                            <p className="mt-1 text-xs text-muted-foreground">
+                              Currency: {w.currency} • Updated {new Date(w.updated_at).toLocaleString()}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="flex justify-end gap-2 pt-2">
+                      <Button
+                        variant="outline"
+                        onClick={fetchWallets}
+                        disabled={walletLoading}
+                      >
+                        Refresh
+                      </Button>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
               <Dialog>
                 <DialogTrigger asChild>
                   <Button variant="outline" className="w-full justify-start">
@@ -1135,13 +1294,14 @@ export default function Dashboard() {
   );
 }
 
-export async function cancelSubscription(subscriptionId: number) {
+export async function cancelSubscription(subscriptionId: number, cancelMethod: "now" | "billing_end" | "") {
   const res = await fetch(`/api/subscriptions/${subscriptionId}/cancel`, {
     method: "POST",
     credentials: "include", // send cookies if using session-based auth
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify({ cancelMethod }),
   });
 
   if (!res.ok) {
