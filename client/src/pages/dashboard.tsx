@@ -776,11 +776,11 @@ export default function Dashboard() {
     }
   };
 
-  const formatMoney = (amount: number, currency: string) =>
+  const formatMoney = (amountInCents: number, currency: string) =>
     new Intl.NumberFormat("en-IE", {
       style: "currency",
       currency,
-    }).format(amount);
+    }).format(amountInCents / 100);  
 
 
 
