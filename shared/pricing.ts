@@ -23,12 +23,12 @@
 
 // export const globalBasePrice = 9.99;
 
-export const globalBasePrice = 1.00;
+export const globalBasePrice = 5.00;
 
 export const globalAddons = [
   {
     id: "additional_website",
-    price: 0.1,
+    price: 1.1,
   },
   {
     id: "30min_updates",
