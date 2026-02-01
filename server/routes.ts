@@ -634,7 +634,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // only get active and on_hold subscriptions
       const activeSubscriptions = subscriptions.filter(
-        (sub) => sub.status === "active" || sub.status === "on_hold",
+        (sub) => sub.status === "active" || sub.status === "on_hold" || sub.status === "cancelled_on",
       );
 
 
