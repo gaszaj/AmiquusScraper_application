@@ -184,10 +184,9 @@ function AddPaymentMethodDialog() {
 
 interface SubscriptionCardProps {
   subscription: Subscription;
-  onCancel: (id: number, cancelMethod: "now" | "billing_end" | "") => void;
 }
 
-function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
+function SubscriptionCard({ subscription }: SubscriptionCardProps) {
   const { t } = useLanguage();
   const { toast } = useToast();
   const [location, navigate] = useLocation();
@@ -198,7 +197,7 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
     setIsConfirmingCancel(true);
   };
 
-  const confirmCancel = () => {
+  const confirmCancel = async () => {
     if (!cancelMethod) {
       toast({
         title: "Choose a cancellation option",
@@ -208,8 +207,36 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
       });
       return;
     }
-    onCancel(subscription.id, cancelMethod);
-    setIsConfirmingCancel(false);
+
+    try {
+      await cancelSubscription(subscription.id, cancelMethod);
+
+      // refresh subscriptions list
+      queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
+
+      toast({
+        title:
+          cancelMethod === "billing_end"
+            ? "Cancellation scheduled"
+            : "Subscription cancelled",
+        description:
+          cancelMethod === "billing_end"
+            ? "You’ll keep receiving notifications until the end of your billing period."
+            : "Notifications will stop immediately.",
+      });
+
+    } catch (error: any) {
+      console.error("Failed to cancel subscription:", error);
+
+      toast({
+        title: "Error",
+        description:
+          error?.message || "Failed to cancel subscription. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsConfirmingCancel(false);
+    }
   };
 
   const cancelAction = () => {
@@ -330,7 +357,7 @@ function SubscriptionCard({ subscription, onCancel }: SubscriptionCardProps) {
             {t("dashboard.subscriptionCard.edit")}
           </Button>
         )}
-        {subscription.status === "active" && (
+        {["active", "on_hold"].includes(subscription.status) && (
           <Dialog open={isConfirmingCancel} onOpenChange={setIsConfirmingCancel}>
             <DialogTrigger asChild>
               <Button
@@ -725,27 +752,6 @@ export default function Dashboard() {
     },
   });
 
-  const handleCancelSubscription = async (id: number, cancelMethod: "now" | "billing_end" | "") => {
-    try {
-      await cancelSubscription(id, cancelMethod);
-      // run query to refresh subscriptions list
-      queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
-
-      toast({
-        title: "Subscription Cancelled",
-        description: `Subscription ${id} has been cancelled.`,
-        variant: "default",
-      });
-    } catch (error) {
-      console.error("Failed to delete subscription:", error);
-      toast({
-        title: "Error",
-        description: "Failed to cancel subscription. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
-
   const handleRemovePaymentMethod = (id: any) => {
     removePaymentMethodMutation.mutate(id);
   };
@@ -780,7 +786,7 @@ export default function Dashboard() {
     new Intl.NumberFormat("en-IE", {
       style: "currency",
       currency,
-    }).format(amountInCents / 100);  
+    }).format(amountInCents / 100);
 
 
 
@@ -1230,7 +1236,6 @@ export default function Dashboard() {
                         <SubscriptionCard
                           key={subscription.id}
                           subscription={subscription}
-                          onCancel={handleCancelSubscription}
                         />
                       ))
                     ) : (

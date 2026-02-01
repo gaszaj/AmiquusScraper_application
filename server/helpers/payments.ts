@@ -555,6 +555,23 @@ export async function retryOnHoldSubscriptions() {
   for (const sub of onHoldSubs) {
     if (sub.invoiceAttempts >= 3) {
       console.log("Retry limit reached for", sub.id);
+      //if it is not cancelled, cancel it
+
+      try {
+        await dodoClient.subscriptions.update(sub.dodoSubscriptionId as string, {
+          status: "cancelled",
+        });
+
+        await storage.updateSubscription(sub.id, {
+          status: "cancelled",
+          updatedAt: new Date(),
+        });
+
+        console.log(`Subscription ${sub.id} cancelled immediately after retries`);
+      } catch (err) {
+        console.error("Failed to cancel subscription after retries", sub.id, err);
+      }
+
       continue;
     }
 

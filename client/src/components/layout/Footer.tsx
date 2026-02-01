@@ -206,7 +206,14 @@ export default function Footer() {
                 <span>
                   {t("footer.telegram")}
                   <br />
-                  @AmiquusSupport_bot
+                  <a
+                    href="https://t.me/AmiquusSupport_bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-neutral-900 dark:hover:text-white transition underline-offset-2 hover:underline"
+                  >
+                    @AmiquusSupport_bot
+                  </a>
                 </span>
               </li>
             </ul>
