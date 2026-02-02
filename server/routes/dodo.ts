@@ -3,9 +3,10 @@ import DodoPayments from 'dodopayments';
 import { storage } from "../storage";
 import { createOrFindCustomer, validatePromoCode } from "../helpers/payments";
 import { buildJsonObject, getSubscriptionStats } from "../libs/utils";
-import { currencyCode, payment_frequency_interval, subscription_period_interval } from "@shared/pricing";
+import { currencyCode, payment_frequency_count, payment_frequency_interval, subscription_period_count, subscription_period_interval } from "@shared/pricing";
 import { JSON_BASE_URL } from "../routes";
 import { RETRIABLE_ERRORS } from "@shared/config";
+import { Discount } from "dodopayments/resources/index.mjs";
 
 const DODO_PAYMENTS_API_KEY = process.env['DODO_PAYMENTS_API_KEY'];
 const DODO_PAYMENTS_ENVIRONMENT = process.env['DODO_PAYMENTS_ENVIRONMENT'] || "test_mode";
@@ -125,6 +126,8 @@ export function registerDodoRoutes(app: Express) {
             if (!customerId) {
                 const dodoCustomer = await createOrFindCustomer(user.email, `${user.firstName} ${user.lastName}`, user.id);
 
+                customerId = dodoCustomer.customer_id; // ✅ set it
+
                 await storage.updateUserDodoCustomerId(
                     user.id,
                     dodoCustomer.customer_id,
@@ -132,9 +135,54 @@ export function registerDodoRoutes(app: Express) {
             }
 
             // Convert to cents
-            const amountCents = data.totalBeforeDiscount ? data.totalBeforeDiscount * 100 : 0;
+            const amountCents = data.totalBeforeDiscount
+                ? Math.round(Number(data.totalBeforeDiscount) * 100)
+                : 0;
+
+            if (!amountCents || amountCents <= 0) {
+                return res.status(400).json({ message: "Invalid amount." });
+            }
 
             const referralId = typeof data.referralId === "string" ? data.referralId : undefined;
+
+            // ✅ Promo code validation
+            let isValidCode = false;
+            let priceDiscount: number | undefined;
+            let bpsDiscount: number | undefined;
+            let priceAfterDiscount = amountCents;
+            let dodoDiscountId: string | undefined;
+
+            if (data.promoCode) {
+                const discount = await validatePromoCode(data.promoCode);
+
+                if (!discount) {
+                    return res.status(400).json({
+                        message: "Invalid promo code.",
+                    });
+                }
+
+                if (discount.type !== "percentage") {
+                    return res.status(400).json({
+                        message: "Only percentage promo codes are supported at the moment.",
+                    });
+                }
+
+                // const taken = await storage.isPromoCodeUsedByAnotherUser(userId, data.promoCode);
+                // if (taken) return res.status(400).json({ message: "Promo code already used." });
+
+                isValidCode = true;
+                dodoDiscountId = discount.discount_id; // ✅
+                bpsDiscount = discount.amount;
+
+                const pct = discount.amount / 100; // bps -> %
+                // clamp to [0, 100]
+                priceDiscount = Math.max(0, Math.min(100, pct));
+            }
+
+            if (isValidCode && typeof bpsDiscount === "number") {
+                const discountAmount = Math.round((amountCents * bpsDiscount) / 10000);
+                priceAfterDiscount = Math.max(0, amountCents - discountAmount);
+            }
 
             // create product
             const product = await client.products.create({
@@ -142,12 +190,12 @@ export function registerDodoRoutes(app: Express) {
                 description: `${user.firstName} ${user.lastName} - ${data.brand} and ${data.model} subscription`,
                 price: {
                     currency: currencyCode,
-                    discount: 0,
-                    payment_frequency_count: 1,
+                    discount: priceDiscount ?? 0,
+                    payment_frequency_count: payment_frequency_count,
                     payment_frequency_interval: payment_frequency_interval,
                     price: amountCents,
                     purchasing_power_parity: false,
-                    subscription_period_count: 20,
+                    subscription_period_count: subscription_period_count,
                     subscription_period_interval: subscription_period_interval,
                     type: "recurring_price",
                 },
@@ -158,23 +206,6 @@ export function registerDodoRoutes(app: Express) {
                     ...(referralId ? { affonso_referral: referralId } : {}),
                 },
             });
-
-            // check if code is usable
-            let isValidCode = false;
-
-            if (data.promoCode) {
-                const discount = await validatePromoCode(data.promoCode);
-
-                if (discount) {
-                    // check if discount has been used by other users
-                    // const taken = await storage.isPromoCodeUsedByAnotherUser(userId, data.promoCode);
-
-                    // if (!taken) {
-                    //     isValidCode = true;
-                    // }
-                    isValidCode = true;
-                }
-            }
 
             // Create subscription in the db
             const subscription = await storage.createSubscription({
@@ -194,9 +225,12 @@ export function registerDodoRoutes(app: Express) {
                 telegramUsername: data.telegramUsername,
                 notificationLanguage: data.notificationLanguage,
                 promoCode: isValidCode ? data.promoCode : null,
-                discountId: isValidCode ? data.discountId : null,
+                discountId: isValidCode ? dodoDiscountId : null,
+                codeApplied: isValidCode,
                 price: amountCents,
                 dodoPriceId: product.product_id,
+                priceAfterDiscount,
+                discountValue: isValidCode ? bpsDiscount : null, // better than 0
                 status: "pending",
             });
 
@@ -217,9 +251,9 @@ export function registerDodoRoutes(app: Express) {
                 customer: {
                     customer_id: customerId!,
                 },
-                discount_code: isValidCode ? data.promoCode : undefined,
+                // discount_code: isValidCode ? data.promoCode : undefined,
                 feature_flags: {
-                    allow_discount_code: isValidCode ? true : false,
+                    allow_discount_code: false,
                     redirect_immediately: true,
                 },
                 metadata: {
@@ -401,23 +435,84 @@ export function registerDodoRoutes(app: Express) {
                 });
             }
 
-            // price update
+            const incomingPromo = (data.promoCode ?? null) as string | null;
+            const existingPromo = (subscription.promoCode ?? null) as string | null;
+
+            const isPromoCodeChange = incomingPromo !== existingPromo;
+            const isPriceChanged = typeof data.price === "number" && data.price !== subscription.price;
+
+            // --- promo/discount server truth
+            let isValidCode = false;
+            let priceDiscountPercent: number | undefined; // 0..100
+            let discountIdToSave: string | null = null;
+            let promoToSave: string | null = incomingPromo;
+
+            let discountValueBps: number | null = null;      // e.g. 540
+            let priceAfterDiscountCents: number = data.price ?? subscription.price;
+
+
+            // Validate promo if added/changed OR if price changed (needs recompute)
+            if ((isPromoCodeChange || isPriceChanged) && incomingPromo) {
+                const discount = await validatePromoCode(incomingPromo);
+
+                if (!discount) {
+                    return res.status(400).json({
+                        message: "Invalid promo code. Change or remove it.",
+                    });
+                }
+
+                if (discount.type !== "percentage") {
+                    return res.status(400).json({
+                        message: "Only percentage promo codes are supported at the moment.",
+                    });
+                }
+
+                isValidCode = true;
+                discountIdToSave = discount.discount_id ?? null;
+                discountValueBps = discount.amount; // bps
+
+                const pct = discount.amount / 100; // 540 -> 5.4
+                priceDiscountPercent = Math.max(0, Math.min(100, pct));
+            }
+
+
+            // If promo removed, wipe discount
+            if (isPromoCodeChange && !incomingPromo) {
+                isValidCode = false;
+                discountIdToSave = null;
+                promoToSave = null;
+                discountValueBps = null;
+                priceDiscountPercent = 0;
+            }
+
+            // --- compute priceAfterDiscount (server-side)
+            const basePrice = typeof data.price === "number" ? data.price : subscription.price;
+
+            priceAfterDiscountCents = basePrice;
+
+            if (isValidCode && typeof discountValueBps === "number") {
+                const discountAmount = Math.round((basePrice * discountValueBps) / 10000);
+                priceAfterDiscountCents = Math.max(0, basePrice - discountAmount);
+            }
+
+            // --- Dodo product / plan update
             let priceId = subscription.dodoPriceId;
             let isPriceUpdated = false;
-            if (data.price !== subscription.price) {
-                // create new product price in dodo
+
+            // If price changed: create a new product with discount baked in
+            if (isPriceChanged) {
                 const product = await client.products.create({
                     name: `Amiquus Subscription - ${data.brand}`,
                     description: `${user.firstName} ${user.lastName} - ${data.brand} and ${data.model} subscription`,
                     price: {
                         currency: currencyCode,
-                        discount: 0,
-                        payment_frequency_count: 1,
-                        payment_frequency_interval: payment_frequency_interval,
-                        price: data.price,
+                        discount: priceDiscountPercent ?? 0,
+                        payment_frequency_count,
+                        payment_frequency_interval,
+                        price: basePrice,
                         purchasing_power_parity: false,
-                        subscription_period_count: 20,
-                        subscription_period_interval: subscription_period_interval,
+                        subscription_period_count,
+                        subscription_period_interval,
                         type: "recurring_price",
                     },
                     tax_category: "saas",
@@ -436,10 +531,41 @@ export function registerDodoRoutes(app: Express) {
                 isPriceUpdated = true;
             }
 
-            // update subscription in db
+            // If price NOT changed but promo changed: update existing product discount
+            if (!isPriceChanged && isPromoCodeChange && subscription.dodoPriceId) {
+                const productId = subscription.dodoPriceId;
+                const product = await client.products.retrieve(productId);
+
+                if (product) {
+                    await client.products.update(productId, {
+                        name: `Amiquus Subscription - ${data.brand}`,
+                        description: `${user.firstName} ${user.lastName} - ${data.brand} and ${data.model} subscription`,
+                        price: {
+                            ...product.price,
+                            discount: priceDiscountPercent ?? 0,
+                        },
+                        metadata: {
+                            ...(product.metadata ?? {}),
+                            userId: userId.toString(),
+                            userSubscriptionId: subscription.id.toString(),
+                            isUpdatedPrice: "true",
+                        },
+                    });
+                }
+            }
+
+            // --- DB update
             const updatedSub = await storage.updateSubscription(subscriptionId, {
                 ...data,
                 dodoPriceId: priceId,
+
+                promoCode: promoToSave,
+                discountId: discountIdToSave,
+                codeApplied: Boolean(promoToSave),
+
+                discountValue: discountValueBps,        // bps or null
+                priceAfterDiscount: priceAfterDiscountCents, // cents
+
                 updatedAt: new Date(),
             });
 
@@ -447,7 +573,7 @@ export function registerDodoRoutes(app: Express) {
                 return res.status(500).json({ message: "Failed to update subscription." });
             }
 
-            // change subscription in dodo if price is updated
+            // --- ensure Dodo subscription plan reflects new product if price changed
             if (isPriceUpdated && priceId) {
                 await client.subscriptions.changePlan(dodoSubscriptionId, {
                     product_id: priceId,
@@ -608,8 +734,8 @@ export function registerDodoRoutes(app: Express) {
                 cancel_at_next_billing_date: true
             });
 
-             // Update DB immediately
-             await storage.updateSubscription(subscriptionId, {
+            // Update DB immediately
+            await storage.updateSubscription(subscriptionId, {
                 status: "cancelled_on",
                 updatedAt: new Date(),
             });

@@ -82,6 +82,9 @@ export const subscriptions = pgTable("subscriptions", {
   promoCode: text("promo_code"),
   discountId: text("discount_id"),
   codeApplied: boolean("code_applied").default(false).notNull(),
+  // ✅ New: percentage discount (basis points) + final price (cents)
+  discountValue: integer("discount_value"), // e.g. 540 => 5.4%
+  priceAfterDiscount: integer("price_after_discount"), // cents
   price: integer("price").notNull(),
   stripePriceId: text("stripe_price_id"),
   dodoPriceId: text("dodo_price_id"),

@@ -23,7 +23,7 @@
 
 // export const globalBasePrice = 9.99;
 
-export const globalBasePrice = 5.00;
+export const globalBasePrice = 3.00;
 
 export const globalAddons = [
   {
@@ -62,10 +62,12 @@ const currencySymbol = "€";
 const currencyLocale = "de-DE";
 const currencyCode = "EUR";
 const payment_frequency_interval = "Day"; //Day, Week, Month, Year
+const payment_frequency_count = 1;
 const subscription_period_interval = "Year"; //Day, Week, Month, Year 
+const subscription_period_count = 20;
 
 
-export { additionalWebsitePrice, fiveMinUpdatesPrice, hourlyUpdatesPrice, thirtyMinUpdatesPrice, fifteenMinUpdatesPrice, oneMinUpdatesPrice, currencySymbol, currencyLocale, currencyCode, payment_frequency_interval, subscription_period_interval };
+export { additionalWebsitePrice, fiveMinUpdatesPrice, hourlyUpdatesPrice, thirtyMinUpdatesPrice, fifteenMinUpdatesPrice, oneMinUpdatesPrice, currencySymbol, currencyLocale, currencyCode, payment_frequency_interval, subscription_period_interval, payment_frequency_count, subscription_period_count };
 
 // const addOns = [
 //   { name: "Each additional website", price: 4.99 },
