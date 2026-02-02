@@ -320,7 +320,43 @@ function SubscriptionCard({ subscription }: SubscriptionCardProps) {
             <span className="font-medium">
               {t("dashboard.subscriptionCard.price")}:
             </span>
-            <span>{currencySymbol}{(subscription.price / 100).toFixed(2)}/month</span>
+            <span>
+              {subscription.priceAfterDiscount && subscription.priceAfterDiscount !== subscription.price ? (
+                <span className="inline-flex items-center gap-2">
+                  <span className="line-through text-muted-foreground">
+                    {currencySymbol}{(subscription.price / 100).toFixed(2)}
+                  </span>
+                  <span className="font-semibold">
+                    {currencySymbol}{(subscription.priceAfterDiscount / 100).toFixed(2)}
+                  </span>
+                  <span className="text-muted-foreground">/month</span>
+                </span>
+              ) : (
+                <span>
+                  {currencySymbol}{(subscription.price / 100).toFixed(2)}/month
+                </span>
+              )}
+            </span>
+          </div>
+          <div className="flex items-start space-x-2">
+            <span className="font-medium">Discount:</span>
+            <span>
+              {subscription.discountValue ? (
+                <span className="inline-flex items-center gap-2">
+                  <span className="rounded-md bg-emerald-50 px-2 py-0.5 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-300">
+                    {(subscription.discountValue / 100).toFixed(1)}% off
+                  </span>
+
+                  {subscription.promoCode && (
+                    <span className="text-xs text-muted-foreground">
+                      ({subscription.promoCode.toUpperCase()})
+                    </span>
+                  )}
+                </span>
+              ) : (
+                <span className="text-muted-foreground">None</span>
+              )}
+            </span>
           </div>
         </div>
       </CardContent>

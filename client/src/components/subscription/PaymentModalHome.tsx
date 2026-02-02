@@ -196,6 +196,7 @@ export const PaymentModalHome = ({
             notificationLanguage: formData.notificationLanguage,
             // backend uses this to create the product price (cents)
             totalBeforeDiscount: totalPrice,
+            priceAfterDiscount: totalAfterDiscount,
             price: totalAfterDiscount,
             promoCode: discount ? discount.code : null,
             discountId: discount ? discount.discount_id : null,
@@ -212,12 +213,23 @@ export const PaymentModalHome = ({
                 payload
             );
 
-            const data = await response.json();
+            // ✅ safely parse error or success
+            let data: any = null;
+            const contentType = response.headers.get("content-type");
+
+            if (contentType && contentType.includes("application/json")) {
+                data = await response.json();
+            } else {
+                data = { message: await response.text() };
+            }
 
             if (!response.ok) {
                 toast({
                     title: "Payment Error",
-                    description: data?.message || "Unable to start checkout. Please try again.",
+                    description:
+                        data?.message ||
+                        data?.error ||
+                        "Unable to start checkout. Please try again.",
                     variant: "destructive",
                 });
                 return;
@@ -230,11 +242,13 @@ export const PaymentModalHome = ({
 
             // redirect to Dodo checkout
             window.location.href = data.checkoutUrl;
-        } catch (error) {
+        } catch (error: any) {
             console.error("Error proceeding to payment:", error);
             toast({
                 title: "Error",
-                description: "An error occurred while proceeding to payment. Please try again.",
+                description:
+                    error?.message ||
+                    "An unexpected error occurred while proceeding to payment.",
                 variant: "destructive",
             });
         } finally {

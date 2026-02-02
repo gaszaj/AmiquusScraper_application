@@ -83,7 +83,6 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
   const userId = dodoSubData.metadata?.userId;
   const userSubscriptionId = dodoSubData.metadata?.userSubscriptionId;
   const metaJsonId = dodoSubData.metadata?.jsonUserId;
-  const isDiscountApplied = dodoSubData.discount_id ? true : false;
 
   if (!userId || !userSubscriptionId) {
     console.error("Missing userId or userSubscriptionId in subscription metadata.");
@@ -107,7 +106,6 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
   await storage.updateSubscription(dbSubscription.id, {
     status: 'active',
     dodoSubscriptionId: dodoSubData.subscription_id,
-    codeApplied: isDiscountApplied,
     invoiceAttempts: 0,
     updatedAt: new Date(),
   });
@@ -119,7 +117,7 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
     dbSubscription,
     user.email,
     'active',
-    isDiscountApplied,
+    dbSubscription.codeApplied,
   )
 
   const apiUrl = `${JSON_BASE_URL}/user_json_api.php`;
@@ -273,7 +271,6 @@ export async function handleSubscriptionRenewed(dodoSubData: Subscription) {
   const userId = dodoSubData.metadata?.userId;
   const userSubscriptionId = dodoSubData.metadata?.userSubscriptionId;
   const metaJsonId = dodoSubData.metadata?.jsonUserId;
-  const isDiscountApplied = dodoSubData.discount_id ? true : false;
 
   if (!userId || !userSubscriptionId) {
     console.error("Missing userId or userSubscriptionId in subscription metadata.");
@@ -297,7 +294,6 @@ export async function handleSubscriptionRenewed(dodoSubData: Subscription) {
   await storage.updateSubscription(dbSubscription.id, {
     status: 'active',
     dodoSubscriptionId: dodoSubData.subscription_id,
-    codeApplied: isDiscountApplied,
     invoiceAttempts: 0,
     updatedAt: new Date(),
   });
@@ -309,7 +305,7 @@ export async function handleSubscriptionRenewed(dodoSubData: Subscription) {
     dbSubscription,
     user.email,
     'active',
-    isDiscountApplied,
+    dbSubscription.codeApplied,
   )
 
   const apiUrl = `${JSON_BASE_URL}/user_json_api.php`;
