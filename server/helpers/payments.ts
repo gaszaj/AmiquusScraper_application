@@ -83,6 +83,7 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
   const userId = dodoSubData.metadata?.userId;
   const userSubscriptionId = dodoSubData.metadata?.userSubscriptionId;
   const metaJsonId = dodoSubData.metadata?.jsonUserId;
+  const isDiscountApplied = Boolean(dodoSubData.discount_id);
 
   if (!userId || !userSubscriptionId) {
     console.error("Missing userId or userSubscriptionId in subscription metadata.");
@@ -102,22 +103,68 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
     return;
   }
 
+  const amountCents = dbSubscription.price;
+
+  // ✅ Promo code validation
+  let promoCode: string | null = dbSubscription.promoCode ?? null;
+  let discountId: string | null = dbSubscription.discountId ?? null;
+  let bpsDiscount: number | null = dbSubscription.discountValue ?? null;
+  let priceAfterDiscount = dbSubscription.price;
+
+  // If Dodo says a discount is applied, treat Dodo as source of truth
+  if (isDiscountApplied) {
+    const discount = await dodoClient.discounts.retrieve(dodoSubData.discount_id!);
+
+    if (discount && discount.type === "percentage") {
+      promoCode = discount.code ?? promoCode;
+      discountId = dodoSubData.discount_id!;
+      bpsDiscount = typeof discount.amount === "number" ? discount.amount : null;
+
+      if (bpsDiscount !== null) {
+        const discountAmount = Math.round((amountCents * bpsDiscount) / 10000);
+        priceAfterDiscount = Math.max(0, amountCents - discountAmount);
+      }
+    } else {
+      // Non-percentage discounts not supported in your system
+      // promoCode = null;
+      // discountId = null;
+      bpsDiscount = null;
+      priceAfterDiscount = amountCents;
+    }
+  } else {
+    // No discount applied on Dodo => clear in DB (prevents stale discount showing in UI)
+    // promoCode = null;
+    // discountId = null;
+    bpsDiscount = null;
+    priceAfterDiscount = amountCents;
+  }
+
   // Update subscription status in your database
-  await storage.updateSubscription(dbSubscription.id, {
+  const updatedData = await storage.updateSubscription(dbSubscription.id, {
     status: 'active',
     dodoSubscriptionId: dodoSubData.subscription_id,
+    promoCode,
+    discountId,
+    codeApplied: isDiscountApplied,
+    priceAfterDiscount,
+    discountValue: bpsDiscount,
     invoiceAttempts: 0,
     updatedAt: new Date(),
   });
+
+  if (!updatedData) {
+    console.error(`Subscription update failed`);
+    return;
+  }
 
   const jsonId = dbSubscription.jsonUserId || metaJsonId;
 
   // create user json file
   const jsonObject = buildJsonObject(
-    dbSubscription,
+    updatedData,
     user.email,
     'active',
-    dbSubscription.codeApplied,
+    isDiscountApplied,
   )
 
   const apiUrl = `${JSON_BASE_URL}/user_json_api.php`;
@@ -159,7 +206,7 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
     await emailService.sendSubscriptionSuccessEmail(
       user.email,
       user.firstName || "",
-      dbSubscription,
+      updatedData,
     )
 
     // notify admin
@@ -212,7 +259,7 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
       await emailService.sendSubscriptionReactivatedEmail(
         user.email,
         user.firstName || "",
-        dbSubscription
+        updatedData
       );
 
       return;
@@ -262,7 +309,7 @@ export async function handleSubscriptionActive(dodoSubData: Subscription) {
     await emailService.sendSubscriptionReactivatedEmail(
       user.email,
       user.firstName || "",
-      dbSubscription,
+      updatedData,
     )
   }
 }
@@ -271,6 +318,7 @@ export async function handleSubscriptionRenewed(dodoSubData: Subscription) {
   const userId = dodoSubData.metadata?.userId;
   const userSubscriptionId = dodoSubData.metadata?.userSubscriptionId;
   const metaJsonId = dodoSubData.metadata?.jsonUserId;
+  const isDiscountApplied = Boolean(dodoSubData.discount_id);
 
   if (!userId || !userSubscriptionId) {
     console.error("Missing userId or userSubscriptionId in subscription metadata.");
@@ -290,22 +338,68 @@ export async function handleSubscriptionRenewed(dodoSubData: Subscription) {
     return;
   }
 
+  const amountCents = dbSubscription.price;
+
+  // ✅ Promo code validation
+  let promoCode: string | null = dbSubscription.promoCode ?? null;
+  let discountId: string | null = dbSubscription.discountId ?? null;
+  let bpsDiscount: number | null = dbSubscription.discountValue ?? null;
+  let priceAfterDiscount = dbSubscription.price;
+
+  // If Dodo says a discount is applied, treat Dodo as source of truth
+  if (isDiscountApplied) {
+    const discount = await dodoClient.discounts.retrieve(dodoSubData.discount_id!);
+
+    if (discount && discount.type === "percentage") {
+      promoCode = discount.code ?? promoCode;
+      discountId = dodoSubData.discount_id!;
+      bpsDiscount = typeof discount.amount === "number" ? discount.amount : null;
+
+      if (bpsDiscount !== null) {
+        const discountAmount = Math.round((amountCents * bpsDiscount) / 10000);
+        priceAfterDiscount = Math.max(0, amountCents - discountAmount);
+      }
+    } else {
+      // Non-percentage discounts not supported in your system
+      // promoCode = null;
+      // discountId = null;
+      bpsDiscount = null;
+      priceAfterDiscount = amountCents;
+    }
+  } else {
+    // No discount applied on Dodo => clear in DB (prevents stale discount showing in UI)
+    // promoCode = null;
+    // discountId = null;
+    bpsDiscount = null;
+    priceAfterDiscount = amountCents;
+  }
+
   // Update subscription status in your database
-  await storage.updateSubscription(dbSubscription.id, {
+  const updatedData = await storage.updateSubscription(dbSubscription.id, {
     status: 'active',
     dodoSubscriptionId: dodoSubData.subscription_id,
+    promoCode,
+    discountId,
+    codeApplied: isDiscountApplied,
+    priceAfterDiscount,
+    discountValue: bpsDiscount,
     invoiceAttempts: 0,
     updatedAt: new Date(),
   });
+
+  if (!updatedData) {
+    console.error(`Subscription update failed`);
+    return;
+  }
 
   const jsonId = dbSubscription.jsonUserId || metaJsonId;
 
   // create user json file
   const jsonObject = buildJsonObject(
-    dbSubscription,
+    updatedData,
     user.email,
     'active',
-    dbSubscription.codeApplied,
+    isDiscountApplied,
   )
 
   const apiUrl = `${JSON_BASE_URL}/user_json_api.php`;
