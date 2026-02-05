@@ -190,7 +190,7 @@ export function registerDodoRoutes(app: Express) {
                 description: `${user.firstName} ${user.lastName} - ${data.brand} and ${data.model} subscription`,
                 price: {
                     currency: currencyCode,
-                    discount: priceDiscount ?? 0,
+                    discount: 0,
                     payment_frequency_count: payment_frequency_count,
                     payment_frequency_interval: payment_frequency_interval,
                     price: amountCents,
@@ -251,9 +251,9 @@ export function registerDodoRoutes(app: Express) {
                 customer: {
                     customer_id: customerId!,
                 },
-                // discount_code: isValidCode ? data.promoCode : undefined,
+                discount_code: isValidCode ? data.promoCode : undefined,
                 feature_flags: {
-                    allow_discount_code: false,
+                    allow_discount_code: isValidCode ? true : false,
                     redirect_immediately: true,
                 },
                 metadata: {
@@ -410,7 +410,7 @@ export function registerDodoRoutes(app: Express) {
                 return res.status(401).json({ message: "User not authenticated." });
             }
 
-            const { id, createdAt, updatedAt, ...data } = req.body;
+            const { id, ...data } = req.body;
 
             const subscription = await storage.getSubscription(subscriptionId);
 
@@ -435,62 +435,17 @@ export function registerDodoRoutes(app: Express) {
                 });
             }
 
-            const incomingPromo = (data.promoCode ?? null) as string | null;
-            const existingPromo = (subscription.promoCode ?? null) as string | null;
-
-            const isPromoCodeChange = incomingPromo !== existingPromo;
             const isPriceChanged = typeof data.price === "number" && data.price !== subscription.price;
 
-            // --- promo/discount server truth
-            let isValidCode = false;
-            let priceDiscountPercent: number | undefined; // 0..100
-            let discountIdToSave: string | null = null;
-            let promoToSave: string | null = incomingPromo;
-
-            let discountValueBps: number | null = null;      // e.g. 540
-            let priceAfterDiscountCents: number = data.price ?? subscription.price;
-
-
-            // Validate promo if added/changed OR if price changed (needs recompute)
-            if ((isPromoCodeChange || isPriceChanged) && incomingPromo) {
-                const discount = await validatePromoCode(incomingPromo);
-
-                if (!discount) {
-                    return res.status(400).json({
-                        message: "Invalid promo code. Change or remove it.",
-                    });
-                }
-
-                if (discount.type !== "percentage") {
-                    return res.status(400).json({
-                        message: "Only percentage promo codes are supported at the moment.",
-                    });
-                }
-
-                isValidCode = true;
-                discountIdToSave = discount.discount_id ?? null;
-                discountValueBps = discount.amount; // bps
-
-                const pct = discount.amount / 100; // 540 -> 5.4
-                priceDiscountPercent = Math.max(0, Math.min(100, pct));
-            }
-
-
-            // If promo removed, wipe discount
-            if (isPromoCodeChange && !incomingPromo) {
-                isValidCode = false;
-                discountIdToSave = null;
-                promoToSave = null;
-                discountValueBps = null;
-                priceDiscountPercent = 0;
-            }
+            let discountValueBps = subscription.discountValue;
+            let priceAfterDiscountCents: number = subscription.price;
 
             // --- compute priceAfterDiscount (server-side)
             const basePrice = typeof data.price === "number" ? data.price : subscription.price;
 
             priceAfterDiscountCents = basePrice;
 
-            if (isValidCode && typeof discountValueBps === "number") {
+            if (typeof discountValueBps === "number") {
                 const discountAmount = Math.round((basePrice * discountValueBps) / 10000);
                 priceAfterDiscountCents = Math.max(0, basePrice - discountAmount);
             }
@@ -506,7 +461,7 @@ export function registerDodoRoutes(app: Express) {
                     description: `${user.firstName} ${user.lastName} - ${data.brand} and ${data.model} subscription`,
                     price: {
                         currency: currencyCode,
-                        discount: priceDiscountPercent ?? 0,
+                        discount: 0,
                         payment_frequency_count,
                         payment_frequency_interval,
                         price: basePrice,
@@ -531,41 +486,11 @@ export function registerDodoRoutes(app: Express) {
                 isPriceUpdated = true;
             }
 
-            // If price NOT changed but promo changed: update existing product discount
-            if (!isPriceChanged && isPromoCodeChange && subscription.dodoPriceId) {
-                const productId = subscription.dodoPriceId;
-                const product = await client.products.retrieve(productId);
-
-                if (product) {
-                    await client.products.update(productId, {
-                        name: `Amiquus Subscription - ${data.brand}`,
-                        description: `${user.firstName} ${user.lastName} - ${data.brand} and ${data.model} subscription`,
-                        price: {
-                            ...product.price,
-                            discount: priceDiscountPercent ?? 0,
-                        },
-                        metadata: {
-                            ...(product.metadata ?? {}),
-                            userId: userId.toString(),
-                            userSubscriptionId: subscription.id.toString(),
-                            isUpdatedPrice: "true",
-                        },
-                    });
-                }
-            }
-
             // --- DB update
             const updatedSub = await storage.updateSubscription(subscriptionId, {
                 ...data,
                 dodoPriceId: priceId,
-
-                promoCode: promoToSave,
-                discountId: discountIdToSave,
-                codeApplied: Boolean(promoToSave),
-
-                discountValue: discountValueBps,        // bps or null
                 priceAfterDiscount: priceAfterDiscountCents, // cents
-
                 updatedAt: new Date(),
             });
 

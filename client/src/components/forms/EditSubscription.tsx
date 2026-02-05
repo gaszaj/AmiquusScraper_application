@@ -79,7 +79,8 @@ export default function EditSubscriptionPage({
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
   const [totalPrice, setTotalPrice] = useState(0);
-  const [showModal, setShowModal] = useState(false)
+  const [submitting, setSubmitting] = useState(false);
+  // const [showModal, setShowModal] = useState(false)
 
   // form fields
   const [carBrands, setCarBrands] = useState<string[]>([]);
@@ -217,8 +218,8 @@ export default function EditSubscriptionPage({
   const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, globalBasePrice);
 
   const onSubmit = async (values: AlertFormSchema) => {
-    // setSubmitting(true);
-    // const unitAmountInCents = Math.round(totalPrice * 100);
+    setSubmitting(true);
+    const unitAmountInCents = Math.round(totalPrice * 100);
 
     // prevent pause if price changes
     // if (unitAmountInCents !== subscription.price) {
@@ -240,10 +241,60 @@ export default function EditSubscriptionPage({
         description: "You can't edit a subscription that is not active",
         variant: "destructive",
       });
+      setSubmitting(false);
       return;
     }
 
-    setShowModal(true)
+    try {
+      const updateData = {
+        id: subscription.id,
+        brand: values.carBrand,
+        model: values.carModel,
+        fuelType: values.fuelType,
+        priceMin: parseNullableNumber(values.priceMin),
+        priceMax: parseNullableNumber(values.priceMax),
+        yearMin: parseNullableNumber(values.yearMin),
+        yearMax: parseNullableNumber(values.yearMax),
+        mileageMax: parseNullableNumber(values.maxKilometers),
+        telegramUsername: values.telegramUsername,
+        websitesSelected: values.websitesSelected,
+        facebookMarketplaceUrl: values.facebookMarketplaceUrl,
+        updateFrequency: values.updateFrequency,
+        notificationLanguage: values.notificationLanguage,
+        price: unitAmountInCents,
+      } as Subscription;
+
+      const res = await apiRequest(
+        "PUT",
+        `/api/subscriptions/${subscription.id}`,
+        updateData
+      );
+
+      if (!res.ok) {
+        const errorText = await res.text();
+        throw new Error(errorText || "Failed to update subscription");
+      }
+
+      queryClient.invalidateQueries({ queryKey: ["/api/subscriptions"] });
+
+      toast({
+        title: t("subscription.toasts.success.title"),
+        description: t("subscription.toasts.success.description", {
+          brand: values.carBrand,
+          model: values.carModel,
+        }),
+      });
+
+      navigate("/dashboard");
+    } catch (error: any) {
+      toast({
+        title: t("subscription.toasts.error.title"),
+        description: error.message || "Failed to update subscription",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -842,14 +893,18 @@ export default function EditSubscriptionPage({
             >
               {t("subscription.actions.back")}
             </Button>
-            <Button type="submit">
-              Continue
+            <Button type="submit" disabled={submitting}>
+              {submitting ? (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              ) : (
+                t("subscription.actions.save")
+              )}
             </Button>
           </div>
         </form>
       </Form>
 
-      {subscription && (
+      {/* {subscription && (
         <PaymentUpdateModal
           paymentForm={form}
           showModal={showModal}
@@ -858,7 +913,7 @@ export default function EditSubscriptionPage({
           fixedTitle={fixedTitle}
           subscription={subscription}
         />
-      )}
+      )} */}
     </div>
   );
 }
