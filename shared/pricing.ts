@@ -27,12 +27,12 @@ import { AlertFormSchema } from "./schema";
 // export const globalBasePrice = 9.99;
 
 export const globalBasePrice = 39; //or hourly updates price
-export const additionalWebsiteTimesValue = 1.9; // or additional website price
+export const additionalWebsiteTimesValue = 0.9; // or additional website price
 
 export const globalAddons = [
   {
     id: "additional_website",
-    price: 1.9,
+    price: 0.9,
   },
   // {
   //   id: "hourly_updates",
@@ -64,11 +64,16 @@ export function getBasePrice(frequency: Frequency): number {
   return globalBasePrice;
 }
 
-export function getAdditionalWebsitePrice(websitesSelected: string[], frequency: Frequency): number {
+export function getAdditionalWebsitePrice(
+  websitesSelected: string[],
+  frequency: Frequency
+): number {
   const base = getBasePrice(frequency);
   const websitesCount = websitesSelected.length;
-  if (websitesCount <= 1) return 0; // no extra cost for the first website
-  return (websitesCount - 1) * (additionalWebsiteTimesValue * base);
+  if (websitesCount <= 1) return 0;
+
+  const value = (websitesCount - 1) * (additionalWebsiteTimesValue * base);
+  return Number(value.toFixed(2));
 }
 
 export function calculateTotalPrice(selectedWebsites: string[], selectedFreq: Frequency): number {
