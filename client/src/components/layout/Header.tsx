@@ -255,13 +255,6 @@ export default function Header() {
           >
             {t("navigations.waitlist")}
           </ScrollToTopLink>
-          <ScrollToTopLink
-            href="/faq"
-            className="block px-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition"
-            onClick={handleMobileMenuClose}
-          >
-            {t("navigations.faq")}
-          </ScrollToTopLink>
 
           {/* Development Test Profile button in mobile menu */}
           {/* <ScrollToTopLink 

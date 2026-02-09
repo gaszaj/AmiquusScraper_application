@@ -1,7 +1,7 @@
 import { Check, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/language-provider";
-import { additionalWebsiteTimesValue, currencySymbol, globalAddons } from "@shared/pricing";
+import { additionalWebsiteTimesValue, currencySymbol, globalAddons, globalBasePrice } from "@shared/pricing";
 
 interface PricingProps {
   onGetStarted: () => void;
@@ -28,20 +28,12 @@ export default function Pricing({ onGetStarted }: PricingProps) {
     .map((addon, index) => {
       const basePrice = globalAddons[index]?.price ?? 0;
 
-      // first addon → multiply its price
-      if (index === 0) {
-        return {
-          name: addon.name,
-          price: basePrice * multiplier,
-        };
-      }
-
       return {
         name: addon.name,
         price: basePrice,
       };
     })
-    .slice(0, -1); // ❌ remove last index
+    .slice(1, -1); // ✅ remove first AND last
 
 
   return (
@@ -59,7 +51,7 @@ export default function Pricing({ onGetStarted }: PricingProps) {
         <div className="max-w-4xl mx-auto bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-md dark:shadow-xl dark:shadow-black/10 overflow-hidden border border-neutral-200 dark:border-neutral-700">
           <div className="p-8">
             <h3 className="text-2xl font-title font-bold mb-6 text-neutral-900 dark:text-white">
-              {t("pricing.baseTitle")}
+              Base Package: {currencySymbol}{globalBasePrice}/month
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div>
@@ -96,15 +88,9 @@ export default function Pricing({ onGetStarted }: PricingProps) {
                         <Plus className="text-primary dark:text-primary mt-1 mr-2 h-5 w-5" />
                         <span>{addon.name}</span>
                       </div>
-                      {index === 0 ? (
-                        <span className="font-medium text-sm text-right justify-end">
-                          {additionalWebsiteTimesValue} × base price per extra website
-                        </span>
-                      ) : (
-                        <span className="font-medium">
-                          {currencySymbol}{addon.price.toFixed(2)}/mo
-                        </span>
-                      )}
+                      <span className="font-medium">
+                        {currencySymbol}{addon.price.toFixed(2)}/mo
+                      </span>
                     </li>
                   ))}
                 </ul>
