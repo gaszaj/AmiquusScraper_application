@@ -133,7 +133,8 @@ export default function Waitlist() {
                  {t("waitlist.limited.heading")}
               </h3>
               <p className="text-neutral-700 dark:text-neutral-300 mb-4">
-                 {t("waitlist.limited.description")}
+                 {/* {t("waitlist.limited.description")} */}
+                 We limit our system to only {stats.capacity} active subscribers to ensure:
               </p>
               <ul className="text-neutral-600 dark:text-neutral-400 space-y-2 mb-4 pl-5 list-disc">
                 <li>{t("waitlist.limited.points.0")}</li>

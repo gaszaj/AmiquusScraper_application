@@ -31,9 +31,9 @@ import { useAuth } from "@/hooks/use-auth";
 import LoginPromptModal from "@/components/modals/login-prompt";
 import WaitlistPromptModal from "@/components/modals/waitlist-prompt";
 import { apiRequest } from "@/lib/queryClient";
-import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
+import { FREQUENCY_LABELS } from "@/lib/constants";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
+import { currencySymbol, calculateTotalPrice, getBasePrice, getAdditionalWebsitePrice } from "@shared/pricing";
 import { PaymentModal } from "@/components/subscription/PaymentModal";
 import facebookVideo from "@/assets/facebook_vid.mp4";
 import svg1 from "@/assets/1.svg";
@@ -120,13 +120,13 @@ export default function TelegramCarAlertForm() {
     }
 
     const referral =
-    window.affonso_referral;
-  
+      window.affonso_referral;
+
     if (referral) {
       localStorage.setItem("affonso_referral", referral);
     }
   }, []);
-  
+
   useEffect(() => {
     fetch("/api/newcommer")
       .then((res) => res.json())
@@ -169,61 +169,21 @@ export default function TelegramCarAlertForm() {
     checkStats();
   }, []);
 
-  function calculateBasePrice(form: AlertFormSchema): number {
-    const websitesCount = form.websitesSelected?.length || 0;
-    const frequency = form.updateFrequency || "hourly";
-
-    if (websitesCount === 0) return 0;
-
-    // let price = 9.99;
-    let price = globalBasePrice;
-
-    if (websitesCount > 1) {
-      // price += 4.99 * (websitesCount - 1);
-      price += additionalWebsitePrice * (websitesCount - 1);
-    }
-
-    const frequencyOption = FREQUENCY_OPTIONS.find(
-      (option) => option.id === frequency,
-    );
-    if (frequencyOption?.additionalPrice) {
-      price += frequencyOption.additionalPrice;
-    }
-
-    return price;
-  }
-
-  const formatPrice = (value: number, locale = "en-US", currency = "USD") =>
-    new Intl.NumberFormat(locale, {
-      style: "currency",
-      currency,
-      minimumFractionDigits: 2,
-    }).format(value);
-
   const rawTitle = t("setupAlerts.baseTitle");
 
-  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, globalBasePrice);
+  const websitesSelected = form.watch("websitesSelected");
+  const updateFrequency = form.watch("updateFrequency");
+
+  const basePrice = getBasePrice(updateFrequency || "hourly");
+
+  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, basePrice);
 
   <span className="text-neutral-900 dark:text-white font-medium">
     {fixedTitle}
   </span>;
 
-  const setupSteps = t("telegram.setupSteps", {
-    returnObjects: true,
-  }) as string[];
-  const chatIdSteps = t("telegram.chatIdSteps", {
-    returnObjects: true,
-  }) as string[];
-
-  const websitesSelected = form.watch("websitesSelected");
-  const updateFrequency = form.watch("updateFrequency");
-
   useEffect(() => {
-    const price = calculateBasePrice({
-      ...form.getValues(),
-      websitesSelected,
-      updateFrequency,
-    });
+    const price = calculateTotalPrice(websitesSelected, updateFrequency);
     setTotalPrice(price);
   }, [websitesSelected, updateFrequency]);
 
@@ -904,8 +864,7 @@ export default function TelegramCarAlertForm() {
                   <span className="text-neutral-700 dark:text-neutral-300">
                     {/* get selected websites length */}
                     {t("setupAlerts.basicPlan")} (
-                    {form.watch("websitesSelected")?.length || 0} {" "}
-                    {t("review.monitoring.websites")})
+                    {FREQUENCY_LABELS[form.watch("updateFrequency")]})
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
                     {fixedTitle}
@@ -921,15 +880,10 @@ export default function TelegramCarAlertForm() {
                     )
                   </span>
                   <span className="text-neutral-900 dark:text-white font-medium">
-                    {(
-                      Math.max(
-                        (form.watch("websitesSelected")?.length || 1) - 1,
-                        0,
-                      ) * additionalWebsitePrice
-                    ).toFixed(2)}
+                    {currencySymbol}{getAdditionalWebsitePrice(form.watch("websitesSelected"), form.watch("updateFrequency"))}
                   </span>
                 </div>
-                {form.watch("updateFrequency") !== "hourly" && (
+                {/* {form.watch("updateFrequency") !== "hourly" && (
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-neutral-700 dark:text-neutral-300">
                       {t("websiteSelection.labels.updateFrequency")} (
@@ -943,7 +897,7 @@ export default function TelegramCarAlertForm() {
                       ).toFixed(2)}
                     </span>
                   </div>
-                )}
+                )} */}
                 <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-neutral-900 dark:text-white font-medium">

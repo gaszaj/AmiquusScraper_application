@@ -20,40 +20,75 @@
 //     price: 14.99
 //   }
 // ]
+type Frequency = "hourly" | "30min" | "15min" | "5min" | "1min";
+
+import { AlertFormSchema } from "./schema";
 
 // export const globalBasePrice = 9.99;
 
-export const globalBasePrice = 3.00;
+export const globalBasePrice = 39; //or hourly updates price
+export const additionalWebsiteTimesValue = 1.9; // or additional website price
 
 export const globalAddons = [
   {
     id: "additional_website",
-    price: 1.1,
+    price: 1.9,
   },
+  // {
+  //   id: "hourly_updates",
+  //   price: 39,
+  // },
   {
     id: "30min_updates",
-    price: 0.1,
+    price: 54,
   },
   {
     id: "15min_updates",
-    price: 0.2,
+    price: 69,
   },
   {
     id: "5min_updates",
-    price: 0.3,
+    price: 104,
   },
   {
     id: "1min_updates",
-    price: 0.4,
+    price: 104,
   },
 ];
+
+export function getBasePrice(frequency: Frequency): number {
+  if (frequency === "30min") return getAddonPrice("30min_updates");
+  if (frequency === "15min") return getAddonPrice("15min_updates");
+  if (frequency === "5min") return getAddonPrice("5min_updates");
+  if (frequency === "1min") return getAddonPrice("1min_updates");
+  return globalBasePrice;
+}
+
+export function getAdditionalWebsitePrice(websitesSelected: string[], frequency: Frequency): number {
+  const base = getBasePrice(frequency);
+  const websitesCount = websitesSelected.length;
+  if (websitesCount <= 1) return 0; // no extra cost for the first website
+  return (websitesCount - 1) * (additionalWebsiteTimesValue * base);
+}
+
+export function calculateTotalPrice(selectedWebsites: string[], selectedFreq: Frequency): number {
+  const websitesSelected = selectedWebsites ?? [];
+  const frequency = (selectedFreq || "hourly") as Frequency;
+
+  if (websitesSelected.length === 0) return 0;
+
+  const base = getBasePrice(frequency);
+  const extras = getAdditionalWebsitePrice(websitesSelected, frequency);
+
+  return Number((base + extras).toFixed(2));
+}
 
 export const getAddonPrice = (id: string): number =>
   globalAddons.find((addon) => addon.id === id)?.price ?? 0;
 
 const additionalWebsitePrice = getAddonPrice("additional_website");
 const fiveMinUpdatesPrice = getAddonPrice("5min_updates");
-const hourlyUpdatesPrice = 0;
+const hourlyUpdatesPrice = getAddonPrice("hourly_updates") || globalBasePrice;
 const thirtyMinUpdatesPrice = getAddonPrice("30min_updates");
 const fifteenMinUpdatesPrice = getAddonPrice("15min_updates");
 const oneMinUpdatesPrice = getAddonPrice("1min_updates");
@@ -61,7 +96,7 @@ const oneMinUpdatesPrice = getAddonPrice("1min_updates");
 const currencySymbol = "€";
 const currencyLocale = "de-DE";
 const currencyCode = "EUR";
-const payment_frequency_interval = "Day"; //Day, Week, Month, Year
+const payment_frequency_interval = "Month"; //Day, Week, Month, Year
 const payment_frequency_count = 1;
 const subscription_period_interval = "Year"; //Day, Week, Month, Year 
 const subscription_period_count = 20;

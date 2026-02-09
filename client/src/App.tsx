@@ -13,7 +13,6 @@ import SubscriptionPage from "@/pages/subscription";
 import About from "@/pages/about";
 import Terms from "@/pages/terms";
 import Privacy from "@/pages/privacy";
-import FAQ from "@/pages/faq";
 import SetupAlerts from "@/pages/setup-alerts";
 import Dashboard from "@/pages/dashboard";
 import Waitlist from "@/pages/waitlist";
@@ -46,7 +45,6 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/refund" component={Refund} />
-      <Route path="/faq" component={FAQ} />
       <Route path="/waitlist" component={Waitlist} />
       <Route path="/blog" component={Blog} />
       <Route path="/careers" component={Careers} />

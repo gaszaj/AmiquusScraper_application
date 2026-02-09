@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/card";
 import {
   WEBSITE_OPTIONS,
-  FREQUENCY_OPTIONS,
   FREQUENCY_LABELS,
   LANGUAGE_OPTIONS,
   FUEL_TYPE_OPTIONS,
@@ -21,52 +20,13 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { useAuth } from "@/hooks/use-auth";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
+import { currencySymbol, calculateTotalPrice, getAdditionalWebsitePrice, getBasePrice } from "@shared/pricing";
 
 interface ReviewPaymentProps {
   formData: Partial<AlertFormSchema>;
   updateFormData: (data: Partial<AlertFormSchema>) => void;
   prevStep: () => void;
   onSubmit: () => void;
-}
-
-function calculateBasePrice(formData: Partial<AlertFormSchema>): number {
-  if (!formData.websitesSelected || formData.websitesSelected.length === 0) {
-    return 0;
-  }
-
-  // Get websites count
-  const websitesCount = formData.websitesSelected.length;
-
-  // Get frequency option
-  const frequency = formData.updateFrequency || "hourly";
-
-  // Calculate price using useSubscription hook's calculatePrice function
-  const calculatePrice = (count: number, freq: string) => {
-    // Base price for one website
-    // let price = 9.99;
-    let price = globalBasePrice;
-
-    // Add price for additional websites
-    // if (count > 1) {
-    //   price += 4.99 * (count - 1);
-    // }
-    if (count > 1) {
-      price += additionalWebsitePrice * (count - 1);
-    }
-
-    // Add price for frequency
-    const frequencyOption = FREQUENCY_OPTIONS.find(
-      (option) => option.id === freq,
-    );
-    if (frequencyOption && frequencyOption.additionalPrice) {
-      price += frequencyOption.additionalPrice;
-    }
-
-    return price;
-  };
-
-  return calculatePrice(websitesCount, frequency);
 }
 
 export default function ReviewPayment({
@@ -84,7 +44,7 @@ export default function ReviewPayment({
 
   useEffect(() => {
     // Calculate price based on selections
-    const price = calculateBasePrice(formData);
+    const price = calculateTotalPrice(formData.websitesSelected || [], formData.updateFrequency || "hourly");
     setCalculatedPrice(price);
 
     // Update the price in the form data
@@ -268,9 +228,10 @@ export default function ReviewPayment({
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex justify-between">
-            <span>{t("review.summary.base")}:</span>
+            <span>{t("review.summary.base")}(
+              {FREQUENCY_LABELS[formData.updateFrequency || "hourly"]}):</span>
             {/* <span>{currencySymbol}{(9.99).toFixed(2)}</span> */}
-            <span>{currencySymbol}{globalBasePrice}</span>
+            <span>{currencySymbol}{getBasePrice(formData.updateFrequency || "hourly")}</span>
           </div>
 
           {formData.websitesSelected &&
@@ -280,12 +241,12 @@ export default function ReviewPayment({
                   {t("review.summary.extraWebsites")} ({formData.websitesSelected.length - 1})
                 </span>
                 <span>
-                {currencySymbol}{((formData.websitesSelected.length - 1) * additionalWebsitePrice).toFixed(2)}
+                  {currencySymbol}{getAdditionalWebsitePrice(formData.websitesSelected, formData.updateFrequency || "hourly")}
                 </span>
               </div>
             )}
 
-          {formData.updateFrequency && formData.updateFrequency !== "hourly" && (
+          {/* {formData.updateFrequency && formData.updateFrequency !== "hourly" && (
             <div className="flex justify-between">
               <span>
                 {t("review.summary.frequencyUpgrade")}
@@ -297,10 +258,10 @@ export default function ReviewPayment({
                 ).toFixed(2)}
               </span>
             </div>
-          )}
+          )} */}
 
           <div className="flex justify-between pt-4 border-t border-primary-200 font-bold">
-             <span>{t("review.summary.total")}:</span>
+            <span>{t("review.summary.total")}:</span>
             <span>{currencySymbol}{calculatedPrice.toFixed(2)}</span>
           </div>
         </CardContent>

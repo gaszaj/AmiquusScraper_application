@@ -300,7 +300,7 @@ export default function WebsiteSelection({
                       <SelectItem key={option.id} value={option.id}>
                         {option.name}
                         {option.additionalPrice > 0 &&
-                          ` (+${currencySymbol}${option.additionalPrice})`}
+                          ` (${currencySymbol}${option.additionalPrice})`}
                       </SelectItem>
                     ))}
                   </SelectContent>
