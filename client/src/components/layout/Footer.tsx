@@ -100,14 +100,6 @@ export default function Footer() {
               </li>
               <li>
                 <ScrollToTopLink
-                  href="/faq"
-                  className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors"
-                >
-                  {t("footer.faq")}
-                </ScrollToTopLink>
-              </li>
-              <li>
-                <ScrollToTopLink
                   href="/setup-alerts"
                   className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors"
                 >

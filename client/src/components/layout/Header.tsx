@@ -148,13 +148,6 @@ export default function Header() {
               >
                 {t("navigations.waitlist")}
               </ScrollToTopLink>
-              <ScrollToTopLink
-                href="/faq"
-                className={`text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-[#ff0] transition ${location === "/faq" ? "text-primary dark:text-[#ff0]" : ""}`}
-                onClick={handleMobileMenuClose}
-              >
-                {t("navigations.faq")}
-              </ScrollToTopLink>
             </nav>
           )}
 

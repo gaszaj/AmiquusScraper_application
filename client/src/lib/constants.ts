@@ -1,11 +1,9 @@
 import {
   globalBasePrice,
-  additionalWebsitePrice,
   hourlyUpdatesPrice,
   thirtyMinUpdatesPrice,
   fifteenMinUpdatesPrice,
   fiveMinUpdatesPrice,
-  oneMinUpdatesPrice,
 } from "@shared/pricing";
 // Website options available for scraping
 export const WEBSITE_OPTIONS = [
@@ -81,4 +79,3 @@ export const FUEL_TYPE_OPTIONS = [
 
 // Base pricing
 export const BASE_PRICE = globalBasePrice;
-export const ADDITIONAL_WEBSITE_PRICE = additionalWebsitePrice;

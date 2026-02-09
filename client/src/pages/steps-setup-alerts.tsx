@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
 import PageWrapper from "@/components/layout/PageWrapper";
 import PersonalInfo from "@/components/multi-step-form/personal-info";
 import WebsiteSelection from "@/components/multi-step-form/website-selection";
@@ -10,7 +9,6 @@ import TelegramSetup from "@/components/multi-step-form/telegram-setup";
 import ReviewPayment from "@/components/multi-step-form/review-payment";
 import FormProgress from "@/components/multi-step-form/form-progress";
 import { useAuth } from "@/hooks/use-auth";
-import { useSubscription } from "@/hooks/use-subscription";
 import {
   SubscriptionFormData,
   alertSchema,
@@ -19,7 +17,7 @@ import {
 import { newcomerDefault } from "@/data/newcomer-default";
 import type { NewComerResponse } from "@/components/forms/TelegramCarAlertForm";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice } from "@shared/pricing";
+import { calculateTotalPrice, getBasePrice, globalBasePrice } from "@shared/pricing";
 import { PaymentModalHome } from "@/components/subscription/PaymentModalHome";
 
 interface StepsSetupAlertProps {
@@ -33,8 +31,7 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
   const [jsonData, setJsonData] = useState<NewComerResponse | null>(null);
   const [loadingJson, setLoadingJson] = useState(false);
 
-  const { toast } = useToast();
-   const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [showWaitList, setShowWaitList] = useState(false);
 
   // form fields
@@ -96,8 +93,6 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
     notificationLanguage: language,
   });
 
-  const { calculatePrice } = useSubscription();
-
   const updateFormData = (data: Partial<AlertFormSchema>) => {
     setFormData((prev) => {
       const updated = { ...prev, ...data };
@@ -107,8 +102,8 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
         data.websitesSelected !== undefined ||
         data.updateFrequency !== undefined
       ) {
-        const price = calculatePrice(
-          updated.websitesSelected?.length || 0,
+        const price = calculateTotalPrice(
+          updated.websitesSelected || [],
           updated.updateFrequency || "hourly",
         );
         return { ...updated, price };
@@ -148,11 +143,13 @@ export default function StepsSetupAlert({ embedded = false }: StepsSetupAlertPro
     notificationLanguage: formData.notificationLanguage || language,
   }
 
-  const formPrice = formData.price || globalBasePrice;
+  const basePrice = getBasePrice(formData.updateFrequency || "hourly");
+
+  const formPrice = formData.price || basePrice;
 
   const rawTitle = t("setupAlerts.baseTitle");
 
-  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, globalBasePrice);
+  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, basePrice);
 
   const handleSubmit = async () => {
     setShowPaymentModal(true);

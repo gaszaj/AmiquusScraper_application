@@ -8,8 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
-import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
+import { currencySymbol, getAdditionalWebsitePrice } from "@shared/pricing";
+import { FREQUENCY_LABELS } from "@/lib/constants";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { parseNullableNumber } from "@/lib/payments";
@@ -299,8 +299,7 @@ export const PaymentModal = ({
                             <p className="text-muted-foreground text-[0.95rem]">
                                 {/* get selected websites length */}
                                 {t("setupAlerts.basicPlan")} (
-                                {paymentForm.watch("websitesSelected")?.length || 0}{" "}
-                                {t("review.monitoring.websites")})
+                                {FREQUENCY_LABELS[paymentForm.watch("updateFrequency")]})
                             </p>
                             <p className="text-foreground font-medium text-[0.95rem]">
                                 {fixedTitle}
@@ -316,15 +315,10 @@ export const PaymentModal = ({
                                 )
                             </p>
                             <p className="text-foreground font-medium text-[0.95rem]">
-                                {(
-                                    Math.max(
-                                        (paymentForm.watch("websitesSelected")?.length || 1) - 1,
-                                        0,
-                                    ) * additionalWebsitePrice
-                                ).toFixed(2)}
+                                {currencySymbol}{getAdditionalWebsitePrice(paymentForm.watch("websitesSelected"), paymentForm.watch("updateFrequency"))}
                             </p>
                         </div>
-                        {paymentForm.watch("updateFrequency") !== "hourly" && (
+                        {/* {paymentForm.watch("updateFrequency") !== "hourly" && (
                             <div className="flex justify-between items-center">
                                 <p className="text-muted-foreground text-[0.95rem]">
                                     {t("websiteSelection.labels.updateFrequency")} (
@@ -338,7 +332,7 @@ export const PaymentModal = ({
                                     ).toFixed(2)}
                                 </p>
                             </div>
-                        )}
+                        )} */}
                         <div className="border-t border-border pt-4 mt-4 flex-col gap-4">
                             <div className="flex justify-between items-center">
                                 <p className="text-foreground font-medium text-[0.98rem]">

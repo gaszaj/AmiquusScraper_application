@@ -736,7 +736,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     // Count active subscriptions
     // const count = await storage.getActiveSubscriptionCount()
     try {
-      const capacity = 30;
+      const capacity = 6;
 
       // Step 1: Get all usernames
       const usernameRes = await fetch(`${JSON_BASE_URL}/user_json_api.php`, {

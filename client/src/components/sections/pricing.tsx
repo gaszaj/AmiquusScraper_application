@@ -1,7 +1,7 @@
 import { Check, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/language-provider";
-import { currencySymbol, globalAddons } from "@shared/pricing";
+import { additionalWebsiteTimesValue, currencySymbol, globalAddons } from "@shared/pricing";
 
 interface PricingProps {
   onGetStarted: () => void;
@@ -11,7 +11,7 @@ type TranslatedAddon = { name: string; price?: number }; // price is ignored if 
 
 export default function Pricing({ onGetStarted }: PricingProps) {
   const { t } = useLanguage();
-  
+
   const includedFeatures = [
     "One website monitoring",
     "Hourly updates",
@@ -20,16 +20,29 @@ export default function Pricing({ onGetStarted }: PricingProps) {
   ];
 
   const translatedAddons = t("pricing.addons", { returnObjects: true }) as TranslatedAddon[];
+  const multiplier = additionalWebsiteTimesValue; // or websitesCount - 1, etc.
+
 
   // Merge addon names from translations with prices from globalAddons (by index/order)
-  const addons = translatedAddons.map((addon, index) => {
-    const price = globalAddons[index]?.price;
+  const addons = translatedAddons
+    .map((addon, index) => {
+      const basePrice = globalAddons[index]?.price ?? 0;
 
-    return {
-      name: addon.name,
-      price: typeof price === "number" ? price : 0, // safe fallback
-    };
-  });
+      // first addon → multiply its price
+      if (index === 0) {
+        return {
+          name: addon.name,
+          price: basePrice * multiplier,
+        };
+      }
+
+      return {
+        name: addon.name,
+        price: basePrice,
+      };
+    })
+    .slice(0, -1); // ❌ remove last index
+
 
   return (
     <section id="pricing" className="py-16 bg-white dark:bg-neutral-900">
@@ -83,9 +96,15 @@ export default function Pricing({ onGetStarted }: PricingProps) {
                         <Plus className="text-primary dark:text-primary mt-1 mr-2 h-5 w-5" />
                         <span>{addon.name}</span>
                       </div>
-                      <span className="font-medium">
-                      {currencySymbol}{addon.price.toFixed(2)}/mo
-                      </span>
+                      {index === 0 ? (
+                        <span className="font-medium text-sm text-right justify-end">
+                          {additionalWebsiteTimesValue} × base price per extra website
+                        </span>
+                      ) : (
+                        <span className="font-medium">
+                          {currencySymbol}{addon.price.toFixed(2)}/mo
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>

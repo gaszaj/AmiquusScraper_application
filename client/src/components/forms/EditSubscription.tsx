@@ -27,7 +27,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { FREQUENCY_OPTIONS, FREQUENCY_LABELS } from "@/lib/constants";
 import { useLanguage } from "@/components/language-provider";
-import { globalBasePrice, additionalWebsitePrice, currencySymbol } from "@shared/pricing";
+import { currencySymbol, calculateTotalPrice, getBasePrice, getAdditionalWebsitePrice } from "@shared/pricing";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import facebookVideo from "@/assets/facebook_vid.mp4";
 import svg1 from "@/assets/1.svg";
@@ -39,7 +39,6 @@ import svg6 from "@/assets/6.svg";
 import svg7 from "@/assets/7.svg";
 import svg8 from "@/assets/8.svg";
 import { StepsCarousel } from "@/components/StepsCarousel";
-import { PaymentUpdateModal } from "@/components/subscription/PaymentUpdateModal";
 
 const stepImages = [
   { src: svg1, alt: "Step 1" },
@@ -130,39 +129,12 @@ export default function EditSubscriptionPage({
       });
   }, []);
 
-  function calculateBasePrice(form: AlertFormSchema): number {
-    const websitesCount = form.websitesSelected?.length || 0;
-    const frequency = form.updateFrequency || "hourly";
-
-    if (websitesCount === 0) return 0;
-
-    // let price = 9.99;
-    let price = globalBasePrice;
-
-    if (websitesCount > 1) {
-      // price += 4.99 * (websitesCount - 1);
-      price += additionalWebsitePrice * (websitesCount - 1);
-    }
-
-    const frequencyOption = FREQUENCY_OPTIONS.find(
-      (option) => option.id === frequency,
-    );
-    if (frequencyOption?.additionalPrice) {
-      price += frequencyOption.additionalPrice;
-    }
-
-    return price;
-  }
 
   const websitesSelected = form.watch("websitesSelected");
   const updateFrequency = form.watch("updateFrequency");
 
   useEffect(() => {
-    const price = calculateBasePrice({
-      ...form.getValues(),
-      websitesSelected,
-      updateFrequency,
-    });
+    const price = calculateTotalPrice(websitesSelected, updateFrequency);
     setTotalPrice(price);
   }, [websitesSelected, updateFrequency]);
 
@@ -215,7 +187,9 @@ export default function EditSubscriptionPage({
 
   const rawTitle = t("setupAlerts.baseTitle");
 
-  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, globalBasePrice);
+  const basePrice = getBasePrice(updateFrequency || "hourly");
+
+  const fixedTitle = rawTitle.replace(/(\d+[.,]\d{2})/, basePrice);
 
   const onSubmit = async (values: AlertFormSchema) => {
     setSubmitting(true);
@@ -832,8 +806,7 @@ export default function EditSubscriptionPage({
               <span className="text-neutral-700 dark:text-neutral-300">
                 {/* get selected websites length */}
                 {t("setupAlerts.basicPlan")} (
-                {form.watch("websitesSelected")?.length || 0}{" "}
-                {t("review.monitoring.websites")})
+                {FREQUENCY_LABELS[form.watch("updateFrequency")]})
               </span>
               <span className="text-neutral-900 dark:text-white font-medium">
                 {fixedTitle}
@@ -847,15 +820,10 @@ export default function EditSubscriptionPage({
               </span>
               <span className="text-neutral-900 dark:text-white font-medium">
                 {/* €9.98/month */}
-                {currencySymbol}{(
-                  Math.max(
-                    (form.watch("websitesSelected")?.length || 1) - 1,
-                    0,
-                  ) * additionalWebsitePrice
-                ).toFixed(2)}
+                {currencySymbol}{getAdditionalWebsitePrice(form.watch("websitesSelected"), form.watch("updateFrequency"))}
               </span>
             </div>
-            {form.watch("updateFrequency") !== "hourly" && (
+            {/* {form.watch("updateFrequency") !== "hourly" && (
               <div className="flex justify-between items-center mb-4">
                 <span className="text-neutral-700 dark:text-neutral-300">
                   {t("websiteSelection.labels.updateFrequency")} (
@@ -869,7 +837,7 @@ export default function EditSubscriptionPage({
                   ).toFixed(2)}
                 </span>
               </div>
-            )}
+            )} */}
             <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
               <div className="flex justify-between items-center">
                 <span className="text-neutral-900 dark:text-white font-medium">
