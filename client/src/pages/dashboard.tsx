@@ -42,145 +42,8 @@ import { useAuth } from "@/hooks/use-auth";
 import { queryClient, apiRequest } from "@/lib/queryClient";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { User as UserType, Subscription } from "@shared/schema";
-import {
-  useElements,
-  useStripe,
-  PaymentElement,
-  Elements,
-} from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
 import { useLanguage } from "@/components/language-provider";
 import { currencySymbol } from "@shared/pricing";
-
-const publicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
-
-// Load Stripe
-const stripePromise = loadStripe(publicKey as string);
-
-// Payment Method Form component
-function AddPaymentMethodForm() {
-  const { t } = useLanguage();
-  const stripe = useStripe();
-  const elements = useElements();
-  const { toast } = useToast();
-  const [isProcessing, setIsProcessing] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!stripe || !elements) {
-      return;
-    }
-
-    setIsProcessing(true);
-
-    try {
-      const { error } = await stripe.confirmSetup({
-        elements,
-        confirmParams: {
-          return_url: `${window.location.origin}/profile?tab=billing`,
-        },
-      });
-
-      if (error) {
-        toast({
-          title: t("dashboardPayment.errorTitle"),
-          description: error.message,
-          variant: "destructive",
-        });
-      }
-    } catch (err) {
-      toast({
-        title: t("dashboardPayment.errorTitle"),
-        description: t("dashboardPayment.errorMessage"),
-        variant: "destructive",
-      });
-    } finally {
-      setIsProcessing(false);
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <PaymentElement />
-      <Button
-        type="submit"
-        disabled={!stripe || isProcessing}
-        className="w-full mt-4"
-      >
-        {isProcessing
-          ? t("dashboardPayment.processing")
-          : t("dashboardPayment.add")}
-      </Button>
-    </form>
-  );
-}
-
-function AddPaymentMethodDialog() {
-  const { t } = useLanguage();
-  const [clientSecret, setClientSecret] = useState<string | null>(null);
-
-  const [isOpen, setIsOpen] = useState(false);
-  const { toast } = useToast();
-
-  const options = {
-    // passing the SetupIntent's client secret
-    clientSecret: clientSecret,
-    // Fully customizable with appearance API.
-    appearance: {
-      /*...*/
-    },
-  };
-
-  const handleOpen = async () => {
-    setIsOpen(true);
-    // Get setup intent from backend
-    try {
-      const response = await apiRequest("POST", "/api/create-setup-intent");
-      const data = await response.json();
-      setClientSecret(data.clientSecret);
-    } catch (error) {
-      console.error("Error creating setup intent:", error);
-      toast({
-        title: t("dashboardPayment.initError.title"),
-        description: t("dashboardPayment.initError.description"),
-        variant: "destructive",
-      });
-      setIsOpen(false);
-    }
-  };
-
-  return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>
-        <Button
-          onClick={handleOpen}
-          className="ml-auto flex gap-2 items-center"
-        >
-          <PlusCircle className="h-4 w-4" />
-          {t("dashboardPayment.add")}
-        </Button>
-      </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>{t("dashboardPayment.add")}</DialogTitle>
-          <DialogDescription>
-            {t("dashboardPayment.description")}
-          </DialogDescription>
-        </DialogHeader>
-        {clientSecret ? (
-          <Elements stripe={stripePromise} options={options}>
-            <AddPaymentMethodForm />
-          </Elements>
-        ) : (
-          <div className="flex justify-center py-8">
-            <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        )}
-      </DialogContent>
-    </Dialog>
-  );
-}
 
 interface SubscriptionCardProps {
   subscription: Subscription;
@@ -1299,7 +1162,7 @@ export default function Dashboard() {
                     <CardTitle>
                       {t("profile.payments.title")}
                     </CardTitle>
-                    <AddPaymentMethodDialog />
+                    {/* <AddPaymentMethodDialog /> */}
                   </div>
                   <CardDescription>
                     {t("profile.payments.desc")}
@@ -1325,7 +1188,7 @@ export default function Dashboard() {
                         <p className="text-muted-foreground">
                           {t("profile.payments.none")}
                         </p>
-                        <AddPaymentMethodDialog />
+                        {/* <AddPaymentMethodDialog /> */}
                       </div>
                     )}
                   </CardContent>

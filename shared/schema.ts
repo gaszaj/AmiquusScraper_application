@@ -11,7 +11,6 @@ export const users = pgTable("users", {
   googleId: text("google_id").unique(),
   firstName: text("first_name"),
   lastName: text("last_name"),
-  stripeCustomerId: text("stripe_customer_id").unique(),
   dodoCustomerId: text("dodo_customer_id").unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   // 👇 New fields for email verification
@@ -62,7 +61,6 @@ export const languageEnum = pgEnum('language', [
 export const subscriptions = pgTable("subscriptions", {
   id: serial("id").primaryKey(),
   userId: integer("user_id").notNull().references(() => users.id),
-  stripeSubscriptionId: text("stripe_subscription_id"),
   dodoSubscriptionId: text("dodo_subscription_id"),
   websitesSelected: json("websites_selected").notNull(),
   facebookMarketplaceUrl: text("facebook_marketplace_url"),
@@ -86,7 +84,6 @@ export const subscriptions = pgTable("subscriptions", {
   discountValue: integer("discount_value"), // e.g. 540 => 5.4%
   priceAfterDiscount: integer("price_after_discount"), // cents
   price: integer("price").notNull(),
-  stripePriceId: text("stripe_price_id"),
   dodoPriceId: text("dodo_price_id"),
   jsonUserId: text("json_user_id").unique(),
   status: text("status").notNull().default("active"),

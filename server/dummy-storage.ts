@@ -14,14 +14,12 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   updateUser(id: number, data: Partial<InsertUser>): Promise<User>;
   updateUserGoogleId(userId: number, googleId: string): Promise<User>;
-  updateUserStripeCustomerId(userId: number, customerId: string): Promise<User>;
 
   // Subscription operations
   createSubscription(subscription: InsertSubscription): Promise<Subscription>;
   getSubscription(id: number): Promise<Subscription | undefined>;
   getUserSubscriptions(userId: number): Promise<Subscription[]>;
   updateSubscription(id: number, data: Partial<InsertSubscription>): Promise<Subscription>;
-  updateSubscriptionStripeId(id: number, stripeSubscriptionId: string): Promise<Subscription>;
   deleteSubscription(id: number): Promise<void>;
   getActiveSubscriptionCount(): Promise<number>;
 }
@@ -96,17 +94,6 @@ export class MemStorage implements IStorage {
     return updatedUser;
   }
 
-  async updateUserStripeCustomerId(userId: number, customerId: string): Promise<User> {
-    const user = this.users.get(userId);
-    if (!user) {
-      throw new Error(`User with ID ${userId} not found`);
-    }
-    
-    const updatedUser = { ...user, stripeCustomerId: customerId };
-    this.users.set(userId, updatedUser);
-    return updatedUser;
-  }
-
   // Subscription operations
   async createSubscription(subscriptionData: InsertSubscription): Promise<Subscription> {
     const id = this.subscriptionIdCounter++;
@@ -146,10 +133,6 @@ export class MemStorage implements IStorage {
     
     this.subscriptions.set(id, updatedSubscription);
     return updatedSubscription;
-  }
-
-  async updateSubscriptionStripeId(id: number, stripeSubscriptionId: string): Promise<Subscription> {
-    return this.updateSubscription(id, { stripeSubscriptionId });
   }
 
   async deleteSubscription(id: number): Promise<void> {

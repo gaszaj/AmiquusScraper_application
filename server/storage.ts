@@ -24,8 +24,6 @@ export interface IStorage {
   updateUserGoogleId(userId: number, googleId: string): Promise<User>;
   getUserByDodoCustomerId(dodoCustomerId: string): Promise<User | undefined>;
   updateUserDodoCustomerId(userId: number, customerId: string): Promise<User>;
-  getUserByStripeCustomerId(stripeCustomerId: string): Promise<User | undefined>;
-  updateUserStripeCustomerId(userId: number, customerId: string): Promise<User>;
   getOnHoldSubscriptions(): Promise<Subscription[]>;
 
   // Promocodes operations
@@ -39,10 +37,6 @@ export interface IStorage {
   updateSubscription(
     id: number,
     data: Partial<InsertSubscription>,
-  ): Promise<Subscription>;
-  updateSubscriptionStripeId(
-    id: number,
-    stripeSubscriptionId: string,
   ): Promise<Subscription>;
   deleteSubscription(id: number): Promise<void>;
   getActiveSubscriptionCount(): Promise<number>;
@@ -135,15 +129,6 @@ export class DrizzleStorage implements IStorage {
     return updated;
   }
 
-  async getUserByStripeCustomerId(stripeCustomerId: string): Promise<User | undefined> {
-    const result = await db
-      .select()
-      .from(users)
-      .where(eq(users.stripeCustomerId, stripeCustomerId))
-      .limit(1);
-    return result[0];
-  }
-
   async getUserByDodoCustomerId(dodoCustomerId: string): Promise<User | undefined> {
     const result = await db
       .select()
@@ -151,19 +136,6 @@ export class DrizzleStorage implements IStorage {
       .where(eq(users.dodoCustomerId, dodoCustomerId))
       .limit(1);
     return result[0];
-  }
-
-  async updateUserStripeCustomerId(
-    userId: number,
-    customerId: string,
-  ): Promise<User> {
-    const [updated] = await db
-      .update(users)
-      .set({ stripeCustomerId: customerId })
-      .where(eq(users.id, userId))
-      .returning();
-
-    return updated;
   }
 
   async getOnHoldSubscriptions(): Promise<Subscription[]> {
@@ -251,16 +223,6 @@ export class DrizzleStorage implements IStorage {
       .where(eq(subscriptions.id, id))
       .returning();
     return result[0];
-  }
-
-  async updateSubscriptionStripeId(id: number, stripeSubscriptionId: string): Promise<Subscription> {
-    const [updated] = await db
-      .update(subscriptions)
-      .set({ stripeSubscriptionId })
-      .where(eq(subscriptions.id, id))
-      .returning()
-
-    return updated;
   }
 
   async deleteSubscription(id: number) {
