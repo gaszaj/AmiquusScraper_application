@@ -2,10 +2,14 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import { Language, translations } from "@shared/translations";
 // import { translations, Language } from "../translations";
 
+type TOptions = Record<string, unknown> & {
+  returnObjects?: boolean;
+};
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string, options?: { returnObjects?: boolean }) => string | any;
+  t: (key: string, options?: TOptions) => string | any;
 }
 
 const defaultLanguage: Language = "en";
@@ -13,7 +17,7 @@ const defaultLanguage: Language = "en";
 const LanguageContext = createContext<LanguageContextType>({
   language: defaultLanguage,
   setLanguage: () => {},
-  t: (key: string, options?: { returnObjects?: boolean }) => key,
+  t: (key: string) => key,
 });
 
 export const useLanguage = () => useContext(LanguageContext);

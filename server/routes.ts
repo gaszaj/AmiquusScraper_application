@@ -22,19 +22,9 @@ import {
   FREQUENCY_IN_SECONDS
 } from "./libs/utils";
 import { emailService } from "./email-service";
-import Stripe from "stripe";
 import { sendTestEmail } from "./emailit-setup";
 import { createOrFindCustomer } from "./helpers/payments";
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  console.warn(
-    "Missing STRIPE_SECRET_KEY - Stripe functionality will be limited",
-  );
-}
-
-const stripe = process.env.STRIPE_SECRET_KEY
-  ? new Stripe(process.env.STRIPE_SECRET_KEY)
-  : undefined;
 
 const RECAPTCHA_SITE_SECRET = process.env.RECAPTCHA_SITE_SECRET || "";
 
